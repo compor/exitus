@@ -1,0 +1,26 @@
+digraph "CFG for 'crude_dragon_weakness_for.cond' function" {
+	label="CFG for 'crude_dragon_weakness_for.cond' function";
+
+	Node0x3f26f40 [shape=record,label="{newFuncRoot}"];
+	Node0x3f26f40 -> Node0x3f26fe0;
+	Node0x3f26f90 [shape=record,label="{for.end.58.exitStub}"];
+	Node0x3f26fe0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3f26fe0:s0 -> Node0x3f27030;
+	Node0x3f26fe0:s1 -> Node0x3f26f90;
+	Node0x3f27030 [shape=record,label="{pd_for.cond.37.preheader}"];
+	Node0x3f27030 -> Node0x3f27080;
+	Node0x3f27080 [shape=record,label="{pd_for.cond.37|{<s0>T|<s1>F}}"];
+	Node0x3f27080:s0 -> Node0x3f27120;
+	Node0x3f27080:s1 -> Node0x3f270d0;
+	Node0x3f270d0 [shape=record,label="{it_for.inc.56}"];
+	Node0x3f270d0 -> Node0x3f26fe0;
+	Node0x3f27120 [shape=record,label="{pd_for.body.40|{<s0>T|<s1>F}}"];
+	Node0x3f27120:s0 -> Node0x3f271c0;
+	Node0x3f27120:s1 -> Node0x3f27170;
+	Node0x3f27170 [shape=record,label="{pd_for.body.40.for.cond.37.backedge_crit_edge}"];
+	Node0x3f27170 -> Node0x3f27210;
+	Node0x3f271c0 [shape=record,label="{pd_if.then.46}"];
+	Node0x3f271c0 -> Node0x3f27210;
+	Node0x3f27210 [shape=record,label="{pd_for.cond.37.backedge}"];
+	Node0x3f27210 -> Node0x3f27080;
+}

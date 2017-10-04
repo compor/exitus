@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_fbm_instr_while.cond' function" {
+	label="CFG for 'Perl_fbm_instr_while.cond' function";
+
+	Node0x580ca00 [shape=record,label="{newFuncRoot}"];
+	Node0x580ca00 -> Node0x580caf0;
+	Node0x580ca50 [shape=record,label="{while.end.exitStub}"];
+	Node0x580caa0 [shape=record,label="{return.loopexit6.exitStub}"];
+	Node0x580caf0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x580caf0:s0 -> Node0x580cb40;
+	Node0x580caf0:s1 -> Node0x580ca50;
+	Node0x580cb40 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x580cb40:s0 -> Node0x580caa0;
+	Node0x580cb40:s1 -> Node0x580cb90;
+	Node0x580cb90 [shape=record,label="{it_if.end.50}"];
+	Node0x580cb90 -> Node0x580caf0;
+}

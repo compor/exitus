@@ -1,0 +1,28 @@
+digraph "CFG for 'output_abbrev_section' function" {
+	label="CFG for 'output_abbrev_section' function";
+
+	Node0x3d40e80 [shape=record,label="{entry}"];
+	Node0x3d40e80 -> Node0x3d40ed0;
+	Node0x3d40ed0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3d40ed0:s0 -> Node0x3d40f20;
+	Node0x3d40ed0:s1 -> Node0x3d41150;
+	Node0x3d40f20 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3d40f20:s0 -> Node0x3d40f70;
+	Node0x3d40f20:s1 -> Node0x3d40fc0;
+	Node0x3d40f70 [shape=record,label="{pd_if.then}"];
+	Node0x3d40f70 -> Node0x3d41010;
+	Node0x3d40fc0 [shape=record,label="{pd_if.else}"];
+	Node0x3d40fc0 -> Node0x3d41010;
+	Node0x3d41010 [shape=record,label="{pd_if.end}"];
+	Node0x3d41010 -> Node0x3d41060;
+	Node0x3d41060 [shape=record,label="{pd_for.cond.6|{<s0>T|<s1>F}}"];
+	Node0x3d41060:s0 -> Node0x3d410b0;
+	Node0x3d41060:s1 -> Node0x3d41100;
+	Node0x3d410b0 [shape=record,label="{pd_for.body.9}"];
+	Node0x3d410b0 -> Node0x3d41060;
+	Node0x3d41100 [shape=record,label="{pd_for.end}"];
+	Node0x3d41100 -> Node0xcab6c50;
+	Node0xcab6c50 [shape=record,label="{it_for.end.split}"];
+	Node0xcab6c50 -> Node0x3d40ed0;
+	Node0x3d41150 [shape=record,label="{for.end.14}"];
+}

@@ -1,0 +1,23 @@
+digraph "CFG for 'can_combine_p_for.cond.471' function" {
+	label="CFG for 'can_combine_p_for.cond.471' function";
+
+	Node0xa60f7f0 [shape=record,label="{newFuncRoot}"];
+	Node0xa60f7f0 -> Node0xa60fd50;
+	Node0xa60fcb0 [shape=record,label="{if.end.498.loopexit.exitStub}"];
+	Node0xa60fd00 [shape=record,label="{return.loopexit3.exitStub}"];
+	Node0xa60fd50 [shape=record,label="{it_for.cond.471|{<s0>T|<s1>F}}"];
+	Node0xa60fd50:s0 -> Node0xa60fda0;
+	Node0xa60fd50:s1 -> Node0xa60fcb0;
+	Node0xa60fda0 [shape=record,label="{it_for.body.474|{<s0>T|<s1>F}}"];
+	Node0xa60fda0:s0 -> Node0xa60fe40;
+	Node0xa60fda0:s1 -> Node0xa60fdf0;
+	Node0xa60fdf0 [shape=record,label="{pd_for.body.474.for.inc.493_crit_edge}"];
+	Node0xa60fdf0 -> Node0xa60fee0;
+	Node0xa60fe40 [shape=record,label="{it_land.lhs.true.485|{<s0>T|<s1>F}}"];
+	Node0xa60fe40:s0 -> Node0xa60fd00;
+	Node0xa60fe40:s1 -> Node0xa60fe90;
+	Node0xa60fe90 [shape=record,label="{pd_land.lhs.true.485.for.inc.493_crit_edge}"];
+	Node0xa60fe90 -> Node0xa60fee0;
+	Node0xa60fee0 [shape=record,label="{it_for.inc.493}"];
+	Node0xa60fee0 -> Node0xa60fd50;
+}

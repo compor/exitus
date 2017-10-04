@@ -1,0 +1,26 @@
+digraph "CFG for 'get_visual_tbl_length' function" {
+	label="CFG for 'get_visual_tbl_length' function";
+
+	Node0x8fbdd30 [shape=record,label="{entry}"];
+	Node0x8fbdd30 -> Node0x8fc4250;
+	Node0x8fc4250 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x8fc4250:s0 -> Node0x8fc42a0;
+	Node0x8fc4250:s1 -> Node0x8fc44d0;
+	Node0x8fc42a0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x8fc42a0:s0 -> Node0x8fc4340;
+	Node0x8fc42a0:s1 -> Node0x8fc42f0;
+	Node0x8fc42f0 [shape=record,label="{pd_for.body.for.inc.10_crit_edge}"];
+	Node0x8fc42f0 -> Node0x8fc4480;
+	Node0x8fc4340 [shape=record,label="{pd_for.cond.3.preheader}"];
+	Node0x8fc4340 -> Node0x8fc4390;
+	Node0x8fc4390 [shape=record,label="{pd_for.cond.3|{<s0>T|<s1>F}}"];
+	Node0x8fc4390:s0 -> Node0x8fc43e0;
+	Node0x8fc4390:s1 -> Node0x8fc4430;
+	Node0x8fc43e0 [shape=record,label="{pd_for.body.8}"];
+	Node0x8fc43e0 -> Node0x8fc4390;
+	Node0x8fc4430 [shape=record,label="{pd_for.inc.10.loopexit}"];
+	Node0x8fc4430 -> Node0x8fc4480;
+	Node0x8fc4480 [shape=record,label="{it_for.inc.10}"];
+	Node0x8fc4480 -> Node0x8fc4250;
+	Node0x8fc44d0 [shape=record,label="{for.end.12}"];
+}

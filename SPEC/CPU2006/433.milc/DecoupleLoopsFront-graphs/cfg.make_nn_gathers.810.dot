@@ -1,0 +1,12 @@
+digraph "CFG for 'make_nn_gathers' function" {
+	label="CFG for 'make_nn_gathers' function";
+
+	Node0x1947530 [shape=record,label="{entry}"];
+	Node0x1947530 -> Node0x1947580;
+	Node0x1947580 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1947580:s0 -> Node0x19475d0;
+	Node0x1947580:s1 -> Node0x1947620;
+	Node0x19475d0 [shape=record,label="{pd_for.body}"];
+	Node0x19475d0 -> Node0x1947580;
+	Node0x1947620 [shape=record,label="{for.end}"];
+}

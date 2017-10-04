@@ -1,0 +1,21 @@
+digraph "CFG for 'Perl_pp_aassign_while.cond.253' function" {
+	label="CFG for 'Perl_pp_aassign_while.cond.253' function";
+
+	Node0x4f673e0 [shape=record,label="{newFuncRoot}"];
+	Node0x4f673e0 -> Node0x4f67480;
+	Node0x4f67430 [shape=record,label="{if.end.267.loopexit.exitStub}"];
+	Node0x4f67480 [shape=record,label="{it_while.cond.253|{<s0>T|<s1>F}}"];
+	Node0x4f67480:s0 -> Node0x4f674d0;
+	Node0x4f67480:s1 -> Node0x4f67430;
+	Node0x4f674d0 [shape=record,label="{pd_while.body.256|{<s0>T|<s1>F}}"];
+	Node0x4f674d0:s0 -> Node0x4f67570;
+	Node0x4f674d0:s1 -> Node0x4f67520;
+	Node0x4f67520 [shape=record,label="{pd_while.body.256.cond.end.262_crit_edge}"];
+	Node0x4f67520 -> Node0x4f675c0;
+	Node0x4f67570 [shape=record,label="{pd_cond.true.259}"];
+	Node0x4f67570 -> Node0x4f675c0;
+	Node0x4f675c0 [shape=record,label="{it_cond.end.262}"];
+	Node0x4f675c0 -> Node0x6465d00;
+	Node0x6465d00 [shape=record,label="{pd_cond.end.262.split}"];
+	Node0x6465d00 -> Node0x4f67480;
+}

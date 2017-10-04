@@ -1,0 +1,18 @@
+digraph "CFG for '_ZN10xalanc_1_810Stylesheet20addWhitespaceElementERKNS_20XalanSpaceNodeTesterE_while.cond' function" {
+	label="CFG for '_ZN10xalanc_1_810Stylesheet20addWhitespaceElementERKNS_20XalanSpaceNodeTesterE_while.cond' function";
+
+	Node0x9fe3740 [shape=record,label="{newFuncRoot}"];
+	Node0x9fe3740 -> Node0x9fe3830;
+	Node0x9fe3790 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x9fe37e0 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0x9fe3830 [shape=record,label="{pd_while.cond}"];
+	Node0x9fe3830 -> Node0xd12c2d0;
+	Node0xd12c2d0 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0xd12c2d0:s0 -> Node0x9fe3880;
+	Node0xd12c2d0:s1 -> Node0x9fe3790;
+	Node0x9fe3880 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x9fe3880:s0 -> Node0x9fe37e0;
+	Node0x9fe3880:s1 -> Node0x9fe38d0;
+	Node0x9fe38d0 [shape=record,label="{pd_if.else}"];
+	Node0x9fe38d0 -> Node0x9fe3830;
+}

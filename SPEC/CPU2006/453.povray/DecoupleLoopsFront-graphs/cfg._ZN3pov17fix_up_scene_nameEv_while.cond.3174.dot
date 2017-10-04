@@ -1,0 +1,16 @@
+digraph "CFG for '_ZN3pov17fix_up_scene_nameEv_while.cond' function" {
+	label="CFG for '_ZN3pov17fix_up_scene_nameEv_while.cond' function";
+
+	Node0x13c6110 [shape=record,label="{newFuncRoot}"];
+	Node0x13c6110 -> Node0x13c6200;
+	Node0x13c6160 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x13c61b0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x13c6200 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x13c6200:s0 -> Node0x13c6250;
+	Node0x13c6200:s1 -> Node0x13c6160;
+	Node0x13c6250 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x13c6250:s0 -> Node0x13c62a0;
+	Node0x13c6250:s1 -> Node0x13c61b0;
+	Node0x13c62a0 [shape=record,label="{it_while.body}"];
+	Node0x13c62a0 -> Node0x13c6200;
+}

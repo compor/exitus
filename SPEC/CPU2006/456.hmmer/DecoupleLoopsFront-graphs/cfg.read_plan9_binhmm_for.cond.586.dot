@@ -1,0 +1,14 @@
+digraph "CFG for 'read_plan9_binhmm_for.cond' function" {
+	label="CFG for 'read_plan9_binhmm_for.cond' function";
+
+	Node0x3116f70 [shape=record,label="{newFuncRoot}"];
+	Node0x3116f70 -> Node0x3117010;
+	Node0x3116fc0 [shape=record,label="{for.cond.127.preheader.loopexit.exitStub}"];
+	Node0x3117010 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3117010:s0 -> Node0x3117060;
+	Node0x3117010:s1 -> Node0x3116fc0;
+	Node0x3117060 [shape=record,label="{pd_for.body}"];
+	Node0x3117060 -> Node0x3747220;
+	Node0x3747220 [shape=record,label="{it_for.body.split}"];
+	Node0x3747220 -> Node0x3117010;
+}

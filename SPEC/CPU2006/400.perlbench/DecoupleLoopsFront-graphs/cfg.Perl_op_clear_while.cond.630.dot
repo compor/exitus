@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_op_clear_while.cond' function" {
+	label="CFG for 'Perl_op_clear_while.cond' function";
+
+	Node0x4bf55c0 [shape=record,label="{newFuncRoot}"];
+	Node0x4bf55c0 -> Node0x4bf56b0;
+	Node0x4bf5610 [shape=record,label="{if.end.57.loopexit.exitStub}"];
+	Node0x4bf5660 [shape=record,label="{if.then.46.exitStub}"];
+	Node0x4bf56b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4bf56b0:s0 -> Node0x4bf5700;
+	Node0x4bf56b0:s1 -> Node0x4bf5610;
+	Node0x4bf5700 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4bf5700:s0 -> Node0x4bf5660;
+	Node0x4bf5700:s1 -> Node0x4bf5750;
+	Node0x4bf5750 [shape=record,label="{it_if.end.55}"];
+	Node0x4bf5750 -> Node0x4bf56b0;
+}

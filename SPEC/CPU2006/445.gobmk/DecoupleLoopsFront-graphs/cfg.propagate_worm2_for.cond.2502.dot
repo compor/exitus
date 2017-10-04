@@ -1,0 +1,24 @@
+digraph "CFG for 'propagate_worm2_for.cond' function" {
+	label="CFG for 'propagate_worm2_for.cond' function";
+
+	Node0x46ecbd0 [shape=record,label="{newFuncRoot}"];
+	Node0x46ecbd0 -> Node0x46f19f0;
+	Node0x46f19a0 [shape=record,label="{for.end.exitStub}"];
+	Node0x46f19f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x46f19f0:s0 -> Node0x46f1a40;
+	Node0x46f19f0:s1 -> Node0x46f19a0;
+	Node0x46f1a40 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x46f1a40:s0 -> Node0x46f1ae0;
+	Node0x46f1a40:s1 -> Node0x46f1a90;
+	Node0x46f1a90 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x46f1a90 -> Node0x46f1bd0;
+	Node0x46f1ae0 [shape=record,label="{pd_land.lhs.true.30|{<s0>T|<s1>F}}"];
+	Node0x46f1ae0:s0 -> Node0x46f1b80;
+	Node0x46f1ae0:s1 -> Node0x46f1b30;
+	Node0x46f1b30 [shape=record,label="{pd_land.lhs.true.30.for.inc_crit_edge}"];
+	Node0x46f1b30 -> Node0x46f1bd0;
+	Node0x46f1b80 [shape=record,label="{pd_if.then.31}"];
+	Node0x46f1b80 -> Node0x46f1bd0;
+	Node0x46f1bd0 [shape=record,label="{it_for.inc}"];
+	Node0x46f1bd0 -> Node0x46f19f0;
+}

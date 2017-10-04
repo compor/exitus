@@ -1,0 +1,12 @@
+digraph "CFG for 'ggc_alloc_while.cond' function" {
+	label="CFG for 'ggc_alloc_while.cond' function";
+
+	Node0xc6adb40 [shape=record,label="{newFuncRoot}"];
+	Node0xc6adb40 -> Node0xc6adbe0;
+	Node0xc6adb90 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0xc6adbe0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc6adbe0:s0 -> Node0xc6adc30;
+	Node0xc6adbe0:s1 -> Node0xc6adb90;
+	Node0xc6adc30 [shape=record,label="{it_while.body}"];
+	Node0xc6adc30 -> Node0xc6adbe0;
+}

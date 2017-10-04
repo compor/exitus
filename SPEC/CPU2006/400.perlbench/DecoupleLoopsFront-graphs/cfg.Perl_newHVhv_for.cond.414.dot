@@ -1,0 +1,40 @@
+digraph "CFG for 'Perl_newHVhv_for.cond' function" {
+	label="CFG for 'Perl_newHVhv_for.cond' function";
+
+	Node0x4b8b440 [shape=record,label="{newFuncRoot}"];
+	Node0x4b8b440 -> Node0x4b8b4e0;
+	Node0x4b8b490 [shape=record,label="{for.end.55.exitStub}"];
+	Node0x4b8b4e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4b8b4e0:s0 -> Node0x4b8b530;
+	Node0x4b8b4e0:s1 -> Node0x4b8b490;
+	Node0x4b8b530 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4b8b530:s0 -> Node0x4b8b5d0;
+	Node0x4b8b530:s1 -> Node0x4b8b580;
+	Node0x4b8b580 [shape=record,label="{pd_if.then.20}"];
+	Node0x4b8b580 -> Node0x4b8b6c0;
+	Node0x4b8b5d0 [shape=record,label="{pd_if.end.22}"];
+	Node0x4b8b5d0 -> Node0x4b8b620;
+	Node0x4b8b620 [shape=record,label="{pd_for.cond.24|{<s0>T|<s1>F}}"];
+	Node0x4b8b620:s0 -> Node0x4b8b710;
+	Node0x4b8b620:s1 -> Node0x4b8b670;
+	Node0x4b8b670 [shape=record,label="{pd_for.inc.54.loopexit}"];
+	Node0x4b8b670 -> Node0x4b8b6c0;
+	Node0x4b8b6c0 [shape=record,label="{it_for.inc.54}"];
+	Node0x4b8b6c0 -> Node0x4b8b4e0;
+	Node0x4b8b710 [shape=record,label="{pd_for.body.26|{<s0>T|<s1>F}}"];
+	Node0x4b8b710:s0 -> Node0x4b8b7b0;
+	Node0x4b8b710:s1 -> Node0x4b8b760;
+	Node0x4b8b760 [shape=record,label="{pd_cond.false.43}"];
+	Node0x4b8b760 -> Node0x4b8b800;
+	Node0x4b8b7b0 [shape=record,label="{pd_cond.true.41}"];
+	Node0x4b8b7b0 -> Node0x4b8b800;
+	Node0x4b8b800 [shape=record,label="{pd_cond.end.45|{<s0>T|<s1>F}}"];
+	Node0x4b8b800:s0 -> Node0x4b8b8a0;
+	Node0x4b8b800:s1 -> Node0x4b8b850;
+	Node0x4b8b850 [shape=record,label="{pd_if.else}"];
+	Node0x4b8b850 -> Node0x4b8b8f0;
+	Node0x4b8b8a0 [shape=record,label="{pd_if.then.49}"];
+	Node0x4b8b8a0 -> Node0x4b8b8f0;
+	Node0x4b8b8f0 [shape=record,label="{pd_if.end.51}"];
+	Node0x4b8b8f0 -> Node0x4b8b620;
+}

@@ -1,0 +1,23 @@
+digraph "CFG for 'PerlIO_allocate_while.cond' function" {
+	label="CFG for 'PerlIO_allocate_while.cond' function";
+
+	Node0x4d7ef30 [shape=record,label="{newFuncRoot}"];
+	Node0x4d7ef30 -> Node0x4d7f020;
+	Node0x4d7ef80 [shape=record,label="{while.end.exitStub}"];
+	Node0x4d7efd0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x4d7f020 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d7f020:s0 -> Node0x4d7f070;
+	Node0x4d7f020:s1 -> Node0x4d7ef80;
+	Node0x4d7f070 [shape=record,label="{it_while.body}"];
+	Node0x4d7f070 -> Node0x4d7f0c0;
+	Node0x4d7f0c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4d7f0c0:s0 -> Node0x4d7f160;
+	Node0x4d7f0c0:s1 -> Node0x4d7f110;
+	Node0x4d7f110 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x4d7f110 -> Node0x4d7f020;
+	Node0x4d7f160 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4d7f160:s0 -> Node0x4d7f1b0;
+	Node0x4d7f160:s1 -> Node0x4d7efd0;
+	Node0x4d7f1b0 [shape=record,label="{it_for.inc}"];
+	Node0x4d7f1b0 -> Node0x4d7f0c0;
+}

@@ -1,0 +1,20 @@
+digraph "CFG for 'insert_new_arc_while.cond' function" {
+	label="CFG for 'insert_new_arc_while.cond' function";
+
+	Node0x1e14700 [shape=record,label="{newFuncRoot}"];
+	Node0x1e14700 -> Node0x1e147f0;
+	Node0x1e14750 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x1e147a0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x1e147f0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1e147f0:s0 -> Node0x1e14840;
+	Node0x1e147f0:s1 -> Node0x1e14750;
+	Node0x1e14840 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x1e14840:s0 -> Node0x1e14890;
+	Node0x1e14840:s1 -> Node0x1e147a0;
+	Node0x1e14890 [shape=record,label="{pd_while.body}"];
+	Node0x1e14890 -> Node0x1e93fd0;
+	Node0x1e93fd0 [shape=record,label="{it_while.body.split1}"];
+	Node0x1e93fd0 -> Node0x1ebe1a0;
+	Node0x1ebe1a0 [shape=record,label="{pd_while.body.split}"];
+	Node0x1ebe1a0 -> Node0x1e147f0;
+}

@@ -1,0 +1,28 @@
+digraph "CFG for 'merge_dependencies' function" {
+	label="CFG for 'merge_dependencies' function";
+
+	Node0x39f9430 [shape=record,label="{entry}"];
+	Node0x39f9430 -> Node0x3a07720;
+	Node0x3a07720 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3a07720:s0 -> Node0x3a07770;
+	Node0x3a07720:s1 -> Node0x3a079a0;
+	Node0x3a07770 [shape=record,label="{pd_for.body}"];
+	Node0x3a07770 -> Node0x3a077c0;
+	Node0x3a077c0 [shape=record,label="{pd_for.cond.5|{<s0>T|<s1>F}}"];
+	Node0x3a077c0:s0 -> Node0x3a07810;
+	Node0x3a077c0:s1 -> Node0x3a07950;
+	Node0x3a07810 [shape=record,label="{pd_for.body.7|{<s0>T|<s1>F}}"];
+	Node0x3a07810:s0 -> Node0x3a07860;
+	Node0x3a07810:s1 -> Node0x3a078b0;
+	Node0x3a07860 [shape=record,label="{pd_if.then}"];
+	Node0x3a07860 -> Node0x3a07900;
+	Node0x3a078b0 [shape=record,label="{pd_if.else}"];
+	Node0x3a078b0 -> Node0x3a07900;
+	Node0x3a07900 [shape=record,label="{pd_if.end}"];
+	Node0x3a07900 -> Node0x3a077c0;
+	Node0x3a07950 [shape=record,label="{pd_for.end}"];
+	Node0x3a07950 -> Node0xc87c0a0;
+	Node0xc87c0a0 [shape=record,label="{it_for.end.split}"];
+	Node0xc87c0a0 -> Node0x3a07720;
+	Node0x3a079a0 [shape=record,label="{for.end.65}"];
+}

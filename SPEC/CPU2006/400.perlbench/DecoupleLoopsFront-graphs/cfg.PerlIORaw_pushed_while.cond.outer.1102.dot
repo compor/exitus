@@ -1,0 +1,37 @@
+digraph "CFG for 'PerlIORaw_pushed_while.cond.outer' function" {
+	label="CFG for 'PerlIORaw_pushed_while.cond.outer' function";
+
+	Node0x4d8ab30 [shape=record,label="{newFuncRoot}"];
+	Node0x4d8ab30 -> Node0x4d8ac20;
+	Node0x4d8ab80 [shape=record,label="{while.end.exitStub}"];
+	Node0x4d8abd0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x4d8ac20 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x4d8ac20 -> Node0x4d8ac70;
+	Node0x4d8ac70 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d8ac70:s0 -> Node0x4d950d0;
+	Node0x4d8ac70:s1 -> Node0x4d8acc0;
+	Node0x4d8acc0 [shape=record,label="{it_while.cond.land.end_crit_edge}"];
+	Node0x4d8acc0 -> Node0x4d95120;
+	Node0x4d950d0 [shape=record,label="{it_land.rhs}"];
+	Node0x4d950d0 -> Node0x4d95120;
+	Node0x4d95120 [shape=record,label="{it_land.end|{<s0>T|<s1>F}}"];
+	Node0x4d95120:s0 -> Node0x4d95170;
+	Node0x4d95120:s1 -> Node0x4d8ab80;
+	Node0x4d95170 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4d95170:s0 -> Node0x4d95210;
+	Node0x4d95170:s1 -> Node0x4d951c0;
+	Node0x4d951c0 [shape=record,label="{pd_if.else.14}"];
+	Node0x4d951c0 -> Node0x4d95300;
+	Node0x4d95210 [shape=record,label="{it_if.then.6|{<s0>T|<s1>F}}"];
+	Node0x4d95210:s0 -> Node0x4d95260;
+	Node0x4d95210:s1 -> Node0x4d8abd0;
+	Node0x4d95260 [shape=record,label="{it_if.then.10|{<s0>T|<s1>F}}"];
+	Node0x4d95260:s0 -> Node0x4d95350;
+	Node0x4d95260:s1 -> Node0x4d952b0;
+	Node0x4d952b0 [shape=record,label="{pd_if.then.10.while.cond.backedge_crit_edge}"];
+	Node0x4d952b0 -> Node0x4d95300;
+	Node0x4d95300 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x4d95300 -> Node0x4d8ac70;
+	Node0x4d95350 [shape=record,label="{it_if.then.12}"];
+	Node0x4d95350 -> Node0x4d8ac20;
+}

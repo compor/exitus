@@ -1,0 +1,23 @@
+digraph "CFG for 'copy_output_until_stop_while.body' function" {
+	label="CFG for 'copy_output_until_stop_while.body' function";
+
+	Node0x1885030 [shape=record,label="{newFuncRoot}"];
+	Node0x1885030 -> Node0x1885120;
+	Node0x1885080 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0x18850d0 [shape=record,label="{if.end.while.end_crit_edge.exitStub}"];
+	Node0x1885120 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x1885120:s0 -> Node0x1885080;
+	Node0x1885120:s1 -> Node0x1885170;
+	Node0x1885170 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x1885170:s0 -> Node0x18850d0;
+	Node0x1885170:s1 -> Node0x18851c0;
+	Node0x18851c0 [shape=record,label="{pd_if.end.3|{<s0>T|<s1>F}}"];
+	Node0x18851c0:s0 -> Node0x1885260;
+	Node0x18851c0:s1 -> Node0x1885210;
+	Node0x1885210 [shape=record,label="{pd_if.end.3.while.body.backedge_crit_edge}"];
+	Node0x1885210 -> Node0x18852b0;
+	Node0x1885260 [shape=record,label="{pd_if.then.16}"];
+	Node0x1885260 -> Node0x18852b0;
+	Node0x18852b0 [shape=record,label="{pd_while.body.backedge}"];
+	Node0x18852b0 -> Node0x1885120;
+}

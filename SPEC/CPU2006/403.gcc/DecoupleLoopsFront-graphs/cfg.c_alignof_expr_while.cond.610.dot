@@ -1,0 +1,18 @@
+digraph "CFG for 'c_alignof_expr_while.cond' function" {
+	label="CFG for 'c_alignof_expr_while.cond' function";
+
+	Node0xa133ff0 [shape=record,label="{newFuncRoot}"];
+	Node0xa133ff0 -> Node0xa1340e0;
+	Node0xa134040 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xa134090 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xa1340e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa1340e0:s0 -> Node0xa134130;
+	Node0xa1340e0:s1 -> Node0xa134040;
+	Node0xa134130 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xa134130:s0 -> Node0xa134180;
+	Node0xa134130:s1 -> Node0xa134090;
+	Node0xa134180 [shape=record,label="{it_while.body}"];
+	Node0xa134180 -> Node0xf1023f0;
+	Node0xf1023f0 [shape=record,label="{pd_while.body.split}"];
+	Node0xf1023f0 -> Node0xa1340e0;
+}

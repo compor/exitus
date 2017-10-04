@@ -1,0 +1,12 @@
+digraph "CFG for 'argspec_compile_while.cond' function" {
+	label="CFG for 'argspec_compile_while.cond' function";
+
+	Node0x5945870 [shape=record,label="{newFuncRoot}"];
+	Node0x5945870 -> Node0x5945d30;
+	Node0x59458c0 [shape=record,label="{while.end.exitStub}"];
+	Node0x5945d30 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x5945d30:s0 -> Node0x5945d80;
+	Node0x5945d30:s1 -> Node0x59458c0;
+	Node0x5945d80 [shape=record,label="{it_while.body}"];
+	Node0x5945d80 -> Node0x5945d30;
+}

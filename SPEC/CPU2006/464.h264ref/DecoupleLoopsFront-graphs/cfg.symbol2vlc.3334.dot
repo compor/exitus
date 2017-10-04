@@ -1,0 +1,12 @@
+digraph "CFG for 'symbol2vlc' function" {
+	label="CFG for 'symbol2vlc' function";
+
+	Node0x21610a0 [shape=record,label="{entry}"];
+	Node0x21610a0 -> Node0x21610f0;
+	Node0x21610f0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x21610f0:s0 -> Node0x2161140;
+	Node0x21610f0:s1 -> Node0x2161190;
+	Node0x2161140 [shape=record,label="{pd_while.body}"];
+	Node0x2161140 -> Node0x21610f0;
+	Node0x2161190 [shape=record,label="{while.end}"];
+}

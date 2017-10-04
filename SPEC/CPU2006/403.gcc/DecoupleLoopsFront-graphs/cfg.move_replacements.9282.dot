@@ -1,0 +1,24 @@
+digraph "CFG for 'move_replacements' function" {
+	label="CFG for 'move_replacements' function";
+
+	Node0x893edc0 [shape=record,label="{entry}"];
+	Node0x893edc0 -> Node0x893ee10;
+	Node0x893ee10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x893ee10:s0 -> Node0x893ee60;
+	Node0x893ee10:s1 -> Node0x893f040;
+	Node0x893ee60 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x893ee60:s0 -> Node0x893eeb0;
+	Node0x893ee60:s1 -> Node0x893ef00;
+	Node0x893eeb0 [shape=record,label="{pd_if.then}"];
+	Node0x893eeb0 -> Node0x893eff0;
+	Node0x893ef00 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x893ef00:s0 -> Node0x893efa0;
+	Node0x893ef00:s1 -> Node0x893ef50;
+	Node0x893ef50 [shape=record,label="{pd_if.else.for.inc_crit_edge}"];
+	Node0x893ef50 -> Node0x893eff0;
+	Node0x893efa0 [shape=record,label="{pd_if.then.8}"];
+	Node0x893efa0 -> Node0x893eff0;
+	Node0x893eff0 [shape=record,label="{it_for.inc}"];
+	Node0x893eff0 -> Node0x893ee10;
+	Node0x893f040 [shape=record,label="{for.end}"];
+}

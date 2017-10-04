@@ -1,0 +1,41 @@
+digraph "CFG for '_ZNSt3__112__deque_baseIN10xalanc_1_818OutputContextStack13OutputContextENS_9allocatorIS3_EEE5clearEv' function" {
+	label="CFG for '_ZNSt3__112__deque_baseIN10xalanc_1_818OutputContextStack13OutputContextENS_9allocatorIS3_EEE5clearEv' function";
+
+	Node0x779f5e0 [shape=record,label="{entry}"];
+	Node0x779f5e0 -> Node0x779f630;
+	Node0x779f630 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x779f630:s0 -> Node0x779f680;
+	Node0x779f630:s1 -> Node0x779f860;
+	Node0x779f680 [shape=record,label="{it_for.body}"];
+	Node0x779f680 -> Node0xc24ff20;
+	Node0xc24ff20 [shape=record,label="{pd_for.body.split1}"];
+	Node0xc24ff20 -> Node0xc19a530;
+	Node0xc19a530 [shape=record,label="{it_for.body.split}"];
+	Node0xc19a530 -> Node0x779f6d0;
+	Node0xc19a530 -> Node0x779f810;
+	Node0x779f6d0 [shape=record,label="{pd_for.inc|{<s0>T|<s1>F}}"];
+	Node0x779f6d0:s0 -> Node0x779f770;
+	Node0x779f6d0:s1 -> Node0x779f720;
+	Node0x779f720 [shape=record,label="{pd_for.inc.for.cond.backedge_crit_edge}"];
+	Node0x779f720 -> Node0x779f7c0;
+	Node0x779f770 [shape=record,label="{pd_if.then.i}"];
+	Node0x779f770 -> Node0x779f7c0;
+	Node0x779f7c0 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x779f7c0 -> Node0x779f630;
+	Node0x779f810 [shape=record,label="{lpad}"];
+	Node0x779f860 [shape=record,label="{for.end}"];
+	Node0x779f860 -> Node0x779f8b0;
+	Node0x779f8b0 [shape=record,label="{codeRepl}"];
+	Node0x779f8b0 -> Node0x779f900;
+	Node0x779f900 [shape=record,label="{while.end|{<s0>def|<s1>1|<s2>2}}"];
+	Node0x779f900:s0 -> Node0x779f950;
+	Node0x779f900:s1 -> Node0x779f9a0;
+	Node0x779f900:s2 -> Node0x779f9f0;
+	Node0x779f950 [shape=record,label="{while.end.sw.epilog_crit_edge}"];
+	Node0x779f950 -> Node0x779fa40;
+	Node0x779f9a0 [shape=record,label="{sw.bb}"];
+	Node0x779f9a0 -> Node0x779fa40;
+	Node0x779f9f0 [shape=record,label="{sw.bb.24}"];
+	Node0x779f9f0 -> Node0x779fa40;
+	Node0x779fa40 [shape=record,label="{sw.epilog}"];
+}

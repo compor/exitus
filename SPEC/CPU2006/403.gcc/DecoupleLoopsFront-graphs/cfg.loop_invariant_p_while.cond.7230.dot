@@ -1,0 +1,16 @@
+digraph "CFG for 'loop_invariant_p_while.cond' function" {
+	label="CFG for 'loop_invariant_p_while.cond' function";
+
+	Node0xb4957b0 [shape=record,label="{newFuncRoot}"];
+	Node0xb4957b0 -> Node0xb4958a0;
+	Node0xb495800 [shape=record,label="{sw.epilog.loopexit.exitStub}"];
+	Node0xb495850 [shape=record,label="{return.loopexit4.exitStub}"];
+	Node0xb4958a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb4958a0:s0 -> Node0xb496130;
+	Node0xb4958a0:s1 -> Node0xb495800;
+	Node0xb496130 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xb496130:s0 -> Node0xb495850;
+	Node0xb496130:s1 -> Node0xb496180;
+	Node0xb496180 [shape=record,label="{it_if.end.60}"];
+	Node0xb496180 -> Node0xb4958a0;
+}

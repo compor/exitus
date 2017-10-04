@@ -1,0 +1,25 @@
+digraph "CFG for 'build_stmt' function" {
+	label="CFG for 'build_stmt' function";
+
+	Node0x2974ae0 [shape=record,label="{entry}"];
+	Node0x2974ae0 -> Node0x2974b30;
+	Node0x2974b30 [shape=record,label="{it_for.cond}"];
+	Node0x2974b30 -> Node0xcdd4de0;
+	Node0xcdd4de0 [shape=record,label="{pd_for.cond.split1}"];
+	Node0xcdd4de0 -> Node0xcdd4e80;
+	Node0xcdd4e80 [shape=record,label="{it_for.cond.split|{<s0>T|<s1>F}}"];
+	Node0xcdd4e80:s0 -> Node0x2974b80;
+	Node0xcdd4e80:s1 -> Node0x2974cc0;
+	Node0x2974b80 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2974b80:s0 -> Node0x2974bd0;
+	Node0x2974b80:s1 -> Node0x2974c20;
+	Node0x2974bd0 [shape=record,label="{pd_vaarg.in_reg}"];
+	Node0x2974bd0 -> Node0x2974c70;
+	Node0x2974c20 [shape=record,label="{pd_vaarg.in_mem}"];
+	Node0x2974c20 -> Node0x2974c70;
+	Node0x2974c70 [shape=record,label="{pd_vaarg.end}"];
+	Node0x2974c70 -> Node0xcdd4d90;
+	Node0xcdd4d90 [shape=record,label="{it_vaarg.end.split}"];
+	Node0xcdd4d90 -> Node0x2974b30;
+	Node0x2974cc0 [shape=record,label="{for.end}"];
+}

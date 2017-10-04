@@ -1,0 +1,19 @@
+digraph "CFG for 'clear_limbo_values_for.cond' function" {
+	label="CFG for 'clear_limbo_values_for.cond' function";
+
+	Node0x9ffe860 [shape=record,label="{newFuncRoot}"];
+	Node0x9ffe860 -> Node0x9ffe900;
+	Node0x9ffe8b0 [shape=record,label="{for.end.exitStub}"];
+	Node0x9ffe900 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9ffe900:s0 -> Node0x9ffe950;
+	Node0x9ffe900:s1 -> Node0x9ffe8b0;
+	Node0x9ffe950 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x9ffe950:s0 -> Node0x9ffe9f0;
+	Node0x9ffe950:s1 -> Node0x9ffe9a0;
+	Node0x9ffe9a0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x9ffe9a0 -> Node0x9ffea40;
+	Node0x9ffe9f0 [shape=record,label="{pd_if.then}"];
+	Node0x9ffe9f0 -> Node0x9ffea40;
+	Node0x9ffea40 [shape=record,label="{it_for.inc}"];
+	Node0x9ffea40 -> Node0x9ffe900;
+}

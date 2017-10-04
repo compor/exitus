@@ -1,0 +1,24 @@
+digraph "CFG for 'init_alias_once' function" {
+	label="CFG for 'init_alias_once' function";
+
+	Node0x2c4a3e0 [shape=record,label="{entry}"];
+	Node0x2c4a3e0 -> Node0x2c4a430;
+	Node0x2c4a430 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2c4a430:s0 -> Node0x2c4a480;
+	Node0x2c4a430:s1 -> Node0x2c4a660;
+	Node0x2c4a480 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2c4a480:s0 -> Node0x2c4a520;
+	Node0x2c4a480:s1 -> Node0x2c4a4d0;
+	Node0x2c4a4d0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x2c4a4d0 -> Node0x2c4a610;
+	Node0x2c4a520 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x2c4a520:s0 -> Node0x2c4a5c0;
+	Node0x2c4a520:s1 -> Node0x2c4a570;
+	Node0x2c4a570 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x2c4a570 -> Node0x2c4a610;
+	Node0x2c4a5c0 [shape=record,label="{pd_if.then}"];
+	Node0x2c4a5c0 -> Node0x2c4a610;
+	Node0x2c4a610 [shape=record,label="{it_for.inc}"];
+	Node0x2c4a610 -> Node0x2c4a430;
+	Node0x2c4a660 [shape=record,label="{for.end}"];
+}

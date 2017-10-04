@@ -1,0 +1,19 @@
+digraph "CFG for 'purge_all_dead_edges_for.cond' function" {
+	label="CFG for 'purge_all_dead_edges_for.cond' function";
+
+	Node0xa5bc4f0 [shape=record,label="{newFuncRoot}"];
+	Node0xa5bc4f0 -> Node0xa5bc590;
+	Node0xa5bc540 [shape=record,label="{for.end.exitStub}"];
+	Node0xa5bc590 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa5bc590:s0 -> Node0xa5bc5e0;
+	Node0xa5bc590:s1 -> Node0xa5bc540;
+	Node0xa5bc5e0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xa5bc5e0:s0 -> Node0xa5bc680;
+	Node0xa5bc5e0:s1 -> Node0xa5bc630;
+	Node0xa5bc630 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xa5bc630 -> Node0xa5bc6d0;
+	Node0xa5bc680 [shape=record,label="{pd_if.then.6}"];
+	Node0xa5bc680 -> Node0xa5bc6d0;
+	Node0xa5bc6d0 [shape=record,label="{it_for.inc}"];
+	Node0xa5bc6d0 -> Node0xa5bc590;
+}

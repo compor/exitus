@@ -1,0 +1,43 @@
+digraph "CFG for '_ZN3povL8in_curveEPNS_12Prism_StructEdd_for.cond' function" {
+	label="CFG for '_ZN3povL8in_curveEPNS_12Prism_StructEdd_for.cond' function";
+
+	Node0x2af8590 [shape=record,label="{newFuncRoot}"];
+	Node0x2af8590 -> Node0x2b01a80;
+	Node0x2b01a30 [shape=record,label="{if.end.51.loopexit.exitStub}"];
+	Node0x2b01a80 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2b01a80:s0 -> Node0x2b01ad0;
+	Node0x2b01a80:s1 -> Node0x2b01a30;
+	Node0x2b01ad0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2b01ad0:s0 -> Node0x2b01b70;
+	Node0x2b01ad0:s1 -> Node0x2b01b20;
+	Node0x2b01b20 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x2b01b20 -> Node0x2b01df0;
+	Node0x2b01b70 [shape=record,label="{pd_land.lhs.true.10|{<s0>T|<s1>F}}"];
+	Node0x2b01b70:s0 -> Node0x2b01c10;
+	Node0x2b01b70:s1 -> Node0x2b01bc0;
+	Node0x2b01bc0 [shape=record,label="{pd_land.lhs.true.10.for.inc_crit_edge}"];
+	Node0x2b01bc0 -> Node0x2b01df0;
+	Node0x2b01c10 [shape=record,label="{pd_land.lhs.true.13|{<s0>T|<s1>F}}"];
+	Node0x2b01c10:s0 -> Node0x2b01cb0;
+	Node0x2b01c10:s1 -> Node0x2b01c60;
+	Node0x2b01c60 [shape=record,label="{pd_land.lhs.true.13.for.inc_crit_edge}"];
+	Node0x2b01c60 -> Node0x2b01df0;
+	Node0x2b01cb0 [shape=record,label="{pd_if.then.16}"];
+	Node0x2b01cb0 -> Node0x2b01d00;
+	Node0x2b01d00 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x2b01d00 -> Node0x2b01d50;
+	Node0x2b01d50 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2b01d50:s0 -> Node0x2b01e40;
+	Node0x2b01d50:s1 -> Node0x2b01da0;
+	Node0x2b01da0 [shape=record,label="{pd_for.inc.loopexit}"];
+	Node0x2b01da0 -> Node0x2b01df0;
+	Node0x2b01df0 [shape=record,label="{it_for.inc}"];
+	Node0x2b01df0 -> Node0x2b01a80;
+	Node0x2b01e40 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x2b01e40:s0 -> Node0x2b01ee0;
+	Node0x2b01e40:s1 -> Node0x2b01e90;
+	Node0x2b01e90 [shape=record,label="{pd_while.body.while.cond_crit_edge}"];
+	Node0x2b01e90 -> Node0x2b01d50;
+	Node0x2b01ee0 [shape=record,label="{pd_if.then.32}"];
+	Node0x2b01ee0 -> Node0x2b01d00;
+}

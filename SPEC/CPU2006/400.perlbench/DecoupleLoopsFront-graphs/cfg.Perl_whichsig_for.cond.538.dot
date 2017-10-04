@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_whichsig_for.cond' function" {
+	label="CFG for 'Perl_whichsig_for.cond' function";
+
+	Node0x4bc1d60 [shape=record,label="{newFuncRoot}"];
+	Node0x4bc1d60 -> Node0x4bc1e50;
+	Node0x4bc1db0 [shape=record,label="{for.end.exitStub}"];
+	Node0x4bc1e00 [shape=record,label="{if.then.exitStub}"];
+	Node0x4bc1e50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bc1e50:s0 -> Node0x4bc1ea0;
+	Node0x4bc1e50:s1 -> Node0x4bc1db0;
+	Node0x4bc1ea0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4bc1ea0:s0 -> Node0x4bc1ef0;
+	Node0x4bc1ea0:s1 -> Node0x4bc1e00;
+	Node0x4bc1ef0 [shape=record,label="{it_for.inc}"];
+	Node0x4bc1ef0 -> Node0x4bc1e50;
+}

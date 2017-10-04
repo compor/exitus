@@ -1,0 +1,16 @@
+digraph "CFG for 'libcall_dead_p_while.cond' function" {
+	label="CFG for 'libcall_dead_p_while.cond' function";
+
+	Node0x7ab44c0 [shape=record,label="{newFuncRoot}"];
+	Node0x7ab44c0 -> Node0x7aba2a0;
+	Node0x7aba200 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x7aba250 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x7aba2a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x7aba2a0:s0 -> Node0x7aba2f0;
+	Node0x7aba2a0:s1 -> Node0x7aba200;
+	Node0x7aba2f0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x7aba2f0:s0 -> Node0x7aba340;
+	Node0x7aba2f0:s1 -> Node0x7aba250;
+	Node0x7aba340 [shape=record,label="{it_while.body}"];
+	Node0x7aba340 -> Node0x7aba2a0;
+}

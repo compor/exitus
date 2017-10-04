@@ -1,0 +1,16 @@
+digraph "CFG for 'get_hard_regnum_for.cond' function" {
+	label="CFG for 'get_hard_regnum_for.cond' function";
+
+	Node0xb92f8a0 [shape=record,label="{newFuncRoot}"];
+	Node0xb92f8a0 -> Node0xb935b70;
+	Node0xb935ad0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0xb935b20 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0xb935b70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb935b70:s0 -> Node0xb935bc0;
+	Node0xb935b70:s1 -> Node0xb935ad0;
+	Node0xb935bc0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb935bc0:s0 -> Node0xb935b20;
+	Node0xb935bc0:s1 -> Node0xb935c10;
+	Node0xb935c10 [shape=record,label="{it_for.inc}"];
+	Node0xb935c10 -> Node0xb935b70;
+}

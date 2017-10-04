@@ -1,0 +1,14 @@
+digraph "CFG for 'gtp_playwhite_for.cond' function" {
+	label="CFG for 'gtp_playwhite_for.cond' function";
+
+	Node0x4830de0 [shape=record,label="{newFuncRoot}"];
+	Node0x4830de0 -> Node0x4830e80;
+	Node0x4830e30 [shape=record,label="{for.end.exitStub}"];
+	Node0x4830e80 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4830e80:s0 -> Node0x4830ed0;
+	Node0x4830e80:s1 -> Node0x4830e30;
+	Node0x4830ed0 [shape=record,label="{pd_for.body}"];
+	Node0x4830ed0 -> Node0x50c5690;
+	Node0x50c5690 [shape=record,label="{it_for.body.split}"];
+	Node0x50c5690 -> Node0x4830e80;
+}

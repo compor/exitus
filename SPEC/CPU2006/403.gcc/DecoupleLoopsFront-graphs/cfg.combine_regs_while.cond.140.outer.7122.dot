@@ -1,0 +1,26 @@
+digraph "CFG for 'combine_regs_while.cond.140.outer' function" {
+	label="CFG for 'combine_regs_while.cond.140.outer' function";
+
+	Node0xb460fd0 [shape=record,label="{newFuncRoot}"];
+	Node0xb460fd0 -> Node0xb461070;
+	Node0xb461020 [shape=record,label="{while.end.199.exitStub}"];
+	Node0xb461070 [shape=record,label="{pd_while.cond.140.outer}"];
+	Node0xb461070 -> Node0xb4610c0;
+	Node0xb4610c0 [shape=record,label="{it_while.cond.140|{<s0>T|<s1>F}}"];
+	Node0xb4610c0:s0 -> Node0xb461110;
+	Node0xb4610c0:s1 -> Node0xb461020;
+	Node0xb461110 [shape=record,label="{it_while.body.145|{<s0>T|<s1>F}}"];
+	Node0xb461110:s0 -> Node0xb4611b0;
+	Node0xb461110:s1 -> Node0xb461160;
+	Node0xb461160 [shape=record,label="{pd_while.body.145.while.cond.140_crit_edge}"];
+	Node0xb461160 -> Node0xb4610c0;
+	Node0xb4611b0 [shape=record,label="{pd_if.then.154|{<s0>T|<s1>F}}"];
+	Node0xb4611b0:s0 -> Node0xb461250;
+	Node0xb4611b0:s1 -> Node0xb461200;
+	Node0xb461200 [shape=record,label="{pd_if.else.188}"];
+	Node0xb461200 -> Node0xb4612a0;
+	Node0xb461250 [shape=record,label="{pd_if.then.173}"];
+	Node0xb461250 -> Node0xb4612a0;
+	Node0xb4612a0 [shape=record,label="{pd_if.end.197}"];
+	Node0xb4612a0 -> Node0xb461070;
+}

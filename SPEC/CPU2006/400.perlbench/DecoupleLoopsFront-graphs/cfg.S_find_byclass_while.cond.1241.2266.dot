@@ -1,0 +1,44 @@
+digraph "CFG for 'S_find_byclass_while.cond.1241' function" {
+	label="CFG for 'S_find_byclass_while.cond.1241' function";
+
+	Node0x52b06d0 [shape=record,label="{newFuncRoot}"];
+	Node0x52b06d0 -> Node0x52b0810;
+	Node0x52b0720 [shape=record,label="{return.loopexit40.exitStub}"];
+	Node0x52b0770 [shape=record,label="{land.lhs.true.1263.got_it.loopexit41_crit_edge.exitStub}"];
+	Node0x52b07c0 [shape=record,label="{lor.lhs.false.1265.got_it.loopexit41_crit_edge.exitStub}"];
+	Node0x52b0810 [shape=record,label="{it_while.cond.1241|{<s0>T|<s1>F}}"];
+	Node0x52b0810:s0 -> Node0x52b0860;
+	Node0x52b0810:s1 -> Node0x52b0720;
+	Node0x52b0860 [shape=record,label="{it_while.body.1244|{<s0>T|<s1>F}}"];
+	Node0x52b0860:s0 -> Node0x52b0900;
+	Node0x52b0860:s1 -> Node0x52b08b0;
+	Node0x52b08b0 [shape=record,label="{it_while.body.1244.if.end.1272_crit_edge}"];
+	Node0x52b08b0 -> Node0x52b0c20;
+	Node0x52b0900 [shape=record,label="{it_land.lhs.true.1249|{<s0>T|<s1>F}}"];
+	Node0x52b0900:s0 -> Node0x52b0a40;
+	Node0x52b0900:s1 -> Node0x52b0950;
+	Node0x52b0950 [shape=record,label="{it_lor.lhs.false.1257|{<s0>T|<s1>F}}"];
+	Node0x52b0950:s0 -> Node0x52b09f0;
+	Node0x52b0950:s1 -> Node0x52b09a0;
+	Node0x52b09a0 [shape=record,label="{it_lor.lhs.false.1257.if.end.1272_crit_edge}"];
+	Node0x52b09a0 -> Node0x52b0c20;
+	Node0x52b09f0 [shape=record,label="{pd_lor.lhs.false.1257.if.then.1261_crit_edge}"];
+	Node0x52b09f0 -> Node0x52b0a90;
+	Node0x52b0a40 [shape=record,label="{pd_land.lhs.true.1249.if.then.1261_crit_edge}"];
+	Node0x52b0a40 -> Node0x52b0a90;
+	Node0x52b0a90 [shape=record,label="{it_if.then.1261|{<s0>T|<s1>F}}"];
+	Node0x52b0a90:s0 -> Node0x52b0b30;
+	Node0x52b0a90:s1 -> Node0x52b0ae0;
+	Node0x52b0ae0 [shape=record,label="{pd_if.then.1261.if.end.1272_crit_edge}"];
+	Node0x52b0ae0 -> Node0x52b0c20;
+	Node0x52b0b30 [shape=record,label="{it_land.lhs.true.1263|{<s0>T|<s1>F}}"];
+	Node0x52b0b30:s0 -> Node0x52b0770;
+	Node0x52b0b30:s1 -> Node0x52b0b80;
+	Node0x52b0b80 [shape=record,label="{it_lor.lhs.false.1265|{<s0>T|<s1>F}}"];
+	Node0x52b0b80:s0 -> Node0x52b07c0;
+	Node0x52b0b80:s1 -> Node0x52b0bd0;
+	Node0x52b0bd0 [shape=record,label="{pd_lor.lhs.false.1265.if.end.1272_crit_edge}"];
+	Node0x52b0bd0 -> Node0x52b0c20;
+	Node0x52b0c20 [shape=record,label="{it_if.end.1272}"];
+	Node0x52b0c20 -> Node0x52b0810;
+}

@@ -1,0 +1,29 @@
+digraph "CFG for 'count_one_set_while.cond' function" {
+	label="CFG for 'count_one_set_while.cond' function";
+
+	Node0xb6d7240 [shape=record,label="{newFuncRoot}"];
+	Node0xb6d7240 -> Node0xb6d72e0;
+	Node0xb6d7290 [shape=record,label="{while.end.exitStub}"];
+	Node0xb6d72e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb6d72e0:s0 -> Node0xb6d7510;
+	Node0xb6d72e0:s1 -> Node0xb6d7330;
+	Node0xb6d7330 [shape=record,label="{it_lor.lhs.false.23|{<s0>T|<s1>F}}"];
+	Node0xb6d7330:s0 -> Node0xb6d74c0;
+	Node0xb6d7330:s1 -> Node0xb6d7380;
+	Node0xb6d7380 [shape=record,label="{it_lor.lhs.false.27|{<s0>T|<s1>F}}"];
+	Node0xb6d7380:s0 -> Node0xb6d7470;
+	Node0xb6d7380:s1 -> Node0xb6d73d0;
+	Node0xb6d73d0 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0xb6d73d0:s0 -> Node0xb6d7420;
+	Node0xb6d73d0:s1 -> Node0xb6d7290;
+	Node0xb6d7420 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0xb6d7420 -> Node0xb6d7560;
+	Node0xb6d7470 [shape=record,label="{pd_lor.lhs.false.27.while.body_crit_edge}"];
+	Node0xb6d7470 -> Node0xb6d7560;
+	Node0xb6d74c0 [shape=record,label="{pd_lor.lhs.false.23.while.body_crit_edge}"];
+	Node0xb6d74c0 -> Node0xb6d7560;
+	Node0xb6d7510 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0xb6d7510 -> Node0xb6d7560;
+	Node0xb6d7560 [shape=record,label="{it_while.body}"];
+	Node0xb6d7560 -> Node0xb6d72e0;
+}

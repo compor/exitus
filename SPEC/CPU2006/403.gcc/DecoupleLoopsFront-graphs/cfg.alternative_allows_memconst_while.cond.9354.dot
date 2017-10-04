@@ -1,0 +1,19 @@
+digraph "CFG for 'alternative_allows_memconst_while.cond' function" {
+	label="CFG for 'alternative_allows_memconst_while.cond' function";
+
+	Node0xbc3b410 [shape=record,label="{newFuncRoot}"];
+	Node0xbc3b410 -> Node0xbd3a590;
+	Node0xbd3a540 [shape=record,label="{while.cond.6.preheader.exitStub}"];
+	Node0xbd3a590 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xbd3a590:s0 -> Node0xbd3a5e0;
+	Node0xbd3a590:s1 -> Node0xbd3a540;
+	Node0xbd3a5e0 [shape=record,label="{pd_while.cond.1.preheader}"];
+	Node0xbd3a5e0 -> Node0xbd3a630;
+	Node0xbd3a630 [shape=record,label="{pd_while.cond.1|{<s0>T|<s1>F}}"];
+	Node0xbd3a630:s0 -> Node0xbd3a6d0;
+	Node0xbd3a630:s1 -> Node0xbd3a680;
+	Node0xbd3a680 [shape=record,label="{it_while.end}"];
+	Node0xbd3a680 -> Node0xbd3a590;
+	Node0xbd3a6d0 [shape=record,label="{pd_while.cond.1.while.cond.1_crit_edge}"];
+	Node0xbd3a6d0 -> Node0xbd3a630;
+}

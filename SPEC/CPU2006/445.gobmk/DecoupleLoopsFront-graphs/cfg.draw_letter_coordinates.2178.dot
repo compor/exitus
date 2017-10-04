@@ -1,0 +1,16 @@
+digraph "CFG for 'draw_letter_coordinates' function" {
+	label="CFG for 'draw_letter_coordinates' function";
+
+	Node0x3516fc0 [shape=record,label="{entry}"];
+	Node0x3516fc0 -> Node0x3517010;
+	Node0x3517010 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3517010:s0 -> Node0x35217d0;
+	Node0x3517010:s1 -> Node0x3521820;
+	Node0x35217d0 [shape=record,label="{pd_for.body}"];
+	Node0x35217d0 -> Node0x4a541b0;
+	Node0x4a541b0 [shape=record,label="{it_for.body.split1}"];
+	Node0x4a541b0 -> Node0x4ac1470;
+	Node0x4ac1470 [shape=record,label="{pd_for.body.split}"];
+	Node0x4ac1470 -> Node0x3517010;
+	Node0x3521820 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,34 @@
+digraph "CFG for 'Perl_fbm_instr_top2' function" {
+	label="CFG for 'Perl_fbm_instr_top2' function";
+
+	Node0x580d9b0 [shape=record,label="{newFuncRoot}"];
+	Node0x580d9b0 -> Node0x580daf0;
+	Node0x580da00 [shape=record,label="{return.loopexit7.exitStub}"];
+	Node0x580da50 [shape=record,label="{if.end.296.check_end.loopexit_crit_edge.exitStub}"];
+	Node0x580daa0 [shape=record,label="{if.then.277.check_end.loopexit_crit_edge.exitStub}"];
+	Node0x580daf0 [shape=record,label="{it_top2|{<s0>T|<s1>F}}"];
+	Node0x580daf0:s0 -> Node0x580dd20;
+	Node0x580daf0:s1 -> Node0x580db40;
+	Node0x580db40 [shape=record,label="{pd_while.cond.285.preheader}"];
+	Node0x580db40 -> Node0x580db90;
+	Node0x580db90 [shape=record,label="{it_while.cond.285|{<s0>T|<s1>F}}"];
+	Node0x580db90:s0 -> Node0x580dbe0;
+	Node0x580db90:s1 -> Node0x580da00;
+	Node0x580dbe0 [shape=record,label="{it_while.body.288|{<s0>T|<s1>F}}"];
+	Node0x580dbe0:s0 -> Node0x580dcd0;
+	Node0x580dbe0:s1 -> Node0x580dc30;
+	Node0x580dc30 [shape=record,label="{it_if.end.296|{<s0>T|<s1>F}}"];
+	Node0x580dc30:s0 -> Node0x580dc80;
+	Node0x580dc30:s1 -> Node0x580da50;
+	Node0x580dc80 [shape=record,label="{pd_if.end.296.top2.backedge_crit_edge}"];
+	Node0x580dc80 -> Node0x580ddc0;
+	Node0x580dcd0 [shape=record,label="{pd_while.body.288.while.cond.285_crit_edge}"];
+	Node0x580dcd0 -> Node0x580db90;
+	Node0x580dd20 [shape=record,label="{it_if.then.277|{<s0>T|<s1>F}}"];
+	Node0x580dd20:s0 -> Node0x580dd70;
+	Node0x580dd20:s1 -> Node0x580daa0;
+	Node0x580dd70 [shape=record,label="{pd_if.then.277.top2.backedge_crit_edge}"];
+	Node0x580dd70 -> Node0x580ddc0;
+	Node0x580ddc0 [shape=record,label="{pd_top2.backedge}"];
+	Node0x580ddc0 -> Node0x580daf0;
+}

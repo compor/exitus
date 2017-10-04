@@ -1,0 +1,12 @@
+digraph "CFG for 'debug_candidates' function" {
+	label="CFG for 'debug_candidates' function";
+
+	Node0x8f1cb20 [shape=record,label="{entry}"];
+	Node0x8f1cb20 -> Node0x8f1cb70;
+	Node0x8f1cb70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x8f1cb70:s0 -> Node0x8f1cbc0;
+	Node0x8f1cb70:s1 -> Node0x8f1d040;
+	Node0x8f1cbc0 [shape=record,label="{pd_for.body}"];
+	Node0x8f1cbc0 -> Node0x8f1cb70;
+	Node0x8f1d040 [shape=record,label="{for.end}"];
+}

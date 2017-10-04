@@ -1,0 +1,23 @@
+digraph "CFG for 'Perl_newASSIGNOP_for.cond' function" {
+	label="CFG for 'Perl_newASSIGNOP_for.cond' function";
+
+	Node0x4c49020 [shape=record,label="{newFuncRoot}"];
+	Node0x4c49020 -> Node0x4c52490;
+	Node0x4c49070 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x4c490c0 [shape=record,label="{if.then.56.exitStub}"];
+	Node0x4c52490 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4c52490:s0 -> Node0x4c524e0;
+	Node0x4c52490:s1 -> Node0x4c49070;
+	Node0x4c524e0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4c524e0:s0 -> Node0x4c52580;
+	Node0x4c524e0:s1 -> Node0x4c52530;
+	Node0x4c52530 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4c52530 -> Node0x4c52620;
+	Node0x4c52580 [shape=record,label="{it_land.lhs.true.50|{<s0>T|<s1>F}}"];
+	Node0x4c52580:s0 -> Node0x4c490c0;
+	Node0x4c52580:s1 -> Node0x4c525d0;
+	Node0x4c525d0 [shape=record,label="{pd_land.lhs.true.50.for.inc_crit_edge}"];
+	Node0x4c525d0 -> Node0x4c52620;
+	Node0x4c52620 [shape=record,label="{it_for.inc}"];
+	Node0x4c52620 -> Node0x4c52490;
+}

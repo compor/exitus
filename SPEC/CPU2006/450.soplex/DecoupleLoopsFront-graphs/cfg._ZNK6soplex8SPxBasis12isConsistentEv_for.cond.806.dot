@@ -1,0 +1,23 @@
+digraph "CFG for '_ZNK6soplex8SPxBasis12isConsistentEv_for.cond' function" {
+	label="CFG for '_ZNK6soplex8SPxBasis12isConsistentEv_for.cond' function";
+
+	Node0x2d7e9a0 [shape=record,label="{newFuncRoot}"];
+	Node0x2d7e9a0 -> Node0x2d7eef0;
+	Node0x2d7e9f0 [shape=record,label="{for.end.exitStub}"];
+	Node0x2d7eea0 [shape=record,label="{if.then.40.exitStub}"];
+	Node0x2d7eef0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2d7eef0:s0 -> Node0x2d7ef40;
+	Node0x2d7eef0:s1 -> Node0x2d7e9f0;
+	Node0x2d7ef40 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x2d7ef40:s0 -> Node0x2d7efe0;
+	Node0x2d7ef40:s1 -> Node0x2d7ef90;
+	Node0x2d7ef90 [shape=record,label="{pd_if.else}"];
+	Node0x2d7ef90 -> Node0x2d7f080;
+	Node0x2d7efe0 [shape=record,label="{it_if.then.35|{<s0>T|<s1>F}}"];
+	Node0x2d7efe0:s0 -> Node0x2d7eea0;
+	Node0x2d7efe0:s1 -> Node0x2d7f030;
+	Node0x2d7f030 [shape=record,label="{pd_if.then.35.for.inc_crit_edge}"];
+	Node0x2d7f030 -> Node0x2d7f080;
+	Node0x2d7f080 [shape=record,label="{it_for.inc}"];
+	Node0x2d7f080 -> Node0x2d7eef0;
+}

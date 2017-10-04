@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_my_popen_while.cond' function" {
+	label="CFG for 'Perl_my_popen_while.cond' function";
+
+	Node0x581f650 [shape=record,label="{newFuncRoot}"];
+	Node0x581f650 -> Node0x581f740;
+	Node0x581f6a0 [shape=record,label="{while.end.exitStub}"];
+	Node0x581f6f0 [shape=record,label="{if.then.35.exitStub}"];
+	Node0x581f740 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x581f740:s0 -> Node0x581f790;
+	Node0x581f740:s1 -> Node0x581f6a0;
+	Node0x581f790 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x581f790:s0 -> Node0x581f6f0;
+	Node0x581f790:s1 -> Node0x581f7e0;
+	Node0x581f7e0 [shape=record,label="{pd_if.end.50}"];
+	Node0x581f7e0 -> Node0x581f740;
+}

@@ -1,0 +1,26 @@
+digraph "CFG for 'Perl_linklist_for.cond' function" {
+	label="CFG for 'Perl_linklist_for.cond' function";
+
+	Node0x4bf6140 [shape=record,label="{newFuncRoot}"];
+	Node0x4bf6140 -> Node0x4bf6580;
+	Node0x4bf6530 [shape=record,label="{if.end.32.loopexit.exitStub}"];
+	Node0x4bf6580 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bf6580:s0 -> Node0x4bf65d0;
+	Node0x4bf6580:s1 -> Node0x4bf6530;
+	Node0x4bf65d0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4bf65d0:s0 -> Node0x4bf6670;
+	Node0x4bf65d0:s1 -> Node0x4bf6620;
+	Node0x4bf6620 [shape=record,label="{pd_if.else}"];
+	Node0x4bf6620 -> Node0x4bf67b0;
+	Node0x4bf6670 [shape=record,label="{pd_if.then.14|{<s0>T|<s1>F}}"];
+	Node0x4bf6670:s0 -> Node0x4bf6710;
+	Node0x4bf6670:s1 -> Node0x4bf66c0;
+	Node0x4bf66c0 [shape=record,label="{pd_cond.false.21}"];
+	Node0x4bf66c0 -> Node0x4bf6760;
+	Node0x4bf6710 [shape=record,label="{pd_cond.true.18}"];
+	Node0x4bf6710 -> Node0x4bf6760;
+	Node0x4bf6760 [shape=record,label="{pd_cond.end.24}"];
+	Node0x4bf6760 -> Node0x4bf67b0;
+	Node0x4bf67b0 [shape=record,label="{it_for.inc}"];
+	Node0x4bf67b0 -> Node0x4bf6580;
+}

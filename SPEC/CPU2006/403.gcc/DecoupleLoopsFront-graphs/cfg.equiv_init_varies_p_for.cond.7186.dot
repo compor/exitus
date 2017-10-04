@@ -1,0 +1,39 @@
+digraph "CFG for 'equiv_init_varies_p_for.cond' function" {
+	label="CFG for 'equiv_init_varies_p_for.cond' function";
+
+	Node0xb467bc0 [shape=record,label="{newFuncRoot}"];
+	Node0xb467bc0 -> Node0xb482970;
+	Node0xb482880 [shape=record,label="{for.cond.return.loopexit1_crit_edge.exitStub}"];
+	Node0xb4828d0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xb482920 [shape=record,label="{if.then.30.return.loopexit1_crit_edge.exitStub}"];
+	Node0xb482970 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb482970:s0 -> Node0xb4829c0;
+	Node0xb482970:s1 -> Node0xb482880;
+	Node0xb4829c0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb4829c0:s0 -> Node0xb482c40;
+	Node0xb4829c0:s1 -> Node0xb482a10;
+	Node0xb482a10 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0xb482a10:s0 -> Node0xb482ab0;
+	Node0xb482a10:s1 -> Node0xb482a60;
+	Node0xb482a60 [shape=record,label="{pd_if.else.for.inc.64_crit_edge}"];
+	Node0xb482a60 -> Node0xb482ce0;
+	Node0xb482ab0 [shape=record,label="{it_for.cond.45.preheader}"];
+	Node0xb482ab0 -> Node0xb482b00;
+	Node0xb482b00 [shape=record,label="{it_for.cond.45|{<s0>T|<s1>F}}"];
+	Node0xb482b00:s0 -> Node0xb482ba0;
+	Node0xb482b00:s1 -> Node0xb482b50;
+	Node0xb482b50 [shape=record,label="{pd_for.inc.64.loopexit}"];
+	Node0xb482b50 -> Node0xb482ce0;
+	Node0xb482ba0 [shape=record,label="{it_for.body.51|{<s0>T|<s1>F}}"];
+	Node0xb482ba0:s0 -> Node0xb4828d0;
+	Node0xb482ba0:s1 -> Node0xb482bf0;
+	Node0xb482bf0 [shape=record,label="{it_for.inc}"];
+	Node0xb482bf0 -> Node0xb482b00;
+	Node0xb482c40 [shape=record,label="{it_if.then.30|{<s0>T|<s1>F}}"];
+	Node0xb482c40:s0 -> Node0xb482920;
+	Node0xb482c40:s1 -> Node0xb482c90;
+	Node0xb482c90 [shape=record,label="{pd_if.then.30.for.inc.64_crit_edge}"];
+	Node0xb482c90 -> Node0xb482ce0;
+	Node0xb482ce0 [shape=record,label="{it_for.inc.64}"];
+	Node0xb482ce0 -> Node0xb482970;
+}

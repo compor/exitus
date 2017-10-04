@@ -1,0 +1,20 @@
+digraph "CFG for 'prescan_loop_for.cond' function" {
+	label="CFG for 'prescan_loop_for.cond' function";
+
+	Node0xb547aa0 [shape=record,label="{newFuncRoot}"];
+	Node0xb547aa0 -> Node0xb552570;
+	Node0xb547af0 [shape=record,label="{for.cond.for.end.loopexit_crit_edge.exitStub}"];
+	Node0xb547b40 [shape=record,label="{land.rhs.for.end.loopexit_crit_edge.exitStub}"];
+	Node0xb547b90 [shape=record,label="{if.then.exitStub}"];
+	Node0xb552570 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb552570:s0 -> Node0xb5525c0;
+	Node0xb552570:s1 -> Node0xb547af0;
+	Node0xb5525c0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xb5525c0:s0 -> Node0xb552610;
+	Node0xb5525c0:s1 -> Node0xb547b40;
+	Node0xb552610 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb552610:s0 -> Node0xb547b90;
+	Node0xb552610:s1 -> Node0xb552660;
+	Node0xb552660 [shape=record,label="{pd_for.inc}"];
+	Node0xb552660 -> Node0xb552570;
+}

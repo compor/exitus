@@ -1,0 +1,14 @@
+digraph "CFG for 'emit_insns_before' function" {
+	label="CFG for 'emit_insns_before' function";
+
+	Node0x3ef6510 [shape=record,label="{entry}"];
+	Node0x3ef6510 -> Node0x3ef6560;
+	Node0x3ef6560 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3ef6560:s0 -> Node0x3ef65b0;
+	Node0x3ef6560:s1 -> Node0x3ef6600;
+	Node0x3ef65b0 [shape=record,label="{it_while.body}"];
+	Node0x3ef65b0 -> Node0xc919750;
+	Node0xc919750 [shape=record,label="{pd_while.body.split}"];
+	Node0xc919750 -> Node0x3ef6560;
+	Node0x3ef6600 [shape=record,label="{while.end}"];
+}

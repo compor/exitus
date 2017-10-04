@@ -1,0 +1,32 @@
+digraph "CFG for 'c_expand_builtin_printf_while.cond' function" {
+	label="CFG for 'c_expand_builtin_printf_while.cond' function";
+
+	Node0xa1395d0 [shape=record,label="{newFuncRoot}"];
+	Node0xa1395d0 -> Node0xa139b00;
+	Node0xa139a10 [shape=record,label="{lor.lhs.false.31.while.end_crit_edge.exitStub}"];
+	Node0xa139a60 [shape=record,label="{land.lhs.true.while.end_crit_edge.exitStub}"];
+	Node0xa139ab0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xa139b00 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa139b00:s0 -> Node0xa139c90;
+	Node0xa139b00:s1 -> Node0xa139b50;
+	Node0xa139b50 [shape=record,label="{it_lor.lhs.false.25|{<s0>T|<s1>F}}"];
+	Node0xa139b50:s0 -> Node0xa139c40;
+	Node0xa139b50:s1 -> Node0xa139ba0;
+	Node0xa139ba0 [shape=record,label="{it_lor.lhs.false.31|{<s0>T|<s1>F}}"];
+	Node0xa139ba0:s0 -> Node0xa139bf0;
+	Node0xa139ba0:s1 -> Node0xa139a10;
+	Node0xa139bf0 [shape=record,label="{pd_lor.lhs.false.31.land.lhs.true_crit_edge}"];
+	Node0xa139bf0 -> Node0xa139ce0;
+	Node0xa139c40 [shape=record,label="{pd_lor.lhs.false.25.land.lhs.true_crit_edge}"];
+	Node0xa139c40 -> Node0xa139ce0;
+	Node0xa139c90 [shape=record,label="{pd_while.cond.land.lhs.true_crit_edge}"];
+	Node0xa139c90 -> Node0xa139ce0;
+	Node0xa139ce0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xa139ce0:s0 -> Node0xa139d30;
+	Node0xa139ce0:s1 -> Node0xa139a60;
+	Node0xa139d30 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xa139d30:s0 -> Node0xa139d80;
+	Node0xa139d30:s1 -> Node0xa139ab0;
+	Node0xa139d80 [shape=record,label="{it_while.body}"];
+	Node0xa139d80 -> Node0xa139b00;
+}

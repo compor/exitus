@@ -1,0 +1,26 @@
+digraph "CFG for '_ZN12SparseMatrixIdE10symmetrizeEv' function" {
+	label="CFG for '_ZN12SparseMatrixIdE10symmetrizeEv' function";
+
+	Node0x70fbde0 [shape=record,label="{entry}"];
+	Node0x70fbde0 -> Node0x70fbe30;
+	Node0x70fbe30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x70fbe30:s0 -> Node0x70fbe80;
+	Node0x70fbe30:s1 -> Node0x70fc0b0;
+	Node0x70fbe80 [shape=record,label="{pd_for.body}"];
+	Node0x70fbe80 -> Node0x70fbed0;
+	Node0x70fbed0 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x70fbed0:s0 -> Node0x70fbf70;
+	Node0x70fbed0:s1 -> Node0x70fbf20;
+	Node0x70fbf20 [shape=record,label="{pd_while.cond.for.inc_crit_edge}"];
+	Node0x70fbf20 -> Node0x70fc060;
+	Node0x70fbf70 [shape=record,label="{pd_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x70fbf70:s0 -> Node0x70fc010;
+	Node0x70fbf70:s1 -> Node0x70fbfc0;
+	Node0x70fbfc0 [shape=record,label="{pd_land.rhs.for.inc_crit_edge}"];
+	Node0x70fbfc0 -> Node0x70fc060;
+	Node0x70fc010 [shape=record,label="{pd_while.body}"];
+	Node0x70fc010 -> Node0x70fbed0;
+	Node0x70fc060 [shape=record,label="{it_for.inc}"];
+	Node0x70fc060 -> Node0x70fbe30;
+	Node0x70fc0b0 [shape=record,label="{for.end}"];
+}

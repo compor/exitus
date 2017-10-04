@@ -1,0 +1,19 @@
+digraph "CFG for 'remove_address_replacements_for.cond' function" {
+	label="CFG for 'remove_address_replacements_for.cond' function";
+
+	Node0xbadfd80 [shape=record,label="{newFuncRoot}"];
+	Node0xbadfd80 -> Node0xbb73440;
+	Node0xbb733f0 [shape=record,label="{for.end.exitStub}"];
+	Node0xbb73440 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xbb73440:s0 -> Node0xbb73490;
+	Node0xbb73440:s1 -> Node0xbb733f0;
+	Node0xbb73490 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xbb73490:s0 -> Node0xbb73960;
+	Node0xbb73490:s1 -> Node0xbb73910;
+	Node0xbb73910 [shape=record,label="{pd_if.else}"];
+	Node0xbb73910 -> Node0xbb739b0;
+	Node0xbb73960 [shape=record,label="{pd_if.then}"];
+	Node0xbb73960 -> Node0xbb739b0;
+	Node0xbb739b0 [shape=record,label="{it_for.inc}"];
+	Node0xbb739b0 -> Node0xbb73440;
+}

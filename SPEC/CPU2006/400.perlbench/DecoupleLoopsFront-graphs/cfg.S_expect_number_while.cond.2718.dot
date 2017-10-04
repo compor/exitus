@@ -1,0 +1,16 @@
+digraph "CFG for 'S_expect_number_while.cond' function" {
+	label="CFG for 'S_expect_number_while.cond' function";
+
+	Node0x553c750 [shape=record,label="{newFuncRoot}"];
+	Node0x553c750 -> Node0x553c840;
+	Node0x553c7a0 [shape=record,label="{while.cond.sw.epilog.loopexit_crit_edge.exitStub}"];
+	Node0x553c7f0 [shape=record,label="{land.rhs.sw.epilog.loopexit_crit_edge.exitStub}"];
+	Node0x553c840 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x553c840:s0 -> Node0x553c890;
+	Node0x553c840:s1 -> Node0x553c7a0;
+	Node0x553c890 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x553c890:s0 -> Node0x553c8e0;
+	Node0x553c890:s1 -> Node0x553c7f0;
+	Node0x553c8e0 [shape=record,label="{pd_while.body}"];
+	Node0x553c8e0 -> Node0x553c840;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'set_block_levels' function" {
+	label="CFG for 'set_block_levels' function";
+
+	Node0x30776a0 [shape=record,label="{entry}"];
+	Node0x30776a0 -> Node0x30776f0;
+	Node0x30776f0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x30776f0:s0 -> Node0x3077740;
+	Node0x30776f0:s1 -> Node0x3077790;
+	Node0x3077740 [shape=record,label="{pd_while.body}"];
+	Node0x3077740 -> Node0xca385e0;
+	Node0xca385e0 [shape=record,label="{it_while.body.split}"];
+	Node0xca385e0 -> Node0x30776f0;
+	Node0x3077790 [shape=record,label="{while.end}"];
+}

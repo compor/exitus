@@ -1,0 +1,12 @@
+digraph "CFG for 'Perl_lex_start_while.cond' function" {
+	label="CFG for 'Perl_lex_start_while.cond' function";
+
+	Node0x5540810 [shape=record,label="{newFuncRoot}"];
+	Node0x5540810 -> Node0x55434b0;
+	Node0x5543460 [shape=record,label="{while.end.exitStub}"];
+	Node0x55434b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x55434b0:s0 -> Node0x5543500;
+	Node0x55434b0:s1 -> Node0x5543460;
+	Node0x5543500 [shape=record,label="{pd_while.body}"];
+	Node0x5543500 -> Node0x55434b0;
+}

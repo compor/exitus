@@ -1,0 +1,28 @@
+digraph "CFG for 'dw2_output_call_site_table' function" {
+	label="CFG for 'dw2_output_call_site_table' function";
+
+	Node0x3fedec0 [shape=record,label="{entry}"];
+	Node0x3fedec0 -> Node0x3fedf10;
+	Node0x3fedf10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3fedf10:s0 -> Node0x3fedf60;
+	Node0x3fedf10:s1 -> Node0x3fee190;
+	Node0x3fedf60 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3fedf60:s0 -> Node0x3fee000;
+	Node0x3fedf60:s1 -> Node0x3fedfb0;
+	Node0x3fedfb0 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x3fedfb0 -> Node0x3fee050;
+	Node0x3fee000 [shape=record,label="{pd_do.body.7}"];
+	Node0x3fee000 -> Node0x3fee050;
+	Node0x3fee050 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x3fee050:s0 -> Node0x3fee0a0;
+	Node0x3fee050:s1 -> Node0x3fee0f0;
+	Node0x3fee0a0 [shape=record,label="{pd_if.then.18}"];
+	Node0x3fee0a0 -> Node0x3fee140;
+	Node0x3fee0f0 [shape=record,label="{pd_if.else}"];
+	Node0x3fee0f0 -> Node0x3fee140;
+	Node0x3fee140 [shape=record,label="{pd_if.end.20}"];
+	Node0x3fee140 -> Node0xd17bea0;
+	Node0xd17bea0 [shape=record,label="{it_if.end.20.split}"];
+	Node0xd17bea0 -> Node0x3fedf10;
+	Node0x3fee190 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN3pov14Destroy_ObjectEPNS_13Object_StructE' function" {
+	label="CFG for '_ZN3pov14Destroy_ObjectEPNS_13Object_StructE' function";
+
+	Node0x176dff0 [shape=record,label="{entry}"];
+	Node0x176dff0 -> Node0x176e040;
+	Node0x176e040 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x176e040:s0 -> Node0x176e090;
+	Node0x176e040:s1 -> Node0x176e1d0;
+	Node0x176e090 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x176e090:s0 -> Node0x176e130;
+	Node0x176e090:s1 -> Node0x176e0e0;
+	Node0x176e0e0 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x176e0e0 -> Node0x176e180;
+	Node0x176e130 [shape=record,label="{pd_if.then}"];
+	Node0x176e130 -> Node0x176e180;
+	Node0x176e180 [shape=record,label="{it_if.end}"];
+	Node0x176e180 -> Node0x30625d0;
+	Node0x30625d0 [shape=record,label="{pd_if.end.split}"];
+	Node0x30625d0 -> Node0x176e040;
+	Node0x176e1d0 [shape=record,label="{while.end}"];
+}

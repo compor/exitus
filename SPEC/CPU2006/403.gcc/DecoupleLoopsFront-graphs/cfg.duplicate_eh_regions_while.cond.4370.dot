@@ -1,0 +1,12 @@
+digraph "CFG for 'duplicate_eh_regions_while.cond' function" {
+	label="CFG for 'duplicate_eh_regions_while.cond' function";
+
+	Node0xaca38c0 [shape=record,label="{newFuncRoot}"];
+	Node0xaca38c0 -> Node0xacad030;
+	Node0xacacfe0 [shape=record,label="{while.end.exitStub}"];
+	Node0xacad030 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xacad030:s0 -> Node0xacad080;
+	Node0xacad030:s1 -> Node0xacacfe0;
+	Node0xacad080 [shape=record,label="{it_while.body}"];
+	Node0xacad080 -> Node0xacad030;
+}

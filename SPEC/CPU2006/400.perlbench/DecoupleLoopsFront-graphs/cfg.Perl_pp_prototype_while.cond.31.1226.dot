@@ -1,0 +1,45 @@
+digraph "CFG for 'Perl_pp_prototype_while.cond.31' function" {
+	label="CFG for 'Perl_pp_prototype_while.cond.31' function";
+
+	Node0x4e27680 [shape=record,label="{newFuncRoot}"];
+	Node0x4e27680 -> Node0x4e27770;
+	Node0x4e276d0 [shape=record,label="{while.end.75.exitStub}"];
+	Node0x4e27720 [shape=record,label="{set.loopexit.exitStub}"];
+	Node0x4e27770 [shape=record,label="{it_while.cond.31|{<s0>T|<s1>F}}"];
+	Node0x4e27770:s0 -> Node0x4e277c0;
+	Node0x4e27770:s1 -> Node0x4e276d0;
+	Node0x4e277c0 [shape=record,label="{it_while.body.33|{<s0>T|<s1>F}}"];
+	Node0x4e277c0:s0 -> Node0x4e27860;
+	Node0x4e277c0:s1 -> Node0x4e27810;
+	Node0x4e27810 [shape=record,label="{it_if.then.38}"];
+	Node0x4e27810 -> Node0x65d6100;
+	Node0x65d6100 [shape=record,label="{pd_if.then.38.split}"];
+	Node0x65d6100 -> Node0x4e279a0;
+	Node0x4e27860 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x4e27860:s0 -> Node0x4e27900;
+	Node0x4e27860:s1 -> Node0x4e278b0;
+	Node0x4e278b0 [shape=record,label="{pd_if.else.if.end.52_crit_edge}"];
+	Node0x4e278b0 -> Node0x4e279a0;
+	Node0x4e27900 [shape=record,label="{it_land.lhs.true.43|{<s0>T|<s1>F}}"];
+	Node0x4e27900:s0 -> Node0x4e27720;
+	Node0x4e27900:s1 -> Node0x4e27950;
+	Node0x4e27950 [shape=record,label="{pd_land.lhs.true.43.if.end.52_crit_edge}"];
+	Node0x4e27950 -> Node0x4e279a0;
+	Node0x4e279a0 [shape=record,label="{it_if.end.52|{<s0>T|<s1>F}}"];
+	Node0x4e279a0:s0 -> Node0x4e27a40;
+	Node0x4e279a0:s1 -> Node0x4e279f0;
+	Node0x4e279f0 [shape=record,label="{pd_if.end.52.if.end.68_crit_edge}"];
+	Node0x4e279f0 -> Node0x4e27a90;
+	Node0x4e27a40 [shape=record,label="{it_if.then.64}"];
+	Node0x4e27a40 -> Node0x675aa70;
+	Node0x675aa70 [shape=record,label="{pd_if.then.64.split}"];
+	Node0x675aa70 -> Node0x4e27a90;
+	Node0x4e27a90 [shape=record,label="{pd_if.end.68}"];
+	Node0x4e27a90 -> Node0x65d60b0;
+	Node0x65d60b0 [shape=record,label="{it_if.end.68.split2}"];
+	Node0x65d60b0 -> Node0x6459d00;
+	Node0x6459d00 [shape=record,label="{pd_if.end.68.split1}"];
+	Node0x6459d00 -> Node0x6459c10;
+	Node0x6459c10 [shape=record,label="{it_if.end.68.split}"];
+	Node0x6459c10 -> Node0x4e27770;
+}

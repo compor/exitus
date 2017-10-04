@@ -1,0 +1,26 @@
+digraph "CFG for 'lm_cache_reset_for.cond' function" {
+	label="CFG for 'lm_cache_reset_for.cond' function";
+
+	Node0x1285c70 [shape=record,label="{newFuncRoot}"];
+	Node0x1285c70 -> Node0x1285d10;
+	Node0x1285cc0 [shape=record,label="{if.end.33.loopexit.exitStub}"];
+	Node0x1285d10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1285d10:s0 -> Node0x1285d60;
+	Node0x1285d10:s1 -> Node0x1285cc0;
+	Node0x1285d60 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x1285d60:s0 -> Node0x1285e00;
+	Node0x1285d60:s1 -> Node0x1285db0;
+	Node0x1285db0 [shape=record,label="{pd_for.body.if.end.27_crit_edge}"];
+	Node0x1285db0 -> Node0x1286730;
+	Node0x1285e00 [shape=record,label="{pd_land.lhs.true.6|{<s0>T|<s1>F}}"];
+	Node0x1285e00:s0 -> Node0x12866e0;
+	Node0x1285e00:s1 -> Node0x1285e50;
+	Node0x1285e50 [shape=record,label="{pd_if.then.11}"];
+	Node0x1285e50 -> Node0x1286730;
+	Node0x12866e0 [shape=record,label="{pd_land.lhs.true.6.if.end.27_crit_edge}"];
+	Node0x12866e0 -> Node0x1286730;
+	Node0x1286730 [shape=record,label="{pd_if.end.27}"];
+	Node0x1286730 -> Node0x15d13c0;
+	Node0x15d13c0 [shape=record,label="{it_if.end.27.split}"];
+	Node0x15d13c0 -> Node0x1285d10;
+}

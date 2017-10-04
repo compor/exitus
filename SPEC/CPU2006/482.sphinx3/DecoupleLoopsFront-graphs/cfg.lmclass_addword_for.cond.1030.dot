@@ -1,0 +1,16 @@
+digraph "CFG for 'lmclass_addword_for.cond' function" {
+	label="CFG for 'lmclass_addword_for.cond' function";
+
+	Node0x12c3940 [shape=record,label="{newFuncRoot}"];
+	Node0x12c3940 -> Node0x12c3a30;
+	Node0x12c3990 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0x12c39e0 [shape=record,label="{for.end.exitStub}"];
+	Node0x12c3a30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x12c3a30:s0 -> Node0x12c3990;
+	Node0x12c3a30:s1 -> Node0x12c3a80;
+	Node0x12c3a80 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x12c3a80:s0 -> Node0x12c3ad0;
+	Node0x12c3a80:s1 -> Node0x12c39e0;
+	Node0x12c3ad0 [shape=record,label="{it_for.inc}"];
+	Node0x12c3ad0 -> Node0x12c3a30;
+}

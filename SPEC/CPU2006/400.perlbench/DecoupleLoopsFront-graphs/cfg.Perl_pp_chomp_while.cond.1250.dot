@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_pp_chomp_while.cond' function" {
+	label="CFG for 'Perl_pp_chomp_while.cond' function";
+
+	Node0x4e2ed50 [shape=record,label="{newFuncRoot}"];
+	Node0x4e2ed50 -> Node0x4e2edf0;
+	Node0x4e2eda0 [shape=record,label="{while.end.exitStub}"];
+	Node0x4e2edf0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4e2edf0:s0 -> Node0x4e2ee40;
+	Node0x4e2edf0:s1 -> Node0x4e2eda0;
+	Node0x4e2ee40 [shape=record,label="{it_while.body}"];
+	Node0x4e2ee40 -> Node0x6452d80;
+	Node0x6452d80 [shape=record,label="{pd_while.body.split}"];
+	Node0x6452d80 -> Node0x4e2edf0;
+}

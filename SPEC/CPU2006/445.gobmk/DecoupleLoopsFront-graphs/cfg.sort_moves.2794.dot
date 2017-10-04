@@ -1,0 +1,38 @@
+digraph "CFG for 'sort_moves' function" {
+	label="CFG for 'sort_moves' function";
+
+	Node0x36a20c0 [shape=record,label="{entry}"];
+	Node0x36a20c0 -> Node0x36a2110;
+	Node0x36a2110 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x36a2110:s0 -> Node0x36a2160;
+	Node0x36a2110:s1 -> Node0x36a2520;
+	Node0x36a2160 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x36a2160 -> Node0x36a21b0;
+	Node0x36a21b0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x36a21b0:s0 -> Node0x36a2200;
+	Node0x36a21b0:s1 -> Node0x36a24d0;
+	Node0x36a2200 [shape=record,label="{pd_for.body.3|{<s0>T|<s1>F}}"];
+	Node0x36a2200:s0 -> Node0x36a2250;
+	Node0x36a2200:s1 -> Node0x36a22a0;
+	Node0x36a2250 [shape=record,label="{pd_for.body.3.if.then_crit_edge}"];
+	Node0x36a2250 -> Node0x36a2430;
+	Node0x36a22a0 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x36a22a0:s0 -> Node0x36a2340;
+	Node0x36a22a0:s1 -> Node0x36a22f0;
+	Node0x36a22f0 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x36a22f0 -> Node0x36a2480;
+	Node0x36a2340 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x36a2340:s0 -> Node0x36a23e0;
+	Node0x36a2340:s1 -> Node0x36a2390;
+	Node0x36a2390 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x36a2390 -> Node0x36a2480;
+	Node0x36a23e0 [shape=record,label="{pd_land.lhs.true.if.then_crit_edge}"];
+	Node0x36a23e0 -> Node0x36a2430;
+	Node0x36a2430 [shape=record,label="{pd_if.then}"];
+	Node0x36a2430 -> Node0x36a2480;
+	Node0x36a2480 [shape=record,label="{pd_for.inc}"];
+	Node0x36a2480 -> Node0x36a21b0;
+	Node0x36a24d0 [shape=record,label="{it_for.inc.33}"];
+	Node0x36a24d0 -> Node0x36a2110;
+	Node0x36a2520 [shape=record,label="{for.end.34}"];
+}

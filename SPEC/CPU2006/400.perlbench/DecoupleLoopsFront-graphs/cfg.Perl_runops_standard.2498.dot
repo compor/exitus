@@ -1,0 +1,23 @@
+digraph "CFG for 'Perl_runops_standard' function" {
+	label="CFG for 'Perl_runops_standard' function";
+
+	Node0x3a7a950 [shape=record,label="{entry}"];
+	Node0x3a7a950 -> Node0x3a7a9a0;
+	Node0x3a7a9a0 [shape=record,label="{it_while.cond}"];
+	Node0x3a7a9a0 -> Node0x61ae9b0;
+	Node0x61ae9b0 [shape=record,label="{pd_while.cond.split1}"];
+	Node0x61ae9b0 -> Node0x62162a0;
+	Node0x62162a0 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0x62162a0:s0 -> Node0x3a7a9f0;
+	Node0x62162a0:s1 -> Node0x3a7ab30;
+	Node0x3a7a9f0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x3a7a9f0:s0 -> Node0x3a7aa90;
+	Node0x3a7a9f0:s1 -> Node0x3a7aa40;
+	Node0x3a7aa40 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0x3a7aa40 -> Node0x3a7aae0;
+	Node0x3a7aa90 [shape=record,label="{pd_if.then}"];
+	Node0x3a7aa90 -> Node0x3a7aae0;
+	Node0x3a7aae0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x3a7aae0 -> Node0x3a7a9a0;
+	Node0x3a7ab30 [shape=record,label="{while.end}"];
+}

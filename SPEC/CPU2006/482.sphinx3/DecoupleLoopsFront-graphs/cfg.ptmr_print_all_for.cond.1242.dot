@@ -1,0 +1,14 @@
+digraph "CFG for 'ptmr_print_all_for.cond' function" {
+	label="CFG for 'ptmr_print_all_for.cond' function";
+
+	Node0x130efa0 [shape=record,label="{newFuncRoot}"];
+	Node0x130efa0 -> Node0x130f3f0;
+	Node0x130f3a0 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0x130f3f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x130f3f0:s0 -> Node0x130f440;
+	Node0x130f3f0:s1 -> Node0x130f3a0;
+	Node0x130f440 [shape=record,label="{pd_for.body}"];
+	Node0x130f440 -> Node0x15c34b0;
+	Node0x15c34b0 [shape=record,label="{it_for.body.split}"];
+	Node0x15c34b0 -> Node0x130f3f0;
+}

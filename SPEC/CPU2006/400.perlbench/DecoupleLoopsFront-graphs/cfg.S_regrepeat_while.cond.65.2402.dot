@@ -1,0 +1,23 @@
+digraph "CFG for 'S_regrepeat_while.cond.65' function" {
+	label="CFG for 'S_regrepeat_while.cond.65' function";
+
+	Node0x540f1a0 [shape=record,label="{newFuncRoot}"];
+	Node0x540f1a0 -> Node0x540f290;
+	Node0x540f1f0 [shape=record,label="{while.cond.65.sw.epilog.loopexit23_crit_edge.exitStub}"];
+	Node0x540f240 [shape=record,label="{lor.rhs.sw.epilog.loopexit23_crit_edge.exitStub}"];
+	Node0x540f290 [shape=record,label="{it_while.cond.65|{<s0>T|<s1>F}}"];
+	Node0x540f290:s0 -> Node0x540f2e0;
+	Node0x540f290:s1 -> Node0x540f1f0;
+	Node0x540f2e0 [shape=record,label="{it_land.rhs.68|{<s0>T|<s1>F}}"];
+	Node0x540f2e0:s0 -> Node0x540f3d0;
+	Node0x540f2e0:s1 -> Node0x540f330;
+	Node0x540f330 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x540f330:s0 -> Node0x540f380;
+	Node0x540f330:s1 -> Node0x540f240;
+	Node0x540f380 [shape=record,label="{pd_lor.rhs.while.body.79_crit_edge}"];
+	Node0x540f380 -> Node0x540f420;
+	Node0x540f3d0 [shape=record,label="{pd_land.rhs.68.while.body.79_crit_edge}"];
+	Node0x540f3d0 -> Node0x540f420;
+	Node0x540f420 [shape=record,label="{it_while.body.79}"];
+	Node0x540f420 -> Node0x540f290;
+}

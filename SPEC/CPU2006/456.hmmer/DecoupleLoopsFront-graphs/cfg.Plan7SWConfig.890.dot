@@ -1,0 +1,14 @@
+digraph "CFG for 'Plan7SWConfig' function" {
+	label="CFG for 'Plan7SWConfig' function";
+
+	Node0x2ab3bc0 [shape=record,label="{entry}"];
+	Node0x2ab3bc0 -> Node0x2ab3c10;
+	Node0x2ab3c10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2ab3c10:s0 -> Node0x2ab44c0;
+	Node0x2ab3c10:s1 -> Node0x2ab4510;
+	Node0x2ab44c0 [shape=record,label="{pd_for.body}"];
+	Node0x2ab44c0 -> Node0x35a33b0;
+	Node0x35a33b0 [shape=record,label="{it_for.body.split}"];
+	Node0x35a33b0 -> Node0x2ab3c10;
+	Node0x2ab4510 [shape=record,label="{for.end}"];
+}

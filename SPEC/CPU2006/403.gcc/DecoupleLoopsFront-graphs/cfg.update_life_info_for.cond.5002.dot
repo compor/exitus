@@ -1,0 +1,31 @@
+digraph "CFG for 'update_life_info_for.cond' function" {
+	label="CFG for 'update_life_info_for.cond' function";
+
+	Node0xae84cc0 [shape=record,label="{newFuncRoot}"];
+	Node0xae84cc0 -> Node0xae84db0;
+	Node0xae84d10 [shape=record,label="{for.cond.for.end.30_crit_edge.exitStub}"];
+	Node0xae84d60 [shape=record,label="{for.end.for.end.30_crit_edge.exitStub}"];
+	Node0xae84db0 [shape=record,label="{pd_for.cond}"];
+	Node0xae84db0 -> Node0xae61480;
+	Node0xae61480 [shape=record,label="{it_for.cond.split|{<s0>T|<s1>F}}"];
+	Node0xae61480:s0 -> Node0xae84d10;
+	Node0xae61480:s1 -> Node0xae84e00;
+	Node0xae84e00 [shape=record,label="{it_if.end.18}"];
+	Node0xae84e00 -> Node0xae84e50;
+	Node0xae84e50 [shape=record,label="{it_for.cond.19|{<s0>T|<s1>F}}"];
+	Node0xae84e50:s0 -> Node0xae84f40;
+	Node0xae84e50:s1 -> Node0xae84ea0;
+	Node0xae84ea0 [shape=record,label="{pd_for.end}"];
+	Node0xae84ea0 -> Node0xae614d0;
+	Node0xae614d0 [shape=record,label="{it_for.end.split|{<s0>T|<s1>F}}"];
+	Node0xae614d0:s0 -> Node0xae84ef0;
+	Node0xae614d0:s1 -> Node0xae84d60;
+	Node0xae84ef0 [shape=record,label="{pd_if.end.28}"];
+	Node0xae84ef0 -> Node0xae84db0;
+	Node0xae84f40 [shape=record,label="{it_for.body}"];
+	Node0xae84f40 -> Node0xf52a270;
+	Node0xf52a270 [shape=record,label="{pd_for.body.split1}"];
+	Node0xf52a270 -> Node0xae61430;
+	Node0xae61430 [shape=record,label="{it_for.body.split}"];
+	Node0xae61430 -> Node0xae84e50;
+}

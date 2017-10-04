@@ -1,0 +1,14 @@
+digraph "CFG for 'PatchInp_for.cond' function" {
+	label="CFG for 'PatchInp_for.cond' function";
+
+	Node0x2364a90 [shape=record,label="{newFuncRoot}"];
+	Node0x2364a90 -> Node0x23692a0;
+	Node0x2364ae0 [shape=record,label="{if.end.401.loopexit.exitStub}"];
+	Node0x23692a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x23692a0:s0 -> Node0x23692f0;
+	Node0x23692a0:s1 -> Node0x2364ae0;
+	Node0x23692f0 [shape=record,label="{pd_for.body}"];
+	Node0x23692f0 -> Node0x33a13e0;
+	Node0x33a13e0 [shape=record,label="{it_for.body.split}"];
+	Node0x33a13e0 -> Node0x23692a0;
+}

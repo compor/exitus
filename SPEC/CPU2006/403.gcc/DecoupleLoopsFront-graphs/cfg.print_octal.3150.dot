@@ -1,0 +1,14 @@
+digraph "CFG for 'print_octal' function" {
+	label="CFG for 'print_octal' function";
+
+	Node0x39e7ed0 [shape=record,label="{entry}"];
+	Node0x39e7ed0 -> Node0x39e7f20;
+	Node0x39e7f20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x39e7f20:s0 -> Node0x39e7f70;
+	Node0x39e7f20:s1 -> Node0x39e7fc0;
+	Node0x39e7f70 [shape=record,label="{pd_for.body}"];
+	Node0x39e7f70 -> Node0xd0188f0;
+	Node0xd0188f0 [shape=record,label="{it_for.body.split}"];
+	Node0xd0188f0 -> Node0x39e7f20;
+	Node0x39e7fc0 [shape=record,label="{for.end}"];
+}

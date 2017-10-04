@@ -1,0 +1,35 @@
+digraph "CFG for 'tail_recursion_args_for.cond' function" {
+	label="CFG for 'tail_recursion_args_for.cond' function";
+
+	Node0xc42e210 [shape=record,label="{newFuncRoot}"];
+	Node0xc42e210 -> Node0xc42e3a0;
+	Node0xc42e260 [shape=record,label="{for.end.exitStub}"];
+	Node0xc42e2b0 [shape=record,label="{for.body.return.loopexit_crit_edge.exitStub}"];
+	Node0xc42e300 [shape=record,label="{cond.end.return.loopexit_crit_edge.exitStub}"];
+	Node0xc42e350 [shape=record,label="{lor.lhs.false.return.loopexit_crit_edge.exitStub}"];
+	Node0xc42e3a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc42e3a0:s0 -> Node0xc42e3f0;
+	Node0xc42e3a0:s1 -> Node0xc42e260;
+	Node0xc42e3f0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xc42e3f0:s0 -> Node0xc42e2b0;
+	Node0xc42e3f0:s1 -> Node0xc42e440;
+	Node0xc42e440 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0xc42e440:s0 -> Node0xc42e4e0;
+	Node0xc42e440:s1 -> Node0xc42e490;
+	Node0xc42e490 [shape=record,label="{pd_cond.false}"];
+	Node0xc42e490 -> Node0xfd393a0;
+	Node0xfd393a0 [shape=record,label="{it_cond.false.split}"];
+	Node0xfd393a0 -> Node0xc42e530;
+	Node0xc42e4e0 [shape=record,label="{it_cond.true}"];
+	Node0xc42e4e0 -> Node0xc42e530;
+	Node0xc42e530 [shape=record,label="{it_cond.end|{<s0>T|<s1>F}}"];
+	Node0xc42e530:s0 -> Node0xc42e300;
+	Node0xc42e530:s1 -> Node0xc42e580;
+	Node0xc42e580 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xc42e580:s0 -> Node0xc42e350;
+	Node0xc42e580:s1 -> Node0xc42e5d0;
+	Node0xc42e5d0 [shape=record,label="{it_for.inc}"];
+	Node0xc42e5d0 -> Node0xfcee380;
+	Node0xfcee380 [shape=record,label="{pd_for.inc.split}"];
+	Node0xfcee380 -> Node0xc42e3a0;
+}

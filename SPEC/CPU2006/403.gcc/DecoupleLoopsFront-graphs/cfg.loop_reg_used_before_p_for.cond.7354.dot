@@ -1,0 +1,30 @@
+digraph "CFG for 'loop_reg_used_before_p_for.cond' function" {
+	label="CFG for 'loop_reg_used_before_p_for.cond' function";
+
+	Node0xb561240 [shape=record,label="{newFuncRoot}"];
+	Node0xb561240 -> Node0xb561330;
+	Node0xb561290 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0xb5612e0 [shape=record,label="{land.lhs.true.return_crit_edge.exitStub}"];
+	Node0xb561330 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb561330:s0 -> Node0xb561380;
+	Node0xb561330:s1 -> Node0xb561290;
+	Node0xb561380 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb561380:s0 -> Node0xb561420;
+	Node0xb561380:s1 -> Node0xb5613d0;
+	Node0xb5613d0 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0xb5613d0 -> Node0xb5614c0;
+	Node0xb561420 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xb561420:s0 -> Node0xb5612e0;
+	Node0xb561420:s1 -> Node0xb561470;
+	Node0xb561470 [shape=record,label="{pd_land.lhs.true.if.end_crit_edge}"];
+	Node0xb561470 -> Node0xb5614c0;
+	Node0xb5614c0 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0xb5614c0:s0 -> Node0xb561560;
+	Node0xb5614c0:s1 -> Node0xb561510;
+	Node0xb561510 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0xb561510 -> Node0xb5615b0;
+	Node0xb561560 [shape=record,label="{it_if.then.9}"];
+	Node0xb561560 -> Node0xb5615b0;
+	Node0xb5615b0 [shape=record,label="{it_for.inc}"];
+	Node0xb5615b0 -> Node0xb561330;
+}

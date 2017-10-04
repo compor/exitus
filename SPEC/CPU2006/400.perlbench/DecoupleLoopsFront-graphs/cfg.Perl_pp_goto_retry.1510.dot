@@ -1,0 +1,42 @@
+digraph "CFG for 'Perl_pp_goto_retry' function" {
+	label="CFG for 'Perl_pp_goto_retry' function";
+
+	Node0x4ef6b30 [shape=record,label="{newFuncRoot}"];
+	Node0x4ef6b30 -> Node0x4ef6d10;
+	Node0x4ef6b80 [shape=record,label="{retry.if.end.46_crit_edge.exitStub}"];
+	Node0x4ef6bd0 [shape=record,label="{land.lhs.true.15.if.end.46_crit_edge.exitStub}"];
+	Node0x4ef6c20 [shape=record,label="{if.end.44.exitStub}"];
+	Node0x4ef6c70 [shape=record,label="{if.end.if.end.41_crit_edge.exitStub}"];
+	Node0x4ef6cc0 [shape=record,label="{land.lhs.true.35.if.end.41_crit_edge.exitStub}"];
+	Node0x4ef6d10 [shape=record,label="{it_retry|{<s0>T|<s1>F}}"];
+	Node0x4ef6d10:s0 -> Node0x4ef6b80;
+	Node0x4ef6d10:s1 -> Node0x4ef6d60;
+	Node0x4ef6d60 [shape=record,label="{it_land.lhs.true.15|{<s0>T|<s1>F}}"];
+	Node0x4ef6d60:s0 -> Node0x4ef6bd0;
+	Node0x4ef6d60:s1 -> Node0x4ef6db0;
+	Node0x4ef6db0 [shape=record,label="{it_if.then.18|{<s0>T|<s1>F}}"];
+	Node0x4ef6db0:s0 -> Node0x4ef6e00;
+	Node0x4ef6db0:s1 -> Node0x4ef6c20;
+	Node0x4ef6e00 [shape=record,label="{it_if.then.21|{<s0>T|<s1>F}}"];
+	Node0x4ef6e00:s0 -> Node0x4ef6ea0;
+	Node0x4ef6e00:s1 -> Node0x4ef6e50;
+	Node0x4ef6e50 [shape=record,label="{pd_if.then.21.if.end_crit_edge}"];
+	Node0x4ef6e50 -> Node0x4ef6f40;
+	Node0x4ef6ea0 [shape=record,label="{it_land.lhs.true.25|{<s0>T|<s1>F}}"];
+	Node0x4ef6ea0:s0 -> Node0x4ef7030;
+	Node0x4ef6ea0:s1 -> Node0x4ef6ef0;
+	Node0x4ef6ef0 [shape=record,label="{pd_land.lhs.true.25.if.end_crit_edge}"];
+	Node0x4ef6ef0 -> Node0x4ef6f40;
+	Node0x4ef6f40 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x4ef6f40:s0 -> Node0x4ef6f90;
+	Node0x4ef6f40:s1 -> Node0x4ef6c70;
+	Node0x4ef6f90 [shape=record,label="{it_land.lhs.true.35|{<s0>T|<s1>F}}"];
+	Node0x4ef6f90:s0 -> Node0x4ef6fe0;
+	Node0x4ef6f90:s1 -> Node0x4ef6cc0;
+	Node0x4ef6fe0 [shape=record,label="{pd_land.lhs.true.35.retry.backedge_crit_edge}"];
+	Node0x4ef6fe0 -> Node0x4ef7080;
+	Node0x4ef7030 [shape=record,label="{pd_land.lhs.true.25.retry.backedge_crit_edge}"];
+	Node0x4ef7030 -> Node0x4ef7080;
+	Node0x4ef7080 [shape=record,label="{pd_retry.backedge}"];
+	Node0x4ef7080 -> Node0x4ef6d10;
+}

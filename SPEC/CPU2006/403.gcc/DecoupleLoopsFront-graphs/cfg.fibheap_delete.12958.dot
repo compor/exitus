@@ -1,0 +1,12 @@
+digraph "CFG for 'fibheap_delete' function" {
+	label="CFG for 'fibheap_delete' function";
+
+	Node0x9ef0e60 [shape=record,label="{entry}"];
+	Node0x9ef0e60 -> Node0x9ef0eb0;
+	Node0x9ef0eb0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9ef0eb0:s0 -> Node0x9ef0f00;
+	Node0x9ef0eb0:s1 -> Node0x9ef0f50;
+	Node0x9ef0f00 [shape=record,label="{pd_while.body}"];
+	Node0x9ef0f00 -> Node0x9ef0eb0;
+	Node0x9ef0f50 [shape=record,label="{while.end}"];
+}

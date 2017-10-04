@@ -1,0 +1,44 @@
+digraph "CFG for 'calc_attackers_for.cond' function" {
+	label="CFG for 'calc_attackers_for.cond' function";
+
+	Node0xf85d00 [shape=record,label="{newFuncRoot}"];
+	Node0xf85d00 -> Node0xf86660;
+	Node0xf85d50 [shape=record,label="{for.cond.32.preheader.loopexit.exitStub}"];
+	Node0xf85da0 [shape=record,label="{if.then.8.exitStub}"];
+	Node0xf86660 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xf86660:s0 -> Node0xf866b0;
+	Node0xf86660:s1 -> Node0xf85d50;
+	Node0xf866b0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xf866b0:s0 -> Node0xf85da0;
+	Node0xf866b0:s1 -> Node0xf86700;
+	Node0xf86700 [shape=record,label="{pd_while.cond.preheader}"];
+	Node0xf86700 -> Node0xf86750;
+	Node0xf86750 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0xf86750:s0 -> Node0xf867f0;
+	Node0xf86750:s1 -> Node0xf867a0;
+	Node0xf867a0 [shape=record,label="{pd_while.cond.for.inc.loopexit_crit_edge}"];
+	Node0xf867a0 -> Node0xf86980;
+	Node0xf867f0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0xf867f0:s0 -> Node0xf86a20;
+	Node0xf867f0:s1 -> Node0xf86840;
+	Node0xf86840 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xf86840:s0 -> Node0xf869d0;
+	Node0xf86840:s1 -> Node0xf86890;
+	Node0xf86890 [shape=record,label="{pd_if.else.20|{<s0>T|<s1>F}}"];
+	Node0xf86890:s0 -> Node0xf86930;
+	Node0xf86890:s1 -> Node0xf868e0;
+	Node0xf868e0 [shape=record,label="{pd_if.end.26}"];
+	Node0xf868e0 -> Node0xf86750;
+	Node0xf86930 [shape=record,label="{pd_if.else.20.for.inc.loopexit_crit_edge}"];
+	Node0xf86930 -> Node0xf86980;
+	Node0xf86980 [shape=record,label="{pd_for.inc.loopexit}"];
+	Node0xf86980 -> Node0xf86ac0;
+	Node0xf869d0 [shape=record,label="{pd_lor.lhs.false.if.then.18_crit_edge}"];
+	Node0xf869d0 -> Node0xf86a70;
+	Node0xf86a20 [shape=record,label="{pd_while.body.if.then.18_crit_edge}"];
+	Node0xf86a20 -> Node0xf86a70;
+	Node0xf86a70 [shape=record,label="{pd_if.then.18}"];
+	Node0xf86a70 -> Node0xf86ac0;
+	Node0xf86ac0 [shape=record,label="{it_for.inc}"];
+	Node0xf86ac0 -> Node0xf86660;
+}

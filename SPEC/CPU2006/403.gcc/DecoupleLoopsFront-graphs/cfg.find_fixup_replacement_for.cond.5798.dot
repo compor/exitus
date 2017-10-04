@@ -1,0 +1,16 @@
+digraph "CFG for 'find_fixup_replacement_for.cond' function" {
+	label="CFG for 'find_fixup_replacement_for.cond' function";
+
+	Node0xb0ecdd0 [shape=record,label="{newFuncRoot}"];
+	Node0xb0ecdd0 -> Node0xb0ed720;
+	Node0xb0ed680 [shape=record,label="{if.then.loopexit.exitStub}"];
+	Node0xb0ed6d0 [shape=record,label="{for.end.exitStub}"];
+	Node0xb0ed720 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb0ed720:s0 -> Node0xb0ed680;
+	Node0xb0ed720:s1 -> Node0xb0ed770;
+	Node0xb0ed770 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xb0ed770:s0 -> Node0xb0ed7c0;
+	Node0xb0ed770:s1 -> Node0xb0ed6d0;
+	Node0xb0ed7c0 [shape=record,label="{it_for.inc}"];
+	Node0xb0ed7c0 -> Node0xb0ed720;
+}

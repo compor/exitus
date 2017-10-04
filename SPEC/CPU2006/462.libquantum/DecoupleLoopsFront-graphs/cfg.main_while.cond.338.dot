@@ -1,0 +1,12 @@
+digraph "CFG for 'main_while.cond' function" {
+	label="CFG for 'main_while.cond' function";
+
+	Node0x17009a0 [shape=record,label="{newFuncRoot}"];
+	Node0x17009a0 -> Node0x1700a40;
+	Node0x17009f0 [shape=record,label="{while.end.exitStub}"];
+	Node0x1700a40 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1700a40:s0 -> Node0x1700a90;
+	Node0x1700a40:s1 -> Node0x17009f0;
+	Node0x1700a90 [shape=record,label="{it_while.body}"];
+	Node0x1700a90 -> Node0x1700a40;
+}

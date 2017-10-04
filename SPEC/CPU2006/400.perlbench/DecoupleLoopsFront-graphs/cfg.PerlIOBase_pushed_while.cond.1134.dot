@@ -1,0 +1,24 @@
+digraph "CFG for 'PerlIOBase_pushed_while.cond' function" {
+	label="CFG for 'PerlIOBase_pushed_while.cond' function";
+
+	Node0x4da1c70 [shape=record,label="{newFuncRoot}"];
+	Node0x4da1c70 -> Node0x4da1d60;
+	Node0x4da1cc0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x4da1d10 [shape=record,label="{sw.default.32.exitStub}"];
+	Node0x4da1d60 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4da1d60:s0 -> Node0x4da1db0;
+	Node0x4da1d60:s1 -> Node0x4da1cc0;
+	Node0x4da1db0 [shape=record,label="{it_while.body|{<s0>def|<s1>43|<s2>98|<s3>116}}"];
+	Node0x4da1db0:s0 -> Node0x4da1d10;
+	Node0x4da1db0:s1 -> Node0x4da1ea0;
+	Node0x4da1db0:s2 -> Node0x4da1e50;
+	Node0x4da1db0:s3 -> Node0x4da1e00;
+	Node0x4da1e00 [shape=record,label="{pd_sw.bb.29}"];
+	Node0x4da1e00 -> Node0x4da1ef0;
+	Node0x4da1e50 [shape=record,label="{pd_sw.bb.26}"];
+	Node0x4da1e50 -> Node0x4da1ef0;
+	Node0x4da1ea0 [shape=record,label="{pd_sw.bb.23}"];
+	Node0x4da1ea0 -> Node0x4da1ef0;
+	Node0x4da1ef0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x4da1ef0 -> Node0x4da1d60;
+}

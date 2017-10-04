@@ -1,0 +1,38 @@
+digraph "CFG for 'break_chain_moves' function" {
+	label="CFG for 'break_chain_moves' function";
+
+	Node0x33b6cc0 [shape=record,label="{entry}"];
+	Node0x33b6cc0 -> Node0x33bbb30;
+	Node0x33bbb30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x33bbb30:s0 -> Node0x33bbb80;
+	Node0x33bbb30:s1 -> Node0x33bbf40;
+	Node0x33bbb80 [shape=record,label="{pd_for.body}"];
+	Node0x33bbb80 -> Node0x33bbbd0;
+	Node0x33bbbd0 [shape=record,label="{pd_for.cond.2|{<s0>T|<s1>F}}"];
+	Node0x33bbbd0:s0 -> Node0x33bbc20;
+	Node0x33bbbd0:s1 -> Node0x33bbd10;
+	Node0x33bbc20 [shape=record,label="{pd_for.body.4|{<s0>T|<s1>F}}"];
+	Node0x33bbc20:s0 -> Node0x33bbc70;
+	Node0x33bbc20:s1 -> Node0x33bbcc0;
+	Node0x33bbc70 [shape=record,label="{pd_if.then}"];
+	Node0x33bbc70 -> Node0x33bbd60;
+	Node0x33bbcc0 [shape=record,label="{pd_for.inc}"];
+	Node0x33bbcc0 -> Node0x33bbbd0;
+	Node0x33bbd10 [shape=record,label="{pd_for.end.loopexit}"];
+	Node0x33bbd10 -> Node0x33bbd60;
+	Node0x33bbd60 [shape=record,label="{pd_for.end|{<s0>T|<s1>F}}"];
+	Node0x33bbd60:s0 -> Node0x33bbe00;
+	Node0x33bbd60:s1 -> Node0x33bbdb0;
+	Node0x33bbdb0 [shape=record,label="{pd_for.end.for.inc.26_crit_edge}"];
+	Node0x33bbdb0 -> Node0x33bbef0;
+	Node0x33bbe00 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x33bbe00:s0 -> Node0x33bbea0;
+	Node0x33bbe00:s1 -> Node0x33bbe50;
+	Node0x33bbe50 [shape=record,label="{pd_land.lhs.true.for.inc.26_crit_edge}"];
+	Node0x33bbe50 -> Node0x33bbef0;
+	Node0x33bbea0 [shape=record,label="{pd_if.then.14}"];
+	Node0x33bbea0 -> Node0x33bbef0;
+	Node0x33bbef0 [shape=record,label="{it_for.inc.26}"];
+	Node0x33bbef0 -> Node0x33bbb30;
+	Node0x33bbf40 [shape=record,label="{for.end.28}"];
+}

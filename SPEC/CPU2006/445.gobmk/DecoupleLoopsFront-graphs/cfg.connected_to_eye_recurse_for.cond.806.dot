@@ -1,0 +1,29 @@
+digraph "CFG for 'connected_to_eye_recurse_for.cond' function" {
+	label="CFG for 'connected_to_eye_recurse_for.cond' function";
+
+	Node0x3fab710 [shape=record,label="{newFuncRoot}"];
+	Node0x3fab710 -> Node0x3fab7b0;
+	Node0x3fab760 [shape=record,label="{for.end.exitStub}"];
+	Node0x3fab7b0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3fab7b0:s0 -> Node0x3fab800;
+	Node0x3fab7b0:s1 -> Node0x3fab760;
+	Node0x3fab800 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3fab800:s0 -> Node0x3fab8a0;
+	Node0x3fab800:s1 -> Node0x3fab850;
+	Node0x3fab850 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x3fab850 -> Node0x3faba30;
+	Node0x3fab8a0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x3fab8a0:s0 -> Node0x3fab940;
+	Node0x3fab8a0:s1 -> Node0x3fab8f0;
+	Node0x3fab8f0 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x3fab8f0 -> Node0x3faba30;
+	Node0x3fab940 [shape=record,label="{pd_land.lhs.true.8|{<s0>T|<s1>F}}"];
+	Node0x3fab940:s0 -> Node0x3fab9e0;
+	Node0x3fab940:s1 -> Node0x3fab990;
+	Node0x3fab990 [shape=record,label="{pd_if.then}"];
+	Node0x3fab990 -> Node0x3faba30;
+	Node0x3fab9e0 [shape=record,label="{pd_land.lhs.true.8.for.inc_crit_edge}"];
+	Node0x3fab9e0 -> Node0x3faba30;
+	Node0x3faba30 [shape=record,label="{it_for.inc}"];
+	Node0x3faba30 -> Node0x3fab7b0;
+}

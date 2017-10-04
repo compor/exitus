@@ -1,0 +1,12 @@
+digraph "CFG for 'regmove_optimize_for.cond' function" {
+	label="CFG for 'regmove_optimize_for.cond' function";
+
+	Node0xba52ab0 [shape=record,label="{newFuncRoot}"];
+	Node0xba52ab0 -> Node0xba52b50;
+	Node0xba52b00 [shape=record,label="{for.end.exitStub}"];
+	Node0xba52b50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xba52b50:s0 -> Node0xba52ba0;
+	Node0xba52b50:s1 -> Node0xba52b00;
+	Node0xba52ba0 [shape=record,label="{pd_for.body}"];
+	Node0xba52ba0 -> Node0xba52b50;
+}

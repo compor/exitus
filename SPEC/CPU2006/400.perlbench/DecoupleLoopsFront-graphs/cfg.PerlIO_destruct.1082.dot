@@ -1,0 +1,35 @@
+digraph "CFG for 'PerlIO_destruct' function" {
+	label="CFG for 'PerlIO_destruct' function";
+
+	Node0x2c16ce0 [shape=record,label="{entry}"];
+	Node0x2c16ce0 -> Node0x2c16d80;
+	Node0x2c16d30 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x2c16d30 -> Node0x2c16d80;
+	Node0x2c16d80 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2c16d80:s0 -> Node0x2c16dd0;
+	Node0x2c16d80:s1 -> Node0x2c170a0;
+	Node0x2c16dd0 [shape=record,label="{pd_while.body}"];
+	Node0x2c16dd0 -> Node0x5c7bf10;
+	Node0x5c7bf10 [shape=record,label="{it_while.body.split}"];
+	Node0x5c7bf10 -> Node0x2c16e20;
+	Node0x2c16e20 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2c16e20:s0 -> Node0x2c16e70;
+	Node0x2c16e20:s1 -> Node0x2c16d30;
+	Node0x2c16e70 [shape=record,label="{pd_while.cond.1.preheader}"];
+	Node0x2c16e70 -> Node0x2c16ec0;
+	Node0x2c16ec0 [shape=record,label="{pd_while.cond.1.outer}"];
+	Node0x2c16ec0 -> Node0x2c16f10;
+	Node0x2c16f10 [shape=record,label="{pd_while.cond.1|{<s0>T|<s1>F}}"];
+	Node0x2c16f10:s0 -> Node0x2c16f60;
+	Node0x2c16f10:s1 -> Node0x2c17050;
+	Node0x2c16f60 [shape=record,label="{pd_while.body.3|{<s0>T|<s1>F}}"];
+	Node0x2c16f60:s0 -> Node0x2c16fb0;
+	Node0x2c16f60:s1 -> Node0x2c17000;
+	Node0x2c16fb0 [shape=record,label="{pd_if.then}"];
+	Node0x2c16fb0 -> Node0x2c16f10;
+	Node0x2c17000 [shape=record,label="{pd_if.else}"];
+	Node0x2c17000 -> Node0x2c16ec0;
+	Node0x2c17050 [shape=record,label="{pd_while.end}"];
+	Node0x2c17050 -> Node0x2c16e20;
+	Node0x2c170a0 [shape=record,label="{while.end.7}"];
+}

@@ -1,0 +1,27 @@
+digraph "CFG for 'duplicate_decls_for.cond' function" {
+	label="CFG for 'duplicate_decls_for.cond' function";
+
+	Node0x9fff9b0 [shape=record,label="{newFuncRoot}"];
+	Node0x9fff9b0 -> Node0xa003f50;
+	Node0xa003e60 [shape=record,label="{if.end.673.loopexit.exitStub}"];
+	Node0xa003eb0 [shape=record,label="{if.then.664.exitStub}"];
+	Node0xa003f00 [shape=record,label="{if.then.669.exitStub}"];
+	Node0xa003f50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa003f50:s0 -> Node0xa003fa0;
+	Node0xa003f50:s1 -> Node0xa003e60;
+	Node0xa003fa0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xa003fa0:s0 -> Node0xa004040;
+	Node0xa003fa0:s1 -> Node0xa003ff0;
+	Node0xa003ff0 [shape=record,label="{pd_for.body.if.end.665_crit_edge}"];
+	Node0xa003ff0 -> Node0xa0040e0;
+	Node0xa004040 [shape=record,label="{it_land.lhs.true.659|{<s0>T|<s1>F}}"];
+	Node0xa004040:s0 -> Node0xa003eb0;
+	Node0xa004040:s1 -> Node0xa004090;
+	Node0xa004090 [shape=record,label="{pd_land.lhs.true.659.if.end.665_crit_edge}"];
+	Node0xa004090 -> Node0xa0040e0;
+	Node0xa0040e0 [shape=record,label="{it_if.end.665|{<s0>T|<s1>F}}"];
+	Node0xa0040e0:s0 -> Node0xa003f00;
+	Node0xa0040e0:s1 -> Node0xa004130;
+	Node0xa004130 [shape=record,label="{it_for.inc}"];
+	Node0xa004130 -> Node0xa003f50;
+}

@@ -1,0 +1,31 @@
+digraph "CFG for 'perl_destruct_for.cond.234' function" {
+	label="CFG for 'perl_destruct_for.cond.234' function";
+
+	Node0x4d22c40 [shape=record,label="{newFuncRoot}"];
+	Node0x4d22c40 -> Node0x4d22ce0;
+	Node0x4d22c90 [shape=record,label="{if.end.250.loopexit.exitStub}"];
+	Node0x4d22ce0 [shape=record,label="{it_for.cond.234|{<s0>T|<s1>F}}"];
+	Node0x4d22ce0:s0 -> Node0x4d22d30;
+	Node0x4d22ce0:s1 -> Node0x4d22c90;
+	Node0x4d22d30 [shape=record,label="{it_for.body.236}"];
+	Node0x4d22d30 -> Node0x66f14a0;
+	Node0x66f14a0 [shape=record,label="{pd_for.body.236.split|{<s0>T|<s1>F}}"];
+	Node0x66f14a0:s0 -> Node0x4d22dd0;
+	Node0x66f14a0:s1 -> Node0x4d22d80;
+	Node0x4d22d80 [shape=record,label="{pd_for.body.236.if.end.247_crit_edge}"];
+	Node0x4d22d80 -> Node0x4d22f60;
+	Node0x4d22dd0 [shape=record,label="{pd_land.lhs.true.238|{<s0>T|<s1>F}}"];
+	Node0x4d22dd0:s0 -> Node0x4d22e70;
+	Node0x4d22dd0:s1 -> Node0x4d22e20;
+	Node0x4d22e20 [shape=record,label="{pd_land.lhs.true.238.if.end.247_crit_edge}"];
+	Node0x4d22e20 -> Node0x4d22f60;
+	Node0x4d22e70 [shape=record,label="{pd_land.lhs.true.242|{<s0>T|<s1>F}}"];
+	Node0x4d22e70:s0 -> Node0x4d22f10;
+	Node0x4d22e70:s1 -> Node0x4d22ec0;
+	Node0x4d22ec0 [shape=record,label="{pd_land.lhs.true.242.if.end.247_crit_edge}"];
+	Node0x4d22ec0 -> Node0x4d22f60;
+	Node0x4d22f10 [shape=record,label="{pd_if.then.245}"];
+	Node0x4d22f10 -> Node0x4d22f60;
+	Node0x4d22f60 [shape=record,label="{pd_if.end.247}"];
+	Node0x4d22f60 -> Node0x4d22ce0;
+}

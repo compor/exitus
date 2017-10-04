@@ -1,0 +1,24 @@
+digraph "CFG for 'really_constant_p' function" {
+	label="CFG for 'really_constant_p' function";
+
+	Node0x95ca880 [shape=record,label="{entry}"];
+	Node0x95ca880 -> Node0x95ca8d0;
+	Node0x95ca8d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x95ca8d0:s0 -> Node0x95ca920;
+	Node0x95ca8d0:s1 -> Node0x95ca970;
+	Node0x95ca920 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0x95ca920 -> Node0x95caab0;
+	Node0x95ca970 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x95ca970:s0 -> Node0x95ca9c0;
+	Node0x95ca970:s1 -> Node0x95caa10;
+	Node0x95ca9c0 [shape=record,label="{pd_lor.lhs.false.while.body_crit_edge}"];
+	Node0x95ca9c0 -> Node0x95caab0;
+	Node0x95caa10 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x95caa10:s0 -> Node0x95caa60;
+	Node0x95caa10:s1 -> Node0x95cb400;
+	Node0x95caa60 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0x95caa60 -> Node0x95caab0;
+	Node0x95caab0 [shape=record,label="{it_while.body}"];
+	Node0x95caab0 -> Node0x95ca8d0;
+	Node0x95cb400 [shape=record,label="{while.end}"];
+}

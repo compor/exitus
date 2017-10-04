@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_sv_inc_while.cond.155' function" {
+	label="CFG for 'Perl_sv_inc_while.cond.155' function";
+
+	Node0x54a88c0 [shape=record,label="{newFuncRoot}"];
+	Node0x54a88c0 -> Node0x54a89b0;
+	Node0x54a8910 [shape=record,label="{while.cond.155.while.end.167_crit_edge.exitStub}"];
+	Node0x54a8960 [shape=record,label="{land.rhs.159.while.end.167_crit_edge.exitStub}"];
+	Node0x54a89b0 [shape=record,label="{it_while.cond.155|{<s0>T|<s1>F}}"];
+	Node0x54a89b0:s0 -> Node0x54a8a00;
+	Node0x54a89b0:s1 -> Node0x54a8910;
+	Node0x54a8a00 [shape=record,label="{it_land.rhs.159|{<s0>T|<s1>F}}"];
+	Node0x54a8a00:s0 -> Node0x54a8a50;
+	Node0x54a8a00:s1 -> Node0x54a8960;
+	Node0x54a8a50 [shape=record,label="{it_while.body.165}"];
+	Node0x54a8a50 -> Node0x54a89b0;
+}

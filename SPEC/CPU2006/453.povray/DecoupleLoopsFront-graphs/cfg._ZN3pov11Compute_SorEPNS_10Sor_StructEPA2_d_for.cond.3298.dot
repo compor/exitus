@@ -1,0 +1,47 @@
+digraph "CFG for '_ZN3pov11Compute_SorEPNS_10Sor_StructEPA2_d_for.cond' function" {
+	label="CFG for '_ZN3pov11Compute_SorEPNS_10Sor_StructEPA2_d_for.cond' function";
+
+	Node0x2bef930 [shape=record,label="{newFuncRoot}"];
+	Node0x2bef930 -> Node0x2bef9d0;
+	Node0x2bef980 [shape=record,label="{for.end.exitStub}"];
+	Node0x2bef9d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2bef9d0:s0 -> Node0x2befa20;
+	Node0x2bef9d0:s1 -> Node0x2bef980;
+	Node0x2befa20 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2befa20:s0 -> Node0x2befb60;
+	Node0x2befa20:s1 -> Node0x2befa70;
+	Node0x2befa70 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x2befa70:s0 -> Node0x2befb10;
+	Node0x2befa70:s1 -> Node0x2befac0;
+	Node0x2befac0 [shape=record,label="{pd_lor.lhs.false.if.end.43_crit_edge}"];
+	Node0x2befac0 -> Node0x2befc00;
+	Node0x2befb10 [shape=record,label="{pd_lor.lhs.false.if.then.41_crit_edge}"];
+	Node0x2befb10 -> Node0x2befbb0;
+	Node0x2befb60 [shape=record,label="{pd_for.body.if.then.41_crit_edge}"];
+	Node0x2befb60 -> Node0x2befbb0;
+	Node0x2befbb0 [shape=record,label="{pd_if.then.41}"];
+	Node0x2befbb0 -> Node0x2befc00;
+	Node0x2befc00 [shape=record,label="{pd_if.end.43}"];
+	Node0x2befc00 -> Node0x2befc50;
+	Node0x2befc50 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2befc50:s0 -> Node0x2befcf0;
+	Node0x2befc50:s1 -> Node0x2befca0;
+	Node0x2befca0 [shape=record,label="{pd_while.end}"];
+	Node0x2befca0 -> Node0x3973e10;
+	Node0x3973e10 [shape=record,label="{it_while.end.split}"];
+	Node0x3973e10 -> Node0x2bef9d0;
+	Node0x2befcf0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x2befcf0:s0 -> Node0x2befd90;
+	Node0x2befcf0:s1 -> Node0x2befd40;
+	Node0x2befd40 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0x2befd40 -> Node0x2befe80;
+	Node0x2befd90 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x2befd90:s0 -> Node0x2befe30;
+	Node0x2befd90:s1 -> Node0x2befde0;
+	Node0x2befde0 [shape=record,label="{pd_land.lhs.true.while.cond.backedge_crit_edge}"];
+	Node0x2befde0 -> Node0x2befe80;
+	Node0x2befe30 [shape=record,label="{pd_if.then.318}"];
+	Node0x2befe30 -> Node0x2befe80;
+	Node0x2befe80 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x2befe80 -> Node0x2befc50;
+}

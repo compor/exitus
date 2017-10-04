@@ -1,0 +1,33 @@
+digraph "CFG for 'write_significant_coefficients' function" {
+	label="CFG for 'write_significant_coefficients' function";
+
+	Node0x16df820 [shape=record,label="{entry}"];
+	Node0x16df820 -> Node0x1701600;
+	Node0x1701600 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1701600:s0 -> Node0x1701650;
+	Node0x1701600:s1 -> Node0x17021f0;
+	Node0x1701650 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x1701650:s0 -> Node0x1701f70;
+	Node0x1701650:s1 -> Node0x17016a0;
+	Node0x17016a0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x17016a0 -> Node0x17021a0;
+	Node0x1701f70 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x1701f70:s0 -> Node0x1701fc0;
+	Node0x1701f70:s1 -> Node0x1702100;
+	Node0x1701fc0 [shape=record,label="{pd_if.then.21|{<s0>T|<s1>F}}"];
+	Node0x1701fc0:s0 -> Node0x1702010;
+	Node0x1701fc0:s1 -> Node0x1702060;
+	Node0x1702010 [shape=record,label="{pd_if.then.21.cond.end.30_crit_edge}"];
+	Node0x1702010 -> Node0x17020b0;
+	Node0x1702060 [shape=record,label="{pd_cond.false.27}"];
+	Node0x1702060 -> Node0x17020b0;
+	Node0x17020b0 [shape=record,label="{pd_cond.end.30}"];
+	Node0x17020b0 -> Node0x1702150;
+	Node0x1702100 [shape=record,label="{pd_if.else.42}"];
+	Node0x1702100 -> Node0x1702150;
+	Node0x1702150 [shape=record,label="{pd_if.end.47}"];
+	Node0x1702150 -> Node0x17021a0;
+	Node0x17021a0 [shape=record,label="{it_for.inc}"];
+	Node0x17021a0 -> Node0x1701600;
+	Node0x17021f0 [shape=record,label="{for.end}"];
+}

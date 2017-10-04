@@ -1,0 +1,16 @@
+digraph "CFG for 'optimize_bit_field_while.cond' function" {
+	label="CFG for 'optimize_bit_field_while.cond' function";
+
+	Node0xb0ee590 [shape=record,label="{newFuncRoot}"];
+	Node0xb0ee590 -> Node0xb0ee680;
+	Node0xb0ee5e0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xb0ee630 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xb0ee680 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb0ee680:s0 -> Node0xb0ee6d0;
+	Node0xb0ee680:s1 -> Node0xb0ee5e0;
+	Node0xb0ee6d0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xb0ee6d0:s0 -> Node0xb0ee720;
+	Node0xb0ee6d0:s1 -> Node0xb0ee630;
+	Node0xb0ee720 [shape=record,label="{it_while.body}"];
+	Node0xb0ee720 -> Node0xb0ee680;
+}

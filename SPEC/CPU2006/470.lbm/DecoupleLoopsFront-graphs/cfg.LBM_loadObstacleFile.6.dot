@@ -1,0 +1,35 @@
+digraph "CFG for 'LBM_loadObstacleFile' function" {
+	label="CFG for 'LBM_loadObstacleFile' function";
+
+	Node0xd5b3b0 [shape=record,label="{entry}"];
+	Node0xd5b3b0 -> Node0xd64950;
+	Node0xd64950 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xd64950:s0 -> Node0xd649a0;
+	Node0xd64950:s1 -> Node0xd64cc0;
+	Node0xd649a0 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0xd649a0 -> Node0xd649f0;
+	Node0xd649f0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0xd649f0:s0 -> Node0xd64a40;
+	Node0xd649f0:s1 -> Node0xd64c70;
+	Node0xd64a40 [shape=record,label="{pd_for.cond.4.preheader}"];
+	Node0xd64a40 -> Node0xd64a90;
+	Node0xd64a90 [shape=record,label="{pd_for.cond.4|{<s0>T|<s1>F}}"];
+	Node0xd64a90:s0 -> Node0xd64ae0;
+	Node0xd64a90:s1 -> Node0xd64c20;
+	Node0xd64ae0 [shape=record,label="{pd_for.body.6|{<s0>T|<s1>F}}"];
+	Node0xd64ae0:s0 -> Node0xd64b80;
+	Node0xd64ae0:s1 -> Node0xd64b30;
+	Node0xd64b30 [shape=record,label="{pd_for.body.6.for.inc_crit_edge}"];
+	Node0xd64b30 -> Node0xd64bd0;
+	Node0xd64b80 [shape=record,label="{pd_if.then}"];
+	Node0xd64b80 -> Node0xd64bd0;
+	Node0xd64bd0 [shape=record,label="{pd_for.inc}"];
+	Node0xd64bd0 -> Node0xd64a90;
+	Node0xd64c20 [shape=record,label="{pd_for.inc.15}"];
+	Node0xd64c20 -> Node0xd649f0;
+	Node0xd64c70 [shape=record,label="{pd_for.end.17}"];
+	Node0xd64c70 -> Node0xe5f2b0;
+	Node0xe5f2b0 [shape=record,label="{it_for.end.17.split}"];
+	Node0xe5f2b0 -> Node0xd64950;
+	Node0xd64cc0 [shape=record,label="{for.end.21}"];
+}

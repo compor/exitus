@@ -1,0 +1,24 @@
+digraph "CFG for 'find_spanning_tree_for.cond.60' function" {
+	label="CFG for 'find_spanning_tree_for.cond.60' function";
+
+	Node0xb79c610 [shape=record,label="{newFuncRoot}"];
+	Node0xb79c610 -> Node0xb79c6b0;
+	Node0xb79c660 [shape=record,label="{for.end.89.exitStub}"];
+	Node0xb79c6b0 [shape=record,label="{it_for.cond.60|{<s0>T|<s1>F}}"];
+	Node0xb79c6b0:s0 -> Node0xb79c700;
+	Node0xb79c6b0:s1 -> Node0xb79c660;
+	Node0xb79c700 [shape=record,label="{pd_for.body.62|{<s0>T|<s1>F}}"];
+	Node0xb79c700:s0 -> Node0xb79c7a0;
+	Node0xb79c700:s1 -> Node0xb79c750;
+	Node0xb79c750 [shape=record,label="{pd_for.body.62.for.inc.87_crit_edge}"];
+	Node0xb79c750 -> Node0xb79c890;
+	Node0xb79c7a0 [shape=record,label="{pd_land.lhs.true.72|{<s0>T|<s1>F}}"];
+	Node0xb79c7a0:s0 -> Node0xb79c840;
+	Node0xb79c7a0:s1 -> Node0xb79c7f0;
+	Node0xb79c7f0 [shape=record,label="{pd_if.then.79}"];
+	Node0xb79c7f0 -> Node0xb79c890;
+	Node0xb79c840 [shape=record,label="{pd_land.lhs.true.72.for.inc.87_crit_edge}"];
+	Node0xb79c840 -> Node0xb79c890;
+	Node0xb79c890 [shape=record,label="{it_for.inc.87}"];
+	Node0xb79c890 -> Node0xb79c6b0;
+}

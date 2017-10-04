@@ -1,0 +1,37 @@
+digraph "CFG for 'retrieve_hook_while.cond' function" {
+	label="CFG for 'retrieve_hook_while.cond' function";
+
+	Node0x58c9530 [shape=record,label="{newFuncRoot}"];
+	Node0x58c9530 -> Node0x58c96c0;
+	Node0x58c9580 [shape=record,label="{while.end.exitStub}"];
+	Node0x58c95d0 [shape=record,label="{while.body.return.loopexit4_crit_edge.exitStub}"];
+	Node0x58c9620 [shape=record,label="{if.then.72.return.loopexit4_crit_edge.exitStub}"];
+	Node0x58c9670 [shape=record,label="{if.else.86.return.loopexit4_crit_edge.exitStub}"];
+	Node0x58c96c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x58c96c0:s0 -> Node0x58c9710;
+	Node0x58c96c0:s1 -> Node0x58c9580;
+	Node0x58c9710 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x58c9710:s0 -> Node0x58c9760;
+	Node0x58c9710:s1 -> Node0x58c95d0;
+	Node0x58c9760 [shape=record,label="{pd_if.end.69}"];
+	Node0x58c9760 -> Node0x6e75460;
+	Node0x6e75460 [shape=record,label="{it_if.end.69.split|{<s0>T|<s1>F}}"];
+	Node0x6e75460:s0 -> Node0x58c9850;
+	Node0x6e75460:s1 -> Node0x58c97b0;
+	Node0x58c97b0 [shape=record,label="{it_if.then.72|{<s0>T|<s1>F}}"];
+	Node0x58c97b0:s0 -> Node0x58c9800;
+	Node0x58c97b0:s1 -> Node0x58c9620;
+	Node0x58c9800 [shape=record,label="{it_if.then.79}"];
+	Node0x58c9800 -> Node0x652b790;
+	Node0x652b790 [shape=record,label="{pd_if.then.79.split1}"];
+	Node0x652b790 -> Node0x6879270;
+	Node0x6879270 [shape=record,label="{it_if.then.79.split}"];
+	Node0x6879270 -> Node0x58c98f0;
+	Node0x58c9850 [shape=record,label="{it_if.else.86|{<s0>T|<s1>F}}"];
+	Node0x58c9850:s0 -> Node0x58c9670;
+	Node0x58c9850:s1 -> Node0x58c98a0;
+	Node0x58c98a0 [shape=record,label="{pd_if.else.86.while.cond.backedge_crit_edge}"];
+	Node0x58c98a0 -> Node0x58c98f0;
+	Node0x58c98f0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x58c98f0 -> Node0x58c96c0;
+}

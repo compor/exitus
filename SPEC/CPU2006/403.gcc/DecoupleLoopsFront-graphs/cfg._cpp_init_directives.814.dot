@@ -1,0 +1,14 @@
+digraph "CFG for '_cpp_init_directives' function" {
+	label="CFG for '_cpp_init_directives' function";
+
+	Node0x29cae70 [shape=record,label="{entry}"];
+	Node0x29cae70 -> Node0x29caec0;
+	Node0x29caec0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x29caec0:s0 -> Node0x29caf10;
+	Node0x29caec0:s1 -> Node0x29caf60;
+	Node0x29caf10 [shape=record,label="{pd_for.body}"];
+	Node0x29caf10 -> Node0xcdb3230;
+	Node0xcdb3230 [shape=record,label="{it_for.body.split}"];
+	Node0xcdb3230 -> Node0x29caec0;
+	Node0x29caf60 [shape=record,label="{for.end}"];
+}

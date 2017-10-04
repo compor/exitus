@@ -1,0 +1,26 @@
+digraph "CFG for 'count_bb_insns' function" {
+	label="CFG for 'count_bb_insns' function";
+
+	Node0x50baea0 [shape=record,label="{entry}"];
+	Node0x50baea0 -> Node0x50c11e0;
+	Node0x50c11e0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x50c11e0:s0 -> Node0x50c1230;
+	Node0x50c11e0:s1 -> Node0x50c1280;
+	Node0x50c1230 [shape=record,label="{pd_while.body.if.then_crit_edge}"];
+	Node0x50c1230 -> Node0x50c1370;
+	Node0x50c1280 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x50c1280:s0 -> Node0x50c1320;
+	Node0x50c1280:s1 -> Node0x50c12d0;
+	Node0x50c12d0 [shape=record,label="{pd_lor.lhs.false.if.end_crit_edge}"];
+	Node0x50c12d0 -> Node0x50c13c0;
+	Node0x50c1320 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x50c1320 -> Node0x50c1370;
+	Node0x50c1370 [shape=record,label="{pd_if.then}"];
+	Node0x50c1370 -> Node0x50c13c0;
+	Node0x50c13c0 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x50c13c0:s0 -> Node0x50c1460;
+	Node0x50c13c0:s1 -> Node0x50c1410;
+	Node0x50c1410 [shape=record,label="{it_if.end.6}"];
+	Node0x50c1410 -> Node0x50c11e0;
+	Node0x50c1460 [shape=record,label="{while.end}"];
+}

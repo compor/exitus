@@ -1,0 +1,27 @@
+digraph "CFG for 'Getword_while.cond' function" {
+	label="CFG for 'Getword_while.cond' function";
+
+	Node0x3154e80 [shape=record,label="{newFuncRoot}"];
+	Node0x3154e80 -> Node0x3154f70;
+	Node0x3154ed0 [shape=record,label="{while.end.exitStub}"];
+	Node0x3154f20 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x3154f70 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3154f70:s0 -> Node0x3154fc0;
+	Node0x3154f70:s1 -> Node0x3154ed0;
+	Node0x3154fc0 [shape=record,label="{it_while.body}"];
+	Node0x3154fc0 -> Node0x37c63f0;
+	Node0x37c63f0 [shape=record,label="{pd_while.body.split1}"];
+	Node0x37c63f0 -> Node0x3820360;
+	Node0x3820360 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x3820360:s0 -> Node0x3154f20;
+	Node0x3820360:s1 -> Node0x3155010;
+	Node0x3155010 [shape=record,label="{pd_if.end.5|{<s0>T|<s1>F}}"];
+	Node0x3155010:s0 -> Node0x31550b0;
+	Node0x3155010:s1 -> Node0x3155060;
+	Node0x3155060 [shape=record,label="{pd_if.end.5.if.end.9_crit_edge}"];
+	Node0x3155060 -> Node0x3155100;
+	Node0x31550b0 [shape=record,label="{pd_if.then.8}"];
+	Node0x31550b0 -> Node0x3155100;
+	Node0x3155100 [shape=record,label="{pd_if.end.9}"];
+	Node0x3155100 -> Node0x3154f70;
+}

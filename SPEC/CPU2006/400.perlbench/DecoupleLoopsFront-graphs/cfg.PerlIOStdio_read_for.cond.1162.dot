@@ -1,0 +1,42 @@
+digraph "CFG for 'PerlIOStdio_read_for.cond' function" {
+	label="CFG for 'PerlIOStdio_read_for.cond' function";
+
+	Node0x4da7dd0 [shape=record,label="{newFuncRoot}"];
+	Node0x4da7dd0 -> Node0x4da7ec0;
+	Node0x4da7e20 [shape=record,label="{if.end.9.for.end_crit_edge.exitStub}"];
+	Node0x4da7e70 [shape=record,label="{lor.lhs.false.for.end_crit_edge.exitStub}"];
+	Node0x4da7ec0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4da7ec0:s0 -> Node0x4da7f60;
+	Node0x4da7ec0:s1 -> Node0x4da7f10;
+	Node0x4da7f10 [shape=record,label="{it_if.else}"];
+	Node0x4da7f10 -> Node0x4da8050;
+	Node0x4da7f60 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0x4da7f60:s0 -> Node0x4da8000;
+	Node0x4da7f60:s1 -> Node0x4da7fb0;
+	Node0x4da7fb0 [shape=record,label="{pd_if.then.if.end.4_crit_edge}"];
+	Node0x4da7fb0 -> Node0x4da8050;
+	Node0x4da8000 [shape=record,label="{pd_if.then.2}"];
+	Node0x4da8000 -> Node0x4da8050;
+	Node0x4da8050 [shape=record,label="{it_if.end.4|{<s0>T|<s1>F}}"];
+	Node0x4da8050:s0 -> Node0x4da80f0;
+	Node0x4da8050:s1 -> Node0x4da80a0;
+	Node0x4da80a0 [shape=record,label="{pd_if.end.4.if.end.9_crit_edge}"];
+	Node0x4da80a0 -> Node0x4da8140;
+	Node0x4da80f0 [shape=record,label="{it_land.lhs.true}"];
+	Node0x4da80f0 -> Node0x4da8140;
+	Node0x4da8140 [shape=record,label="{it_if.end.9|{<s0>T|<s1>F}}"];
+	Node0x4da8140:s0 -> Node0x4da7e20;
+	Node0x4da8140:s1 -> Node0x4da8190;
+	Node0x4da8190 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4da8190:s0 -> Node0x4da7e70;
+	Node0x4da8190:s1 -> Node0x4da81e0;
+	Node0x4da81e0 [shape=record,label="{pd_if.end.16|{<s0>T|<s1>F}}"];
+	Node0x4da81e0:s0 -> Node0x4da8280;
+	Node0x4da81e0:s1 -> Node0x4da8230;
+	Node0x4da8230 [shape=record,label="{pd_if.end.16.if.end.19_crit_edge}"];
+	Node0x4da8230 -> Node0x4da82d0;
+	Node0x4da8280 [shape=record,label="{pd_if.then.18}"];
+	Node0x4da8280 -> Node0x4da82d0;
+	Node0x4da82d0 [shape=record,label="{pd_if.end.19}"];
+	Node0x4da82d0 -> Node0x4da7ec0;
+}

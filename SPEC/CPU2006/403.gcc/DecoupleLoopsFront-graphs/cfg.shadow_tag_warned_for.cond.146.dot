@@ -1,0 +1,47 @@
+digraph "CFG for 'shadow_tag_warned_for.cond' function" {
+	label="CFG for 'shadow_tag_warned_for.cond' function";
+
+	Node0x9f8b010 [shape=record,label="{newFuncRoot}"];
+	Node0x9f8b010 -> Node0x9f8b4f0;
+	Node0x9f8b4a0 [shape=record,label="{for.end.exitStub}"];
+	Node0x9f8b4f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9f8b4f0:s0 -> Node0x9f8b540;
+	Node0x9f8b4f0:s1 -> Node0x9f8b4a0;
+	Node0x9f8b540 [shape=record,label="{pd_for.body|{<s0>def|<s1>20|<s2>21|<s3>10}}"];
+	Node0x9f8b540:s0 -> Node0x9f8b8b0;
+	Node0x9f8b540:s1 -> Node0x9f8b630;
+	Node0x9f8b540:s2 -> Node0x9f8b5e0;
+	Node0x9f8b540:s3 -> Node0x9f8b590;
+	Node0x9f8b590 [shape=record,label="{pd_for.body.if.then_crit_edge.2}"];
+	Node0x9f8b590 -> Node0x9f8b680;
+	Node0x9f8b5e0 [shape=record,label="{pd_for.body.if.then_crit_edge.1}"];
+	Node0x9f8b5e0 -> Node0x9f8b680;
+	Node0x9f8b630 [shape=record,label="{pd_for.body.if.then_crit_edge}"];
+	Node0x9f8b630 -> Node0x9f8b680;
+	Node0x9f8b680 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x9f8b680:s0 -> Node0x9f8b7c0;
+	Node0x9f8b680:s1 -> Node0x9f8b6d0;
+	Node0x9f8b6d0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x9f8b6d0:s0 -> Node0x9f8b770;
+	Node0x9f8b6d0:s1 -> Node0x9f8b720;
+	Node0x9f8b720 [shape=record,label="{pd_if.else.for.inc_crit_edge}"];
+	Node0x9f8b720 -> Node0x9f8b9a0;
+	Node0x9f8b770 [shape=record,label="{pd_if.then.13}"];
+	Node0x9f8b770 -> Node0x9f8b9a0;
+	Node0x9f8b7c0 [shape=record,label="{pd_if.then.7|{<s0>T|<s1>F}}"];
+	Node0x9f8b7c0:s0 -> Node0x9f8b860;
+	Node0x9f8b7c0:s1 -> Node0x9f8b810;
+	Node0x9f8b810 [shape=record,label="{pd_if.then.7.for.inc_crit_edge}"];
+	Node0x9f8b810 -> Node0x9f8b9a0;
+	Node0x9f8b860 [shape=record,label="{pd_if.then.10}"];
+	Node0x9f8b860 -> Node0x9f8b9a0;
+	Node0x9f8b8b0 [shape=record,label="{pd_if.else.17|{<s0>T|<s1>F}}"];
+	Node0x9f8b8b0:s0 -> Node0x9f8b950;
+	Node0x9f8b8b0:s1 -> Node0x9f8b900;
+	Node0x9f8b900 [shape=record,label="{pd_if.then.21}"];
+	Node0x9f8b900 -> Node0x9f8b9a0;
+	Node0x9f8b950 [shape=record,label="{pd_if.else.17.for.inc_crit_edge}"];
+	Node0x9f8b950 -> Node0x9f8b9a0;
+	Node0x9f8b9a0 [shape=record,label="{it_for.inc}"];
+	Node0x9f8b9a0 -> Node0x9f8b4f0;
+}

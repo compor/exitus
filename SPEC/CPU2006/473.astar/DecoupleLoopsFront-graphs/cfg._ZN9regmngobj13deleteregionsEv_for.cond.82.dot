@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN9regmngobj13deleteregionsEv_for.cond' function" {
+	label="CFG for '_ZN9regmngobj13deleteregionsEv_for.cond' function";
+
+	Node0x2446a90 [shape=record,label="{newFuncRoot}"];
+	Node0x2446a90 -> Node0x2446b30;
+	Node0x2446ae0 [shape=record,label="{for.cond.6.preheader.exitStub}"];
+	Node0x2446b30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2446b30:s0 -> Node0x2446b80;
+	Node0x2446b30:s1 -> Node0x2446ae0;
+	Node0x2446b80 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2446b80:s0 -> Node0x2446c20;
+	Node0x2446b80:s1 -> Node0x2446bd0;
+	Node0x2446bd0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x2446bd0 -> Node0x2446c70;
+	Node0x2446c20 [shape=record,label="{pd_if.then}"];
+	Node0x2446c20 -> Node0x2446c70;
+	Node0x2446c70 [shape=record,label="{it_for.inc}"];
+	Node0x2446c70 -> Node0x2446b30;
+}

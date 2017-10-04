@@ -1,0 +1,48 @@
+digraph "CFG for 'count_neighbours' function" {
+	label="CFG for 'count_neighbours' function";
+
+	Node0x30bd510 [shape=record,label="{entry}"];
+	Node0x30bd510 -> Node0x30bd560;
+	Node0x30bd560 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x30bd560:s0 -> Node0x30bd5b0;
+	Node0x30bd560:s1 -> Node0x30bdab0;
+	Node0x30bd5b0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x30bd5b0:s0 -> Node0x30bd650;
+	Node0x30bd5b0:s1 -> Node0x30bd600;
+	Node0x30bd600 [shape=record,label="{pd_for.body.for.inc.60_crit_edge}"];
+	Node0x30bd600 -> Node0x30bda60;
+	Node0x30bd650 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x30bd650:s0 -> Node0x30bd6a0;
+	Node0x30bd650:s1 -> Node0x30bd6f0;
+	Node0x30bd6a0 [shape=record,label="{pd_lor.lhs.false.for.inc.60_crit_edge}"];
+	Node0x30bd6a0 -> Node0x30bda60;
+	Node0x30bd6f0 [shape=record,label="{pd_if.end}"];
+	Node0x30bd6f0 -> Node0x30bd740;
+	Node0x30bd740 [shape=record,label="{pd_for.cond.27|{<s0>T|<s1>F}}"];
+	Node0x30bd740:s0 -> Node0x30bd790;
+	Node0x30bd740:s1 -> Node0x30bda10;
+	Node0x30bd790 [shape=record,label="{pd_for.body.30|{<s0>T|<s1>F}}"];
+	Node0x30bd790:s0 -> Node0x30bd830;
+	Node0x30bd790:s1 -> Node0x30bd7e0;
+	Node0x30bd7e0 [shape=record,label="{pd_for.body.30.for.inc_crit_edge}"];
+	Node0x30bd7e0 -> Node0x30bd9c0;
+	Node0x30bd830 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x30bd830:s0 -> Node0x30bd8d0;
+	Node0x30bd830:s1 -> Node0x30bd880;
+	Node0x30bd880 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x30bd880 -> Node0x30bd9c0;
+	Node0x30bd8d0 [shape=record,label="{pd_if.then.46|{<s0>T|<s1>F}}"];
+	Node0x30bd8d0:s0 -> Node0x30bd970;
+	Node0x30bd8d0:s1 -> Node0x30bd920;
+	Node0x30bd920 [shape=record,label="{pd_if.then.46.for.inc_crit_edge}"];
+	Node0x30bd920 -> Node0x30bd9c0;
+	Node0x30bd970 [shape=record,label="{pd_if.then.52}"];
+	Node0x30bd970 -> Node0x30bd9c0;
+	Node0x30bd9c0 [shape=record,label="{pd_for.inc}"];
+	Node0x30bd9c0 -> Node0x30bd740;
+	Node0x30bda10 [shape=record,label="{pd_for.inc.60.loopexit}"];
+	Node0x30bda10 -> Node0x30bda60;
+	Node0x30bda60 [shape=record,label="{it_for.inc.60}"];
+	Node0x30bda60 -> Node0x30bd560;
+	Node0x30bdab0 [shape=record,label="{for.end.62}"];
+}

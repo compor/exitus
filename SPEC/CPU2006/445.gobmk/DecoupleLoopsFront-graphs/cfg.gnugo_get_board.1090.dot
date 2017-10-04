@@ -1,0 +1,19 @@
+digraph "CFG for 'gnugo_get_board' function" {
+	label="CFG for 'gnugo_get_board' function";
+
+	Node0x2f726c0 [shape=record,label="{entry}"];
+	Node0x2f726c0 -> Node0x2f72710;
+	Node0x2f72710 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2f72710:s0 -> Node0x2f72760;
+	Node0x2f72710:s1 -> Node0x2f728a0;
+	Node0x2f72760 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x2f72760 -> Node0x2f727b0;
+	Node0x2f727b0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x2f727b0:s0 -> Node0x2f72800;
+	Node0x2f727b0:s1 -> Node0x2f72850;
+	Node0x2f72800 [shape=record,label="{pd_for.body.3}"];
+	Node0x2f72800 -> Node0x2f727b0;
+	Node0x2f72850 [shape=record,label="{it_for.inc.9}"];
+	Node0x2f72850 -> Node0x2f72710;
+	Node0x2f728a0 [shape=record,label="{for.end.11}"];
+}

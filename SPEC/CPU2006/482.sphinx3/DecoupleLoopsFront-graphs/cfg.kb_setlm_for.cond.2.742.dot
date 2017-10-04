@@ -1,0 +1,16 @@
+digraph "CFG for 'kb_setlm_for.cond.2' function" {
+	label="CFG for 'kb_setlm_for.cond.2' function";
+
+	Node0x12269d0 [shape=record,label="{newFuncRoot}"];
+	Node0x12269d0 -> Node0x1226ac0;
+	Node0x1226a20 [shape=record,label="{for.end.29.loopexit1.exitStub}"];
+	Node0x1226a70 [shape=record,label="{if.then.9.exitStub}"];
+	Node0x1226ac0 [shape=record,label="{it_for.cond.2|{<s0>T|<s1>F}}"];
+	Node0x1226ac0:s0 -> Node0x1226b10;
+	Node0x1226ac0:s1 -> Node0x1226a20;
+	Node0x1226b10 [shape=record,label="{it_for.body.4|{<s0>T|<s1>F}}"];
+	Node0x1226b10:s0 -> Node0x1226b60;
+	Node0x1226b10:s1 -> Node0x1226a70;
+	Node0x1226b60 [shape=record,label="{it_for.inc.27}"];
+	Node0x1226b60 -> Node0x1226ac0;
+}

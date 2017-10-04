@@ -1,0 +1,41 @@
+digraph "CFG for 'Perl_grok_number_while.cond.511' function" {
+	label="CFG for 'Perl_grok_number_while.cond.511' function";
+
+	Node0x4bd7dc0 [shape=record,label="{newFuncRoot}"];
+	Node0x4bd7dc0 -> Node0x4bd7e60;
+	Node0x4bd7e10 [shape=record,label="{while.end.538.exitStub}"];
+	Node0x4bd7e60 [shape=record,label="{it_while.cond.511|{<s0>T|<s1>F}}"];
+	Node0x4bd7e60:s0 -> Node0x4bd7f00;
+	Node0x4bd7e60:s1 -> Node0x4bd7eb0;
+	Node0x4bd7eb0 [shape=record,label="{it_while.cond.511.land.end.535_crit_edge}"];
+	Node0x4bd7eb0 -> Node0x4bd81d0;
+	Node0x4bd7f00 [shape=record,label="{it_land.rhs.514|{<s0>T|<s1>F}}"];
+	Node0x4bd7f00:s0 -> Node0x4bd8180;
+	Node0x4bd7f00:s1 -> Node0x4bd7f50;
+	Node0x4bd7f50 [shape=record,label="{it_lor.lhs.false.518|{<s0>T|<s1>F}}"];
+	Node0x4bd7f50:s0 -> Node0x4bd8130;
+	Node0x4bd7f50:s1 -> Node0x4bd7fa0;
+	Node0x4bd7fa0 [shape=record,label="{it_lor.lhs.false.522|{<s0>T|<s1>F}}"];
+	Node0x4bd7fa0:s0 -> Node0x4bd80e0;
+	Node0x4bd7fa0:s1 -> Node0x4bd7ff0;
+	Node0x4bd7ff0 [shape=record,label="{it_lor.lhs.false.526|{<s0>T|<s1>F}}"];
+	Node0x4bd7ff0:s0 -> Node0x4bd8090;
+	Node0x4bd7ff0:s1 -> Node0x4bd8040;
+	Node0x4bd8040 [shape=record,label="{it_lor.rhs.530}"];
+	Node0x4bd8040 -> Node0x4bd81d0;
+	Node0x4bd8090 [shape=record,label="{it_lor.lhs.false.526.land.end.535_crit_edge}"];
+	Node0x4bd8090 -> Node0x4bd81d0;
+	Node0x4bd80e0 [shape=record,label="{it_lor.lhs.false.522.land.end.535_crit_edge}"];
+	Node0x4bd80e0 -> Node0x4bd81d0;
+	Node0x4bd8130 [shape=record,label="{it_lor.lhs.false.518.land.end.535_crit_edge}"];
+	Node0x4bd8130 -> Node0x4bd81d0;
+	Node0x4bd8180 [shape=record,label="{it_land.rhs.514.land.end.535_crit_edge}"];
+	Node0x4bd8180 -> Node0x4bd81d0;
+	Node0x4bd81d0 [shape=record,label="{pd_land.end.535}"];
+	Node0x4bd81d0 -> Node0x655af70;
+	Node0x655af70 [shape=record,label="{it_land.end.535.split|{<s0>T|<s1>F}}"];
+	Node0x655af70:s0 -> Node0x4bd8220;
+	Node0x655af70:s1 -> Node0x4bd7e10;
+	Node0x4bd8220 [shape=record,label="{pd_while.body.536}"];
+	Node0x4bd8220 -> Node0x4bd7e60;
+}

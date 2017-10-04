@@ -1,0 +1,38 @@
+digraph "CFG for 'proofnumbersearch_while.cond' function" {
+	label="CFG for 'proofnumbersearch_while.cond' function";
+
+	Node0x10e4a20 [shape=record,label="{newFuncRoot}"];
+	Node0x10e4a20 -> Node0x10e4bb0;
+	Node0x10e4a70 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x10e4ac0 [shape=record,label="{land.lhs.true.while.end_crit_edge.exitStub}"];
+	Node0x10e4b10 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x10e4b60 [shape=record,label="{land.lhs.true.22.while.end_crit_edge.exitStub}"];
+	Node0x10e4bb0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x10e4bb0:s0 -> Node0x10e4c00;
+	Node0x10e4bb0:s1 -> Node0x10e4a70;
+	Node0x10e4c00 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x10e4c00:s0 -> Node0x10e4c50;
+	Node0x10e4c00:s1 -> Node0x10e4ac0;
+	Node0x10e4c50 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x10e4c50:s0 -> Node0x10e4ca0;
+	Node0x10e4c50:s1 -> Node0x10e4b10;
+	Node0x10e4ca0 [shape=record,label="{pd_while.body}"];
+	Node0x10e4ca0 -> Node0x1399ae0;
+	Node0x1399ae0 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x1399ae0:s0 -> Node0x10e4d40;
+	Node0x1399ae0:s1 -> Node0x10e4cf0;
+	Node0x10e4cf0 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0x10e4cf0 -> Node0x10e4e80;
+	Node0x10e4d40 [shape=record,label="{it_if.then.17|{<s0>T|<s1>F}}"];
+	Node0x10e4d40:s0 -> Node0x10e4de0;
+	Node0x10e4d40:s1 -> Node0x10e4d90;
+	Node0x10e4d90 [shape=record,label="{pd_if.then.17.while.cond.backedge_crit_edge}"];
+	Node0x10e4d90 -> Node0x10e4e80;
+	Node0x10e4de0 [shape=record,label="{it_land.lhs.true.22|{<s0>T|<s1>F}}"];
+	Node0x10e4de0:s0 -> Node0x10e4e30;
+	Node0x10e4de0:s1 -> Node0x10e4b60;
+	Node0x10e4e30 [shape=record,label="{pd_land.lhs.true.22.while.cond.backedge_crit_edge}"];
+	Node0x10e4e30 -> Node0x10e4e80;
+	Node0x10e4e80 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x10e4e80 -> Node0x10e4bb0;
+}

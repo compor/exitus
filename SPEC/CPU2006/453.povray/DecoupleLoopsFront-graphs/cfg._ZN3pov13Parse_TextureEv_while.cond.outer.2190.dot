@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN3pov13Parse_TextureEv_while.cond.outer' function" {
+	label="CFG for '_ZN3pov13Parse_TextureEv_while.cond.outer' function";
+
+	Node0x2865260 [shape=record,label="{newFuncRoot}"];
+	Node0x2865260 -> Node0x2865300;
+	Node0x28652b0 [shape=record,label="{while.end.exitStub}"];
+	Node0x2865300 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x2865300 -> Node0x2865350;
+	Node0x2865350 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2865350:s0 -> Node0x28653a0;
+	Node0x2865350:s1 -> Node0x28652b0;
+	Node0x28653a0 [shape=record,label="{pd_while.body}"];
+	Node0x28653a0 -> Node0x3754290;
+	Node0x3754290 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x3754290:s0 -> Node0x2865440;
+	Node0x3754290:s1 -> Node0x28653f0;
+	Node0x28653f0 [shape=record,label="{pd_sw.default}"];
+	Node0x28653f0 -> Node0x2865350;
+	Node0x2865440 [shape=record,label="{pd_sw.bb}"];
+	Node0x2865440 -> Node0x2865300;
+}

@@ -1,0 +1,19 @@
+digraph "CFG for 'Perl_scalar_while.cond' function" {
+	label="CFG for 'Perl_scalar_while.cond' function";
+
+	Node0x4bfa270 [shape=record,label="{newFuncRoot}"];
+	Node0x4bfa270 -> Node0x4bfa6d0;
+	Node0x4bfa2c0 [shape=record,label="{while.end.exitStub}"];
+	Node0x4bfa6d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4bfa6d0:s0 -> Node0x4bfa720;
+	Node0x4bfa6d0:s1 -> Node0x4bfa2c0;
+	Node0x4bfa720 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x4bfa720:s0 -> Node0x4bfa7c0;
+	Node0x4bfa720:s1 -> Node0x4bfa770;
+	Node0x4bfa770 [shape=record,label="{pd_if.else}"];
+	Node0x4bfa770 -> Node0x4bfa810;
+	Node0x4bfa7c0 [shape=record,label="{pd_if.then.53}"];
+	Node0x4bfa7c0 -> Node0x4bfa810;
+	Node0x4bfa810 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x4bfa810 -> Node0x4bfa6d0;
+}

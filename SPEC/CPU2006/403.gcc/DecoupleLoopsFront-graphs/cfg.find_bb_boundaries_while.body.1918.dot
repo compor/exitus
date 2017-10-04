@@ -1,0 +1,45 @@
+digraph "CFG for 'find_bb_boundaries_while.body' function" {
+	label="CFG for 'find_bb_boundaries_while.body' function";
+
+	Node0x7b4a310 [shape=record,label="{newFuncRoot}"];
+	Node0x7b4a310 -> Node0x7b4a3b0;
+	Node0x7b4a360 [shape=record,label="{while.end.exitStub}"];
+	Node0x7b4a3b0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x7b4a3b0:s0 -> Node0x7b4a450;
+	Node0x7b4a3b0:s1 -> Node0x7b4a400;
+	Node0x7b4a400 [shape=record,label="{pd_while.body.if.end.22_crit_edge}"];
+	Node0x7b4a400 -> Node0x7b4a630;
+	Node0x7b4a450 [shape=record,label="{pd_if.then.9|{<s0>T|<s1>F}}"];
+	Node0x7b4a450:s0 -> Node0x7b4a4f0;
+	Node0x7b4a450:s1 -> Node0x7b4a4a0;
+	Node0x7b4a4a0 [shape=record,label="{pd_if.then.9.if.end.15_crit_edge}"];
+	Node0x7b4a4a0 -> Node0x7b4a540;
+	Node0x7b4a4f0 [shape=record,label="{pd_if.then.13}"];
+	Node0x7b4a4f0 -> Node0x7b4a540;
+	Node0x7b4a540 [shape=record,label="{pd_if.end.15|{<s0>T|<s1>F}}"];
+	Node0x7b4a540:s0 -> Node0x7b4a5e0;
+	Node0x7b4a540:s1 -> Node0x7b4a590;
+	Node0x7b4a590 [shape=record,label="{pd_if.end.15.if.end.22_crit_edge}"];
+	Node0x7b4a590 -> Node0x7b4a630;
+	Node0x7b4a5e0 [shape=record,label="{pd_if.then.19}"];
+	Node0x7b4a5e0 -> Node0x7b4a630;
+	Node0x7b4a630 [shape=record,label="{pd_if.end.22|{<s0>T|<s1>F}}"];
+	Node0x7b4a630:s0 -> Node0x7b4a6d0;
+	Node0x7b4a630:s1 -> Node0x7b4a680;
+	Node0x7b4a680 [shape=record,label="{pd_if.end.22.if.end.32_crit_edge}"];
+	Node0x7b4a680 -> Node0x7b4a7c0;
+	Node0x7b4a6d0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x7b4a6d0:s0 -> Node0x7b4a770;
+	Node0x7b4a6d0:s1 -> Node0x7b4a720;
+	Node0x7b4a720 [shape=record,label="{pd_land.lhs.true.if.end.32_crit_edge}"];
+	Node0x7b4a720 -> Node0x7b4a7c0;
+	Node0x7b4a770 [shape=record,label="{pd_if.then.25}"];
+	Node0x7b4a770 -> Node0x7b4a7c0;
+	Node0x7b4a7c0 [shape=record,label="{pd_if.end.32}"];
+	Node0x7b4a7c0 -> Node0xf173410;
+	Node0xf173410 [shape=record,label="{it_if.end.32.split|{<s0>T|<s1>F}}"];
+	Node0xf173410:s0 -> Node0x7b4a360;
+	Node0xf173410:s1 -> Node0x7b4a810;
+	Node0x7b4a810 [shape=record,label="{it_if.end.38}"];
+	Node0x7b4a810 -> Node0x7b4a3b0;
+}

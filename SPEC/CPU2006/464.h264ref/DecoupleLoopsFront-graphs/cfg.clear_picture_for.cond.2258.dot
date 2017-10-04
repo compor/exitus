@@ -1,0 +1,14 @@
+digraph "CFG for 'clear_picture_for.cond' function" {
+	label="CFG for 'clear_picture_for.cond' function";
+
+	Node0x2a545b0 [shape=record,label="{newFuncRoot}"];
+	Node0x2a545b0 -> Node0x2a54650;
+	Node0x2a54600 [shape=record,label="{for.cond.1.preheader.exitStub}"];
+	Node0x2a54650 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2a54650:s0 -> Node0x2a546a0;
+	Node0x2a54650:s1 -> Node0x2a54600;
+	Node0x2a546a0 [shape=record,label="{pd_for.body}"];
+	Node0x2a546a0 -> Node0x38d5e00;
+	Node0x38d5e00 [shape=record,label="{it_for.body.split}"];
+	Node0x38d5e00 -> Node0x2a54650;
+}

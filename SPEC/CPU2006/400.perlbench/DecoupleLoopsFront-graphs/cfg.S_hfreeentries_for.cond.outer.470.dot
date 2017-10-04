@@ -1,0 +1,26 @@
+digraph "CFG for 'S_hfreeentries_for.cond.outer' function" {
+	label="CFG for 'S_hfreeentries_for.cond.outer' function";
+
+	Node0x4bab0e0 [shape=record,label="{newFuncRoot}"];
+	Node0x4bab0e0 -> Node0x4bab180;
+	Node0x4bab130 [shape=record,label="{for.end.exitStub}"];
+	Node0x4bab180 [shape=record,label="{pd_for.cond.outer}"];
+	Node0x4bab180 -> Node0x4bab1d0;
+	Node0x4bab1d0 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bab1d0:s0 -> Node0x4babb80;
+	Node0x4bab1d0:s1 -> Node0x4bab220;
+	Node0x4bab220 [shape=record,label="{pd_for.cond.if.end.14_crit_edge}"];
+	Node0x4bab220 -> Node0x4babbd0;
+	Node0x4babb80 [shape=record,label="{pd_if.then.13}"];
+	Node0x4babb80 -> Node0x4babbd0;
+	Node0x4babbd0 [shape=record,label="{pd_if.end.14|{<s0>T|<s1>F}}"];
+	Node0x4babbd0:s0 -> Node0x4babcc0;
+	Node0x4babbd0:s1 -> Node0x4babc20;
+	Node0x4babc20 [shape=record,label="{it_if.then.16|{<s0>T|<s1>F}}"];
+	Node0x4babc20:s0 -> Node0x4bab130;
+	Node0x4babc20:s1 -> Node0x4babc70;
+	Node0x4babc70 [shape=record,label="{pd_if.end.18}"];
+	Node0x4babc70 -> Node0x4bab180;
+	Node0x4babcc0 [shape=record,label="{pd_if.end.14.for.cond_crit_edge}"];
+	Node0x4babcc0 -> Node0x4bab1d0;
+}

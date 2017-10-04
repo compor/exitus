@@ -1,0 +1,24 @@
+digraph "CFG for 'revise_thrashing_dragon_for.cond' function" {
+	label="CFG for 'revise_thrashing_dragon_for.cond' function";
+
+	Node0x3fdb250 [shape=record,label="{newFuncRoot}"];
+	Node0x3fdb250 -> Node0x3fdb2f0;
+	Node0x3fdb2a0 [shape=record,label="{for.end.exitStub}"];
+	Node0x3fdb2f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3fdb2f0:s0 -> Node0x3fdb340;
+	Node0x3fdb2f0:s1 -> Node0x3fdb2a0;
+	Node0x3fdb340 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3fdb340:s0 -> Node0x3fdb3e0;
+	Node0x3fdb340:s1 -> Node0x3fdb390;
+	Node0x3fdb390 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x3fdb390 -> Node0x3fdb4d0;
+	Node0x3fdb3e0 [shape=record,label="{pd_land.lhs.true.21|{<s0>T|<s1>F}}"];
+	Node0x3fdb3e0:s0 -> Node0x3fdb480;
+	Node0x3fdb3e0:s1 -> Node0x3fdb430;
+	Node0x3fdb430 [shape=record,label="{pd_land.lhs.true.21.for.inc_crit_edge}"];
+	Node0x3fdb430 -> Node0x3fdb4d0;
+	Node0x3fdb480 [shape=record,label="{pd_if.then.23}"];
+	Node0x3fdb480 -> Node0x3fdb4d0;
+	Node0x3fdb4d0 [shape=record,label="{it_for.inc}"];
+	Node0x3fdb4d0 -> Node0x3fdb2f0;
+}

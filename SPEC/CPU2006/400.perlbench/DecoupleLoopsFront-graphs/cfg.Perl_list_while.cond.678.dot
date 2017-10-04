@@ -1,0 +1,19 @@
+digraph "CFG for 'Perl_list_while.cond' function" {
+	label="CFG for 'Perl_list_while.cond' function";
+
+	Node0x4bfdfb0 [shape=record,label="{newFuncRoot}"];
+	Node0x4bfdfb0 -> Node0x4bfe410;
+	Node0x4bfe000 [shape=record,label="{while.end.exitStub}"];
+	Node0x4bfe410 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4bfe410:s0 -> Node0x4bfe460;
+	Node0x4bfe410:s1 -> Node0x4bfe000;
+	Node0x4bfe460 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x4bfe460:s0 -> Node0x4bfe500;
+	Node0x4bfe460:s1 -> Node0x4bfe4b0;
+	Node0x4bfe4b0 [shape=record,label="{pd_if.else}"];
+	Node0x4bfe4b0 -> Node0x4bfe550;
+	Node0x4bfe500 [shape=record,label="{pd_if.then.55}"];
+	Node0x4bfe500 -> Node0x4bfe550;
+	Node0x4bfe550 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x4bfe550 -> Node0x4bfe410;
+}

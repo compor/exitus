@@ -1,0 +1,16 @@
+digraph "CFG for 'decode_reg_name_for.cond' function" {
+	label="CFG for 'decode_reg_name_for.cond' function";
+
+	Node0xc648e70 [shape=record,label="{newFuncRoot}"];
+	Node0xc648e70 -> Node0xc648f60;
+	Node0xc648ec0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0xc648f10 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0xc648f60 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc648f60:s0 -> Node0xc648fb0;
+	Node0xc648f60:s1 -> Node0xc648ec0;
+	Node0xc648fb0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xc648fb0:s0 -> Node0xc649000;
+	Node0xc648fb0:s1 -> Node0xc648f10;
+	Node0xc649000 [shape=record,label="{it_for.inc}"];
+	Node0xc649000 -> Node0xc648f60;
+}

@@ -1,0 +1,47 @@
+digraph "CFG for 'update_life_info_for.cond.42' function" {
+	label="CFG for 'update_life_info_for.cond.42' function";
+
+	Node0xae805c0 [shape=record,label="{newFuncRoot}"];
+	Node0xae805c0 -> Node0xae80ae0;
+	Node0xae80a90 [shape=record,label="{do.body.98.loopexit.exitStub}"];
+	Node0xae80ae0 [shape=record,label="{it_for.cond.42|{<s0>T|<s1>F}}"];
+	Node0xae80ae0:s0 -> Node0xae80b30;
+	Node0xae80ae0:s1 -> Node0xae80a90;
+	Node0xae80b30 [shape=record,label="{pd_for.body.44|{<s0>T|<s1>F}}"];
+	Node0xae80b30:s0 -> Node0xae80bd0;
+	Node0xae80b30:s1 -> Node0xae80b80;
+	Node0xae80b80 [shape=record,label="{pd_for.body.44.for.inc.76_crit_edge}"];
+	Node0xae80b80 -> Node0xae80fe0;
+	Node0xae80bd0 [shape=record,label="{pd_for.cond.50.preheader}"];
+	Node0xae80bd0 -> Node0xae80c20;
+	Node0xae80c20 [shape=record,label="{pd_for.cond.50|{<s0>T|<s1>F}}"];
+	Node0xae80c20:s0 -> Node0xae80cc0;
+	Node0xae80c20:s1 -> Node0xae80c70;
+	Node0xae80c70 [shape=record,label="{pd_for.cond.50.for.inc.76.loopexit_crit_edge}"];
+	Node0xae80c70 -> Node0xae80f90;
+	Node0xae80cc0 [shape=record,label="{pd_for.body.52|{<s0>T|<s1>F}}"];
+	Node0xae80cc0:s0 -> Node0xae80d60;
+	Node0xae80cc0:s1 -> Node0xae80d10;
+	Node0xae80d10 [shape=record,label="{pd_for.body.52.for.inc.73_crit_edge}"];
+	Node0xae80d10 -> Node0xae80ef0;
+	Node0xae80d60 [shape=record,label="{pd_if.then.56|{<s0>T|<s1>F}}"];
+	Node0xae80d60:s0 -> Node0xae80e00;
+	Node0xae80d60:s1 -> Node0xae80db0;
+	Node0xae80db0 [shape=record,label="{pd_if.then.56.if.end.68_crit_edge}"];
+	Node0xae80db0 -> Node0xae80e50;
+	Node0xae80e00 [shape=record,label="{pd_if.then.67}"];
+	Node0xae80e00 -> Node0xae80e50;
+	Node0xae80e50 [shape=record,label="{pd_if.end.68|{<s0>T|<s1>F}}"];
+	Node0xae80e50:s0 -> Node0xae80f40;
+	Node0xae80e50:s1 -> Node0xae80ea0;
+	Node0xae80ea0 [shape=record,label="{pd_if.end.68.for.inc.73_crit_edge}"];
+	Node0xae80ea0 -> Node0xae80ef0;
+	Node0xae80ef0 [shape=record,label="{pd_for.inc.73}"];
+	Node0xae80ef0 -> Node0xae80c20;
+	Node0xae80f40 [shape=record,label="{pd_if.end.68.for.inc.76.loopexit_crit_edge}"];
+	Node0xae80f40 -> Node0xae80f90;
+	Node0xae80f90 [shape=record,label="{pd_for.inc.76.loopexit}"];
+	Node0xae80f90 -> Node0xae80fe0;
+	Node0xae80fe0 [shape=record,label="{it_for.inc.76}"];
+	Node0xae80fe0 -> Node0xae80ae0;
+}

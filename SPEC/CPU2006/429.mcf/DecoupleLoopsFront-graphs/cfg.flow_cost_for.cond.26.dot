@@ -1,0 +1,19 @@
+digraph "CFG for 'flow_cost_for.cond' function" {
+	label="CFG for 'flow_cost_for.cond' function";
+
+	Node0x1dfc230 [shape=record,label="{newFuncRoot}"];
+	Node0x1dfc230 -> Node0x1dfc2d0;
+	Node0x1dfc280 [shape=record,label="{for.end.exitStub}"];
+	Node0x1dfc2d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1dfc2d0:s0 -> Node0x1dfc320;
+	Node0x1dfc2d0:s1 -> Node0x1dfc280;
+	Node0x1dfc320 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x1dfc320:s0 -> Node0x1dfc3c0;
+	Node0x1dfc320:s1 -> Node0x1dfc370;
+	Node0x1dfc370 [shape=record,label="{pd_if.else}"];
+	Node0x1dfc370 -> Node0x1dfc410;
+	Node0x1dfc3c0 [shape=record,label="{pd_if.then}"];
+	Node0x1dfc3c0 -> Node0x1dfc410;
+	Node0x1dfc410 [shape=record,label="{it_for.inc}"];
+	Node0x1dfc410 -> Node0x1dfc2d0;
+}

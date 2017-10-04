@@ -1,0 +1,23 @@
+digraph "CFG for 'strategic_penalty_for.cond' function" {
+	label="CFG for 'strategic_penalty_for.cond' function";
+
+	Node0x4687160 [shape=record,label="{newFuncRoot}"];
+	Node0x4687160 -> Node0x4691a40;
+	Node0x46871b0 [shape=record,label="{for.end.exitStub}"];
+	Node0x46919f0 [shape=record,label="{return.loopexit1.exitStub}"];
+	Node0x4691a40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4691a40:s0 -> Node0x4691a90;
+	Node0x4691a40:s1 -> Node0x46871b0;
+	Node0x4691a90 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4691a90:s0 -> Node0x4691b30;
+	Node0x4691a90:s1 -> Node0x4691ae0;
+	Node0x4691ae0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4691ae0 -> Node0x4691bd0;
+	Node0x4691b30 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4691b30:s0 -> Node0x46919f0;
+	Node0x4691b30:s1 -> Node0x4691b80;
+	Node0x4691b80 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x4691b80 -> Node0x4691bd0;
+	Node0x4691bd0 [shape=record,label="{it_for.inc}"];
+	Node0x4691bd0 -> Node0x4691a40;
+}

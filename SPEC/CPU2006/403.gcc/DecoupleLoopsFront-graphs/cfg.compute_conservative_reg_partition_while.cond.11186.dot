@@ -1,0 +1,19 @@
+digraph "CFG for 'compute_conservative_reg_partition_while.cond' function" {
+	label="CFG for 'compute_conservative_reg_partition_while.cond' function";
+
+	Node0xc2d2e30 [shape=record,label="{newFuncRoot}"];
+	Node0xc2d2e30 -> Node0xc2d2ed0;
+	Node0xc2d2e80 [shape=record,label="{while.end.exitStub}"];
+	Node0xc2d2ed0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc2d2ed0:s0 -> Node0xc2d2f20;
+	Node0xc2d2ed0:s1 -> Node0xc2d2e80;
+	Node0xc2d2f20 [shape=record,label="{it_while.body}"];
+	Node0xc2d2f20 -> Node0xc2d2f70;
+	Node0xc2d2f70 [shape=record,label="{it_for.cond.5|{<s0>T|<s1>F}}"];
+	Node0xc2d2f70:s0 -> Node0xc2d3010;
+	Node0xc2d2f70:s1 -> Node0xc2d2fc0;
+	Node0xc2d2fc0 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0xc2d2fc0 -> Node0xc2d2ed0;
+	Node0xc2d3010 [shape=record,label="{it_for.body.9}"];
+	Node0xc2d3010 -> Node0xc2d2f70;
+}

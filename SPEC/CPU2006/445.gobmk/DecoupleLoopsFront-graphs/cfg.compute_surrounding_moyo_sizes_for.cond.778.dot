@@ -1,0 +1,48 @@
+digraph "CFG for 'compute_surrounding_moyo_sizes_for.cond' function" {
+	label="CFG for 'compute_surrounding_moyo_sizes_for.cond' function";
+
+	Node0x3fa0aa0 [shape=record,label="{newFuncRoot}"];
+	Node0x3fa0aa0 -> Node0x3fa0f80;
+	Node0x3fa0f30 [shape=record,label="{if.end.241.loopexit1.exitStub}"];
+	Node0x3fa0f80 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3fa0f80:s0 -> Node0x3fa0fd0;
+	Node0x3fa0f80:s1 -> Node0x3fa0f30;
+	Node0x3fa0fd0 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x3fa0fd0 -> Node0x3fa1020;
+	Node0x3fa1020 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x3fa1020:s0 -> Node0x3fa11b0;
+	Node0x3fa1020:s1 -> Node0x3fa1070;
+	Node0x3fa1070 [shape=record,label="{pd_for.end|{<s0>T|<s1>F}}"];
+	Node0x3fa1070:s0 -> Node0x3fa1110;
+	Node0x3fa1070:s1 -> Node0x3fa10c0;
+	Node0x3fa10c0 [shape=record,label="{pd_for.end.for.inc.54_crit_edge}"];
+	Node0x3fa10c0 -> Node0x3fa1160;
+	Node0x3fa1110 [shape=record,label="{pd_if.then.47}"];
+	Node0x3fa1110 -> Node0x3fa1160;
+	Node0x3fa1160 [shape=record,label="{it_for.inc.54}"];
+	Node0x3fa1160 -> Node0x3fa0f80;
+	Node0x3fa11b0 [shape=record,label="{pd_for.body.3|{<s0>T|<s1>F}}"];
+	Node0x3fa11b0:s0 -> Node0x3fa1430;
+	Node0x3fa11b0:s1 -> Node0x3fa1200;
+	Node0x3fa1200 [shape=record,label="{pd_lor.lhs.false.14|{<s0>T|<s1>F}}"];
+	Node0x3fa1200:s0 -> Node0x3fa13e0;
+	Node0x3fa1200:s1 -> Node0x3fa1250;
+	Node0x3fa1250 [shape=record,label="{pd_lor.lhs.false.19|{<s0>T|<s1>F}}"];
+	Node0x3fa1250:s0 -> Node0x3fa1390;
+	Node0x3fa1250:s1 -> Node0x3fa12a0;
+	Node0x3fa12a0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x3fa12a0:s0 -> Node0x3fa1340;
+	Node0x3fa12a0:s1 -> Node0x3fa12f0;
+	Node0x3fa12f0 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0x3fa12f0 -> Node0x3fa1480;
+	Node0x3fa1340 [shape=record,label="{pd_if.then.32}"];
+	Node0x3fa1340 -> Node0x3fa1480;
+	Node0x3fa1390 [shape=record,label="{pd_lor.lhs.false.19.for.inc_crit_edge}"];
+	Node0x3fa1390 -> Node0x3fa1480;
+	Node0x3fa13e0 [shape=record,label="{pd_lor.lhs.false.14.for.inc_crit_edge}"];
+	Node0x3fa13e0 -> Node0x3fa1480;
+	Node0x3fa1430 [shape=record,label="{pd_for.body.3.for.inc_crit_edge}"];
+	Node0x3fa1430 -> Node0x3fa1480;
+	Node0x3fa1480 [shape=record,label="{pd_for.inc}"];
+	Node0x3fa1480 -> Node0x3fa1020;
+}

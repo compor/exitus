@@ -1,0 +1,14 @@
+digraph "CFG for 'lex_number_for.cond' function" {
+	label="CFG for 'lex_number_for.cond' function";
+
+	Node0x9f66830 [shape=record,label="{newFuncRoot}"];
+	Node0x9f66830 -> Node0x9f6cda0;
+	Node0x9f66880 [shape=record,label="{for.end.exitStub}"];
+	Node0x9f6cda0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9f6cda0:s0 -> Node0x9f6cdf0;
+	Node0x9f6cda0:s1 -> Node0x9f66880;
+	Node0x9f6cdf0 [shape=record,label="{pd_for.body}"];
+	Node0x9f6cdf0 -> Node0xef37e60;
+	Node0xef37e60 [shape=record,label="{it_for.body.split}"];
+	Node0xef37e60 -> Node0x9f6cda0;
+}

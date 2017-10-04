@@ -1,0 +1,14 @@
+digraph "CFG for 'play_replay_while.cond' function" {
+	label="CFG for 'play_replay_while.cond' function";
+
+	Node0x4854ad0 [shape=record,label="{newFuncRoot}"];
+	Node0x4854ad0 -> Node0x4854f90;
+	Node0x4854f40 [shape=record,label="{while.end.exitStub}"];
+	Node0x4854f90 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4854f90:s0 -> Node0x4854fe0;
+	Node0x4854f90:s1 -> Node0x4854f40;
+	Node0x4854fe0 [shape=record,label="{pd_while.body}"];
+	Node0x4854fe0 -> Node0x5032590;
+	Node0x5032590 [shape=record,label="{it_while.body.split}"];
+	Node0x5032590 -> Node0x4854f90;
+}

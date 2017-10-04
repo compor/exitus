@@ -1,0 +1,46 @@
+digraph "CFG for 'component_ref_for_mem_expr_while.cond' function" {
+	label="CFG for 'component_ref_for_mem_expr_while.cond' function";
+
+	Node0xac93630 [shape=record,label="{newFuncRoot}"];
+	Node0xac93630 -> Node0xac936d0;
+	Node0xac93680 [shape=record,label="{while.end.exitStub}"];
+	Node0xac936d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xac936d0:s0 -> Node0xac939f0;
+	Node0xac936d0:s1 -> Node0xac93720;
+	Node0xac93720 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xac93720:s0 -> Node0xac939a0;
+	Node0xac93720:s1 -> Node0xac93770;
+	Node0xac93770 [shape=record,label="{it_lor.lhs.false.11|{<s0>T|<s1>F}}"];
+	Node0xac93770:s0 -> Node0xac93950;
+	Node0xac93770:s1 -> Node0xac937c0;
+	Node0xac937c0 [shape=record,label="{it_lor.lhs.false.17|{<s0>T|<s1>F}}"];
+	Node0xac937c0:s0 -> Node0xac93900;
+	Node0xac937c0:s1 -> Node0xac93810;
+	Node0xac93810 [shape=record,label="{it_lor.lhs.false.23|{<s0>T|<s1>F}}"];
+	Node0xac93810:s0 -> Node0xac938b0;
+	Node0xac93810:s1 -> Node0xac93860;
+	Node0xac93860 [shape=record,label="{it_lor.rhs}"];
+	Node0xac93860 -> Node0xac93a40;
+	Node0xac938b0 [shape=record,label="{it_lor.lhs.false.23.lor.end_crit_edge}"];
+	Node0xac938b0 -> Node0xac93a40;
+	Node0xac93900 [shape=record,label="{it_lor.lhs.false.17.lor.end_crit_edge}"];
+	Node0xac93900 -> Node0xac93a40;
+	Node0xac93950 [shape=record,label="{it_lor.lhs.false.11.lor.end_crit_edge}"];
+	Node0xac93950 -> Node0xac93a40;
+	Node0xac939a0 [shape=record,label="{it_lor.lhs.false.lor.end_crit_edge}"];
+	Node0xac939a0 -> Node0xac93a40;
+	Node0xac939f0 [shape=record,label="{it_while.cond.lor.end_crit_edge}"];
+	Node0xac939f0 -> Node0xac93a40;
+	Node0xac93a40 [shape=record,label="{it_lor.end|{<s0>T|<s1>F}}"];
+	Node0xac93a40:s0 -> Node0xac93a90;
+	Node0xac93a40:s1 -> Node0xac93680;
+	Node0xac93a90 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xac93a90:s0 -> Node0xac93b30;
+	Node0xac93a90:s1 -> Node0xac93ae0;
+	Node0xac93ae0 [shape=record,label="{it_if.else.41}"];
+	Node0xac93ae0 -> Node0xac93b80;
+	Node0xac93b30 [shape=record,label="{it_if.then.39}"];
+	Node0xac93b30 -> Node0xac93b80;
+	Node0xac93b80 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0xac93b80 -> Node0xac936d0;
+}

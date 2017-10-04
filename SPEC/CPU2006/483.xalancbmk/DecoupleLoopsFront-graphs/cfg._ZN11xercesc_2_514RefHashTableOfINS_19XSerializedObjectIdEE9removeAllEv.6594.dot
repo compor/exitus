@@ -1,0 +1,40 @@
+digraph "CFG for '_ZN11xercesc_2_514RefHashTableOfINS_19XSerializedObjectIdEE9removeAllEv' function" {
+	label="CFG for '_ZN11xercesc_2_514RefHashTableOfINS_19XSerializedObjectIdEE9removeAllEv' function";
+
+	Node0x57a60d0 [shape=record,label="{entry}"];
+	Node0x57a60d0 -> Node0x57ac220;
+	Node0x57ac220 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x57ac220:s0 -> Node0x57ac720;
+	Node0x57ac220:s1 -> Node0x57acae0;
+	Node0x57ac720 [shape=record,label="{pd_for.body}"];
+	Node0x57ac720 -> Node0x57ac770;
+	Node0x57ac770 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x57ac770:s0 -> Node0x57ac7c0;
+	Node0x57ac770:s1 -> Node0x57aca90;
+	Node0x57ac7c0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x57ac7c0:s0 -> Node0x57ac860;
+	Node0x57ac7c0:s1 -> Node0x57ac810;
+	Node0x57ac810 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x57ac810 -> Node0x57ac950;
+	Node0x57ac860 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x57ac860:s0 -> Node0x57ac8b0;
+	Node0x57ac860:s1 -> Node0x57ac900;
+	Node0x57ac8b0 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x57ac8b0 -> Node0x57ac950;
+	Node0x57ac900 [shape=record,label="{pd_delete.notnull}"];
+	Node0x57ac900 -> Node0x57ac950;
+	Node0x57ac950 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x57ac950:s0 -> Node0x57ac9a0;
+	Node0x57ac950:s1 -> Node0x57ac9f0;
+	Node0x57ac9a0 [shape=record,label="{pd_if.end.while.cond.backedge_crit_edge}"];
+	Node0x57ac9a0 -> Node0x57aca40;
+	Node0x57ac9f0 [shape=record,label="{pd_delete.notnull.5}"];
+	Node0x57ac9f0 -> Node0x57aca40;
+	Node0x57aca40 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x57aca40 -> Node0x57ac770;
+	Node0x57aca90 [shape=record,label="{pd_while.end}"];
+	Node0x57aca90 -> Node0xb545f10;
+	Node0xb545f10 [shape=record,label="{it_while.end.split}"];
+	Node0xb545f10 -> Node0x57ac220;
+	Node0x57acae0 [shape=record,label="{for.end}"];
+}

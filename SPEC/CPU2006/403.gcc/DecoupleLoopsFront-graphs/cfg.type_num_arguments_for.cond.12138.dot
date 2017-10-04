@@ -1,0 +1,18 @@
+digraph "CFG for 'type_num_arguments_for.cond' function" {
+	label="CFG for 'type_num_arguments_for.cond' function";
+
+	Node0xc4ec660 [shape=record,label="{newFuncRoot}"];
+	Node0xc4ec660 -> Node0xc4ec750;
+	Node0xc4ec6b0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0xc4ec700 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0xc4ec750 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc4ec750:s0 -> Node0xc4ec7a0;
+	Node0xc4ec750:s1 -> Node0xc4ec6b0;
+	Node0xc4ec7a0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xc4ec7a0:s0 -> Node0xc4ec700;
+	Node0xc4ec7a0:s1 -> Node0xc4ec7f0;
+	Node0xc4ec7f0 [shape=record,label="{pd_if.else}"];
+	Node0xc4ec7f0 -> Node0xfd6fdf0;
+	Node0xfd6fdf0 [shape=record,label="{it_if.else.split}"];
+	Node0xfd6fdf0 -> Node0xc4ec750;
+}

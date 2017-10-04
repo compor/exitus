@@ -1,0 +1,29 @@
+digraph "CFG for 'wipe_dead_reg_for.cond' function" {
+	label="CFG for 'wipe_dead_reg_for.cond' function";
+
+	Node0xb43d2a0 [shape=record,label="{newFuncRoot}"];
+	Node0xb43d2a0 -> Node0xb46a230;
+	Node0xb46a1e0 [shape=record,label="{if.end.39.loopexit.exitStub}"];
+	Node0xb46a230 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb46a230:s0 -> Node0xb46a280;
+	Node0xb46a230:s1 -> Node0xb46a1e0;
+	Node0xb46a280 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xb46a280:s0 -> Node0xb46a320;
+	Node0xb46a280:s1 -> Node0xb46a2d0;
+	Node0xb46a2d0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xb46a2d0 -> Node0xb46a4b0;
+	Node0xb46a320 [shape=record,label="{pd_land.lhs.true.19|{<s0>T|<s1>F}}"];
+	Node0xb46a320:s0 -> Node0xb46a3c0;
+	Node0xb46a320:s1 -> Node0xb46a370;
+	Node0xb46a370 [shape=record,label="{pd_land.lhs.true.19.for.inc_crit_edge}"];
+	Node0xb46a370 -> Node0xb46a4b0;
+	Node0xb46a3c0 [shape=record,label="{pd_land.lhs.true.26|{<s0>T|<s1>F}}"];
+	Node0xb46a3c0:s0 -> Node0xb46a460;
+	Node0xb46a3c0:s1 -> Node0xb46a410;
+	Node0xb46a410 [shape=record,label="{pd_land.lhs.true.32}"];
+	Node0xb46a410 -> Node0xb46a4b0;
+	Node0xb46a460 [shape=record,label="{pd_land.lhs.true.26.for.inc_crit_edge}"];
+	Node0xb46a460 -> Node0xb46a4b0;
+	Node0xb46a4b0 [shape=record,label="{it_for.inc}"];
+	Node0xb46a4b0 -> Node0xb46a230;
+}

@@ -1,0 +1,24 @@
+digraph "CFG for '_cpp_backup_tokens_while.cond' function" {
+	label="CFG for '_cpp_backup_tokens_while.cond' function";
+
+	Node0xa24bb30 [shape=record,label="{newFuncRoot}"];
+	Node0xa24bb30 -> Node0xa24bbd0;
+	Node0xa24bb80 [shape=record,label="{if.end.25.loopexit.exitStub}"];
+	Node0xa24bbd0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa24bbd0:s0 -> Node0xa24bc20;
+	Node0xa24bbd0:s1 -> Node0xa24bb80;
+	Node0xa24bc20 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0xa24bc20:s0 -> Node0xa24bcc0;
+	Node0xa24bc20:s1 -> Node0xa24bc70;
+	Node0xa24bc70 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0xa24bc70 -> Node0xa24bdb0;
+	Node0xa24bcc0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xa24bcc0:s0 -> Node0xa24bd60;
+	Node0xa24bcc0:s1 -> Node0xa24bd10;
+	Node0xa24bd10 [shape=record,label="{pd_land.lhs.true.while.cond.backedge_crit_edge}"];
+	Node0xa24bd10 -> Node0xa24bdb0;
+	Node0xa24bd60 [shape=record,label="{pd_if.then.6}"];
+	Node0xa24bd60 -> Node0xa24bdb0;
+	Node0xa24bdb0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0xa24bdb0 -> Node0xa24bbd0;
+}

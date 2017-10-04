@@ -1,0 +1,26 @@
+digraph "CFG for '_getopt_internal_while.cond' function" {
+	label="CFG for '_getopt_internal_while.cond' function";
+
+	Node0x48d28b0 [shape=record,label="{newFuncRoot}"];
+	Node0x48d28b0 -> Node0x48d2da0;
+	Node0x48d2d50 [shape=record,label="{while.end.exitStub}"];
+	Node0x48d2da0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x48d2da0:s0 -> Node0x48d2e40;
+	Node0x48d2da0:s1 -> Node0x48d2df0;
+	Node0x48d2df0 [shape=record,label="{it_while.cond.land.end_crit_edge}"];
+	Node0x48d2df0 -> Node0x48d2f30;
+	Node0x48d2e40 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x48d2e40:s0 -> Node0x48d2ee0;
+	Node0x48d2e40:s1 -> Node0x48d2e90;
+	Node0x48d2e90 [shape=record,label="{it_lor.rhs}"];
+	Node0x48d2e90 -> Node0x48d2f30;
+	Node0x48d2ee0 [shape=record,label="{it_land.rhs.land.end_crit_edge}"];
+	Node0x48d2ee0 -> Node0x48d2f30;
+	Node0x48d2f30 [shape=record,label="{pd_land.end}"];
+	Node0x48d2f30 -> Node0x55ea4b0;
+	Node0x55ea4b0 [shape=record,label="{it_land.end.split|{<s0>T|<s1>F}}"];
+	Node0x55ea4b0:s0 -> Node0x48d2f80;
+	Node0x55ea4b0:s1 -> Node0x48d2d50;
+	Node0x48d2f80 [shape=record,label="{pd_while.body}"];
+	Node0x48d2f80 -> Node0x48d2da0;
+}

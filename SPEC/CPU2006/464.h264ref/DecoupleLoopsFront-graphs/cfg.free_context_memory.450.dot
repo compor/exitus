@@ -1,0 +1,21 @@
+digraph "CFG for 'free_context_memory' function" {
+	label="CFG for 'free_context_memory' function";
+
+	Node0x17658d0 [shape=record,label="{entry}"];
+	Node0x17658d0 -> Node0x17677f0;
+	Node0x17677f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x17677f0:s0 -> Node0x1767840;
+	Node0x17677f0:s1 -> Node0x1767db0;
+	Node0x1767840 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x1767840 -> Node0x1767890;
+	Node0x1767890 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x1767890:s0 -> Node0x1767d10;
+	Node0x1767890:s1 -> Node0x1767d60;
+	Node0x1767d10 [shape=record,label="{pd_for.body.3}"];
+	Node0x1767d10 -> Node0x1767890;
+	Node0x1767d60 [shape=record,label="{pd_for.end}"];
+	Node0x1767d60 -> Node0x3158c40;
+	Node0x3158c40 [shape=record,label="{it_for.end.split}"];
+	Node0x3158c40 -> Node0x17677f0;
+	Node0x1767db0 [shape=record,label="{for.end.16}"];
+}

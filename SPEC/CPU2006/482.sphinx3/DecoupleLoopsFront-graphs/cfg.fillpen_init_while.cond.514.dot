@@ -1,0 +1,48 @@
+digraph "CFG for 'fillpen_init_while.cond' function" {
+	label="CFG for 'fillpen_init_while.cond' function";
+
+	Node0x11e5c40 [shape=record,label="{newFuncRoot}"];
+	Node0x11e5c40 -> Node0x11e5ce0;
+	Node0x11e5c90 [shape=record,label="{while.end.exitStub}"];
+	Node0x11e5ce0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x11e5ce0:s0 -> Node0x11e5d30;
+	Node0x11e5ce0:s1 -> Node0x11e5c90;
+	Node0x11e5d30 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x11e5d30:s0 -> Node0x11e6190;
+	Node0x11e5d30:s1 -> Node0x11e5d80;
+	Node0x11e5d80 [shape=record,label="{pd_if.end.61|{<s0>def|<s1>0|<s2>2}}"];
+	Node0x11e5d80:s0 -> Node0x11e5e70;
+	Node0x11e5d80:s1 -> Node0x11e5e20;
+	Node0x11e5d80:s2 -> Node0x11e5dd0;
+	Node0x11e5dd0 [shape=record,label="{pd_if.end.61.if.end.71_crit_edge.1}"];
+	Node0x11e5dd0 -> Node0x11e5ec0;
+	Node0x11e5e20 [shape=record,label="{pd_if.end.61.if.end.71_crit_edge}"];
+	Node0x11e5e20 -> Node0x11e5ec0;
+	Node0x11e5e70 [shape=record,label="{pd_if.then.69}"];
+	Node0x11e5e70 -> Node0x11e5ec0;
+	Node0x11e5ec0 [shape=record,label="{pd_if.end.71|{<s0>T|<s1>F}}"];
+	Node0x11e5ec0:s0 -> Node0x11e60a0;
+	Node0x11e5ec0:s1 -> Node0x11e5f10;
+	Node0x11e5f10 [shape=record,label="{pd_lor.lhs.false.76|{<s0>T|<s1>F}}"];
+	Node0x11e5f10:s0 -> Node0x11e6050;
+	Node0x11e5f10:s1 -> Node0x11e5f60;
+	Node0x11e5f60 [shape=record,label="{pd_lor.lhs.false.80|{<s0>T|<s1>F}}"];
+	Node0x11e5f60:s0 -> Node0x11e6000;
+	Node0x11e5f60:s1 -> Node0x11e5fb0;
+	Node0x11e5fb0 [shape=record,label="{pd_lor.lhs.false.80.if.end.85_crit_edge}"];
+	Node0x11e5fb0 -> Node0x11e6140;
+	Node0x11e6000 [shape=record,label="{pd_lor.lhs.false.80.if.then.84_crit_edge}"];
+	Node0x11e6000 -> Node0x11e60f0;
+	Node0x11e6050 [shape=record,label="{pd_lor.lhs.false.76.if.then.84_crit_edge}"];
+	Node0x11e6050 -> Node0x11e60f0;
+	Node0x11e60a0 [shape=record,label="{pd_if.end.71.if.then.84_crit_edge}"];
+	Node0x11e60a0 -> Node0x11e60f0;
+	Node0x11e60f0 [shape=record,label="{pd_if.then.84}"];
+	Node0x11e60f0 -> Node0x11e6140;
+	Node0x11e6140 [shape=record,label="{pd_if.end.85}"];
+	Node0x11e6140 -> Node0x11e61e0;
+	Node0x11e6190 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0x11e6190 -> Node0x11e61e0;
+	Node0x11e61e0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x11e61e0 -> Node0x11e5ce0;
+}

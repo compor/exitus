@@ -1,0 +1,23 @@
+digraph "CFG for 'block_alloc_while.body' function" {
+	label="CFG for 'block_alloc_while.body' function";
+
+	Node0xb43d2f0 [shape=record,label="{newFuncRoot}"];
+	Node0xb43d2f0 -> Node0xb43d3e0;
+	Node0xb43d340 [shape=record,label="{if.then.2.exitStub}"];
+	Node0xb43d390 [shape=record,label="{while.end.exitStub}"];
+	Node0xb43d3e0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xb43d3e0:s0 -> Node0xb43d480;
+	Node0xb43d3e0:s1 -> Node0xb43d430;
+	Node0xb43d430 [shape=record,label="{pd_while.body.if.end.3_crit_edge}"];
+	Node0xb43d430 -> Node0xb43d520;
+	Node0xb43d480 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0xb43d480:s0 -> Node0xb43d340;
+	Node0xb43d480:s1 -> Node0xb43d4d0;
+	Node0xb43d4d0 [shape=record,label="{pd_if.then.if.end.3_crit_edge}"];
+	Node0xb43d4d0 -> Node0xb43d520;
+	Node0xb43d520 [shape=record,label="{it_if.end.3|{<s0>T|<s1>F}}"];
+	Node0xb43d520:s0 -> Node0xb43d390;
+	Node0xb43d520:s1 -> Node0xb43d570;
+	Node0xb43d570 [shape=record,label="{it_if.end.10}"];
+	Node0xb43d570 -> Node0xb43d3e0;
+}

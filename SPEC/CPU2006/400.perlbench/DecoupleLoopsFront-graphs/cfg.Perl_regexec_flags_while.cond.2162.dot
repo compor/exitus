@@ -1,0 +1,23 @@
+digraph "CFG for 'Perl_regexec_flags_while.cond' function" {
+	label="CFG for 'Perl_regexec_flags_while.cond' function";
+
+	Node0x524d860 [shape=record,label="{newFuncRoot}"];
+	Node0x524d860 -> Node0x524d950;
+	Node0x524d8b0 [shape=record,label="{phooey.loopexit.exitStub}"];
+	Node0x524d900 [shape=record,label="{got_it.loopexit.exitStub}"];
+	Node0x524d950 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x524d950:s0 -> Node0x524d9a0;
+	Node0x524d950:s1 -> Node0x524d8b0;
+	Node0x524d9a0 [shape=record,label="{it_while.body.161|{<s0>T|<s1>F}}"];
+	Node0x524d9a0:s0 -> Node0x524da40;
+	Node0x524d9a0:s1 -> Node0x524d9f0;
+	Node0x524d9f0 [shape=record,label="{pd_while.body.161.while.cond.backedge_crit_edge}"];
+	Node0x524d9f0 -> Node0x524dae0;
+	Node0x524da40 [shape=record,label="{it_if.then.166|{<s0>T|<s1>F}}"];
+	Node0x524da40:s0 -> Node0x524d900;
+	Node0x524da40:s1 -> Node0x524da90;
+	Node0x524da90 [shape=record,label="{pd_if.then.166.while.cond.backedge_crit_edge}"];
+	Node0x524da90 -> Node0x524dae0;
+	Node0x524dae0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x524dae0 -> Node0x524d950;
+}

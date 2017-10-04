@@ -1,0 +1,14 @@
+digraph "CFG for 'clear_owl_move_data' function" {
+	label="CFG for 'clear_owl_move_data' function";
+
+	Node0x2b49880 [shape=record,label="{entry}"];
+	Node0x2b49880 -> Node0x2b4ea10;
+	Node0x2b4ea10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2b4ea10:s0 -> Node0x2b4ea60;
+	Node0x2b4ea10:s1 -> Node0x2b4eab0;
+	Node0x2b4ea60 [shape=record,label="{pd_for.body}"];
+	Node0x2b4ea60 -> Node0x4a2d270;
+	Node0x4a2d270 [shape=record,label="{it_for.body.split}"];
+	Node0x4a2d270 -> Node0x2b4ea10;
+	Node0x2b4eab0 [shape=record,label="{for.end}"];
+}

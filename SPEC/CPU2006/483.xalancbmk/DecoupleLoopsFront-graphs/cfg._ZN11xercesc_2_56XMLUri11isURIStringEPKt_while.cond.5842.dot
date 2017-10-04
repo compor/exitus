@@ -1,0 +1,31 @@
+digraph "CFG for '_ZN11xercesc_2_56XMLUri11isURIStringEPKt_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_56XMLUri11isURIStringEPKt_while.cond' function";
+
+	Node0x9bb2da0 [shape=record,label="{newFuncRoot}"];
+	Node0x9bb2da0 -> Node0x9bb2f30;
+	Node0x9bb2df0 [shape=record,label="{while.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x9bb2e40 [shape=record,label="{if.else.return.loopexit_crit_edge.exitStub}"];
+	Node0x9bb2e90 [shape=record,label="{if.then.4.return.loopexit_crit_edge.exitStub}"];
+	Node0x9bb2ee0 [shape=record,label="{land.lhs.true.return.loopexit_crit_edge.exitStub}"];
+	Node0x9bb2f30 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9bb2f30:s0 -> Node0x9bb2f80;
+	Node0x9bb2f30:s1 -> Node0x9bb2df0;
+	Node0x9bb2f80 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x9bb2f80:s0 -> Node0x9bb3110;
+	Node0x9bb2f80:s1 -> Node0x9bb2fd0;
+	Node0x9bb2fd0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x9bb2fd0:s0 -> Node0x9bb3020;
+	Node0x9bb2fd0:s1 -> Node0x9bb2e40;
+	Node0x9bb3020 [shape=record,label="{it_if.then.4|{<s0>T|<s1>F}}"];
+	Node0x9bb3020:s0 -> Node0x9bb3070;
+	Node0x9bb3020:s1 -> Node0x9bb2e90;
+	Node0x9bb3070 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x9bb3070:s0 -> Node0x9bb30c0;
+	Node0x9bb3070:s1 -> Node0x9bb2ee0;
+	Node0x9bb30c0 [shape=record,label="{it_if.then.8}"];
+	Node0x9bb30c0 -> Node0x9bb3160;
+	Node0x9bb3110 [shape=record,label="{it_if.then.3}"];
+	Node0x9bb3110 -> Node0x9bb3160;
+	Node0x9bb3160 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x9bb3160 -> Node0x9bb2f30;
+}

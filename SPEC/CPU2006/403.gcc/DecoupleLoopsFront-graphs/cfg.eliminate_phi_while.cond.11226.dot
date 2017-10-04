@@ -1,0 +1,26 @@
+digraph "CFG for 'eliminate_phi_while.cond' function" {
+	label="CFG for 'eliminate_phi_while.cond' function";
+
+	Node0xc2e7920 [shape=record,label="{newFuncRoot}"];
+	Node0xc2e7920 -> Node0xc2e7ab0;
+	Node0xc2e7970 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xc2e79c0 [shape=record,label="{land.lhs.true.while.end_crit_edge.exitStub}"];
+	Node0xc2e7a10 [shape=record,label="{land.lhs.true.1.while.end_crit_edge.exitStub}"];
+	Node0xc2e7a60 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xc2e7ab0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc2e7ab0:s0 -> Node0xc2e7b00;
+	Node0xc2e7ab0:s1 -> Node0xc2e7970;
+	Node0xc2e7b00 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xc2e7b00:s0 -> Node0xc2e7b50;
+	Node0xc2e7b00:s1 -> Node0xc2e79c0;
+	Node0xc2e7b50 [shape=record,label="{it_land.lhs.true.1|{<s0>T|<s1>F}}"];
+	Node0xc2e7b50:s0 -> Node0xc2e7ba0;
+	Node0xc2e7b50:s1 -> Node0xc2e7a10;
+	Node0xc2e7ba0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xc2e7ba0:s0 -> Node0xc2e7bf0;
+	Node0xc2e7ba0:s1 -> Node0xc2e7a60;
+	Node0xc2e7bf0 [shape=record,label="{it_while.body}"];
+	Node0xc2e7bf0 -> Node0xfbacf20;
+	Node0xfbacf20 [shape=record,label="{pd_while.body.split}"];
+	Node0xfbacf20 -> Node0xc2e7ab0;
+}

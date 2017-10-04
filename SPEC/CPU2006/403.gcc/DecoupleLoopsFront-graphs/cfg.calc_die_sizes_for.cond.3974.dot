@@ -1,0 +1,14 @@
+digraph "CFG for 'calc_die_sizes_for.cond' function" {
+	label="CFG for 'calc_die_sizes_for.cond' function";
+
+	Node0xac016c0 [shape=record,label="{newFuncRoot}"];
+	Node0xac016c0 -> Node0xac01760;
+	Node0xac01710 [shape=record,label="{for.end.exitStub}"];
+	Node0xac01760 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xac01760:s0 -> Node0xac017b0;
+	Node0xac01760:s1 -> Node0xac01710;
+	Node0xac017b0 [shape=record,label="{pd_for.body}"];
+	Node0xac017b0 -> Node0xf5b1f90;
+	Node0xf5b1f90 [shape=record,label="{it_for.body.split}"];
+	Node0xf5b1f90 -> Node0xac01760;
+}

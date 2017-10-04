@@ -1,0 +1,24 @@
+digraph "CFG for 'TraceCompare_for.cond' function" {
+	label="CFG for 'TraceCompare_for.cond' function";
+
+	Node0x3011470 [shape=record,label="{newFuncRoot}"];
+	Node0x3011470 -> Node0x3011600;
+	Node0x30114c0 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x3011510 [shape=record,label="{for.body.return.loopexit_crit_edge.exitStub}"];
+	Node0x3011560 [shape=record,label="{if.end.11.return.loopexit_crit_edge.exitStub}"];
+	Node0x30115b0 [shape=record,label="{if.end.20.return.loopexit_crit_edge.exitStub}"];
+	Node0x3011600 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3011600:s0 -> Node0x3021760;
+	Node0x3011600:s1 -> Node0x30114c0;
+	Node0x3021760 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x3021760:s0 -> Node0x3011510;
+	Node0x3021760:s1 -> Node0x30217b0;
+	Node0x30217b0 [shape=record,label="{it_if.end.11|{<s0>T|<s1>F}}"];
+	Node0x30217b0:s0 -> Node0x3011560;
+	Node0x30217b0:s1 -> Node0x3021800;
+	Node0x3021800 [shape=record,label="{it_if.end.20|{<s0>T|<s1>F}}"];
+	Node0x3021800:s0 -> Node0x30115b0;
+	Node0x3021800:s1 -> Node0x3021850;
+	Node0x3021850 [shape=record,label="{it_for.inc}"];
+	Node0x3021850 -> Node0x3011600;
+}

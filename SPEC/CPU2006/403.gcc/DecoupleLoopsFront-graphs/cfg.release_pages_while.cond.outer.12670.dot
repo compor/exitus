@@ -1,0 +1,19 @@
+digraph "CFG for 'release_pages_while.cond.outer' function" {
+	label="CFG for 'release_pages_while.cond.outer' function";
+
+	Node0xc6b7d60 [shape=record,label="{newFuncRoot}"];
+	Node0xc6b7d60 -> Node0xc6b8160;
+	Node0xc6b7db0 [shape=record,label="{while.cond.3.preheader.exitStub}"];
+	Node0xc6b8160 [shape=record,label="{pd_while.cond.outer}"];
+	Node0xc6b8160 -> Node0xc6b81b0;
+	Node0xc6b81b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc6b81b0:s0 -> Node0xc6b8200;
+	Node0xc6b81b0:s1 -> Node0xc6b7db0;
+	Node0xc6b8200 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc6b8200:s0 -> Node0xc6b82a0;
+	Node0xc6b8200:s1 -> Node0xc6b8250;
+	Node0xc6b8250 [shape=record,label="{pd_while.cond.outer.loopexit}"];
+	Node0xc6b8250 -> Node0xc6b8160;
+	Node0xc6b82a0 [shape=record,label="{pd_if.then}"];
+	Node0xc6b82a0 -> Node0xc6b81b0;
+}

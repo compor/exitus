@@ -1,0 +1,30 @@
+digraph "CFG for 'dfa_finalize' function" {
+	label="CFG for 'dfa_finalize' function";
+
+	Node0x37d4950 [shape=record,label="{entry}"];
+	Node0x37d4950 -> Node0x37d8f70;
+	Node0x37d8f70 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x37d8f70:s0 -> Node0x37d8fc0;
+	Node0x37d8f70:s1 -> Node0x37d91f0;
+	Node0x37d8fc0 [shape=record,label="{it_while.body}"];
+	Node0x37d8fc0 -> Node0x37d9010;
+	Node0x37d9010 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x37d9010:s0 -> Node0x37d9060;
+	Node0x37d9010:s1 -> Node0x37d91a0;
+	Node0x37d9060 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x37d9060:s0 -> Node0x37d90b0;
+	Node0x37d9060:s1 -> Node0x37d9100;
+	Node0x37d90b0 [shape=record,label="{pd_if.then}"];
+	Node0x37d90b0 -> Node0x37d9150;
+	Node0x37d9100 [shape=record,label="{pd_if.else}"];
+	Node0x37d9100 -> Node0x37d9150;
+	Node0x37d9150 [shape=record,label="{it_if.end}"];
+	Node0x37d9150 -> Node0x37d9010;
+	Node0x37d91a0 [shape=record,label="{it_for.end}"];
+	Node0x37d91a0 -> Node0x4c55420;
+	Node0x4c55420 [shape=record,label="{pd_for.end.split1}"];
+	Node0x4c55420 -> Node0x4c55100;
+	Node0x4c55100 [shape=record,label="{it_for.end.split}"];
+	Node0x4c55100 -> Node0x37d8f70;
+	Node0x37d91f0 [shape=record,label="{while.end}"];
+}

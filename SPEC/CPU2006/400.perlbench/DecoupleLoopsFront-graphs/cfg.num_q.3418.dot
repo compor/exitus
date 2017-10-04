@@ -1,0 +1,28 @@
+digraph "CFG for 'num_q' function" {
+	label="CFG for 'num_q' function";
+
+	Node0x45a6df0 [shape=record,label="{entry}"];
+	Node0x45a6df0 -> Node0x45a6e40;
+	Node0x45a6e40 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x45a6e40:s0 -> Node0x45a6e90;
+	Node0x45a6e40:s1 -> Node0x45a70c0;
+	Node0x45a6e90 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x45a6e90:s0 -> Node0x45a6ee0;
+	Node0x45a6e90:s1 -> Node0x45a6f30;
+	Node0x45a6ee0 [shape=record,label="{pd_while.body.if.then_crit_edge}"];
+	Node0x45a6ee0 -> Node0x45a7020;
+	Node0x45a6f30 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x45a6f30:s0 -> Node0x45a6fd0;
+	Node0x45a6f30:s1 -> Node0x45a6f80;
+	Node0x45a6f80 [shape=record,label="{pd_lor.lhs.false.if.end_crit_edge}"];
+	Node0x45a6f80 -> Node0x45a7070;
+	Node0x45a6fd0 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x45a6fd0 -> Node0x45a7020;
+	Node0x45a7020 [shape=record,label="{pd_if.then}"];
+	Node0x45a7020 -> Node0x45a7070;
+	Node0x45a7070 [shape=record,label="{pd_if.end}"];
+	Node0x45a7070 -> Node0x69b2040;
+	Node0x69b2040 [shape=record,label="{it_if.end.split}"];
+	Node0x69b2040 -> Node0x45a6e40;
+	Node0x45a70c0 [shape=record,label="{while.end}"];
+}

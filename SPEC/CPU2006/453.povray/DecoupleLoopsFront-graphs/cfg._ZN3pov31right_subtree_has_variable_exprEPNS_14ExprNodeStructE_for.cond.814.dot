@@ -1,0 +1,27 @@
+digraph "CFG for '_ZN3pov31right_subtree_has_variable_exprEPNS_14ExprNodeStructE_for.cond' function" {
+	label="CFG for '_ZN3pov31right_subtree_has_variable_exprEPNS_14ExprNodeStructE_for.cond' function";
+
+	Node0x245ee00 [shape=record,label="{newFuncRoot}"];
+	Node0x245ee00 -> Node0x245ef40;
+	Node0x245ee50 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x245eea0 [shape=record,label="{for.body.return.loopexit_crit_edge.exitStub}"];
+	Node0x245eef0 [shape=record,label="{if.then.6.return.loopexit_crit_edge.exitStub}"];
+	Node0x245ef40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x245ef40:s0 -> Node0x245ef90;
+	Node0x245ef40:s1 -> Node0x245ee50;
+	Node0x245ef90 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x245ef90:s0 -> Node0x245eea0;
+	Node0x245ef90:s1 -> Node0x245efe0;
+	Node0x245efe0 [shape=record,label="{it_if.end.4|{<s0>T|<s1>F}}"];
+	Node0x245efe0:s0 -> Node0x245f080;
+	Node0x245efe0:s1 -> Node0x245f030;
+	Node0x245f030 [shape=record,label="{pd_if.end.4.for.inc_crit_edge}"];
+	Node0x245f030 -> Node0x245f120;
+	Node0x245f080 [shape=record,label="{it_if.then.6|{<s0>T|<s1>F}}"];
+	Node0x245f080:s0 -> Node0x245eef0;
+	Node0x245f080:s1 -> Node0x245f0d0;
+	Node0x245f0d0 [shape=record,label="{pd_if.then.6.for.inc_crit_edge}"];
+	Node0x245f0d0 -> Node0x245f120;
+	Node0x245f120 [shape=record,label="{it_for.inc}"];
+	Node0x245f120 -> Node0x245ef40;
+}

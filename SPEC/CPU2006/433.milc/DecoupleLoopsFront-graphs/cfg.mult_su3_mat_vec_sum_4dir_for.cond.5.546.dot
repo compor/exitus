@@ -1,0 +1,35 @@
+digraph "CFG for 'mult_su3_mat_vec_sum_4dir_for.cond.5' function" {
+	label="CFG for 'mult_su3_mat_vec_sum_4dir_for.cond.5' function";
+
+	Node0x1abe2f0 [shape=record,label="{newFuncRoot}"];
+	Node0x1abe2f0 -> Node0x1abe390;
+	Node0x1abe340 [shape=record,label="{for.end.95.exitStub}"];
+	Node0x1abe390 [shape=record,label="{it_for.cond.5|{<s0>T|<s1>F}}"];
+	Node0x1abe390:s0 -> Node0x1abe3e0;
+	Node0x1abe390:s1 -> Node0x1abe340;
+	Node0x1abe3e0 [shape=record,label="{pd_for.body.7|{<s0>def|<s1>0|<s2>1|<s3>2|<s4>3}}"];
+	Node0x1abe3e0:s0 -> Node0x1abedf0;
+	Node0x1abe3e0:s1 -> Node0x1abeda0;
+	Node0x1abe3e0:s2 -> Node0x1abed50;
+	Node0x1abe3e0:s3 -> Node0x1abed00;
+	Node0x1abe3e0:s4 -> Node0x1abecb0;
+	Node0x1abecb0 [shape=record,label="{pd_sw.bb.10}"];
+	Node0x1abecb0 -> Node0x1abee40;
+	Node0x1abed00 [shape=record,label="{pd_sw.bb.9}"];
+	Node0x1abed00 -> Node0x1abee40;
+	Node0x1abed50 [shape=record,label="{pd_sw.bb.8}"];
+	Node0x1abed50 -> Node0x1abee40;
+	Node0x1abeda0 [shape=record,label="{pd_sw.bb}"];
+	Node0x1abeda0 -> Node0x1abee40;
+	Node0x1abedf0 [shape=record,label="{pd_for.body.7.sw.epilog_crit_edge}"];
+	Node0x1abedf0 -> Node0x1abee40;
+	Node0x1abee40 [shape=record,label="{pd_sw.epilog}"];
+	Node0x1abee40 -> Node0x1abee90;
+	Node0x1abee90 [shape=record,label="{pd_for.cond.11|{<s0>T|<s1>F}}"];
+	Node0x1abee90:s0 -> Node0x1abef30;
+	Node0x1abee90:s1 -> Node0x1abeee0;
+	Node0x1abeee0 [shape=record,label="{it_for.inc.93}"];
+	Node0x1abeee0 -> Node0x1abe390;
+	Node0x1abef30 [shape=record,label="{pd_for.body.13}"];
+	Node0x1abef30 -> Node0x1abee90;
+}

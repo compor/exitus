@@ -1,0 +1,21 @@
+digraph "CFG for 'BZ2_decompress_for.cond.1432' function" {
+	label="CFG for 'BZ2_decompress_for.cond.1432' function";
+
+	Node0x19859b0 [shape=record,label="{newFuncRoot}"];
+	Node0x19859b0 -> Node0x1985a50;
+	Node0x1985a00 [shape=record,label="{for.cond.1459.loopexit.exitStub}"];
+	Node0x1985a50 [shape=record,label="{it_for.cond.1432|{<s0>T|<s1>F}}"];
+	Node0x1985a50:s0 -> Node0x1985aa0;
+	Node0x1985a50:s1 -> Node0x1985a00;
+	Node0x1985aa0 [shape=record,label="{pd_for.body.1435}"];
+	Node0x1985aa0 -> Node0x1985af0;
+	Node0x1985af0 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1985af0:s0 -> Node0x1985b90;
+	Node0x1985af0:s1 -> Node0x1985b40;
+	Node0x1985b40 [shape=record,label="{pd_while.end.1452}"];
+	Node0x1985b40 -> Node0x1a4b3d0;
+	Node0x1a4b3d0 [shape=record,label="{it_while.end.1452.split}"];
+	Node0x1a4b3d0 -> Node0x1985a50;
+	Node0x1985b90 [shape=record,label="{pd_while.body.1444}"];
+	Node0x1985b90 -> Node0x1985af0;
+}

@@ -1,0 +1,31 @@
+digraph "CFG for 'make_dragons_for.cond.383' function" {
+	label="CFG for 'make_dragons_for.cond.383' function";
+
+	Node0x3f0aa70 [shape=record,label="{newFuncRoot}"];
+	Node0x3f0aa70 -> Node0x3f0aec0;
+	Node0x3f0ae70 [shape=record,label="{for.end.414.exitStub}"];
+	Node0x3f0aec0 [shape=record,label="{it_for.cond.383|{<s0>T|<s1>F}}"];
+	Node0x3f0aec0:s0 -> Node0x3f0af10;
+	Node0x3f0aec0:s1 -> Node0x3f0ae70;
+	Node0x3f0af10 [shape=record,label="{pd_for.body.386|{<s0>T|<s1>F}}"];
+	Node0x3f0af10:s0 -> Node0x3f0b050;
+	Node0x3f0af10:s1 -> Node0x3f0af60;
+	Node0x3f0af60 [shape=record,label="{pd_lor.lhs.false.392|{<s0>T|<s1>F}}"];
+	Node0x3f0af60:s0 -> Node0x3f0b000;
+	Node0x3f0af60:s1 -> Node0x3f0afb0;
+	Node0x3f0afb0 [shape=record,label="{pd_lor.lhs.false.392.for.inc.412_crit_edge}"];
+	Node0x3f0afb0 -> Node0x3f0b190;
+	Node0x3f0b000 [shape=record,label="{pd_lor.lhs.false.392.land.lhs.true.398_crit_edge}"];
+	Node0x3f0b000 -> Node0x3f0b0a0;
+	Node0x3f0b050 [shape=record,label="{pd_for.body.386.land.lhs.true.398_crit_edge}"];
+	Node0x3f0b050 -> Node0x3f0b0a0;
+	Node0x3f0b0a0 [shape=record,label="{pd_land.lhs.true.398|{<s0>T|<s1>F}}"];
+	Node0x3f0b0a0:s0 -> Node0x3f0b140;
+	Node0x3f0b0a0:s1 -> Node0x3f0b0f0;
+	Node0x3f0b0f0 [shape=record,label="{pd_land.lhs.true.398.for.inc.412_crit_edge}"];
+	Node0x3f0b0f0 -> Node0x3f0b190;
+	Node0x3f0b140 [shape=record,label="{pd_if.then.404}"];
+	Node0x3f0b140 -> Node0x3f0b190;
+	Node0x3f0b190 [shape=record,label="{it_for.inc.412}"];
+	Node0x3f0b190 -> Node0x3f0aec0;
+}

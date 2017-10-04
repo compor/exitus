@@ -1,0 +1,16 @@
+digraph "CFG for 'df_refs_update_while.cond' function" {
+	label="CFG for 'df_refs_update_while.cond' function";
+
+	Node0xaafd210 [shape=record,label="{newFuncRoot}"];
+	Node0xaafd210 -> Node0xaafd300;
+	Node0xaafd260 [shape=record,label="{while.cond.for.cond.preheader_crit_edge.exitStub}"];
+	Node0xaafd2b0 [shape=record,label="{land.rhs.for.cond.preheader_crit_edge.exitStub}"];
+	Node0xaafd300 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xaafd300:s0 -> Node0xaafd260;
+	Node0xaafd300:s1 -> Node0xaafdbc0;
+	Node0xaafdbc0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xaafdbc0:s0 -> Node0xaafdc10;
+	Node0xaafdbc0:s1 -> Node0xaafd2b0;
+	Node0xaafdc10 [shape=record,label="{it_while.body}"];
+	Node0xaafdc10 -> Node0xaafd300;
+}

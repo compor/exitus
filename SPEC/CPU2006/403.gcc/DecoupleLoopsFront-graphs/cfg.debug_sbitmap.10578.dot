@@ -1,0 +1,26 @@
+digraph "CFG for 'debug_sbitmap' function" {
+	label="CFG for 'debug_sbitmap' function";
+
+	Node0x8ea0370 [shape=record,label="{entry}"];
+	Node0x8ea0370 -> Node0x8ea03c0;
+	Node0x8ea03c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x8ea03c0:s0 -> Node0x8ea0410;
+	Node0x8ea03c0:s1 -> Node0x8ea0640;
+	Node0x8ea0410 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x8ea0410:s0 -> Node0x8ea04b0;
+	Node0x8ea0410:s1 -> Node0x8ea0460;
+	Node0x8ea0460 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x8ea0460 -> Node0x8ea05f0;
+	Node0x8ea04b0 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x8ea04b0:s0 -> Node0x8ea0550;
+	Node0x8ea04b0:s1 -> Node0x8ea0500;
+	Node0x8ea0500 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x8ea0500 -> Node0x8ea05a0;
+	Node0x8ea0550 [shape=record,label="{pd_if.then.3}"];
+	Node0x8ea0550 -> Node0x8ea05a0;
+	Node0x8ea05a0 [shape=record,label="{pd_if.end}"];
+	Node0x8ea05a0 -> Node0x8ea05f0;
+	Node0x8ea05f0 [shape=record,label="{it_for.inc}"];
+	Node0x8ea05f0 -> Node0x8ea03c0;
+	Node0x8ea0640 [shape=record,label="{for.end}"];
+}

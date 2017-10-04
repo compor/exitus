@@ -1,0 +1,18 @@
+digraph "CFG for 'run_autotest_while.cond' function" {
+	label="CFG for 'run_autotest_while.cond' function";
+
+	Node0xfbe2c0 [shape=record,label="{newFuncRoot}"];
+	Node0xfbe2c0 -> Node0xfbe3b0;
+	Node0xfbe310 [shape=record,label="{while.end.exitStub}"];
+	Node0xfbe360 [shape=record,label="{if.then.11.exitStub}"];
+	Node0xfbe3b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xfbe3b0:s0 -> Node0xfbe400;
+	Node0xfbe3b0:s1 -> Node0xfbe310;
+	Node0xfbe400 [shape=record,label="{pd_while.body}"];
+	Node0xfbe400 -> Node0x122d5b0;
+	Node0x122d5b0 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x122d5b0:s0 -> Node0xfbe360;
+	Node0x122d5b0:s1 -> Node0xfbe450;
+	Node0xfbe450 [shape=record,label="{pd_if.end.12}"];
+	Node0xfbe450 -> Node0xfbe3b0;
+}

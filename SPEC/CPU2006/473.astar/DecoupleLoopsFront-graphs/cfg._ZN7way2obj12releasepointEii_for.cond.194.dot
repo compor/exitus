@@ -1,0 +1,36 @@
+digraph "CFG for '_ZN7way2obj12releasepointEii_for.cond' function" {
+	label="CFG for '_ZN7way2obj12releasepointEii_for.cond' function";
+
+	Node0x24667e0 [shape=record,label="{newFuncRoot}"];
+	Node0x24667e0 -> Node0x2466880;
+	Node0x2466830 [shape=record,label="{for.end.64.exitStub}"];
+	Node0x2466880 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2466880:s0 -> Node0x24668d0;
+	Node0x2466880:s1 -> Node0x2466830;
+	Node0x24668d0 [shape=record,label="{pd_for.cond.30.preheader}"];
+	Node0x24668d0 -> Node0x2466920;
+	Node0x2466920 [shape=record,label="{pd_for.cond.30|{<s0>T|<s1>F}}"];
+	Node0x2466920:s0 -> Node0x24669c0;
+	Node0x2466920:s1 -> Node0x2466970;
+	Node0x2466970 [shape=record,label="{it_for.inc.62}"];
+	Node0x2466970 -> Node0x2466880;
+	Node0x24669c0 [shape=record,label="{pd_for.body.32|{<s0>T|<s1>F}}"];
+	Node0x24669c0:s0 -> Node0x2466a60;
+	Node0x24669c0:s1 -> Node0x2466a10;
+	Node0x2466a10 [shape=record,label="{pd_for.body.32.for.inc_crit_edge}"];
+	Node0x2466a10 -> Node0x2466bf0;
+	Node0x2466a60 [shape=record,label="{pd_if.then.35|{<s0>T|<s1>F}}"];
+	Node0x2466a60:s0 -> Node0x2466ba0;
+	Node0x2466a60:s1 -> Node0x2466ab0;
+	Node0x2466ab0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x2466ab0:s0 -> Node0x2466b50;
+	Node0x2466ab0:s1 -> Node0x2466b00;
+	Node0x2466b00 [shape=record,label="{pd_if.else.for.inc_crit_edge}"];
+	Node0x2466b00 -> Node0x2466bf0;
+	Node0x2466b50 [shape=record,label="{pd_if.then.58}"];
+	Node0x2466b50 -> Node0x2466bf0;
+	Node0x2466ba0 [shape=record,label="{pd_if.then.47}"];
+	Node0x2466ba0 -> Node0x2466bf0;
+	Node0x2466bf0 [shape=record,label="{pd_for.inc}"];
+	Node0x2466bf0 -> Node0x2466920;
+}

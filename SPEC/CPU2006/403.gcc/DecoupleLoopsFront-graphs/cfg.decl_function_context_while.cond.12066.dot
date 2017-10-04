@@ -1,0 +1,23 @@
+digraph "CFG for 'decl_function_context_while.cond' function" {
+	label="CFG for 'decl_function_context_while.cond' function";
+
+	Node0xc4d0ab0 [shape=record,label="{newFuncRoot}"];
+	Node0xc4d0ab0 -> Node0xc4d1420;
+	Node0xc4d0b00 [shape=record,label="{while.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0xc4d0b50 [shape=record,label="{land.rhs.return.loopexit_crit_edge.exitStub}"];
+	Node0xc4d1420 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc4d1420:s0 -> Node0xc4d1470;
+	Node0xc4d1420:s1 -> Node0xc4d0b00;
+	Node0xc4d1470 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xc4d1470:s0 -> Node0xc4d14c0;
+	Node0xc4d1470:s1 -> Node0xc4d0b50;
+	Node0xc4d14c0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc4d14c0:s0 -> Node0xc4d1560;
+	Node0xc4d14c0:s1 -> Node0xc4d1510;
+	Node0xc4d1510 [shape=record,label="{it_if.else.36}"];
+	Node0xc4d1510 -> Node0xc4d15b0;
+	Node0xc4d1560 [shape=record,label="{it_if.then.35}"];
+	Node0xc4d1560 -> Node0xc4d15b0;
+	Node0xc4d15b0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0xc4d15b0 -> Node0xc4d1420;
+}

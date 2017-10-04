@@ -1,0 +1,38 @@
+digraph "CFG for '_ZN8pov_base16TextStreamBuffer9printfileEP8_IO_FILEi_for.cond' function" {
+	label="CFG for '_ZN8pov_base16TextStreamBuffer9printfileEP8_IO_FILEi_for.cond' function";
+
+	Node0x24f2c60 [shape=record,label="{newFuncRoot}"];
+	Node0x24f2c60 -> Node0x24f2d50;
+	Node0x24f2cb0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x24f2d00 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0x24f2d50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x24f2d50:s0 -> Node0x24f2da0;
+	Node0x24f2d50:s1 -> Node0x24f2cb0;
+	Node0x24f2da0 [shape=record,label="{pd_for.body}"];
+	Node0x24f2da0 -> Node0x39be790;
+	Node0x39be790 [shape=record,label="{it_for.body.split|{<s0>def|<s1>10|<s2>13|<s3>-1}}"];
+	Node0x39be790:s0 -> Node0x24f3020;
+	Node0x39be790:s1 -> Node0x24f2e40;
+	Node0x39be790:s2 -> Node0x24f2df0;
+	Node0x39be790:s3 -> Node0x24f2d00;
+	Node0x24f2df0 [shape=record,label="{pd_for.body.if.then.12_crit_edge.1}"];
+	Node0x24f2df0 -> Node0x24f2e90;
+	Node0x24f2e40 [shape=record,label="{pd_for.body.if.then.12_crit_edge}"];
+	Node0x24f2e40 -> Node0x24f2e90;
+	Node0x24f2e90 [shape=record,label="{pd_if.then.12|{<s0>def|<s1>10|<s2>13}}"];
+	Node0x24f2e90:s0 -> Node0x24f2f80;
+	Node0x24f2e90:s1 -> Node0x24f2f30;
+	Node0x24f2e90:s2 -> Node0x24f2ee0;
+	Node0x24f2ee0 [shape=record,label="{pd_if.then.12.if.end_crit_edge.2}"];
+	Node0x24f2ee0 -> Node0x24f2fd0;
+	Node0x24f2f30 [shape=record,label="{pd_if.then.12.if.end_crit_edge}"];
+	Node0x24f2f30 -> Node0x24f2fd0;
+	Node0x24f2f80 [shape=record,label="{pd_if.then.17}"];
+	Node0x24f2f80 -> Node0x24f2fd0;
+	Node0x24f2fd0 [shape=record,label="{it_if.end}"];
+	Node0x24f2fd0 -> Node0x24f3070;
+	Node0x24f3020 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x24f3020 -> Node0x24f3070;
+	Node0x24f3070 [shape=record,label="{it_for.inc}"];
+	Node0x24f3070 -> Node0x24f2d50;
+}

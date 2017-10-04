@@ -1,0 +1,12 @@
+digraph "CFG for 'Perl_pp_tie_while.cond' function" {
+	label="CFG for 'Perl_pp_tie_while.cond' function";
+
+	Node0x50e2330 [shape=record,label="{newFuncRoot}"];
+	Node0x50e2330 -> Node0x50e23d0;
+	Node0x50e2380 [shape=record,label="{while.end.exitStub}"];
+	Node0x50e23d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x50e23d0:s0 -> Node0x50e2420;
+	Node0x50e23d0:s1 -> Node0x50e2380;
+	Node0x50e2420 [shape=record,label="{pd_while.body}"];
+	Node0x50e2420 -> Node0x50e23d0;
+}

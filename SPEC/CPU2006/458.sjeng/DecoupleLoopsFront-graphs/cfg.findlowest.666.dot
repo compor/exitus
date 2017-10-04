@@ -1,0 +1,19 @@
+digraph "CFG for 'findlowest' function" {
+	label="CFG for 'findlowest' function";
+
+	Node0xf02e90 [shape=record,label="{entry}"];
+	Node0xf02e90 -> Node0xf02ee0;
+	Node0xf02ee0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xf02ee0:s0 -> Node0xf02f30;
+	Node0xf02ee0:s1 -> Node0xf03070;
+	Node0xf02f30 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xf02f30:s0 -> Node0xf02fd0;
+	Node0xf02f30:s1 -> Node0xf02f80;
+	Node0xf02f80 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xf02f80 -> Node0xf03020;
+	Node0xf02fd0 [shape=record,label="{pd_if.then}"];
+	Node0xf02fd0 -> Node0xf03020;
+	Node0xf03020 [shape=record,label="{it_for.inc}"];
+	Node0xf03020 -> Node0xf02ee0;
+	Node0xf03070 [shape=record,label="{for.end}"];
+}

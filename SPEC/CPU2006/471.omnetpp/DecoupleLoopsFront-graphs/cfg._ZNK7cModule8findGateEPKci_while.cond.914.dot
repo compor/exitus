@@ -1,0 +1,23 @@
+digraph "CFG for '_ZNK7cModule8findGateEPKci_while.cond' function" {
+	label="CFG for '_ZNK7cModule8findGateEPKci_while.cond' function";
+
+	Node0x21363e0 [shape=record,label="{newFuncRoot}"];
+	Node0x21363e0 -> Node0x21364d0;
+	Node0x2136430 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x2136480 [shape=record,label="{if.else.while.end_crit_edge.exitStub}"];
+	Node0x21364d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x21364d0:s0 -> Node0x2136520;
+	Node0x21364d0:s1 -> Node0x2136430;
+	Node0x2136520 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x2136520:s0 -> Node0x21365c0;
+	Node0x2136520:s1 -> Node0x2136570;
+	Node0x2136570 [shape=record,label="{it_if.then}"];
+	Node0x2136570 -> Node0x2136660;
+	Node0x21365c0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x21365c0:s0 -> Node0x2136480;
+	Node0x21365c0:s1 -> Node0x2136610;
+	Node0x2136610 [shape=record,label="{it_if.then.4}"];
+	Node0x2136610 -> Node0x2136660;
+	Node0x2136660 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x2136660 -> Node0x21364d0;
+}

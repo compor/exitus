@@ -1,0 +1,14 @@
+digraph "CFG for 'quantum_swaptheleads_omuln_controlled' function" {
+	label="CFG for 'quantum_swaptheleads_omuln_controlled' function";
+
+	Node0x15ae2b0 [shape=record,label="{entry}"];
+	Node0x15ae2b0 -> Node0x15ae300;
+	Node0x15ae300 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x15ae300:s0 -> Node0x15ae350;
+	Node0x15ae300:s1 -> Node0x15ae3a0;
+	Node0x15ae350 [shape=record,label="{pd_for.body}"];
+	Node0x15ae350 -> Node0x17399b0;
+	Node0x17399b0 [shape=record,label="{it_for.body.split}"];
+	Node0x17399b0 -> Node0x15ae300;
+	Node0x15ae3a0 [shape=record,label="{for.end}"];
+}

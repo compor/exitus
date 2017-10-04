@@ -1,0 +1,21 @@
+digraph "CFG for 'Perl_pp_sort_for.cond' function" {
+	label="CFG for 'Perl_pp_sort_for.cond' function";
+
+	Node0x50add60 [shape=record,label="{newFuncRoot}"];
+	Node0x50add60 -> Node0x50ade00;
+	Node0x50addb0 [shape=record,label="{if.end.151.loopexit.exitStub}"];
+	Node0x50ade00 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x50ade00:s0 -> Node0x50ade50;
+	Node0x50ade00:s1 -> Node0x50addb0;
+	Node0x50ade50 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x50ade50:s0 -> Node0x50adef0;
+	Node0x50ade50:s1 -> Node0x50adea0;
+	Node0x50adea0 [shape=record,label="{pd_for.body.cond.end.137_crit_edge}"];
+	Node0x50adea0 -> Node0x50adf40;
+	Node0x50adef0 [shape=record,label="{pd_cond.true.135}"];
+	Node0x50adef0 -> Node0x50adf40;
+	Node0x50adf40 [shape=record,label="{pd_cond.end.137}"];
+	Node0x50adf40 -> Node0x65bb4c0;
+	Node0x65bb4c0 [shape=record,label="{it_cond.end.137.split}"];
+	Node0x65bb4c0 -> Node0x50ade00;
+}

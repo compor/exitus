@@ -1,0 +1,26 @@
+digraph "CFG for 'malloc_slice_for.cond' function" {
+	label="CFG for 'malloc_slice_for.cond' function";
+
+	Node0x2ed5630 [shape=record,label="{newFuncRoot}"];
+	Node0x2ed5630 -> Node0x2ed56d0;
+	Node0x2ed5680 [shape=record,label="{for.end.exitStub}"];
+	Node0x2ed56d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2ed56d0:s0 -> Node0x2ed5720;
+	Node0x2ed56d0:s1 -> Node0x2ed5680;
+	Node0x2ed5720 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2ed5720:s0 -> Node0x2ed57c0;
+	Node0x2ed5720:s1 -> Node0x2ed5770;
+	Node0x2ed5770 [shape=record,label="{pd_for.body.if.end.32_crit_edge}"];
+	Node0x2ed5770 -> Node0x2ed5810;
+	Node0x2ed57c0 [shape=record,label="{pd_if.then.31}"];
+	Node0x2ed57c0 -> Node0x2ed5810;
+	Node0x2ed5810 [shape=record,label="{pd_if.end.32|{<s0>T|<s1>F}}"];
+	Node0x2ed5810:s0 -> Node0x2ed58b0;
+	Node0x2ed5810:s1 -> Node0x2ed5860;
+	Node0x2ed5860 [shape=record,label="{pd_if.end.32.for.inc_crit_edge}"];
+	Node0x2ed5860 -> Node0x2ed5900;
+	Node0x2ed58b0 [shape=record,label="{pd_if.then.38}"];
+	Node0x2ed58b0 -> Node0x2ed5900;
+	Node0x2ed5900 [shape=record,label="{it_for.inc}"];
+	Node0x2ed5900 -> Node0x2ed56d0;
+}

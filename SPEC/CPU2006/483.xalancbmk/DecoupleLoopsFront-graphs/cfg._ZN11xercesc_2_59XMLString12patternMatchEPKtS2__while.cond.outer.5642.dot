@@ -1,0 +1,23 @@
+digraph "CFG for '_ZN11xercesc_2_59XMLString12patternMatchEPKtS2__while.cond.outer' function" {
+	label="CFG for '_ZN11xercesc_2_59XMLString12patternMatchEPKtS2__while.cond.outer' function";
+
+	Node0x9b64ce0 [shape=record,label="{newFuncRoot}"];
+	Node0x9b64ce0 -> Node0x9b64dd0;
+	Node0x9b64d30 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x9b64d80 [shape=record,label="{if.then.10.exitStub}"];
+	Node0x9b64dd0 [shape=record,label="{it_while.cond.outer}"];
+	Node0x9b64dd0 -> Node0x9b64e20;
+	Node0x9b64e20 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9b64e20:s0 -> Node0x9b64e70;
+	Node0x9b64e20:s1 -> Node0x9b64d30;
+	Node0x9b64e70 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x9b64e70:s0 -> Node0x9b64f10;
+	Node0x9b64e70:s1 -> Node0x9b64ec0;
+	Node0x9b64ec0 [shape=record,label="{it_if.then.7}"];
+	Node0x9b64ec0 -> Node0x9b64dd0;
+	Node0x9b64f10 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x9b64f10:s0 -> Node0x9b64d80;
+	Node0x9b64f10:s1 -> Node0x9b64f60;
+	Node0x9b64f60 [shape=record,label="{pd_if.else.while.cond_crit_edge}"];
+	Node0x9b64f60 -> Node0x9b64e20;
+}

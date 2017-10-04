@@ -1,0 +1,29 @@
+digraph "CFG for '_ZN11xercesc_2_522XMLAbstractDoubleFloat13normalizeZeroEPt_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_522XMLAbstractDoubleFloat13normalizeZeroEPt_while.cond' function";
+
+	Node0x9ad8f40 [shape=record,label="{newFuncRoot}"];
+	Node0x9ad8f40 -> Node0x9ae1110;
+	Node0x9ae0c60 [shape=record,label="{while.end.exitStub}"];
+	Node0x9ae1110 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9ae1110:s0 -> Node0x9ae1160;
+	Node0x9ae1110:s1 -> Node0x9ae0c60;
+	Node0x9ae1160 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x9ae1160:s0 -> Node0x9ae1340;
+	Node0x9ae1160:s1 -> Node0x9ae11b0;
+	Node0x9ae11b0 [shape=record,label="{pd_if.else.21|{<s0>T|<s1>F}}"];
+	Node0x9ae11b0:s0 -> Node0x9ae1250;
+	Node0x9ae11b0:s1 -> Node0x9ae1200;
+	Node0x9ae1200 [shape=record,label="{pd_if.else.21.while.cond.backedge_crit_edge}"];
+	Node0x9ae1200 -> Node0x9ae1390;
+	Node0x9ae1250 [shape=record,label="{pd_if.then.24|{<s0>T|<s1>F}}"];
+	Node0x9ae1250:s0 -> Node0x9ae12f0;
+	Node0x9ae1250:s1 -> Node0x9ae12a0;
+	Node0x9ae12a0 [shape=record,label="{pd_cond.false}"];
+	Node0x9ae12a0 -> Node0x9ae1390;
+	Node0x9ae12f0 [shape=record,label="{pd_cond.true}"];
+	Node0x9ae12f0 -> Node0x9ae1390;
+	Node0x9ae1340 [shape=record,label="{pd_if.then.20}"];
+	Node0x9ae1340 -> Node0x9ae1390;
+	Node0x9ae1390 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x9ae1390 -> Node0x9ae1110;
+}

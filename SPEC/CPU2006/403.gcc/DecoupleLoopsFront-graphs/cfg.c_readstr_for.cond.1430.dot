@@ -1,0 +1,25 @@
+digraph "CFG for 'c_readstr_for.cond' function" {
+	label="CFG for 'c_readstr_for.cond' function";
+
+	Node0x79f1ae0 [shape=record,label="{newFuncRoot}"];
+	Node0x79f1ae0 -> Node0x79f24a0;
+	Node0x79f1b30 [shape=record,label="{for.end.exitStub}"];
+	Node0x79f1b80 [shape=record,label="{if.then.9.exitStub}"];
+	Node0x79f24a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x79f24a0:s0 -> Node0x79f24f0;
+	Node0x79f24a0:s1 -> Node0x79f1b30;
+	Node0x79f24f0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x79f24f0:s0 -> Node0x79f1b80;
+	Node0x79f24f0:s1 -> Node0x79f2540;
+	Node0x79f2540 [shape=record,label="{pd_if.end.10|{<s0>T|<s1>F}}"];
+	Node0x79f2540:s0 -> Node0x79f25e0;
+	Node0x79f2540:s1 -> Node0x79f2590;
+	Node0x79f2590 [shape=record,label="{pd_if.end.10.if.end.15_crit_edge}"];
+	Node0x79f2590 -> Node0x79f2630;
+	Node0x79f25e0 [shape=record,label="{pd_if.then.11}"];
+	Node0x79f25e0 -> Node0x79f2630;
+	Node0x79f2630 [shape=record,label="{pd_if.end.15}"];
+	Node0x79f2630 -> Node0xf223f10;
+	Node0xf223f10 [shape=record,label="{it_if.end.15.split}"];
+	Node0xf223f10 -> Node0x79f24a0;
+}

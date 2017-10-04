@@ -1,0 +1,48 @@
+digraph "CFG for 'scope_to_insns_initialize' function" {
+	label="CFG for 'scope_to_insns_initialize' function";
+
+	Node0x306fcd0 [shape=record,label="{entry}"];
+	Node0x306fcd0 -> Node0x306fd20;
+	Node0x306fd20 [shape=record,label="{pd_for.cond.outer}"];
+	Node0x306fd20 -> Node0x306fd70;
+	Node0x306fd70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x306fd70:s0 -> Node0x306fdc0;
+	Node0x306fd70:s1 -> Node0x3070a90;
+	Node0x306fdc0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x306fdc0:s0 -> Node0x3070680;
+	Node0x306fdc0:s1 -> Node0x306fe10;
+	Node0x306fe10 [shape=record,label="{pd_for.body.if.else_crit_edge}"];
+	Node0x306fe10 -> Node0x3070860;
+	Node0x3070680 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x3070680:s0 -> Node0x3070720;
+	Node0x3070680:s1 -> Node0x30706d0;
+	Node0x30706d0 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0x30706d0 -> Node0x3070860;
+	Node0x3070720 [shape=record,label="{it_land.lhs.true.9|{<s0>T|<s1>F}}"];
+	Node0x3070720:s0 -> Node0x30707c0;
+	Node0x3070720:s1 -> Node0x3070770;
+	Node0x3070770 [shape=record,label="{pd_land.lhs.true.9.if.else_crit_edge}"];
+	Node0x3070770 -> Node0x3070860;
+	Node0x30707c0 [shape=record,label="{pd_if.then}"];
+	Node0x30707c0 -> Node0x3070810;
+	Node0x3070810 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x3070810 -> Node0x306fd70;
+	Node0x3070860 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x3070860:s0 -> Node0x3070900;
+	Node0x3070860:s1 -> Node0x30708b0;
+	Node0x30708b0 [shape=record,label="{pd_if.else.for.cond.backedge_crit_edge}"];
+	Node0x30708b0 -> Node0x3070810;
+	Node0x3070900 [shape=record,label="{it_if.then.24|{<s0>def|<s1>-98|<s2>-97}}"];
+	Node0x3070900:s0 -> Node0x3070950;
+	Node0x3070900:s1 -> Node0x30709a0;
+	Node0x3070900:s2 -> Node0x30709f0;
+	Node0x3070950 [shape=record,label="{pd_if.then.24.for.cond.backedge_crit_edge}"];
+	Node0x3070950 -> Node0x3070810;
+	Node0x30709a0 [shape=record,label="{pd_sw.bb}"];
+	Node0x30709a0 -> Node0x3070a40;
+	Node0x30709f0 [shape=record,label="{pd_sw.bb.31}"];
+	Node0x30709f0 -> Node0x3070a40;
+	Node0x3070a40 [shape=record,label="{pd_for.cond.outer.backedge}"];
+	Node0x3070a40 -> Node0x306fd20;
+	Node0x3070a90 [shape=record,label="{for.end}"];
+}

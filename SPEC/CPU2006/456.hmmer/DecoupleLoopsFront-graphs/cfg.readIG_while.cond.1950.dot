@@ -1,0 +1,24 @@
+digraph "CFG for 'readIG_while.cond' function" {
+	label="CFG for 'readIG_while.cond' function";
+
+	Node0x32cb170 [shape=record,label="{newFuncRoot}"];
+	Node0x32cb170 -> Node0x32cb210;
+	Node0x32cb1c0 [shape=record,label="{while.end.exitStub}"];
+	Node0x32cb210 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x32cb210:s0 -> Node0x32cb350;
+	Node0x32cb210:s1 -> Node0x32cb260;
+	Node0x32cb260 [shape=record,label="{it_lor.rhs.19|{<s0>T|<s1>F}}"];
+	Node0x32cb260:s0 -> Node0x32cb300;
+	Node0x32cb260:s1 -> Node0x32cb2b0;
+	Node0x32cb2b0 [shape=record,label="{it_lor.rhs.19.lor.end.30_crit_edge}"];
+	Node0x32cb2b0 -> Node0x32cb3a0;
+	Node0x32cb300 [shape=record,label="{it_land.rhs.24}"];
+	Node0x32cb300 -> Node0x32cb3a0;
+	Node0x32cb350 [shape=record,label="{it_while.cond.lor.end.30_crit_edge}"];
+	Node0x32cb350 -> Node0x32cb3a0;
+	Node0x32cb3a0 [shape=record,label="{it_lor.end.30|{<s0>T|<s1>F}}"];
+	Node0x32cb3a0:s0 -> Node0x32cb3f0;
+	Node0x32cb3a0:s1 -> Node0x32cb1c0;
+	Node0x32cb3f0 [shape=record,label="{pd_while.body}"];
+	Node0x32cb3f0 -> Node0x32cb210;
+}

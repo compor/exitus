@@ -1,0 +1,14 @@
+digraph "CFG for 's2lower' function" {
+	label="CFG for 's2lower' function";
+
+	Node0x2ddf8b0 [shape=record,label="{entry}"];
+	Node0x2ddf8b0 -> Node0x2ddf900;
+	Node0x2ddf900 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2ddf900:s0 -> Node0x2ddf950;
+	Node0x2ddf900:s1 -> Node0x2ddf9a0;
+	Node0x2ddf950 [shape=record,label="{pd_for.body}"];
+	Node0x2ddf950 -> Node0x2ddf610;
+	Node0x2ddf610 [shape=record,label="{it_for.body.split}"];
+	Node0x2ddf610 -> Node0x2ddf900;
+	Node0x2ddf9a0 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'prune_preferences_for.cond' function" {
+	label="CFG for 'prune_preferences_for.cond' function";
+
+	Node0xb22d3e0 [shape=record,label="{newFuncRoot}"];
+	Node0xb22d3e0 -> Node0xb22d480;
+	Node0xb22d430 [shape=record,label="{for.end.exitStub}"];
+	Node0xb22d480 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb22d480:s0 -> Node0xb22d4d0;
+	Node0xb22d480:s1 -> Node0xb22d430;
+	Node0xb22d4d0 [shape=record,label="{pd_for.body}"];
+	Node0xb22d4d0 -> Node0xf641850;
+	Node0xf641850 [shape=record,label="{it_for.body.split}"];
+	Node0xf641850 -> Node0xb22d480;
+}

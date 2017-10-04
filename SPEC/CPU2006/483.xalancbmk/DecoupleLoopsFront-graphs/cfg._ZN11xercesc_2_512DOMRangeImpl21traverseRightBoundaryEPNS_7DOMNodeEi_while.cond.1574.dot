@@ -1,0 +1,41 @@
+digraph "CFG for '_ZN11xercesc_2_512DOMRangeImpl21traverseRightBoundaryEPNS_7DOMNodeEi_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_512DOMRangeImpl21traverseRightBoundaryEPNS_7DOMNodeEi_while.cond' function";
+
+	Node0x98029f0 [shape=record,label="{newFuncRoot}"];
+	Node0x98029f0 -> Node0x9802ae0;
+	Node0x9802a40 [shape=record,label="{while.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x9802a90 [shape=record,label="{while.end.return.loopexit_crit_edge.exitStub}"];
+	Node0x9802ae0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9802ae0:s0 -> Node0x9802b30;
+	Node0x9802ae0:s1 -> Node0x9802a40;
+	Node0x9802b30 [shape=record,label="{pd_while.cond.8.preheader}"];
+	Node0x9802b30 -> Node0x9802b80;
+	Node0x9802b80 [shape=record,label="{pd_while.cond.8|{<s0>T|<s1>F}}"];
+	Node0x9802b80:s0 -> Node0x9802d60;
+	Node0x9802b80:s1 -> Node0x9802bd0;
+	Node0x9802bd0 [shape=record,label="{it_while.end|{<s0>T|<s1>F}}"];
+	Node0x9802bd0:s0 -> Node0x9802a90;
+	Node0x9802bd0:s1 -> Node0x9802c20;
+	Node0x9802c20 [shape=record,label="{pd_if.end.27}"];
+	Node0x9802c20 -> Node0xcdf9e00;
+	Node0xcdf9e00 [shape=record,label="{it_if.end.27.split1}"];
+	Node0xcdf9e00 -> Node0xcdfa350;
+	Node0xcdfa350 [shape=record,label="{pd_if.end.27.split|{<s0>T|<s1>F}}"];
+	Node0xcdfa350:s0 -> Node0x9802cc0;
+	Node0xcdfa350:s1 -> Node0x9802c70;
+	Node0x9802c70 [shape=record,label="{pd_if.end.27.while.cond.backedge_crit_edge}"];
+	Node0x9802c70 -> Node0x9802d10;
+	Node0x9802cc0 [shape=record,label="{pd_if.then.36}"];
+	Node0x9802cc0 -> Node0x9802d10;
+	Node0x9802d10 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x9802d10 -> Node0x9802ae0;
+	Node0x9802d60 [shape=record,label="{pd_while.body.10|{<s0>T|<s1>F}}"];
+	Node0x9802d60:s0 -> Node0x9802e00;
+	Node0x9802d60:s1 -> Node0x9802db0;
+	Node0x9802db0 [shape=record,label="{pd_while.body.10.while.cond.8.backedge_crit_edge}"];
+	Node0x9802db0 -> Node0x9802e50;
+	Node0x9802e00 [shape=record,label="{pd_if.then.17}"];
+	Node0x9802e00 -> Node0x9802e50;
+	Node0x9802e50 [shape=record,label="{pd_while.cond.8.backedge}"];
+	Node0x9802e50 -> Node0x9802b80;
+}

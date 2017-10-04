@@ -1,0 +1,23 @@
+digraph "CFG for 'SampleGamma_while.body.39' function" {
+	label="CFG for 'SampleGamma_while.body.39' function";
+
+	Node0x3145a10 [shape=record,label="{newFuncRoot}"];
+	Node0x3145a10 -> Node0x3145b00;
+	Node0x3145a60 [shape=record,label="{if.else.73.return.loopexit1_crit_edge.exitStub}"];
+	Node0x3145ab0 [shape=record,label="{if.then.52.return.loopexit1_crit_edge.exitStub}"];
+	Node0x3145b00 [shape=record,label="{it_while.body.39|{<s0>T|<s1>F}}"];
+	Node0x3145b00:s0 -> Node0x3145bf0;
+	Node0x3145b00:s1 -> Node0x3145b50;
+	Node0x3145b50 [shape=record,label="{it_if.else.73|{<s0>T|<s1>F}}"];
+	Node0x3145b50:s0 -> Node0x3145a60;
+	Node0x3145b50:s1 -> Node0x3145ba0;
+	Node0x3145ba0 [shape=record,label="{pd_if.else.73.while.body.39.backedge_crit_edge}"];
+	Node0x3145ba0 -> Node0x3145c90;
+	Node0x3145bf0 [shape=record,label="{it_if.then.52|{<s0>T|<s1>F}}"];
+	Node0x3145bf0:s0 -> Node0x3145ab0;
+	Node0x3145bf0:s1 -> Node0x3145c40;
+	Node0x3145c40 [shape=record,label="{pd_if.then.52.while.body.39.backedge_crit_edge}"];
+	Node0x3145c40 -> Node0x3145c90;
+	Node0x3145c90 [shape=record,label="{pd_while.body.39.backedge}"];
+	Node0x3145c90 -> Node0x3145b00;
+}

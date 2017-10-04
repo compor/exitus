@@ -1,0 +1,19 @@
+digraph "CFG for 'discard_useless_locs_while.cond.outer' function" {
+	label="CFG for 'discard_useless_locs_while.cond.outer' function";
+
+	Node0xaa213f0 [shape=record,label="{newFuncRoot}"];
+	Node0xaa213f0 -> Node0xaa21880;
+	Node0xaa21440 [shape=record,label="{while.end.exitStub}"];
+	Node0xaa21880 [shape=record,label="{pd_while.cond.outer}"];
+	Node0xaa21880 -> Node0xaa218d0;
+	Node0xaa218d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xaa218d0:s0 -> Node0xaa21920;
+	Node0xaa218d0:s1 -> Node0xaa21440;
+	Node0xaa21920 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xaa21920:s0 -> Node0xaa219c0;
+	Node0xaa21920:s1 -> Node0xaa21970;
+	Node0xaa21970 [shape=record,label="{it_if.else}"];
+	Node0xaa21970 -> Node0xaa21880;
+	Node0xaa219c0 [shape=record,label="{pd_if.then}"];
+	Node0xaa219c0 -> Node0xaa218d0;
+}

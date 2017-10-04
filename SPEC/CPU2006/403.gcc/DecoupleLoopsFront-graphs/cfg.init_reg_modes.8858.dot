@@ -1,0 +1,26 @@
+digraph "CFG for 'init_reg_modes' function" {
+	label="CFG for 'init_reg_modes' function";
+
+	Node0x867f3d0 [shape=record,label="{entry}"];
+	Node0x867f3d0 -> Node0x867f420;
+	Node0x867f420 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x867f420:s0 -> Node0x867f470;
+	Node0x867f420:s1 -> Node0x1a2be10;
+	Node0x867f470 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x867f470:s0 -> Node0x1a2bc80;
+	Node0x867f470:s1 -> Node0x1a2bc30;
+	Node0x1a2bc30 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x1a2bc30 -> Node0x1a2bdc0;
+	Node0x1a2bc80 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x1a2bc80:s0 -> Node0x1a2bcd0;
+	Node0x1a2bc80:s1 -> Node0x1a2bd20;
+	Node0x1a2bcd0 [shape=record,label="{pd_cond.true}"];
+	Node0x1a2bcd0 -> Node0x1a2bd70;
+	Node0x1a2bd20 [shape=record,label="{pd_cond.false}"];
+	Node0x1a2bd20 -> Node0x1a2bd70;
+	Node0x1a2bd70 [shape=record,label="{pd_cond.end}"];
+	Node0x1a2bd70 -> Node0x1a2bdc0;
+	Node0x1a2bdc0 [shape=record,label="{it_for.inc}"];
+	Node0x1a2bdc0 -> Node0x867f420;
+	Node0x1a2be10 [shape=record,label="{for.end}"];
+}

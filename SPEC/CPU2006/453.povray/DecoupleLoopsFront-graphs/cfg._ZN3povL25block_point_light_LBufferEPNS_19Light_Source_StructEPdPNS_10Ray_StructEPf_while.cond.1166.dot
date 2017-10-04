@@ -1,0 +1,38 @@
+digraph "CFG for '_ZN3povL25block_point_light_LBufferEPNS_19Light_Source_StructEPdPNS_10Ray_StructEPf_while.cond' function" {
+	label="CFG for '_ZN3povL25block_point_light_LBufferEPNS_19Light_Source_StructEPdPNS_10Ray_StructEPf_while.cond' function";
+
+	Node0x25bddb0 [shape=record,label="{newFuncRoot}"];
+	Node0x25bddb0 -> Node0x25bdea0;
+	Node0x25bde00 [shape=record,label="{if.end.50.loopexit.exitStub}"];
+	Node0x25bde50 [shape=record,label="{if.then.46.exitStub}"];
+	Node0x25bdea0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x25bdea0:s0 -> Node0x25bdef0;
+	Node0x25bdea0:s1 -> Node0x25bde00;
+	Node0x25bdef0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x25bdef0:s0 -> Node0x25be1c0;
+	Node0x25bdef0:s1 -> Node0x25bdf40;
+	Node0x25bdf40 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x25bdf40:s0 -> Node0x25bdfe0;
+	Node0x25bdf40:s1 -> Node0x25bdf90;
+	Node0x25bdf90 [shape=record,label="{pd_land.lhs.true.while.cond.backedge_crit_edge}"];
+	Node0x25bdf90 -> Node0x25be210;
+	Node0x25bdfe0 [shape=record,label="{it_land.lhs.true.36|{<s0>T|<s1>F}}"];
+	Node0x25bdfe0:s0 -> Node0x25be080;
+	Node0x25bdfe0:s1 -> Node0x25be030;
+	Node0x25be030 [shape=record,label="{pd_land.lhs.true.36.while.cond.backedge_crit_edge}"];
+	Node0x25be030 -> Node0x25be210;
+	Node0x25be080 [shape=record,label="{it_land.lhs.true.40|{<s0>T|<s1>F}}"];
+	Node0x25be080:s0 -> Node0x25be120;
+	Node0x25be080:s1 -> Node0x25be0d0;
+	Node0x25be0d0 [shape=record,label="{pd_land.lhs.true.40.while.cond.backedge_crit_edge}"];
+	Node0x25be0d0 -> Node0x25be210;
+	Node0x25be120 [shape=record,label="{it_if.then.43|{<s0>T|<s1>F}}"];
+	Node0x25be120:s0 -> Node0x25bde50;
+	Node0x25be120:s1 -> Node0x25be170;
+	Node0x25be170 [shape=record,label="{pd_if.then.43.while.cond.backedge_crit_edge}"];
+	Node0x25be170 -> Node0x25be210;
+	Node0x25be1c0 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0x25be1c0 -> Node0x25be210;
+	Node0x25be210 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x25be210 -> Node0x25bdea0;
+}

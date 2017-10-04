@@ -1,0 +1,29 @@
+digraph "CFG for 'estimate_case_costs_for.cond' function" {
+	label="CFG for 'estimate_case_costs_for.cond' function";
+
+	Node0xc43b2e0 [shape=record,label="{newFuncRoot}"];
+	Node0xc43b2e0 -> Node0xc440970;
+	Node0xc440920 [shape=record,label="{for.end.exitStub}"];
+	Node0xc440970 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc440970:s0 -> Node0xc4409c0;
+	Node0xc440970:s1 -> Node0xc440920;
+	Node0xc4409c0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xc4409c0:s0 -> Node0xc440ba0;
+	Node0xc4409c0:s1 -> Node0xc440a10;
+	Node0xc440a10 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0xc440a10:s0 -> Node0xc440b50;
+	Node0xc440a10:s1 -> Node0xc440a60;
+	Node0xc440a60 [shape=record,label="{pd_if.else.17|{<s0>T|<s1>F}}"];
+	Node0xc440a60:s0 -> Node0xc440b00;
+	Node0xc440a60:s1 -> Node0xc440ab0;
+	Node0xc440ab0 [shape=record,label="{pd_if.else.17.for.inc_crit_edge}"];
+	Node0xc440ab0 -> Node0xc440bf0;
+	Node0xc440b00 [shape=record,label="{pd_if.then.24}"];
+	Node0xc440b00 -> Node0xc440bf0;
+	Node0xc440b50 [shape=record,label="{pd_if.then.13}"];
+	Node0xc440b50 -> Node0xc440bf0;
+	Node0xc440ba0 [shape=record,label="{pd_if.then.4}"];
+	Node0xc440ba0 -> Node0xc440bf0;
+	Node0xc440bf0 [shape=record,label="{it_for.inc}"];
+	Node0xc440bf0 -> Node0xc440970;
+}

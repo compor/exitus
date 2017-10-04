@@ -1,0 +1,20 @@
+digraph "CFG for 'ggc_del_root_while.cond' function" {
+	label="CFG for 'ggc_del_root_while.cond' function";
+
+	Node0xb1e2cc0 [shape=record,label="{newFuncRoot}"];
+	Node0xb1e2cc0 -> Node0xb1e2db0;
+	Node0xb1e2d10 [shape=record,label="{while.end.exitStub}"];
+	Node0xb1e2d60 [shape=record,label="{if.then.exitStub}"];
+	Node0xb1e2db0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb1e2db0:s0 -> Node0xb1e2e00;
+	Node0xb1e2db0:s1 -> Node0xb1e2d10;
+	Node0xb1e2e00 [shape=record,label="{it_while.body}"];
+	Node0xb1e2e00 -> Node0xdc32970;
+	Node0xdc32970 [shape=record,label="{pd_while.body.split1}"];
+	Node0xdc32970 -> Node0xf61cbe0;
+	Node0xf61cbe0 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0xf61cbe0:s0 -> Node0xb1e2d60;
+	Node0xf61cbe0:s1 -> Node0xb1e2e50;
+	Node0xb1e2e50 [shape=record,label="{it_if.end}"];
+	Node0xb1e2e50 -> Node0xb1e2db0;
+}

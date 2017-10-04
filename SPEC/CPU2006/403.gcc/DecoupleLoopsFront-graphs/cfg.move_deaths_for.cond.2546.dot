@@ -1,0 +1,19 @@
+digraph "CFG for 'move_deaths_for.cond' function" {
+	label="CFG for 'move_deaths_for.cond' function";
+
+	Node0xa68f4f0 [shape=record,label="{newFuncRoot}"];
+	Node0xa68f4f0 -> Node0xa68f590;
+	Node0xa68f540 [shape=record,label="{if.end.640.loopexit.exitStub}"];
+	Node0xa68f590 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa68f590:s0 -> Node0xa68f5e0;
+	Node0xa68f590:s1 -> Node0xa68f540;
+	Node0xa68f5e0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xa68f5e0:s0 -> Node0xa68f680;
+	Node0xa68f5e0:s1 -> Node0xa68f630;
+	Node0xa68f630 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xa68f630 -> Node0xa68f6d0;
+	Node0xa68f680 [shape=record,label="{pd_if.then.315}"];
+	Node0xa68f680 -> Node0xa68f6d0;
+	Node0xa68f6d0 [shape=record,label="{it_for.inc}"];
+	Node0xa68f6d0 -> Node0xa68f590;
+}

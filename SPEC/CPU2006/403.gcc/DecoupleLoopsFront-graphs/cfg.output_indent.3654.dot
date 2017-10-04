@@ -1,0 +1,14 @@
+digraph "CFG for 'output_indent' function" {
+	label="CFG for 'output_indent' function";
+
+	Node0x3b223b0 [shape=record,label="{entry}"];
+	Node0x3b223b0 -> Node0x3b22400;
+	Node0x3b22400 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3b22400:s0 -> Node0x3b22450;
+	Node0x3b22400:s1 -> Node0x3b224a0;
+	Node0x3b22450 [shape=record,label="{pd_for.body}"];
+	Node0x3b22450 -> Node0xcb78750;
+	Node0xcb78750 [shape=record,label="{it_for.body.split}"];
+	Node0xcb78750 -> Node0x3b22400;
+	Node0x3b224a0 [shape=record,label="{for.end}"];
+}

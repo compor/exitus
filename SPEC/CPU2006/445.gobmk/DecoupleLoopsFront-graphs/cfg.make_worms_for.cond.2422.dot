@@ -1,0 +1,38 @@
+digraph "CFG for 'make_worms_for.cond' function" {
+	label="CFG for 'make_worms_for.cond' function";
+
+	Node0x46ba070 [shape=record,label="{newFuncRoot}"];
+	Node0x46ba070 -> Node0x46c18a0;
+	Node0x46ba0c0 [shape=record,label="{for.end.exitStub}"];
+	Node0x46c18a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x46c18a0:s0 -> Node0x46c18f0;
+	Node0x46c18a0:s1 -> Node0x46ba0c0;
+	Node0x46c18f0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x46c18f0:s0 -> Node0x46c1a30;
+	Node0x46c18f0:s1 -> Node0x46c1940;
+	Node0x46c1940 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x46c1940:s0 -> Node0x46c19e0;
+	Node0x46c1940:s1 -> Node0x46c1990;
+	Node0x46c1990 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x46c1990 -> Node0x46c1c60;
+	Node0x46c19e0 [shape=record,label="{pd_lor.lhs.false.land.lhs.true_crit_edge}"];
+	Node0x46c19e0 -> Node0x46c1a80;
+	Node0x46c1a30 [shape=record,label="{pd_for.body.land.lhs.true_crit_edge}"];
+	Node0x46c1a30 -> Node0x46c1a80;
+	Node0x46c1a80 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x46c1a80:s0 -> Node0x46c1b20;
+	Node0x46c1a80:s1 -> Node0x46c1ad0;
+	Node0x46c1ad0 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x46c1ad0 -> Node0x46c1c60;
+	Node0x46c1b20 [shape=record,label="{pd_if.then.13|{<s0>T|<s1>F}}"];
+	Node0x46c1b20:s0 -> Node0x46c1bc0;
+	Node0x46c1b20:s1 -> Node0x46c1b70;
+	Node0x46c1b70 [shape=record,label="{pd_if.else.19}"];
+	Node0x46c1b70 -> Node0x46c1c10;
+	Node0x46c1bc0 [shape=record,label="{pd_if.then.13.if.end.20_crit_edge}"];
+	Node0x46c1bc0 -> Node0x46c1c10;
+	Node0x46c1c10 [shape=record,label="{pd_if.end.20}"];
+	Node0x46c1c10 -> Node0x46c1c60;
+	Node0x46c1c60 [shape=record,label="{it_for.inc}"];
+	Node0x46c1c60 -> Node0x46c18a0;
+}

@@ -1,0 +1,31 @@
+digraph "CFG for 'read_min_for.cond' function" {
+	label="CFG for 'read_min_for.cond' function";
+
+	Node0x1e0b4d0 [shape=record,label="{newFuncRoot}"];
+	Node0x1e0b4d0 -> Node0x1e0b610;
+	Node0x1e0b520 [shape=record,label="{for.end.exitStub}"];
+	Node0x1e0b570 [shape=record,label="{for.body.return.loopexit2_crit_edge.exitStub}"];
+	Node0x1e0b5c0 [shape=record,label="{lor.lhs.false.return.loopexit2_crit_edge.exitStub}"];
+	Node0x1e0b610 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1e0b610:s0 -> Node0x1e0b660;
+	Node0x1e0b610:s1 -> Node0x1e0b520;
+	Node0x1e0b660 [shape=record,label="{pd_for.body}"];
+	Node0x1e0b660 -> Node0x1ebde50;
+	Node0x1ebde50 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x1ebde50:s0 -> Node0x1e0b570;
+	Node0x1ebde50:s1 -> Node0x1e0b6b0;
+	Node0x1e0b6b0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x1e0b6b0:s0 -> Node0x1e0b5c0;
+	Node0x1e0b6b0:s1 -> Node0x1e0b700;
+	Node0x1e0b700 [shape=record,label="{pd_if.end.60|{<s0>T|<s1>F}}"];
+	Node0x1e0b700:s0 -> Node0x1e0b7a0;
+	Node0x1e0b700:s1 -> Node0x1e0b750;
+	Node0x1e0b750 [shape=record,label="{pd_if.end.60.cond.end.121_crit_edge}"];
+	Node0x1e0b750 -> Node0x1e0b7f0;
+	Node0x1e0b7a0 [shape=record,label="{pd_cond.true.118}"];
+	Node0x1e0b7a0 -> Node0x1e0b7f0;
+	Node0x1e0b7f0 [shape=record,label="{pd_cond.end.121}"];
+	Node0x1e0b7f0 -> Node0x1ebb7a0;
+	Node0x1ebb7a0 [shape=record,label="{it_cond.end.121.split}"];
+	Node0x1ebb7a0 -> Node0x1e0b610;
+}

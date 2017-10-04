@@ -1,0 +1,26 @@
+digraph "CFG for 'count_common_libs_for.cond.96' function" {
+	label="CFG for 'count_common_libs_for.cond.96' function";
+
+	Node0x3de9f60 [shape=record,label="{newFuncRoot}"];
+	Node0x3de9f60 -> Node0x3df4ca0;
+	Node0x3de9fb0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x3df4ca0 [shape=record,label="{it_for.cond.96|{<s0>T|<s1>F}}"];
+	Node0x3df4ca0:s0 -> Node0x3df4cf0;
+	Node0x3df4ca0:s1 -> Node0x3de9fb0;
+	Node0x3df4cf0 [shape=record,label="{pd_for.body.99|{<s0>T|<s1>F}}"];
+	Node0x3df4cf0:s0 -> Node0x3df4d90;
+	Node0x3df4cf0:s1 -> Node0x3df4d40;
+	Node0x3df4d40 [shape=record,label="{pd_for.body.99.if.then.114_crit_edge}"];
+	Node0x3df4d40 -> Node0x3df4e30;
+	Node0x3df4d90 [shape=record,label="{pd_land.lhs.true.107|{<s0>T|<s1>F}}"];
+	Node0x3df4d90:s0 -> Node0x3df4e80;
+	Node0x3df4d90:s1 -> Node0x3df4de0;
+	Node0x3df4de0 [shape=record,label="{pd_land.lhs.true.107.if.then.114_crit_edge}"];
+	Node0x3df4de0 -> Node0x3df4e30;
+	Node0x3df4e30 [shape=record,label="{pd_if.then.114}"];
+	Node0x3df4e30 -> Node0x3df4ed0;
+	Node0x3df4e80 [shape=record,label="{pd_land.lhs.true.107.for.inc.117_crit_edge}"];
+	Node0x3df4e80 -> Node0x3df4ed0;
+	Node0x3df4ed0 [shape=record,label="{it_for.inc.117}"];
+	Node0x3df4ed0 -> Node0x3df4ca0;
+}

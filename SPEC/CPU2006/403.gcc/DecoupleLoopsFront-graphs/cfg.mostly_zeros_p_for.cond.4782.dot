@@ -1,0 +1,14 @@
+digraph "CFG for 'mostly_zeros_p_for.cond' function" {
+	label="CFG for 'mostly_zeros_p_for.cond' function";
+
+	Node0xadbdc10 [shape=record,label="{newFuncRoot}"];
+	Node0xadbdc10 -> Node0xadbdcb0;
+	Node0xadbdc60 [shape=record,label="{for.end.exitStub}"];
+	Node0xadbdcb0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xadbdcb0:s0 -> Node0xadbdd00;
+	Node0xadbdcb0:s1 -> Node0xadbdc60;
+	Node0xadbdd00 [shape=record,label="{pd_for.body}"];
+	Node0xadbdd00 -> Node0xf43a520;
+	Node0xf43a520 [shape=record,label="{it_for.body.split}"];
+	Node0xf43a520 -> Node0xadbdcb0;
+}

@@ -1,0 +1,46 @@
+digraph "CFG for 'plus_constant_wide_restart.outer' function" {
+	label="CFG for 'plus_constant_wide_restart.outer' function";
+
+	Node0xacfda60 [shape=record,label="{newFuncRoot}"];
+	Node0xacfda60 -> Node0xacfdce0;
+	Node0xacfdab0 [shape=record,label="{sw.default.exitStub}"];
+	Node0xacfdb00 [shape=record,label="{sw.bb.exitStub}"];
+	Node0xacfdb50 [shape=record,label="{sw.bb.3.exitStub}"];
+	Node0xacfdba0 [shape=record,label="{sw.bb.13.exitStub}"];
+	Node0xacfdbf0 [shape=record,label="{restart.sw.epilog.loopexit_crit_edge.exitStub}"];
+	Node0xacfdc40 [shape=record,label="{restart.sw.epilog.loopexit_crit_edge.1.exitStub}"];
+	Node0xacfdc90 [shape=record,label="{if.else.exitStub}"];
+	Node0xacfdce0 [shape=record,label="{pd_restart.outer}"];
+	Node0xacfdce0 -> Node0xacfdd30;
+	Node0xacfdd30 [shape=record,label="{it_restart}"];
+	Node0xacfdd30 -> Node0xf2b8080;
+	Node0xf2b8080 [shape=record,label="{pd_restart.split1}"];
+	Node0xf2b8080 -> Node0xdc13890;
+	Node0xdc13890 [shape=record,label="{it_restart.split|{<s0>def|<s1>54|<s2>55|<s3>66|<s4>58|<s5>68|<s6>67|<s7>75}}"];
+	Node0xdc13890:s0 -> Node0xacfdab0;
+	Node0xdc13890:s1 -> Node0xacfdb00;
+	Node0xdc13890:s2 -> Node0xacfdb50;
+	Node0xdc13890:s3 -> Node0xacfdba0;
+	Node0xdc13890:s4 -> Node0xacfdf10;
+	Node0xdc13890:s5 -> Node0xacfdbf0;
+	Node0xdc13890:s6 -> Node0xacfdc40;
+	Node0xdc13890:s7 -> Node0xacfdd80;
+	Node0xacfdd80 [shape=record,label="{it_sw.bb.52}"];
+	Node0xacfdd80 -> Node0xf2b56d0;
+	Node0xf2b56d0 [shape=record,label="{pd_sw.bb.52.split2}"];
+	Node0xf2b56d0 -> Node0xdc178d0;
+	Node0xdc178d0 [shape=record,label="{it_sw.bb.52.split|{<s0>T|<s1>F}}"];
+	Node0xdc178d0:s0 -> Node0xacfddd0;
+	Node0xdc178d0:s1 -> Node0xacfdc90;
+	Node0xacfddd0 [shape=record,label="{pd_if.then.60|{<s0>T|<s1>F}}"];
+	Node0xacfddd0:s0 -> Node0xacfde70;
+	Node0xacfddd0:s1 -> Node0xacfde20;
+	Node0xacfde20 [shape=record,label="{pd_if.then.60.if.end.78_crit_edge}"];
+	Node0xacfde20 -> Node0xacfdec0;
+	Node0xacfde70 [shape=record,label="{pd_if.then.73}"];
+	Node0xacfde70 -> Node0xacfdec0;
+	Node0xacfdec0 [shape=record,label="{it_if.end.78}"];
+	Node0xacfdec0 -> Node0xacfdd30;
+	Node0xacfdf10 [shape=record,label="{it_sw.bb.47}"];
+	Node0xacfdf10 -> Node0xacfdce0;
+}

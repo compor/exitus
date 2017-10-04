@@ -1,0 +1,12 @@
+digraph "CFG for 'perl_parse_while.cond' function" {
+	label="CFG for 'perl_parse_while.cond' function";
+
+	Node0x4d3a310 [shape=record,label="{newFuncRoot}"];
+	Node0x4d3a310 -> Node0x4d3cc80;
+	Node0x4d3cc30 [shape=record,label="{for.cond.preheader.exitStub}"];
+	Node0x4d3cc80 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d3cc80:s0 -> Node0x4d3ccd0;
+	Node0x4d3cc80:s1 -> Node0x4d3cc30;
+	Node0x4d3ccd0 [shape=record,label="{it_while.body}"];
+	Node0x4d3ccd0 -> Node0x4d3cc80;
+}

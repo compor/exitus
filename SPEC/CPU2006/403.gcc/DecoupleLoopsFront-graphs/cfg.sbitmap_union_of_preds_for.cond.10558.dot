@@ -1,0 +1,16 @@
+digraph "CFG for 'sbitmap_union_of_preds_for.cond' function" {
+	label="CFG for 'sbitmap_union_of_preds_for.cond' function";
+
+	Node0xc143f70 [shape=record,label="{newFuncRoot}"];
+	Node0xc143f70 -> Node0xc144060;
+	Node0xc143fc0 [shape=record,label="{if.then.8.loopexit.exitStub}"];
+	Node0xc144010 [shape=record,label="{if.end.exitStub}"];
+	Node0xc144060 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc144060:s0 -> Node0xc143fc0;
+	Node0xc144060:s1 -> Node0xc1440b0;
+	Node0xc1440b0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xc1440b0:s0 -> Node0xc144100;
+	Node0xc1440b0:s1 -> Node0xc144010;
+	Node0xc144100 [shape=record,label="{it_for.inc}"];
+	Node0xc144100 -> Node0xc144060;
+}

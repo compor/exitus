@@ -1,0 +1,21 @@
+digraph "CFG for 'remove_fake_successors' function" {
+	label="CFG for 'remove_fake_successors' function";
+
+	Node0x2fcb420 [shape=record,label="{entry}"];
+	Node0x2fcb420 -> Node0x2fd1500;
+	Node0x2fd1500 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2fd1500:s0 -> Node0x2fd1550;
+	Node0x2fd1500:s1 -> Node0x2fd1690;
+	Node0x2fd1550 [shape=record,label="{it_for.body}"];
+	Node0x2fd1550 -> Node0xc792b80;
+	Node0xc792b80 [shape=record,label="{pd_for.body.split|{<s0>T|<s1>F}}"];
+	Node0xc792b80:s0 -> Node0x2fd15f0;
+	Node0xc792b80:s1 -> Node0x2fd15a0;
+	Node0x2fd15a0 [shape=record,label="{pd_for.body.for.cond.backedge_crit_edge}"];
+	Node0x2fd15a0 -> Node0x2fd1640;
+	Node0x2fd15f0 [shape=record,label="{pd_if.then}"];
+	Node0x2fd15f0 -> Node0x2fd1640;
+	Node0x2fd1640 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x2fd1640 -> Node0x2fd1500;
+	Node0x2fd1690 [shape=record,label="{for.end}"];
+}

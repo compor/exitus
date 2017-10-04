@@ -1,0 +1,46 @@
+digraph "CFG for 'superstring_breakchain_moves' function" {
+	label="CFG for 'superstring_breakchain_moves' function";
+
+	Node0x3436790 [shape=record,label="{entry}"];
+	Node0x3436790 -> Node0x34367e0;
+	Node0x34367e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x34367e0:s0 -> Node0x3436830;
+	Node0x34367e0:s1 -> Node0x3436ce0;
+	Node0x3436830 [shape=record,label="{pd_for.body|{<s0>def|<s1>1|<s2>2}}"];
+	Node0x3436830:s0 -> Node0x3436880;
+	Node0x3436830:s1 -> Node0x34368d0;
+	Node0x3436830:s2 -> Node0x3436c40;
+	Node0x3436880 [shape=record,label="{pd_for.body.for.inc.36_crit_edge}"];
+	Node0x3436880 -> Node0x3436c90;
+	Node0x34368d0 [shape=record,label="{pd_if.then}"];
+	Node0x34368d0 -> Node0x3436920;
+	Node0x3436920 [shape=record,label="{pd_for.cond.5|{<s0>T|<s1>F}}"];
+	Node0x3436920:s0 -> Node0x3436970;
+	Node0x3436920:s1 -> Node0x3436a60;
+	Node0x3436970 [shape=record,label="{pd_for.body.7|{<s0>T|<s1>F}}"];
+	Node0x3436970:s0 -> Node0x34369c0;
+	Node0x3436970:s1 -> Node0x3436a10;
+	Node0x34369c0 [shape=record,label="{pd_if.then.11}"];
+	Node0x34369c0 -> Node0x3436ab0;
+	Node0x3436a10 [shape=record,label="{pd_for.inc}"];
+	Node0x3436a10 -> Node0x3436920;
+	Node0x3436a60 [shape=record,label="{pd_for.end.loopexit}"];
+	Node0x3436a60 -> Node0x3436ab0;
+	Node0x3436ab0 [shape=record,label="{pd_for.end|{<s0>T|<s1>F}}"];
+	Node0x3436ab0:s0 -> Node0x3436b50;
+	Node0x3436ab0:s1 -> Node0x3436b00;
+	Node0x3436b00 [shape=record,label="{pd_for.end.for.inc.36_crit_edge}"];
+	Node0x3436b00 -> Node0x3436c90;
+	Node0x3436b50 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x3436b50:s0 -> Node0x3436bf0;
+	Node0x3436b50:s1 -> Node0x3436ba0;
+	Node0x3436ba0 [shape=record,label="{pd_land.lhs.true.for.inc.36_crit_edge}"];
+	Node0x3436ba0 -> Node0x3436c90;
+	Node0x3436bf0 [shape=record,label="{pd_if.then.18}"];
+	Node0x3436bf0 -> Node0x3436c90;
+	Node0x3436c40 [shape=record,label="{pd_if.then.31}"];
+	Node0x3436c40 -> Node0x3436c90;
+	Node0x3436c90 [shape=record,label="{it_for.inc.36}"];
+	Node0x3436c90 -> Node0x34367e0;
+	Node0x3436ce0 [shape=record,label="{for.end.38}"];
+}

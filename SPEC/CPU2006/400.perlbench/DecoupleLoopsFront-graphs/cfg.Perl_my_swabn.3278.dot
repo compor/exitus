@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_my_swabn' function" {
+	label="CFG for 'Perl_my_swabn' function";
+
+	Node0x4475d60 [shape=record,label="{entry}"];
+	Node0x4475d60 -> Node0x4475db0;
+	Node0x4475db0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4475db0:s0 -> Node0x4475e00;
+	Node0x4475db0:s1 -> Node0x4475e50;
+	Node0x4475e00 [shape=record,label="{pd_for.body}"];
+	Node0x4475e00 -> Node0x6a81420;
+	Node0x6a81420 [shape=record,label="{it_for.body.split}"];
+	Node0x6a81420 -> Node0x4475db0;
+	Node0x4475e50 [shape=record,label="{for.end}"];
+}

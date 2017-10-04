@@ -1,0 +1,14 @@
+digraph "CFG for 'make_decl_rtl_while.cond' function" {
+	label="CFG for 'make_decl_rtl_while.cond' function";
+
+	Node0xc649f40 [shape=record,label="{newFuncRoot}"];
+	Node0xc649f40 -> Node0xc649fe0;
+	Node0xc649f90 [shape=record,label="{do.end.loopexit.exitStub}"];
+	Node0xc649fe0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc649fe0:s0 -> Node0xc64a030;
+	Node0xc649fe0:s1 -> Node0xc649f90;
+	Node0xc64a030 [shape=record,label="{it_while.body}"];
+	Node0xc64a030 -> Node0xfe7d490;
+	Node0xfe7d490 [shape=record,label="{pd_while.body.split}"];
+	Node0xfe7d490 -> Node0xc649fe0;
+}

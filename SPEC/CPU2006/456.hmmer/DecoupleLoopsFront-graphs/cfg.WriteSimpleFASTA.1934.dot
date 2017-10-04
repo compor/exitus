@@ -1,0 +1,14 @@
+digraph "CFG for 'WriteSimpleFASTA' function" {
+	label="CFG for 'WriteSimpleFASTA' function";
+
+	Node0x2d72bf0 [shape=record,label="{entry}"];
+	Node0x2d72bf0 -> Node0x2d72c40;
+	Node0x2d72c40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2d72c40:s0 -> Node0x2d72c90;
+	Node0x2d72c40:s1 -> Node0x2d72ce0;
+	Node0x2d72c90 [shape=record,label="{pd_for.body}"];
+	Node0x2d72c90 -> Node0x36e2ba0;
+	Node0x36e2ba0 [shape=record,label="{it_for.body.split}"];
+	Node0x36e2ba0 -> Node0x2d72c40;
+	Node0x2d72ce0 [shape=record,label="{for.end}"];
+}

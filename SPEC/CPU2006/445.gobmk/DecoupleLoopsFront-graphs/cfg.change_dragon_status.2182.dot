@@ -1,0 +1,24 @@
+digraph "CFG for 'change_dragon_status' function" {
+	label="CFG for 'change_dragon_status' function";
+
+	Node0x3527a60 [shape=record,label="{entry}"];
+	Node0x3527a60 -> Node0x3531dd0;
+	Node0x3531dd0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3531dd0:s0 -> Node0x3531e20;
+	Node0x3531dd0:s1 -> Node0x3532000;
+	Node0x3531e20 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3531e20:s0 -> Node0x3531ec0;
+	Node0x3531e20:s1 -> Node0x3531e70;
+	Node0x3531e70 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x3531e70 -> Node0x3531fb0;
+	Node0x3531ec0 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x3531ec0:s0 -> Node0x3531f60;
+	Node0x3531ec0:s1 -> Node0x3531f10;
+	Node0x3531f10 [shape=record,label="{pd_if.then.for.inc_crit_edge}"];
+	Node0x3531f10 -> Node0x3531fb0;
+	Node0x3531f60 [shape=record,label="{pd_if.then.11}"];
+	Node0x3531f60 -> Node0x3531fb0;
+	Node0x3531fb0 [shape=record,label="{it_for.inc}"];
+	Node0x3531fb0 -> Node0x3531dd0;
+	Node0x3532000 [shape=record,label="{for.end}"];
+}

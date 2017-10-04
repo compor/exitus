@@ -1,0 +1,19 @@
+digraph "CFG for 'DMin' function" {
+	label="CFG for 'DMin' function";
+
+	Node0x2e98ab0 [shape=record,label="{entry}"];
+	Node0x2e98ab0 -> Node0x2e98b00;
+	Node0x2e98b00 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2e98b00:s0 -> Node0x2e98b50;
+	Node0x2e98b00:s1 -> Node0x2e98c90;
+	Node0x2e98b50 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2e98b50:s0 -> Node0x2e98bf0;
+	Node0x2e98b50:s1 -> Node0x2e98ba0;
+	Node0x2e98ba0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x2e98ba0 -> Node0x2e98c40;
+	Node0x2e98bf0 [shape=record,label="{pd_if.then}"];
+	Node0x2e98bf0 -> Node0x2e98c40;
+	Node0x2e98c40 [shape=record,label="{it_for.inc}"];
+	Node0x2e98c40 -> Node0x2e98b00;
+	Node0x2e98c90 [shape=record,label="{for.end}"];
+}

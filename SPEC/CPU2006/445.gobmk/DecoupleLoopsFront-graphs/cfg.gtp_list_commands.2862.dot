@@ -1,0 +1,14 @@
+digraph "CFG for 'gtp_list_commands' function" {
+	label="CFG for 'gtp_list_commands' function";
+
+	Node0x373e050 [shape=record,label="{entry}"];
+	Node0x373e050 -> Node0x373e430;
+	Node0x373e430 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x373e430:s0 -> Node0x373e480;
+	Node0x373e430:s1 -> Node0x373e4d0;
+	Node0x373e480 [shape=record,label="{pd_for.body}"];
+	Node0x373e480 -> Node0x4c25b50;
+	Node0x4c25b50 [shape=record,label="{it_for.body.split}"];
+	Node0x4c25b50 -> Node0x373e430;
+	Node0x373e4d0 [shape=record,label="{for.end}"];
+}

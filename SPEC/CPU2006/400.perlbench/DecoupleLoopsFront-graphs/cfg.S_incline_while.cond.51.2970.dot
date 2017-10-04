@@ -1,0 +1,19 @@
+digraph "CFG for 'S_incline_while.cond.51' function" {
+	label="CFG for 'S_incline_while.cond.51' function";
+
+	Node0x5705230 [shape=record,label="{newFuncRoot}"];
+	Node0x5705230 -> Node0x57052d0;
+	Node0x5705280 [shape=record,label="{while.end.62.exitStub}"];
+	Node0x57052d0 [shape=record,label="{it_while.cond.51|{<s0>T|<s1>F}}"];
+	Node0x57052d0:s0 -> Node0x57053c0;
+	Node0x57052d0:s1 -> Node0x5705320;
+	Node0x5705320 [shape=record,label="{it_lor.rhs.55|{<s0>T|<s1>F}}"];
+	Node0x5705320:s0 -> Node0x5705370;
+	Node0x5705320:s1 -> Node0x5705280;
+	Node0x5705370 [shape=record,label="{pd_lor.rhs.55.while.body.60_crit_edge}"];
+	Node0x5705370 -> Node0x5705410;
+	Node0x57053c0 [shape=record,label="{pd_while.cond.51.while.body.60_crit_edge}"];
+	Node0x57053c0 -> Node0x5705410;
+	Node0x5705410 [shape=record,label="{it_while.body.60}"];
+	Node0x5705410 -> Node0x57052d0;
+}

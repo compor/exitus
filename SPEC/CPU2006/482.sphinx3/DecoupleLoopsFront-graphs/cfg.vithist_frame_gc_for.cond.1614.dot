@@ -1,0 +1,33 @@
+digraph "CFG for 'vithist_frame_gc_for.cond' function" {
+	label="CFG for 'vithist_frame_gc_for.cond' function";
+
+	Node0x13dcf10 [shape=record,label="{newFuncRoot}"];
+	Node0x13dcf10 -> Node0x13dcfb0;
+	Node0x13dcf60 [shape=record,label="{for.end.exitStub}"];
+	Node0x13dcfb0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x13dcfb0:s0 -> Node0x13dd000;
+	Node0x13dcfb0:s1 -> Node0x13dcf60;
+	Node0x13dd000 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x13dd000:s0 -> Node0x13dd0a0;
+	Node0x13dd000:s1 -> Node0x13dd050;
+	Node0x13dd050 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x13dd050 -> Node0x13dd2d0;
+	Node0x13dd0a0 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x13dd0a0:s0 -> Node0x13dd140;
+	Node0x13dd0a0:s1 -> Node0x13dd0f0;
+	Node0x13dd0f0 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x13dd0f0 -> Node0x13dd190;
+	Node0x13dd140 [shape=record,label="{pd_if.then.5}"];
+	Node0x13dd140 -> Node0x13dd190;
+	Node0x13dd190 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x13dd190:s0 -> Node0x13dd230;
+	Node0x13dd190:s1 -> Node0x13dd1e0;
+	Node0x13dd1e0 [shape=record,label="{pd_if.end.if.end.16_crit_edge}"];
+	Node0x13dd1e0 -> Node0x13dd280;
+	Node0x13dd230 [shape=record,label="{pd_if.then.14}"];
+	Node0x13dd230 -> Node0x13dd280;
+	Node0x13dd280 [shape=record,label="{pd_if.end.16}"];
+	Node0x13dd280 -> Node0x13dd2d0;
+	Node0x13dd2d0 [shape=record,label="{it_for.inc}"];
+	Node0x13dd2d0 -> Node0x13dcfb0;
+}

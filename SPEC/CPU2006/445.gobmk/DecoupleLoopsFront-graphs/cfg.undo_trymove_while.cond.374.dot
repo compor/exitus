@@ -1,0 +1,16 @@
+digraph "CFG for 'undo_trymove_while.cond' function" {
+	label="CFG for 'undo_trymove_while.cond' function";
+
+	Node0x3e562c0 [shape=record,label="{newFuncRoot}"];
+	Node0x3e562c0 -> Node0x3e56360;
+	Node0x3e56310 [shape=record,label="{while.cond.2.preheader.exitStub}"];
+	Node0x3e56360 [shape=record,label="{it_while.cond}"];
+	Node0x3e56360 -> Node0x4f96760;
+	Node0x4f96760 [shape=record,label="{pd_while.cond.split1}"];
+	Node0x4f96760 -> Node0x4f151d0;
+	Node0x4f151d0 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0x4f151d0:s0 -> Node0x3e563b0;
+	Node0x4f151d0:s1 -> Node0x3e56310;
+	Node0x3e563b0 [shape=record,label="{pd_while.body}"];
+	Node0x3e563b0 -> Node0x3e56360;
+}

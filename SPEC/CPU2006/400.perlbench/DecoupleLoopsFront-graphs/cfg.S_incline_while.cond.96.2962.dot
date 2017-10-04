@@ -1,0 +1,29 @@
+digraph "CFG for 'S_incline_while.cond.96' function" {
+	label="CFG for 'S_incline_while.cond.96' function";
+
+	Node0x56bcdc0 [shape=record,label="{newFuncRoot}"];
+	Node0x56bcdc0 -> Node0x57021b0;
+	Node0x56bce10 [shape=record,label="{while.end.115.exitStub}"];
+	Node0x57021b0 [shape=record,label="{it_while.cond.96|{<s0>T|<s1>F}}"];
+	Node0x57021b0:s0 -> Node0x57023e0;
+	Node0x57021b0:s1 -> Node0x5702200;
+	Node0x5702200 [shape=record,label="{it_lor.lhs.false.100|{<s0>T|<s1>F}}"];
+	Node0x5702200:s0 -> Node0x5702390;
+	Node0x5702200:s1 -> Node0x5702250;
+	Node0x5702250 [shape=record,label="{it_lor.lhs.false.104|{<s0>T|<s1>F}}"];
+	Node0x5702250:s0 -> Node0x5702340;
+	Node0x5702250:s1 -> Node0x57022a0;
+	Node0x57022a0 [shape=record,label="{it_lor.rhs.108|{<s0>T|<s1>F}}"];
+	Node0x57022a0:s0 -> Node0x57022f0;
+	Node0x57022a0:s1 -> Node0x56bce10;
+	Node0x57022f0 [shape=record,label="{pd_lor.rhs.108.while.body.113_crit_edge}"];
+	Node0x57022f0 -> Node0x5702430;
+	Node0x5702340 [shape=record,label="{pd_lor.lhs.false.104.while.body.113_crit_edge}"];
+	Node0x5702340 -> Node0x5702430;
+	Node0x5702390 [shape=record,label="{pd_lor.lhs.false.100.while.body.113_crit_edge}"];
+	Node0x5702390 -> Node0x5702430;
+	Node0x57023e0 [shape=record,label="{pd_while.cond.96.while.body.113_crit_edge}"];
+	Node0x57023e0 -> Node0x5702430;
+	Node0x5702430 [shape=record,label="{it_while.body.113}"];
+	Node0x5702430 -> Node0x57021b0;
+}

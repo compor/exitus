@@ -1,0 +1,24 @@
+digraph "CFG for 'Perl_yylex_for.cond.2805' function" {
+	label="CFG for 'Perl_yylex_for.cond.2805' function";
+
+	Node0x5582870 [shape=record,label="{newFuncRoot}"];
+	Node0x5582870 -> Node0x5582910;
+	Node0x55828c0 [shape=record,label="{for.end.2822.exitStub}"];
+	Node0x5582910 [shape=record,label="{it_for.cond.2805|{<s0>T|<s1>F}}"];
+	Node0x5582910:s0 -> Node0x5582aa0;
+	Node0x5582910:s1 -> Node0x5582960;
+	Node0x5582960 [shape=record,label="{it_lor.lhs.false.2809|{<s0>T|<s1>F}}"];
+	Node0x5582960:s0 -> Node0x5582a50;
+	Node0x5582960:s1 -> Node0x55829b0;
+	Node0x55829b0 [shape=record,label="{it_lor.rhs.2813|{<s0>T|<s1>F}}"];
+	Node0x55829b0:s0 -> Node0x5582a00;
+	Node0x55829b0:s1 -> Node0x55828c0;
+	Node0x5582a00 [shape=record,label="{pd_lor.rhs.2813.for.inc.2820_crit_edge}"];
+	Node0x5582a00 -> Node0x5582af0;
+	Node0x5582a50 [shape=record,label="{pd_lor.lhs.false.2809.for.inc.2820_crit_edge}"];
+	Node0x5582a50 -> Node0x5582af0;
+	Node0x5582aa0 [shape=record,label="{pd_for.cond.2805.for.inc.2820_crit_edge}"];
+	Node0x5582aa0 -> Node0x5582af0;
+	Node0x5582af0 [shape=record,label="{it_for.inc.2820}"];
+	Node0x5582af0 -> Node0x5582910;
+}

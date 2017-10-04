@@ -1,0 +1,12 @@
+digraph "CFG for 'add_seginfo_while.cond' function" {
+	label="CFG for 'add_seginfo_while.cond' function";
+
+	Node0xb3f5110 [shape=record,label="{newFuncRoot}"];
+	Node0xb3f5110 -> Node0xb3f51b0;
+	Node0xb3f5160 [shape=record,label="{while.end.exitStub}"];
+	Node0xb3f51b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb3f51b0:s0 -> Node0xb3f5200;
+	Node0xb3f51b0:s1 -> Node0xb3f5160;
+	Node0xb3f5200 [shape=record,label="{it_while.body}"];
+	Node0xb3f5200 -> Node0xb3f51b0;
+}

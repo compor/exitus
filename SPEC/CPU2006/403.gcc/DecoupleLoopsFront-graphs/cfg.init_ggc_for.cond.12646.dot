@@ -1,0 +1,14 @@
+digraph "CFG for 'init_ggc_for.cond' function" {
+	label="CFG for 'init_ggc_for.cond' function";
+
+	Node0xc6b1ff0 [shape=record,label="{newFuncRoot}"];
+	Node0xc6b1ff0 -> Node0xc6b2090;
+	Node0xc6b2040 [shape=record,label="{for.cond.4.preheader.exitStub}"];
+	Node0xc6b2090 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc6b2090:s0 -> Node0xc6b20e0;
+	Node0xc6b2090:s1 -> Node0xc6b2040;
+	Node0xc6b20e0 [shape=record,label="{pd_for.body}"];
+	Node0xc6b20e0 -> Node0xfe75830;
+	Node0xfe75830 [shape=record,label="{it_for.body.split}"];
+	Node0xfe75830 -> Node0xc6b2090;
+}

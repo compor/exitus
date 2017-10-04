@@ -1,0 +1,29 @@
+digraph "CFG for 'store_picture_in_dpb_while.cond' function" {
+	label="CFG for 'store_picture_in_dpb_while.cond' function";
+
+	Node0x26f3860 [shape=record,label="{newFuncRoot}"];
+	Node0x26f3860 -> Node0x26f39a0;
+	Node0x26f38b0 [shape=record,label="{while.end.exitStub}"];
+	Node0x26f3900 [shape=record,label="{if.then.73.if.then.80_crit_edge.exitStub}"];
+	Node0x26f3950 [shape=record,label="{lor.lhs.false.76.if.then.80_crit_edge.exitStub}"];
+	Node0x26f39a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x26f39a0:s0 -> Node0x26f39f0;
+	Node0x26f39a0:s1 -> Node0x26f38b0;
+	Node0x26f39f0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x26f39f0:s0 -> Node0x26f3b30;
+	Node0x26f39f0:s1 -> Node0x26f3a40;
+	Node0x26f3a40 [shape=record,label="{pd_if.then.73}"];
+	Node0x26f3a40 -> Node0x357dc80;
+	Node0x357dc80 [shape=record,label="{it_if.then.73.split|{<s0>T|<s1>F}}"];
+	Node0x357dc80:s0 -> Node0x26f3900;
+	Node0x357dc80:s1 -> Node0x26f3a90;
+	Node0x26f3a90 [shape=record,label="{it_lor.lhs.false.76|{<s0>T|<s1>F}}"];
+	Node0x26f3a90:s0 -> Node0x26f3950;
+	Node0x26f3a90:s1 -> Node0x26f3ae0;
+	Node0x26f3ae0 [shape=record,label="{pd_lor.lhs.false.76.if.end.82_crit_edge}"];
+	Node0x26f3ae0 -> Node0x26f3b80;
+	Node0x26f3b30 [shape=record,label="{pd_while.body.if.end.82_crit_edge}"];
+	Node0x26f3b30 -> Node0x26f3b80;
+	Node0x26f3b80 [shape=record,label="{pd_if.end.82}"];
+	Node0x26f3b80 -> Node0x26f39a0;
+}

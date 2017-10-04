@@ -1,0 +1,23 @@
+digraph "CFG for 'Perl_pp_wait_while.cond' function" {
+	label="CFG for 'Perl_pp_wait_while.cond' function";
+
+	Node0x50fd510 [shape=record,label="{newFuncRoot}"];
+	Node0x50fd510 -> Node0x50fd600;
+	Node0x50fd560 [shape=record,label="{while.cond.if.end.9.loopexit_crit_edge.exitStub}"];
+	Node0x50fd5b0 [shape=record,label="{land.rhs.if.end.9.loopexit_crit_edge.exitStub}"];
+	Node0x50fd600 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x50fd600:s0 -> Node0x50fd650;
+	Node0x50fd600:s1 -> Node0x50fd560;
+	Node0x50fd650 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x50fd650:s0 -> Node0x50fd6a0;
+	Node0x50fd650:s1 -> Node0x50fd5b0;
+	Node0x50fd6a0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x50fd6a0:s0 -> Node0x50fd740;
+	Node0x50fd6a0:s1 -> Node0x50fd6f0;
+	Node0x50fd6f0 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0x50fd6f0 -> Node0x50fd790;
+	Node0x50fd740 [shape=record,label="{pd_if.then.8}"];
+	Node0x50fd740 -> Node0x50fd790;
+	Node0x50fd790 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x50fd790 -> Node0x50fd600;
+}

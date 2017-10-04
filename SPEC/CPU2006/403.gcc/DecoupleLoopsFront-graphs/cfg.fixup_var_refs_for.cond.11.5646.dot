@@ -1,0 +1,19 @@
+digraph "CFG for 'fixup_var_refs_for.cond.11' function" {
+	label="CFG for 'fixup_var_refs_for.cond.11' function";
+
+	Node0xb072460 [shape=record,label="{newFuncRoot}"];
+	Node0xb072460 -> Node0xb072500;
+	Node0xb0724b0 [shape=record,label="{for.end.21.loopexit.exitStub}"];
+	Node0xb072500 [shape=record,label="{it_for.cond.11|{<s0>T|<s1>F}}"];
+	Node0xb072500:s0 -> Node0xb072550;
+	Node0xb072500:s1 -> Node0xb0724b0;
+	Node0xb072550 [shape=record,label="{pd_for.body.13|{<s0>T|<s1>F}}"];
+	Node0xb072550:s0 -> Node0xb0725f0;
+	Node0xb072550:s1 -> Node0xb0725a0;
+	Node0xb0725a0 [shape=record,label="{pd_for.body.13.for.inc.20_crit_edge}"];
+	Node0xb0725a0 -> Node0xb072640;
+	Node0xb0725f0 [shape=record,label="{pd_if.then.18}"];
+	Node0xb0725f0 -> Node0xb072640;
+	Node0xb072640 [shape=record,label="{it_for.inc.20}"];
+	Node0xb072640 -> Node0xb072500;
+}

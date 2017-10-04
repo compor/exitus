@@ -1,0 +1,33 @@
+digraph "CFG for 'Perl_do_sv_dump_while.cond.699' function" {
+	label="CFG for 'Perl_do_sv_dump_while.cond.699' function";
+
+	Node0x4b52750 [shape=record,label="{newFuncRoot}"];
+	Node0x4b52750 -> Node0x4b527f0;
+	Node0x4b527a0 [shape=record,label="{while.end.749.exitStub}"];
+	Node0x4b527f0 [shape=record,label="{it_while.cond.699|{<s0>T|<s1>F}}"];
+	Node0x4b527f0:s0 -> Node0x4b52840;
+	Node0x4b527f0:s1 -> Node0x4b527a0;
+	Node0x4b52840 [shape=record,label="{pd_while.body.706|{<s0>T|<s1>F}}"];
+	Node0x4b52840:s0 -> Node0x4b528e0;
+	Node0x4b52840:s1 -> Node0x4b52890;
+	Node0x4b52890 [shape=record,label="{pd_cond.false.718}"];
+	Node0x4b52890 -> Node0x4b52930;
+	Node0x4b528e0 [shape=record,label="{pd_cond.true.713}"];
+	Node0x4b528e0 -> Node0x4b52930;
+	Node0x4b52930 [shape=record,label="{pd_cond.end.720|{<s0>T|<s1>F}}"];
+	Node0x4b52930:s0 -> Node0x4b529d0;
+	Node0x4b52930:s1 -> Node0x4b52980;
+	Node0x4b52980 [shape=record,label="{pd_cond.end.720.if.end.733_crit_edge}"];
+	Node0x4b52980 -> Node0x4b52a20;
+	Node0x4b529d0 [shape=record,label="{pd_if.then.728}"];
+	Node0x4b529d0 -> Node0x4b52a20;
+	Node0x4b52a20 [shape=record,label="{pd_if.end.733|{<s0>T|<s1>F}}"];
+	Node0x4b52a20:s0 -> Node0x4b52ac0;
+	Node0x4b52a20:s1 -> Node0x4b52a70;
+	Node0x4b52a70 [shape=record,label="{pd_if.end.733.if.end.744_crit_edge}"];
+	Node0x4b52a70 -> Node0x4b52b10;
+	Node0x4b52ac0 [shape=record,label="{pd_if.then.742}"];
+	Node0x4b52ac0 -> Node0x4b52b10;
+	Node0x4b52b10 [shape=record,label="{pd_if.end.744}"];
+	Node0x4b52b10 -> Node0x4b527f0;
+}

@@ -1,0 +1,23 @@
+digraph "CFG for 'BZ2_decompress_while.body.176' function" {
+	label="CFG for 'BZ2_decompress_while.body.176' function";
+
+	Node0x19b3c50 [shape=record,label="{newFuncRoot}"];
+	Node0x19b3c50 -> Node0x19b3d40;
+	Node0x19b3ca0 [shape=record,label="{if.then.180.exitStub}"];
+	Node0x19b3cf0 [shape=record,label="{save_state_and_return.loopexit43.exitStub}"];
+	Node0x19b3d40 [shape=record,label="{it_while.body.176|{<s0>T|<s1>F}}"];
+	Node0x19b3d40:s0 -> Node0x19b3ca0;
+	Node0x19b3d40:s1 -> Node0x19b3d90;
+	Node0x19b3d90 [shape=record,label="{it_if.end.189|{<s0>T|<s1>F}}"];
+	Node0x19b3d90:s0 -> Node0x19b3cf0;
+	Node0x19b3d90:s1 -> Node0x19b3de0;
+	Node0x19b3de0 [shape=record,label="{pd_if.end.195|{<s0>T|<s1>F}}"];
+	Node0x19b3de0:s0 -> Node0x19b3e80;
+	Node0x19b3de0:s1 -> Node0x19b3e30;
+	Node0x19b3e30 [shape=record,label="{pd_if.end.195.while.body.176.backedge_crit_edge}"];
+	Node0x19b3e30 -> Node0x19b3ed0;
+	Node0x19b3e80 [shape=record,label="{pd_if.then.218}"];
+	Node0x19b3e80 -> Node0x19b3ed0;
+	Node0x19b3ed0 [shape=record,label="{pd_while.body.176.backedge}"];
+	Node0x19b3ed0 -> Node0x19b3d40;
+}

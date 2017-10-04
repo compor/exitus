@@ -1,0 +1,26 @@
+digraph "CFG for 'finish_and_score_game_for.cond' function" {
+	label="CFG for 'finish_and_score_game_for.cond' function";
+
+	Node0x4849c70 [shape=record,label="{newFuncRoot}"];
+	Node0x4849c70 -> Node0x484a140;
+	Node0x484a0f0 [shape=record,label="{for.end.26.exitStub}"];
+	Node0x484a140 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x484a140:s0 -> Node0x484a190;
+	Node0x484a140:s1 -> Node0x484a0f0;
+	Node0x484a190 [shape=record,label="{pd_for.body}"];
+	Node0x484a190 -> Node0x484a1e0;
+	Node0x484a1e0 [shape=record,label="{pd_for.cond.2|{<s0>T|<s1>F}}"];
+	Node0x484a1e0:s0 -> Node0x484a280;
+	Node0x484a1e0:s1 -> Node0x484a230;
+	Node0x484a230 [shape=record,label="{pd_for.inc.24}"];
+	Node0x484a230 -> Node0x484a140;
+	Node0x484a280 [shape=record,label="{pd_for.body.4|{<s0>T|<s1>F}}"];
+	Node0x484a280:s0 -> Node0x484a320;
+	Node0x484a280:s1 -> Node0x484a2d0;
+	Node0x484a2d0 [shape=record,label="{pd_for.body.4.for.inc_crit_edge}"];
+	Node0x484a2d0 -> Node0x484a370;
+	Node0x484a320 [shape=record,label="{pd_if.then.12}"];
+	Node0x484a320 -> Node0x484a370;
+	Node0x484a370 [shape=record,label="{pd_for.inc}"];
+	Node0x484a370 -> Node0x484a1e0;
+}

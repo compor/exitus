@@ -1,0 +1,31 @@
+digraph "CFG for '_ZN13cSimpleModule13discardLocalsEv' function" {
+	label="CFG for '_ZN13cSimpleModule13discardLocalsEv' function";
+
+	Node0x1c20990 [shape=record,label="{entry}"];
+	Node0x1c20990 -> Node0x1c209e0;
+	Node0x1c209e0 [shape=record,label="{pd_while.cond}"];
+	Node0x1c209e0 -> Node0x46271f0;
+	Node0x46271f0 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0x46271f0:s0 -> Node0x1c20a30;
+	Node0x46271f0:s1 -> Node0x1c20cb0;
+	Node0x1c20a30 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x1c20a30:s0 -> Node0x1c20a80;
+	Node0x1c20a30:s1 -> Node0x1c20b70;
+	Node0x1c20a80 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x1c20a80:s0 -> Node0x1c20ad0;
+	Node0x1c20a80:s1 -> Node0x1c20b20;
+	Node0x1c20ad0 [shape=record,label="{pd_if.then.while.cond.backedge_crit_edge}"];
+	Node0x1c20ad0 -> Node0x1c20c10;
+	Node0x1c20b20 [shape=record,label="{pd_delete.notnull}"];
+	Node0x1c20b20 -> Node0x1c20c10;
+	Node0x1c20b70 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x1c20b70:s0 -> Node0x1c20bc0;
+	Node0x1c20b70:s1 -> Node0x1c20c60;
+	Node0x1c20bc0 [shape=record,label="{pd_if.then.11}"];
+	Node0x1c20bc0 -> Node0x1c20c10;
+	Node0x1c20c10 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x1c20c10 -> Node0x1c209e0;
+	Node0x1c20c60 [shape=record,label="{pd_if.else.12}"];
+	Node0x1c20c60 -> Node0x1c20c10;
+	Node0x1c20cb0 [shape=record,label="{while.end}"];
+}

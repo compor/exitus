@@ -1,0 +1,38 @@
+digraph "CFG for 'gnugo_play_sgfnode' function" {
+	label="CFG for 'gnugo_play_sgfnode' function";
+
+	Node0x2f69eb0 [shape=record,label="{entry}"];
+	Node0x2f69eb0 -> Node0x2f69f00;
+	Node0x2f69f00 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2f69f00:s0 -> Node0x2f69f50;
+	Node0x2f69f00:s1 -> Node0x2f6a2c0;
+	Node0x2f69f50 [shape=record,label="{pd_for.body|{<s0>def|<s1>16961|<s2>22337|<s3>19536|<s4>8279|<s5>8258}}"];
+	Node0x2f69f50:s0 -> Node0x2f6a040;
+	Node0x2f69f50:s1 -> Node0x2f6a090;
+	Node0x2f69f50:s2 -> Node0x2f6a0e0;
+	Node0x2f69f50:s3 -> Node0x2f6a130;
+	Node0x2f69f50:s4 -> Node0x2f69ff0;
+	Node0x2f69f50:s5 -> Node0x2f69fa0;
+	Node0x2f69fa0 [shape=record,label="{pd_for.body.sw.bb.11_crit_edge.1}"];
+	Node0x2f69fa0 -> Node0x2f6a220;
+	Node0x2f69ff0 [shape=record,label="{pd_for.body.sw.bb.11_crit_edge}"];
+	Node0x2f69ff0 -> Node0x2f6a220;
+	Node0x2f6a040 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x2f6a040 -> Node0x2f6a270;
+	Node0x2f6a090 [shape=record,label="{pd_sw.bb}"];
+	Node0x2f6a090 -> Node0x2f6a270;
+	Node0x2f6a0e0 [shape=record,label="{pd_sw.bb.1}"];
+	Node0x2f6a0e0 -> Node0x2f6a270;
+	Node0x2f6a130 [shape=record,label="{pd_sw.bb.3|{<s0>T|<s1>F}}"];
+	Node0x2f6a130:s0 -> Node0x2f6a180;
+	Node0x2f6a130:s1 -> Node0x2f6a1d0;
+	Node0x2f6a180 [shape=record,label="{pd_sw.bb.3.for.inc_crit_edge}"];
+	Node0x2f6a180 -> Node0x2f6a270;
+	Node0x2f6a1d0 [shape=record,label="{pd_lor.lhs.false}"];
+	Node0x2f6a1d0 -> Node0x2f6a270;
+	Node0x2f6a220 [shape=record,label="{pd_sw.bb.11}"];
+	Node0x2f6a220 -> Node0x2f6a270;
+	Node0x2f6a270 [shape=record,label="{it_for.inc}"];
+	Node0x2f6a270 -> Node0x2f69f00;
+	Node0x2f6a2c0 [shape=record,label="{for.end}"];
+}

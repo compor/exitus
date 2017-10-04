@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_av_reify_while.cond' function" {
+	label="CFG for 'Perl_av_reify_while.cond' function";
+
+	Node0x4aa4040 [shape=record,label="{newFuncRoot}"];
+	Node0x4aa4040 -> Node0x4aa40e0;
+	Node0x4aa4090 [shape=record,label="{while.cond.6.preheader.exitStub}"];
+	Node0x4aa40e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4aa40e0:s0 -> Node0x4aa4130;
+	Node0x4aa40e0:s1 -> Node0x4aa4090;
+	Node0x4aa4130 [shape=record,label="{it_while.body}"];
+	Node0x4aa4130 -> Node0x6329f80;
+	Node0x6329f80 [shape=record,label="{pd_while.body.split}"];
+	Node0x6329f80 -> Node0x4aa40e0;
+}

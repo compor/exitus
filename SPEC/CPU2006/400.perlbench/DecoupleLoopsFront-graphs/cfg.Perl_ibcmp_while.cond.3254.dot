@@ -1,0 +1,23 @@
+digraph "CFG for 'Perl_ibcmp_while.cond' function" {
+	label="CFG for 'Perl_ibcmp_while.cond' function";
+
+	Node0x5813fd0 [shape=record,label="{newFuncRoot}"];
+	Node0x5813fd0 -> Node0x58140c0;
+	Node0x5814020 [shape=record,label="{while.cond.return_crit_edge.exitStub}"];
+	Node0x5814070 [shape=record,label="{land.lhs.true.return_crit_edge.exitStub}"];
+	Node0x58140c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x58140c0:s0 -> Node0x5814110;
+	Node0x58140c0:s1 -> Node0x5814020;
+	Node0x5814110 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x5814110:s0 -> Node0x58141b0;
+	Node0x5814110:s1 -> Node0x5814160;
+	Node0x5814160 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x5814160 -> Node0x5814250;
+	Node0x58141b0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x58141b0:s0 -> Node0x5814070;
+	Node0x58141b0:s1 -> Node0x5814200;
+	Node0x5814200 [shape=record,label="{pd_land.lhs.true.if.end_crit_edge}"];
+	Node0x5814200 -> Node0x5814250;
+	Node0x5814250 [shape=record,label="{it_if.end}"];
+	Node0x5814250 -> Node0x58140c0;
+}

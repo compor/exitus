@@ -1,0 +1,24 @@
+digraph "CFG for '_Z15task_stackusageP5_Task_while.cond' function" {
+	label="CFG for '_Z15task_stackusageP5_Task_while.cond' function";
+
+	Node0x21166c0 [shape=record,label="{newFuncRoot}"];
+	Node0x21166c0 -> Node0x2132640;
+	Node0x2132500 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x2132550 [shape=record,label="{land.lhs.true.14.while.end_crit_edge.exitStub}"];
+	Node0x21325a0 [shape=record,label="{land.lhs.true.18.while.end_crit_edge.exitStub}"];
+	Node0x21325f0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x2132640 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2132640:s0 -> Node0x2132690;
+	Node0x2132640:s1 -> Node0x2132500;
+	Node0x2132690 [shape=record,label="{it_land.lhs.true.14|{<s0>T|<s1>F}}"];
+	Node0x2132690:s0 -> Node0x21326e0;
+	Node0x2132690:s1 -> Node0x2132550;
+	Node0x21326e0 [shape=record,label="{it_land.lhs.true.18|{<s0>T|<s1>F}}"];
+	Node0x21326e0:s0 -> Node0x2132730;
+	Node0x21326e0:s1 -> Node0x21325a0;
+	Node0x2132730 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x2132730:s0 -> Node0x2132780;
+	Node0x2132730:s1 -> Node0x21325f0;
+	Node0x2132780 [shape=record,label="{it_while.body}"];
+	Node0x2132780 -> Node0x2132640;
+}

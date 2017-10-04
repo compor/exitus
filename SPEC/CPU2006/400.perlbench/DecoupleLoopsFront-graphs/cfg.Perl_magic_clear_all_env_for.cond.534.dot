@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_magic_clear_all_env_for.cond' function" {
+	label="CFG for 'Perl_magic_clear_all_env_for.cond' function";
+
+	Node0x4bc0e70 [shape=record,label="{newFuncRoot}"];
+	Node0x4bc0e70 -> Node0x4bc0f10;
+	Node0x4bc0ec0 [shape=record,label="{if.end.4.loopexit.exitStub}"];
+	Node0x4bc0f10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bc0f10:s0 -> Node0x4bc0f60;
+	Node0x4bc0f10:s1 -> Node0x4bc0ec0;
+	Node0x4bc0f60 [shape=record,label="{pd_for.body}"];
+	Node0x4bc0f60 -> Node0x6304330;
+	Node0x6304330 [shape=record,label="{it_for.body.split}"];
+	Node0x6304330 -> Node0x4bc0f10;
+}

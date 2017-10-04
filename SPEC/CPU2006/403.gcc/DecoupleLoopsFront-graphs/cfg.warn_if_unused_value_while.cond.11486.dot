@@ -1,0 +1,19 @@
+digraph "CFG for 'warn_if_unused_value_while.cond' function" {
+	label="CFG for 'warn_if_unused_value_while.cond' function";
+
+	Node0xc374880 [shape=record,label="{newFuncRoot}"];
+	Node0xc374880 -> Node0xc39ee10;
+	Node0xc39edc0 [shape=record,label="{while.end.exitStub}"];
+	Node0xc39ee10 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc39ee10:s0 -> Node0xc39f320;
+	Node0xc39ee10:s1 -> Node0xc39f280;
+	Node0xc39f280 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0xc39f280:s0 -> Node0xc39f2d0;
+	Node0xc39f280:s1 -> Node0xc39edc0;
+	Node0xc39f2d0 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0xc39f2d0 -> Node0xc39f370;
+	Node0xc39f320 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0xc39f320 -> Node0xc39f370;
+	Node0xc39f370 [shape=record,label="{it_while.body}"];
+	Node0xc39f370 -> Node0xc39ee10;
+}

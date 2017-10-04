@@ -1,0 +1,29 @@
+digraph "CFG for '_ZN14FilteredMatrixI17BlockSparseMatrixIdE11BlockVectorIdEE19allocate_tmp_vectorEv' function" {
+	label="CFG for '_ZN14FilteredMatrixI17BlockSparseMatrixIdE11BlockVectorIdEE19allocate_tmp_vectorEv' function";
+
+	Node0x54cb0a0 [shape=record,label="{entry}"];
+	Node0x54cb0a0 -> Node0x54cb0f0;
+	Node0x54cb0f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x54cb0f0:s0 -> Node0x54cb140;
+	Node0x54cb0f0:s1 -> Node0x54cb230;
+	Node0x54cb140 [shape=record,label="{it_for.body}"];
+	Node0x54cb140 -> Node0x54cb190;
+	Node0x54cb140 -> Node0x54cb1e0;
+	Node0x54cb190 [shape=record,label="{pd_invoke.cont.7}"];
+	Node0x54cb190 -> Node0xa6f8b30;
+	Node0xa6f8b30 [shape=record,label="{it_invoke.cont.7.split}"];
+	Node0xa6f8b30 -> Node0x54cb0f0;
+	Node0x54cb1e0 [shape=record,label="{lpad}"];
+	Node0x54cb1e0 -> Node0x54cb320;
+	Node0x54cb230 [shape=record,label="{for.end}"];
+	Node0x54cb230 -> Node0x54cb280;
+	Node0x54cb230 -> Node0x54cb2d0;
+	Node0x54cb280 [shape=record,label="{invoke.cont.16}"];
+	Node0x54cb2d0 [shape=record,label="{lpad.15}"];
+	Node0x54cb2d0 -> Node0x54cb320;
+	Node0x54cb320 [shape=record,label="{ehcleanup}"];
+	Node0x54cb320 -> Node0x54cb370;
+	Node0x54cb320 -> Node0x54cb3c0;
+	Node0x54cb370 [shape=record,label="{eh.resume}"];
+	Node0x54cb3c0 [shape=record,label="{terminate.lpad}"];
+}

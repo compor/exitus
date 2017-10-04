@@ -1,0 +1,16 @@
+digraph "CFG for 'sv_x_while.cond' function" {
+	label="CFG for 'sv_x_while.cond' function";
+
+	Node0x5859aa0 [shape=record,label="{newFuncRoot}"];
+	Node0x5859aa0 -> Node0x5859b40;
+	Node0x5859af0 [shape=record,label="{if.end.32.loopexit.exitStub}"];
+	Node0x5859b40 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x5859b40:s0 -> Node0x5865a60;
+	Node0x5859b40:s1 -> Node0x5859af0;
+	Node0x5865a60 [shape=record,label="{pd_while.body}"];
+	Node0x5865a60 -> Node0x6de5d60;
+	Node0x6de5d60 [shape=record,label="{it_while.body.split1}"];
+	Node0x6de5d60 -> Node0x6ddbdf0;
+	Node0x6ddbdf0 [shape=record,label="{pd_while.body.split}"];
+	Node0x6ddbdf0 -> Node0x5859b40;
+}

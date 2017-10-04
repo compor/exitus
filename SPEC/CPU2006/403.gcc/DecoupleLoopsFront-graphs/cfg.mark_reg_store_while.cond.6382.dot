@@ -1,0 +1,14 @@
+digraph "CFG for 'mark_reg_store_while.cond' function" {
+	label="CFG for 'mark_reg_store_while.cond' function";
+
+	Node0xb266e40 [shape=record,label="{newFuncRoot}"];
+	Node0xb266e40 -> Node0xb267250;
+	Node0xb267200 [shape=record,label="{if.end.126.loopexit.exitStub}"];
+	Node0xb267250 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb267250:s0 -> Node0xb2672a0;
+	Node0xb267250:s1 -> Node0xb267200;
+	Node0xb2672a0 [shape=record,label="{pd_while.body}"];
+	Node0xb2672a0 -> Node0xf62f190;
+	Node0xf62f190 [shape=record,label="{it_while.body.split}"];
+	Node0xf62f190 -> Node0xb267250;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_utf16_to_utf8_reversed' function" {
+	label="CFG for 'Perl_utf16_to_utf8_reversed' function";
+
+	Node0x438cfa0 [shape=record,label="{entry}"];
+	Node0x438cfa0 -> Node0x438cff0;
+	Node0x438cff0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x438cff0:s0 -> Node0x438d040;
+	Node0x438cff0:s1 -> Node0x438d090;
+	Node0x438d040 [shape=record,label="{pd_while.body}"];
+	Node0x438d040 -> Node0x6a8ac10;
+	Node0x6a8ac10 [shape=record,label="{it_while.body.split}"];
+	Node0x6a8ac10 -> Node0x438cff0;
+	Node0x438d090 [shape=record,label="{while.end}"];
+}

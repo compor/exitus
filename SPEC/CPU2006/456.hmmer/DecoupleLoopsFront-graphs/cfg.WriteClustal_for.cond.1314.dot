@@ -1,0 +1,14 @@
+digraph "CFG for 'WriteClustal_for.cond' function" {
+	label="CFG for 'WriteClustal_for.cond' function";
+
+	Node0x308a4e0 [shape=record,label="{newFuncRoot}"];
+	Node0x308a4e0 -> Node0x308a580;
+	Node0x308a530 [shape=record,label="{for.end.exitStub}"];
+	Node0x308a580 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x308a580:s0 -> Node0x308a5d0;
+	Node0x308a580:s1 -> Node0x308a530;
+	Node0x308a5d0 [shape=record,label="{pd_for.body}"];
+	Node0x308a5d0 -> Node0x38c7390;
+	Node0x38c7390 [shape=record,label="{it_for.body.split}"];
+	Node0x38c7390 -> Node0x308a580;
+}

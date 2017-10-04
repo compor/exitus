@@ -1,0 +1,44 @@
+digraph "CFG for 'play_attack_defend_n_for.cond' function" {
+	label="CFG for 'play_attack_defend_n_for.cond' function";
+
+	Node0x4582fd0 [shape=record,label="{newFuncRoot}"];
+	Node0x4582fd0 -> Node0x4583070;
+	Node0x4583020 [shape=record,label="{for.end.exitStub}"];
+	Node0x4583070 [shape=record,label="{it_for.cond}"];
+	Node0x4583070 -> Node0x55fbf60;
+	Node0x55fbf60 [shape=record,label="{pd_for.cond.split1}"];
+	Node0x55fbf60 -> Node0x514c0a0;
+	Node0x514c0a0 [shape=record,label="{it_for.cond.split|{<s0>T|<s1>F}}"];
+	Node0x514c0a0:s0 -> Node0x45830c0;
+	Node0x514c0a0:s1 -> Node0x4583020;
+	Node0x45830c0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x45830c0:s0 -> Node0x4583160;
+	Node0x45830c0:s1 -> Node0x4583110;
+	Node0x4583110 [shape=record,label="{pd_vaarg.in_mem}"];
+	Node0x4583110 -> Node0x45831b0;
+	Node0x4583160 [shape=record,label="{pd_vaarg.in_reg}"];
+	Node0x4583160 -> Node0x45831b0;
+	Node0x45831b0 [shape=record,label="{pd_vaarg.end|{<s0>T|<s1>F}}"];
+	Node0x45831b0:s0 -> Node0x4583250;
+	Node0x45831b0:s1 -> Node0x4583200;
+	Node0x4583200 [shape=record,label="{pd_vaarg.end.if.end_crit_edge}"];
+	Node0x4583200 -> Node0x4583430;
+	Node0x4583250 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4583250:s0 -> Node0x4583390;
+	Node0x4583250:s1 -> Node0x45832a0;
+	Node0x45832a0 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x45832a0:s0 -> Node0x4583340;
+	Node0x45832a0:s1 -> Node0x45832f0;
+	Node0x45832f0 [shape=record,label="{pd_lor.lhs.false.if.end_crit_edge}"];
+	Node0x45832f0 -> Node0x4583430;
+	Node0x4583340 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x4583340 -> Node0x45833e0;
+	Node0x4583390 [shape=record,label="{pd_land.lhs.true.if.then_crit_edge}"];
+	Node0x4583390 -> Node0x45833e0;
+	Node0x45833e0 [shape=record,label="{pd_if.then}"];
+	Node0x45833e0 -> Node0x4583430;
+	Node0x4583430 [shape=record,label="{pd_if.end}"];
+	Node0x4583430 -> Node0x514bc20;
+	Node0x514bc20 [shape=record,label="{it_if.end.split}"];
+	Node0x514bc20 -> Node0x4583070;
+}

@@ -1,0 +1,20 @@
+digraph "CFG for 'getpwd_for.cond' function" {
+	label="CFG for 'getpwd_for.cond' function";
+
+	Node0xc7489b0 [shape=record,label="{newFuncRoot}"];
+	Node0xc7489b0 -> Node0xc748aa0;
+	Node0xc748a00 [shape=record,label="{if.end.31.loopexit.exitStub}"];
+	Node0xc748a50 [shape=record,label="{if.then.29.exitStub}"];
+	Node0xc748aa0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc748aa0:s0 -> Node0xc748af0;
+	Node0xc748aa0:s1 -> Node0xc748a00;
+	Node0xc748af0 [shape=record,label="{it_for.body}"];
+	Node0xc748af0 -> Node0xfe7c350;
+	Node0xfe7c350 [shape=record,label="{pd_for.body.split1}"];
+	Node0xfe7c350 -> Node0xfe7d880;
+	Node0xfe7d880 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0xfe7d880:s0 -> Node0xc748a50;
+	Node0xfe7d880:s1 -> Node0xc748b40;
+	Node0xc748b40 [shape=record,label="{it_for.inc}"];
+	Node0xc748b40 -> Node0xc748aa0;
+}

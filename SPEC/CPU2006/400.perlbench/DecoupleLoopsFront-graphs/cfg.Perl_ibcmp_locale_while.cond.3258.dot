@@ -1,0 +1,23 @@
+digraph "CFG for 'Perl_ibcmp_locale_while.cond' function" {
+	label="CFG for 'Perl_ibcmp_locale_while.cond' function";
+
+	Node0x5815450 [shape=record,label="{newFuncRoot}"];
+	Node0x5815450 -> Node0x5815960;
+	Node0x58158c0 [shape=record,label="{while.cond.return_crit_edge.exitStub}"];
+	Node0x5815910 [shape=record,label="{land.lhs.true.return_crit_edge.exitStub}"];
+	Node0x5815960 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x5815960:s0 -> Node0x58159b0;
+	Node0x5815960:s1 -> Node0x58158c0;
+	Node0x58159b0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x58159b0:s0 -> Node0x5815a50;
+	Node0x58159b0:s1 -> Node0x5815a00;
+	Node0x5815a00 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x5815a00 -> Node0x5815af0;
+	Node0x5815a50 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x5815a50:s0 -> Node0x5815910;
+	Node0x5815a50:s1 -> Node0x5815aa0;
+	Node0x5815aa0 [shape=record,label="{pd_land.lhs.true.if.end_crit_edge}"];
+	Node0x5815aa0 -> Node0x5815af0;
+	Node0x5815af0 [shape=record,label="{it_if.end}"];
+	Node0x5815af0 -> Node0x5815960;
+}

@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN3pov9Parse_FogEv_while.cond' function" {
+	label="CFG for '_ZN3pov9Parse_FogEv_while.cond' function";
+
+	Node0x28780c0 [shape=record,label="{newFuncRoot}"];
+	Node0x28780c0 -> Node0x2878160;
+	Node0x2878110 [shape=record,label="{while.cond.3.preheader.exitStub}"];
+	Node0x2878160 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2878160:s0 -> Node0x28781b0;
+	Node0x2878160:s1 -> Node0x2878110;
+	Node0x28781b0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x28781b0:s0 -> Node0x2882720;
+	Node0x28781b0:s1 -> Node0x28826d0;
+	Node0x28826d0 [shape=record,label="{pd_sw.default}"];
+	Node0x28826d0 -> Node0x2882770;
+	Node0x2882720 [shape=record,label="{pd_sw.bb}"];
+	Node0x2882720 -> Node0x2882770;
+	Node0x2882770 [shape=record,label="{it_while.cond.backedge}"];
+	Node0x2882770 -> Node0x2878160;
+}

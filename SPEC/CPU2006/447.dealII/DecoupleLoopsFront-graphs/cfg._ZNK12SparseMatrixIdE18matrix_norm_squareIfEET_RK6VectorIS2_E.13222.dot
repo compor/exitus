@@ -1,0 +1,21 @@
+digraph "CFG for '_ZNK12SparseMatrixIdE18matrix_norm_squareIfEET_RK6VectorIS2_E' function" {
+	label="CFG for '_ZNK12SparseMatrixIdE18matrix_norm_squareIfEET_RK6VectorIS2_E' function";
+
+	Node0x2434340 [shape=record,label="{entry}"];
+	Node0x2434340 -> Node0x2434390;
+	Node0x2434390 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2434390:s0 -> Node0x24343e0;
+	Node0x2434390:s1 -> Node0x2434520;
+	Node0x24343e0 [shape=record,label="{pd_for.body}"];
+	Node0x24343e0 -> Node0x2434430;
+	Node0x2434430 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2434430:s0 -> Node0x2434480;
+	Node0x2434430:s1 -> Node0x24344d0;
+	Node0x2434480 [shape=record,label="{pd_while.body}"];
+	Node0x2434480 -> Node0x2434430;
+	Node0x24344d0 [shape=record,label="{pd_while.end}"];
+	Node0x24344d0 -> Node0xb1aa5e0;
+	Node0xb1aa5e0 [shape=record,label="{it_while.end.split}"];
+	Node0xb1aa5e0 -> Node0x2434390;
+	Node0x2434520 [shape=record,label="{for.end}"];
+}

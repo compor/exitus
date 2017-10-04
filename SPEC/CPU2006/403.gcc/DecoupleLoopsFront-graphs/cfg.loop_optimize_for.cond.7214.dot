@@ -1,0 +1,24 @@
+digraph "CFG for 'loop_optimize_for.cond' function" {
+	label="CFG for 'loop_optimize_for.cond' function";
+
+	Node0xb48ef50 [shape=record,label="{newFuncRoot}"];
+	Node0xb48ef50 -> Node0xb48eff0;
+	Node0xb48efa0 [shape=record,label="{for.end.exitStub}"];
+	Node0xb48eff0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb48eff0:s0 -> Node0xb48f040;
+	Node0xb48eff0:s1 -> Node0xb48efa0;
+	Node0xb48f040 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xb48f040:s0 -> Node0xb48f0e0;
+	Node0xb48f040:s1 -> Node0xb48f090;
+	Node0xb48f090 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xb48f090 -> Node0xb48f1d0;
+	Node0xb48f0e0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xb48f0e0:s0 -> Node0xb48f180;
+	Node0xb48f0e0:s1 -> Node0xb48f130;
+	Node0xb48f130 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0xb48f130 -> Node0xb48f1d0;
+	Node0xb48f180 [shape=record,label="{pd_if.then}"];
+	Node0xb48f180 -> Node0xb48f1d0;
+	Node0xb48f1d0 [shape=record,label="{it_for.inc}"];
+	Node0xb48f1d0 -> Node0xb48eff0;
+}

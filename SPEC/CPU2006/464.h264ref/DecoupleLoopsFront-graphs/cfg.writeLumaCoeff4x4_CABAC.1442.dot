@@ -1,0 +1,16 @@
+digraph "CFG for 'writeLumaCoeff4x4_CABAC' function" {
+	label="CFG for 'writeLumaCoeff4x4_CABAC' function";
+
+	Node0x1b49bd0 [shape=record,label="{entry}"];
+	Node0x1b49bd0 -> Node0x1b49c20;
+	Node0x1b49c20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1b49c20:s0 -> Node0x1b49c70;
+	Node0x1b49c20:s1 -> Node0x1b5c870;
+	Node0x1b49c70 [shape=record,label="{it_for.body}"];
+	Node0x1b49c70 -> Node0x3113b00;
+	Node0x3113b00 [shape=record,label="{pd_for.body.split1}"];
+	Node0x3113b00 -> Node0x31e0680;
+	Node0x31e0680 [shape=record,label="{it_for.body.split}"];
+	Node0x31e0680 -> Node0x1b49c20;
+	Node0x1b5c870 [shape=record,label="{for.end}"];
+}

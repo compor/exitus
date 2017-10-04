@@ -1,0 +1,14 @@
+digraph "CFG for 'dump_stack_for.cond' function" {
+	label="CFG for 'dump_stack_for.cond' function";
+
+	Node0x3de0600 [shape=record,label="{newFuncRoot}"];
+	Node0x3de0600 -> Node0x3de06a0;
+	Node0x3de0650 [shape=record,label="{for.end.exitStub}"];
+	Node0x3de06a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3de06a0:s0 -> Node0x3de06f0;
+	Node0x3de06a0:s1 -> Node0x3de0650;
+	Node0x3de06f0 [shape=record,label="{pd_for.body}"];
+	Node0x3de06f0 -> Node0x4fb52f0;
+	Node0x4fb52f0 [shape=record,label="{it_for.body.split}"];
+	Node0x4fb52f0 -> Node0x3de06a0;
+}

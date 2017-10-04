@@ -1,0 +1,21 @@
+digraph "CFG for '_ZNK12SparseMatrixIdE9vmult_addI11BlockVectorIfES3_EEvRT_RKT0_' function" {
+	label="CFG for '_ZNK12SparseMatrixIdE9vmult_addI11BlockVectorIfES3_EEvRT_RKT0_' function";
+
+	Node0x242e990 [shape=record,label="{entry}"];
+	Node0x242e990 -> Node0x242e9e0;
+	Node0x242e9e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x242e9e0:s0 -> Node0x242ea30;
+	Node0x242e9e0:s1 -> Node0x242eb70;
+	Node0x242ea30 [shape=record,label="{pd_for.body}"];
+	Node0x242ea30 -> Node0x242ea80;
+	Node0x242ea80 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x242ea80:s0 -> Node0x242ead0;
+	Node0x242ea80:s1 -> Node0x242eb20;
+	Node0x242ead0 [shape=record,label="{pd_while.body}"];
+	Node0x242ead0 -> Node0x242ea80;
+	Node0x242eb20 [shape=record,label="{pd_while.end}"];
+	Node0x242eb20 -> Node0xb185840;
+	Node0xb185840 [shape=record,label="{it_while.end.split}"];
+	Node0xb185840 -> Node0x242e9e0;
+	Node0x242eb70 [shape=record,label="{for.end}"];
+}

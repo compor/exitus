@@ -1,0 +1,33 @@
+digraph "CFG for 'CompressSpareMBMap_for.cond.145' function" {
+	label="CFG for 'CompressSpareMBMap_for.cond.145' function";
+
+	Node0x2683a60 [shape=record,label="{newFuncRoot}"];
+	Node0x2683a60 -> Node0x2683b00;
+	Node0x2683ab0 [shape=record,label="{if.end.190.loopexit.exitStub}"];
+	Node0x2683b00 [shape=record,label="{it_for.cond.145|{<s0>T|<s1>F}}"];
+	Node0x2683b00:s0 -> Node0x2683b50;
+	Node0x2683b00:s1 -> Node0x2683ab0;
+	Node0x2683b50 [shape=record,label="{pd_for.cond.151.preheader}"];
+	Node0x2683b50 -> Node0x2683ba0;
+	Node0x2683ba0 [shape=record,label="{pd_for.cond.151|{<s0>T|<s1>F}}"];
+	Node0x2683ba0:s0 -> Node0x2684470;
+	Node0x2683ba0:s1 -> Node0x2683bf0;
+	Node0x2683bf0 [shape=record,label="{it_for.inc.187}"];
+	Node0x2683bf0 -> Node0x2683b00;
+	Node0x2684470 [shape=record,label="{pd_for.body.156|{<s0>T|<s1>F}}"];
+	Node0x2684470:s0 -> Node0x2684510;
+	Node0x2684470:s1 -> Node0x26844c0;
+	Node0x26844c0 [shape=record,label="{pd_for.body.156.if.end.169_crit_edge}"];
+	Node0x26844c0 -> Node0x2684560;
+	Node0x2684510 [shape=record,label="{pd_if.then.165}"];
+	Node0x2684510 -> Node0x2684560;
+	Node0x2684560 [shape=record,label="{pd_if.end.169|{<s0>T|<s1>F}}"];
+	Node0x2684560:s0 -> Node0x2684600;
+	Node0x2684560:s1 -> Node0x26845b0;
+	Node0x26845b0 [shape=record,label="{pd_if.end.169.for.inc.184_crit_edge}"];
+	Node0x26845b0 -> Node0x2684650;
+	Node0x2684600 [shape=record,label="{pd_if.then.175}"];
+	Node0x2684600 -> Node0x2684650;
+	Node0x2684650 [shape=record,label="{pd_for.inc.184}"];
+	Node0x2684650 -> Node0x2683ba0;
+}

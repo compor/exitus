@@ -1,0 +1,12 @@
+digraph "CFG for 'next_insn_no_annul_while.cond' function" {
+	label="CFG for 'next_insn_no_annul_while.cond' function";
+
+	Node0xc06dd30 [shape=record,label="{newFuncRoot}"];
+	Node0xc06dd30 -> Node0xc06ddd0;
+	Node0xc06dd80 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0xc06ddd0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc06ddd0:s0 -> Node0xc06de20;
+	Node0xc06ddd0:s1 -> Node0xc06dd80;
+	Node0xc06de20 [shape=record,label="{it_while.body}"];
+	Node0xc06de20 -> Node0xc06ddd0;
+}

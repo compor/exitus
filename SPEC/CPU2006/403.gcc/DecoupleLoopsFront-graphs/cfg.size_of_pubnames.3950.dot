@@ -1,0 +1,14 @@
+digraph "CFG for 'size_of_pubnames' function" {
+	label="CFG for 'size_of_pubnames' function";
+
+	Node0x3d47d60 [shape=record,label="{entry}"];
+	Node0x3d47d60 -> Node0x3d51e40;
+	Node0x3d51e40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3d51e40:s0 -> Node0x3d51e90;
+	Node0x3d51e40:s1 -> Node0x3d51ee0;
+	Node0x3d51e90 [shape=record,label="{pd_for.body}"];
+	Node0x3d51e90 -> Node0xc8e2600;
+	Node0xc8e2600 [shape=record,label="{it_for.body.split}"];
+	Node0xc8e2600 -> Node0x3d51e40;
+	Node0x3d51ee0 [shape=record,label="{for.end}"];
+}

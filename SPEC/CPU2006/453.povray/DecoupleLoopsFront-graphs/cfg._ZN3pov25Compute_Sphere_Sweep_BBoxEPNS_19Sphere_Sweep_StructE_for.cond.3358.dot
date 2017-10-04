@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN3pov25Compute_Sphere_Sweep_BBoxEPNS_19Sphere_Sweep_StructE_for.cond' function" {
+	label="CFG for '_ZN3pov25Compute_Sphere_Sweep_BBoxEPNS_19Sphere_Sweep_StructE_for.cond' function";
+
+	Node0x2c49520 [shape=record,label="{newFuncRoot}"];
+	Node0x2c49520 -> Node0x2c495c0;
+	Node0x2c49570 [shape=record,label="{for.end.exitStub}"];
+	Node0x2c495c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2c495c0:s0 -> Node0x2c49610;
+	Node0x2c495c0:s1 -> Node0x2c49570;
+	Node0x2c49610 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2c49610:s0 -> Node0x2c496b0;
+	Node0x2c49610:s1 -> Node0x2c49660;
+	Node0x2c49660 [shape=record,label="{pd_if.else}"];
+	Node0x2c49660 -> Node0x2c49700;
+	Node0x2c496b0 [shape=record,label="{pd_if.then}"];
+	Node0x2c496b0 -> Node0x2c49700;
+	Node0x2c49700 [shape=record,label="{it_for.inc}"];
+	Node0x2c49700 -> Node0x2c495c0;
+}

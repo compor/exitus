@@ -1,0 +1,33 @@
+digraph "CFG for '_ZN15SparsityPattern10symmetrizeEv' function" {
+	label="CFG for '_ZN15SparsityPattern10symmetrizeEv' function";
+
+	Node0x741ca30 [shape=record,label="{entry}"];
+	Node0x741ca30 -> Node0x741cef0;
+	Node0x741cef0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x741cef0:s0 -> Node0x741cf40;
+	Node0x741cef0:s1 -> Node0x741d260;
+	Node0x741cf40 [shape=record,label="{pd_for.body}"];
+	Node0x741cf40 -> Node0x741cf90;
+	Node0x741cf90 [shape=record,label="{pd_for.cond.2|{<s0>T|<s1>F}}"];
+	Node0x741cf90:s0 -> Node0x741d030;
+	Node0x741cf90:s1 -> Node0x741cfe0;
+	Node0x741cfe0 [shape=record,label="{pd_for.cond.2.for.inc.20_crit_edge}"];
+	Node0x741cfe0 -> Node0x741d210;
+	Node0x741d030 [shape=record,label="{pd_for.body.7|{<s0>T|<s1>F}}"];
+	Node0x741d030:s0 -> Node0x741d080;
+	Node0x741d030:s1 -> Node0x741d0d0;
+	Node0x741d080 [shape=record,label="{pd_for.body.7.for.inc.20_crit_edge}"];
+	Node0x741d080 -> Node0x741d210;
+	Node0x741d0d0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x741d0d0:s0 -> Node0x741d170;
+	Node0x741d0d0:s1 -> Node0x741d120;
+	Node0x741d120 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0x741d120 -> Node0x741d1c0;
+	Node0x741d170 [shape=record,label="{pd_if.then.15}"];
+	Node0x741d170 -> Node0x741d1c0;
+	Node0x741d1c0 [shape=record,label="{pd_for.inc}"];
+	Node0x741d1c0 -> Node0x741cf90;
+	Node0x741d210 [shape=record,label="{it_for.inc.20}"];
+	Node0x741d210 -> Node0x741cef0;
+	Node0x741d260 [shape=record,label="{for.end.22}"];
+}

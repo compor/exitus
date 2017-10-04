@@ -1,0 +1,14 @@
+digraph "CFG for 'S_more_xrv' function" {
+	label="CFG for 'S_more_xrv' function";
+
+	Node0x3dcc500 [shape=record,label="{entry}"];
+	Node0x3dcc500 -> Node0x3dcc550;
+	Node0x3dcc550 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3dcc550:s0 -> Node0x3dcc940;
+	Node0x3dcc550:s1 -> Node0x3dcc990;
+	Node0x3dcc940 [shape=record,label="{pd_while.body}"];
+	Node0x3dcc940 -> Node0x637c4b0;
+	Node0x637c4b0 [shape=record,label="{it_while.body.split}"];
+	Node0x637c4b0 -> Node0x3dcc550;
+	Node0x3dcc990 [shape=record,label="{while.end}"];
+}

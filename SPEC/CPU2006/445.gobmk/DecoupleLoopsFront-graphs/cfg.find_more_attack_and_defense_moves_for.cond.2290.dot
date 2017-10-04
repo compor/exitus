@@ -1,0 +1,41 @@
+digraph "CFG for 'find_more_attack_and_defense_moves_for.cond' function" {
+	label="CFG for 'find_more_attack_and_defense_moves_for.cond' function";
+
+	Node0x45cf190 [shape=record,label="{newFuncRoot}"];
+	Node0x45cf190 -> Node0x45c21b0;
+	Node0x45cf1e0 [shape=record,label="{for.end.27.exitStub}"];
+	Node0x45c21b0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x45c21b0:s0 -> Node0x45c2200;
+	Node0x45c21b0:s1 -> Node0x45cf1e0;
+	Node0x45c2200 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x45c2200 -> Node0x45c2250;
+	Node0x45c2250 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x45c2250:s0 -> Node0x45c22f0;
+	Node0x45c2250:s1 -> Node0x45c22a0;
+	Node0x45c22a0 [shape=record,label="{it_for.inc.25}"];
+	Node0x45c22a0 -> Node0x45c21b0;
+	Node0x45c22f0 [shape=record,label="{pd_for.body.3|{<s0>T|<s1>F}}"];
+	Node0x45c22f0:s0 -> Node0x45c2390;
+	Node0x45c22f0:s1 -> Node0x45c2340;
+	Node0x45c2340 [shape=record,label="{pd_for.body.3.for.inc_crit_edge}"];
+	Node0x45c2340 -> Node0x45d1620;
+	Node0x45c2390 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x45c2390:s0 -> Node0x45d1490;
+	Node0x45c2390:s1 -> Node0x45c23e0;
+	Node0x45c23e0 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x45c23e0 -> Node0x45d1620;
+	Node0x45d1490 [shape=record,label="{pd_land.lhs.true.10|{<s0>T|<s1>F}}"];
+	Node0x45d1490:s0 -> Node0x45d1530;
+	Node0x45d1490:s1 -> Node0x45d14e0;
+	Node0x45d14e0 [shape=record,label="{pd_land.lhs.true.10.for.inc_crit_edge}"];
+	Node0x45d14e0 -> Node0x45d1620;
+	Node0x45d1530 [shape=record,label="{pd_land.lhs.true.16|{<s0>T|<s1>F}}"];
+	Node0x45d1530:s0 -> Node0x45d15d0;
+	Node0x45d1530:s1 -> Node0x45d1580;
+	Node0x45d1580 [shape=record,label="{pd_land.lhs.true.16.for.inc_crit_edge}"];
+	Node0x45d1580 -> Node0x45d1620;
+	Node0x45d15d0 [shape=record,label="{pd_if.then}"];
+	Node0x45d15d0 -> Node0x45d1620;
+	Node0x45d1620 [shape=record,label="{pd_for.inc}"];
+	Node0x45d1620 -> Node0x45c2250;
+}

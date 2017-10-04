@@ -1,0 +1,38 @@
+digraph "CFG for '_ZN11xercesc_2_56XMLUri27isValidServerBasedAuthorityEPKtiS2_PNS_13MemoryManagerE_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_56XMLUri27isValidServerBasedAuthorityEPKtiS2_PNS_13MemoryManagerE_while.cond' function";
+
+	Node0x9ba8860 [shape=record,label="{newFuncRoot}"];
+	Node0x9ba8860 -> Node0x9ba89f0;
+	Node0x9ba88b0 [shape=record,label="{while.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x9ba8900 [shape=record,label="{if.else.return.loopexit_crit_edge.exitStub}"];
+	Node0x9ba8950 [shape=record,label="{if.then.14.return.loopexit_crit_edge.exitStub}"];
+	Node0x9ba89a0 [shape=record,label="{land.lhs.true.16.return.loopexit_crit_edge.exitStub}"];
+	Node0x9ba89f0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9ba89f0:s0 -> Node0x9ba8a40;
+	Node0x9ba89f0:s1 -> Node0x9ba88b0;
+	Node0x9ba8a40 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x9ba8a40:s0 -> Node0x9ba8c70;
+	Node0x9ba8a40:s1 -> Node0x9ba8a90;
+	Node0x9ba8a90 [shape=record,label="{it_lor.lhs.false.9|{<s0>T|<s1>F}}"];
+	Node0x9ba8a90:s0 -> Node0x9ba8c20;
+	Node0x9ba8a90:s1 -> Node0x9ba8ae0;
+	Node0x9ba8ae0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x9ba8ae0:s0 -> Node0x9ba8b30;
+	Node0x9ba8ae0:s1 -> Node0x9ba8900;
+	Node0x9ba8b30 [shape=record,label="{it_if.then.14|{<s0>T|<s1>F}}"];
+	Node0x9ba8b30:s0 -> Node0x9ba8b80;
+	Node0x9ba8b30:s1 -> Node0x9ba8950;
+	Node0x9ba8b80 [shape=record,label="{it_land.lhs.true.16|{<s0>T|<s1>F}}"];
+	Node0x9ba8b80:s0 -> Node0x9ba8bd0;
+	Node0x9ba8b80:s1 -> Node0x9ba89a0;
+	Node0x9ba8bd0 [shape=record,label="{it_if.then.19}"];
+	Node0x9ba8bd0 -> Node0x9ba8d10;
+	Node0x9ba8c20 [shape=record,label="{pd_lor.lhs.false.9.if.then.12_crit_edge}"];
+	Node0x9ba8c20 -> Node0x9ba8cc0;
+	Node0x9ba8c70 [shape=record,label="{pd_while.body.if.then.12_crit_edge}"];
+	Node0x9ba8c70 -> Node0x9ba8cc0;
+	Node0x9ba8cc0 [shape=record,label="{it_if.then.12}"];
+	Node0x9ba8cc0 -> Node0x9ba8d10;
+	Node0x9ba8d10 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x9ba8d10 -> Node0x9ba89f0;
+}

@@ -1,0 +1,12 @@
+digraph "CFG for 'abortgo_while.cond' function" {
+	label="CFG for 'abortgo_while.cond' function";
+
+	Node0x42398f0 [shape=record,label="{newFuncRoot}"];
+	Node0x42398f0 -> Node0x4239df0;
+	Node0x4239da0 [shape=record,label="{while.end.exitStub}"];
+	Node0x4239df0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4239df0:s0 -> Node0x4239e40;
+	Node0x4239df0:s1 -> Node0x4239da0;
+	Node0x4239e40 [shape=record,label="{pd_while.body}"];
+	Node0x4239e40 -> Node0x4239df0;
+}

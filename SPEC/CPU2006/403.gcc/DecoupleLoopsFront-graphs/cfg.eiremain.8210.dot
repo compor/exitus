@@ -1,0 +1,21 @@
+digraph "CFG for 'eiremain' function" {
+	label="CFG for 'eiremain' function";
+
+	Node0x84716b0 [shape=record,label="{entry}"];
+	Node0x84716b0 -> Node0x8471b40;
+	Node0x8471b40 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x8471b40:s0 -> Node0x8471b90;
+	Node0x8471b40:s1 -> Node0x8471cd0;
+	Node0x8471b90 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x8471b90:s0 -> Node0x8471c30;
+	Node0x8471b90:s1 -> Node0x8471be0;
+	Node0x8471be0 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x8471be0 -> Node0x8471c80;
+	Node0x8471c30 [shape=record,label="{pd_if.then}"];
+	Node0x8471c30 -> Node0x8471c80;
+	Node0x8471c80 [shape=record,label="{pd_if.end}"];
+	Node0x8471c80 -> Node0xe607ec0;
+	Node0xe607ec0 [shape=record,label="{it_if.end.split}"];
+	Node0xe607ec0 -> Node0x8471b40;
+	Node0x8471cd0 [shape=record,label="{while.end}"];
+}

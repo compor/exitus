@@ -1,0 +1,47 @@
+digraph "CFG for 'fixup_var_refs_insns' function" {
+	label="CFG for 'fixup_var_refs_insns' function";
+
+	Node0x4c65db0 [shape=record,label="{entry}"];
+	Node0x4c65db0 -> Node0x4d4dfb0;
+	Node0x4d4df60 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x4d4df60 -> Node0x4d4e3c0;
+	Node0x4d4dfb0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d4dfb0:s0 -> Node0x4d4e000;
+	Node0x4d4dfb0:s1 -> Node0x4d4e460;
+	Node0x4d4e000 [shape=record,label="{it_while.body}"];
+	Node0x4d4e000 -> Node0xd9b1ea0;
+	Node0xd9b1ea0 [shape=record,label="{pd_while.body.split|{<s0>T|<s1>F}}"];
+	Node0xd9b1ea0:s0 -> Node0x4d4e0a0;
+	Node0xd9b1ea0:s1 -> Node0x4d4e050;
+	Node0x4d4e050 [shape=record,label="{pd_while.body.if.else_crit_edge}"];
+	Node0x4d4e050 -> Node0x4d4e320;
+	Node0x4d4e0a0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4d4e0a0:s0 -> Node0x4d4e140;
+	Node0x4d4e0a0:s1 -> Node0x4d4e0f0;
+	Node0x4d4e0f0 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0x4d4e0f0 -> Node0x4d4e320;
+	Node0x4d4e140 [shape=record,label="{pd_for.cond.preheader}"];
+	Node0x4d4e140 -> Node0x4d4e190;
+	Node0x4d4e190 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4d4e190:s0 -> Node0x4d4e1e0;
+	Node0x4d4e190:s1 -> Node0x4d4df60;
+	Node0x4d4e1e0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4d4e1e0:s0 -> Node0x4d4e280;
+	Node0x4d4e1e0:s1 -> Node0x4d4e230;
+	Node0x4d4e230 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4d4e230 -> Node0x4d4e2d0;
+	Node0x4d4e280 [shape=record,label="{pd_if.then.15}"];
+	Node0x4d4e280 -> Node0x4d4e2d0;
+	Node0x4d4e2d0 [shape=record,label="{pd_for.inc}"];
+	Node0x4d4e2d0 -> Node0x4d4e190;
+	Node0x4d4e320 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x4d4e320:s0 -> Node0x4d4e410;
+	Node0x4d4e320:s1 -> Node0x4d4e370;
+	Node0x4d4e370 [shape=record,label="{pd_if.else.while.cond.backedge_crit_edge}"];
+	Node0x4d4e370 -> Node0x4d4e3c0;
+	Node0x4d4e3c0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x4d4e3c0 -> Node0x4d4dfb0;
+	Node0x4d4e410 [shape=record,label="{pd_if.then.29}"];
+	Node0x4d4e410 -> Node0x4d4e3c0;
+	Node0x4d4e460 [shape=record,label="{while.end}"];
+}

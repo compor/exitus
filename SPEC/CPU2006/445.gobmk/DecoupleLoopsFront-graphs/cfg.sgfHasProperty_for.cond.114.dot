@@ -1,0 +1,16 @@
+digraph "CFG for 'sgfHasProperty_for.cond' function" {
+	label="CFG for 'sgfHasProperty_for.cond' function";
+
+	Node0x333a7a0 [shape=record,label="{newFuncRoot}"];
+	Node0x333a7a0 -> Node0x333a890;
+	Node0x333a7f0 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0x333a840 [shape=record,label="{for.body.return_crit_edge.exitStub}"];
+	Node0x333a890 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x333a890:s0 -> Node0x333a8e0;
+	Node0x333a890:s1 -> Node0x333a7f0;
+	Node0x333a8e0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x333a8e0:s0 -> Node0x333a840;
+	Node0x333a8e0:s1 -> Node0x333a930;
+	Node0x333a930 [shape=record,label="{it_for.inc}"];
+	Node0x333a930 -> Node0x333a890;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'order_regs_for_reload_while.cond' function" {
+	label="CFG for 'order_regs_for_reload_while.cond' function";
+
+	Node0xc0060d0 [shape=record,label="{newFuncRoot}"];
+	Node0xc0060d0 -> Node0xc0061c0;
+	Node0xc006120 [shape=record,label="{for.cond.preheader.loopexit.exitStub}"];
+	Node0xc006170 [shape=record,label="{while.end.exitStub}"];
+	Node0xc0061c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc0061c0:s0 -> Node0xc006120;
+	Node0xc0061c0:s1 -> Node0xc006210;
+	Node0xc006210 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xc006210:s0 -> Node0xc006260;
+	Node0xc006210:s1 -> Node0xc006170;
+	Node0xc006260 [shape=record,label="{it_while.body}"];
+	Node0xc006260 -> Node0xc0061c0;
+}

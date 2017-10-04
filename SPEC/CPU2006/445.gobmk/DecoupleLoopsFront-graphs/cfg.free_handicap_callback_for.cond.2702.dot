@@ -1,0 +1,14 @@
+digraph "CFG for 'free_handicap_callback_for.cond' function" {
+	label="CFG for 'free_handicap_callback_for.cond' function";
+
+	Node0x4770290 [shape=record,label="{newFuncRoot}"];
+	Node0x4770290 -> Node0x4770330;
+	Node0x47702e0 [shape=record,label="{for.end.exitStub}"];
+	Node0x4770330 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4770330:s0 -> Node0x4770380;
+	Node0x4770330:s1 -> Node0x47702e0;
+	Node0x4770380 [shape=record,label="{pd_for.body}"];
+	Node0x4770380 -> Node0x5602520;
+	Node0x5602520 [shape=record,label="{it_for.body.split}"];
+	Node0x5602520 -> Node0x4770330;
+}

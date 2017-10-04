@@ -1,0 +1,23 @@
+digraph "CFG for 'nk_attacked_for.cond.32' function" {
+	label="CFG for 'nk_attacked_for.cond.32' function";
+
+	Node0xf990a0 [shape=record,label="{newFuncRoot}"];
+	Node0xf990a0 -> Node0xf991e0;
+	Node0xf990f0 [shape=record,label="{return.loopexit2.exitStub}"];
+	Node0xf99140 [shape=record,label="{while.cond.40.return.loopexit_crit_edge.exitStub}"];
+	Node0xf99190 [shape=record,label="{while.cond.40.return.loopexit_crit_edge.2.exitStub}"];
+	Node0xf991e0 [shape=record,label="{it_for.cond.32|{<s0>T|<s1>F}}"];
+	Node0xf991e0:s0 -> Node0xf99230;
+	Node0xf991e0:s1 -> Node0xf990f0;
+	Node0xf99230 [shape=record,label="{it_for.body.34}"];
+	Node0xf99230 -> Node0xf99280;
+	Node0xf99280 [shape=record,label="{it_while.cond.40|{<s0>def|<s1>13|<s2>7|<s3>9}}"];
+	Node0xf99280:s0 -> Node0xf99320;
+	Node0xf99280:s1 -> Node0xf992d0;
+	Node0xf99280:s2 -> Node0xf99140;
+	Node0xf99280:s3 -> Node0xf99190;
+	Node0xf992d0 [shape=record,label="{it_if.end.50}"];
+	Node0xf992d0 -> Node0xf99280;
+	Node0xf99320 [shape=record,label="{it_for.inc.55}"];
+	Node0xf99320 -> Node0xf991e0;
+}

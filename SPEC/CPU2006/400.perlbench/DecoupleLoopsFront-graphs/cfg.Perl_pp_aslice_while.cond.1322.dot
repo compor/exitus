@@ -1,0 +1,48 @@
+digraph "CFG for 'Perl_pp_aslice_while.cond' function" {
+	label="CFG for 'Perl_pp_aslice_while.cond' function";
+
+	Node0x4e4ffc0 [shape=record,label="{newFuncRoot}"];
+	Node0x4e4ffc0 -> Node0x4e50100;
+	Node0x4e50010 [shape=record,label="{if.end.70.loopexit.exitStub}"];
+	Node0x4e50060 [shape=record,label="{if.then.51.if.then.55_crit_edge.exitStub}"];
+	Node0x4e500b0 [shape=record,label="{lor.lhs.false.if.then.55_crit_edge.exitStub}"];
+	Node0x4e50100 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4e50100:s0 -> Node0x4e50150;
+	Node0x4e50100:s1 -> Node0x4e50010;
+	Node0x4e50150 [shape=record,label="{pd_while.body}"];
+	Node0x4e50150 -> Node0x66317b0;
+	Node0x66317b0 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x66317b0:s0 -> Node0x4e501f0;
+	Node0x66317b0:s1 -> Node0x4e501a0;
+	Node0x4e501a0 [shape=record,label="{it_cond.false.41}"];
+	Node0x4e501a0 -> Node0x4e50240;
+	Node0x4e501f0 [shape=record,label="{it_cond.true.38}"];
+	Node0x4e501f0 -> Node0x4e50240;
+	Node0x4e50240 [shape=record,label="{it_cond.end.43|{<s0>T|<s1>F}}"];
+	Node0x4e50240:s0 -> Node0x4e502e0;
+	Node0x4e50240:s1 -> Node0x4e50290;
+	Node0x4e50290 [shape=record,label="{pd_cond.end.43.if.end.64_crit_edge}"];
+	Node0x4e50290 -> Node0x4e50470;
+	Node0x4e502e0 [shape=record,label="{it_if.then.51|{<s0>T|<s1>F}}"];
+	Node0x4e502e0:s0 -> Node0x4e50330;
+	Node0x4e502e0:s1 -> Node0x4e50060;
+	Node0x4e50330 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4e50330:s0 -> Node0x4e500b0;
+	Node0x4e50330:s1 -> Node0x4e50380;
+	Node0x4e50380 [shape=record,label="{pd_if.end.57|{<s0>T|<s1>F}}"];
+	Node0x4e50380:s0 -> Node0x4e50420;
+	Node0x4e50380:s1 -> Node0x4e503d0;
+	Node0x4e503d0 [shape=record,label="{pd_if.end.57.if.end.64_crit_edge}"];
+	Node0x4e503d0 -> Node0x4e50470;
+	Node0x4e50420 [shape=record,label="{pd_if.then.62}"];
+	Node0x4e50420 -> Node0x4e50470;
+	Node0x4e50470 [shape=record,label="{pd_if.end.64|{<s0>T|<s1>F}}"];
+	Node0x4e50470:s0 -> Node0x4e50510;
+	Node0x4e50470:s1 -> Node0x4e504c0;
+	Node0x4e504c0 [shape=record,label="{pd_if.end.64.cond.end.68_crit_edge}"];
+	Node0x4e504c0 -> Node0x4e50560;
+	Node0x4e50510 [shape=record,label="{pd_cond.true.66}"];
+	Node0x4e50510 -> Node0x4e50560;
+	Node0x4e50560 [shape=record,label="{pd_cond.end.68}"];
+	Node0x4e50560 -> Node0x4e50100;
+}

@@ -1,0 +1,27 @@
+digraph "CFG for 'function_cannot_inline_p_for.cond' function" {
+	label="CFG for 'function_cannot_inline_p_for.cond' function";
+
+	Node0xb2f5280 [shape=record,label="{newFuncRoot}"];
+	Node0xb2f5280 -> Node0xb2f53c0;
+	Node0xb2f52d0 [shape=record,label="{for.end.exitStub}"];
+	Node0xb2f5320 [shape=record,label="{for.body.return.loopexit_crit_edge.exitStub}"];
+	Node0xb2f5370 [shape=record,label="{land.lhs.true.107.return.loopexit_crit_edge.exitStub}"];
+	Node0xb2f53c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb2f53c0:s0 -> Node0xb2f5410;
+	Node0xb2f53c0:s1 -> Node0xb2f52d0;
+	Node0xb2f5410 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb2f5410:s0 -> Node0xb2f5320;
+	Node0xb2f5410:s1 -> Node0xb2f5460;
+	Node0xb2f5460 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0xb2f5460:s0 -> Node0xb2f5500;
+	Node0xb2f5460:s1 -> Node0xb2f54b0;
+	Node0xb2f54b0 [shape=record,label="{pd_if.else.for.inc_crit_edge}"];
+	Node0xb2f54b0 -> Node0xb2f55a0;
+	Node0xb2f5500 [shape=record,label="{it_land.lhs.true.107|{<s0>T|<s1>F}}"];
+	Node0xb2f5500:s0 -> Node0xb2f5370;
+	Node0xb2f5500:s1 -> Node0xb2f5550;
+	Node0xb2f5550 [shape=record,label="{pd_land.lhs.true.107.for.inc_crit_edge}"];
+	Node0xb2f5550 -> Node0xb2f55a0;
+	Node0xb2f55a0 [shape=record,label="{it_for.inc}"];
+	Node0xb2f55a0 -> Node0xb2f53c0;
+}

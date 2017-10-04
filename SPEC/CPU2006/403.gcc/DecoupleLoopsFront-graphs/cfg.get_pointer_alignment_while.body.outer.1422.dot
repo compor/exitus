@@ -1,0 +1,42 @@
+digraph "CFG for 'get_pointer_alignment_while.body.outer' function" {
+	label="CFG for 'get_pointer_alignment_while.body.outer' function";
+
+	Node0x79eb0e0 [shape=record,label="{newFuncRoot}"];
+	Node0x79eb0e0 -> Node0x79eb270;
+	Node0x79eb130 [shape=record,label="{while.body.return.loopexit.loopexit_crit_edge.exitStub}"];
+	Node0x79eb180 [shape=record,label="{sw.bb.51.exitStub}"];
+	Node0x79eb1d0 [shape=record,label="{sw.bb.34.return.loopexit.loopexit_crit_edge.exitStub}"];
+	Node0x79eb220 [shape=record,label="{return.loopexit.loopexit1.exitStub}"];
+	Node0x79eb270 [shape=record,label="{pd_while.body.outer}"];
+	Node0x79eb270 -> Node0x79eb2c0;
+	Node0x79eb2c0 [shape=record,label="{it_while.body|{<s0>def|<s1>115|<s2>114|<s3>116|<s4>59|<s5>121}}"];
+	Node0x79eb2c0:s0 -> Node0x79eb130;
+	Node0x79eb2c0:s1 -> Node0x79eb540;
+	Node0x79eb2c0:s2 -> Node0x79eb4f0;
+	Node0x79eb2c0:s3 -> Node0x79eb4a0;
+	Node0x79eb2c0:s4 -> Node0x79eb310;
+	Node0x79eb2c0:s5 -> Node0x79eb180;
+	Node0x79eb310 [shape=record,label="{it_sw.bb.34|{<s0>T|<s1>F}}"];
+	Node0x79eb310:s0 -> Node0x79eb360;
+	Node0x79eb310:s1 -> Node0x79eb1d0;
+	Node0x79eb360 [shape=record,label="{pd_while.cond.40.preheader}"];
+	Node0x79eb360 -> Node0x79eb3b0;
+	Node0x79eb3b0 [shape=record,label="{pd_while.cond.40|{<s0>T|<s1>F}}"];
+	Node0x79eb3b0:s0 -> Node0x79eb450;
+	Node0x79eb3b0:s1 -> Node0x79eb400;
+	Node0x79eb400 [shape=record,label="{it_while.end}"];
+	Node0x79eb400 -> Node0x79eb2c0;
+	Node0x79eb450 [shape=record,label="{pd_while.body.47}"];
+	Node0x79eb450 -> Node0x79eb3b0;
+	Node0x79eb4a0 [shape=record,label="{pd_while.body.sw.bb_crit_edge.2}"];
+	Node0x79eb4a0 -> Node0x79eb590;
+	Node0x79eb4f0 [shape=record,label="{pd_while.body.sw.bb_crit_edge.1}"];
+	Node0x79eb4f0 -> Node0x79eb590;
+	Node0x79eb540 [shape=record,label="{pd_while.body.sw.bb_crit_edge}"];
+	Node0x79eb540 -> Node0x79eb590;
+	Node0x79eb590 [shape=record,label="{it_sw.bb|{<s0>T|<s1>F}}"];
+	Node0x79eb590:s0 -> Node0x79eb220;
+	Node0x79eb590:s1 -> Node0x79eb5e0;
+	Node0x79eb5e0 [shape=record,label="{pd_if.end.22}"];
+	Node0x79eb5e0 -> Node0x79eb270;
+}

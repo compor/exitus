@@ -1,0 +1,16 @@
+digraph "CFG for 'strtoul_for_line_while.cond' function" {
+	label="CFG for 'strtoul_for_line_while.cond' function";
+
+	Node0xa1f11d0 [shape=record,label="{newFuncRoot}"];
+	Node0xa1f11d0 -> Node0xa1f12c0;
+	Node0xa1f1220 [shape=record,label="{while.end.exitStub}"];
+	Node0xa1f1270 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xa1f12c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa1f12c0:s0 -> Node0xa1f1310;
+	Node0xa1f12c0:s1 -> Node0xa1f1220;
+	Node0xa1f1310 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xa1f1310:s0 -> Node0xa1f1360;
+	Node0xa1f1310:s1 -> Node0xa1f1270;
+	Node0xa1f1360 [shape=record,label="{pd_if.end}"];
+	Node0xa1f1360 -> Node0xa1f12c0;
+}

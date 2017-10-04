@@ -1,0 +1,26 @@
+digraph "CFG for 'save_line_notes' function" {
+	label="CFG for 'save_line_notes' function";
+
+	Node0x502cf80 [shape=record,label="{entry}"];
+	Node0x502cf80 -> Node0x502cfd0;
+	Node0x502cfd0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x502cfd0:s0 -> Node0x502d020;
+	Node0x502cfd0:s1 -> Node0x502d250;
+	Node0x502d020 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x502d020:s0 -> Node0x502d0c0;
+	Node0x502d020:s1 -> Node0x502d070;
+	Node0x502d070 [shape=record,label="{pd_for.body.if.else_crit_edge}"];
+	Node0x502d070 -> Node0x502d1b0;
+	Node0x502d0c0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x502d0c0:s0 -> Node0x502d160;
+	Node0x502d0c0:s1 -> Node0x502d110;
+	Node0x502d110 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0x502d110 -> Node0x502d1b0;
+	Node0x502d160 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x502d160 -> Node0x502d200;
+	Node0x502d1b0 [shape=record,label="{pd_if.else}"];
+	Node0x502d1b0 -> Node0x502d200;
+	Node0x502d200 [shape=record,label="{it_for.inc}"];
+	Node0x502d200 -> Node0x502cfd0;
+	Node0x502d250 [shape=record,label="{for.end}"];
+}

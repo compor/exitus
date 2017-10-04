@@ -1,0 +1,21 @@
+digraph "CFG for 'BZ2_hbMakeCodeLengths_for.cond' function" {
+	label="CFG for 'BZ2_hbMakeCodeLengths_for.cond' function";
+
+	Node0x19beab0 [shape=record,label="{newFuncRoot}"];
+	Node0x19beab0 -> Node0x19cb450;
+	Node0x19beb00 [shape=record,label="{while.body.preheader.exitStub}"];
+	Node0x19cb450 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x19cb450:s0 -> Node0x19cb4a0;
+	Node0x19cb450:s1 -> Node0x19beb00;
+	Node0x19cb4a0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x19cb4a0:s0 -> Node0x19cb540;
+	Node0x19cb4a0:s1 -> Node0x19cb4f0;
+	Node0x19cb4f0 [shape=record,label="{pd_cond.false}"];
+	Node0x19cb4f0 -> Node0x19cb590;
+	Node0x19cb540 [shape=record,label="{pd_for.body.cond.end_crit_edge}"];
+	Node0x19cb540 -> Node0x19cb590;
+	Node0x19cb590 [shape=record,label="{pd_cond.end}"];
+	Node0x19cb590 -> Node0x1c13ff0;
+	Node0x1c13ff0 [shape=record,label="{it_cond.end.split}"];
+	Node0x1c13ff0 -> Node0x19cb450;
+}

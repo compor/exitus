@@ -1,0 +1,16 @@
+digraph "CFG for 'squeeze_ko_helper_for.cond' function" {
+	label="CFG for 'squeeze_ko_helper_for.cond' function";
+
+	Node0x48c2f10 [shape=record,label="{newFuncRoot}"];
+	Node0x48c2f10 -> Node0x48c9060;
+	Node0x48c8b60 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0x48c9010 [shape=record,label="{for.body.return_crit_edge.exitStub}"];
+	Node0x48c9060 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x48c9060:s0 -> Node0x48c90b0;
+	Node0x48c9060:s1 -> Node0x48c8b60;
+	Node0x48c90b0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x48c90b0:s0 -> Node0x48c9010;
+	Node0x48c90b0:s1 -> Node0x48c9100;
+	Node0x48c9100 [shape=record,label="{it_for.inc}"];
+	Node0x48c9100 -> Node0x48c9060;
+}

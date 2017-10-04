@@ -1,0 +1,29 @@
+digraph "CFG for 'DisplayEncoderParams' function" {
+	label="CFG for 'DisplayEncoderParams' function";
+
+	Node0x1715ce0 [shape=record,label="{entry}"];
+	Node0x1715ce0 -> Node0x1715d30;
+	Node0x1715d30 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1715d30:s0 -> Node0x1715d80;
+	Node0x1715d30:s1 -> Node0x1716000;
+	Node0x1715d80 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x1715d80:s0 -> Node0x1715dd0;
+	Node0x1715d80:s1 -> Node0x1715e20;
+	Node0x1715dd0 [shape=record,label="{pd_if.then}"];
+	Node0x1715dd0 -> Node0x1715fb0;
+	Node0x1715e20 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x1715e20:s0 -> Node0x1715e70;
+	Node0x1715e20:s1 -> Node0x1715ec0;
+	Node0x1715e70 [shape=record,label="{pd_if.then.16}"];
+	Node0x1715e70 -> Node0x1715fb0;
+	Node0x1715ec0 [shape=record,label="{pd_if.else.24|{<s0>T|<s1>F}}"];
+	Node0x1715ec0:s0 -> Node0x1715f60;
+	Node0x1715ec0:s1 -> Node0x1715f10;
+	Node0x1715f10 [shape=record,label="{pd_if.else.24.if.end.38_crit_edge}"];
+	Node0x1715f10 -> Node0x1715fb0;
+	Node0x1715f60 [shape=record,label="{pd_if.then.29}"];
+	Node0x1715f60 -> Node0x1715fb0;
+	Node0x1715fb0 [shape=record,label="{it_if.end.38}"];
+	Node0x1715fb0 -> Node0x1715d30;
+	Node0x1716000 [shape=record,label="{while.end}"];
+}

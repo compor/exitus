@@ -1,0 +1,34 @@
+digraph "CFG for '_ZN11xercesc_2_515BaseRefVectorOfINS_9XMLBufferEE7cleanupEv' function" {
+	label="CFG for '_ZN11xercesc_2_515BaseRefVectorOfINS_9XMLBufferEE7cleanupEv' function";
+
+	Node0x4158210 [shape=record,label="{entry|{<s0>T|<s1>F}}"];
+	Node0x4158210:s0 -> Node0x4158710;
+	Node0x4158210:s1 -> Node0x4158260;
+	Node0x4158260 [shape=record,label="{entry.if.end_crit_edge}"];
+	Node0x4158260 -> Node0x41589e0;
+	Node0x4158710 [shape=record,label="{for.cond.preheader}"];
+	Node0x4158710 -> Node0x4158760;
+	Node0x4158760 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4158760:s0 -> Node0x41587b0;
+	Node0x4158760:s1 -> Node0x4158990;
+	Node0x41587b0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x41587b0:s0 -> Node0x4158800;
+	Node0x41587b0:s1 -> Node0x4158850;
+	Node0x4158800 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4158800 -> Node0x41588f0;
+	Node0x4158850 [shape=record,label="{it_delete.notnull}"];
+	Node0x4158850 -> Node0x41588a0;
+	Node0x4158850 -> Node0x4158940;
+	Node0x41588a0 [shape=record,label="{pd_invoke.cont}"];
+	Node0x41588a0 -> Node0x41588f0;
+	Node0x41588f0 [shape=record,label="{it_for.inc}"];
+	Node0x41588f0 -> Node0x4158760;
+	Node0x4158940 [shape=record,label="{lpad}"];
+	Node0x4158940 -> Node0x4158a30;
+	Node0x4158940 -> Node0x4158a80;
+	Node0x4158990 [shape=record,label="{if.end.loopexit}"];
+	Node0x4158990 -> Node0x41589e0;
+	Node0x41589e0 [shape=record,label="{if.end}"];
+	Node0x4158a30 [shape=record,label="{eh.resume}"];
+	Node0x4158a80 [shape=record,label="{terminate.lpad}"];
+}

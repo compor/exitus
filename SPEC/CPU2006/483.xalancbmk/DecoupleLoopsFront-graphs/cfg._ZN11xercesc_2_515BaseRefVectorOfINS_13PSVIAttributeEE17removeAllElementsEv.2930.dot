@@ -1,0 +1,26 @@
+digraph "CFG for '_ZN11xercesc_2_515BaseRefVectorOfINS_13PSVIAttributeEE17removeAllElementsEv' function" {
+	label="CFG for '_ZN11xercesc_2_515BaseRefVectorOfINS_13PSVIAttributeEE17removeAllElementsEv' function";
+
+	Node0x3c21070 [shape=record,label="{entry}"];
+	Node0x3c21070 -> Node0x3c210c0;
+	Node0x3c210c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3c210c0:s0 -> Node0x3c21110;
+	Node0x3c210c0:s1 -> Node0x3c212f0;
+	Node0x3c21110 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3c21110:s0 -> Node0x3c211b0;
+	Node0x3c21110:s1 -> Node0x3c21160;
+	Node0x3c21160 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x3c21160 -> Node0x3c212a0;
+	Node0x3c211b0 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x3c211b0:s0 -> Node0x3c21200;
+	Node0x3c211b0:s1 -> Node0x3c21250;
+	Node0x3c21200 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x3c21200 -> Node0x3c212a0;
+	Node0x3c21250 [shape=record,label="{pd_delete.notnull}"];
+	Node0x3c21250 -> Node0x3c212a0;
+	Node0x3c212a0 [shape=record,label="{pd_if.end}"];
+	Node0x3c212a0 -> Node0xac55120;
+	Node0xac55120 [shape=record,label="{it_if.end.split}"];
+	Node0xac55120 -> Node0x3c210c0;
+	Node0x3c212f0 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'keycmp_nocase_for.cond' function" {
+	label="CFG for 'keycmp_nocase_for.cond' function";
+
+	Node0x1202460 [shape=record,label="{newFuncRoot}"];
+	Node0x1202460 -> Node0x1202550;
+	Node0x12024b0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x1202500 [shape=record,label="{if.then.exitStub}"];
+	Node0x1202550 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1202550:s0 -> Node0x12025a0;
+	Node0x1202550:s1 -> Node0x12024b0;
+	Node0x12025a0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x12025a0:s0 -> Node0x1202500;
+	Node0x12025a0:s1 -> Node0x12025f0;
+	Node0x12025f0 [shape=record,label="{it_for.inc}"];
+	Node0x12025f0 -> Node0x1202550;
+}

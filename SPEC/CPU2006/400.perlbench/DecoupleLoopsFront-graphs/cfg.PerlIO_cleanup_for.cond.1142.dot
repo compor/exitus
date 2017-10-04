@@ -1,0 +1,14 @@
+digraph "CFG for 'PerlIO_cleanup_for.cond' function" {
+	label="CFG for 'PerlIO_cleanup_for.cond' function";
+
+	Node0x4da3880 [shape=record,label="{newFuncRoot}"];
+	Node0x4da3880 -> Node0x4da3920;
+	Node0x4da38d0 [shape=record,label="{for.end.exitStub}"];
+	Node0x4da3920 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4da3920:s0 -> Node0x4da3970;
+	Node0x4da3920:s1 -> Node0x4da38d0;
+	Node0x4da3970 [shape=record,label="{pd_for.body}"];
+	Node0x4da3970 -> Node0x6444210;
+	Node0x6444210 [shape=record,label="{it_for.body.split}"];
+	Node0x6444210 -> Node0x4da3920;
+}

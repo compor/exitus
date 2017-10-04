@@ -1,0 +1,28 @@
+digraph "CFG for 'Perl_av_reify_while.cond.6' function" {
+	label="CFG for 'Perl_av_reify_while.cond.6' function";
+
+	Node0x4aa2740 [shape=record,label="{newFuncRoot}"];
+	Node0x4aa2740 -> Node0x4aa27e0;
+	Node0x4aa2790 [shape=record,label="{while.end.19.exitStub}"];
+	Node0x4aa27e0 [shape=record,label="{it_while.cond.6|{<s0>T|<s1>F}}"];
+	Node0x4aa27e0:s0 -> Node0x4aa2830;
+	Node0x4aa27e0:s1 -> Node0x4aa2790;
+	Node0x4aa2830 [shape=record,label="{it_while.body.8}"];
+	Node0x4aa2830 -> Node0x6581280;
+	Node0x6581280 [shape=record,label="{pd_while.body.8.split|{<s0>T|<s1>F}}"];
+	Node0x6581280:s0 -> Node0x4aa28d0;
+	Node0x6581280:s1 -> Node0x4aa2880;
+	Node0x4aa2880 [shape=record,label="{pd_while.body.8.while.cond.6.backedge_crit_edge}"];
+	Node0x4aa2880 -> Node0x4aa2a10;
+	Node0x4aa28d0 [shape=record,label="{pd_if.then.15|{<s0>T|<s1>F}}"];
+	Node0x4aa28d0:s0 -> Node0x4aa2970;
+	Node0x4aa28d0:s1 -> Node0x4aa2920;
+	Node0x4aa2920 [shape=record,label="{pd_if.then.15.land.end_crit_edge}"];
+	Node0x4aa2920 -> Node0x4aa29c0;
+	Node0x4aa2970 [shape=record,label="{pd_land.rhs}"];
+	Node0x4aa2970 -> Node0x4aa29c0;
+	Node0x4aa29c0 [shape=record,label="{pd_land.end}"];
+	Node0x4aa29c0 -> Node0x4aa2a10;
+	Node0x4aa2a10 [shape=record,label="{pd_while.cond.6.backedge}"];
+	Node0x4aa2a10 -> Node0x4aa27e0;
+}

@@ -1,0 +1,26 @@
+digraph "CFG for 'update_tree_RECURSION' function" {
+	label="CFG for 'update_tree_RECURSION' function";
+
+	Node0x1e3e480 [shape=record,label="{newFuncRoot}"];
+	Node0x1e3e480 -> Node0x1e3e520;
+	Node0x1e3e4d0 [shape=record,label="{CONTINUE.exitStub}"];
+	Node0x1e3e520 [shape=record,label="{it_RECURSION|{<s0>T|<s1>F}}"];
+	Node0x1e3e520:s0 -> Node0x1e3e700;
+	Node0x1e3e520:s1 -> Node0x1e3e570;
+	Node0x1e3e570 [shape=record,label="{pd_TEST.preheader}"];
+	Node0x1e3e570 -> Node0x1e3e5c0;
+	Node0x1e3e5c0 [shape=record,label="{it_TEST|{<s0>T|<s1>F}}"];
+	Node0x1e3e5c0:s0 -> Node0x1e3e4d0;
+	Node0x1e3e5c0:s1 -> Node0x1e3e610;
+	Node0x1e3e610 [shape=record,label="{it_if.end.20|{<s0>T|<s1>F}}"];
+	Node0x1e3e610:s0 -> Node0x1e3e6b0;
+	Node0x1e3e610:s1 -> Node0x1e3e660;
+	Node0x1e3e660 [shape=record,label="{it_if.end.23}"];
+	Node0x1e3e660 -> Node0x1e3e5c0;
+	Node0x1e3e6b0 [shape=record,label="{pd_ITERATION.loopexit}"];
+	Node0x1e3e6b0 -> Node0x1e3e750;
+	Node0x1e3e700 [shape=record,label="{pd_RECURSION.ITERATION_crit_edge}"];
+	Node0x1e3e700 -> Node0x1e3e750;
+	Node0x1e3e750 [shape=record,label="{pd_ITERATION}"];
+	Node0x1e3e750 -> Node0x1e3e520;
+}

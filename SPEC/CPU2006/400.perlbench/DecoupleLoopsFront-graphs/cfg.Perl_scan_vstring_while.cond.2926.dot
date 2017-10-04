@@ -1,0 +1,30 @@
+digraph "CFG for 'Perl_scan_vstring_while.cond' function" {
+	label="CFG for 'Perl_scan_vstring_while.cond' function";
+
+	Node0x56a0080 [shape=record,label="{newFuncRoot}"];
+	Node0x56a0080 -> Node0x56a0170;
+	Node0x56a00d0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x56a0120 [shape=record,label="{lor.rhs.while.end_crit_edge.exitStub}"];
+	Node0x56a0170 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x56a0170:s0 -> Node0x56a01c0;
+	Node0x56a0170:s1 -> Node0x56a00d0;
+	Node0x56a01c0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x56a01c0:s0 -> Node0x56a0260;
+	Node0x56a01c0:s1 -> Node0x56a0210;
+	Node0x56a0210 [shape=record,label="{pd_land.rhs.lor.rhs_crit_edge}"];
+	Node0x56a0210 -> Node0x56a0300;
+	Node0x56a0260 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x56a0260:s0 -> Node0x56a03a0;
+	Node0x56a0260:s1 -> Node0x56a02b0;
+	Node0x56a02b0 [shape=record,label="{pd_land.lhs.true.lor.rhs_crit_edge}"];
+	Node0x56a02b0 -> Node0x56a0300;
+	Node0x56a0300 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x56a0300:s0 -> Node0x56a0350;
+	Node0x56a0300:s1 -> Node0x56a0120;
+	Node0x56a0350 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0x56a0350 -> Node0x56a03f0;
+	Node0x56a03a0 [shape=record,label="{pd_land.lhs.true.while.body_crit_edge}"];
+	Node0x56a03a0 -> Node0x56a03f0;
+	Node0x56a03f0 [shape=record,label="{it_while.body}"];
+	Node0x56a03f0 -> Node0x56a0170;
+}

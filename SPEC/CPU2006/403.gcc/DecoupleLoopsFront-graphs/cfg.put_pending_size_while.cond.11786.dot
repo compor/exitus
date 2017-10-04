@@ -1,0 +1,23 @@
+digraph "CFG for 'put_pending_size_while.cond' function" {
+	label="CFG for 'put_pending_size_while.cond' function";
+
+	Node0xc454f10 [shape=record,label="{newFuncRoot}"];
+	Node0xc454f10 -> Node0xc455000;
+	Node0xc454f60 [shape=record,label="{lor.rhs.while.end_crit_edge.exitStub}"];
+	Node0xc454fb0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xc455000 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc455000:s0 -> Node0xc455140;
+	Node0xc455000:s1 -> Node0xc455050;
+	Node0xc455050 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0xc455050:s0 -> Node0xc4550a0;
+	Node0xc455050:s1 -> Node0xc454f60;
+	Node0xc4550a0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xc4550a0:s0 -> Node0xc4550f0;
+	Node0xc4550a0:s1 -> Node0xc454fb0;
+	Node0xc4550f0 [shape=record,label="{pd_land.rhs.while.body_crit_edge}"];
+	Node0xc4550f0 -> Node0xc455190;
+	Node0xc455140 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0xc455140 -> Node0xc455190;
+	Node0xc455190 [shape=record,label="{it_while.body}"];
+	Node0xc455190 -> Node0xc455000;
+}

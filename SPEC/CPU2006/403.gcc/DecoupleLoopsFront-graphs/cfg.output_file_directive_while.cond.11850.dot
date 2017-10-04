@@ -1,0 +1,16 @@
+digraph "CFG for 'output_file_directive_while.cond' function" {
+	label="CFG for 'output_file_directive_while.cond' function";
+
+	Node0xc46cc00 [shape=record,label="{newFuncRoot}"];
+	Node0xc46cc00 -> Node0xc46ccf0;
+	Node0xc46cc50 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xc46cca0 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0xc46ccf0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc46ccf0:s0 -> Node0xc46cd40;
+	Node0xc46ccf0:s1 -> Node0xc46cc50;
+	Node0xc46cd40 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc46cd40:s0 -> Node0xc46cca0;
+	Node0xc46cd40:s1 -> Node0xc46cd90;
+	Node0xc46cd90 [shape=record,label="{it_if.end}"];
+	Node0xc46cd90 -> Node0xc46ccf0;
+}

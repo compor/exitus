@@ -1,0 +1,19 @@
+digraph "CFG for 'Perl_pp_entersub_while.cond' function" {
+	label="CFG for 'Perl_pp_entersub_while.cond' function";
+
+	Node0x4fab880 [shape=record,label="{newFuncRoot}"];
+	Node0x4fab880 -> Node0x4fabd80;
+	Node0x4fabd30 [shape=record,label="{if.end.468.loopexit.exitStub}"];
+	Node0x4fabd80 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4fabd80:s0 -> Node0x4fabdd0;
+	Node0x4fabd80:s1 -> Node0x4fabd30;
+	Node0x4fabdd0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x4fabdd0:s0 -> Node0x4fabe70;
+	Node0x4fabdd0:s1 -> Node0x4fabe20;
+	Node0x4fabe20 [shape=record,label="{pd_while.body.if.end.466_crit_edge}"];
+	Node0x4fabe20 -> Node0x4fabec0;
+	Node0x4fabe70 [shape=record,label="{pd_if.then.463}"];
+	Node0x4fabe70 -> Node0x4fabec0;
+	Node0x4fabec0 [shape=record,label="{pd_if.end.466}"];
+	Node0x4fabec0 -> Node0x4fabd80;
+}

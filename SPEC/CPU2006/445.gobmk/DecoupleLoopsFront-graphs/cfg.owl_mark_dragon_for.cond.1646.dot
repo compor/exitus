@@ -1,0 +1,31 @@
+digraph "CFG for 'owl_mark_dragon_for.cond' function" {
+	label="CFG for 'owl_mark_dragon_for.cond' function";
+
+	Node0x42378c0 [shape=record,label="{newFuncRoot}"];
+	Node0x42378c0 -> Node0x4237960;
+	Node0x4237910 [shape=record,label="{for.end.exitStub}"];
+	Node0x4237960 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4237960:s0 -> Node0x42379b0;
+	Node0x4237960:s1 -> Node0x4237910;
+	Node0x42379b0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x42379b0:s0 -> Node0x4237a50;
+	Node0x42379b0:s1 -> Node0x4237a00;
+	Node0x4237a00 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4237a00 -> Node0x42384f0;
+	Node0x4237a50 [shape=record,label="{pd_if.then.15|{<s0>T|<s1>F}}"];
+	Node0x4237a50:s0 -> Node0x4238450;
+	Node0x4237a50:s1 -> Node0x4237aa0;
+	Node0x4237aa0 [shape=record,label="{pd_lor.lhs.false.16|{<s0>T|<s1>F}}"];
+	Node0x4237aa0:s0 -> Node0x4238400;
+	Node0x4237aa0:s1 -> Node0x42383b0;
+	Node0x42383b0 [shape=record,label="{pd_if.else.22}"];
+	Node0x42383b0 -> Node0x42384f0;
+	Node0x4238400 [shape=record,label="{pd_lor.lhs.false.16.if.then.19_crit_edge}"];
+	Node0x4238400 -> Node0x42384a0;
+	Node0x4238450 [shape=record,label="{pd_if.then.15.if.then.19_crit_edge}"];
+	Node0x4238450 -> Node0x42384a0;
+	Node0x42384a0 [shape=record,label="{pd_if.then.19}"];
+	Node0x42384a0 -> Node0x42384f0;
+	Node0x42384f0 [shape=record,label="{it_for.inc}"];
+	Node0x42384f0 -> Node0x4237960;
+}

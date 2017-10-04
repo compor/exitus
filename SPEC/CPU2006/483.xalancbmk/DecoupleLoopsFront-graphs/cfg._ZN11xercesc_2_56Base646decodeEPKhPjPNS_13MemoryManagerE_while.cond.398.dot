@@ -1,0 +1,23 @@
+digraph "CFG for '_ZN11xercesc_2_56Base646decodeEPKhPjPNS_13MemoryManagerE_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_56Base646decodeEPKhPjPNS_13MemoryManagerE_while.cond' function";
+
+	Node0x970a0c0 [shape=record,label="{newFuncRoot}"];
+	Node0x970a0c0 -> Node0x970a1b0;
+	Node0x970a110 [shape=record,label="{while.end.exitStub}"];
+	Node0x970a160 [shape=record,label="{cleanup.loopexit.exitStub}"];
+	Node0x970a1b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x970a1b0:s0 -> Node0x970a200;
+	Node0x970a1b0:s1 -> Node0x970a110;
+	Node0x970a200 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x970a200:s0 -> Node0x970a2a0;
+	Node0x970a200:s1 -> Node0x970a250;
+	Node0x970a250 [shape=record,label="{pd_if.then.10}"];
+	Node0x970a250 -> Node0x970a340;
+	Node0x970a2a0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x970a2a0:s0 -> Node0x970a160;
+	Node0x970a2a0:s1 -> Node0x970a2f0;
+	Node0x970a2f0 [shape=record,label="{it_if.else.if.end.19_crit_edge}"];
+	Node0x970a2f0 -> Node0x970a340;
+	Node0x970a340 [shape=record,label="{it_if.end.19}"];
+	Node0x970a340 -> Node0x970a1b0;
+}

@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN6cQueueD2Ev' function" {
+	label="CFG for '_ZN6cQueueD2Ev' function";
+
+	Node0x1d82a00 [shape=record,label="{entry}"];
+	Node0x1d82a00 -> Node0x1d82a50;
+	Node0x1d82a50 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1d82a50:s0 -> Node0x1d82aa0;
+	Node0x1d82a50:s1 -> Node0x1d82be0;
+	Node0x1d82aa0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x1d82aa0:s0 -> Node0x1d82af0;
+	Node0x1d82aa0:s1 -> Node0x1d82b40;
+	Node0x1d82af0 [shape=record,label="{pd_while.body.delete.end_crit_edge}"];
+	Node0x1d82af0 -> Node0x1d82b90;
+	Node0x1d82b40 [shape=record,label="{pd_delete.notnull}"];
+	Node0x1d82b40 -> Node0x1d82b90;
+	Node0x1d82b90 [shape=record,label="{pd_delete.end}"];
+	Node0x1d82b90 -> Node0x1d82a50;
+	Node0x1d82be0 [shape=record,label="{while.end}"];
+}

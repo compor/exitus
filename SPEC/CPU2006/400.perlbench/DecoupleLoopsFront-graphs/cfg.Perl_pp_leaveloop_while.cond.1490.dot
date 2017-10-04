@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_pp_leaveloop_while.cond' function" {
+	label="CFG for 'Perl_pp_leaveloop_while.cond' function";
+
+	Node0x4ef0750 [shape=record,label="{newFuncRoot}"];
+	Node0x4ef0750 -> Node0x4ef07f0;
+	Node0x4ef07a0 [shape=record,label="{if.end.33.loopexit.exitStub}"];
+	Node0x4ef07f0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4ef07f0:s0 -> Node0x4ef0840;
+	Node0x4ef07f0:s1 -> Node0x4ef07a0;
+	Node0x4ef0840 [shape=record,label="{it_while.body}"];
+	Node0x4ef0840 -> Node0x6756740;
+	Node0x6756740 [shape=record,label="{pd_while.body.split}"];
+	Node0x6756740 -> Node0x4ef07f0;
+}

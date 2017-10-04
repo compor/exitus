@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN3pov12IntersectionEPNS_10istk_entryEPNS_13Object_StructEPNS_10Ray_StructE_while.cond.outer' function" {
+	label="CFG for '_ZN3pov12IntersectionEPNS_10istk_entryEPNS_13Object_StructEPNS_10Ray_StructE_while.cond.outer' function";
+
+	Node0x26cd180 [shape=record,label="{newFuncRoot}"];
+	Node0x26cd180 -> Node0x26cd220;
+	Node0x26cd1d0 [shape=record,label="{while.end.exitStub}"];
+	Node0x26cd220 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x26cd220 -> Node0x26cd270;
+	Node0x26cd270 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x26cd270:s0 -> Node0x26cd2c0;
+	Node0x26cd270:s1 -> Node0x26cd1d0;
+	Node0x26cd2c0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x26cd2c0:s0 -> Node0x26cd360;
+	Node0x26cd2c0:s1 -> Node0x26cd310;
+	Node0x26cd310 [shape=record,label="{pd_while.body.while.cond_crit_edge}"];
+	Node0x26cd310 -> Node0x26cd270;
+	Node0x26cd360 [shape=record,label="{pd_if.then.9}"];
+	Node0x26cd360 -> Node0x26cd220;
+}

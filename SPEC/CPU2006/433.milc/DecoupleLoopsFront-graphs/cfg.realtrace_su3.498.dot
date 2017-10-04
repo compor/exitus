@@ -1,0 +1,19 @@
+digraph "CFG for 'realtrace_su3' function" {
+	label="CFG for 'realtrace_su3' function";
+
+	Node0x187f5e0 [shape=record,label="{entry}"];
+	Node0x187f5e0 -> Node0x187f630;
+	Node0x187f630 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x187f630:s0 -> Node0x187f680;
+	Node0x187f630:s1 -> Node0x187f7c0;
+	Node0x187f680 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x187f680 -> Node0x187f6d0;
+	Node0x187f6d0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x187f6d0:s0 -> Node0x187f720;
+	Node0x187f6d0:s1 -> Node0x187f770;
+	Node0x187f720 [shape=record,label="{pd_for.body.3}"];
+	Node0x187f720 -> Node0x187f6d0;
+	Node0x187f770 [shape=record,label="{it_for.inc.25}"];
+	Node0x187f770 -> Node0x187f630;
+	Node0x187f7c0 [shape=record,label="{for.end.27}"];
+}

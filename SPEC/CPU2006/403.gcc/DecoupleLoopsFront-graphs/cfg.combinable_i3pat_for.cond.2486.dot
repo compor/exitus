@@ -1,0 +1,16 @@
+digraph "CFG for 'combinable_i3pat_for.cond' function" {
+	label="CFG for 'combinable_i3pat_for.cond' function";
+
+	Node0xa5c5240 [shape=record,label="{newFuncRoot}"];
+	Node0xa5c5240 -> Node0xa61dc70;
+	Node0xa61dbd0 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0xa61dc20 [shape=record,label="{for.body.return.loopexit_crit_edge.exitStub}"];
+	Node0xa61dc70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa61dc70:s0 -> Node0xa61dcc0;
+	Node0xa61dc70:s1 -> Node0xa61dbd0;
+	Node0xa61dcc0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xa61dcc0:s0 -> Node0xa61dd10;
+	Node0xa61dcc0:s1 -> Node0xa61dc20;
+	Node0xa61dd10 [shape=record,label="{it_for.inc}"];
+	Node0xa61dd10 -> Node0xa61dc70;
+}

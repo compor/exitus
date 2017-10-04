@@ -1,0 +1,31 @@
+digraph "CFG for 'Perl_is_utf8_string_while.cond' function" {
+	label="CFG for 'Perl_is_utf8_string_while.cond' function";
+
+	Node0x57d5180 [shape=record,label="{newFuncRoot}"];
+	Node0x57d5180 -> Node0x57d5310;
+	Node0x57d51d0 [shape=record,label="{while.end.exitStub}"];
+	Node0x57d5220 [shape=record,label="{if.else.return.loopexit_crit_edge.exitStub}"];
+	Node0x57d5270 [shape=record,label="{land.lhs.true.8.return.loopexit_crit_edge.exitStub}"];
+	Node0x57d52c0 [shape=record,label="{if.else.13.return.loopexit_crit_edge.exitStub}"];
+	Node0x57d5310 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x57d5310:s0 -> Node0x57d5360;
+	Node0x57d5310:s1 -> Node0x57d51d0;
+	Node0x57d5360 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x57d5360:s0 -> Node0x57d54f0;
+	Node0x57d5360:s1 -> Node0x57d53b0;
+	Node0x57d53b0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x57d53b0:s0 -> Node0x57d5400;
+	Node0x57d53b0:s1 -> Node0x57d5220;
+	Node0x57d5400 [shape=record,label="{it_land.lhs.true.8|{<s0>T|<s1>F}}"];
+	Node0x57d5400:s0 -> Node0x57d5450;
+	Node0x57d5400:s1 -> Node0x57d5270;
+	Node0x57d5450 [shape=record,label="{it_if.else.13|{<s0>T|<s1>F}}"];
+	Node0x57d5450:s0 -> Node0x57d54a0;
+	Node0x57d5450:s1 -> Node0x57d52c0;
+	Node0x57d54a0 [shape=record,label="{pd_if.else.13.if.end.19_crit_edge}"];
+	Node0x57d54a0 -> Node0x57d5540;
+	Node0x57d54f0 [shape=record,label="{it_while.body.if.end.19_crit_edge}"];
+	Node0x57d54f0 -> Node0x57d5540;
+	Node0x57d5540 [shape=record,label="{it_if.end.19}"];
+	Node0x57d5540 -> Node0x57d5310;
+}

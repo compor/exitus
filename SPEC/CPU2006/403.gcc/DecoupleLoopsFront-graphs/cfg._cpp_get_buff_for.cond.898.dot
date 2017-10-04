@@ -1,0 +1,23 @@
+digraph "CFG for '_cpp_get_buff_for.cond' function" {
+	label="CFG for '_cpp_get_buff_for.cond' function";
+
+	Node0xa21ca90 [shape=record,label="{newFuncRoot}"];
+	Node0xa21ca90 -> Node0xa21cb80;
+	Node0xa21cae0 [shape=record,label="{if.then.exitStub}"];
+	Node0xa21cb30 [shape=record,label="{for.end.exitStub}"];
+	Node0xa21cb80 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa21cb80:s0 -> Node0xa21cae0;
+	Node0xa21cb80:s1 -> Node0xa21cbd0;
+	Node0xa21cbd0 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0xa21cbd0:s0 -> Node0xa21cc70;
+	Node0xa21cbd0:s1 -> Node0xa21cc20;
+	Node0xa21cc20 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0xa21cc20 -> Node0xa21cd10;
+	Node0xa21cc70 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xa21cc70:s0 -> Node0xa21cb30;
+	Node0xa21cc70:s1 -> Node0xa21ccc0;
+	Node0xa21ccc0 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0xa21ccc0 -> Node0xa21cd10;
+	Node0xa21cd10 [shape=record,label="{it_for.inc}"];
+	Node0xa21cd10 -> Node0xa21cb80;
+}

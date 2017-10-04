@@ -1,0 +1,20 @@
+digraph "CFG for 'Perl_pp_reverse_while.cond' function" {
+	label="CFG for 'Perl_pp_reverse_while.cond' function";
+
+	Node0x4be24e0 [shape=record,label="{newFuncRoot}"];
+	Node0x4be24e0 -> Node0x4be2580;
+	Node0x4be2530 [shape=record,label="{if.end.116.loopexit.exitStub}"];
+	Node0x4be2580 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4be2580:s0 -> Node0x4be25d0;
+	Node0x4be2580:s1 -> Node0x4be2530;
+	Node0x4be25d0 [shape=record,label="{pd_while.body}"];
+	Node0x4be25d0 -> Node0x658fe10;
+	Node0x658fe10 [shape=record,label="{it_while.body.split3}"];
+	Node0x658fe10 -> Node0x6445230;
+	Node0x6445230 [shape=record,label="{pd_while.body.split2}"];
+	Node0x6445230 -> Node0x4e618f0;
+	Node0x4e618f0 [shape=record,label="{it_while.body.split1}"];
+	Node0x4e618f0 -> Node0x65d8070;
+	Node0x65d8070 [shape=record,label="{pd_while.body.split}"];
+	Node0x65d8070 -> Node0x4be2580;
+}

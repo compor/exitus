@@ -1,0 +1,14 @@
+digraph "CFG for 'findstones_for.cond' function" {
+	label="CFG for 'findstones_for.cond' function";
+
+	Node0x3e33500 [shape=record,label="{newFuncRoot}"];
+	Node0x3e33500 -> Node0x3e335a0;
+	Node0x3e33550 [shape=record,label="{for.end.exitStub}"];
+	Node0x3e335a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3e335a0:s0 -> Node0x3e335f0;
+	Node0x3e335a0:s1 -> Node0x3e33550;
+	Node0x3e335f0 [shape=record,label="{pd_for.body}"];
+	Node0x3e335f0 -> Node0x4fa3670;
+	Node0x4fa3670 [shape=record,label="{it_for.body.split}"];
+	Node0x4fa3670 -> Node0x3e335a0;
+}

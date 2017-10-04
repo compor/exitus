@@ -1,0 +1,47 @@
+digraph "CFG for '_ZN8pov_base16TextStreamBuffer9lineflushEv' function" {
+	label="CFG for '_ZN8pov_base16TextStreamBuffer9lineflushEv' function";
+
+	Node0x2067ec0 [shape=record,label="{entry}"];
+	Node0x2067ec0 -> Node0x2067f10;
+	Node0x2067f10 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2067f10:s0 -> Node0x2067f60;
+	Node0x2067f10:s1 -> Node0x2068460;
+	Node0x2067f60 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x2067f60:s0 -> Node0x2067fb0;
+	Node0x2067f60:s1 -> Node0x2068000;
+	Node0x2067fb0 [shape=record,label="{pd_while.body.if.then_crit_edge}"];
+	Node0x2067fb0 -> Node0x20680a0;
+	Node0x2068000 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x2068000:s0 -> Node0x2068050;
+	Node0x2068000:s1 -> Node0x20680f0;
+	Node0x2068050 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x2068050 -> Node0x20680a0;
+	Node0x20680a0 [shape=record,label="{pd_if.then}"];
+	Node0x20680a0 -> Node0x2068410;
+	Node0x20680f0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x20680f0:s0 -> Node0x2068190;
+	Node0x20680f0:s1 -> Node0x2068140;
+	Node0x2068140 [shape=record,label="{pd_if.else.if.end.38_crit_edge}"];
+	Node0x2068140 -> Node0x2068410;
+	Node0x2068190 [shape=record,label="{pd_for.cond.preheader}"];
+	Node0x2068190 -> Node0x20681e0;
+	Node0x20681e0 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x20681e0:s0 -> Node0x2068280;
+	Node0x20681e0:s1 -> Node0x2068230;
+	Node0x2068230 [shape=record,label="{pd_for.cond.for.end_crit_edge}"];
+	Node0x2068230 -> Node0x2068370;
+	Node0x2068280 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2068280:s0 -> Node0x20682d0;
+	Node0x2068280:s1 -> Node0x2068320;
+	Node0x20682d0 [shape=record,label="{pd_for.body.for.end_crit_edge}"];
+	Node0x20682d0 -> Node0x2068370;
+	Node0x2068320 [shape=record,label="{pd_for.inc}"];
+	Node0x2068320 -> Node0x20681e0;
+	Node0x2068370 [shape=record,label="{pd_for.end}"];
+	Node0x2068370 -> Node0x20683c0;
+	Node0x20683c0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x20683c0 -> Node0x2067f10;
+	Node0x2068410 [shape=record,label="{pd_if.end.38}"];
+	Node0x2068410 -> Node0x20683c0;
+	Node0x2068460 [shape=record,label="{while.end}"];
+}

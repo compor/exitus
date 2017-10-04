@@ -1,0 +1,12 @@
+digraph "CFG for 'dump_node_while.cond' function" {
+	label="CFG for 'dump_node_while.cond' function";
+
+	Node0xaee6050 [shape=record,label="{newFuncRoot}"];
+	Node0xaee6050 -> Node0xaee60f0;
+	Node0xaee60a0 [shape=record,label="{while.end.exitStub}"];
+	Node0xaee60f0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xaee60f0:s0 -> Node0xaee6140;
+	Node0xaee60f0:s1 -> Node0xaee60a0;
+	Node0xaee6140 [shape=record,label="{pd_while.body}"];
+	Node0xaee6140 -> Node0xaee60f0;
+}

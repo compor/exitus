@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_scalar_for.cond' function" {
+	label="CFG for 'Perl_scalar_for.cond' function";
+
+	Node0x4bf8fa0 [shape=record,label="{newFuncRoot}"];
+	Node0x4bf8fa0 -> Node0x4bf9040;
+	Node0x4bf8ff0 [shape=record,label="{return.loopexit1.exitStub}"];
+	Node0x4bf9040 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bf9040:s0 -> Node0x4bf9090;
+	Node0x4bf9040:s1 -> Node0x4bf8ff0;
+	Node0x4bf9090 [shape=record,label="{pd_for.body}"];
+	Node0x4bf9090 -> Node0x63066c0;
+	Node0x63066c0 [shape=record,label="{it_for.body.split}"];
+	Node0x63066c0 -> Node0x4bf9040;
+}

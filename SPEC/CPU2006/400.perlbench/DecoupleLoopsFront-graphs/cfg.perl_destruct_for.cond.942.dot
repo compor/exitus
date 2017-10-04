@@ -1,0 +1,18 @@
+digraph "CFG for 'perl_destruct_for.cond' function" {
+	label="CFG for 'perl_destruct_for.cond' function";
+
+	Node0x4d29500 [shape=record,label="{newFuncRoot}"];
+	Node0x4d29500 -> Node0x4d295a0;
+	Node0x4d29550 [shape=record,label="{for.end.exitStub}"];
+	Node0x4d295a0 [shape=record,label="{it_for.cond}"];
+	Node0x4d295a0 -> Node0x659fda0;
+	Node0x659fda0 [shape=record,label="{pd_for.cond.split1}"];
+	Node0x659fda0 -> Node0x69f78c0;
+	Node0x69f78c0 [shape=record,label="{it_for.cond.split|{<s0>T|<s1>F}}"];
+	Node0x69f78c0:s0 -> Node0x4d295f0;
+	Node0x69f78c0:s1 -> Node0x4d29550;
+	Node0x4d295f0 [shape=record,label="{pd_for.body}"];
+	Node0x4d295f0 -> Node0x6453c60;
+	Node0x6453c60 [shape=record,label="{it_for.body.split}"];
+	Node0x6453c60 -> Node0x4d295a0;
+}

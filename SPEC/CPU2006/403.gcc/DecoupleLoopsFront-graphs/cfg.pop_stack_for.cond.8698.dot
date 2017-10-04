@@ -1,0 +1,16 @@
+digraph "CFG for 'pop_stack_for.cond' function" {
+	label="CFG for 'pop_stack_for.cond' function";
+
+	Node0xb9445e0 [shape=record,label="{newFuncRoot}"];
+	Node0xb9445e0 -> Node0xb9446d0;
+	Node0xb944630 [shape=record,label="{if.end.27.loopexit1.exitStub}"];
+	Node0xb944680 [shape=record,label="{for.cond.14.preheader.exitStub}"];
+	Node0xb9446d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb9446d0:s0 -> Node0xb944720;
+	Node0xb9446d0:s1 -> Node0xb944630;
+	Node0xb944720 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb944720:s0 -> Node0xb944680;
+	Node0xb944720:s1 -> Node0xb944770;
+	Node0xb944770 [shape=record,label="{it_for.inc.24}"];
+	Node0xb944770 -> Node0xb9446d0;
+}

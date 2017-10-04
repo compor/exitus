@@ -1,0 +1,19 @@
+digraph "CFG for 'search_root_for.cond' function" {
+	label="CFG for 'search_root_for.cond' function";
+
+	Node0x11472e0 [shape=record,label="{newFuncRoot}"];
+	Node0x11472e0 -> Node0x1147380;
+	Node0x1147330 [shape=record,label="{if.end.31.loopexit.exitStub}"];
+	Node0x1147380 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1147380:s0 -> Node0x11473d0;
+	Node0x1147380:s1 -> Node0x1147330;
+	Node0x11473d0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x11473d0:s0 -> Node0x1147470;
+	Node0x11473d0:s1 -> Node0x1147420;
+	Node0x1147420 [shape=record,label="{pd_for.body.if.end.28_crit_edge}"];
+	Node0x1147420 -> Node0x11474c0;
+	Node0x1147470 [shape=record,label="{pd_if.then.26}"];
+	Node0x1147470 -> Node0x11474c0;
+	Node0x11474c0 [shape=record,label="{pd_if.end.28}"];
+	Node0x11474c0 -> Node0x1147380;
+}

@@ -1,0 +1,19 @@
+digraph "CFG for 'reading_hotspots_for.cond' function" {
+	label="CFG for 'reading_hotspots_for.cond' function";
+
+	Node0x4732710 [shape=record,label="{newFuncRoot}"];
+	Node0x4732710 -> Node0x4732b90;
+	Node0x4732760 [shape=record,label="{for.cond.8.preheader.exitStub}"];
+	Node0x4732b90 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4732b90:s0 -> Node0x4732be0;
+	Node0x4732b90:s1 -> Node0x4732760;
+	Node0x4732be0 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x4732be0 -> Node0x4732c30;
+	Node0x4732c30 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x4732c30:s0 -> Node0x4732cd0;
+	Node0x4732c30:s1 -> Node0x4732c80;
+	Node0x4732c80 [shape=record,label="{it_for.inc.5}"];
+	Node0x4732c80 -> Node0x4732b90;
+	Node0x4732cd0 [shape=record,label="{pd_for.body.3}"];
+	Node0x4732cd0 -> Node0x4732c30;
+}

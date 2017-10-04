@@ -1,0 +1,14 @@
+digraph "CFG for 'read_bin20hmm_for.cond' function" {
+	label="CFG for 'read_bin20hmm_for.cond' function";
+
+	Node0x30d1840 [shape=record,label="{newFuncRoot}"];
+	Node0x30d1840 -> Node0x30d18e0;
+	Node0x30d1890 [shape=record,label="{if.end.125.loopexit.exitStub}"];
+	Node0x30d18e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x30d18e0:s0 -> Node0x30d1930;
+	Node0x30d18e0:s1 -> Node0x30d1890;
+	Node0x30d1930 [shape=record,label="{pd_for.body}"];
+	Node0x30d1930 -> Node0x30b9c00;
+	Node0x30b9c00 [shape=record,label="{it_for.body.split}"];
+	Node0x30b9c00 -> Node0x30d18e0;
+}

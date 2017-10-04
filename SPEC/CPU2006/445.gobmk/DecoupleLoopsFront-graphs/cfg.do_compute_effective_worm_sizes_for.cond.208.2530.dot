@@ -1,0 +1,33 @@
+digraph "CFG for 'do_compute_effective_worm_sizes_for.cond.208' function" {
+	label="CFG for 'do_compute_effective_worm_sizes_for.cond.208' function";
+
+	Node0x4702550 [shape=record,label="{newFuncRoot}"];
+	Node0x4702550 -> Node0x47025f0;
+	Node0x47025a0 [shape=record,label="{for.end.251.exitStub}"];
+	Node0x47025f0 [shape=record,label="{it_for.cond.208|{<s0>T|<s1>F}}"];
+	Node0x47025f0:s0 -> Node0x4702640;
+	Node0x47025f0:s1 -> Node0x47025a0;
+	Node0x4702640 [shape=record,label="{pd_for.body.211|{<s0>T|<s1>F}}"];
+	Node0x4702640:s0 -> Node0x47026e0;
+	Node0x4702640:s1 -> Node0x4702690;
+	Node0x4702690 [shape=record,label="{pd_for.body.211.for.inc.249_crit_edge}"];
+	Node0x4702690 -> Node0x47028c0;
+	Node0x47026e0 [shape=record,label="{pd_if.end.218|{<s0>T|<s1>F}}"];
+	Node0x47026e0:s0 -> Node0x4702780;
+	Node0x47026e0:s1 -> Node0x4702730;
+	Node0x4702730 [shape=record,label="{pd_if.else.226}"];
+	Node0x4702730 -> Node0x47027d0;
+	Node0x4702780 [shape=record,label="{pd_if.then.223}"];
+	Node0x4702780 -> Node0x47027d0;
+	Node0x47027d0 [shape=record,label="{pd_for.cond.232.preheader}"];
+	Node0x47027d0 -> Node0x4702820;
+	Node0x4702820 [shape=record,label="{pd_for.cond.232|{<s0>T|<s1>F}}"];
+	Node0x4702820:s0 -> Node0x4702910;
+	Node0x4702820:s1 -> Node0x4702870;
+	Node0x4702870 [shape=record,label="{pd_for.inc.249.loopexit}"];
+	Node0x4702870 -> Node0x47028c0;
+	Node0x47028c0 [shape=record,label="{it_for.inc.249}"];
+	Node0x47028c0 -> Node0x47025f0;
+	Node0x4702910 [shape=record,label="{pd_for.body.237}"];
+	Node0x4702910 -> Node0x4702820;
+}

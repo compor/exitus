@@ -1,0 +1,29 @@
+digraph "CFG for 'note_set_pseudo_multiple_uses_while.cond' function" {
+	label="CFG for 'note_set_pseudo_multiple_uses_while.cond' function";
+
+	Node0xb682740 [shape=record,label="{newFuncRoot}"];
+	Node0xb682740 -> Node0xb6827e0;
+	Node0xb682790 [shape=record,label="{while.end.exitStub}"];
+	Node0xb6827e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb6827e0:s0 -> Node0xb682a10;
+	Node0xb6827e0:s1 -> Node0xb682830;
+	Node0xb682830 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xb682830:s0 -> Node0xb6829c0;
+	Node0xb682830:s1 -> Node0xb682880;
+	Node0xb682880 [shape=record,label="{it_lor.lhs.false.5|{<s0>T|<s1>F}}"];
+	Node0xb682880:s0 -> Node0xb682970;
+	Node0xb682880:s1 -> Node0xb6828d0;
+	Node0xb6828d0 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0xb6828d0:s0 -> Node0xb682920;
+	Node0xb6828d0:s1 -> Node0xb682790;
+	Node0xb682920 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0xb682920 -> Node0xb682a60;
+	Node0xb682970 [shape=record,label="{pd_lor.lhs.false.5.while.body_crit_edge}"];
+	Node0xb682970 -> Node0xb682a60;
+	Node0xb6829c0 [shape=record,label="{pd_lor.lhs.false.while.body_crit_edge}"];
+	Node0xb6829c0 -> Node0xb682a60;
+	Node0xb682a10 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0xb682a10 -> Node0xb682a60;
+	Node0xb682a60 [shape=record,label="{it_while.body}"];
+	Node0xb682a60 -> Node0xb6827e0;
+}

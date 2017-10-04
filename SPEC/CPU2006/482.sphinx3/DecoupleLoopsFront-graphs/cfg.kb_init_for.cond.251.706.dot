@@ -1,0 +1,19 @@
+digraph "CFG for 'kb_init_for.cond.251' function" {
+	label="CFG for 'kb_init_for.cond.251' function";
+
+	Node0x12185c0 [shape=record,label="{newFuncRoot}"];
+	Node0x12185c0 -> Node0x1218660;
+	Node0x1218610 [shape=record,label="{for.end.273.exitStub}"];
+	Node0x1218660 [shape=record,label="{it_for.cond.251|{<s0>T|<s1>F}}"];
+	Node0x1218660:s0 -> Node0x12186b0;
+	Node0x1218660:s1 -> Node0x1218610;
+	Node0x12186b0 [shape=record,label="{pd_for.body.256|{<s0>T|<s1>F}}"];
+	Node0x12186b0:s0 -> Node0x1218750;
+	Node0x12186b0:s1 -> Node0x1218700;
+	Node0x1218700 [shape=record,label="{pd_for.body.256.for.inc.271_crit_edge}"];
+	Node0x1218700 -> Node0x12187a0;
+	Node0x1218750 [shape=record,label="{pd_if.then.266}"];
+	Node0x1218750 -> Node0x12187a0;
+	Node0x12187a0 [shape=record,label="{it_for.inc.271}"];
+	Node0x12187a0 -> Node0x1218660;
+}

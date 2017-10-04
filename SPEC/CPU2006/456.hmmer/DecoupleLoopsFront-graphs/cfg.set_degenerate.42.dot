@@ -1,0 +1,14 @@
+digraph "CFG for 'set_degenerate' function" {
+	label="CFG for 'set_degenerate' function";
+
+	Node0x28b9800 [shape=record,label="{entry}"];
+	Node0x28b9800 -> Node0x28b9850;
+	Node0x28b9850 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x28b9850:s0 -> Node0x28b98a0;
+	Node0x28b9850:s1 -> Node0x28b98f0;
+	Node0x28b98a0 [shape=record,label="{pd_while.body}"];
+	Node0x28b98a0 -> Node0x353c6b0;
+	Node0x353c6b0 [shape=record,label="{it_while.body.split}"];
+	Node0x353c6b0 -> Node0x28b9850;
+	Node0x28b98f0 [shape=record,label="{while.end}"];
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_sv_pos_u2b_while.cond' function" {
+	label="CFG for 'Perl_sv_pos_u2b_while.cond' function";
+
+	Node0x54902a0 [shape=record,label="{newFuncRoot}"];
+	Node0x54902a0 -> Node0x5490340;
+	Node0x54902f0 [shape=record,label="{while.end.exitStub}"];
+	Node0x5490340 [shape=record,label="{it_while.cond}"];
+	Node0x5490340 -> Node0x6ea81d0;
+	Node0x6ea81d0 [shape=record,label="{pd_while.cond.split1}"];
+	Node0x6ea81d0 -> Node0x51ff260;
+	Node0x51ff260 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0x51ff260:s0 -> Node0x5490390;
+	Node0x51ff260:s1 -> Node0x54902f0;
+	Node0x5490390 [shape=record,label="{pd_while.body}"];
+	Node0x5490390 -> Node0x5490340;
+}

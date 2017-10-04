@@ -1,0 +1,34 @@
+digraph "CFG for '_ZN3povL10check_hit2EPNS_21Superellipsoid_StructEPdS2_dS2_ddS2_S2__for.cond' function" {
+	label="CFG for '_ZN3povL10check_hit2EPNS_21Superellipsoid_StructEPdS2_dS2_ddS2_S2__for.cond' function";
+
+	Node0x24ba210 [shape=record,label="{newFuncRoot}"];
+	Node0x24ba210 -> Node0x24ba440;
+	Node0x24ba260 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x24ba2b0 [shape=record,label="{if.then.exitStub}"];
+	Node0x24ba300 [shape=record,label="{if.then.9.exitStub}"];
+	Node0x24ba350 [shape=record,label="{if.else.10.return.loopexit_crit_edge.exitStub}"];
+	Node0x24ba3a0 [shape=record,label="{lor.lhs.false.return.loopexit_crit_edge.exitStub}"];
+	Node0x24ba3f0 [shape=record,label="{if.else.20.return.loopexit_crit_edge.exitStub}"];
+	Node0x24ba440 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x24ba440:s0 -> Node0x24ba490;
+	Node0x24ba440:s1 -> Node0x24ba260;
+	Node0x24ba490 [shape=record,label="{pd_for.body}"];
+	Node0x24ba490 -> Node0x38d27f0;
+	Node0x38d27f0 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x38d27f0:s0 -> Node0x24ba2b0;
+	Node0x38d27f0:s1 -> Node0x24ba4e0;
+	Node0x24ba4e0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x24ba4e0:s0 -> Node0x24ba300;
+	Node0x24ba4e0:s1 -> Node0x24ba530;
+	Node0x24ba530 [shape=record,label="{it_if.else.10|{<s0>T|<s1>F}}"];
+	Node0x24ba530:s0 -> Node0x24ba350;
+	Node0x24ba530:s1 -> Node0x24ba580;
+	Node0x24ba580 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x24ba580:s0 -> Node0x24ba3a0;
+	Node0x24ba580:s1 -> Node0x24ba5d0;
+	Node0x24ba5d0 [shape=record,label="{it_if.else.20|{<s0>T|<s1>F}}"];
+	Node0x24ba5d0:s0 -> Node0x24ba3f0;
+	Node0x24ba5d0:s1 -> Node0x24ba620;
+	Node0x24ba620 [shape=record,label="{it_if.end.30}"];
+	Node0x24ba620 -> Node0x24ba440;
+}

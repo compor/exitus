@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_list_for.cond' function" {
+	label="CFG for 'Perl_list_for.cond' function";
+
+	Node0x4bfcce0 [shape=record,label="{newFuncRoot}"];
+	Node0x4bfcce0 -> Node0x4bfcd80;
+	Node0x4bfcd30 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x4bfcd80 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bfcd80:s0 -> Node0x4bfcdd0;
+	Node0x4bfcd80:s1 -> Node0x4bfcd30;
+	Node0x4bfcdd0 [shape=record,label="{pd_for.body}"];
+	Node0x4bfcdd0 -> Node0x6442cd0;
+	Node0x6442cd0 [shape=record,label="{it_for.body.split}"];
+	Node0x6442cd0 -> Node0x4bfcd80;
+}

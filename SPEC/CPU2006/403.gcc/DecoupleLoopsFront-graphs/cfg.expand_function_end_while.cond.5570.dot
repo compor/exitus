@@ -1,0 +1,12 @@
+digraph "CFG for 'expand_function_end_while.cond' function" {
+	label="CFG for 'expand_function_end_while.cond' function";
+
+	Node0xb04b360 [shape=record,label="{newFuncRoot}"];
+	Node0xb04b360 -> Node0xb053050;
+	Node0xb053000 [shape=record,label="{while.end.exitStub}"];
+	Node0xb053050 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb053050:s0 -> Node0xb0530a0;
+	Node0xb053050:s1 -> Node0xb053000;
+	Node0xb0530a0 [shape=record,label="{pd_while.body}"];
+	Node0xb0530a0 -> Node0xb053050;
+}

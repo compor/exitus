@@ -1,0 +1,14 @@
+digraph "CFG for 'floor_log2_wide' function" {
+	label="CFG for 'floor_log2_wide' function";
+
+	Node0x94c4680 [shape=record,label="{entry}"];
+	Node0x94c4680 -> Node0x94cd100;
+	Node0x94cd100 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x94cd100:s0 -> Node0x94cd150;
+	Node0x94cd100:s1 -> Node0x94cd1a0;
+	Node0x94cd150 [shape=record,label="{pd_while.body}"];
+	Node0x94cd150 -> Node0xeb358c0;
+	Node0xeb358c0 [shape=record,label="{it_while.body.split}"];
+	Node0xeb358c0 -> Node0x94cd100;
+	Node0x94cd1a0 [shape=record,label="{while.end}"];
+}

@@ -1,0 +1,23 @@
+digraph "CFG for 'Perl_mg_size_for.cond' function" {
+	label="CFG for 'Perl_mg_size_for.cond' function";
+
+	Node0x4bbb740 [shape=record,label="{newFuncRoot}"];
+	Node0x4bbb740 -> Node0x4bbb830;
+	Node0x4bbb790 [shape=record,label="{for.end.exitStub}"];
+	Node0x4bbb7e0 [shape=record,label="{if.then.exitStub}"];
+	Node0x4bbb830 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bbb830:s0 -> Node0x4bbb880;
+	Node0x4bbb830:s1 -> Node0x4bbb790;
+	Node0x4bbb880 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4bbb880:s0 -> Node0x4bbb920;
+	Node0x4bbb880:s1 -> Node0x4bbb8d0;
+	Node0x4bbb8d0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4bbb8d0 -> Node0x4bbb9c0;
+	Node0x4bbb920 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4bbb920:s0 -> Node0x4bbb7e0;
+	Node0x4bbb920:s1 -> Node0x4bbb970;
+	Node0x4bbb970 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x4bbb970 -> Node0x4bbb9c0;
+	Node0x4bbb9c0 [shape=record,label="{it_for.inc}"];
+	Node0x4bbb9c0 -> Node0x4bbb830;
+}

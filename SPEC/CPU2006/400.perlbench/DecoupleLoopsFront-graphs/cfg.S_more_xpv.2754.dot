@@ -1,0 +1,14 @@
+digraph "CFG for 'S_more_xpv' function" {
+	label="CFG for 'S_more_xpv' function";
+
+	Node0x3dcb470 [shape=record,label="{entry}"];
+	Node0x3dcb470 -> Node0x3dcb4c0;
+	Node0x3dcb4c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3dcb4c0:s0 -> Node0x3dcb8b0;
+	Node0x3dcb4c0:s1 -> Node0x3dcb900;
+	Node0x3dcb8b0 [shape=record,label="{pd_while.body}"];
+	Node0x3dcb8b0 -> Node0x637b8c0;
+	Node0x637b8c0 [shape=record,label="{it_while.body.split}"];
+	Node0x637b8c0 -> Node0x3dcb4c0;
+	Node0x3dcb900 [shape=record,label="{while.end}"];
+}

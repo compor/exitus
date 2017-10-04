@@ -1,0 +1,16 @@
+digraph "CFG for 'lextree_enter_for.cond' function" {
+	label="CFG for 'lextree_enter_for.cond' function";
+
+	Node0x12553e0 [shape=record,label="{newFuncRoot}"];
+	Node0x12553e0 -> Node0x12554d0;
+	Node0x1255430 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x1255480 [shape=record,label="{land.rhs.for.end_crit_edge.exitStub}"];
+	Node0x12554d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x12554d0:s0 -> Node0x1255520;
+	Node0x12554d0:s1 -> Node0x1255430;
+	Node0x1255520 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x1255520:s0 -> Node0x1255570;
+	Node0x1255520:s1 -> Node0x1255480;
+	Node0x1255570 [shape=record,label="{it_for.inc}"];
+	Node0x1255570 -> Node0x12554d0;
+}

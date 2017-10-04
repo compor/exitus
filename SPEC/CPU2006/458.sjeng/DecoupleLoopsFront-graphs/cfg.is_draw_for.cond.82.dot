@@ -1,0 +1,16 @@
+digraph "CFG for 'is_draw_for.cond' function" {
+	label="CFG for 'is_draw_for.cond' function";
+
+	Node0xfaec00 [shape=record,label="{newFuncRoot}"];
+	Node0xfaec00 -> Node0xfaecf0;
+	Node0xfaec50 [shape=record,label="{if.end.15.loopexit.exitStub}"];
+	Node0xfaeca0 [shape=record,label="{return.loopexit1.exitStub}"];
+	Node0xfaecf0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xfaecf0:s0 -> Node0xfaed40;
+	Node0xfaecf0:s1 -> Node0xfaec50;
+	Node0xfaed40 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xfaed40:s0 -> Node0xfaeca0;
+	Node0xfaed40:s1 -> Node0xfaed90;
+	Node0xfaed90 [shape=record,label="{it_for.inc}"];
+	Node0xfaed90 -> Node0xfaecf0;
+}

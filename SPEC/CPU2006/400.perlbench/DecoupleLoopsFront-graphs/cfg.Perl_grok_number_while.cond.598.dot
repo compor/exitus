@@ -1,0 +1,41 @@
+digraph "CFG for 'Perl_grok_number_while.cond' function" {
+	label="CFG for 'Perl_grok_number_while.cond' function";
+
+	Node0x4bda950 [shape=record,label="{newFuncRoot}"];
+	Node0x4bda950 -> Node0x4af92f0;
+	Node0x4af92a0 [shape=record,label="{while.end.exitStub}"];
+	Node0x4af92f0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4af92f0:s0 -> Node0x4af9390;
+	Node0x4af92f0:s1 -> Node0x4af9340;
+	Node0x4af9340 [shape=record,label="{it_while.cond.land.end_crit_edge}"];
+	Node0x4af9340 -> Node0x4af9660;
+	Node0x4af9390 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x4af9390:s0 -> Node0x4af9610;
+	Node0x4af9390:s1 -> Node0x4af93e0;
+	Node0x4af93e0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4af93e0:s0 -> Node0x4af95c0;
+	Node0x4af93e0:s1 -> Node0x4af9430;
+	Node0x4af9430 [shape=record,label="{it_lor.lhs.false.6|{<s0>T|<s1>F}}"];
+	Node0x4af9430:s0 -> Node0x4af9570;
+	Node0x4af9430:s1 -> Node0x4af9480;
+	Node0x4af9480 [shape=record,label="{it_lor.lhs.false.10|{<s0>T|<s1>F}}"];
+	Node0x4af9480:s0 -> Node0x4af9520;
+	Node0x4af9480:s1 -> Node0x4af94d0;
+	Node0x4af94d0 [shape=record,label="{it_lor.rhs}"];
+	Node0x4af94d0 -> Node0x4af9660;
+	Node0x4af9520 [shape=record,label="{it_lor.lhs.false.10.land.end_crit_edge}"];
+	Node0x4af9520 -> Node0x4af9660;
+	Node0x4af9570 [shape=record,label="{it_lor.lhs.false.6.land.end_crit_edge}"];
+	Node0x4af9570 -> Node0x4af9660;
+	Node0x4af95c0 [shape=record,label="{it_lor.lhs.false.land.end_crit_edge}"];
+	Node0x4af95c0 -> Node0x4af9660;
+	Node0x4af9610 [shape=record,label="{it_land.rhs.land.end_crit_edge}"];
+	Node0x4af9610 -> Node0x4af9660;
+	Node0x4af9660 [shape=record,label="{pd_land.end}"];
+	Node0x4af9660 -> Node0x6440720;
+	Node0x6440720 [shape=record,label="{it_land.end.split|{<s0>T|<s1>F}}"];
+	Node0x6440720:s0 -> Node0x4af96b0;
+	Node0x6440720:s1 -> Node0x4af92a0;
+	Node0x4af96b0 [shape=record,label="{pd_while.body}"];
+	Node0x4af96b0 -> Node0x4af92f0;
+}

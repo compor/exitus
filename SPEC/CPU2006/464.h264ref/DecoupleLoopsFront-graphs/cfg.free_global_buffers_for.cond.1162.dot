@@ -1,0 +1,21 @@
+digraph "CFG for 'free_global_buffers_for.cond' function" {
+	label="CFG for 'free_global_buffers_for.cond' function";
+
+	Node0x227d050 [shape=record,label="{newFuncRoot}"];
+	Node0x227d050 -> Node0x227d0f0;
+	Node0x227d0a0 [shape=record,label="{for.end.46.exitStub}"];
+	Node0x227d0f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x227d0f0:s0 -> Node0x227d140;
+	Node0x227d0f0:s1 -> Node0x227d0a0;
+	Node0x227d140 [shape=record,label="{pd_for.body}"];
+	Node0x227d140 -> Node0x227d190;
+	Node0x227d190 [shape=record,label="{pd_for.cond.28|{<s0>T|<s1>F}}"];
+	Node0x227d190:s0 -> Node0x227d230;
+	Node0x227d190:s1 -> Node0x227d1e0;
+	Node0x227d1e0 [shape=record,label="{pd_for.end}"];
+	Node0x227d1e0 -> Node0x37a2ea0;
+	Node0x37a2ea0 [shape=record,label="{it_for.end.split}"];
+	Node0x37a2ea0 -> Node0x227d0f0;
+	Node0x227d230 [shape=record,label="{pd_for.body.30}"];
+	Node0x227d230 -> Node0x227d190;
+}

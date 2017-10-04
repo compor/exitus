@@ -1,0 +1,35 @@
+digraph "CFG for 'gametreefuseki_while.cond.13' function" {
+	label="CFG for 'gametreefuseki_while.cond.13' function";
+
+	Node0x3331e70 [shape=record,label="{newFuncRoot}"];
+	Node0x3331e70 -> Node0x3331f60;
+	Node0x3331ec0 [shape=record,label="{while.end.34.loopexit.exitStub}"];
+	Node0x3331f10 [shape=record,label="{if.then.28.exitStub}"];
+	Node0x3331f60 [shape=record,label="{it_while.cond.13|{<s0>T|<s1>F}}"];
+	Node0x3331f60:s0 -> Node0x3331fb0;
+	Node0x3331f60:s1 -> Node0x3331ec0;
+	Node0x3331fb0 [shape=record,label="{it_while.body.15|{<s0>T|<s1>F}}"];
+	Node0x3331fb0:s0 -> Node0x3332050;
+	Node0x3331fb0:s1 -> Node0x3332000;
+	Node0x3332000 [shape=record,label="{pd_while.body.15.if.end.25_crit_edge}"];
+	Node0x3332000 -> Node0x3332230;
+	Node0x3332050 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x3332050:s0 -> Node0x3332190;
+	Node0x3332050:s1 -> Node0x33320a0;
+	Node0x33320a0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x33320a0:s0 -> Node0x3332140;
+	Node0x33320a0:s1 -> Node0x33320f0;
+	Node0x33320f0 [shape=record,label="{pd_lor.lhs.false.if.end.25_crit_edge}"];
+	Node0x33320f0 -> Node0x3332230;
+	Node0x3332140 [shape=record,label="{pd_lor.lhs.false.if.then.24_crit_edge}"];
+	Node0x3332140 -> Node0x33321e0;
+	Node0x3332190 [shape=record,label="{pd_land.lhs.true.if.then.24_crit_edge}"];
+	Node0x3332190 -> Node0x33321e0;
+	Node0x33321e0 [shape=record,label="{it_if.then.24}"];
+	Node0x33321e0 -> Node0x3332230;
+	Node0x3332230 [shape=record,label="{it_if.end.25|{<s0>T|<s1>F}}"];
+	Node0x3332230:s0 -> Node0x3331f10;
+	Node0x3332230:s1 -> Node0x3332280;
+	Node0x3332280 [shape=record,label="{pd_if.else.30}"];
+	Node0x3332280 -> Node0x3331f60;
+}

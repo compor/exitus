@@ -1,0 +1,36 @@
+digraph "CFG for 'initialize_supplementary_dragon_data_for.cond.38' function" {
+	label="CFG for 'initialize_supplementary_dragon_data_for.cond.38' function";
+
+	Node0x3f75270 [shape=record,label="{newFuncRoot}"];
+	Node0x3f75270 -> Node0x3f75310;
+	Node0x3f752c0 [shape=record,label="{for.cond.75.preheader.exitStub}"];
+	Node0x3f75310 [shape=record,label="{it_for.cond.38|{<s0>T|<s1>F}}"];
+	Node0x3f75310:s0 -> Node0x3f75360;
+	Node0x3f75310:s1 -> Node0x3f752c0;
+	Node0x3f75360 [shape=record,label="{pd_for.body.41|{<s0>T|<s1>F}}"];
+	Node0x3f75360:s0 -> Node0x3f75400;
+	Node0x3f75360:s1 -> Node0x3f753b0;
+	Node0x3f753b0 [shape=record,label="{pd_for.body.41.for.inc.72_crit_edge}"];
+	Node0x3f753b0 -> Node0x3f75680;
+	Node0x3f75400 [shape=record,label="{pd_if.end.48|{<s0>T|<s1>F}}"];
+	Node0x3f75400:s0 -> Node0x3f75540;
+	Node0x3f75400:s1 -> Node0x3f75450;
+	Node0x3f75450 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x3f75450:s0 -> Node0x3f754f0;
+	Node0x3f75450:s1 -> Node0x3f754a0;
+	Node0x3f754a0 [shape=record,label="{pd_lor.lhs.false.for.inc.72_crit_edge}"];
+	Node0x3f754a0 -> Node0x3f75680;
+	Node0x3f754f0 [shape=record,label="{pd_lor.lhs.false.land.lhs.true_crit_edge}"];
+	Node0x3f754f0 -> Node0x3f75590;
+	Node0x3f75540 [shape=record,label="{pd_if.end.48.land.lhs.true_crit_edge}"];
+	Node0x3f75540 -> Node0x3f75590;
+	Node0x3f75590 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x3f75590:s0 -> Node0x3f75630;
+	Node0x3f75590:s1 -> Node0x3f755e0;
+	Node0x3f755e0 [shape=record,label="{pd_land.lhs.true.for.inc.72_crit_edge}"];
+	Node0x3f755e0 -> Node0x3f75680;
+	Node0x3f75630 [shape=record,label="{pd_if.then.64}"];
+	Node0x3f75630 -> Node0x3f75680;
+	Node0x3f75680 [shape=record,label="{it_for.inc.72}"];
+	Node0x3f75680 -> Node0x3f75310;
+}

@@ -1,0 +1,31 @@
+digraph "CFG for 'iv_add_mult_cost_while.cond' function" {
+	label="CFG for 'iv_add_mult_cost_while.cond' function";
+
+	Node0xb672d20 [shape=record,label="{newFuncRoot}"];
+	Node0xb672d20 -> Node0xb680060;
+	Node0xb680010 [shape=record,label="{while.end.exitStub}"];
+	Node0xb680060 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb680060:s0 -> Node0xb6800b0;
+	Node0xb680060:s1 -> Node0xb680010;
+	Node0xb6800b0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0xb6800b0:s0 -> Node0xb680150;
+	Node0xb6800b0:s1 -> Node0xb680100;
+	Node0xb680100 [shape=record,label="{pd_while.body.cond.end.21_crit_edge}"];
+	Node0xb680100 -> Node0xb680240;
+	Node0xb680150 [shape=record,label="{pd_cond.true|{<s0>T|<s1>F}}"];
+	Node0xb680150:s0 -> Node0xb6801f0;
+	Node0xb680150:s1 -> Node0xb6801a0;
+	Node0xb6801a0 [shape=record,label="{pd_cond.false}"];
+	Node0xb6801a0 -> Node0xb680240;
+	Node0xb6801f0 [shape=record,label="{pd_cond.true.cond.end.21_crit_edge}"];
+	Node0xb6801f0 -> Node0xb680240;
+	Node0xb680240 [shape=record,label="{pd_cond.end.21|{<s0>T|<s1>F}}"];
+	Node0xb680240:s0 -> Node0xb6802e0;
+	Node0xb680240:s1 -> Node0xb680290;
+	Node0xb680290 [shape=record,label="{pd_cond.end.21.if.end.29_crit_edge}"];
+	Node0xb680290 -> Node0xb680330;
+	Node0xb6802e0 [shape=record,label="{pd_if.then.24}"];
+	Node0xb6802e0 -> Node0xb680330;
+	Node0xb680330 [shape=record,label="{it_if.end.29}"];
+	Node0xb680330 -> Node0xb680060;
+}

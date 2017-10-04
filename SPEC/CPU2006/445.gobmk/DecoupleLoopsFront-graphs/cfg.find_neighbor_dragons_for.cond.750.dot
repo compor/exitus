@@ -1,0 +1,31 @@
+digraph "CFG for 'find_neighbor_dragons_for.cond' function" {
+	label="CFG for 'find_neighbor_dragons_for.cond' function";
+
+	Node0x3f859b0 [shape=record,label="{newFuncRoot}"];
+	Node0x3f859b0 -> Node0x3f8c7b0;
+	Node0x3f8c760 [shape=record,label="{for.cond.28.preheader.exitStub}"];
+	Node0x3f8c7b0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3f8c7b0:s0 -> Node0x3f8c800;
+	Node0x3f8c7b0:s1 -> Node0x3f8c760;
+	Node0x3f8c800 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3f8c800:s0 -> Node0x3f8dbc0;
+	Node0x3f8c800:s1 -> Node0x3f8c850;
+	Node0x3f8c850 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x3f8c850:s0 -> Node0x3f8c990;
+	Node0x3f8c850:s1 -> Node0x3f8c8a0;
+	Node0x3f8c8a0 [shape=record,label="{pd_if.else.15|{<s0>T|<s1>F}}"];
+	Node0x3f8c8a0:s0 -> Node0x3f8c940;
+	Node0x3f8c8a0:s1 -> Node0x3f8c8f0;
+	Node0x3f8c8f0 [shape=record,label="{pd_if.else.15.for.inc_crit_edge}"];
+	Node0x3f8c8f0 -> Node0x3f8dc60;
+	Node0x3f8c940 [shape=record,label="{pd_if.then.21}"];
+	Node0x3f8c940 -> Node0x3f8dc60;
+	Node0x3f8c990 [shape=record,label="{pd_lor.lhs.false.if.then.8_crit_edge}"];
+	Node0x3f8c990 -> Node0x3f8dc10;
+	Node0x3f8dbc0 [shape=record,label="{pd_for.body.if.then.8_crit_edge}"];
+	Node0x3f8dbc0 -> Node0x3f8dc10;
+	Node0x3f8dc10 [shape=record,label="{pd_if.then.8}"];
+	Node0x3f8dc10 -> Node0x3f8dc60;
+	Node0x3f8dc60 [shape=record,label="{it_for.inc}"];
+	Node0x3f8dc60 -> Node0x3f8c7b0;
+}

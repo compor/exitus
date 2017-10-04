@@ -1,0 +1,19 @@
+digraph "CFG for 'dct_chroma_DC' function" {
+	label="CFG for 'dct_chroma_DC' function";
+
+	Node0x1678770 [shape=record,label="{entry}"];
+	Node0x1678770 -> Node0x16787c0;
+	Node0x16787c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x16787c0:s0 -> Node0x16896d0;
+	Node0x16787c0:s1 -> Node0x1689810;
+	Node0x16896d0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x16896d0:s0 -> Node0x1689770;
+	Node0x16896d0:s1 -> Node0x1689720;
+	Node0x1689720 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x1689720 -> Node0x16897c0;
+	Node0x1689770 [shape=record,label="{pd_if.then}"];
+	Node0x1689770 -> Node0x16897c0;
+	Node0x16897c0 [shape=record,label="{it_for.inc}"];
+	Node0x16897c0 -> Node0x16787c0;
+	Node0x1689810 [shape=record,label="{for.end}"];
+}

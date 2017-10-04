@@ -1,0 +1,24 @@
+digraph "CFG for 'tmat_init_for.cond' function" {
+	label="CFG for 'tmat_init_for.cond' function";
+
+	Node0x134bde0 [shape=record,label="{newFuncRoot}"];
+	Node0x134bde0 -> Node0x134c700;
+	Node0x134c6b0 [shape=record,label="{for.end.exitStub}"];
+	Node0x134c700 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x134c700:s0 -> Node0x134c750;
+	Node0x134c700:s1 -> Node0x134c6b0;
+	Node0x134c750 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x134c750:s0 -> Node0x134c7f0;
+	Node0x134c750:s1 -> Node0x134c7a0;
+	Node0x134c7a0 [shape=record,label="{pd_if.else}"];
+	Node0x134c7a0 -> Node0x134c8e0;
+	Node0x134c7f0 [shape=record,label="{pd_if.then.24|{<s0>T|<s1>F}}"];
+	Node0x134c7f0:s0 -> Node0x134c890;
+	Node0x134c7f0:s1 -> Node0x134c840;
+	Node0x134c840 [shape=record,label="{pd_if.then.24.for.inc_crit_edge}"];
+	Node0x134c840 -> Node0x134c8e0;
+	Node0x134c890 [shape=record,label="{pd_if.then.29}"];
+	Node0x134c890 -> Node0x134c8e0;
+	Node0x134c8e0 [shape=record,label="{pd_for.inc}"];
+	Node0x134c8e0 -> Node0x134c700;
+}

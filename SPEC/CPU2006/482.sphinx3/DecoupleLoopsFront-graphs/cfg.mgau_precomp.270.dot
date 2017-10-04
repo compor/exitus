@@ -1,0 +1,26 @@
+digraph "CFG for 'mgau_precomp' function" {
+	label="CFG for 'mgau_precomp' function";
+
+	Node0xde46b0 [shape=record,label="{entry}"];
+	Node0xde46b0 -> Node0xde4700;
+	Node0xde4700 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xde4700:s0 -> Node0xde4750;
+	Node0xde4700:s1 -> Node0xde51b0;
+	Node0xde4750 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0xde4750 -> Node0xde47a0;
+	Node0xde47a0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0xde47a0:s0 -> Node0xde47f0;
+	Node0xde47a0:s1 -> Node0xde5160;
+	Node0xde47f0 [shape=record,label="{pd_for.cond.4.preheader}"];
+	Node0xde47f0 -> Node0xde4840;
+	Node0xde4840 [shape=record,label="{pd_for.cond.4|{<s0>T|<s1>F}}"];
+	Node0xde4840:s0 -> Node0xde4890;
+	Node0xde4840:s1 -> Node0xde48e0;
+	Node0xde4890 [shape=record,label="{pd_for.body.6}"];
+	Node0xde4890 -> Node0xde4840;
+	Node0xde48e0 [shape=record,label="{pd_for.end}"];
+	Node0xde48e0 -> Node0xde47a0;
+	Node0xde5160 [shape=record,label="{it_for.inc.49}"];
+	Node0xde5160 -> Node0xde4700;
+	Node0xde51b0 [shape=record,label="{for.end.51}"];
+}

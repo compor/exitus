@@ -1,0 +1,20 @@
+digraph "CFG for 'thread_prologue_and_epilogue_insns_while.cond' function" {
+	label="CFG for 'thread_prologue_and_epilogue_insns_while.cond' function";
+
+	Node0xb067a30 [shape=record,label="{newFuncRoot}"];
+	Node0xb067a30 -> Node0xb067ef0;
+	Node0xb067e00 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xb067e50 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xb067ea0 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0xb067ef0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb067ef0:s0 -> Node0xb067f40;
+	Node0xb067ef0:s1 -> Node0xb067e00;
+	Node0xb067f40 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xb067f40:s0 -> Node0xb067f90;
+	Node0xb067f40:s1 -> Node0xb067e50;
+	Node0xb067f90 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xb067f90:s0 -> Node0xb067ea0;
+	Node0xb067f90:s1 -> Node0xb067fe0;
+	Node0xb067fe0 [shape=record,label="{it_if.end.40}"];
+	Node0xb067fe0 -> Node0xb067ef0;
+}

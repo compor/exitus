@@ -1,0 +1,21 @@
+digraph "CFG for '_ZNK12SparseMatrixIfE21matrix_scalar_productIdEET_RK6VectorIS2_ES6_' function" {
+	label="CFG for '_ZNK12SparseMatrixIfE21matrix_scalar_productIdEET_RK6VectorIS2_ES6_' function";
+
+	Node0x7251f80 [shape=record,label="{entry}"];
+	Node0x7251f80 -> Node0x7251fd0;
+	Node0x7251fd0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x7251fd0:s0 -> Node0x7252020;
+	Node0x7251fd0:s1 -> Node0x7252160;
+	Node0x7252020 [shape=record,label="{pd_for.body}"];
+	Node0x7252020 -> Node0x7252070;
+	Node0x7252070 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x7252070:s0 -> Node0x72520c0;
+	Node0x7252070:s1 -> Node0x7252110;
+	Node0x72520c0 [shape=record,label="{pd_while.body}"];
+	Node0x72520c0 -> Node0x7252070;
+	Node0x7252110 [shape=record,label="{pd_while.end}"];
+	Node0x7252110 -> Node0xb1d28a0;
+	Node0xb1d28a0 [shape=record,label="{it_while.end.split}"];
+	Node0xb1d28a0 -> Node0x7251fd0;
+	Node0x7252160 [shape=record,label="{for.end}"];
+}

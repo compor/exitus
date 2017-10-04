@@ -1,0 +1,16 @@
+digraph "CFG for 'are_neighbor_dragons_for.cond' function" {
+	label="CFG for 'are_neighbor_dragons_for.cond' function";
+
+	Node0x3f695a0 [shape=record,label="{newFuncRoot}"];
+	Node0x3f695a0 -> Node0x3f69b20;
+	Node0x3f695f0 [shape=record,label="{for.cond.19.preheader.exitStub}"];
+	Node0x3f69ad0 [shape=record,label="{return.loopexit1.exitStub}"];
+	Node0x3f69b20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3f69b20:s0 -> Node0x3f69b70;
+	Node0x3f69b20:s1 -> Node0x3f695f0;
+	Node0x3f69b70 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x3f69b70:s0 -> Node0x3f69ad0;
+	Node0x3f69b70:s1 -> Node0x3f69bc0;
+	Node0x3f69bc0 [shape=record,label="{it_for.inc}"];
+	Node0x3f69bc0 -> Node0x3f69b20;
+}

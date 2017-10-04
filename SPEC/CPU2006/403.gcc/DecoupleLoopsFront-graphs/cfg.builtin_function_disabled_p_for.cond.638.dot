@@ -1,0 +1,16 @@
+digraph "CFG for 'builtin_function_disabled_p_for.cond' function" {
+	label="CFG for 'builtin_function_disabled_p_for.cond' function";
+
+	Node0xa13f5a0 [shape=record,label="{newFuncRoot}"];
+	Node0xa13f5a0 -> Node0xa13f690;
+	Node0xa13f5f0 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0xa13f640 [shape=record,label="{for.body.return_crit_edge.exitStub}"];
+	Node0xa13f690 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa13f690:s0 -> Node0xa13ffe0;
+	Node0xa13f690:s1 -> Node0xa13f5f0;
+	Node0xa13ffe0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xa13ffe0:s0 -> Node0xa13f640;
+	Node0xa13ffe0:s1 -> Node0xa140030;
+	Node0xa140030 [shape=record,label="{it_for.inc}"];
+	Node0xa140030 -> Node0xa13f690;
+}

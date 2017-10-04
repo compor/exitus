@@ -1,0 +1,38 @@
+digraph "CFG for '_ZN17FiniteElementBaseILi3EE28compute_n_nonzero_componentsERKNSt3__16vectorINS2_IbNS1_9allocatorIbEEEENS3_IS5_EEEE' function" {
+	label="CFG for '_ZN17FiniteElementBaseILi3EE28compute_n_nonzero_componentsERKNSt3__16vectorINS2_IbNS1_9allocatorIbEEEENS3_IS5_EEEE' function";
+
+	Node0x4d826e0 [shape=record,label="{entry}"];
+	Node0x4d826e0 -> Node0x4d82730;
+	Node0x4d82730 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4d82730:s0 -> Node0x4d82780;
+	Node0x4d82730:s1 -> Node0x4d92c90;
+	Node0x4d82780 [shape=record,label="{pd_for.body}"];
+	Node0x4d82780 -> Node0xa3b6c40;
+	Node0xa3b6c40 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0xa3b6c40:s0 -> Node0x4d827d0;
+	Node0xa3b6c40:s1 -> Node0x4d82870;
+	Node0x4d827d0 [shape=record,label="{pd_if.then.i}"];
+	Node0x4d827d0 -> Node0xa3b6a10;
+	Node0xa3b6a10 [shape=record,label="{it_if.then.i.split}"];
+	Node0xa3b6a10 -> Node0x4d82820;
+	Node0xa3b6a10 -> Node0x4d92c40;
+	Node0x4d82820 [shape=record,label="{pd_if.then.i.invoke.cont.10_crit_edge}"];
+	Node0x4d82820 -> Node0x4d92bf0;
+	Node0x4d82870 [shape=record,label="{pd_if.end.i}"];
+	Node0x4d82870 -> Node0xa3b6c90;
+	Node0xa3b6c90 [shape=record,label="{it_if.end.i.split}"];
+	Node0xa3b6c90 -> Node0x4d92ba0;
+	Node0xa3b6c90 -> Node0x4d92c40;
+	Node0x4d92ba0 [shape=record,label="{pd_if.end.i.invoke.cont.10_crit_edge}"];
+	Node0x4d92ba0 -> Node0x4d92bf0;
+	Node0x4d92bf0 [shape=record,label="{pd_invoke.cont.10}"];
+	Node0x4d92bf0 -> Node0xa3fe1d0;
+	Node0xa3fe1d0 [shape=record,label="{it_invoke.cont.10.split}"];
+	Node0xa3fe1d0 -> Node0x4d82730;
+	Node0x4d92c40 [shape=record,label="{lpad}"];
+	Node0x4d92c40 -> Node0x4d92ce0;
+	Node0x4d92c40 -> Node0x4d92d30;
+	Node0x4d92c90 [shape=record,label="{nrvo.skipdtor}"];
+	Node0x4d92ce0 [shape=record,label="{eh.resume}"];
+	Node0x4d92d30 [shape=record,label="{terminate.lpad}"];
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'add_su3_vector' function" {
+	label="CFG for 'add_su3_vector' function";
+
+	Node0x184ded0 [shape=record,label="{entry}"];
+	Node0x184ded0 -> Node0x184df20;
+	Node0x184df20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x184df20:s0 -> Node0x184df70;
+	Node0x184df20:s1 -> Node0x184dfc0;
+	Node0x184df70 [shape=record,label="{pd_for.body}"];
+	Node0x184df70 -> Node0x1bedde0;
+	Node0x1bedde0 [shape=record,label="{it_for.body.split}"];
+	Node0x1bedde0 -> Node0x184df20;
+	Node0x184dfc0 [shape=record,label="{for.end}"];
+}

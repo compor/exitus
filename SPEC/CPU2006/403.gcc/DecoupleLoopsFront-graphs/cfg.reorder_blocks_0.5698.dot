@@ -1,0 +1,14 @@
+digraph "CFG for 'reorder_blocks_0' function" {
+	label="CFG for 'reorder_blocks_0' function";
+
+	Node0x4d01f50 [shape=record,label="{entry}"];
+	Node0x4d01f50 -> Node0x4d01fa0;
+	Node0x4d01fa0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d01fa0:s0 -> Node0x4d01ff0;
+	Node0x4d01fa0:s1 -> Node0x4d02040;
+	Node0x4d01ff0 [shape=record,label="{pd_while.body}"];
+	Node0x4d01ff0 -> Node0xdb039b0;
+	Node0xdb039b0 [shape=record,label="{it_while.body.split}"];
+	Node0xdb039b0 -> Node0x4d01fa0;
+	Node0x4d02040 [shape=record,label="{while.end}"];
+}

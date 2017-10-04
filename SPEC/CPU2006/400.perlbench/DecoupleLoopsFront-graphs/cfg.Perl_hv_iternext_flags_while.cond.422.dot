@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_hv_iternext_flags_while.cond' function" {
+	label="CFG for 'Perl_hv_iternext_flags_while.cond' function";
+
+	Node0x4b917a0 [shape=record,label="{newFuncRoot}"];
+	Node0x4b917a0 -> Node0x4b91890;
+	Node0x4b917f0 [shape=record,label="{while.cond.while.cond.117.preheader.loopexit_crit_edge.exitStub}"];
+	Node0x4b91840 [shape=record,label="{land.rhs.109.while.cond.117.preheader.loopexit_crit_edge.exitStub}"];
+	Node0x4b91890 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4b91890:s0 -> Node0x4b918e0;
+	Node0x4b91890:s1 -> Node0x4b917f0;
+	Node0x4b918e0 [shape=record,label="{it_land.rhs.109|{<s0>T|<s1>F}}"];
+	Node0x4b918e0:s0 -> Node0x4b91930;
+	Node0x4b918e0:s1 -> Node0x4b91840;
+	Node0x4b91930 [shape=record,label="{it_while.body}"];
+	Node0x4b91930 -> Node0x4b91890;
+}

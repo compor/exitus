@@ -1,0 +1,14 @@
+digraph "CFG for 'create_pyramid_while.cond' function" {
+	label="CFG for 'create_pyramid_while.cond' function";
+
+	Node0x23e8400 [shape=record,label="{newFuncRoot}"];
+	Node0x23e8400 -> Node0x23e8840;
+	Node0x23e8450 [shape=record,label="{while.end.exitStub}"];
+	Node0x23e8840 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x23e8840:s0 -> Node0x23e8890;
+	Node0x23e8840:s1 -> Node0x23e8450;
+	Node0x23e8890 [shape=record,label="{it_while.body}"];
+	Node0x23e8890 -> Node0x3704870;
+	Node0x3704870 [shape=record,label="{pd_while.body.split}"];
+	Node0x3704870 -> Node0x23e8840;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'print_stack_for.cond' function" {
+	label="CFG for 'print_stack_for.cond' function";
+
+	Node0xb902e70 [shape=record,label="{newFuncRoot}"];
+	Node0xb902e70 -> Node0xb902f10;
+	Node0xb902ec0 [shape=record,label="{for.end.exitStub}"];
+	Node0xb902f10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb902f10:s0 -> Node0xb902f60;
+	Node0xb902f10:s1 -> Node0xb902ec0;
+	Node0xb902f60 [shape=record,label="{pd_for.body}"];
+	Node0xb902f60 -> Node0xf941e80;
+	Node0xf941e80 [shape=record,label="{it_for.body.split}"];
+	Node0xf941e80 -> Node0xb902f10;
+}

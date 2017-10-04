@@ -1,0 +1,26 @@
+digraph "CFG for 'reset_used_decls_for.cond' function" {
+	label="CFG for 'reset_used_decls_for.cond' function";
+
+	Node0xac99770 [shape=record,label="{newFuncRoot}"];
+	Node0xac99770 -> Node0xac99810;
+	Node0xac997c0 [shape=record,label="{for.end.exitStub}"];
+	Node0xac99810 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xac99810:s0 -> Node0xac99860;
+	Node0xac99810:s1 -> Node0xac997c0;
+	Node0xac99860 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xac99860:s0 -> Node0xac99900;
+	Node0xac99860:s1 -> Node0xac998b0;
+	Node0xac998b0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xac998b0 -> Node0xac99a40;
+	Node0xac99900 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0xac99900:s0 -> Node0xac999a0;
+	Node0xac99900:s1 -> Node0xac99950;
+	Node0xac99950 [shape=record,label="{pd_cond.false}"];
+	Node0xac99950 -> Node0xac999f0;
+	Node0xac999a0 [shape=record,label="{pd_cond.true}"];
+	Node0xac999a0 -> Node0xac999f0;
+	Node0xac999f0 [shape=record,label="{pd_cond.end}"];
+	Node0xac999f0 -> Node0xac99a40;
+	Node0xac99a40 [shape=record,label="{it_for.inc}"];
+	Node0xac99a40 -> Node0xac99810;
+}

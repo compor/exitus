@@ -1,0 +1,14 @@
+digraph "CFG for 'glist_reverse' function" {
+	label="CFG for 'glist_reverse' function";
+
+	Node0xe8b560 [shape=record,label="{entry}"];
+	Node0xe8b560 -> Node0xe8b5b0;
+	Node0xe8b5b0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xe8b5b0:s0 -> Node0xe8b600;
+	Node0xe8b5b0:s1 -> Node0xe8b650;
+	Node0xe8b600 [shape=record,label="{it_for.body}"];
+	Node0xe8b600 -> Node0x1470e70;
+	Node0x1470e70 [shape=record,label="{pd_for.body.split}"];
+	Node0x1470e70 -> Node0xe8b5b0;
+	Node0xe8b650 [shape=record,label="{for.end}"];
+}

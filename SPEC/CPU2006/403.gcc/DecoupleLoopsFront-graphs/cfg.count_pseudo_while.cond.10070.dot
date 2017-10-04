@@ -1,0 +1,12 @@
+digraph "CFG for 'count_pseudo_while.cond' function" {
+	label="CFG for 'count_pseudo_while.cond' function";
+
+	Node0xc01e800 [shape=record,label="{newFuncRoot}"];
+	Node0xc01e800 -> Node0xc01e8a0;
+	Node0xc01e850 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0xc01e8a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc01e8a0:s0 -> Node0xc01e8f0;
+	Node0xc01e8a0:s1 -> Node0xc01e850;
+	Node0xc01e8f0 [shape=record,label="{pd_while.body}"];
+	Node0xc01e8f0 -> Node0xc01e8a0;
+}

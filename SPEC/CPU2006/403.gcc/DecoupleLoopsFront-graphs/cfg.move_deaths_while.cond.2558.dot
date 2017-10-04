@@ -1,0 +1,16 @@
+digraph "CFG for 'move_deaths_while.cond' function" {
+	label="CFG for 'move_deaths_while.cond' function";
+
+	Node0xa6ab7b0 [shape=record,label="{newFuncRoot}"];
+	Node0xa6ab7b0 -> Node0xa6abc70;
+	Node0xa6abbd0 [shape=record,label="{while.cond.while.cond.13.preheader_crit_edge.exitStub}"];
+	Node0xa6abc20 [shape=record,label="{land.rhs.while.cond.13.preheader_crit_edge.exitStub}"];
+	Node0xa6abc70 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa6abc70:s0 -> Node0xa6abcc0;
+	Node0xa6abc70:s1 -> Node0xa6abbd0;
+	Node0xa6abcc0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xa6abcc0:s0 -> Node0xa6abd10;
+	Node0xa6abcc0:s1 -> Node0xa6abc20;
+	Node0xa6abd10 [shape=record,label="{it_while.body}"];
+	Node0xa6abd10 -> Node0xa6abc70;
+}

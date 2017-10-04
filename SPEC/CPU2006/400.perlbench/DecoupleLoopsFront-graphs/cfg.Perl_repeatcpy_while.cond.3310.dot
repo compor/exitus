@@ -1,0 +1,12 @@
+digraph "CFG for 'Perl_repeatcpy_while.cond' function" {
+	label="CFG for 'Perl_repeatcpy_while.cond' function";
+
+	Node0x5820f10 [shape=record,label="{newFuncRoot}"];
+	Node0x5820f10 -> Node0x5820fb0;
+	Node0x5820f60 [shape=record,label="{while.end.10.loopexit.exitStub}"];
+	Node0x5820fb0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x5820fb0:s0 -> Node0x5821000;
+	Node0x5820fb0:s1 -> Node0x5820f60;
+	Node0x5821000 [shape=record,label="{pd_while.body}"];
+	Node0x5821000 -> Node0x5820fb0;
+}

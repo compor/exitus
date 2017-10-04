@@ -1,0 +1,20 @@
+digraph "CFG for 'merge_blocks_nomove_for.cond' function" {
+	label="CFG for 'merge_blocks_nomove_for.cond' function";
+
+	Node0xa580600 [shape=record,label="{newFuncRoot}"];
+	Node0xa580600 -> Node0xa580740;
+	Node0xa580650 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0xa5806a0 [shape=record,label="{lor.lhs.false.for.end_crit_edge.exitStub}"];
+	Node0xa5806f0 [shape=record,label="{lor.lhs.false.35.for.end_crit_edge.exitStub}"];
+	Node0xa580740 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa580740:s0 -> Node0xa580650;
+	Node0xa580740:s1 -> Node0xa580790;
+	Node0xa580790 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xa580790:s0 -> Node0xa5806a0;
+	Node0xa580790:s1 -> Node0xa5807e0;
+	Node0xa5807e0 [shape=record,label="{it_lor.lhs.false.35|{<s0>T|<s1>F}}"];
+	Node0xa5807e0:s0 -> Node0xa5806f0;
+	Node0xa5807e0:s1 -> Node0xa580830;
+	Node0xa580830 [shape=record,label="{it_for.inc}"];
+	Node0xa580830 -> Node0xa580740;
+}

@@ -1,0 +1,20 @@
+digraph "CFG for 'read_include_file_while.cond' function" {
+	label="CFG for 'read_include_file_while.cond' function";
+
+	Node0xa2bef70 [shape=record,label="{newFuncRoot}"];
+	Node0xa2bef70 -> Node0xa2bf0b0;
+	Node0xa2befc0 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0xa2bf010 [shape=record,label="{perror_fail.loopexit.exitStub}"];
+	Node0xa2bf060 [shape=record,label="{if.then.12.exitStub}"];
+	Node0xa2bf0b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa2bf0b0:s0 -> Node0xa2bf100;
+	Node0xa2bf0b0:s1 -> Node0xa2befc0;
+	Node0xa2bf100 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xa2bf100:s0 -> Node0xa2bf010;
+	Node0xa2bf100:s1 -> Node0xa2bf150;
+	Node0xa2bf150 [shape=record,label="{it_if.end.10|{<s0>T|<s1>F}}"];
+	Node0xa2bf150:s0 -> Node0xa2bf060;
+	Node0xa2bf150:s1 -> Node0xa2bf1a0;
+	Node0xa2bf1a0 [shape=record,label="{it_if.end.18}"];
+	Node0xa2bf1a0 -> Node0xa2bf0b0;
+}

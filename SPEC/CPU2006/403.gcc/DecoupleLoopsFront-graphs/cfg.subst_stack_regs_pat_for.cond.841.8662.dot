@@ -1,0 +1,23 @@
+digraph "CFG for 'subst_stack_regs_pat_for.cond.841' function" {
+	label="CFG for 'subst_stack_regs_pat_for.cond.841' function";
+
+	Node0xb9333b0 [shape=record,label="{newFuncRoot}"];
+	Node0xb9333b0 -> Node0xb9338c0;
+	Node0xb933820 [shape=record,label="{for.end.877.exitStub}"];
+	Node0xb933870 [shape=record,label="{if.else.873.exitStub}"];
+	Node0xb9338c0 [shape=record,label="{it_for.cond.841|{<s0>T|<s1>F}}"];
+	Node0xb9338c0:s0 -> Node0xb933910;
+	Node0xb9338c0:s1 -> Node0xb933820;
+	Node0xb933910 [shape=record,label="{it_for.body.844|{<s0>T|<s1>F}}"];
+	Node0xb933910:s0 -> Node0xb9339b0;
+	Node0xb933910:s1 -> Node0xb933960;
+	Node0xb933960 [shape=record,label="{pd_for.body.844.for.inc_crit_edge}"];
+	Node0xb933960 -> Node0xb933a50;
+	Node0xb9339b0 [shape=record,label="{it_if.then.848|{<s0>T|<s1>F}}"];
+	Node0xb9339b0:s0 -> Node0xb933a00;
+	Node0xb9339b0:s1 -> Node0xb933870;
+	Node0xb933a00 [shape=record,label="{pd_if.then.866}"];
+	Node0xb933a00 -> Node0xb933a50;
+	Node0xb933a50 [shape=record,label="{it_for.inc}"];
+	Node0xb933a50 -> Node0xb9338c0;
+}

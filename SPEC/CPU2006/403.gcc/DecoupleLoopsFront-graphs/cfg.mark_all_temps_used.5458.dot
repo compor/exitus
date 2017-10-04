@@ -1,0 +1,21 @@
+digraph "CFG for 'mark_all_temps_used' function" {
+	label="CFG for 'mark_all_temps_used' function";
+
+	Node0x48a7680 [shape=record,label="{entry}"];
+	Node0x48a7680 -> Node0x4bfbf70;
+	Node0x4bfbf70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bfbf70:s0 -> Node0x4bfbfc0;
+	Node0x4bfbf70:s1 -> Node0x4bfc100;
+	Node0x4bfbfc0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4bfbfc0:s0 -> Node0x4bfc010;
+	Node0x4bfbfc0:s1 -> Node0x4bfc060;
+	Node0x4bfc010 [shape=record,label="{pd_cond.true}"];
+	Node0x4bfc010 -> Node0x4bfc0b0;
+	Node0x4bfc060 [shape=record,label="{pd_cond.false}"];
+	Node0x4bfc060 -> Node0x4bfc0b0;
+	Node0x4bfc0b0 [shape=record,label="{pd_cond.end}"];
+	Node0x4bfc0b0 -> Node0xda78320;
+	Node0xda78320 [shape=record,label="{it_cond.end.split}"];
+	Node0xda78320 -> Node0x4bfbf70;
+	Node0x4bfc100 [shape=record,label="{for.end}"];
+}

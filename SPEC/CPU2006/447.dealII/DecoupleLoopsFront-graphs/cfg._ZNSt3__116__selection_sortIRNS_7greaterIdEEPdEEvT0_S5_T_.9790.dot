@@ -1,0 +1,33 @@
+digraph "CFG for '_ZNSt3__116__selection_sortIRNS_7greaterIdEEPdEEvT0_S5_T_' function" {
+	label="CFG for '_ZNSt3__116__selection_sortIRNS_7greaterIdEEPdEEvT0_S5_T_' function";
+
+	Node0x5dba630 [shape=record,label="{entry}"];
+	Node0x5dba630 -> Node0x5dba680;
+	Node0x5dba680 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x5dba680:s0 -> Node0x5dba6d0;
+	Node0x5dba680:s1 -> Node0x5dbb290;
+	Node0x5dba6d0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x5dba6d0:s0 -> Node0x5dba770;
+	Node0x5dba6d0:s1 -> Node0x5dba720;
+	Node0x5dba720 [shape=record,label="{pd_for.body._ZNSt3__111min_elementIPdRNS_7greaterIdEEEET_S5_S5_T0_.exit_crit_edge}"];
+	Node0x5dba720 -> Node0x5dba8b0;
+	Node0x5dba770 [shape=record,label="{pd_while.cond.i.preheader}"];
+	Node0x5dba770 -> Node0x5dba7c0;
+	Node0x5dba7c0 [shape=record,label="{pd_while.cond.i|{<s0>T|<s1>F}}"];
+	Node0x5dba7c0:s0 -> Node0x5dba810;
+	Node0x5dba7c0:s1 -> Node0x5dba860;
+	Node0x5dba810 [shape=record,label="{pd_while.body.i}"];
+	Node0x5dba810 -> Node0x5dba7c0;
+	Node0x5dba860 [shape=record,label="{pd__ZNSt3__111min_elementIPdRNS_7greaterIdEEEET_S5_S5_T0_.exit.loopexit}"];
+	Node0x5dba860 -> Node0x5dba8b0;
+	Node0x5dba8b0 [shape=record,label="{pd__ZNSt3__111min_elementIPdRNS_7greaterIdEEEET_S5_S5_T0_.exit|{<s0>T|<s1>F}}"];
+	Node0x5dba8b0:s0 -> Node0x5dbb1f0;
+	Node0x5dba8b0:s1 -> Node0x5dba900;
+	Node0x5dba900 [shape=record,label="{pd__ZNSt3__111min_elementIPdRNS_7greaterIdEEEET_S5_S5_T0_.exit.for.inc_crit_edge}"];
+	Node0x5dba900 -> Node0x5dbb240;
+	Node0x5dbb1f0 [shape=record,label="{pd_if.then}"];
+	Node0x5dbb1f0 -> Node0x5dbb240;
+	Node0x5dbb240 [shape=record,label="{it_for.inc}"];
+	Node0x5dbb240 -> Node0x5dba680;
+	Node0x5dbb290 [shape=record,label="{for.end}"];
+}

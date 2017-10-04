@@ -1,0 +1,14 @@
+digraph "CFG for 'SampleDirichlet' function" {
+	label="CFG for 'SampleDirichlet' function";
+
+	Node0x2a2f8c0 [shape=record,label="{entry}"];
+	Node0x2a2f8c0 -> Node0x2a2f910;
+	Node0x2a2f910 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2a2f910:s0 -> Node0x2a301a0;
+	Node0x2a2f910:s1 -> Node0x2a301f0;
+	Node0x2a301a0 [shape=record,label="{pd_for.body}"];
+	Node0x2a301a0 -> Node0x3589000;
+	Node0x3589000 [shape=record,label="{it_for.body.split}"];
+	Node0x3589000 -> Node0x2a2f910;
+	Node0x2a301f0 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,24 @@
+digraph "CFG for 'readPearson_while.cond' function" {
+	label="CFG for 'readPearson_while.cond' function";
+
+	Node0x32d8340 [shape=record,label="{newFuncRoot}"];
+	Node0x32d8340 -> Node0x32d83e0;
+	Node0x32d8390 [shape=record,label="{while.end.exitStub}"];
+	Node0x32d83e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x32d83e0:s0 -> Node0x32d8520;
+	Node0x32d83e0:s1 -> Node0x32d8430;
+	Node0x32d8430 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x32d8430:s0 -> Node0x32d84d0;
+	Node0x32d8430:s1 -> Node0x32d8480;
+	Node0x32d8480 [shape=record,label="{it_lor.rhs.lor.end_crit_edge}"];
+	Node0x32d8480 -> Node0x32d8570;
+	Node0x32d84d0 [shape=record,label="{it_land.rhs}"];
+	Node0x32d84d0 -> Node0x32d8570;
+	Node0x32d8520 [shape=record,label="{it_while.cond.lor.end_crit_edge}"];
+	Node0x32d8520 -> Node0x32d8570;
+	Node0x32d8570 [shape=record,label="{it_lor.end|{<s0>T|<s1>F}}"];
+	Node0x32d8570:s0 -> Node0x32d85c0;
+	Node0x32d8570:s1 -> Node0x32d8390;
+	Node0x32d85c0 [shape=record,label="{pd_while.body}"];
+	Node0x32d85c0 -> Node0x32d83e0;
+}

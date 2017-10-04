@@ -1,0 +1,31 @@
+digraph "CFG for 'fibheap_consolidate_for.cond' function" {
+	label="CFG for 'fibheap_consolidate_for.cond' function";
+
+	Node0xc7445e0 [shape=record,label="{newFuncRoot}"];
+	Node0xc7445e0 -> Node0xc744680;
+	Node0xc744630 [shape=record,label="{for.end.exitStub}"];
+	Node0xc744680 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc744680:s0 -> Node0xc7446d0;
+	Node0xc744680:s1 -> Node0xc744630;
+	Node0xc7446d0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xc7446d0:s0 -> Node0xc744770;
+	Node0xc7446d0:s1 -> Node0xc744720;
+	Node0xc744720 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xc744720 -> Node0xc744950;
+	Node0xc744770 [shape=record,label="{pd_if.then.21|{<s0>T|<s1>F}}"];
+	Node0xc744770:s0 -> Node0xc7448b0;
+	Node0xc744770:s1 -> Node0xc7447c0;
+	Node0xc7447c0 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xc7447c0:s0 -> Node0xc744860;
+	Node0xc7447c0:s1 -> Node0xc744810;
+	Node0xc744810 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0xc744810 -> Node0xc744950;
+	Node0xc744860 [shape=record,label="{pd_lor.lhs.false.if.then.33_crit_edge}"];
+	Node0xc744860 -> Node0xc744900;
+	Node0xc7448b0 [shape=record,label="{pd_if.then.21.if.then.33_crit_edge}"];
+	Node0xc7448b0 -> Node0xc744900;
+	Node0xc744900 [shape=record,label="{pd_if.then.33}"];
+	Node0xc744900 -> Node0xc744950;
+	Node0xc744950 [shape=record,label="{it_for.inc}"];
+	Node0xc744950 -> Node0xc744680;
+}

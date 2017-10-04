@@ -1,0 +1,40 @@
+digraph "CFG for 'lex_string_while.cond' function" {
+	label="CFG for 'lex_string_while.cond' function";
+
+	Node0x9f6e6b0 [shape=record,label="{newFuncRoot}"];
+	Node0x9f6e6b0 -> Node0x9f6e750;
+	Node0x9f6e700 [shape=record,label="{while.end.exitStub}"];
+	Node0x9f6e750 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9f6e750:s0 -> Node0x9f6e7a0;
+	Node0x9f6e750:s1 -> Node0x9f6e700;
+	Node0x9f6e7a0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x9f6e7a0:s0 -> Node0x9f6e840;
+	Node0x9f6e7a0:s1 -> Node0x9f6e7f0;
+	Node0x9f6e7f0 [shape=record,label="{pd_if.then}"];
+	Node0x9f6e7f0 -> Node0x9f6e890;
+	Node0x9f6e840 [shape=record,label="{pd_while.body.if.end.23_crit_edge}"];
+	Node0x9f6e840 -> Node0x9f6e890;
+	Node0x9f6e890 [shape=record,label="{pd_if.end.23|{<s0>T|<s1>F}}"];
+	Node0x9f6e890:s0 -> Node0x9f6e930;
+	Node0x9f6e890:s1 -> Node0x9f6e8e0;
+	Node0x9f6e8e0 [shape=record,label="{pd_if.else.53}"];
+	Node0x9f6e8e0 -> Node0x9f6ea20;
+	Node0x9f6e930 [shape=record,label="{pd_if.then.25}"];
+	Node0x9f6e930 -> Node0x9f6e980;
+	Node0x9f6e980 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9f6e980:s0 -> Node0x9f6ea70;
+	Node0x9f6e980:s1 -> Node0x9f6e9d0;
+	Node0x9f6e9d0 [shape=record,label="{pd_for.end}"];
+	Node0x9f6e9d0 -> Node0x9f6ea20;
+	Node0x9f6ea20 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x9f6ea20 -> Node0x9f6e750;
+	Node0x9f6ea70 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x9f6ea70:s0 -> Node0x9f6eb10;
+	Node0x9f6ea70:s1 -> Node0x9f6eac0;
+	Node0x9f6eac0 [shape=record,label="{pd_if.else.42}"];
+	Node0x9f6eac0 -> Node0x9f6eb60;
+	Node0x9f6eb10 [shape=record,label="{pd_for.body.if.end.44_crit_edge}"];
+	Node0x9f6eb10 -> Node0x9f6eb60;
+	Node0x9f6eb60 [shape=record,label="{pd_if.end.44}"];
+	Node0x9f6eb60 -> Node0x9f6e980;
+}

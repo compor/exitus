@@ -1,0 +1,31 @@
+digraph "CFG for 'Perl_pp_leavesublv_for.cond' function" {
+	label="CFG for 'Perl_pp_leavesublv_for.cond' function";
+
+	Node0x4fa6a10 [shape=record,label="{newFuncRoot}"];
+	Node0x4fa6a10 -> Node0x4fa6ab0;
+	Node0x4fa6a60 [shape=record,label="{if.end.849.loopexit.exitStub}"];
+	Node0x4fa6ab0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4fa6ab0:s0 -> Node0x4fa6b00;
+	Node0x4fa6ab0:s1 -> Node0x4fa6a60;
+	Node0x4fa6b00 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4fa6b00:s0 -> Node0x4fa6d30;
+	Node0x4fa6b00:s1 -> Node0x4fa6b50;
+	Node0x4fa6b50 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x4fa6b50:s0 -> Node0x4fa6ce0;
+	Node0x4fa6b50:s1 -> Node0x4fa6ba0;
+	Node0x4fa6ba0 [shape=record,label="{pd_if.else.50|{<s0>T|<s1>F}}"];
+	Node0x4fa6ba0:s0 -> Node0x4fa6c40;
+	Node0x4fa6ba0:s1 -> Node0x4fa6bf0;
+	Node0x4fa6bf0 [shape=record,label="{pd_if.else.50.land.end_crit_edge}"];
+	Node0x4fa6bf0 -> Node0x4fa6c90;
+	Node0x4fa6c40 [shape=record,label="{pd_land.rhs}"];
+	Node0x4fa6c40 -> Node0x4fa6c90;
+	Node0x4fa6c90 [shape=record,label="{pd_land.end}"];
+	Node0x4fa6c90 -> Node0x4fa6d80;
+	Node0x4fa6ce0 [shape=record,label="{pd_if.then.49}"];
+	Node0x4fa6ce0 -> Node0x4fa6d80;
+	Node0x4fa6d30 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4fa6d30 -> Node0x4fa6d80;
+	Node0x4fa6d80 [shape=record,label="{it_for.inc}"];
+	Node0x4fa6d80 -> Node0x4fa6ab0;
+}

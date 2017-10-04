@@ -1,0 +1,26 @@
+digraph "CFG for 'Perl_my_poll_for.cond.92' function" {
+	label="CFG for 'Perl_my_poll_for.cond.92' function";
+
+	Node0x5894d70 [shape=record,label="{newFuncRoot}"];
+	Node0x5894d70 -> Node0x5894e10;
+	Node0x5894dc0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x5894e10 [shape=record,label="{it_for.cond.92|{<s0>T|<s1>F}}"];
+	Node0x5894e10:s0 -> Node0x5894e60;
+	Node0x5894e10:s1 -> Node0x5894dc0;
+	Node0x5894e60 [shape=record,label="{pd_for.body.96|{<s0>T|<s1>F}}"];
+	Node0x5894e60:s0 -> Node0x5894ff0;
+	Node0x5894e60:s1 -> Node0x5894eb0;
+	Node0x5894eb0 [shape=record,label="{pd_if.end.110|{<s0>T|<s1>F}}"];
+	Node0x5894eb0:s0 -> Node0x5894f50;
+	Node0x5894eb0:s1 -> Node0x5894f00;
+	Node0x5894f00 [shape=record,label="{pd_if.else}"];
+	Node0x5894f00 -> Node0x5894fa0;
+	Node0x5894f50 [shape=record,label="{pd_if.end.110.if.end.161_crit_edge}"];
+	Node0x5894f50 -> Node0x5894fa0;
+	Node0x5894fa0 [shape=record,label="{pd_if.end.161}"];
+	Node0x5894fa0 -> Node0x5895040;
+	Node0x5894ff0 [shape=record,label="{pd_for.body.96.for.inc.172_crit_edge}"];
+	Node0x5894ff0 -> Node0x5895040;
+	Node0x5895040 [shape=record,label="{it_for.inc.172}"];
+	Node0x5895040 -> Node0x5894e10;
+}

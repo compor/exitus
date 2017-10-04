@@ -1,0 +1,14 @@
+digraph "CFG for 'print_obstack_statistics' function" {
+	label="CFG for 'print_obstack_statistics' function";
+
+	Node0x96abf90 [shape=record,label="{entry}"];
+	Node0x96abf90 -> Node0x96b0840;
+	Node0x96b0840 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x96b0840:s0 -> Node0x96b0890;
+	Node0x96b0840:s1 -> Node0x96b08e0;
+	Node0x96b0890 [shape=record,label="{pd_while.body}"];
+	Node0x96b0890 -> Node0xed4fa80;
+	Node0xed4fa80 [shape=record,label="{it_while.body.split}"];
+	Node0xed4fa80 -> Node0x96b0840;
+	Node0x96b08e0 [shape=record,label="{while.end}"];
+}

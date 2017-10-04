@@ -1,0 +1,16 @@
+digraph "CFG for 'peep2_find_free_register_while.cond' function" {
+	label="CFG for 'peep2_find_free_register_while.cond' function";
+
+	Node0xb8b24f0 [shape=record,label="{newFuncRoot}"];
+	Node0xb8b24f0 -> Node0xb8ba2a0;
+	Node0xb8ba200 [shape=record,label="{while.end.exitStub}"];
+	Node0xb8ba250 [shape=record,label="{if.then.23.exitStub}"];
+	Node0xb8ba2a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb8ba2a0:s0 -> Node0xb8ba2f0;
+	Node0xb8ba2a0:s1 -> Node0xb8ba200;
+	Node0xb8ba2f0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xb8ba2f0:s0 -> Node0xb8ba250;
+	Node0xb8ba2f0:s1 -> Node0xb8ba340;
+	Node0xb8ba340 [shape=record,label="{pd_do.body.25}"];
+	Node0xb8ba340 -> Node0xb8ba2a0;
+}

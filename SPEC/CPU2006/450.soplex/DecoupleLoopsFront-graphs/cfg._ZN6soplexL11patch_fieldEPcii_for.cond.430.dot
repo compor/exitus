@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN6soplexL11patch_fieldEPcii_for.cond' function" {
+	label="CFG for '_ZN6soplexL11patch_fieldEPcii_for.cond' function";
+
+	Node0x2ceec70 [shape=record,label="{newFuncRoot}"];
+	Node0x2ceec70 -> Node0x2ceed10;
+	Node0x2ceecc0 [shape=record,label="{for.end.exitStub}"];
+	Node0x2ceed10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2ceed10:s0 -> Node0x2ceed60;
+	Node0x2ceed10:s1 -> Node0x2ceecc0;
+	Node0x2ceed60 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2ceed60:s0 -> Node0x2ceee00;
+	Node0x2ceed60:s1 -> Node0x2ceedb0;
+	Node0x2ceedb0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x2ceedb0 -> Node0x2ceee50;
+	Node0x2ceee00 [shape=record,label="{pd_if.then}"];
+	Node0x2ceee00 -> Node0x2ceee50;
+	Node0x2ceee50 [shape=record,label="{it_for.inc}"];
+	Node0x2ceee50 -> Node0x2ceed10;
+}

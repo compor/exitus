@@ -1,0 +1,16 @@
+digraph "CFG for 'sgfGetCharProperty_for.cond' function" {
+	label="CFG for 'sgfGetCharProperty_for.cond' function";
+
+	Node0x331f850 [shape=record,label="{newFuncRoot}"];
+	Node0x331f850 -> Node0x332c650;
+	Node0x332c5b0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x332c600 [shape=record,label="{if.then.exitStub}"];
+	Node0x332c650 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x332c650:s0 -> Node0x332c6a0;
+	Node0x332c650:s1 -> Node0x332c5b0;
+	Node0x332c6a0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x332c6a0:s0 -> Node0x332c600;
+	Node0x332c6a0:s1 -> Node0x332c6f0;
+	Node0x332c6f0 [shape=record,label="{it_for.inc}"];
+	Node0x332c6f0 -> Node0x332c650;
+}

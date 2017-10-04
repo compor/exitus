@@ -1,0 +1,33 @@
+digraph "CFG for 'mgau_var_floor' function" {
+	label="CFG for 'mgau_var_floor' function";
+
+	Node0xda9e70 [shape=record,label="{entry}"];
+	Node0xda9e70 -> Node0xde18c0;
+	Node0xde18c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xde18c0:s0 -> Node0xde1910;
+	Node0xde18c0:s1 -> Node0xde1c30;
+	Node0xde1910 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0xde1910 -> Node0xde1960;
+	Node0xde1960 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0xde1960:s0 -> Node0xde19b0;
+	Node0xde1960:s1 -> Node0xde1be0;
+	Node0xde19b0 [shape=record,label="{pd_for.cond.4.preheader}"];
+	Node0xde19b0 -> Node0xde1a00;
+	Node0xde1a00 [shape=record,label="{pd_for.cond.4|{<s0>T|<s1>F}}"];
+	Node0xde1a00:s0 -> Node0xde1a50;
+	Node0xde1a00:s1 -> Node0xde1b90;
+	Node0xde1a50 [shape=record,label="{pd_for.body.6|{<s0>T|<s1>F}}"];
+	Node0xde1a50:s0 -> Node0xde1af0;
+	Node0xde1a50:s1 -> Node0xde1aa0;
+	Node0xde1aa0 [shape=record,label="{pd_for.body.6.for.inc_crit_edge}"];
+	Node0xde1aa0 -> Node0xde1b40;
+	Node0xde1af0 [shape=record,label="{pd_if.then}"];
+	Node0xde1af0 -> Node0xde1b40;
+	Node0xde1b40 [shape=record,label="{pd_for.inc}"];
+	Node0xde1b40 -> Node0xde1a00;
+	Node0xde1b90 [shape=record,label="{pd_for.inc.26}"];
+	Node0xde1b90 -> Node0xde1960;
+	Node0xde1be0 [shape=record,label="{it_for.inc.29}"];
+	Node0xde1be0 -> Node0xde18c0;
+	Node0xde1c30 [shape=record,label="{for.end.31}"];
+}

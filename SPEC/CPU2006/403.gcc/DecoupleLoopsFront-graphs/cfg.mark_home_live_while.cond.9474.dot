@@ -1,0 +1,14 @@
+digraph "CFG for 'mark_home_live_while.cond' function" {
+	label="CFG for 'mark_home_live_while.cond' function";
+
+	Node0xbdce930 [shape=record,label="{newFuncRoot}"];
+	Node0xbdce930 -> Node0xbdce9d0;
+	Node0xbdce980 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0xbdce9d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xbdce9d0:s0 -> Node0xbdcea20;
+	Node0xbdce9d0:s1 -> Node0xbdce980;
+	Node0xbdcea20 [shape=record,label="{it_while.body}"];
+	Node0xbdcea20 -> Node0xf8e8290;
+	Node0xf8e8290 [shape=record,label="{pd_while.body.split}"];
+	Node0xf8e8290 -> Node0xbdce9d0;
+}

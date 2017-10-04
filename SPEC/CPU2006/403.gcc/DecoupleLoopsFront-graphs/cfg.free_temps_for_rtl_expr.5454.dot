@@ -1,0 +1,24 @@
+digraph "CFG for 'free_temps_for_rtl_expr' function" {
+	label="CFG for 'free_temps_for_rtl_expr' function";
+
+	Node0x4bfa550 [shape=record,label="{entry}"];
+	Node0x4bfa550 -> Node0x4bfa5a0;
+	Node0x4bfa5a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bfa5a0:s0 -> Node0x4bfaa20;
+	Node0x4bfa5a0:s1 -> Node0x4bfac00;
+	Node0x4bfaa20 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4bfaa20:s0 -> Node0x4bfaac0;
+	Node0x4bfaa20:s1 -> Node0x4bfaa70;
+	Node0x4bfaa70 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4bfaa70 -> Node0x4bfabb0;
+	Node0x4bfaac0 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x4bfaac0:s0 -> Node0x4bfab10;
+	Node0x4bfaac0:s1 -> Node0x4bfab60;
+	Node0x4bfab10 [shape=record,label="{pd_if.then.2}"];
+	Node0x4bfab10 -> Node0x4bfabb0;
+	Node0x4bfab60 [shape=record,label="{pd_if.else}"];
+	Node0x4bfab60 -> Node0x4bfabb0;
+	Node0x4bfabb0 [shape=record,label="{it_for.inc}"];
+	Node0x4bfabb0 -> Node0x4bfa5a0;
+	Node0x4bfac00 [shape=record,label="{for.end}"];
+}

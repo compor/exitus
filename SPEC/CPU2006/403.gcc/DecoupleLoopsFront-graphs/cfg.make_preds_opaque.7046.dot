@@ -1,0 +1,24 @@
+digraph "CFG for 'make_preds_opaque' function" {
+	label="CFG for 'make_preds_opaque' function";
+
+	Node0x7f1eb10 [shape=record,label="{entry}"];
+	Node0x7f1eb10 -> Node0x7f1eb60;
+	Node0x7f1eb60 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x7f1eb60:s0 -> Node0x7f1ebb0;
+	Node0x7f1eb60:s1 -> Node0x7f1ed90;
+	Node0x7f1ebb0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x7f1ebb0:s0 -> Node0x7f1ec00;
+	Node0x7f1ebb0:s1 -> Node0x7f1ec50;
+	Node0x7f1ec00 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x7f1ec00 -> Node0x7f1ed40;
+	Node0x7f1ec50 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x7f1ec50:s0 -> Node0x7f1ecf0;
+	Node0x7f1ec50:s1 -> Node0x7f1eca0;
+	Node0x7f1eca0 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x7f1eca0 -> Node0x7f1ed40;
+	Node0x7f1ecf0 [shape=record,label="{pd_if.end}"];
+	Node0x7f1ecf0 -> Node0x7f1ed40;
+	Node0x7f1ed40 [shape=record,label="{it_for.inc}"];
+	Node0x7f1ed40 -> Node0x7f1eb60;
+	Node0x7f1ed90 [shape=record,label="{for.end}"];
+}

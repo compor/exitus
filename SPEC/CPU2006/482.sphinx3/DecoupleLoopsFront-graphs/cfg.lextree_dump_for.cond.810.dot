@@ -1,0 +1,14 @@
+digraph "CFG for 'lextree_dump_for.cond' function" {
+	label="CFG for 'lextree_dump_for.cond' function";
+
+	Node0x1251b90 [shape=record,label="{newFuncRoot}"];
+	Node0x1251b90 -> Node0x1252070;
+	Node0x1251be0 [shape=record,label="{for.end.exitStub}"];
+	Node0x1252070 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1252070:s0 -> Node0x12520c0;
+	Node0x1252070:s1 -> Node0x1251be0;
+	Node0x12520c0 [shape=record,label="{pd_for.body}"];
+	Node0x12520c0 -> Node0x1574680;
+	Node0x1574680 [shape=record,label="{it_for.body.split}"];
+	Node0x1574680 -> Node0x1252070;
+}

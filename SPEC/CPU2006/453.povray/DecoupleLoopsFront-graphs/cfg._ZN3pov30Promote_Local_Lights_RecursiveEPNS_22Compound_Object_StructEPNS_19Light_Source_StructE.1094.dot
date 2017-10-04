@@ -1,0 +1,36 @@
+digraph "CFG for '_ZN3pov30Promote_Local_Lights_RecursiveEPNS_22Compound_Object_StructEPNS_19Light_Source_StructE' function" {
+	label="CFG for '_ZN3pov30Promote_Local_Lights_RecursiveEPNS_22Compound_Object_StructEPNS_19Light_Source_StructE' function";
+
+	Node0x13b48b0 [shape=record,label="{entry}"];
+	Node0x13b48b0 -> Node0x13b4900;
+	Node0x13b4900 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x13b4900:s0 -> Node0x13b4950;
+	Node0x13b4900:s1 -> Node0x13b4cc0;
+	Node0x13b4950 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x13b4950:s0 -> Node0x13b49a0;
+	Node0x13b4950:s1 -> Node0x13b4b80;
+	Node0x13b49a0 [shape=record,label="{pd_if.then}"];
+	Node0x13b49a0 -> Node0x13b49f0;
+	Node0x13b49f0 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x13b49f0:s0 -> Node0x13b4a40;
+	Node0x13b49f0:s1 -> Node0x13b4a90;
+	Node0x13b4a40 [shape=record,label="{pd_while.body}"];
+	Node0x13b4a40 -> Node0x13b49f0;
+	Node0x13b4a90 [shape=record,label="{pd_while.end|{<s0>T|<s1>F}}"];
+	Node0x13b4a90:s0 -> Node0x13b4b30;
+	Node0x13b4a90:s1 -> Node0x13b4ae0;
+	Node0x13b4ae0 [shape=record,label="{pd_while.end.for.inc_crit_edge}"];
+	Node0x13b4ae0 -> Node0x13b4c70;
+	Node0x13b4b30 [shape=record,label="{pd_if.then.7}"];
+	Node0x13b4b30 -> Node0x13b4c70;
+	Node0x13b4b80 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x13b4b80:s0 -> Node0x13b4c20;
+	Node0x13b4b80:s1 -> Node0x13b4bd0;
+	Node0x13b4bd0 [shape=record,label="{pd_if.else.for.inc_crit_edge}"];
+	Node0x13b4bd0 -> Node0x13b4c70;
+	Node0x13b4c20 [shape=record,label="{pd_if.then.10}"];
+	Node0x13b4c20 -> Node0x13b4c70;
+	Node0x13b4c70 [shape=record,label="{it_for.inc}"];
+	Node0x13b4c70 -> Node0x13b4900;
+	Node0x13b4cc0 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'is_attacked_for.cond.21' function" {
+	label="CFG for 'is_attacked_for.cond.21' function";
+
+	Node0xf91990 [shape=record,label="{newFuncRoot}"];
+	Node0xf91990 -> Node0xf91a80;
+	Node0xf919e0 [shape=record,label="{for.cond.35.preheader.exitStub}"];
+	Node0xf91a30 [shape=record,label="{return.loopexit5.exitStub}"];
+	Node0xf91a80 [shape=record,label="{it_for.cond.21|{<s0>T|<s1>F}}"];
+	Node0xf91a80:s0 -> Node0xf91f40;
+	Node0xf91a80:s1 -> Node0xf919e0;
+	Node0xf91f40 [shape=record,label="{it_for.body.23|{<s0>T|<s1>F}}"];
+	Node0xf91f40:s0 -> Node0xf91a30;
+	Node0xf91f40:s1 -> Node0xf91f90;
+	Node0xf91f90 [shape=record,label="{it_for.inc.32}"];
+	Node0xf91f90 -> Node0xf91a80;
+}

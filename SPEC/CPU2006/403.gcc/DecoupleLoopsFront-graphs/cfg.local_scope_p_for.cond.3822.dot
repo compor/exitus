@@ -1,0 +1,20 @@
+digraph "CFG for 'local_scope_p_for.cond' function" {
+	label="CFG for 'local_scope_p_for.cond' function";
+
+	Node0xabd84b0 [shape=record,label="{newFuncRoot}"];
+	Node0xabd84b0 -> Node0xabd89f0;
+	Node0xabd8500 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0xabd8950 [shape=record,label="{for.body.return_crit_edge.exitStub}"];
+	Node0xabd89a0 [shape=record,label="{lor.lhs.false.return_crit_edge.exitStub}"];
+	Node0xabd89f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xabd89f0:s0 -> Node0xabd8a40;
+	Node0xabd89f0:s1 -> Node0xabd8500;
+	Node0xabd8a40 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xabd8a40:s0 -> Node0xabd8950;
+	Node0xabd8a40:s1 -> Node0xabd8a90;
+	Node0xabd8a90 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xabd8a90:s0 -> Node0xabd89a0;
+	Node0xabd8a90:s1 -> Node0xabd8ae0;
+	Node0xabd8ae0 [shape=record,label="{it_for.inc}"];
+	Node0xabd8ae0 -> Node0xabd89f0;
+}

@@ -1,0 +1,30 @@
+digraph "CFG for 'quantum_qec_encode' function" {
+	label="CFG for 'quantum_qec_encode' function";
+
+	Node0x1622df0 [shape=record,label="{entry}"];
+	Node0x1622df0 -> Node0x1622e40;
+	Node0x1622e40 [shape=record,label="{it_for.cond}"];
+	Node0x1622e40 -> Node0x17322d0;
+	Node0x17322d0 [shape=record,label="{pd_for.cond.split1}"];
+	Node0x17322d0 -> Node0x1799030;
+	Node0x1799030 [shape=record,label="{it_for.cond.split|{<s0>T|<s1>F}}"];
+	Node0x1799030:s0 -> Node0x1622e90;
+	Node0x1799030:s1 -> Node0x16230c0;
+	Node0x1622e90 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x1622e90:s0 -> Node0x1622f30;
+	Node0x1622e90:s1 -> Node0x1622ee0;
+	Node0x1622ee0 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x1622ee0 -> Node0x1622f80;
+	Node0x1622f30 [shape=record,label="{pd_if.then}"];
+	Node0x1622f30 -> Node0x1622f80;
+	Node0x1622f80 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x1622f80:s0 -> Node0x1622fd0;
+	Node0x1622f80:s1 -> Node0x1623020;
+	Node0x1622fd0 [shape=record,label="{pd_if.then.5}"];
+	Node0x1622fd0 -> Node0x1623070;
+	Node0x1623020 [shape=record,label="{pd_if.else}"];
+	Node0x1623020 -> Node0x1623070;
+	Node0x1623070 [shape=record,label="{it_for.inc}"];
+	Node0x1623070 -> Node0x1622e40;
+	Node0x16230c0 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,18 @@
+digraph "CFG for '_ZN3povL21priority_queue_insertEPNS_21Priority_Queue_StructEdPNS_16BBox_Tree_StructE_while.cond' function" {
+	label="CFG for '_ZN3povL21priority_queue_insertEPNS_21Priority_Queue_StructEdPNS_16BBox_Tree_StructE_while.cond' function";
+
+	Node0x22e07f0 [shape=record,label="{newFuncRoot}"];
+	Node0x22e07f0 -> Node0x22e0cf0;
+	Node0x22e0840 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x22e0ca0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x22e0cf0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x22e0cf0:s0 -> Node0x22e0d40;
+	Node0x22e0cf0:s1 -> Node0x22e0840;
+	Node0x22e0d40 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x22e0d40:s0 -> Node0x22e0d90;
+	Node0x22e0d40:s1 -> Node0x22e0ca0;
+	Node0x22e0d90 [shape=record,label="{pd_while.body}"];
+	Node0x22e0d90 -> Node0x35cae70;
+	Node0x35cae70 [shape=record,label="{it_while.body.split}"];
+	Node0x35cae70 -> Node0x22e0cf0;
+}

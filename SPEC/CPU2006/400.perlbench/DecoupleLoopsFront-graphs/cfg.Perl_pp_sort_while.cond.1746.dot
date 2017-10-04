@@ -1,0 +1,20 @@
+digraph "CFG for 'Perl_pp_sort_while.cond' function" {
+	label="CFG for 'Perl_pp_sort_while.cond' function";
+
+	Node0x50aa530 [shape=record,label="{newFuncRoot}"];
+	Node0x50aa530 -> Node0x50aa5d0;
+	Node0x50aa580 [shape=record,label="{if.end.515.loopexit.exitStub}"];
+	Node0x50aa5d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x50aa5d0:s0 -> Node0x50aa620;
+	Node0x50aa5d0:s1 -> Node0x50aa580;
+	Node0x50aa620 [shape=record,label="{pd_while.body}"];
+	Node0x50aa620 -> Node0x6809ec0;
+	Node0x6809ec0 [shape=record,label="{it_while.body.split3}"];
+	Node0x6809ec0 -> Node0x64e4ab0;
+	Node0x64e4ab0 [shape=record,label="{pd_while.body.split2}"];
+	Node0x64e4ab0 -> Node0x6605a10;
+	Node0x6605a10 [shape=record,label="{it_while.body.split1}"];
+	Node0x6605a10 -> Node0x6751ce0;
+	Node0x6751ce0 [shape=record,label="{pd_while.body.split}"];
+	Node0x6751ce0 -> Node0x50aa5d0;
+}

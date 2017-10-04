@@ -1,0 +1,14 @@
+digraph "CFG for 'read_gauge_hdr_for.cond' function" {
+	label="CFG for 'read_gauge_hdr_for.cond' function";
+
+	Node0x19acf30 [shape=record,label="{newFuncRoot}"];
+	Node0x19acf30 -> Node0x19acfd0;
+	Node0x19acf80 [shape=record,label="{for.end.exitStub}"];
+	Node0x19acfd0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x19acfd0:s0 -> Node0x19ad020;
+	Node0x19acfd0:s1 -> Node0x19acf80;
+	Node0x19ad020 [shape=record,label="{pd_for.body}"];
+	Node0x19ad020 -> Node0x1c8c970;
+	Node0x1c8c970 [shape=record,label="{it_for.body.split}"];
+	Node0x1c8c970 -> Node0x19acfd0;
+}

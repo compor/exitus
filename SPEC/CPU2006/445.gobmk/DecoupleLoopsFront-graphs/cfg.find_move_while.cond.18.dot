@@ -1,0 +1,18 @@
+digraph "CFG for 'find_move_while.cond' function" {
+	label="CFG for 'find_move_while.cond' function";
+
+	Node0x3327e50 [shape=record,label="{newFuncRoot}"];
+	Node0x3327e50 -> Node0x3328310;
+	Node0x3327ea0 [shape=record,label="{while.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x3328270 [shape=record,label="{while.body.return.loopexit_crit_edge.exitStub}"];
+	Node0x33282c0 [shape=record,label="{sw.bb.3.exitStub}"];
+	Node0x3328310 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3328310:s0 -> Node0x3328360;
+	Node0x3328310:s1 -> Node0x3327ea0;
+	Node0x3328360 [shape=record,label="{it_while.body|{<s0>def|<s1>8258|<s2>8279}}"];
+	Node0x3328360:s0 -> Node0x33283b0;
+	Node0x3328360:s1 -> Node0x3328270;
+	Node0x3328360:s2 -> Node0x33282c0;
+	Node0x33283b0 [shape=record,label="{it_sw.epilog}"];
+	Node0x33283b0 -> Node0x3328310;
+}

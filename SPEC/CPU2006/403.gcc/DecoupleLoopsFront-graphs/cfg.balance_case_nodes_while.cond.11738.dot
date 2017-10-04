@@ -1,0 +1,33 @@
+digraph "CFG for 'balance_case_nodes_while.cond' function" {
+	label="CFG for 'balance_case_nodes_while.cond' function";
+
+	Node0xc447880 [shape=record,label="{newFuncRoot}"];
+	Node0xc447880 -> Node0xc447920;
+	Node0xc4478d0 [shape=record,label="{while.end.exitStub}"];
+	Node0xc447920 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc447920:s0 -> Node0xc447970;
+	Node0xc447920:s1 -> Node0xc4478d0;
+	Node0xc447970 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0xc447970:s0 -> Node0xc447ab0;
+	Node0xc447970:s1 -> Node0xc4479c0;
+	Node0xc4479c0 [shape=record,label="{pd_if.then.3|{<s0>T|<s1>F}}"];
+	Node0xc4479c0:s0 -> Node0xc447a60;
+	Node0xc4479c0:s1 -> Node0xc447a10;
+	Node0xc447a10 [shape=record,label="{pd_if.then.3.if.end.10_crit_edge}"];
+	Node0xc447a10 -> Node0xc447b00;
+	Node0xc447a60 [shape=record,label="{pd_if.then.5}"];
+	Node0xc447a60 -> Node0xc447b00;
+	Node0xc447ab0 [shape=record,label="{pd_while.body.if.end.10_crit_edge}"];
+	Node0xc447ab0 -> Node0xc447b00;
+	Node0xc447b00 [shape=record,label="{pd_if.end.10|{<s0>T|<s1>F}}"];
+	Node0xc447b00:s0 -> Node0xc447ba0;
+	Node0xc447b00:s1 -> Node0xc447b50;
+	Node0xc447b50 [shape=record,label="{pd_if.end.10.if.end.21_crit_edge}"];
+	Node0xc447b50 -> Node0xc447bf0;
+	Node0xc447ba0 [shape=record,label="{pd_if.then.12}"];
+	Node0xc447ba0 -> Node0xc447bf0;
+	Node0xc447bf0 [shape=record,label="{pd_if.end.21}"];
+	Node0xc447bf0 -> Node0xfd6bce0;
+	Node0xfd6bce0 [shape=record,label="{it_if.end.21.split}"];
+	Node0xfd6bce0 -> Node0xc447920;
+}

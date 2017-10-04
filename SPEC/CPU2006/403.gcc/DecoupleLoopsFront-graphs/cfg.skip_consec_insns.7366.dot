@@ -1,0 +1,31 @@
+digraph "CFG for 'skip_consec_insns' function" {
+	label="CFG for 'skip_consec_insns' function";
+
+	Node0x8061de0 [shape=record,label="{entry}"];
+	Node0x8061de0 -> Node0x8061e30;
+	Node0x8061e30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x8061e30:s0 -> Node0x8061e80;
+	Node0x8061e30:s1 -> Node0x8062150;
+	Node0x8061e80 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x8061e80:s0 -> Node0x8061f20;
+	Node0x8061e80:s1 -> Node0x8061ed0;
+	Node0x8061ed0 [shape=record,label="{pd_for.body.do.body.preheader_crit_edge}"];
+	Node0x8061ed0 -> Node0x8062010;
+	Node0x8061f20 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x8061f20:s0 -> Node0x8061fc0;
+	Node0x8061f20:s1 -> Node0x8061f70;
+	Node0x8061f70 [shape=record,label="{pd_land.lhs.true.do.body.preheader_crit_edge}"];
+	Node0x8061f70 -> Node0x8062010;
+	Node0x8061fc0 [shape=record,label="{pd_if.then}"];
+	Node0x8061fc0 -> Node0x8062010;
+	Node0x8062010 [shape=record,label="{pd_do.body.preheader}"];
+	Node0x8062010 -> Node0x8062060;
+	Node0x8062060 [shape=record,label="{pd_do.body|{<s0>T|<s1>F}}"];
+	Node0x8062060:s0 -> Node0x80620b0;
+	Node0x8062060:s1 -> Node0x8062100;
+	Node0x80620b0 [shape=record,label="{pd_do.body.do.body_crit_edge}"];
+	Node0x80620b0 -> Node0x8062060;
+	Node0x8062100 [shape=record,label="{it_for.inc}"];
+	Node0x8062100 -> Node0x8061e30;
+	Node0x8062150 [shape=record,label="{for.end}"];
+}

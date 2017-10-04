@@ -1,0 +1,26 @@
+digraph "CFG for 'Perl_sv_pos_b2u_while.cond' function" {
+	label="CFG for 'Perl_sv_pos_b2u_while.cond' function";
+
+	Node0x5479470 [shape=record,label="{newFuncRoot}"];
+	Node0x5479470 -> Node0x5492a60;
+	Node0x5492a10 [shape=record,label="{while.end.45.exitStub}"];
+	Node0x5492a60 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x5492a60:s0 -> Node0x5492ab0;
+	Node0x5492a60:s1 -> Node0x5492a10;
+	Node0x5492ab0 [shape=record,label="{it_while.body}"];
+	Node0x5492ab0 -> Node0x5492b00;
+	Node0x5492b00 [shape=record,label="{it_while.cond.36|{<s0>T|<s1>F}}"];
+	Node0x5492b00:s0 -> Node0x5492ba0;
+	Node0x5492b00:s1 -> Node0x5492b50;
+	Node0x5492b50 [shape=record,label="{pd_while.cond.36.while.end_crit_edge}"];
+	Node0x5492b50 -> Node0x5492c40;
+	Node0x5492ba0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x5492ba0:s0 -> Node0x5492c90;
+	Node0x5492ba0:s1 -> Node0x5492bf0;
+	Node0x5492bf0 [shape=record,label="{pd_land.rhs.while.end_crit_edge}"];
+	Node0x5492bf0 -> Node0x5492c40;
+	Node0x5492c40 [shape=record,label="{pd_while.end}"];
+	Node0x5492c40 -> Node0x5492a60;
+	Node0x5492c90 [shape=record,label="{it_while.body.42}"];
+	Node0x5492c90 -> Node0x5492b00;
+}

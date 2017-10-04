@@ -1,0 +1,12 @@
+digraph "CFG for 'synth_mult_for.cond' function" {
+	label="CFG for 'synth_mult_for.cond' function";
+
+	Node0xad33000 [shape=record,label="{newFuncRoot}"];
+	Node0xad33000 -> Node0xad330a0;
+	Node0xad33050 [shape=record,label="{for.end.exitStub}"];
+	Node0xad330a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xad330a0:s0 -> Node0xad330f0;
+	Node0xad330a0:s1 -> Node0xad33050;
+	Node0xad330f0 [shape=record,label="{it_for.inc}"];
+	Node0xad330f0 -> Node0xad330a0;
+}

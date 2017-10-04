@@ -1,0 +1,31 @@
+digraph "CFG for 'owl_mark_worm_for.cond' function" {
+	label="CFG for 'owl_mark_worm_for.cond' function";
+
+	Node0x413d8e0 [shape=record,label="{newFuncRoot}"];
+	Node0x413d8e0 -> Node0x415cd20;
+	Node0x415c800 [shape=record,label="{for.end.exitStub}"];
+	Node0x415cd20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x415cd20:s0 -> Node0x415cd70;
+	Node0x415cd20:s1 -> Node0x415c800;
+	Node0x415cd70 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x415cd70:s0 -> Node0x415ce10;
+	Node0x415cd70:s1 -> Node0x415cdc0;
+	Node0x415cdc0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x415cdc0 -> Node0x415cff0;
+	Node0x415ce10 [shape=record,label="{pd_if.then.15|{<s0>T|<s1>F}}"];
+	Node0x415ce10:s0 -> Node0x415cf50;
+	Node0x415ce10:s1 -> Node0x415ce60;
+	Node0x415ce60 [shape=record,label="{pd_lor.lhs.false.16|{<s0>T|<s1>F}}"];
+	Node0x415ce60:s0 -> Node0x415cf00;
+	Node0x415ce60:s1 -> Node0x415ceb0;
+	Node0x415ceb0 [shape=record,label="{pd_if.else.22}"];
+	Node0x415ceb0 -> Node0x415cff0;
+	Node0x415cf00 [shape=record,label="{pd_lor.lhs.false.16.if.then.19_crit_edge}"];
+	Node0x415cf00 -> Node0x415cfa0;
+	Node0x415cf50 [shape=record,label="{pd_if.then.15.if.then.19_crit_edge}"];
+	Node0x415cf50 -> Node0x415cfa0;
+	Node0x415cfa0 [shape=record,label="{pd_if.then.19}"];
+	Node0x415cfa0 -> Node0x415cff0;
+	Node0x415cff0 [shape=record,label="{it_for.inc}"];
+	Node0x415cff0 -> Node0x415cd20;
+}

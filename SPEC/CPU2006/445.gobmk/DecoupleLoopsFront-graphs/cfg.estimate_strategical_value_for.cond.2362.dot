@@ -1,0 +1,14 @@
+digraph "CFG for 'estimate_strategical_value_for.cond' function" {
+	label="CFG for 'estimate_strategical_value_for.cond' function";
+
+	Node0x46575a0 [shape=record,label="{newFuncRoot}"];
+	Node0x46575a0 -> Node0x4657640;
+	Node0x46575f0 [shape=record,label="{for.cond.1.preheader.exitStub}"];
+	Node0x4657640 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4657640:s0 -> Node0x4657690;
+	Node0x4657640:s1 -> Node0x46575f0;
+	Node0x4657690 [shape=record,label="{pd_for.body}"];
+	Node0x4657690 -> Node0x502b520;
+	Node0x502b520 [shape=record,label="{it_for.body.split}"];
+	Node0x502b520 -> Node0x4657640;
+}

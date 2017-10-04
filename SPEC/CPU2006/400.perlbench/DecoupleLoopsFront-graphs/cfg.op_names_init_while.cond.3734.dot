@@ -1,0 +1,12 @@
+digraph "CFG for 'op_names_init_while.cond' function" {
+	label="CFG for 'op_names_init_while.cond' function";
+
+	Node0x59e0eb0 [shape=record,label="{newFuncRoot}"];
+	Node0x59e0eb0 -> Node0x59e0f50;
+	Node0x59e0f00 [shape=record,label="{while.end.exitStub}"];
+	Node0x59e0f50 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x59e0f50:s0 -> Node0x59e0fa0;
+	Node0x59e0f50:s1 -> Node0x59e0f00;
+	Node0x59e0fa0 [shape=record,label="{pd_while.body}"];
+	Node0x59e0fa0 -> Node0x59e0f50;
+}

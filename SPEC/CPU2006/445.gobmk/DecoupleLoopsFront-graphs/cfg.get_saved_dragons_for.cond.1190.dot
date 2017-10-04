@@ -1,0 +1,30 @@
+digraph "CFG for 'get_saved_dragons_for.cond' function" {
+	label="CFG for 'get_saved_dragons_for.cond' function";
+
+	Node0x4096580 [shape=record,label="{newFuncRoot}"];
+	Node0x4096580 -> Node0x40a4420;
+	Node0x40a3eb0 [shape=record,label="{for.cond.for.end.17_crit_edge.exitStub}"];
+	Node0x40a43d0 [shape=record,label="{for.body.for.end.17_crit_edge.exitStub}"];
+	Node0x40a4420 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x40a4420:s0 -> Node0x40a4470;
+	Node0x40a4420:s1 -> Node0x40a3eb0;
+	Node0x40a4470 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x40a4470:s0 -> Node0x40a43d0;
+	Node0x40a4470:s1 -> Node0x40a44c0;
+	Node0x40a44c0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x40a44c0:s0 -> Node0x40a4560;
+	Node0x40a44c0:s1 -> Node0x40a4510;
+	Node0x40a4510 [shape=record,label="{pd_if.end.for.inc.16_crit_edge}"];
+	Node0x40a4510 -> Node0x40a4650;
+	Node0x40a4560 [shape=record,label="{pd_if.then.10}"];
+	Node0x40a4560 -> Node0x40a45b0;
+	Node0x40a45b0 [shape=record,label="{pd_for.cond.11|{<s0>T|<s1>F}}"];
+	Node0x40a45b0:s0 -> Node0x40a46a0;
+	Node0x40a45b0:s1 -> Node0x40a4600;
+	Node0x40a4600 [shape=record,label="{pd_for.inc.16.loopexit}"];
+	Node0x40a4600 -> Node0x40a4650;
+	Node0x40a4650 [shape=record,label="{it_for.inc.16}"];
+	Node0x40a4650 -> Node0x40a4420;
+	Node0x40a46a0 [shape=record,label="{pd_for.body.13}"];
+	Node0x40a46a0 -> Node0x40a45b0;
+}

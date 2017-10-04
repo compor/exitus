@@ -1,0 +1,27 @@
+digraph "CFG for 'readonly_fields_p_for.cond' function" {
+	label="CFG for 'readonly_fields_p_for.cond' function";
+
+	Node0xa2eace0 [shape=record,label="{newFuncRoot}"];
+	Node0xa2eace0 -> Node0xa2eae20;
+	Node0xa2ead30 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0xa2ead80 [shape=record,label="{land.lhs.true.19.return.loopexit_crit_edge.exitStub}"];
+	Node0xa2eadd0 [shape=record,label="{lor.lhs.false.return.loopexit_crit_edge.exitStub}"];
+	Node0xa2eae20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa2eae20:s0 -> Node0xa2eae70;
+	Node0xa2eae20:s1 -> Node0xa2ead30;
+	Node0xa2eae70 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xa2eae70:s0 -> Node0xa2eaf10;
+	Node0xa2eae70:s1 -> Node0xa2eaec0;
+	Node0xa2eaec0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xa2eaec0 -> Node0xa2eb000;
+	Node0xa2eaf10 [shape=record,label="{it_land.lhs.true.19|{<s0>T|<s1>F}}"];
+	Node0xa2eaf10:s0 -> Node0xa2ead80;
+	Node0xa2eaf10:s1 -> Node0xa2eaf60;
+	Node0xa2eaf60 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xa2eaf60:s0 -> Node0xa2eadd0;
+	Node0xa2eaf60:s1 -> Node0xa2eafb0;
+	Node0xa2eafb0 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0xa2eafb0 -> Node0xa2eb000;
+	Node0xa2eb000 [shape=record,label="{it_for.inc}"];
+	Node0xa2eb000 -> Node0xa2eae20;
+}

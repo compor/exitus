@@ -1,0 +1,37 @@
+digraph "CFG for 'decode_addr_const_while.body' function" {
+	label="CFG for 'decode_addr_const_while.body' function";
+
+	Node0xc69b560 [shape=record,label="{newFuncRoot}"];
+	Node0xc69b560 -> Node0xc69b600;
+	Node0xc69b5b0 [shape=record,label="{while.end.exitStub}"];
+	Node0xc69b600 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc69b600:s0 -> Node0xc69b6a0;
+	Node0xc69b600:s1 -> Node0xc69b650;
+	Node0xc69b650 [shape=record,label="{pd_while.body.if.else_crit_edge}"];
+	Node0xc69b650 -> Node0xc69b740;
+	Node0xc69b6a0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xc69b6a0:s0 -> Node0xc69b8d0;
+	Node0xc69b6a0:s1 -> Node0xc69b6f0;
+	Node0xc69b6f0 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0xc69b6f0 -> Node0xc69b740;
+	Node0xc69b740 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0xc69b740:s0 -> Node0xc69b830;
+	Node0xc69b740:s1 -> Node0xc69b790;
+	Node0xc69b790 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xc69b790:s0 -> Node0xc69b7e0;
+	Node0xc69b790:s1 -> Node0xc69b5b0;
+	Node0xc69b7e0 [shape=record,label="{pd_lor.lhs.false.if.then.26_crit_edge}"];
+	Node0xc69b7e0 -> Node0xc69b880;
+	Node0xc69b830 [shape=record,label="{pd_if.else.if.then.26_crit_edge}"];
+	Node0xc69b830 -> Node0xc69b880;
+	Node0xc69b880 [shape=record,label="{pd_if.then.26}"];
+	Node0xc69b880 -> Node0xfda9570;
+	Node0xfda9570 [shape=record,label="{it_if.then.26.split}"];
+	Node0xfda9570 -> Node0xc69b920;
+	Node0xc69b8d0 [shape=record,label="{pd_if.then}"];
+	Node0xc69b8d0 -> Node0xfda93a0;
+	Node0xfda93a0 [shape=record,label="{it_if.then.split}"];
+	Node0xfda93a0 -> Node0xc69b920;
+	Node0xc69b920 [shape=record,label="{pd_while.body.backedge}"];
+	Node0xc69b920 -> Node0xc69b600;
+}

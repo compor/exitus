@@ -1,0 +1,12 @@
+digraph "CFG for 'skip_rest_of_line_while.cond' function" {
+	label="CFG for 'skip_rest_of_line_while.cond' function";
+
+	Node0xa1f0910 [shape=record,label="{newFuncRoot}"];
+	Node0xa1f0910 -> Node0xa1f09b0;
+	Node0xa1f0960 [shape=record,label="{while.end.exitStub}"];
+	Node0xa1f09b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa1f09b0:s0 -> Node0xa1f0a00;
+	Node0xa1f09b0:s1 -> Node0xa1f0960;
+	Node0xa1f0a00 [shape=record,label="{pd_while.body}"];
+	Node0xa1f0a00 -> Node0xa1f09b0;
+}

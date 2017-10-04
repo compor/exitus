@@ -1,0 +1,14 @@
+digraph "CFG for 'pop_function_context_from_for.cond' function" {
+	label="CFG for 'pop_function_context_from_for.cond' function";
+
+	Node0xafc9520 [shape=record,label="{newFuncRoot}"];
+	Node0xafc9520 -> Node0xafc95c0;
+	Node0xafc9570 [shape=record,label="{for.end.exitStub}"];
+	Node0xafc95c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xafc95c0:s0 -> Node0xafc9610;
+	Node0xafc95c0:s1 -> Node0xafc9570;
+	Node0xafc9610 [shape=record,label="{pd_for.body}"];
+	Node0xafc9610 -> Node0xf4ed9e0;
+	Node0xf4ed9e0 [shape=record,label="{it_for.body.split}"];
+	Node0xf4ed9e0 -> Node0xafc95c0;
+}

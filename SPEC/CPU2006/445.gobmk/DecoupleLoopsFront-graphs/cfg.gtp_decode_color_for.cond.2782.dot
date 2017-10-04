@@ -1,0 +1,14 @@
+digraph "CFG for 'gtp_decode_color_for.cond' function" {
+	label="CFG for 'gtp_decode_color_for.cond' function";
+
+	Node0x47ab490 [shape=record,label="{newFuncRoot}"];
+	Node0x47ab490 -> Node0x47ab530;
+	Node0x47ab4e0 [shape=record,label="{for.end.exitStub}"];
+	Node0x47ab530 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x47ab530:s0 -> Node0x47b0ac0;
+	Node0x47ab530:s1 -> Node0x47ab4e0;
+	Node0x47b0ac0 [shape=record,label="{pd_for.body}"];
+	Node0x47b0ac0 -> Node0x56d9c40;
+	Node0x56d9c40 [shape=record,label="{it_for.body.split}"];
+	Node0x56d9c40 -> Node0x47ab530;
+}

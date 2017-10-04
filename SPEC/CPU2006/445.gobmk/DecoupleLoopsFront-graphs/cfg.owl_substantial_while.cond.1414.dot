@@ -1,0 +1,19 @@
+digraph "CFG for 'owl_substantial_while.cond' function" {
+	label="CFG for 'owl_substantial_while.cond' function";
+
+	Node0x4150690 [shape=record,label="{newFuncRoot}"];
+	Node0x4150690 -> Node0x4152e80;
+	Node0x4152e30 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x4152e80 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4152e80:s0 -> Node0x4152ed0;
+	Node0x4152e80:s1 -> Node0x4152e30;
+	Node0x4152ed0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x4152ed0:s0 -> Node0x4152f70;
+	Node0x4152ed0:s1 -> Node0x4152f20;
+	Node0x4152f20 [shape=record,label="{pd_while.body.if.end.127_crit_edge}"];
+	Node0x4152f20 -> Node0x4152fc0;
+	Node0x4152f70 [shape=record,label="{pd_if.then.126}"];
+	Node0x4152f70 -> Node0x4152fc0;
+	Node0x4152fc0 [shape=record,label="{pd_if.end.127}"];
+	Node0x4152fc0 -> Node0x4152e80;
+}

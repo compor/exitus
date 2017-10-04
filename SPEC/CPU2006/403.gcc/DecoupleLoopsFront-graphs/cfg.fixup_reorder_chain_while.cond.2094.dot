@@ -1,0 +1,12 @@
+digraph "CFG for 'fixup_reorder_chain_while.cond' function" {
+	label="CFG for 'fixup_reorder_chain_while.cond' function";
+
+	Node0xa536e10 [shape=record,label="{newFuncRoot}"];
+	Node0xa536e10 -> Node0xa536eb0;
+	Node0xa536e60 [shape=record,label="{while.end.exitStub}"];
+	Node0xa536eb0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa536eb0:s0 -> Node0xa541120;
+	Node0xa536eb0:s1 -> Node0xa536e60;
+	Node0xa541120 [shape=record,label="{it_while.body}"];
+	Node0xa541120 -> Node0xa536eb0;
+}

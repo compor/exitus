@@ -1,0 +1,35 @@
+digraph "CFG for 'move_by_pieces_ninsns_while.cond' function" {
+	label="CFG for 'move_by_pieces_ninsns_while.cond' function";
+
+	Node0xadbb190 [shape=record,label="{newFuncRoot}"];
+	Node0xadbb190 -> Node0xadbb280;
+	Node0xadbb1e0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xadbb230 [shape=record,label="{for.end.while.end_crit_edge.exitStub}"];
+	Node0xadbb280 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xadbb280:s0 -> Node0xadbb2d0;
+	Node0xadbb280:s1 -> Node0xadbb1e0;
+	Node0xadbb2d0 [shape=record,label="{it_while.body}"];
+	Node0xadbb2d0 -> Node0xadbb320;
+	Node0xadbb320 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xadbb320:s0 -> Node0xadbb5a0;
+	Node0xadbb320:s1 -> Node0xadbb370;
+	Node0xadbb370 [shape=record,label="{it_for.end|{<s0>T|<s1>F}}"];
+	Node0xadbb370:s0 -> Node0xadbb230;
+	Node0xadbb370:s1 -> Node0xadbb3c0;
+	Node0xadbb3c0 [shape=record,label="{pd_if.end.10|{<s0>T|<s1>F}}"];
+	Node0xadbb3c0:s0 -> Node0xadbb460;
+	Node0xadbb3c0:s1 -> Node0xadbb410;
+	Node0xadbb410 [shape=record,label="{pd_if.end.10.if.end.24_crit_edge}"];
+	Node0xadbb410 -> Node0xadbb550;
+	Node0xadbb460 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xadbb460:s0 -> Node0xadbb500;
+	Node0xadbb460:s1 -> Node0xadbb4b0;
+	Node0xadbb4b0 [shape=record,label="{pd_land.lhs.true.if.end.24_crit_edge}"];
+	Node0xadbb4b0 -> Node0xadbb550;
+	Node0xadbb500 [shape=record,label="{pd_if.then.17}"];
+	Node0xadbb500 -> Node0xadbb550;
+	Node0xadbb550 [shape=record,label="{it_if.end.24}"];
+	Node0xadbb550 -> Node0xadbb280;
+	Node0xadbb5a0 [shape=record,label="{it_for.body}"];
+	Node0xadbb5a0 -> Node0xadbb320;
+}

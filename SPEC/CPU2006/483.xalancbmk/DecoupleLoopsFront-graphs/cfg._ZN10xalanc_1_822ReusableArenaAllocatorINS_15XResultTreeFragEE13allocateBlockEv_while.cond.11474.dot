@@ -1,0 +1,35 @@
+digraph "CFG for '_ZN10xalanc_1_822ReusableArenaAllocatorINS_15XResultTreeFragEE13allocateBlockEv_while.cond' function" {
+	label="CFG for '_ZN10xalanc_1_822ReusableArenaAllocatorINS_15XResultTreeFragEE13allocateBlockEv_while.cond' function";
+
+	Node0xa0c61c0 [shape=record,label="{newFuncRoot}"];
+	Node0xa0c61c0 -> Node0xa0c64d0;
+	Node0xa0c6210 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0xa0c6260 [shape=record,label="{cond.false.exitStub}"];
+	Node0xa0c6480 [shape=record,label="{if.then.19.exitStub}"];
+	Node0xa0c64d0 [shape=record,label="{pd_while.cond}"];
+	Node0xa0c64d0 -> Node0xd181530;
+	Node0xd181530 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0xd181530:s0 -> Node0xa0c6520;
+	Node0xd181530:s1 -> Node0xa0c6210;
+	Node0xa0c6520 [shape=record,label="{pd_while.body}"];
+	Node0xa0c6520 -> Node0xd159860;
+	Node0xd159860 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0xd159860:s0 -> Node0xa0c6570;
+	Node0xd159860:s1 -> Node0xa0c6260;
+	Node0xa0c6570 [shape=record,label="{pd_cond.end}"];
+	Node0xa0c6570 -> Node0xd175110;
+	Node0xd175110 [shape=record,label="{it_cond.end.split|{<s0>T|<s1>F}}"];
+	Node0xd175110:s0 -> Node0xa0c6610;
+	Node0xd175110:s1 -> Node0xa0c65c0;
+	Node0xa0c65c0 [shape=record,label="{pd_cond.end.if.else_crit_edge}"];
+	Node0xa0c65c0 -> Node0xa0c66b0;
+	Node0xa0c6610 [shape=record,label="{pd_land.lhs.true}"];
+	Node0xa0c6610 -> Node0xd174f50;
+	Node0xd174f50 [shape=record,label="{it_land.lhs.true.split|{<s0>T|<s1>F}}"];
+	Node0xd174f50:s0 -> Node0xa0c6480;
+	Node0xd174f50:s1 -> Node0xa0c6660;
+	Node0xa0c6660 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0xa0c6660 -> Node0xa0c66b0;
+	Node0xa0c66b0 [shape=record,label="{pd_if.else}"];
+	Node0xa0c66b0 -> Node0xa0c64d0;
+}

@@ -1,0 +1,32 @@
+digraph "CFG for 'check_case_value_while.cond' function" {
+	label="CFG for 'check_case_value_while.cond' function";
+
+	Node0xa12f380 [shape=record,label="{newFuncRoot}"];
+	Node0xa12f380 -> Node0xa12f4c0;
+	Node0xa12f3d0 [shape=record,label="{lor.lhs.false.7.while.end_crit_edge.exitStub}"];
+	Node0xa12f420 [shape=record,label="{land.lhs.true.while.end_crit_edge.exitStub}"];
+	Node0xa12f470 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xa12f4c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa12f4c0:s0 -> Node0xa12f650;
+	Node0xa12f4c0:s1 -> Node0xa12f510;
+	Node0xa12f510 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xa12f510:s0 -> Node0xa12f600;
+	Node0xa12f510:s1 -> Node0xa12f560;
+	Node0xa12f560 [shape=record,label="{it_lor.lhs.false.7|{<s0>T|<s1>F}}"];
+	Node0xa12f560:s0 -> Node0xa12f5b0;
+	Node0xa12f560:s1 -> Node0xa12f3d0;
+	Node0xa12f5b0 [shape=record,label="{pd_lor.lhs.false.7.land.lhs.true_crit_edge}"];
+	Node0xa12f5b0 -> Node0xa12f6a0;
+	Node0xa12f600 [shape=record,label="{pd_lor.lhs.false.land.lhs.true_crit_edge}"];
+	Node0xa12f600 -> Node0xa12f6a0;
+	Node0xa12f650 [shape=record,label="{pd_while.cond.land.lhs.true_crit_edge}"];
+	Node0xa12f650 -> Node0xa12f6a0;
+	Node0xa12f6a0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xa12f6a0:s0 -> Node0xa12f6f0;
+	Node0xa12f6a0:s1 -> Node0xa12f420;
+	Node0xa12f6f0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xa12f6f0:s0 -> Node0xa12f740;
+	Node0xa12f6f0:s1 -> Node0xa12f470;
+	Node0xa12f740 [shape=record,label="{it_while.body}"];
+	Node0xa12f740 -> Node0xa12f4c0;
+}

@@ -1,0 +1,19 @@
+digraph "CFG for 'reg_dies_while.cond' function" {
+	label="CFG for 'reg_dies_while.cond' function";
+
+	Node0xb25fdf0 [shape=record,label="{newFuncRoot}"];
+	Node0xb25fdf0 -> Node0xb25fe90;
+	Node0xb25fe40 [shape=record,label="{if.end.55.loopexit.exitStub}"];
+	Node0xb25fe90 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb25fe90:s0 -> Node0xb25fee0;
+	Node0xb25fe90:s1 -> Node0xb25fe40;
+	Node0xb25fee0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0xb25fee0:s0 -> Node0xb25ff80;
+	Node0xb25fee0:s1 -> Node0xb25ff30;
+	Node0xb25ff30 [shape=record,label="{pd_if.then.46}"];
+	Node0xb25ff30 -> Node0xb25ffd0;
+	Node0xb25ff80 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0xb25ff80 -> Node0xb25ffd0;
+	Node0xb25ffd0 [shape=record,label="{pd_if.end}"];
+	Node0xb25ffd0 -> Node0xb25fe90;
+}

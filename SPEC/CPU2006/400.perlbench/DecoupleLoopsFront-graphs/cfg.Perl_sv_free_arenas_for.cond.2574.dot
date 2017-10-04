@@ -1,0 +1,33 @@
+digraph "CFG for 'Perl_sv_free_arenas_for.cond' function" {
+	label="CFG for 'Perl_sv_free_arenas_for.cond' function";
+
+	Node0x5477d80 [shape=record,label="{newFuncRoot}"];
+	Node0x5477d80 -> Node0x5477e20;
+	Node0x5477dd0 [shape=record,label="{for.end.exitStub}"];
+	Node0x5477e20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x5477e20:s0 -> Node0x5477e70;
+	Node0x5477e20:s1 -> Node0x5477dd0;
+	Node0x5477e70 [shape=record,label="{it_for.body}"];
+	Node0x5477e70 -> Node0x5477ec0;
+	Node0x5477ec0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x5477ec0:s0 -> Node0x5477f60;
+	Node0x5477ec0:s1 -> Node0x5477f10;
+	Node0x5477f10 [shape=record,label="{pd_while.cond.while.end_crit_edge}"];
+	Node0x5477f10 -> Node0x5478000;
+	Node0x5477f60 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x5477f60:s0 -> Node0x5478140;
+	Node0x5477f60:s1 -> Node0x5477fb0;
+	Node0x5477fb0 [shape=record,label="{pd_land.rhs.while.end_crit_edge}"];
+	Node0x5477fb0 -> Node0x5478000;
+	Node0x5478000 [shape=record,label="{pd_while.end|{<s0>T|<s1>F}}"];
+	Node0x5478000:s0 -> Node0x54780a0;
+	Node0x5478000:s1 -> Node0x5478050;
+	Node0x5478050 [shape=record,label="{pd_if.then}"];
+	Node0x5478050 -> Node0x54780f0;
+	Node0x54780a0 [shape=record,label="{pd_while.end.for.cond.backedge_crit_edge}"];
+	Node0x54780a0 -> Node0x54780f0;
+	Node0x54780f0 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x54780f0 -> Node0x5477e20;
+	Node0x5478140 [shape=record,label="{it_while.body}"];
+	Node0x5478140 -> Node0x5477ec0;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'lookup_expr_while.cond' function" {
+	label="CFG for 'lookup_expr_while.cond' function";
+
+	Node0xb1aae70 [shape=record,label="{newFuncRoot}"];
+	Node0xb1aae70 -> Node0xb1aaf60;
+	Node0xb1aaec0 [shape=record,label="{while.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0xb1aaf10 [shape=record,label="{land.rhs.return.loopexit_crit_edge.exitStub}"];
+	Node0xb1aaf60 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb1aaf60:s0 -> Node0xb1aafb0;
+	Node0xb1aaf60:s1 -> Node0xb1aaec0;
+	Node0xb1aafb0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xb1aafb0:s0 -> Node0xb1ab000;
+	Node0xb1aafb0:s1 -> Node0xb1aaf10;
+	Node0xb1ab000 [shape=record,label="{it_while.body}"];
+	Node0xb1ab000 -> Node0xb1aaf60;
+}

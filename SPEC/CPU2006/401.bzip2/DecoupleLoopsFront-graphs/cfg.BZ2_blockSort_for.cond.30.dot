@@ -1,0 +1,16 @@
+digraph "CFG for 'BZ2_blockSort_for.cond' function" {
+	label="CFG for 'BZ2_blockSort_for.cond' function";
+
+	Node0x17bc140 [shape=record,label="{newFuncRoot}"];
+	Node0x17bc140 -> Node0x17bc230;
+	Node0x17bc190 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x17bc1e0 [shape=record,label="{if.then.41.exitStub}"];
+	Node0x17bc230 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x17bc230:s0 -> Node0x17bc280;
+	Node0x17bc230:s1 -> Node0x17bc190;
+	Node0x17bc280 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x17bc280:s0 -> Node0x17bc1e0;
+	Node0x17bc280:s1 -> Node0x17bc2d0;
+	Node0x17bc2d0 [shape=record,label="{it_for.inc}"];
+	Node0x17bc2d0 -> Node0x17bc230;
+}

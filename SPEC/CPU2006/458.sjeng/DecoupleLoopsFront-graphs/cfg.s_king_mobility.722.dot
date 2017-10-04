@@ -1,0 +1,14 @@
+digraph "CFG for 's_king_mobility' function" {
+	label="CFG for 's_king_mobility' function";
+
+	Node0xf1b470 [shape=record,label="{entry}"];
+	Node0xf1b470 -> Node0xf1b4c0;
+	Node0xf1b4c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xf1b4c0:s0 -> Node0xf1b510;
+	Node0xf1b4c0:s1 -> Node0xf1b560;
+	Node0xf1b510 [shape=record,label="{pd_for.body}"];
+	Node0xf1b510 -> Node0x1337a50;
+	Node0x1337a50 [shape=record,label="{it_for.body.split}"];
+	Node0x1337a50 -> Node0xf1b4c0;
+	Node0xf1b560 [shape=record,label="{for.end}"];
+}

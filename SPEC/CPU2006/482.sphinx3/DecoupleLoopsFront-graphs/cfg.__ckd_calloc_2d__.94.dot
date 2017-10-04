@@ -1,0 +1,16 @@
+digraph "CFG for '__ckd_calloc_2d__' function" {
+	label="CFG for '__ckd_calloc_2d__' function";
+
+	Node0xda69e0 [shape=record,label="{entry}"];
+	Node0xda69e0 -> Node0xda6a30;
+	Node0xda6a30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xda6a30:s0 -> Node0xda6a80;
+	Node0xda6a30:s1 -> Node0xda6ad0;
+	Node0xda6a80 [shape=record,label="{pd_for.body}"];
+	Node0xda6a80 -> Node0x14308a0;
+	Node0x14308a0 [shape=record,label="{it_for.body.split1}"];
+	Node0x14308a0 -> Node0x1413a60;
+	Node0x1413a60 [shape=record,label="{pd_for.body.split}"];
+	Node0x1413a60 -> Node0xda6a30;
+	Node0xda6ad0 [shape=record,label="{for.end}"];
+}

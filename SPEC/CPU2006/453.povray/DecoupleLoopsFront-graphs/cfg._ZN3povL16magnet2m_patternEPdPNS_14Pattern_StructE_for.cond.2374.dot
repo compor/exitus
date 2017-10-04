@@ -1,0 +1,24 @@
+digraph "CFG for '_ZN3povL16magnet2m_patternEPdPNS_14Pattern_StructE_for.cond' function" {
+	label="CFG for '_ZN3povL16magnet2m_patternEPdPNS_14Pattern_StructE_for.cond' function";
+
+	Node0x299bff0 [shape=record,label="{newFuncRoot}"];
+	Node0x299bff0 -> Node0x299c130;
+	Node0x299c040 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x299c090 [shape=record,label="{for.body.if.then.76_crit_edge.exitStub}"];
+	Node0x299c0e0 [shape=record,label="{lor.lhs.false.if.then.76_crit_edge.exitStub}"];
+	Node0x299c130 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x299c130:s0 -> Node0x299c180;
+	Node0x299c130:s1 -> Node0x299c040;
+	Node0x299c180 [shape=record,label="{it_for.body}"];
+	Node0x299c180 -> Node0x38efd10;
+	Node0x38efd10 [shape=record,label="{pd_for.body.split1}"];
+	Node0x38efd10 -> Node0x39165c0;
+	Node0x39165c0 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x39165c0:s0 -> Node0x299c090;
+	Node0x39165c0:s1 -> Node0x299c1d0;
+	Node0x299c1d0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x299c1d0:s0 -> Node0x299c0e0;
+	Node0x299c1d0:s1 -> Node0x299c220;
+	Node0x299c220 [shape=record,label="{it_for.inc}"];
+	Node0x299c220 -> Node0x299c130;
+}

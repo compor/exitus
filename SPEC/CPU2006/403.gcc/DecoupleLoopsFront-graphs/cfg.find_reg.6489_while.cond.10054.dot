@@ -1,0 +1,16 @@
+digraph "CFG for 'find_reg.6489_while.cond' function" {
+	label="CFG for 'find_reg.6489_while.cond' function";
+
+	Node0xc00f7e0 [shape=record,label="{newFuncRoot}"];
+	Node0xc00f7e0 -> Node0xc00f8d0;
+	Node0xc00f830 [shape=record,label="{for.cond.277.preheader.loopexit.exitStub}"];
+	Node0xc00f880 [shape=record,label="{while.end.exitStub}"];
+	Node0xc00f8d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc00f8d0:s0 -> Node0xc00f830;
+	Node0xc00f8d0:s1 -> Node0xc00f920;
+	Node0xc00f920 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xc00f920:s0 -> Node0xc00f970;
+	Node0xc00f920:s1 -> Node0xc00f880;
+	Node0xc00f970 [shape=record,label="{it_while.body}"];
+	Node0xc00f970 -> Node0xc00f8d0;
+}

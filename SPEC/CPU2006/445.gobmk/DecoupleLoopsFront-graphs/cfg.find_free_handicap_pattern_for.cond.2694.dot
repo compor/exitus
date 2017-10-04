@@ -1,0 +1,19 @@
+digraph "CFG for 'find_free_handicap_pattern_for.cond' function" {
+	label="CFG for 'find_free_handicap_pattern_for.cond' function";
+
+	Node0x476d6b0 [shape=record,label="{newFuncRoot}"];
+	Node0x476d6b0 -> Node0x476dba0;
+	Node0x476d700 [shape=record,label="{for.cond.8.preheader.exitStub}"];
+	Node0x476dba0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x476dba0:s0 -> Node0x476dbf0;
+	Node0x476dba0:s1 -> Node0x476d700;
+	Node0x476dbf0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x476dbf0:s0 -> Node0x476dc90;
+	Node0x476dbf0:s1 -> Node0x476dc40;
+	Node0x476dc40 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x476dc40 -> Node0x476dce0;
+	Node0x476dc90 [shape=record,label="{pd_if.then.3}"];
+	Node0x476dc90 -> Node0x476dce0;
+	Node0x476dce0 [shape=record,label="{it_for.inc}"];
+	Node0x476dce0 -> Node0x476dba0;
+}

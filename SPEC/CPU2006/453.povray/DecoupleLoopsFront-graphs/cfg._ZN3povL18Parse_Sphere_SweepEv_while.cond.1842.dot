@@ -1,0 +1,25 @@
+digraph "CFG for '_ZN3povL18Parse_Sphere_SweepEv_while.cond' function" {
+	label="CFG for '_ZN3povL18Parse_Sphere_SweepEv_while.cond' function";
+
+	Node0x2764f20 [shape=record,label="{newFuncRoot}"];
+	Node0x2764f20 -> Node0x2764fc0;
+	Node0x2764f70 [shape=record,label="{while.end.exitStub}"];
+	Node0x2764fc0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2764fc0:s0 -> Node0x2765010;
+	Node0x2764fc0:s1 -> Node0x2764f70;
+	Node0x2765010 [shape=record,label="{pd_while.body|{<s0>def|<s1>305|<s2>307|<s3>498}}"];
+	Node0x2765010:s0 -> Node0x2765150;
+	Node0x2765010:s1 -> Node0x2765100;
+	Node0x2765010:s2 -> Node0x27650b0;
+	Node0x2765010:s3 -> Node0x2765060;
+	Node0x2765060 [shape=record,label="{pd_sw.bb.4}"];
+	Node0x2765060 -> Node0x27651a0;
+	Node0x27650b0 [shape=record,label="{pd_sw.bb.2}"];
+	Node0x27650b0 -> Node0x27651a0;
+	Node0x2765100 [shape=record,label="{pd_sw.bb}"];
+	Node0x2765100 -> Node0x27651a0;
+	Node0x2765150 [shape=record,label="{pd_sw.default}"];
+	Node0x2765150 -> Node0x27651a0;
+	Node0x27651a0 [shape=record,label="{it_while.cond.backedge}"];
+	Node0x27651a0 -> Node0x2764fc0;
+}

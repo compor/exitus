@@ -1,0 +1,19 @@
+digraph "CFG for 'set_proof_and_disproof_numbers_for.cond' function" {
+	label="CFG for 'set_proof_and_disproof_numbers_for.cond' function";
+
+	Node0x10baeb0 [shape=record,label="{newFuncRoot}"];
+	Node0x10baeb0 -> Node0x10baf50;
+	Node0x10baf00 [shape=record,label="{for.end.exitStub}"];
+	Node0x10baf50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x10baf50:s0 -> Node0x10bafa0;
+	Node0x10baf50:s1 -> Node0x10baf00;
+	Node0x10bafa0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x10bafa0:s0 -> Node0x10bb040;
+	Node0x10bafa0:s1 -> Node0x10baff0;
+	Node0x10baff0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x10baff0 -> Node0x10bb090;
+	Node0x10bb040 [shape=record,label="{pd_if.then.15}"];
+	Node0x10bb040 -> Node0x10bb090;
+	Node0x10bb090 [shape=record,label="{it_for.inc}"];
+	Node0x10bb090 -> Node0x10baf50;
+}

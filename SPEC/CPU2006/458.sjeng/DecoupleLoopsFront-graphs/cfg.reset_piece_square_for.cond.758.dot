@@ -1,0 +1,19 @@
+digraph "CFG for 'reset_piece_square_for.cond' function" {
+	label="CFG for 'reset_piece_square_for.cond' function";
+
+	Node0x104ca00 [shape=record,label="{newFuncRoot}"];
+	Node0x104ca00 -> Node0x104caa0;
+	Node0x104ca50 [shape=record,label="{for.end.exitStub}"];
+	Node0x104caa0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x104caa0:s0 -> Node0x104caf0;
+	Node0x104caa0:s1 -> Node0x104ca50;
+	Node0x104caf0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x104caf0:s0 -> Node0x104cb90;
+	Node0x104caf0:s1 -> Node0x104cb40;
+	Node0x104cb40 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x104cb40 -> Node0x104cbe0;
+	Node0x104cb90 [shape=record,label="{pd_if.then}"];
+	Node0x104cb90 -> Node0x104cbe0;
+	Node0x104cbe0 [shape=record,label="{it_for.inc}"];
+	Node0x104cbe0 -> Node0x104caa0;
+}

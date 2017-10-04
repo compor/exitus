@@ -1,0 +1,14 @@
+digraph "CFG for 'Plan7ComlogAppend_for.cond' function" {
+	label="CFG for 'Plan7ComlogAppend_for.cond' function";
+
+	Node0x31c69e0 [shape=record,label="{newFuncRoot}"];
+	Node0x31c69e0 -> Node0x31c6a80;
+	Node0x31c6a30 [shape=record,label="{for.end.exitStub}"];
+	Node0x31c6a80 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x31c6a80:s0 -> Node0x31c6ad0;
+	Node0x31c6a80:s1 -> Node0x31c6a30;
+	Node0x31c6ad0 [shape=record,label="{pd_for.body}"];
+	Node0x31c6ad0 -> Node0x37beff0;
+	Node0x37beff0 [shape=record,label="{it_for.body.split}"];
+	Node0x37beff0 -> Node0x31c6a80;
+}

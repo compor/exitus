@@ -1,0 +1,14 @@
+digraph "CFG for 'dbxout_syms' function" {
+	label="CFG for 'dbxout_syms' function";
+
+	Node0x390aae0 [shape=record,label="{entry}"];
+	Node0x390aae0 -> Node0x390ab30;
+	Node0x390ab30 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x390ab30:s0 -> Node0x390ab80;
+	Node0x390ab30:s1 -> Node0x390abd0;
+	Node0x390ab80 [shape=record,label="{pd_while.body}"];
+	Node0x390ab80 -> Node0xd06a970;
+	Node0xd06a970 [shape=record,label="{it_while.body.split}"];
+	Node0xd06a970 -> Node0x390ab30;
+	Node0x390abd0 [shape=record,label="{while.end}"];
+}

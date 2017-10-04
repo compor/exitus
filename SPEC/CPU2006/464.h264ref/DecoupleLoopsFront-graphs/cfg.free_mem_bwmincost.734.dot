@@ -1,0 +1,35 @@
+digraph "CFG for 'free_mem_bwmincost' function" {
+	label="CFG for 'free_mem_bwmincost' function";
+
+	Node0x17ec160 [shape=record,label="{entry}"];
+	Node0x17ec160 -> Node0x17ec1b0;
+	Node0x17ec1b0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x17ec1b0:s0 -> Node0x17ec200;
+	Node0x17ec1b0:s1 -> Node0x17ecdb0;
+	Node0x17ec200 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x17ec200 -> Node0x17ec250;
+	Node0x17ec250 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x17ec250:s0 -> Node0x17ec2a0;
+	Node0x17ec250:s1 -> Node0x17ecd60;
+	Node0x17ec2a0 [shape=record,label="{pd_for.cond.5.preheader}"];
+	Node0x17ec2a0 -> Node0x17ec2f0;
+	Node0x17ec2f0 [shape=record,label="{pd_for.cond.5|{<s0>T|<s1>F}}"];
+	Node0x17ec2f0:s0 -> Node0x17ec340;
+	Node0x17ec2f0:s1 -> Node0x17ecd10;
+	Node0x17ec340 [shape=record,label="{pd_for.cond.8.preheader}"];
+	Node0x17ec340 -> Node0x17ec390;
+	Node0x17ec390 [shape=record,label="{pd_for.cond.8|{<s0>T|<s1>F}}"];
+	Node0x17ec390:s0 -> Node0x17ec3e0;
+	Node0x17ec390:s1 -> Node0x17ec430;
+	Node0x17ec3e0 [shape=record,label="{pd_for.body.10}"];
+	Node0x17ec3e0 -> Node0x17ec390;
+	Node0x17ec430 [shape=record,label="{pd_for.end}"];
+	Node0x17ec430 -> Node0x17ec2f0;
+	Node0x17ecd10 [shape=record,label="{pd_for.end.25}"];
+	Node0x17ecd10 -> Node0x17ec250;
+	Node0x17ecd60 [shape=record,label="{pd_for.end.32}"];
+	Node0x17ecd60 -> Node0x3155de0;
+	Node0x3155de0 [shape=record,label="{it_for.end.32.split}"];
+	Node0x3155de0 -> Node0x17ec1b0;
+	Node0x17ecdb0 [shape=record,label="{for.end.37}"];
+}

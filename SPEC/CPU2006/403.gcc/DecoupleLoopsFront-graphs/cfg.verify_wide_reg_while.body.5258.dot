@@ -1,0 +1,25 @@
+digraph "CFG for 'verify_wide_reg_while.body' function" {
+	label="CFG for 'verify_wide_reg_while.body' function";
+
+	Node0xaf3b0f0 [shape=record,label="{newFuncRoot}"];
+	Node0xaf3b0f0 -> Node0xaf3b640;
+	Node0xaf3b140 [shape=record,label="{if.then.7.exitStub}"];
+	Node0xaf3b190 [shape=record,label="{if.then.while.end_crit_edge.exitStub}"];
+	Node0xaf3b1e0 [shape=record,label="{if.end.12.while.end_crit_edge.exitStub}"];
+	Node0xaf3b640 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xaf3b640:s0 -> Node0xaf3b6e0;
+	Node0xaf3b640:s1 -> Node0xaf3b690;
+	Node0xaf3b690 [shape=record,label="{pd_while.body.if.end.12_crit_edge}"];
+	Node0xaf3b690 -> Node0xaf3b780;
+	Node0xaf3b6e0 [shape=record,label="{it_if.then|{<s0>def|<s1>1|<s2>2}}"];
+	Node0xaf3b6e0:s0 -> Node0xaf3b730;
+	Node0xaf3b6e0:s1 -> Node0xaf3b140;
+	Node0xaf3b6e0:s2 -> Node0xaf3b190;
+	Node0xaf3b730 [shape=record,label="{pd_if.then.if.end.12_crit_edge}"];
+	Node0xaf3b730 -> Node0xaf3b780;
+	Node0xaf3b780 [shape=record,label="{it_if.end.12|{<s0>T|<s1>F}}"];
+	Node0xaf3b780:s0 -> Node0xaf3b1e0;
+	Node0xaf3b780:s1 -> Node0xaf3b7d0;
+	Node0xaf3b7d0 [shape=record,label="{it_if.end.16}"];
+	Node0xaf3b7d0 -> Node0xaf3b640;
+}

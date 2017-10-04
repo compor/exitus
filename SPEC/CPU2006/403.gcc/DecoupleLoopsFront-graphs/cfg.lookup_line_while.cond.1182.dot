@@ -1,0 +1,12 @@
+digraph "CFG for 'lookup_line_while.cond' function" {
+	label="CFG for 'lookup_line_while.cond' function";
+
+	Node0xa2de610 [shape=record,label="{newFuncRoot}"];
+	Node0xa2de610 -> Node0xa2de6b0;
+	Node0xa2de660 [shape=record,label="{while.end.exitStub}"];
+	Node0xa2de6b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa2de6b0:s0 -> Node0xa2de700;
+	Node0xa2de6b0:s1 -> Node0xa2de660;
+	Node0xa2de700 [shape=record,label="{it_while.body}"];
+	Node0xa2de700 -> Node0xa2de6b0;
+}

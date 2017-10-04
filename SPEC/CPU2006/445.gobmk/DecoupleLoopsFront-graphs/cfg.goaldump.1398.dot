@@ -1,0 +1,24 @@
+digraph "CFG for 'goaldump' function" {
+	label="CFG for 'goaldump' function";
+
+	Node0x30fb8f0 [shape=record,label="{entry}"];
+	Node0x30fb8f0 -> Node0x30fbcb0;
+	Node0x30fbcb0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x30fbcb0:s0 -> Node0x30fbd00;
+	Node0x30fbcb0:s1 -> Node0x30fbee0;
+	Node0x30fbd00 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x30fbd00:s0 -> Node0x30fbda0;
+	Node0x30fbd00:s1 -> Node0x30fbd50;
+	Node0x30fbd50 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x30fbd50 -> Node0x30fbe90;
+	Node0x30fbda0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x30fbda0:s0 -> Node0x30fbe40;
+	Node0x30fbda0:s1 -> Node0x30fbdf0;
+	Node0x30fbdf0 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x30fbdf0 -> Node0x30fbe90;
+	Node0x30fbe40 [shape=record,label="{pd_if.then}"];
+	Node0x30fbe40 -> Node0x30fbe90;
+	Node0x30fbe90 [shape=record,label="{it_for.inc}"];
+	Node0x30fbe90 -> Node0x30fbcb0;
+	Node0x30fbee0 [shape=record,label="{for.end}"];
+}

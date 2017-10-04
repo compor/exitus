@@ -1,0 +1,19 @@
+digraph "CFG for 'emit_queue' function" {
+	label="CFG for 'emit_queue' function";
+
+	Node0x41c3da0 [shape=record,label="{entry}"];
+	Node0x41c3da0 -> Node0x41c3df0;
+	Node0x41c3df0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x41c3df0:s0 -> Node0x41c4250;
+	Node0x41c3df0:s1 -> Node0x41c4390;
+	Node0x41c4250 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x41c4250:s0 -> Node0x41c42a0;
+	Node0x41c4250:s1 -> Node0x41c42f0;
+	Node0x41c42a0 [shape=record,label="{pd_if.then}"];
+	Node0x41c42a0 -> Node0x41c4340;
+	Node0x41c42f0 [shape=record,label="{pd_if.else}"];
+	Node0x41c42f0 -> Node0x41c4340;
+	Node0x41c4340 [shape=record,label="{pd_if.end}"];
+	Node0x41c4340 -> Node0x41c3df0;
+	Node0x41c4390 [shape=record,label="{while.end}"];
+}

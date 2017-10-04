@@ -1,0 +1,19 @@
+digraph "CFG for 'PerlIO_openn_while.cond' function" {
+	label="CFG for 'PerlIO_openn_while.cond' function";
+
+	Node0x4d99360 [shape=record,label="{newFuncRoot}"];
+	Node0x4d99360 -> Node0x4d9e1a0;
+	Node0x4d9e150 [shape=record,label="{if.end.32.loopexit.exitStub}"];
+	Node0x4d9e1a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d9e1a0:s0 -> Node0x4d9e1f0;
+	Node0x4d9e1a0:s1 -> Node0x4d9e150;
+	Node0x4d9e1f0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x4d9e1f0:s0 -> Node0x4d9e290;
+	Node0x4d9e1f0:s1 -> Node0x4d9e240;
+	Node0x4d9e240 [shape=record,label="{pd_while.body.cond.end_crit_edge}"];
+	Node0x4d9e240 -> Node0x4d9e2e0;
+	Node0x4d9e290 [shape=record,label="{pd_cond.true}"];
+	Node0x4d9e290 -> Node0x4d9e2e0;
+	Node0x4d9e2e0 [shape=record,label="{pd_cond.end}"];
+	Node0x4d9e2e0 -> Node0x4d9e1a0;
+}

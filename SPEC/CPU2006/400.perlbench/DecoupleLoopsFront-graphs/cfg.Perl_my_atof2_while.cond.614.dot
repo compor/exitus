@@ -1,0 +1,36 @@
+digraph "CFG for 'Perl_my_atof2_while.cond' function" {
+	label="CFG for 'Perl_my_atof2_while.cond' function";
+
+	Node0x4be92d0 [shape=record,label="{newFuncRoot}"];
+	Node0x4be92d0 -> Node0x4befae0;
+	Node0x4befa90 [shape=record,label="{while.end.exitStub}"];
+	Node0x4befae0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4befae0:s0 -> Node0x4bf0f00;
+	Node0x4befae0:s1 -> Node0x4befb30;
+	Node0x4befb30 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4befb30:s0 -> Node0x4bf0eb0;
+	Node0x4befb30:s1 -> Node0x4befb80;
+	Node0x4befb80 [shape=record,label="{it_lor.lhs.false.6|{<s0>T|<s1>F}}"];
+	Node0x4befb80:s0 -> Node0x4bf0e60;
+	Node0x4befb80:s1 -> Node0x4befbd0;
+	Node0x4befbd0 [shape=record,label="{it_lor.lhs.false.10|{<s0>T|<s1>F}}"];
+	Node0x4befbd0:s0 -> Node0x4bf0e10;
+	Node0x4befbd0:s1 -> Node0x4befc20;
+	Node0x4befc20 [shape=record,label="{it_lor.rhs}"];
+	Node0x4befc20 -> Node0x4bf0f50;
+	Node0x4bf0e10 [shape=record,label="{it_lor.lhs.false.10.lor.end_crit_edge}"];
+	Node0x4bf0e10 -> Node0x4bf0f50;
+	Node0x4bf0e60 [shape=record,label="{it_lor.lhs.false.6.lor.end_crit_edge}"];
+	Node0x4bf0e60 -> Node0x4bf0f50;
+	Node0x4bf0eb0 [shape=record,label="{it_lor.lhs.false.lor.end_crit_edge}"];
+	Node0x4bf0eb0 -> Node0x4bf0f50;
+	Node0x4bf0f00 [shape=record,label="{it_while.cond.lor.end_crit_edge}"];
+	Node0x4bf0f00 -> Node0x4bf0f50;
+	Node0x4bf0f50 [shape=record,label="{pd_lor.end}"];
+	Node0x4bf0f50 -> Node0x659ed10;
+	Node0x659ed10 [shape=record,label="{it_lor.end.split|{<s0>T|<s1>F}}"];
+	Node0x659ed10:s0 -> Node0x4bf0fa0;
+	Node0x659ed10:s1 -> Node0x4befa90;
+	Node0x4bf0fa0 [shape=record,label="{pd_while.body}"];
+	Node0x4bf0fa0 -> Node0x4befae0;
+}

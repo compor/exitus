@@ -1,0 +1,29 @@
+digraph "CFG for 'cselib_invalidate_rtx_while.cond' function" {
+	label="CFG for 'cselib_invalidate_rtx_while.cond' function";
+
+	Node0xaa1e880 [shape=record,label="{newFuncRoot}"];
+	Node0xaa1e880 -> Node0xaa1e920;
+	Node0xaa1e8d0 [shape=record,label="{while.end.exitStub}"];
+	Node0xaa1e920 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xaa1e920:s0 -> Node0xaa1eb50;
+	Node0xaa1e920:s1 -> Node0xaa1e970;
+	Node0xaa1e970 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xaa1e970:s0 -> Node0xaa1eb00;
+	Node0xaa1e970:s1 -> Node0xaa1e9c0;
+	Node0xaa1e9c0 [shape=record,label="{it_lor.lhs.false.4|{<s0>T|<s1>F}}"];
+	Node0xaa1e9c0:s0 -> Node0xaa1eab0;
+	Node0xaa1e9c0:s1 -> Node0xaa1ea10;
+	Node0xaa1ea10 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0xaa1ea10:s0 -> Node0xaa1ea60;
+	Node0xaa1ea10:s1 -> Node0xaa1e8d0;
+	Node0xaa1ea60 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0xaa1ea60 -> Node0xaa1eba0;
+	Node0xaa1eab0 [shape=record,label="{pd_lor.lhs.false.4.while.body_crit_edge}"];
+	Node0xaa1eab0 -> Node0xaa1eba0;
+	Node0xaa1eb00 [shape=record,label="{pd_lor.lhs.false.while.body_crit_edge}"];
+	Node0xaa1eb00 -> Node0xaa1eba0;
+	Node0xaa1eb50 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0xaa1eb50 -> Node0xaa1eba0;
+	Node0xaa1eba0 [shape=record,label="{it_while.body}"];
+	Node0xaa1eba0 -> Node0xaa1e920;
+}

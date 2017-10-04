@@ -1,0 +1,14 @@
+digraph "CFG for 'size_of_locs' function" {
+	label="CFG for 'size_of_locs' function";
+
+	Node0x3d67f20 [shape=record,label="{entry}"];
+	Node0x3d67f20 -> Node0x3d67f70;
+	Node0x3d67f70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3d67f70:s0 -> Node0x3d67fc0;
+	Node0x3d67f70:s1 -> Node0x3d68010;
+	Node0x3d67fc0 [shape=record,label="{pd_for.body}"];
+	Node0x3d67fc0 -> Node0xc8e30f0;
+	Node0xc8e30f0 [shape=record,label="{it_for.body.split}"];
+	Node0xc8e30f0 -> Node0x3d67f70;
+	Node0x3d68010 [shape=record,label="{for.end}"];
+}

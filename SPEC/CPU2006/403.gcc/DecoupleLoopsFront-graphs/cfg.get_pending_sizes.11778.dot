@@ -1,0 +1,14 @@
+digraph "CFG for 'get_pending_sizes' function" {
+	label="CFG for 'get_pending_sizes' function";
+
+	Node0x93f1470 [shape=record,label="{entry}"];
+	Node0x93f1470 -> Node0x93f14c0;
+	Node0x93f14c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x93f14c0:s0 -> Node0x93f1510;
+	Node0x93f14c0:s1 -> Node0x93f1560;
+	Node0x93f1510 [shape=record,label="{pd_for.body}"];
+	Node0x93f1510 -> Node0xed1a400;
+	Node0xed1a400 [shape=record,label="{it_for.body.split}"];
+	Node0xed1a400 -> Node0x93f14c0;
+	Node0x93f1560 [shape=record,label="{for.end}"];
+}

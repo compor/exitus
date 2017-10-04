@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN3povL17filter_shadow_rayEPNS_10istk_entryEPNS_10Ray_StructEPf_for.cond' function" {
+	label="CFG for '_ZN3povL17filter_shadow_rayEPNS_10istk_entryEPNS_10Ray_StructEPf_for.cond' function";
+
+	Node0x25ccfc0 [shape=record,label="{newFuncRoot}"];
+	Node0x25ccfc0 -> Node0x25cd060;
+	Node0x25cd010 [shape=record,label="{for.end.exitStub}"];
+	Node0x25cd060 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x25cd060:s0 -> Node0x25cd0b0;
+	Node0x25cd060:s1 -> Node0x25cd010;
+	Node0x25cd0b0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x25cd0b0:s0 -> Node0x25cd150;
+	Node0x25cd0b0:s1 -> Node0x25cd100;
+	Node0x25cd100 [shape=record,label="{pd_if.end.102}"];
+	Node0x25cd100 -> Node0x25cd1a0;
+	Node0x25cd150 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x25cd150 -> Node0x25cd1a0;
+	Node0x25cd1a0 [shape=record,label="{it_for.inc}"];
+	Node0x25cd1a0 -> Node0x25cd060;
+}

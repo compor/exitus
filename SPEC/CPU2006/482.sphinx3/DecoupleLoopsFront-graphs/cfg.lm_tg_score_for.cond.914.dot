@@ -1,0 +1,16 @@
+digraph "CFG for 'lm_tg_score_for.cond' function" {
+	label="CFG for 'lm_tg_score_for.cond' function";
+
+	Node0x128ab70 [shape=record,label="{newFuncRoot}"];
+	Node0x128ab70 -> Node0x128ac60;
+	Node0x128abc0 [shape=record,label="{if.then.82.loopexit.exitStub}"];
+	Node0x128ac10 [shape=record,label="{for.end.exitStub}"];
+	Node0x128ac60 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x128ac60:s0 -> Node0x128abc0;
+	Node0x128ac60:s1 -> Node0x128acb0;
+	Node0x128acb0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x128acb0:s0 -> Node0x128ac10;
+	Node0x128acb0:s1 -> Node0x128ad00;
+	Node0x128ad00 [shape=record,label="{it_for.inc}"];
+	Node0x128ad00 -> Node0x128ac60;
+}

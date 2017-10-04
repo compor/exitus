@@ -1,0 +1,21 @@
+digraph "CFG for 'Perl_sv_2pv_flags_while.cond' function" {
+	label="CFG for 'Perl_sv_2pv_flags_while.cond' function";
+
+	Node0x543a110 [shape=record,label="{newFuncRoot}"];
+	Node0x543a110 -> Node0x547a9c0;
+	Node0x547a970 [shape=record,label="{while.end.exitStub}"];
+	Node0x547a9c0 [shape=record,label="{pd_while.cond}"];
+	Node0x547a9c0 -> Node0x6eb7da0;
+	Node0x6eb7da0 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0x6eb7da0:s0 -> Node0x547aa10;
+	Node0x6eb7da0:s1 -> Node0x547a970;
+	Node0x547aa10 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x547aa10:s0 -> Node0x547aab0;
+	Node0x547aa10:s1 -> Node0x547aa60;
+	Node0x547aa60 [shape=record,label="{pd_if.else.137}"];
+	Node0x547aa60 -> Node0x547ab00;
+	Node0x547aab0 [shape=record,label="{pd_if.then.135}"];
+	Node0x547aab0 -> Node0x547ab00;
+	Node0x547ab00 [shape=record,label="{pd_if.end.140}"];
+	Node0x547ab00 -> Node0x547a9c0;
+}

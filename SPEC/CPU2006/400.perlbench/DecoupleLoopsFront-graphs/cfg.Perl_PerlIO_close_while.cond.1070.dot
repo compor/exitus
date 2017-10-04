@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_PerlIO_close_while.cond' function" {
+	label="CFG for 'Perl_PerlIO_close_while.cond' function";
+
+	Node0x4d80bd0 [shape=record,label="{newFuncRoot}"];
+	Node0x4d80bd0 -> Node0x4d81060;
+	Node0x4d80fc0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x4d81010 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x4d81060 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d81060:s0 -> Node0x4d810b0;
+	Node0x4d81060:s1 -> Node0x4d80fc0;
+	Node0x4d810b0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x4d810b0:s0 -> Node0x4d81100;
+	Node0x4d810b0:s1 -> Node0x4d81010;
+	Node0x4d81100 [shape=record,label="{pd_while.body}"];
+	Node0x4d81100 -> Node0x4d81060;
+}

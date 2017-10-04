@@ -1,0 +1,14 @@
+digraph "CFG for 'compute_section_prefix' function" {
+	label="CFG for 'compute_section_prefix' function";
+
+	Node0x3d76840 [shape=record,label="{entry}"];
+	Node0x3d76840 -> Node0x3d93d50;
+	Node0x3d93d50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3d93d50:s0 -> Node0x3d93da0;
+	Node0x3d93d50:s1 -> Node0x3d93df0;
+	Node0x3d93da0 [shape=record,label="{pd_for.body}"];
+	Node0x3d93da0 -> Node0xcebc3b0;
+	Node0xcebc3b0 [shape=record,label="{it_for.body.split}"];
+	Node0xcebc3b0 -> Node0x3d93d50;
+	Node0x3d93df0 [shape=record,label="{for.end}"];
+}

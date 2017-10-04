@@ -1,0 +1,24 @@
+digraph "CFG for 'readGCGdata_while.cond' function" {
+	label="CFG for 'readGCGdata_while.cond' function";
+
+	Node0x34813e0 [shape=record,label="{newFuncRoot}"];
+	Node0x34813e0 -> Node0x3481860;
+	Node0x3481810 [shape=record,label="{while.end.exitStub}"];
+	Node0x3481860 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3481860:s0 -> Node0x34819a0;
+	Node0x3481860:s1 -> Node0x34818b0;
+	Node0x34818b0 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x34818b0:s0 -> Node0x3481950;
+	Node0x34818b0:s1 -> Node0x3481900;
+	Node0x3481900 [shape=record,label="{it_lor.rhs.lor.end_crit_edge}"];
+	Node0x3481900 -> Node0x34819f0;
+	Node0x3481950 [shape=record,label="{it_land.rhs}"];
+	Node0x3481950 -> Node0x34819f0;
+	Node0x34819a0 [shape=record,label="{it_while.cond.lor.end_crit_edge}"];
+	Node0x34819a0 -> Node0x34819f0;
+	Node0x34819f0 [shape=record,label="{it_lor.end|{<s0>T|<s1>F}}"];
+	Node0x34819f0:s0 -> Node0x3481a40;
+	Node0x34819f0:s1 -> Node0x3481810;
+	Node0x3481a40 [shape=record,label="{pd_while.body}"];
+	Node0x3481a40 -> Node0x3481860;
+}

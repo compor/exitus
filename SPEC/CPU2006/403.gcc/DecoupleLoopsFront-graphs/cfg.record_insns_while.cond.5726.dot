@@ -1,0 +1,12 @@
+digraph "CFG for 'record_insns_while.cond' function" {
+	label="CFG for 'record_insns_while.cond' function";
+
+	Node0xb0b5520 [shape=record,label="{newFuncRoot}"];
+	Node0xb0b5520 -> Node0xb0b55c0;
+	Node0xb0b5570 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0xb0b55c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb0b55c0:s0 -> Node0xb0b5610;
+	Node0xb0b55c0:s1 -> Node0xb0b5570;
+	Node0xb0b5610 [shape=record,label="{pd_while.body}"];
+	Node0xb0b5610 -> Node0xb0b55c0;
+}

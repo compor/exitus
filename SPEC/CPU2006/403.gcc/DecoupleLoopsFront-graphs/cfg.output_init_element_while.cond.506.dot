@@ -1,0 +1,20 @@
+digraph "CFG for 'output_init_element_while.cond' function" {
+	label="CFG for 'output_init_element_while.cond' function";
+
+	Node0xa0fd590 [shape=record,label="{newFuncRoot}"];
+	Node0xa0fd590 -> Node0xa102620;
+	Node0xa102530 [shape=record,label="{while.cond.if.end.254.loopexit_crit_edge.exitStub}"];
+	Node0xa102580 [shape=record,label="{land.lhs.true.233.if.end.254.loopexit_crit_edge.exitStub}"];
+	Node0xa1025d0 [shape=record,label="{land.rhs.if.end.254.loopexit_crit_edge.exitStub}"];
+	Node0xa102620 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa102620:s0 -> Node0xa102670;
+	Node0xa102620:s1 -> Node0xa102530;
+	Node0xa102670 [shape=record,label="{it_land.lhs.true.233|{<s0>T|<s1>F}}"];
+	Node0xa102670:s0 -> Node0xa1026c0;
+	Node0xa102670:s1 -> Node0xa102580;
+	Node0xa1026c0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xa1026c0:s0 -> Node0xa102710;
+	Node0xa1026c0:s1 -> Node0xa1025d0;
+	Node0xa102710 [shape=record,label="{pd_while.body}"];
+	Node0xa102710 -> Node0xa102620;
+}

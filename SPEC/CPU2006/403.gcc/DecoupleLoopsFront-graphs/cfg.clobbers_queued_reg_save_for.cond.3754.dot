@@ -1,0 +1,16 @@
+digraph "CFG for 'clobbers_queued_reg_save_for.cond' function" {
+	label="CFG for 'clobbers_queued_reg_save_for.cond' function";
+
+	Node0xabaf3a0 [shape=record,label="{newFuncRoot}"];
+	Node0xabaf3a0 -> Node0xabaf490;
+	Node0xabaf3f0 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0xabaf440 [shape=record,label="{for.body.return_crit_edge.exitStub}"];
+	Node0xabaf490 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xabaf490:s0 -> Node0xabaf4e0;
+	Node0xabaf490:s1 -> Node0xabaf3f0;
+	Node0xabaf4e0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xabaf4e0:s0 -> Node0xabaf440;
+	Node0xabaf4e0:s1 -> Node0xabaf530;
+	Node0xabaf530 [shape=record,label="{it_for.inc}"];
+	Node0xabaf530 -> Node0xabaf490;
+}

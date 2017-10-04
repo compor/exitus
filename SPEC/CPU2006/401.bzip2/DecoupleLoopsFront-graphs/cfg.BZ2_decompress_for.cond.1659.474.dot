@@ -1,0 +1,35 @@
+digraph "CFG for 'BZ2_decompress_for.cond.1659' function" {
+	label="CFG for 'BZ2_decompress_for.cond.1659' function";
+
+	Node0x1981ac0 [shape=record,label="{newFuncRoot}"];
+	Node0x1981ac0 -> Node0x1981b60;
+	Node0x1981b10 [shape=record,label="{for.end.1719.exitStub}"];
+	Node0x1981b60 [shape=record,label="{it_for.cond.1659|{<s0>T|<s1>F}}"];
+	Node0x1981b60:s0 -> Node0x1981bb0;
+	Node0x1981b60:s1 -> Node0x1981b10;
+	Node0x1981bb0 [shape=record,label="{pd_for.cond.1663.preheader}"];
+	Node0x1981bb0 -> Node0x1981c00;
+	Node0x1981c00 [shape=record,label="{pd_for.cond.1663|{<s0>T|<s1>F}}"];
+	Node0x1981c00:s0 -> Node0x1981ca0;
+	Node0x1981c00:s1 -> Node0x1981c50;
+	Node0x1981c50 [shape=record,label="{pd_for.end.1701}"];
+	Node0x1981c50 -> Node0x1a422d0;
+	Node0x1a422d0 [shape=record,label="{it_for.end.1701.split}"];
+	Node0x1a422d0 -> Node0x1981b60;
+	Node0x1981ca0 [shape=record,label="{pd_for.body.1666|{<s0>T|<s1>F}}"];
+	Node0x1981ca0:s0 -> Node0x1981d40;
+	Node0x1981ca0:s1 -> Node0x1981cf0;
+	Node0x1981cf0 [shape=record,label="{pd_for.body.1666.if.end.1682_crit_edge}"];
+	Node0x1981cf0 -> Node0x1981d90;
+	Node0x1981d40 [shape=record,label="{pd_if.then.1675}"];
+	Node0x1981d40 -> Node0x1981d90;
+	Node0x1981d90 [shape=record,label="{pd_if.end.1682|{<s0>T|<s1>F}}"];
+	Node0x1981d90:s0 -> Node0x1981e30;
+	Node0x1981d90:s1 -> Node0x1981de0;
+	Node0x1981de0 [shape=record,label="{pd_if.end.1682.for.inc.1699_crit_edge}"];
+	Node0x1981de0 -> Node0x1981e80;
+	Node0x1981e30 [shape=record,label="{pd_if.then.1691}"];
+	Node0x1981e30 -> Node0x1981e80;
+	Node0x1981e80 [shape=record,label="{pd_for.inc.1699}"];
+	Node0x1981e80 -> Node0x1981c00;
+}

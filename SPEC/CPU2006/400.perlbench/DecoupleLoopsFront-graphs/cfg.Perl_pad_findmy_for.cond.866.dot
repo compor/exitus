@@ -1,0 +1,45 @@
+digraph "CFG for 'Perl_pad_findmy_for.cond' function" {
+	label="CFG for 'Perl_pad_findmy_for.cond' function";
+
+	Node0x4cf14b0 [shape=record,label="{newFuncRoot}"];
+	Node0x4cf14b0 -> Node0x4cf1f50;
+	Node0x4cf1eb0 [shape=record,label="{for.end.exitStub}"];
+	Node0x4cf1f00 [shape=record,label="{if.then.14.exitStub}"];
+	Node0x4cf1f50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4cf1f50:s0 -> Node0x4cf1fa0;
+	Node0x4cf1f50:s1 -> Node0x4cf1eb0;
+	Node0x4cf1fa0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4cf1fa0:s0 -> Node0x4cf2360;
+	Node0x4cf1fa0:s1 -> Node0x4cf1ff0;
+	Node0x4cf1ff0 [shape=record,label="{it_lor.lhs.false.3|{<s0>T|<s1>F}}"];
+	Node0x4cf1ff0:s0 -> Node0x4cf2310;
+	Node0x4cf1ff0:s1 -> Node0x4cf2040;
+	Node0x4cf2040 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x4cf2040:s0 -> Node0x4cf22c0;
+	Node0x4cf2040:s1 -> Node0x4cf2090;
+	Node0x4cf2090 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x4cf2090:s0 -> Node0x4cf2130;
+	Node0x4cf2090:s1 -> Node0x4cf20e0;
+	Node0x4cf20e0 [shape=record,label="{pd_if.else.if.else.16_crit_edge}"];
+	Node0x4cf20e0 -> Node0x4cf21d0;
+	Node0x4cf2130 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4cf2130:s0 -> Node0x4cf1f00;
+	Node0x4cf2130:s1 -> Node0x4cf2180;
+	Node0x4cf2180 [shape=record,label="{pd_land.lhs.true.if.else.16_crit_edge}"];
+	Node0x4cf2180 -> Node0x4cf21d0;
+	Node0x4cf21d0 [shape=record,label="{pd_if.else.16|{<s0>T|<s1>F}}"];
+	Node0x4cf21d0:s0 -> Node0x4cf2270;
+	Node0x4cf21d0:s1 -> Node0x4cf2220;
+	Node0x4cf2220 [shape=record,label="{pd_if.else.16.for.inc_crit_edge}"];
+	Node0x4cf2220 -> Node0x4cf23b0;
+	Node0x4cf2270 [shape=record,label="{pd_land.lhs.true.20}"];
+	Node0x4cf2270 -> Node0x4cf23b0;
+	Node0x4cf22c0 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0x4cf22c0 -> Node0x4cf23b0;
+	Node0x4cf2310 [shape=record,label="{pd_lor.lhs.false.3.for.inc_crit_edge}"];
+	Node0x4cf2310 -> Node0x4cf23b0;
+	Node0x4cf2360 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4cf2360 -> Node0x4cf23b0;
+	Node0x4cf23b0 [shape=record,label="{it_for.inc}"];
+	Node0x4cf23b0 -> Node0x4cf1f50;
+}

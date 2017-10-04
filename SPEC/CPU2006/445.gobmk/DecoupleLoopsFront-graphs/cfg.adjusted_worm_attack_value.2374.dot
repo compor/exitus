@@ -1,0 +1,41 @@
+digraph "CFG for 'adjusted_worm_attack_value' function" {
+	label="CFG for 'adjusted_worm_attack_value' function";
+
+	Node0x35f7dd0 [shape=record,label="{entry}"];
+	Node0x35f7dd0 -> Node0x35f7e20;
+	Node0x35f7e20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x35f7e20:s0 -> Node0x35f7e70;
+	Node0x35f7e20:s1 -> Node0x35f8280;
+	Node0x35f7e70 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x35f7e70:s0 -> Node0x35f7f10;
+	Node0x35f7e70:s1 -> Node0x35f7ec0;
+	Node0x35f7ec0 [shape=record,label="{pd_for.body.if.end.20_crit_edge}"];
+	Node0x35f7ec0 -> Node0x35f8000;
+	Node0x35f7f10 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x35f7f10:s0 -> Node0x35f7fb0;
+	Node0x35f7f10:s1 -> Node0x35f7f60;
+	Node0x35f7f60 [shape=record,label="{pd_land.lhs.true.if.end.20_crit_edge}"];
+	Node0x35f7f60 -> Node0x35f8000;
+	Node0x35f7fb0 [shape=record,label="{pd_if.then.15}"];
+	Node0x35f7fb0 -> Node0x35f8000;
+	Node0x35f8000 [shape=record,label="{pd_if.end.20|{<s0>T|<s1>F}}"];
+	Node0x35f8000:s0 -> Node0x35f80a0;
+	Node0x35f8000:s1 -> Node0x35f8050;
+	Node0x35f8050 [shape=record,label="{pd_if.end.20.for.inc_crit_edge}"];
+	Node0x35f8050 -> Node0x35f8230;
+	Node0x35f80a0 [shape=record,label="{pd_land.lhs.true.25|{<s0>T|<s1>F}}"];
+	Node0x35f80a0:s0 -> Node0x35f80f0;
+	Node0x35f80a0:s1 -> Node0x35f8140;
+	Node0x35f80f0 [shape=record,label="{pd_land.lhs.true.25.for.inc_crit_edge}"];
+	Node0x35f80f0 -> Node0x35f8230;
+	Node0x35f8140 [shape=record,label="{pd_land.lhs.true.27|{<s0>T|<s1>F}}"];
+	Node0x35f8140:s0 -> Node0x35f81e0;
+	Node0x35f8140:s1 -> Node0x35f8190;
+	Node0x35f8190 [shape=record,label="{pd_land.lhs.true.27.for.inc_crit_edge}"];
+	Node0x35f8190 -> Node0x35f8230;
+	Node0x35f81e0 [shape=record,label="{pd_if.then.33}"];
+	Node0x35f81e0 -> Node0x35f8230;
+	Node0x35f8230 [shape=record,label="{it_for.inc}"];
+	Node0x35f8230 -> Node0x35f7e20;
+	Node0x35f8280 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,26 @@
+digraph "CFG for '_ZN3povL16inside_bbox_treeEPNS_11Mesh_StructEPNS_10Ray_StructE' function" {
+	label="CFG for '_ZN3povL16inside_bbox_treeEPNS_11Mesh_StructEPNS_10Ray_StructE' function";
+
+	Node0x16bd080 [shape=record,label="{entry}"];
+	Node0x16bd080 -> Node0x16c8c60;
+	Node0x16c8c60 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x16c8c60 -> Node0x16c8d00;
+	Node0x16c8cb0 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x16c8cb0 -> Node0x16c8d00;
+	Node0x16c8d00 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x16c8d00:s0 -> Node0x16c8d50;
+	Node0x16c8d00:s1 -> Node0x16c8ee0;
+	Node0x16c8d50 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x16c8d50:s0 -> Node0x16c8da0;
+	Node0x16c8d50:s1 -> Node0x16c8e90;
+	Node0x16c8da0 [shape=record,label="{pd_for.cond.preheader}"];
+	Node0x16c8da0 -> Node0x16c8df0;
+	Node0x16c8df0 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x16c8df0:s0 -> Node0x16c8e40;
+	Node0x16c8df0:s1 -> Node0x16c8cb0;
+	Node0x16c8e40 [shape=record,label="{pd_for.body}"];
+	Node0x16c8e40 -> Node0x16c8df0;
+	Node0x16c8e90 [shape=record,label="{pd_if.else}"];
+	Node0x16c8e90 -> Node0x16c8c60;
+	Node0x16c8ee0 [shape=record,label="{while.end}"];
+}

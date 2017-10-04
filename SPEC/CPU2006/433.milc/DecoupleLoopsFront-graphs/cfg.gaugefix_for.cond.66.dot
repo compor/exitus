@@ -1,0 +1,34 @@
+digraph "CFG for 'gaugefix_for.cond' function" {
+	label="CFG for 'gaugefix_for.cond' function";
+
+	Node0x198f360 [shape=record,label="{newFuncRoot}"];
+	Node0x198f360 -> Node0x198f450;
+	Node0x198f3b0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x198f400 [shape=record,label="{if.then.for.end_crit_edge.exitStub}"];
+	Node0x198f450 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x198f450:s0 -> Node0x198f4a0;
+	Node0x198f450:s1 -> Node0x198f3b0;
+	Node0x198f4a0 [shape=record,label="{pd_for.body}"];
+	Node0x198f4a0 -> Node0x1c2e2c0;
+	Node0x1c2e2c0 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x1c2e2c0:s0 -> Node0x198f540;
+	Node0x1c2e2c0:s1 -> Node0x198f4f0;
+	Node0x198f4f0 [shape=record,label="{pd_for.body.if.end.4_crit_edge}"];
+	Node0x198f4f0 -> Node0x198f5e0;
+	Node0x198f540 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0x198f540:s0 -> Node0x198f400;
+	Node0x198f540:s1 -> Node0x198f590;
+	Node0x198f590 [shape=record,label="{pd_if.then.if.end.4_crit_edge}"];
+	Node0x198f590 -> Node0x198f5e0;
+	Node0x198f5e0 [shape=record,label="{it_if.end.4}"];
+	Node0x198f5e0 -> Node0x1bc59e0;
+	Node0x1bc59e0 [shape=record,label="{pd_if.end.4.split|{<s0>T|<s1>F}}"];
+	Node0x1bc59e0:s0 -> Node0x198f680;
+	Node0x1bc59e0:s1 -> Node0x198f630;
+	Node0x198f630 [shape=record,label="{pd_if.end.4.for.inc_crit_edge}"];
+	Node0x198f630 -> Node0x198f6d0;
+	Node0x198f680 [shape=record,label="{pd_if.then.6}"];
+	Node0x198f680 -> Node0x198f6d0;
+	Node0x198f6d0 [shape=record,label="{it_for.inc}"];
+	Node0x198f6d0 -> Node0x198f450;
+}

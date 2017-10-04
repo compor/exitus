@@ -1,0 +1,36 @@
+digraph "CFG for 'PostalCode' function" {
+	label="CFG for 'PostalCode' function";
+
+	Node0x2b13540 [shape=record,label="{entry}"];
+	Node0x2b13540 -> Node0x2b13590;
+	Node0x2b13590 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2b13590:s0 -> Node0x2b135e0;
+	Node0x2b13590:s1 -> Node0x2b17c00;
+	Node0x2b135e0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2b135e0:s0 -> Node0x2af51b0;
+	Node0x2b135e0:s1 -> Node0x2af5200;
+	Node0x2af51b0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x2af51b0 -> Node0x2b17bb0;
+	Node0x2af5200 [shape=record,label="{pd_if.end|{<s0>def|<s1>1|<s2>3|<s3>5|<s4>8|<s5>10}}"];
+	Node0x2af5200:s0 -> Node0x2af5250;
+	Node0x2af5200:s1 -> Node0x2af52a0;
+	Node0x2af5200:s2 -> Node0x2af52f0;
+	Node0x2af5200:s3 -> Node0x2af5340;
+	Node0x2af5200:s4 -> Node0x2b17b10;
+	Node0x2af5200:s5 -> Node0x2b17b60;
+	Node0x2af5250 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0x2af5250 -> Node0x2b17bb0;
+	Node0x2af52a0 [shape=record,label="{pd_sw.bb}"];
+	Node0x2af52a0 -> Node0x2b17bb0;
+	Node0x2af52f0 [shape=record,label="{pd_sw.bb.16}"];
+	Node0x2af52f0 -> Node0x2b17bb0;
+	Node0x2af5340 [shape=record,label="{pd_sw.bb.25}"];
+	Node0x2af5340 -> Node0x2b17bb0;
+	Node0x2b17b10 [shape=record,label="{pd_sw.bb.33}"];
+	Node0x2b17b10 -> Node0x2b17bb0;
+	Node0x2b17b60 [shape=record,label="{pd_sw.bb.42}"];
+	Node0x2b17b60 -> Node0x2b17bb0;
+	Node0x2b17bb0 [shape=record,label="{it_for.inc}"];
+	Node0x2b17bb0 -> Node0x2b13590;
+	Node0x2b17c00 [shape=record,label="{for.end}"];
+}

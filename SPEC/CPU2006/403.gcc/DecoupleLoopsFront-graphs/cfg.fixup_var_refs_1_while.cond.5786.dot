@@ -1,0 +1,29 @@
+digraph "CFG for 'fixup_var_refs_1_while.cond' function" {
+	label="CFG for 'fixup_var_refs_1_while.cond' function";
+
+	Node0xb0e53a0 [shape=record,label="{newFuncRoot}"];
+	Node0xb0e53a0 -> Node0xb0e5440;
+	Node0xb0e53f0 [shape=record,label="{while.end.exitStub}"];
+	Node0xb0e5440 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb0e5440:s0 -> Node0xb0e5670;
+	Node0xb0e5440:s1 -> Node0xb0e5490;
+	Node0xb0e5490 [shape=record,label="{it_lor.lhs.false.526|{<s0>T|<s1>F}}"];
+	Node0xb0e5490:s0 -> Node0xb0e5620;
+	Node0xb0e5490:s1 -> Node0xb0e54e0;
+	Node0xb0e54e0 [shape=record,label="{it_lor.lhs.false.531|{<s0>T|<s1>F}}"];
+	Node0xb0e54e0:s0 -> Node0xb0e55d0;
+	Node0xb0e54e0:s1 -> Node0xb0e5530;
+	Node0xb0e5530 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0xb0e5530:s0 -> Node0xb0e5580;
+	Node0xb0e5530:s1 -> Node0xb0e53f0;
+	Node0xb0e5580 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0xb0e5580 -> Node0xb0e56c0;
+	Node0xb0e55d0 [shape=record,label="{pd_lor.lhs.false.531.while.body_crit_edge}"];
+	Node0xb0e55d0 -> Node0xb0e56c0;
+	Node0xb0e5620 [shape=record,label="{pd_lor.lhs.false.526.while.body_crit_edge}"];
+	Node0xb0e5620 -> Node0xb0e56c0;
+	Node0xb0e5670 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0xb0e5670 -> Node0xb0e56c0;
+	Node0xb0e56c0 [shape=record,label="{it_while.body}"];
+	Node0xb0e56c0 -> Node0xb0e5440;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'loop_regs_scan_for.cond' function" {
+	label="CFG for 'loop_regs_scan_for.cond' function";
+
+	Node0xb556670 [shape=record,label="{newFuncRoot}"];
+	Node0xb556670 -> Node0xb55b890;
+	Node0xb55b840 [shape=record,label="{for.end.exitStub}"];
+	Node0xb55b890 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb55b890:s0 -> Node0xb55b8e0;
+	Node0xb55b890:s1 -> Node0xb55b840;
+	Node0xb55b8e0 [shape=record,label="{pd_for.body}"];
+	Node0xb55b8e0 -> Node0xf73c9d0;
+	Node0xf73c9d0 [shape=record,label="{it_for.body.split}"];
+	Node0xf73c9d0 -> Node0xb55b890;
+}

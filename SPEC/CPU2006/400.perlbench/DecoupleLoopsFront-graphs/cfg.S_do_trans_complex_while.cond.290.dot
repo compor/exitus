@@ -1,0 +1,39 @@
+digraph "CFG for 'S_do_trans_complex_while.cond' function" {
+	label="CFG for 'S_do_trans_complex_while.cond' function";
+
+	Node0x4b36c10 [shape=record,label="{newFuncRoot}"];
+	Node0x4b36c10 -> Node0x4b374c0;
+	Node0x4b37470 [shape=record,label="{if.end.81.loopexit.exitStub}"];
+	Node0x4b374c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4b374c0:s0 -> Node0x4b37510;
+	Node0x4b374c0:s1 -> Node0x4b37470;
+	Node0x4b37510 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x4b37510:s0 -> Node0x4b376a0;
+	Node0x4b37510:s1 -> Node0x4b37560;
+	Node0x4b37560 [shape=record,label="{pd_if.else|{<s0>def|<s1>-1|<s2>-2}}"];
+	Node0x4b37560:s0 -> Node0x4b37650;
+	Node0x4b37560:s1 -> Node0x4b37600;
+	Node0x4b37560:s2 -> Node0x4b375b0;
+	Node0x4b375b0 [shape=record,label="{pd_if.then.46}"];
+	Node0x4b375b0 -> Node0x4b37880;
+	Node0x4b37600 [shape=record,label="{pd_if.then.41}"];
+	Node0x4b37600 -> Node0x4b37880;
+	Node0x4b37650 [shape=record,label="{pd_if.else.if.end.50_crit_edge}"];
+	Node0x4b37650 -> Node0x4b37880;
+	Node0x4b376a0 [shape=record,label="{pd_if.then.28|{<s0>T|<s1>F}}"];
+	Node0x4b376a0:s0 -> Node0x4b377e0;
+	Node0x4b376a0:s1 -> Node0x4b376f0;
+	Node0x4b376f0 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4b376f0:s0 -> Node0x4b37790;
+	Node0x4b376f0:s1 -> Node0x4b37740;
+	Node0x4b37740 [shape=record,label="{pd_lor.lhs.false.if.end.50_crit_edge}"];
+	Node0x4b37740 -> Node0x4b37880;
+	Node0x4b37790 [shape=record,label="{pd_lor.lhs.false.if.then.37_crit_edge}"];
+	Node0x4b37790 -> Node0x4b37830;
+	Node0x4b377e0 [shape=record,label="{pd_if.then.28.if.then.37_crit_edge}"];
+	Node0x4b377e0 -> Node0x4b37830;
+	Node0x4b37830 [shape=record,label="{pd_if.then.37}"];
+	Node0x4b37830 -> Node0x4b37880;
+	Node0x4b37880 [shape=record,label="{it_if.end.50}"];
+	Node0x4b37880 -> Node0x4b374c0;
+}

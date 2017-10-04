@@ -1,0 +1,21 @@
+digraph "CFG for 'lm_read_ctl_while.cond' function" {
+	label="CFG for 'lm_read_ctl_while.cond' function";
+
+	Node0x10f7870 [shape=record,label="{newFuncRoot}"];
+	Node0x10f7870 -> Node0x10f7910;
+	Node0x10f78c0 [shape=record,label="{while.end.exitStub}"];
+	Node0x10f7910 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x10f7910:s0 -> Node0x10f79b0;
+	Node0x10f7910:s1 -> Node0x10f7960;
+	Node0x10f7960 [shape=record,label="{it_while.cond.land.end_crit_edge}"];
+	Node0x10f7960 -> Node0x10f7a00;
+	Node0x10f79b0 [shape=record,label="{it_land.rhs}"];
+	Node0x10f79b0 -> Node0x10f7a00;
+	Node0x10f7a00 [shape=record,label="{pd_land.end}"];
+	Node0x10f7a00 -> Node0x14d6500;
+	Node0x14d6500 [shape=record,label="{it_land.end.split|{<s0>T|<s1>F}}"];
+	Node0x14d6500:s0 -> Node0x10f7a50;
+	Node0x14d6500:s1 -> Node0x10f78c0;
+	Node0x10f7a50 [shape=record,label="{pd_while.body}"];
+	Node0x10f7a50 -> Node0x10f7910;
+}

@@ -1,0 +1,19 @@
+digraph "CFG for 'record_giv_while.body' function" {
+	label="CFG for 'record_giv_while.body' function";
+
+	Node0xb698a50 [shape=record,label="{newFuncRoot}"];
+	Node0xb698a50 -> Node0xb698af0;
+	Node0xb698aa0 [shape=record,label="{while.end.exitStub}"];
+	Node0xb698af0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xb698af0:s0 -> Node0xb6a3730;
+	Node0xb698af0:s1 -> Node0xb6a3690;
+	Node0xb6a3690 [shape=record,label="{it_if.else.373|{<s0>T|<s1>F}}"];
+	Node0xb6a3690:s0 -> Node0xb6a36e0;
+	Node0xb6a3690:s1 -> Node0xb698aa0;
+	Node0xb6a36e0 [shape=record,label="{pd_if.else.373.while.body.backedge_crit_edge}"];
+	Node0xb6a36e0 -> Node0xb6a3780;
+	Node0xb6a3730 [shape=record,label="{it_if.then.369}"];
+	Node0xb6a3730 -> Node0xb6a3780;
+	Node0xb6a3780 [shape=record,label="{pd_while.body.backedge}"];
+	Node0xb6a3780 -> Node0xb698af0;
+}

@@ -1,0 +1,46 @@
+digraph "CFG for 'Perl_pad_leavemy_for.cond' function" {
+	label="CFG for 'Perl_pad_leavemy_for.cond' function";
+
+	Node0x4cf96a0 [shape=record,label="{newFuncRoot}"];
+	Node0x4cf96a0 -> Node0x4cf9740;
+	Node0x4cf96f0 [shape=record,label="{if.end.21.loopexit.exitStub}"];
+	Node0x4cf9740 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4cf9740:s0 -> Node0x4cf9790;
+	Node0x4cf9740:s1 -> Node0x4cf96f0;
+	Node0x4cf9790 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4cf9790:s0 -> Node0x4cf9830;
+	Node0x4cf9790:s1 -> Node0x4cf97e0;
+	Node0x4cf97e0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4cf97e0 -> Node0x4cf9bf0;
+	Node0x4cf9830 [shape=record,label="{pd_land.lhs.true.5|{<s0>T|<s1>F}}"];
+	Node0x4cf9830:s0 -> Node0x4cf9ba0;
+	Node0x4cf9830:s1 -> Node0x4cf9880;
+	Node0x4cf9880 [shape=record,label="{pd_land.lhs.true.7|{<s0>T|<s1>F}}"];
+	Node0x4cf9880:s0 -> Node0x4cf9b00;
+	Node0x4cf9880:s1 -> Node0x4cf98d0;
+	Node0x4cf98d0 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4cf98d0:s0 -> Node0x4cf9ab0;
+	Node0x4cf98d0:s1 -> Node0x4cf9920;
+	Node0x4cf9920 [shape=record,label="{pd_lor.lhs.false.11|{<s0>T|<s1>F}}"];
+	Node0x4cf9920:s0 -> Node0x4cf99c0;
+	Node0x4cf9920:s1 -> Node0x4cf9970;
+	Node0x4cf9970 [shape=record,label="{pd_lor.lhs.false.11.for.inc_crit_edge}"];
+	Node0x4cf9970 -> Node0x4cf9bf0;
+	Node0x4cf99c0 [shape=record,label="{pd_land.lhs.true.14|{<s0>T|<s1>F}}"];
+	Node0x4cf99c0:s0 -> Node0x4cf9a60;
+	Node0x4cf99c0:s1 -> Node0x4cf9a10;
+	Node0x4cf9a10 [shape=record,label="{pd_land.lhs.true.14.for.inc_crit_edge}"];
+	Node0x4cf9a10 -> Node0x4cf9bf0;
+	Node0x4cf9a60 [shape=record,label="{pd_land.lhs.true.14.if.then.20_crit_edge}"];
+	Node0x4cf9a60 -> Node0x4cf9b50;
+	Node0x4cf9ab0 [shape=record,label="{pd_lor.lhs.false.if.then.20_crit_edge}"];
+	Node0x4cf9ab0 -> Node0x4cf9b50;
+	Node0x4cf9b00 [shape=record,label="{pd_land.lhs.true.7.if.then.20_crit_edge}"];
+	Node0x4cf9b00 -> Node0x4cf9b50;
+	Node0x4cf9b50 [shape=record,label="{pd_if.then.20}"];
+	Node0x4cf9b50 -> Node0x4cf9bf0;
+	Node0x4cf9ba0 [shape=record,label="{pd_land.lhs.true.5.for.inc_crit_edge}"];
+	Node0x4cf9ba0 -> Node0x4cf9bf0;
+	Node0x4cf9bf0 [shape=record,label="{it_for.inc}"];
+	Node0x4cf9bf0 -> Node0x4cf9740;
+}

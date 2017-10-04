@@ -1,0 +1,23 @@
+digraph "CFG for 'lookup_as_function_for.cond' function" {
+	label="CFG for 'lookup_as_function_for.cond' function";
+
+	Node0xa9c4160 [shape=record,label="{newFuncRoot}"];
+	Node0xa9c4160 -> Node0xa9c4250;
+	Node0xa9c41b0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xa9c4200 [shape=record,label="{if.then.31.exitStub}"];
+	Node0xa9c4250 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa9c4250:s0 -> Node0xa9c42a0;
+	Node0xa9c4250:s1 -> Node0xa9c41b0;
+	Node0xa9c42a0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xa9c42a0:s0 -> Node0xa9c4340;
+	Node0xa9c42a0:s1 -> Node0xa9c42f0;
+	Node0xa9c42f0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xa9c42f0 -> Node0xa9c43e0;
+	Node0xa9c4340 [shape=record,label="{it_land.lhs.true.26|{<s0>T|<s1>F}}"];
+	Node0xa9c4340:s0 -> Node0xa9c4200;
+	Node0xa9c4340:s1 -> Node0xa9c4390;
+	Node0xa9c4390 [shape=record,label="{pd_land.lhs.true.26.for.inc_crit_edge}"];
+	Node0xa9c4390 -> Node0xa9c43e0;
+	Node0xa9c43e0 [shape=record,label="{it_for.inc}"];
+	Node0xa9c43e0 -> Node0xa9c4250;
+}

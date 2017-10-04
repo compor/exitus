@@ -1,0 +1,23 @@
+digraph "CFG for 'Perl_apply_while.cond' function" {
+	label="CFG for 'Perl_apply_while.cond' function";
+
+	Node0x4af4ff0 [shape=record,label="{newFuncRoot}"];
+	Node0x4af4ff0 -> Node0x4af59d0;
+	Node0x4af5040 [shape=record,label="{if.end.4.loopexit.exitStub}"];
+	Node0x4af5090 [shape=record,label="{if.then.3.exitStub}"];
+	Node0x4af59d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4af59d0:s0 -> Node0x4af5a20;
+	Node0x4af59d0:s1 -> Node0x4af5040;
+	Node0x4af5a20 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4af5a20:s0 -> Node0x4af5ac0;
+	Node0x4af5a20:s1 -> Node0x4af5a70;
+	Node0x4af5a70 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0x4af5a70 -> Node0x4af5b60;
+	Node0x4af5ac0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4af5ac0:s0 -> Node0x4af5090;
+	Node0x4af5ac0:s1 -> Node0x4af5b10;
+	Node0x4af5b10 [shape=record,label="{pd_land.lhs.true.while.cond.backedge_crit_edge}"];
+	Node0x4af5b10 -> Node0x4af5b60;
+	Node0x4af5b60 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x4af5b60 -> Node0x4af59d0;
+}

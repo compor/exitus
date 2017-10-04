@@ -1,0 +1,39 @@
+digraph "CFG for 'Perl_hv_iternext_flags_while.cond.117' function" {
+	label="CFG for 'Perl_hv_iternext_flags_while.cond.117' function";
+
+	Node0x4b8e880 [shape=record,label="{newFuncRoot}"];
+	Node0x4b8e880 -> Node0x4b8f1d0;
+	Node0x4b8e8d0 [shape=record,label="{while.end.143.loopexit.exitStub}"];
+	Node0x4b8e920 [shape=record,label="{if.then.124.exitStub}"];
+	Node0x4b8f1d0 [shape=record,label="{it_while.cond.117|{<s0>T|<s1>F}}"];
+	Node0x4b8f1d0:s0 -> Node0x4b8f220;
+	Node0x4b8f1d0:s1 -> Node0x4b8e8d0;
+	Node0x4b8f220 [shape=record,label="{pd_while.body.119}"];
+	Node0x4b8f220 -> Node0x4b87910;
+	Node0x4b87910 [shape=record,label="{it_while.body.119.split|{<s0>T|<s1>F}}"];
+	Node0x4b87910:s0 -> Node0x4b8e920;
+	Node0x4b87910:s1 -> Node0x4b8f270;
+	Node0x4b8f270 [shape=record,label="{it_if.end.126|{<s0>T|<s1>F}}"];
+	Node0x4b8f270:s0 -> Node0x4b8f4f0;
+	Node0x4b8f270:s1 -> Node0x4b8f2c0;
+	Node0x4b8f2c0 [shape=record,label="{pd_while.cond.132.preheader}"];
+	Node0x4b8f2c0 -> Node0x4b8f310;
+	Node0x4b8f310 [shape=record,label="{it_while.cond.132|{<s0>T|<s1>F}}"];
+	Node0x4b8f310:s0 -> Node0x4b8f3b0;
+	Node0x4b8f310:s1 -> Node0x4b8f360;
+	Node0x4b8f360 [shape=record,label="{pd_while.cond.132.while.cond.117.loopexit_crit_edge}"];
+	Node0x4b8f360 -> Node0x4b8f450;
+	Node0x4b8f3b0 [shape=record,label="{it_land.rhs.134|{<s0>T|<s1>F}}"];
+	Node0x4b8f3b0:s0 -> Node0x4b8f4a0;
+	Node0x4b8f3b0:s1 -> Node0x4b8f400;
+	Node0x4b8f400 [shape=record,label="{pd_land.rhs.134.while.cond.117.loopexit_crit_edge}"];
+	Node0x4b8f400 -> Node0x4b8f450;
+	Node0x4b8f450 [shape=record,label="{pd_while.cond.117.loopexit}"];
+	Node0x4b8f450 -> Node0x4b8f540;
+	Node0x4b8f4a0 [shape=record,label="{it_while.body.139}"];
+	Node0x4b8f4a0 -> Node0x4b8f310;
+	Node0x4b8f4f0 [shape=record,label="{pd_if.end.126.while.cond.117.backedge_crit_edge}"];
+	Node0x4b8f4f0 -> Node0x4b8f540;
+	Node0x4b8f540 [shape=record,label="{pd_while.cond.117.backedge}"];
+	Node0x4b8f540 -> Node0x4b8f1d0;
+}

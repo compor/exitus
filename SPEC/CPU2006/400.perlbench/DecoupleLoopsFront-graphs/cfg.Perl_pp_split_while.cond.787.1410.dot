@@ -1,0 +1,37 @@
+digraph "CFG for 'Perl_pp_split_while.cond.787' function" {
+	label="CFG for 'Perl_pp_split_while.cond.787' function";
+
+	Node0x4be6f40 [shape=record,label="{newFuncRoot}"];
+	Node0x4be6f40 -> Node0x4be7030;
+	Node0x4be6f90 [shape=record,label="{while.cond.787.if.end.815.loopexit_crit_edge.exitStub}"];
+	Node0x4be6fe0 [shape=record,label="{lor.rhs.795.if.end.815.loopexit_crit_edge.exitStub}"];
+	Node0x4be7030 [shape=record,label="{it_while.cond.787|{<s0>T|<s1>F}}"];
+	Node0x4be7030:s0 -> Node0x4be7080;
+	Node0x4be7030:s1 -> Node0x4be6f90;
+	Node0x4be7080 [shape=record,label="{it_land.rhs.790|{<s0>T|<s1>F}}"];
+	Node0x4be7080:s0 -> Node0x4be7120;
+	Node0x4be7080:s1 -> Node0x4be70d0;
+	Node0x4be70d0 [shape=record,label="{pd_land.rhs.790.while.body.804_crit_edge}"];
+	Node0x4be70d0 -> Node0x4be7260;
+	Node0x4be7120 [shape=record,label="{it_lor.lhs.false.792|{<s0>T|<s1>F}}"];
+	Node0x4be7120:s0 -> Node0x4be71c0;
+	Node0x4be7120:s1 -> Node0x4be7170;
+	Node0x4be7170 [shape=record,label="{pd_lor.lhs.false.792.while.body.804_crit_edge}"];
+	Node0x4be7170 -> Node0x4be7260;
+	Node0x4be71c0 [shape=record,label="{it_lor.rhs.795|{<s0>T|<s1>F}}"];
+	Node0x4be71c0:s0 -> Node0x4be7210;
+	Node0x4be71c0:s1 -> Node0x4be6fe0;
+	Node0x4be7210 [shape=record,label="{pd_lor.rhs.795.while.body.804_crit_edge}"];
+	Node0x4be7210 -> Node0x4be7260;
+	Node0x4be7260 [shape=record,label="{pd_while.body.804|{<s0>T|<s1>F}}"];
+	Node0x4be7260:s0 -> Node0x4be7300;
+	Node0x4be7260:s1 -> Node0x4be72b0;
+	Node0x4be72b0 [shape=record,label="{pd_if.then.808}"];
+	Node0x4be72b0 -> Node0x4be7350;
+	Node0x4be7300 [shape=record,label="{pd_while.body.804.if.end.810_crit_edge}"];
+	Node0x4be7300 -> Node0x4be7350;
+	Node0x4be7350 [shape=record,label="{it_if.end.810}"];
+	Node0x4be7350 -> Node0x6630440;
+	Node0x6630440 [shape=record,label="{pd_if.end.810.split}"];
+	Node0x6630440 -> Node0x4be7030;
+}

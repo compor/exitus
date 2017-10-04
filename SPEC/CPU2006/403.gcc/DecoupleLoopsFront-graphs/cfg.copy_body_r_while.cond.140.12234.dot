@@ -1,0 +1,32 @@
+digraph "CFG for 'copy_body_r_while.cond.140' function" {
+	label="CFG for 'copy_body_r_while.cond.140' function";
+
+	Node0xaf085b0 [shape=record,label="{newFuncRoot}"];
+	Node0xaf085b0 -> Node0xaf086f0;
+	Node0xaf08600 [shape=record,label="{lor.lhs.false.152.while.end.177_crit_edge.exitStub}"];
+	Node0xaf08650 [shape=record,label="{land.lhs.true.158.while.end.177_crit_edge.exitStub}"];
+	Node0xaf086a0 [shape=record,label="{land.rhs.163.while.end.177_crit_edge.exitStub}"];
+	Node0xaf086f0 [shape=record,label="{it_while.cond.140|{<s0>T|<s1>F}}"];
+	Node0xaf086f0:s0 -> Node0xaf08880;
+	Node0xaf086f0:s1 -> Node0xaf08740;
+	Node0xaf08740 [shape=record,label="{it_lor.lhs.false.146|{<s0>T|<s1>F}}"];
+	Node0xaf08740:s0 -> Node0xaf08830;
+	Node0xaf08740:s1 -> Node0xaf08790;
+	Node0xaf08790 [shape=record,label="{it_lor.lhs.false.152|{<s0>T|<s1>F}}"];
+	Node0xaf08790:s0 -> Node0xaf087e0;
+	Node0xaf08790:s1 -> Node0xaf08600;
+	Node0xaf087e0 [shape=record,label="{pd_lor.lhs.false.152.land.lhs.true.158_crit_edge}"];
+	Node0xaf087e0 -> Node0xaf088d0;
+	Node0xaf08830 [shape=record,label="{pd_lor.lhs.false.146.land.lhs.true.158_crit_edge}"];
+	Node0xaf08830 -> Node0xaf088d0;
+	Node0xaf08880 [shape=record,label="{pd_while.cond.140.land.lhs.true.158_crit_edge}"];
+	Node0xaf08880 -> Node0xaf088d0;
+	Node0xaf088d0 [shape=record,label="{it_land.lhs.true.158|{<s0>T|<s1>F}}"];
+	Node0xaf088d0:s0 -> Node0xaf08920;
+	Node0xaf088d0:s1 -> Node0xaf08650;
+	Node0xaf08920 [shape=record,label="{it_land.rhs.163|{<s0>T|<s1>F}}"];
+	Node0xaf08920:s0 -> Node0xaf08970;
+	Node0xaf08920:s1 -> Node0xaf086a0;
+	Node0xaf08970 [shape=record,label="{it_while.body.173}"];
+	Node0xaf08970 -> Node0xaf086f0;
+}

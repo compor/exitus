@@ -1,0 +1,21 @@
+digraph "CFG for 'GKIStatus' function" {
+	label="CFG for 'GKIStatus' function";
+
+	Node0x2c45400 [shape=record,label="{entry}"];
+	Node0x2c45400 -> Node0x2c45450;
+	Node0x2c45450 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2c45450:s0 -> Node0x2c454a0;
+	Node0x2c45450:s1 -> Node0x2c455e0;
+	Node0x2c454a0 [shape=record,label="{pd_for.body}"];
+	Node0x2c454a0 -> Node0x2c454f0;
+	Node0x2c454f0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x2c454f0:s0 -> Node0x2c45540;
+	Node0x2c454f0:s1 -> Node0x2c45590;
+	Node0x2c45540 [shape=record,label="{pd_for.body.3}"];
+	Node0x2c45540 -> Node0x2c454f0;
+	Node0x2c45590 [shape=record,label="{pd_for.end}"];
+	Node0x2c45590 -> Node0x36afd70;
+	Node0x36afd70 [shape=record,label="{it_for.end.split}"];
+	Node0x36afd70 -> Node0x2c45450;
+	Node0x2c455e0 [shape=record,label="{for.end.14}"];
+}

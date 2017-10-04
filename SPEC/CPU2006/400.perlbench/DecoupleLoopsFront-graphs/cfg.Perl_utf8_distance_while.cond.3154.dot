@@ -1,0 +1,18 @@
+digraph "CFG for 'Perl_utf8_distance_while.cond' function" {
+	label="CFG for 'Perl_utf8_distance_while.cond' function";
+
+	Node0x57dd1b0 [shape=record,label="{newFuncRoot}"];
+	Node0x57dd1b0 -> Node0x57dd2a0;
+	Node0x57dd200 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x57dd250 [shape=record,label="{if.then.4.exitStub}"];
+	Node0x57dd2a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x57dd2a0:s0 -> Node0x57dd2f0;
+	Node0x57dd2a0:s1 -> Node0x57dd200;
+	Node0x57dd2f0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x57dd2f0:s0 -> Node0x57dd250;
+	Node0x57dd2f0:s1 -> Node0x57dd340;
+	Node0x57dd340 [shape=record,label="{it_if.end.27}"];
+	Node0x57dd340 -> Node0x688d910;
+	Node0x688d910 [shape=record,label="{pd_if.end.27.split}"];
+	Node0x688d910 -> Node0x57dd2a0;
+}

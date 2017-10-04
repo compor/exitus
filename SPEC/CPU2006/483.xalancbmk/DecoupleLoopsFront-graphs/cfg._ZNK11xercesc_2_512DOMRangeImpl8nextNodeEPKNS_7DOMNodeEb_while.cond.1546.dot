@@ -1,0 +1,20 @@
+digraph "CFG for '_ZNK11xercesc_2_512DOMRangeImpl8nextNodeEPKNS_7DOMNodeEb_while.cond' function" {
+	label="CFG for '_ZNK11xercesc_2_512DOMRangeImpl8nextNodeEPKNS_7DOMNodeEb_while.cond' function";
+
+	Node0x97f9870 [shape=record,label="{newFuncRoot}"];
+	Node0x97f9870 -> Node0x97f99b0;
+	Node0x97f98c0 [shape=record,label="{while.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x97f9910 [shape=record,label="{land.rhs.return.loopexit_crit_edge.exitStub}"];
+	Node0x97f9960 [shape=record,label="{while.body.return.loopexit_crit_edge.exitStub}"];
+	Node0x97f99b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x97f99b0:s0 -> Node0x97f9a00;
+	Node0x97f99b0:s1 -> Node0x97f98c0;
+	Node0x97f9a00 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x97f9a00:s0 -> Node0x97f9a50;
+	Node0x97f9a00:s1 -> Node0x97f9910;
+	Node0x97f9a50 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x97f9a50:s0 -> Node0x97f9960;
+	Node0x97f9a50:s1 -> Node0x97f9aa0;
+	Node0x97f9aa0 [shape=record,label="{it_if.else}"];
+	Node0x97f9aa0 -> Node0x97f99b0;
+}

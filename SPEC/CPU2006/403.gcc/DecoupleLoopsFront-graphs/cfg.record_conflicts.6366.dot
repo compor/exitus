@@ -1,0 +1,12 @@
+digraph "CFG for 'record_conflicts' function" {
+	label="CFG for 'record_conflicts' function";
+
+	Node0x4fdd5d0 [shape=record,label="{entry}"];
+	Node0x4fdd5d0 -> Node0x4fdd620;
+	Node0x4fdd620 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4fdd620:s0 -> Node0x4fdd670;
+	Node0x4fdd620:s1 -> Node0x4fddf30;
+	Node0x4fdd670 [shape=record,label="{pd_while.body}"];
+	Node0x4fdd670 -> Node0x4fdd620;
+	Node0x4fddf30 [shape=record,label="{while.end}"];
+}

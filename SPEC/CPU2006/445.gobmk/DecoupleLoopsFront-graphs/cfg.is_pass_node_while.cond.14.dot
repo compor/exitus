@@ -1,0 +1,18 @@
+digraph "CFG for 'is_pass_node_while.cond' function" {
+	label="CFG for 'is_pass_node_while.cond' function";
+
+	Node0x33272e0 [shape=record,label="{newFuncRoot}"];
+	Node0x33272e0 -> Node0x3327420;
+	Node0x3327330 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x3327380 [shape=record,label="{while.body.sw.bb_crit_edge.exitStub}"];
+	Node0x33273d0 [shape=record,label="{while.body.sw.bb_crit_edge.1.exitStub}"];
+	Node0x3327420 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3327420:s0 -> Node0x3327470;
+	Node0x3327420:s1 -> Node0x3327330;
+	Node0x3327470 [shape=record,label="{it_while.body|{<s0>def|<s1>8258|<s2>8279}}"];
+	Node0x3327470:s0 -> Node0x33274c0;
+	Node0x3327470:s1 -> Node0x3327380;
+	Node0x3327470:s2 -> Node0x33273d0;
+	Node0x33274c0 [shape=record,label="{it_sw.epilog}"];
+	Node0x33274c0 -> Node0x3327420;
+}

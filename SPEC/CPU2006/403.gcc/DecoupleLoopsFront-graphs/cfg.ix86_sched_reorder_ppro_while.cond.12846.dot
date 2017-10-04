@@ -1,0 +1,16 @@
+digraph "CFG for 'ix86_sched_reorder_ppro_while.cond' function" {
+	label="CFG for 'ix86_sched_reorder_ppro_while.cond' function";
+
+	Node0xc6f7b10 [shape=record,label="{newFuncRoot}"];
+	Node0xc6f7b10 -> Node0xc6f7c00;
+	Node0xc6f7b60 [shape=record,label="{if.then.10.loopexit.exitStub}"];
+	Node0xc6f7bb0 [shape=record,label="{while.end.exitStub}"];
+	Node0xc6f7c00 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc6f7c00:s0 -> Node0xc6f7b60;
+	Node0xc6f7c00:s1 -> Node0xc6f7c50;
+	Node0xc6f7c50 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc6f7c50:s0 -> Node0xc6f7bb0;
+	Node0xc6f7c50:s1 -> Node0xc6f7ca0;
+	Node0xc6f7ca0 [shape=record,label="{it_if.end.7}"];
+	Node0xc6f7ca0 -> Node0xc6f7c00;
+}

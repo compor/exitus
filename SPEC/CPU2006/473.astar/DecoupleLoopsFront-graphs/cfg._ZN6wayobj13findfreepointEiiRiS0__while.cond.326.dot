@@ -1,0 +1,23 @@
+digraph "CFG for '_ZN6wayobj13findfreepointEiiRiS0__while.cond' function" {
+	label="CFG for '_ZN6wayobj13findfreepointEiiRiS0__while.cond' function";
+
+	Node0x2484d60 [shape=record,label="{newFuncRoot}"];
+	Node0x2484d60 -> Node0x24ccac0;
+	Node0x2484db0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x2484e00 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x24ccac0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x24ccac0:s0 -> Node0x24ccb10;
+	Node0x24ccac0:s1 -> Node0x2484db0;
+	Node0x24ccb10 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x24ccb10:s0 -> Node0x24ccb60;
+	Node0x24ccb10:s1 -> Node0x2484e00;
+	Node0x24ccb60 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x24ccb60:s0 -> Node0x24ccc00;
+	Node0x24ccb60:s1 -> Node0x24ccbb0;
+	Node0x24ccbb0 [shape=record,label="{it_if.else}"];
+	Node0x24ccbb0 -> Node0x24ccc50;
+	Node0x24ccc00 [shape=record,label="{it_if.then.32}"];
+	Node0x24ccc00 -> Node0x24ccc50;
+	Node0x24ccc50 [shape=record,label="{pd_if.end.38}"];
+	Node0x24ccc50 -> Node0x24ccac0;
+}

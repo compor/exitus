@@ -1,0 +1,38 @@
+digraph "CFG for '_ZN12pov_frontend21DefaultRenderFrontend12CloseStreamsEv' function" {
+	label="CFG for '_ZN12pov_frontend21DefaultRenderFrontend12CloseStreamsEv' function";
+
+	Node0xe5b2d0 [shape=record,label="{entry}"];
+	Node0xe5b2d0 -> Node0xe61000;
+	Node0xe61000 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xe61000:s0 -> Node0xe61050;
+	Node0xe61000:s1 -> Node0xe613c0;
+	Node0xe61050 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xe61050:s0 -> Node0xe610f0;
+	Node0xe61050:s1 -> Node0xe610a0;
+	Node0xe610a0 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0xe610a0 -> Node0xe611e0;
+	Node0xe610f0 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0xe610f0:s0 -> Node0xe61140;
+	Node0xe610f0:s1 -> Node0xe61190;
+	Node0xe61140 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0xe61140 -> Node0xe611e0;
+	Node0xe61190 [shape=record,label="{pd_delete.notnull}"];
+	Node0xe61190 -> Node0xe611e0;
+	Node0xe611e0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0xe611e0:s0 -> Node0xe61280;
+	Node0xe611e0:s1 -> Node0xe61230;
+	Node0xe61230 [shape=record,label="{pd_if.end.if.end.19_crit_edge}"];
+	Node0xe61230 -> Node0xe61370;
+	Node0xe61280 [shape=record,label="{pd_if.then.12|{<s0>T|<s1>F}}"];
+	Node0xe61280:s0 -> Node0xe612d0;
+	Node0xe61280:s1 -> Node0xe61320;
+	Node0xe612d0 [shape=record,label="{pd_if.then.12.if.end.19_crit_edge}"];
+	Node0xe612d0 -> Node0xe61370;
+	Node0xe61320 [shape=record,label="{pd_delete.notnull.17}"];
+	Node0xe61320 -> Node0xe61370;
+	Node0xe61370 [shape=record,label="{pd_if.end.19}"];
+	Node0xe61370 -> Node0x2f2b520;
+	Node0x2f2b520 [shape=record,label="{it_if.end.19.split}"];
+	Node0x2f2b520 -> Node0xe61000;
+	Node0xe613c0 [shape=record,label="{for.end}"];
+}

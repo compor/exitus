@@ -1,0 +1,16 @@
+digraph "CFG for 'read_integral_parameter_while.cond' function" {
+	label="CFG for 'read_integral_parameter_while.cond' function";
+
+	Node0xc469960 [shape=record,label="{newFuncRoot}"];
+	Node0xc469960 -> Node0xc469a50;
+	Node0xc4699b0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xc469a00 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0xc469a50 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc469a50:s0 -> Node0xc46a300;
+	Node0xc469a50:s1 -> Node0xc4699b0;
+	Node0xc46a300 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc46a300:s0 -> Node0xc46a350;
+	Node0xc46a300:s1 -> Node0xc469a00;
+	Node0xc46a350 [shape=record,label="{it_if.then}"];
+	Node0xc46a350 -> Node0xc469a50;
+}

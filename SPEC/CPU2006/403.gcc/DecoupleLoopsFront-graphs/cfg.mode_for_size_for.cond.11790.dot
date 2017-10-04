@@ -1,0 +1,16 @@
+digraph "CFG for 'mode_for_size_for.cond' function" {
+	label="CFG for 'mode_for_size_for.cond' function";
+
+	Node0xc4512f0 [shape=record,label="{newFuncRoot}"];
+	Node0xc4512f0 -> Node0xc457210;
+	Node0xc457170 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0xc4571c0 [shape=record,label="{for.body.return.loopexit_crit_edge.exitStub}"];
+	Node0xc457210 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc457210:s0 -> Node0xc457260;
+	Node0xc457210:s1 -> Node0xc457170;
+	Node0xc457260 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xc457260:s0 -> Node0xc4571c0;
+	Node0xc457260:s1 -> Node0xc4572b0;
+	Node0xc4572b0 [shape=record,label="{it_for.inc}"];
+	Node0xc4572b0 -> Node0xc457210;
+}

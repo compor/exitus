@@ -1,0 +1,45 @@
+digraph "CFG for 'reg_is_remote_constant_p_for.cond' function" {
+	label="CFG for 'reg_is_remote_constant_p_for.cond' function";
+
+	Node0xbac5bf0 [shape=record,label="{newFuncRoot}"];
+	Node0xbac5bf0 -> Node0xbac5ce0;
+	Node0xbac5c40 [shape=record,label="{for.cond.72.preheader.exitStub}"];
+	Node0xbac5c90 [shape=record,label="{return.loopexit1.exitStub}"];
+	Node0xbac5ce0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xbac5ce0:s0 -> Node0xbac5d30;
+	Node0xbac5ce0:s1 -> Node0xbac5c40;
+	Node0xbac5d30 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xbac5d30:s0 -> Node0xbac60f0;
+	Node0xbac5d30:s1 -> Node0xbac5d80;
+	Node0xbac5d80 [shape=record,label="{it_if.end.7|{<s0>T|<s1>F}}"];
+	Node0xbac5d80:s0 -> Node0xbac5e20;
+	Node0xbac5d80:s1 -> Node0xbac5dd0;
+	Node0xbac5dd0 [shape=record,label="{it_if.end.7.cond.end.44_crit_edge}"];
+	Node0xbac5dd0 -> Node0xbac5f10;
+	Node0xbac5e20 [shape=record,label="{it_cond.true|{<s0>T|<s1>F}}"];
+	Node0xbac5e20:s0 -> Node0xbac5ec0;
+	Node0xbac5e20:s1 -> Node0xbac5e70;
+	Node0xbac5e70 [shape=record,label="{it_cond.false}"];
+	Node0xbac5e70 -> Node0xbac5f10;
+	Node0xbac5ec0 [shape=record,label="{it_cond.true.27}"];
+	Node0xbac5ec0 -> Node0xbac5f10;
+	Node0xbac5f10 [shape=record,label="{it_cond.end.44|{<s0>T|<s1>F}}"];
+	Node0xbac5f10:s0 -> Node0xbac5fb0;
+	Node0xbac5f10:s1 -> Node0xbac5f60;
+	Node0xbac5f60 [shape=record,label="{pd_cond.end.44.for.inc_crit_edge}"];
+	Node0xbac5f60 -> Node0xbac6140;
+	Node0xbac5fb0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xbac5fb0:s0 -> Node0xbac6050;
+	Node0xbac5fb0:s1 -> Node0xbac6000;
+	Node0xbac6000 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0xbac6000 -> Node0xbac6140;
+	Node0xbac6050 [shape=record,label="{it_land.lhs.true.55|{<s0>T|<s1>F}}"];
+	Node0xbac6050:s0 -> Node0xbac5c90;
+	Node0xbac6050:s1 -> Node0xbac60a0;
+	Node0xbac60a0 [shape=record,label="{pd_land.lhs.true.55.for.inc_crit_edge}"];
+	Node0xbac60a0 -> Node0xbac6140;
+	Node0xbac60f0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xbac60f0 -> Node0xbac6140;
+	Node0xbac6140 [shape=record,label="{it_for.inc}"];
+	Node0xbac6140 -> Node0xbac5ce0;
+}

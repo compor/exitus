@@ -1,0 +1,33 @@
+digraph "CFG for 'proofnumbercheck_while.cond' function" {
+	label="CFG for 'proofnumbercheck_while.cond' function";
+
+	Node0x10e74f0 [shape=record,label="{newFuncRoot}"];
+	Node0x10e74f0 -> Node0x10e7680;
+	Node0x10e7540 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x10e7590 [shape=record,label="{land.lhs.true.6.while.end_crit_edge.exitStub}"];
+	Node0x10e75e0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x10e7630 [shape=record,label="{if.then.17.while.end_crit_edge.exitStub}"];
+	Node0x10e7680 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x10e7680:s0 -> Node0x10e76d0;
+	Node0x10e7680:s1 -> Node0x10e7540;
+	Node0x10e76d0 [shape=record,label="{it_land.lhs.true.6|{<s0>T|<s1>F}}"];
+	Node0x10e76d0:s0 -> Node0x10e7720;
+	Node0x10e76d0:s1 -> Node0x10e7590;
+	Node0x10e7720 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x10e7720:s0 -> Node0x10e7770;
+	Node0x10e7720:s1 -> Node0x10e75e0;
+	Node0x10e7770 [shape=record,label="{pd_while.body}"];
+	Node0x10e7770 -> Node0x14589b0;
+	Node0x14589b0 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x14589b0:s0 -> Node0x10e7810;
+	Node0x14589b0:s1 -> Node0x10e77c0;
+	Node0x10e77c0 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0x10e77c0 -> Node0x10e78b0;
+	Node0x10e7810 [shape=record,label="{it_if.then.17|{<s0>T|<s1>F}}"];
+	Node0x10e7810:s0 -> Node0x10e7630;
+	Node0x10e7810:s1 -> Node0x10e7860;
+	Node0x10e7860 [shape=record,label="{pd_if.then.17.while.cond.backedge_crit_edge}"];
+	Node0x10e7860 -> Node0x10e78b0;
+	Node0x10e78b0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x10e78b0 -> Node0x10e7680;
+}

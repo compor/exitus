@@ -1,0 +1,31 @@
+digraph "CFG for 'scan_paradoxical_subregs_for.cond' function" {
+	label="CFG for 'scan_paradoxical_subregs_for.cond' function";
+
+	Node0xbdda930 [shape=record,label="{newFuncRoot}"];
+	Node0xbdda930 -> Node0xbdda9d0;
+	Node0xbdda980 [shape=record,label="{for.end.73.loopexit.exitStub}"];
+	Node0xbdda9d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xbdda9d0:s0 -> Node0xbddaa20;
+	Node0xbdda9d0:s1 -> Node0xbdda980;
+	Node0xbddaa20 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xbddaa20:s0 -> Node0xbde2990;
+	Node0xbddaa20:s1 -> Node0xbde27b0;
+	Node0xbde27b0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0xbde27b0:s0 -> Node0xbde2850;
+	Node0xbde27b0:s1 -> Node0xbde2800;
+	Node0xbde2800 [shape=record,label="{pd_if.else.for.inc.71_crit_edge}"];
+	Node0xbde2800 -> Node0xbde29e0;
+	Node0xbde2850 [shape=record,label="{pd_if.then.54}"];
+	Node0xbde2850 -> Node0xbde28a0;
+	Node0xbde28a0 [shape=record,label="{pd_for.cond.59|{<s0>T|<s1>F}}"];
+	Node0xbde28a0:s0 -> Node0xbde2940;
+	Node0xbde28a0:s1 -> Node0xbde28f0;
+	Node0xbde28f0 [shape=record,label="{pd_for.inc.71.loopexit}"];
+	Node0xbde28f0 -> Node0xbde29e0;
+	Node0xbde2940 [shape=record,label="{pd_for.body.62}"];
+	Node0xbde2940 -> Node0xbde28a0;
+	Node0xbde2990 [shape=record,label="{pd_if.then.44}"];
+	Node0xbde2990 -> Node0xbde29e0;
+	Node0xbde29e0 [shape=record,label="{it_for.inc.71}"];
+	Node0xbde29e0 -> Node0xbdda9d0;
+}

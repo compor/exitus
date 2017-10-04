@@ -1,0 +1,45 @@
+digraph "CFG for '_ZN6QGaussILi1EEC2Ej' function" {
+	label="CFG for '_ZN6QGaussILi1EEC2Ej' function";
+
+	Node0x6f21000 [shape=record,label="{entry}"];
+	Node0x6f21000 -> Node0x6f21050;
+	Node0x6f21050 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x6f21050:s0 -> Node0x6f210a0;
+	Node0x6f21050:s1 -> Node0x6f21540;
+	Node0x6f210a0 [shape=record,label="{it_for.body}"];
+	Node0x6f210a0 -> Node0x6f210f0;
+	Node0x6f210f0 [shape=record,label="{it_do.body}"];
+	Node0x6f210f0 -> Node0x6f21140;
+	Node0x6f21140 [shape=record,label="{it_for.cond.13|{<s0>T|<s1>F}}"];
+	Node0x6f21140:s0 -> Node0x6f21190;
+	Node0x6f21140:s1 -> Node0x6f21230;
+	Node0x6f21190 [shape=record,label="{it_for.body.15}"];
+	Node0x6f21190 -> Node0x6f21140;
+	Node0x6f211e0 [shape=record,label="{lpad}"];
+	Node0x6f211e0 -> Node0x6f21590;
+	Node0x6f211e0 -> Node0x6f215e0;
+	Node0x6f21230 [shape=record,label="{it_for.end|{<s0>T|<s1>F}}"];
+	Node0x6f21230:s0 -> Node0x6f21280;
+	Node0x6f21230:s1 -> Node0x6f212d0;
+	Node0x6f21280 [shape=record,label="{pd_for.end.do.body_crit_edge}"];
+	Node0x6f21280 -> Node0x6f210f0;
+	Node0x6f212d0 [shape=record,label="{it_do.end}"];
+	Node0x6f212d0 -> Node0x6f21400;
+	Node0x6f212d0 -> Node0x6f211e0;
+	Node0x6f21400 [shape=record,label="{it_invoke.cont.49}"];
+	Node0x6f21400 -> Node0x6f21450;
+	Node0x6f21400 -> Node0x6f211e0;
+	Node0x6f21450 [shape=record,label="{it_invoke.cont.50}"];
+	Node0x6f21450 -> Node0x6f214a0;
+	Node0x6f21450 -> Node0x6f211e0;
+	Node0x6f214a0 [shape=record,label="{it_invoke.cont.59}"];
+	Node0x6f214a0 -> Node0x6f214f0;
+	Node0x6f214a0 -> Node0x6f211e0;
+	Node0x6f214f0 [shape=record,label="{pd_invoke.cont.60}"];
+	Node0x6f214f0 -> Node0xb0a2b50;
+	Node0xb0a2b50 [shape=record,label="{it_invoke.cont.60.split}"];
+	Node0xb0a2b50 -> Node0x6f21050;
+	Node0x6f21540 [shape=record,label="{for.end.79}"];
+	Node0x6f21590 [shape=record,label="{eh.resume}"];
+	Node0x6f215e0 [shape=record,label="{terminate.lpad}"];
+}

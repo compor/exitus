@@ -1,0 +1,35 @@
+digraph "CFG for 'final_reg_note_copy_while.cond.outer' function" {
+	label="CFG for 'final_reg_note_copy_while.cond.outer' function";
+
+	Node0xc6347e0 [shape=record,label="{newFuncRoot}"];
+	Node0xc6347e0 -> Node0xc6404b0;
+	Node0xc634830 [shape=record,label="{while.end.exitStub}"];
+	Node0xc640460 [shape=record,label="{if.then.17.exitStub}"];
+	Node0xc6404b0 [shape=record,label="{pd_while.cond.outer}"];
+	Node0xc6404b0 -> Node0xc640500;
+	Node0xc640500 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc640500:s0 -> Node0xc640550;
+	Node0xc640500:s1 -> Node0xc634830;
+	Node0xc640550 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc640550:s0 -> Node0xc6405f0;
+	Node0xc640550:s1 -> Node0xc6405a0;
+	Node0xc6405a0 [shape=record,label="{pd_if.end.24.loopexit}"];
+	Node0xc6405a0 -> Node0xc640780;
+	Node0xc6405f0 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0xc6405f0:s0 -> Node0xc6407d0;
+	Node0xc6405f0:s1 -> Node0xc640640;
+	Node0xc640640 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0xc640640:s0 -> Node0xc640730;
+	Node0xc640640:s1 -> Node0xc640690;
+	Node0xc640690 [shape=record,label="{it_if.then.12|{<s0>T|<s1>F}}"];
+	Node0xc640690:s0 -> Node0xc640460;
+	Node0xc640690:s1 -> Node0xc6406e0;
+	Node0xc6406e0 [shape=record,label="{pd_if.then.12.if.end.24_crit_edge}"];
+	Node0xc6406e0 -> Node0xc640780;
+	Node0xc640730 [shape=record,label="{pd_if.else.18}"];
+	Node0xc640730 -> Node0xc640780;
+	Node0xc640780 [shape=record,label="{it_if.end.24}"];
+	Node0xc640780 -> Node0xc6404b0;
+	Node0xc6407d0 [shape=record,label="{pd_if.then.4}"];
+	Node0xc6407d0 -> Node0xc640500;
+}

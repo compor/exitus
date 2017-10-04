@@ -1,0 +1,26 @@
+digraph "CFG for 'pop_init_level_while.cond.50' function" {
+	label="CFG for 'pop_init_level_while.cond.50' function";
+
+	Node0xa096380 [shape=record,label="{newFuncRoot}"];
+	Node0xa096380 -> Node0xa096420;
+	Node0xa0963d0 [shape=record,label="{while.end.61.exitStub}"];
+	Node0xa096420 [shape=record,label="{it_while.cond.50|{<s0>T|<s1>F}}"];
+	Node0xa096420:s0 -> Node0xa0964c0;
+	Node0xa096420:s1 -> Node0xa096470;
+	Node0xa096470 [shape=record,label="{it_while.cond.50.land.end_crit_edge}"];
+	Node0xa096470 -> Node0xa0965b0;
+	Node0xa0964c0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xa0964c0:s0 -> Node0xa096560;
+	Node0xa0964c0:s1 -> Node0xa096510;
+	Node0xa096510 [shape=record,label="{it_land.rhs.land.end_crit_edge}"];
+	Node0xa096510 -> Node0xa0965b0;
+	Node0xa096560 [shape=record,label="{it_lor.rhs}"];
+	Node0xa096560 -> Node0xa0965b0;
+	Node0xa0965b0 [shape=record,label="{pd_land.end}"];
+	Node0xa0965b0 -> Node0xf049620;
+	Node0xf049620 [shape=record,label="{it_land.end.split|{<s0>T|<s1>F}}"];
+	Node0xf049620:s0 -> Node0xa096600;
+	Node0xf049620:s1 -> Node0xa0963d0;
+	Node0xa096600 [shape=record,label="{pd_while.body.58}"];
+	Node0xa096600 -> Node0xa096420;
+}

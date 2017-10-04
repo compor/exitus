@@ -1,0 +1,46 @@
+digraph "CFG for 'propvalue_while.cond' function" {
+	label="CFG for 'propvalue_while.cond' function";
+
+	Node0x333f5d0 [shape=record,label="{newFuncRoot}"];
+	Node0x333f5d0 -> Node0x333f670;
+	Node0x333f620 [shape=record,label="{while.end.exitStub}"];
+	Node0x333f670 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x333f670:s0 -> Node0x333f6c0;
+	Node0x333f670:s1 -> Node0x333f620;
+	Node0x333f6c0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x333f6c0:s0 -> Node0x333f760;
+	Node0x333f6c0:s1 -> Node0x333f710;
+	Node0x333f710 [shape=record,label="{pd_while.body.if.end.18_crit_edge}"];
+	Node0x333f710 -> Node0x333fa30;
+	Node0x333f760 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x333f760:s0 -> Node0x333f940;
+	Node0x333f760:s1 -> Node0x333f7b0;
+	Node0x333f7b0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x333f7b0:s0 -> Node0x333f850;
+	Node0x333f7b0:s1 -> Node0x333f800;
+	Node0x333f800 [shape=record,label="{pd_if.else.if.end.18_crit_edge}"];
+	Node0x333f800 -> Node0x333fa30;
+	Node0x333f850 [shape=record,label="{pd_if.then.10|{<s0>T|<s1>F}}"];
+	Node0x333f850:s0 -> Node0x333f8f0;
+	Node0x333f850:s1 -> Node0x333f8a0;
+	Node0x333f8a0 [shape=record,label="{pd_if.then.10.if.end.18_crit_edge}"];
+	Node0x333f8a0 -> Node0x333fa30;
+	Node0x333f8f0 [shape=record,label="{pd_if.then.13}"];
+	Node0x333f8f0 -> Node0x333fa30;
+	Node0x333f940 [shape=record,label="{pd_if.then.4|{<s0>T|<s1>F}}"];
+	Node0x333f940:s0 -> Node0x333f9e0;
+	Node0x333f940:s1 -> Node0x333f990;
+	Node0x333f990 [shape=record,label="{pd_if.then.4.if.end.18_crit_edge}"];
+	Node0x333f990 -> Node0x333fa30;
+	Node0x333f9e0 [shape=record,label="{pd_if.then.7}"];
+	Node0x333f9e0 -> Node0x333fa30;
+	Node0x333fa30 [shape=record,label="{pd_if.end.18|{<s0>T|<s1>F}}"];
+	Node0x333fa30:s0 -> Node0x333fad0;
+	Node0x333fa30:s1 -> Node0x333fa80;
+	Node0x333fa80 [shape=record,label="{pd_if.end.18.if.end.21_crit_edge}"];
+	Node0x333fa80 -> Node0x333fb20;
+	Node0x333fad0 [shape=record,label="{pd_if.then.20}"];
+	Node0x333fad0 -> Node0x333fb20;
+	Node0x333fb20 [shape=record,label="{pd_if.end.21}"];
+	Node0x333fb20 -> Node0x333f670;
+}

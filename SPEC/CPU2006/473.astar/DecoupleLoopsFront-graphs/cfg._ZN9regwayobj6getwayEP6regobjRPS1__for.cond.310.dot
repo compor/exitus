@@ -1,0 +1,42 @@
+digraph "CFG for '_ZN9regwayobj6getwayEP6regobjRPS1__for.cond' function" {
+	label="CFG for '_ZN9regwayobj6getwayEP6regobjRPS1__for.cond' function";
+
+	Node0x24519d0 [shape=record,label="{newFuncRoot}"];
+	Node0x24519d0 -> Node0x249c1f0;
+	Node0x249c150 [shape=record,label="{for.end.30.exitStub}"];
+	Node0x249c1a0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x249c1f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x249c1f0:s0 -> Node0x249c240;
+	Node0x249c1f0:s1 -> Node0x249c150;
+	Node0x249c240 [shape=record,label="{it_for.body}"];
+	Node0x249c240 -> Node0x249c290;
+	Node0x249c290 [shape=record,label="{it_for.cond.5|{<s0>T|<s1>F}}"];
+	Node0x249c290:s0 -> Node0x249c380;
+	Node0x249c290:s1 -> Node0x249c2e0;
+	Node0x249c2e0 [shape=record,label="{it_for.end|{<s0>T|<s1>F}}"];
+	Node0x249c2e0:s0 -> Node0x249c1a0;
+	Node0x249c2e0:s1 -> Node0x249c330;
+	Node0x249c330 [shape=record,label="{pd_if.end.25}"];
+	Node0x249c330 -> Node0x256c990;
+	Node0x256c990 [shape=record,label="{it_if.end.25.split}"];
+	Node0x256c990 -> Node0x249c1f0;
+	Node0x249c380 [shape=record,label="{it_for.body.7|{<s0>T|<s1>F}}"];
+	Node0x249c380:s0 -> Node0x249c420;
+	Node0x249c380:s1 -> Node0x249c3d0;
+	Node0x249c3d0 [shape=record,label="{pd_for.body.7.for.inc_crit_edge}"];
+	Node0x249c3d0 -> Node0x249c5b0;
+	Node0x249c420 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0x249c420:s0 -> Node0x249c4c0;
+	Node0x249c420:s1 -> Node0x249c470;
+	Node0x249c470 [shape=record,label="{pd_if.then.for.inc_crit_edge}"];
+	Node0x249c470 -> Node0x249c5b0;
+	Node0x249c4c0 [shape=record,label="{it_if.then.13|{<s0>T|<s1>F}}"];
+	Node0x249c4c0:s0 -> Node0x249c560;
+	Node0x249c4c0:s1 -> Node0x249c510;
+	Node0x249c510 [shape=record,label="{it_if.else}"];
+	Node0x249c510 -> Node0x249c5b0;
+	Node0x249c560 [shape=record,label="{pd_if.then.13.for.inc_crit_edge}"];
+	Node0x249c560 -> Node0x249c5b0;
+	Node0x249c5b0 [shape=record,label="{it_for.inc}"];
+	Node0x249c5b0 -> Node0x249c290;
+}

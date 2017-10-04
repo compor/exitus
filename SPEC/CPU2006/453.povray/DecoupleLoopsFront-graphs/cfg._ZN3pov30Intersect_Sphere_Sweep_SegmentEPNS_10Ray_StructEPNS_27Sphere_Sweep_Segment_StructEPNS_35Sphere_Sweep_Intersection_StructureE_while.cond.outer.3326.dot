@@ -1,0 +1,33 @@
+digraph "CFG for '_ZN3pov30Intersect_Sphere_Sweep_SegmentEPNS_10Ray_StructEPNS_27Sphere_Sweep_Segment_StructEPNS_35Sphere_Sweep_Intersection_StructureE_while.cond.outer' function" {
+	label="CFG for '_ZN3pov30Intersect_Sphere_Sweep_SegmentEPNS_10Ray_StructEPNS_27Sphere_Sweep_Segment_StructEPNS_35Sphere_Sweep_Intersection_StructureE_while.cond.outer' function";
+
+	Node0x2c28c90 [shape=record,label="{newFuncRoot}"];
+	Node0x2c28c90 -> Node0x2c28d30;
+	Node0x2c28ce0 [shape=record,label="{while.end.exitStub}"];
+	Node0x2c28d30 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x2c28d30 -> Node0x2c28d80;
+	Node0x2c28d80 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2c28d80:s0 -> Node0x2c28dd0;
+	Node0x2c28d80:s1 -> Node0x2c28ce0;
+	Node0x2c28dd0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x2c28dd0:s0 -> Node0x2c28f10;
+	Node0x2c28dd0:s1 -> Node0x2c28e20;
+	Node0x2c28e20 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x2c28e20:s0 -> Node0x2c28ec0;
+	Node0x2c28e20:s1 -> Node0x2c28e70;
+	Node0x2c28e70 [shape=record,label="{it_if.else}"];
+	Node0x2c28e70 -> Node0x2c28d80;
+	Node0x2c28ec0 [shape=record,label="{pd_lor.lhs.false.for.cond.preheader_crit_edge}"];
+	Node0x2c28ec0 -> Node0x2c28f60;
+	Node0x2c28f10 [shape=record,label="{pd_while.body.for.cond.preheader_crit_edge}"];
+	Node0x2c28f10 -> Node0x2c28f60;
+	Node0x2c28f60 [shape=record,label="{pd_for.cond.preheader}"];
+	Node0x2c28f60 -> Node0x2c28fb0;
+	Node0x2c28fb0 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2c28fb0:s0 -> Node0x2c2b350;
+	Node0x2c28fb0:s1 -> Node0x2c29000;
+	Node0x2c29000 [shape=record,label="{it_for.end}"];
+	Node0x2c29000 -> Node0x2c28d30;
+	Node0x2c2b350 [shape=record,label="{pd_for.body}"];
+	Node0x2c2b350 -> Node0x2c28fb0;
+}

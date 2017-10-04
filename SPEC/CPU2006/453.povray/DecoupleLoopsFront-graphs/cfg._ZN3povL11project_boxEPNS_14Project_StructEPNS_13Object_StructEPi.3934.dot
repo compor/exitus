@@ -1,0 +1,42 @@
+digraph "CFG for '_ZN3povL11project_boxEPNS_14Project_StructEPNS_13Object_StructEPi' function" {
+	label="CFG for '_ZN3povL11project_boxEPNS_14Project_StructEPNS_13Object_StructEPi' function";
+
+	Node0x2238e20 [shape=record,label="{entry}"];
+	Node0x2238e20 -> Node0x2238e70;
+	Node0x2238e70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2238e70:s0 -> Node0x2238ec0;
+	Node0x2238e70:s1 -> Node0x22392d0;
+	Node0x2238ec0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2238ec0:s0 -> Node0x2238f10;
+	Node0x2238ec0:s1 -> Node0x2238f60;
+	Node0x2238f10 [shape=record,label="{pd_cond.true}"];
+	Node0x2238f10 -> Node0x2238fb0;
+	Node0x2238f60 [shape=record,label="{pd_cond.false}"];
+	Node0x2238f60 -> Node0x2238fb0;
+	Node0x2238fb0 [shape=record,label="{pd_cond.end|{<s0>T|<s1>F}}"];
+	Node0x2238fb0:s0 -> Node0x2239000;
+	Node0x2238fb0:s1 -> Node0x2239050;
+	Node0x2239000 [shape=record,label="{pd_cond.true.9}"];
+	Node0x2239000 -> Node0x22390a0;
+	Node0x2239050 [shape=record,label="{pd_cond.false.13}"];
+	Node0x2239050 -> Node0x22390a0;
+	Node0x22390a0 [shape=record,label="{pd_cond.end.17|{<s0>T|<s1>F}}"];
+	Node0x22390a0:s0 -> Node0x22390f0;
+	Node0x22390a0:s1 -> Node0x2239140;
+	Node0x22390f0 [shape=record,label="{pd_cond.true.24}"];
+	Node0x22390f0 -> Node0x2239190;
+	Node0x2239140 [shape=record,label="{pd_cond.false.28}"];
+	Node0x2239140 -> Node0x2239190;
+	Node0x2239190 [shape=record,label="{pd_cond.end.32|{<s0>T|<s1>F}}"];
+	Node0x2239190:s0 -> Node0x2239230;
+	Node0x2239190:s1 -> Node0x22391e0;
+	Node0x22391e0 [shape=record,label="{pd_cond.end.32.if.end_crit_edge}"];
+	Node0x22391e0 -> Node0x2239280;
+	Node0x2239230 [shape=record,label="{pd_if.then}"];
+	Node0x2239230 -> Node0x2239280;
+	Node0x2239280 [shape=record,label="{pd_if.end}"];
+	Node0x2239280 -> Node0x34a4360;
+	Node0x34a4360 [shape=record,label="{it_if.end.split}"];
+	Node0x34a4360 -> Node0x2238e70;
+	Node0x22392d0 [shape=record,label="{for.end}"];
+}

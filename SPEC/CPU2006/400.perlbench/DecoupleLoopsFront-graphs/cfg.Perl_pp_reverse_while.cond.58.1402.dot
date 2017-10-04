@@ -1,0 +1,32 @@
+digraph "CFG for 'Perl_pp_reverse_while.cond.58' function" {
+	label="CFG for 'Perl_pp_reverse_while.cond.58' function";
+
+	Node0x4be38f0 [shape=record,label="{newFuncRoot}"];
+	Node0x4be38f0 -> Node0x4be3db0;
+	Node0x4be3d10 [shape=record,label="{while.cond.58.while.end.87_crit_edge.exitStub}"];
+	Node0x4be3d60 [shape=record,label="{if.else.67.while.end.87_crit_edge.exitStub}"];
+	Node0x4be3db0 [shape=record,label="{it_while.cond.58|{<s0>T|<s1>F}}"];
+	Node0x4be3db0:s0 -> Node0x4be3e00;
+	Node0x4be3db0:s1 -> Node0x4be3d10;
+	Node0x4be3e00 [shape=record,label="{it_while.body.61|{<s0>T|<s1>F}}"];
+	Node0x4be3e00:s0 -> Node0x4be3fe0;
+	Node0x4be3e00:s1 -> Node0x4be3e50;
+	Node0x4be3e50 [shape=record,label="{it_if.else.67|{<s0>T|<s1>F}}"];
+	Node0x4be3e50:s0 -> Node0x4be3ea0;
+	Node0x4be3e50:s1 -> Node0x4be3d60;
+	Node0x4be3ea0 [shape=record,label="{it_if.end.71}"];
+	Node0x4be3ea0 -> Node0x66f97a0;
+	Node0x66f97a0 [shape=record,label="{pd_if.end.71.split}"];
+	Node0x66f97a0 -> Node0x4be3ef0;
+	Node0x4be3ef0 [shape=record,label="{pd_while.cond.77|{<s0>T|<s1>F}}"];
+	Node0x4be3ef0:s0 -> Node0x4be3f90;
+	Node0x4be3ef0:s1 -> Node0x4be3f40;
+	Node0x4be3f40 [shape=record,label="{pd_while.cond.58.loopexit}"];
+	Node0x4be3f40 -> Node0x4be4030;
+	Node0x4be3f90 [shape=record,label="{pd_while.body.80}"];
+	Node0x4be3f90 -> Node0x4be3ef0;
+	Node0x4be3fe0 [shape=record,label="{it_if.then.65}"];
+	Node0x4be3fe0 -> Node0x4be4030;
+	Node0x4be4030 [shape=record,label="{pd_while.cond.58.backedge}"];
+	Node0x4be4030 -> Node0x4be3db0;
+}

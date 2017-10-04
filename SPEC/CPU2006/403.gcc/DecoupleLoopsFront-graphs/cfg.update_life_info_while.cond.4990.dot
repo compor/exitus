@@ -1,0 +1,16 @@
+digraph "CFG for 'update_life_info_while.cond' function" {
+	label="CFG for 'update_life_info_while.cond' function";
+
+	Node0xae7f2e0 [shape=record,label="{newFuncRoot}"];
+	Node0xae7f2e0 -> Node0xae7f3d0;
+	Node0xae7f330 [shape=record,label="{for.cond.122.preheader.loopexit.exitStub}"];
+	Node0xae7f380 [shape=record,label="{while.end.exitStub}"];
+	Node0xae7f3d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xae7f3d0:s0 -> Node0xae7f330;
+	Node0xae7f3d0:s1 -> Node0xae7f420;
+	Node0xae7f420 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xae7f420:s0 -> Node0xae7f470;
+	Node0xae7f420:s1 -> Node0xae7f380;
+	Node0xae7f470 [shape=record,label="{it_while.body}"];
+	Node0xae7f470 -> Node0xae7f3d0;
+}

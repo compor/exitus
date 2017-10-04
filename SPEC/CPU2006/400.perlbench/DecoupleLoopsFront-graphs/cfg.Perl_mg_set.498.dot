@@ -1,0 +1,35 @@
+digraph "CFG for 'Perl_mg_set' function" {
+	label="CFG for 'Perl_mg_set' function";
+
+	Node0x265cc20 [shape=record,label="{entry}"];
+	Node0x265cc20 -> Node0x265fa60;
+	Node0x265fa60 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x265fa60:s0 -> Node0x265fab0;
+	Node0x265fa60:s1 -> Node0x265fd80;
+	Node0x265fab0 [shape=record,label="{pd_for.body}"];
+	Node0x265fab0 -> Node0x3f4dc00;
+	Node0x3f4dc00 [shape=record,label="{it_for.body.split1}"];
+	Node0x3f4dc00 -> Node0x401a730;
+	Node0x401a730 [shape=record,label="{pd_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x401a730:s0 -> Node0x265fb50;
+	Node0x401a730:s1 -> Node0x265fb00;
+	Node0x265fb00 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x265fb00 -> Node0x265fba0;
+	Node0x265fb50 [shape=record,label="{pd_if.then}"];
+	Node0x265fb50 -> Node0x265fba0;
+	Node0x265fba0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x265fba0:s0 -> Node0x265fc90;
+	Node0x265fba0:s1 -> Node0x265fbf0;
+	Node0x265fbf0 [shape=record,label="{pd_if.end.for.cond.backedge_crit_edge}"];
+	Node0x265fbf0 -> Node0x265fc40;
+	Node0x265fc40 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x265fc40 -> Node0x265fa60;
+	Node0x265fc90 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x265fc90:s0 -> Node0x265fd30;
+	Node0x265fc90:s1 -> Node0x265fce0;
+	Node0x265fce0 [shape=record,label="{pd_land.lhs.true.for.cond.backedge_crit_edge}"];
+	Node0x265fce0 -> Node0x265fc40;
+	Node0x265fd30 [shape=record,label="{pd_if.then.8}"];
+	Node0x265fd30 -> Node0x265fc40;
+	Node0x265fd80 [shape=record,label="{for.end}"];
+}

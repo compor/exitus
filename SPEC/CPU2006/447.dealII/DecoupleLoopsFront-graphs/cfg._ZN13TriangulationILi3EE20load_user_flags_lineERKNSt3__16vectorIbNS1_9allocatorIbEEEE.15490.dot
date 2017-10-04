@@ -1,0 +1,26 @@
+digraph "CFG for '_ZN13TriangulationILi3EE20load_user_flags_lineERKNSt3__16vectorIbNS1_9allocatorIbEEEE' function" {
+	label="CFG for '_ZN13TriangulationILi3EE20load_user_flags_lineERKNSt3__16vectorIbNS1_9allocatorIbEEEE' function";
+
+	Node0x7a9fbc0 [shape=record,label="{entry}"];
+	Node0x7a9fbc0 -> Node0x7a9fc10;
+	Node0x7a9fc10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x7a9fc10:s0 -> Node0x7a9fc60;
+	Node0x7a9fc10:s1 -> Node0x7a9fe90;
+	Node0x7a9fc60 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x7a9fc60:s0 -> Node0x7a9fcb0;
+	Node0x7a9fc60:s1 -> Node0x7a9fd00;
+	Node0x7a9fcb0 [shape=record,label="{pd_if.then}"];
+	Node0x7a9fcb0 -> Node0x7a9fd50;
+	Node0x7a9fd00 [shape=record,label="{pd_if.else}"];
+	Node0x7a9fd00 -> Node0x7a9fd50;
+	Node0x7a9fd50 [shape=record,label="{pd_for.inc|{<s0>T|<s1>F}}"];
+	Node0x7a9fd50:s0 -> Node0x7a9fda0;
+	Node0x7a9fd50:s1 -> Node0x7a9fe40;
+	Node0x7a9fda0 [shape=record,label="{pd_if.then.i}"];
+	Node0x7a9fda0 -> Node0x7a9fdf0;
+	Node0x7a9fdf0 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x7a9fdf0 -> Node0x7a9fc10;
+	Node0x7a9fe40 [shape=record,label="{pd_if.else.i}"];
+	Node0x7a9fe40 -> Node0x7a9fdf0;
+	Node0x7a9fe90 [shape=record,label="{for.end}"];
+}

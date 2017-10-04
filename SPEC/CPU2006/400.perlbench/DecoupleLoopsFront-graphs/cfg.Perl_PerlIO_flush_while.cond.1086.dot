@@ -1,0 +1,28 @@
+digraph "CFG for 'Perl_PerlIO_flush_while.cond' function" {
+	label="CFG for 'Perl_PerlIO_flush_while.cond' function";
+
+	Node0x4d84420 [shape=record,label="{newFuncRoot}"];
+	Node0x4d84420 -> Node0x4d84930;
+	Node0x4d848e0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x4d84930 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d84930:s0 -> Node0x4d84980;
+	Node0x4d84930:s1 -> Node0x4d848e0;
+	Node0x4d84980 [shape=record,label="{pd_while.body}"];
+	Node0x4d84980 -> Node0x662f2d0;
+	Node0x662f2d0 [shape=record,label="{it_while.body.split}"];
+	Node0x662f2d0 -> Node0x4d849d0;
+	Node0x4d849d0 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4d849d0:s0 -> Node0x4d84a70;
+	Node0x4d849d0:s1 -> Node0x4d84a20;
+	Node0x4d84a20 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x4d84a20 -> Node0x4d84930;
+	Node0x4d84a70 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4d84a70:s0 -> Node0x4d84b10;
+	Node0x4d84a70:s1 -> Node0x4d84ac0;
+	Node0x4d84ac0 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x4d84ac0 -> Node0x4d84b60;
+	Node0x4d84b10 [shape=record,label="{pd_land.lhs.true.14}"];
+	Node0x4d84b10 -> Node0x4d84b60;
+	Node0x4d84b60 [shape=record,label="{pd_if.end}"];
+	Node0x4d84b60 -> Node0x4d849d0;
+}

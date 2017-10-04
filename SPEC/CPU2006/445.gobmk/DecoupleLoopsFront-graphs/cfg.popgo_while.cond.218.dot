@@ -1,0 +1,12 @@
+digraph "CFG for 'popgo_while.cond' function" {
+	label="CFG for 'popgo_while.cond' function";
+
+	Node0x3ddf530 [shape=record,label="{newFuncRoot}"];
+	Node0x3ddf530 -> Node0x3ddf5d0;
+	Node0x3ddf580 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0x3ddf5d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3ddf5d0:s0 -> Node0x3ddf620;
+	Node0x3ddf5d0:s1 -> Node0x3ddf580;
+	Node0x3ddf620 [shape=record,label="{pd_while.body}"];
+	Node0x3ddf620 -> Node0x3ddf5d0;
+}

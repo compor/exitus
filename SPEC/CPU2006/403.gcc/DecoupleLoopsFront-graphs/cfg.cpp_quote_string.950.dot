@@ -1,0 +1,24 @@
+digraph "CFG for 'cpp_quote_string' function" {
+	label="CFG for 'cpp_quote_string' function";
+
+	Node0x2aa4bc0 [shape=record,label="{entry}"];
+	Node0x2aa4bc0 -> Node0x2aa4c10;
+	Node0x2aa4c10 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2aa4c10:s0 -> Node0x2aa4c60;
+	Node0x2aa4c10:s1 -> Node0x2aa4e40;
+	Node0x2aa4c60 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x2aa4c60:s0 -> Node0x2aa4cb0;
+	Node0x2aa4c60:s1 -> Node0x2aa4d00;
+	Node0x2aa4cb0 [shape=record,label="{pd_if.then}"];
+	Node0x2aa4cb0 -> Node0x2aa4da0;
+	Node0x2aa4d00 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x2aa4d00:s0 -> Node0x2aa4d50;
+	Node0x2aa4d00:s1 -> Node0x2aa4df0;
+	Node0x2aa4d50 [shape=record,label="{pd_if.then.11}"];
+	Node0x2aa4d50 -> Node0x2aa4da0;
+	Node0x2aa4da0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x2aa4da0 -> Node0x2aa4c10;
+	Node0x2aa4df0 [shape=record,label="{pd_if.else.13}"];
+	Node0x2aa4df0 -> Node0x2aa4da0;
+	Node0x2aa4e40 [shape=record,label="{while.end}"];
+}

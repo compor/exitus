@@ -1,0 +1,38 @@
+digraph "CFG for 'expand_builtin_init_dwarf_reg_sizes' function" {
+	label="CFG for 'expand_builtin_init_dwarf_reg_sizes' function";
+
+	Node0x3ba9100 [shape=record,label="{entry}"];
+	Node0x3ba9100 -> Node0x3ba9150;
+	Node0x3ba9150 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3ba9150:s0 -> Node0x3ba91a0;
+	Node0x3ba9150:s1 -> Node0x3ba9560;
+	Node0x3ba91a0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3ba91a0:s0 -> Node0x3ba91f0;
+	Node0x3ba91a0:s1 -> Node0x3ba9240;
+	Node0x3ba91f0 [shape=record,label="{pd_cond.true}"];
+	Node0x3ba91f0 -> Node0x3ba9290;
+	Node0x3ba9240 [shape=record,label="{pd_cond.false}"];
+	Node0x3ba9240 -> Node0x3ba9290;
+	Node0x3ba9290 [shape=record,label="{pd_cond.end|{<s0>T|<s1>F}}"];
+	Node0x3ba9290:s0 -> Node0x3ba9330;
+	Node0x3ba9290:s1 -> Node0x3ba92e0;
+	Node0x3ba92e0 [shape=record,label="{pd_cond.end.for.inc_crit_edge}"];
+	Node0x3ba92e0 -> Node0x3ba9510;
+	Node0x3ba9330 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x3ba9330:s0 -> Node0x3ba9380;
+	Node0x3ba9330:s1 -> Node0x3ba93d0;
+	Node0x3ba9380 [shape=record,label="{pd_cond.true.8}"];
+	Node0x3ba9380 -> Node0x3ba9420;
+	Node0x3ba93d0 [shape=record,label="{pd_cond.false.11}"];
+	Node0x3ba93d0 -> Node0x3ba9420;
+	Node0x3ba9420 [shape=record,label="{pd_cond.end.14|{<s0>T|<s1>F}}"];
+	Node0x3ba9420:s0 -> Node0x3ba9470;
+	Node0x3ba9420:s1 -> Node0x3ba94c0;
+	Node0x3ba9470 [shape=record,label="{pd_cond.end.14.for.inc_crit_edge}"];
+	Node0x3ba9470 -> Node0x3ba9510;
+	Node0x3ba94c0 [shape=record,label="{pd_if.end}"];
+	Node0x3ba94c0 -> Node0x3ba9510;
+	Node0x3ba9510 [shape=record,label="{it_for.inc}"];
+	Node0x3ba9510 -> Node0x3ba9150;
+	Node0x3ba9560 [shape=record,label="{for.end}"];
+}

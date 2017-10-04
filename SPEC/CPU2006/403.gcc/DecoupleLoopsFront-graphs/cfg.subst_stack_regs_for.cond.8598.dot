@@ -1,0 +1,19 @@
+digraph "CFG for 'subst_stack_regs_for.cond' function" {
+	label="CFG for 'subst_stack_regs_for.cond' function";
+
+	Node0xb906b70 [shape=record,label="{newFuncRoot}"];
+	Node0xb906b70 -> Node0xb9074b0;
+	Node0xb906bc0 [shape=record,label="{if.end.54.loopexit.exitStub}"];
+	Node0xb9074b0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb9074b0:s0 -> Node0xb907500;
+	Node0xb9074b0:s1 -> Node0xb906bc0;
+	Node0xb907500 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xb907500:s0 -> Node0xb9075a0;
+	Node0xb907500:s1 -> Node0xb907550;
+	Node0xb907550 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xb907550 -> Node0xb9075f0;
+	Node0xb9075a0 [shape=record,label="{pd_if.then.39}"];
+	Node0xb9075a0 -> Node0xb9075f0;
+	Node0xb9075f0 [shape=record,label="{it_for.inc}"];
+	Node0xb9075f0 -> Node0xb9074b0;
+}

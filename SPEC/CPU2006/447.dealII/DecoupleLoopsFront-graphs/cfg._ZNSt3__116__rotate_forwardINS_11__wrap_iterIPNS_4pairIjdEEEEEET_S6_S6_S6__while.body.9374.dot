@@ -1,0 +1,21 @@
+digraph "CFG for '_ZNSt3__116__rotate_forwardINS_11__wrap_iterIPNS_4pairIjdEEEEEET_S6_S6_S6__while.body' function" {
+	label="CFG for '_ZNSt3__116__rotate_forwardINS_11__wrap_iterIPNS_4pairIjdEEEEEET_S6_S6_S6__while.body' function";
+
+	Node0x927e310 [shape=record,label="{newFuncRoot}"];
+	Node0x927e310 -> Node0x9374690;
+	Node0x9374640 [shape=record,label="{while.end.exitStub}"];
+	Node0x9374690 [shape=record,label="{pd_while.body}"];
+	Node0x9374690 -> Node0xb5f2270;
+	Node0xb5f2270 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0xb5f2270:s0 -> Node0x9374640;
+	Node0xb5f2270:s1 -> Node0x93746e0;
+	Node0x93746e0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x93746e0:s0 -> Node0x9374780;
+	Node0x93746e0:s1 -> Node0x9374730;
+	Node0x9374730 [shape=record,label="{pd_if.end.while.body.backedge_crit_edge}"];
+	Node0x9374730 -> Node0x93747d0;
+	Node0x9374780 [shape=record,label="{pd_if.then.8}"];
+	Node0x9374780 -> Node0x93747d0;
+	Node0x93747d0 [shape=record,label="{pd_while.body.backedge}"];
+	Node0x93747d0 -> Node0x9374690;
+}

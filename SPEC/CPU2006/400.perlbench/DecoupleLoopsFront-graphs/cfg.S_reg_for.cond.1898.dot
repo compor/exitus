@@ -1,0 +1,14 @@
+digraph "CFG for 'S_reg_for.cond' function" {
+	label="CFG for 'S_reg_for.cond' function";
+
+	Node0x50e3ab0 [shape=record,label="{newFuncRoot}"];
+	Node0x50e3ab0 -> Node0x5117570;
+	Node0x5117520 [shape=record,label="{if.end.1072.loopexit.exitStub}"];
+	Node0x5117570 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x5117570:s0 -> Node0x51175c0;
+	Node0x5117570:s1 -> Node0x5117520;
+	Node0x51175c0 [shape=record,label="{pd_for.body}"];
+	Node0x51175c0 -> Node0x6821a50;
+	Node0x6821a50 [shape=record,label="{it_for.body.split}"];
+	Node0x6821a50 -> Node0x5117570;
+}

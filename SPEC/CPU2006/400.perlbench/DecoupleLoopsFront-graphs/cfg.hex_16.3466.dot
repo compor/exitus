@@ -1,0 +1,14 @@
+digraph "CFG for 'hex_16' function" {
+	label="CFG for 'hex_16' function";
+
+	Node0x46768d0 [shape=record,label="{entry}"];
+	Node0x46768d0 -> Node0x4676920;
+	Node0x4676920 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4676920:s0 -> Node0x4676970;
+	Node0x4676920:s1 -> Node0x46769c0;
+	Node0x4676970 [shape=record,label="{pd_while.body}"];
+	Node0x4676970 -> Node0x6a45ac0;
+	Node0x6a45ac0 [shape=record,label="{it_while.body.split}"];
+	Node0x6a45ac0 -> Node0x4676920;
+	Node0x46769c0 [shape=record,label="{while.end}"];
+}

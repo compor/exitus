@@ -1,0 +1,23 @@
+digraph "CFG for 'PerlIOUnix_close_while.cond' function" {
+	label="CFG for 'PerlIOUnix_close_while.cond' function";
+
+	Node0x4da6260 [shape=record,label="{newFuncRoot}"];
+	Node0x4da6260 -> Node0x4da6350;
+	Node0x4da62b0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x4da6300 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0x4da6350 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4da6350:s0 -> Node0x4da63a0;
+	Node0x4da6350:s1 -> Node0x4da62b0;
+	Node0x4da63a0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4da63a0:s0 -> Node0x4da6300;
+	Node0x4da63a0:s1 -> Node0x4da63f0;
+	Node0x4da63f0 [shape=record,label="{pd_if.end.12|{<s0>T|<s1>F}}"];
+	Node0x4da63f0:s0 -> Node0x4da6490;
+	Node0x4da63f0:s1 -> Node0x4da6440;
+	Node0x4da6440 [shape=record,label="{pd_if.end.12.while.cond.backedge_crit_edge}"];
+	Node0x4da6440 -> Node0x4da64e0;
+	Node0x4da6490 [shape=record,label="{pd_if.then.14}"];
+	Node0x4da6490 -> Node0x4da64e0;
+	Node0x4da64e0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x4da64e0 -> Node0x4da6350;
+}

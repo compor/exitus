@@ -1,0 +1,19 @@
+digraph "CFG for 'emul' function" {
+	label="CFG for 'emul' function";
+
+	Node0x161d520 [shape=record,label="{entry}"];
+	Node0x161d520 -> Node0x161d570;
+	Node0x161d570 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x161d570:s0 -> Node0x161d5c0;
+	Node0x161d570:s1 -> Node0x161d700;
+	Node0x161d5c0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x161d5c0:s0 -> Node0x161d660;
+	Node0x161d5c0:s1 -> Node0x161d610;
+	Node0x161d610 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x161d610 -> Node0x161d6b0;
+	Node0x161d660 [shape=record,label="{pd_if.then}"];
+	Node0x161d660 -> Node0x161d6b0;
+	Node0x161d6b0 [shape=record,label="{it_for.inc}"];
+	Node0x161d6b0 -> Node0x161d570;
+	Node0x161d700 [shape=record,label="{for.end}"];
+}

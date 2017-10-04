@@ -1,0 +1,31 @@
+digraph "CFG for '_ZN3povL28All_IsoSurface_IntersectionsEPNS_13Object_StructEPNS_10Ray_StructEPNS_13istack_structE_for.cond' function" {
+	label="CFG for '_ZN3povL28All_IsoSurface_IntersectionsEPNS_13Object_StructEPNS_10Ray_StructEPNS_13istack_structE_for.cond' function";
+
+	Node0x1d26c80 [shape=record,label="{newFuncRoot}"];
+	Node0x1d26c80 -> Node0x1d26dc0;
+	Node0x1d26cd0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x1d26d20 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0x1d26d70 [shape=record,label="{if.end.194.for.end_crit_edge.exitStub}"];
+	Node0x1d26dc0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1d26dc0:s0 -> Node0x1d26e10;
+	Node0x1d26dc0:s1 -> Node0x1d26cd0;
+	Node0x1d26e10 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x1d26e10:s0 -> Node0x1d26d20;
+	Node0x1d26e10:s1 -> Node0x1d26e60;
+	Node0x1d26e60 [shape=record,label="{pd_if.else.182|{<s0>T|<s1>F}}"];
+	Node0x1d26e60:s0 -> Node0x1d26f00;
+	Node0x1d26e60:s1 -> Node0x1d26eb0;
+	Node0x1d26eb0 [shape=record,label="{pd_if.else.182.if.end.194_crit_edge}"];
+	Node0x1d26eb0 -> Node0x1d26f50;
+	Node0x1d26f00 [shape=record,label="{pd_if.then.191}"];
+	Node0x1d26f00 -> Node0x1d26f50;
+	Node0x1d26f50 [shape=record,label="{pd_if.end.194}"];
+	Node0x1d26f50 -> Node0x3760c10;
+	Node0x3760c10 [shape=record,label="{it_if.end.194.split|{<s0>T|<s1>F}}"];
+	Node0x3760c10:s0 -> Node0x1d26d70;
+	Node0x3760c10:s1 -> Node0x1d26fa0;
+	Node0x1d26fa0 [shape=record,label="{pd_if.end.201}"];
+	Node0x1d26fa0 -> Node0x3761590;
+	Node0x3761590 [shape=record,label="{it_if.end.201.split}"];
+	Node0x3761590 -> Node0x1d26dc0;
+}

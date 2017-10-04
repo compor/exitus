@@ -1,0 +1,40 @@
+digraph "CFG for 'decode_asm_operands_for.cond' function" {
+	label="CFG for 'decode_asm_operands_for.cond' function";
+
+	Node0xb86ff30 [shape=record,label="{newFuncRoot}"];
+	Node0xb86ff30 -> Node0xb86ffd0;
+	Node0xb86ff80 [shape=record,label="{for.end.exitStub}"];
+	Node0xb86ffd0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb86ffd0:s0 -> Node0xb870020;
+	Node0xb86ffd0:s1 -> Node0xb86ff80;
+	Node0xb870020 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xb870020:s0 -> Node0xb8700c0;
+	Node0xb870020:s1 -> Node0xb870070;
+	Node0xb870070 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0xb870070 -> Node0xb870110;
+	Node0xb8700c0 [shape=record,label="{pd_if.then.10}"];
+	Node0xb8700c0 -> Node0xb870110;
+	Node0xb870110 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0xb870110:s0 -> Node0xb8701b0;
+	Node0xb870110:s1 -> Node0xb870160;
+	Node0xb870160 [shape=record,label="{pd_if.end.if.end.28_crit_edge}"];
+	Node0xb870160 -> Node0xb870200;
+	Node0xb8701b0 [shape=record,label="{pd_if.then.18}"];
+	Node0xb8701b0 -> Node0xb870200;
+	Node0xb870200 [shape=record,label="{pd_if.end.28|{<s0>T|<s1>F}}"];
+	Node0xb870200:s0 -> Node0xb8702a0;
+	Node0xb870200:s1 -> Node0xb870250;
+	Node0xb870250 [shape=record,label="{pd_if.end.28.if.end.42_crit_edge}"];
+	Node0xb870250 -> Node0xb8702f0;
+	Node0xb8702a0 [shape=record,label="{pd_if.then.30}"];
+	Node0xb8702a0 -> Node0xb8702f0;
+	Node0xb8702f0 [shape=record,label="{pd_if.end.42|{<s0>T|<s1>F}}"];
+	Node0xb8702f0:s0 -> Node0xb870390;
+	Node0xb8702f0:s1 -> Node0xb870340;
+	Node0xb870340 [shape=record,label="{pd_if.end.42.for.inc_crit_edge}"];
+	Node0xb870340 -> Node0xb8703e0;
+	Node0xb870390 [shape=record,label="{pd_if.then.44}"];
+	Node0xb870390 -> Node0xb8703e0;
+	Node0xb8703e0 [shape=record,label="{it_for.inc}"];
+	Node0xb8703e0 -> Node0xb86ffd0;
+}

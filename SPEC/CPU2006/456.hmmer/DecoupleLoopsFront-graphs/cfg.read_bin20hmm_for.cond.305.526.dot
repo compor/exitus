@@ -1,0 +1,16 @@
+digraph "CFG for 'read_bin20hmm_for.cond.305' function" {
+	label="CFG for 'read_bin20hmm_for.cond.305' function";
+
+	Node0x30ce670 [shape=record,label="{newFuncRoot}"];
+	Node0x30ce670 -> Node0x30ce760;
+	Node0x30ce6c0 [shape=record,label="{for.cond.321.preheader.exitStub}"];
+	Node0x30ce710 [shape=record,label="{FAILURE.loopexit2.exitStub}"];
+	Node0x30ce760 [shape=record,label="{it_for.cond.305|{<s0>T|<s1>F}}"];
+	Node0x30ce760:s0 -> Node0x30ce7b0;
+	Node0x30ce760:s1 -> Node0x30ce6c0;
+	Node0x30ce7b0 [shape=record,label="{it_for.body.309|{<s0>T|<s1>F}}"];
+	Node0x30ce7b0:s0 -> Node0x30ce800;
+	Node0x30ce7b0:s1 -> Node0x30ce710;
+	Node0x30ce800 [shape=record,label="{it_for.inc.318}"];
+	Node0x30ce800 -> Node0x30ce760;
+}

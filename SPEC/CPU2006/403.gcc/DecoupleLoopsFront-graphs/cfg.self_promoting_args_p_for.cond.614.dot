@@ -1,0 +1,24 @@
+digraph "CFG for 'self_promoting_args_p_for.cond' function" {
+	label="CFG for 'self_promoting_args_p_for.cond' function";
+
+	Node0xa136150 [shape=record,label="{newFuncRoot}"];
+	Node0xa136150 -> Node0xa1362e0;
+	Node0xa1361a0 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0xa1361f0 [shape=record,label="{for.body.return_crit_edge.exitStub}"];
+	Node0xa136240 [shape=record,label="{if.end.4.return_crit_edge.exitStub}"];
+	Node0xa136290 [shape=record,label="{if.end.8.return_crit_edge.exitStub}"];
+	Node0xa1362e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa1362e0:s0 -> Node0xa136330;
+	Node0xa1362e0:s1 -> Node0xa1361a0;
+	Node0xa136330 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xa136330:s0 -> Node0xa1361f0;
+	Node0xa136330:s1 -> Node0xa136380;
+	Node0xa136380 [shape=record,label="{it_if.end.4|{<s0>T|<s1>F}}"];
+	Node0xa136380:s0 -> Node0xa136240;
+	Node0xa136380:s1 -> Node0xa1363d0;
+	Node0xa1363d0 [shape=record,label="{it_if.end.8|{<s0>T|<s1>F}}"];
+	Node0xa1363d0:s0 -> Node0xa136290;
+	Node0xa1363d0:s1 -> Node0xa136420;
+	Node0xa136420 [shape=record,label="{it_for.inc}"];
+	Node0xa136420 -> Node0xa1362e0;
+}

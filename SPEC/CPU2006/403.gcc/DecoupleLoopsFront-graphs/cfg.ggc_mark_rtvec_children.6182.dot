@@ -1,0 +1,24 @@
+digraph "CFG for 'ggc_mark_rtvec_children' function" {
+	label="CFG for 'ggc_mark_rtvec_children' function";
+
+	Node0x4f24e00 [shape=record,label="{entry}"];
+	Node0x4f24e00 -> Node0x4f24e50;
+	Node0x4f24e50 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4f24e50:s0 -> Node0x4f24ea0;
+	Node0x4f24e50:s1 -> Node0x4f25080;
+	Node0x4f24ea0 [shape=record,label="{pd_do.body|{<s0>T|<s1>F}}"];
+	Node0x4f24ea0:s0 -> Node0x4f24f90;
+	Node0x4f24ea0:s1 -> Node0x4f24ef0;
+	Node0x4f24ef0 [shape=record,label="{pd_do.body.while.cond.backedge_crit_edge}"];
+	Node0x4f24ef0 -> Node0x4f24f40;
+	Node0x4f24f40 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x4f24f40 -> Node0x4f24e50;
+	Node0x4f24f90 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4f24f90:s0 -> Node0x4f24fe0;
+	Node0x4f24f90:s1 -> Node0x4f25030;
+	Node0x4f24fe0 [shape=record,label="{pd_land.lhs.true.while.cond.backedge_crit_edge}"];
+	Node0x4f24fe0 -> Node0x4f24f40;
+	Node0x4f25030 [shape=record,label="{pd_if.then}"];
+	Node0x4f25030 -> Node0x4f24f40;
+	Node0x4f25080 [shape=record,label="{while.end}"];
+}

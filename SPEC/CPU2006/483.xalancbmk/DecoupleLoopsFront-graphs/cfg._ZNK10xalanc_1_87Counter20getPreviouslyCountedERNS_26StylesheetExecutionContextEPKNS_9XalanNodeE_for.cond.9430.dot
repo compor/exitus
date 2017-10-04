@@ -1,0 +1,20 @@
+digraph "CFG for '_ZNK10xalanc_1_87Counter20getPreviouslyCountedERNS_26StylesheetExecutionContextEPKNS_9XalanNodeE_for.cond' function" {
+	label="CFG for '_ZNK10xalanc_1_87Counter20getPreviouslyCountedERNS_26StylesheetExecutionContextEPKNS_9XalanNodeE_for.cond' function";
+
+	Node0x9f25dc0 [shape=record,label="{newFuncRoot}"];
+	Node0x9f25dc0 -> Node0x9f25f00;
+	Node0x9f25e10 [shape=record,label="{for.cond.for.end.loopexit_crit_edge.exitStub}"];
+	Node0x9f25e60 [shape=record,label="{if.then.exitStub}"];
+	Node0x9f25eb0 [shape=record,label="{if.end.for.end.loopexit_crit_edge.exitStub}"];
+	Node0x9f25f00 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9f25f00:s0 -> Node0x9f25f50;
+	Node0x9f25f00:s1 -> Node0x9f25e10;
+	Node0x9f25f50 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x9f25f50:s0 -> Node0x9f25e60;
+	Node0x9f25f50:s1 -> Node0x9f25fa0;
+	Node0x9f25fa0 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x9f25fa0:s0 -> Node0x9f25eb0;
+	Node0x9f25fa0:s1 -> Node0x9f25ff0;
+	Node0x9f25ff0 [shape=record,label="{it_for.inc}"];
+	Node0x9f25ff0 -> Node0x9f25f00;
+}

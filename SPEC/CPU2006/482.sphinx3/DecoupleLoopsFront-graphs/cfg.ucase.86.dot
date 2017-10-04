@@ -1,0 +1,28 @@
+digraph "CFG for 'ucase' function" {
+	label="CFG for 'ucase' function";
+
+	Node0xda2340 [shape=record,label="{entry}"];
+	Node0xda2340 -> Node0xda2390;
+	Node0xda2390 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xda2390:s0 -> Node0xda23e0;
+	Node0xda2390:s1 -> Node0xda2610;
+	Node0xda23e0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xda23e0:s0 -> Node0xda2480;
+	Node0xda23e0:s1 -> Node0xda2430;
+	Node0xda2430 [shape=record,label="{pd_for.body.cond.false_crit_edge}"];
+	Node0xda2430 -> Node0xda2570;
+	Node0xda2480 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xda2480:s0 -> Node0xda2520;
+	Node0xda2480:s1 -> Node0xda24d0;
+	Node0xda24d0 [shape=record,label="{pd_land.lhs.true.cond.false_crit_edge}"];
+	Node0xda24d0 -> Node0xda2570;
+	Node0xda2520 [shape=record,label="{pd_cond.true}"];
+	Node0xda2520 -> Node0xda25c0;
+	Node0xda2570 [shape=record,label="{pd_cond.false}"];
+	Node0xda2570 -> Node0xda25c0;
+	Node0xda25c0 [shape=record,label="{pd_cond.end}"];
+	Node0xda25c0 -> Node0x1430200;
+	Node0x1430200 [shape=record,label="{it_cond.end.split}"];
+	Node0x1430200 -> Node0xda2390;
+	Node0xda2610 [shape=record,label="{for.end}"];
+}

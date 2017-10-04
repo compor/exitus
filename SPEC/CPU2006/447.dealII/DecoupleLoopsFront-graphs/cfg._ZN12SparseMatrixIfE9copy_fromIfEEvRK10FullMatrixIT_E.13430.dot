@@ -1,0 +1,26 @@
+digraph "CFG for '_ZN12SparseMatrixIfE9copy_fromIfEEvRK10FullMatrixIT_E' function" {
+	label="CFG for '_ZN12SparseMatrixIfE9copy_fromIfEEvRK10FullMatrixIT_E' function";
+
+	Node0x71facd0 [shape=record,label="{entry}"];
+	Node0x71facd0 -> Node0x71fad20;
+	Node0x71fad20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x71fad20:s0 -> Node0x71fad70;
+	Node0x71fad20:s1 -> Node0x71fafa0;
+	Node0x71fad70 [shape=record,label="{pd_for.cond.3.preheader}"];
+	Node0x71fad70 -> Node0x71fadc0;
+	Node0x71fadc0 [shape=record,label="{pd_for.cond.3|{<s0>T|<s1>F}}"];
+	Node0x71fadc0:s0 -> Node0x71fae10;
+	Node0x71fadc0:s1 -> Node0x71faf50;
+	Node0x71fae10 [shape=record,label="{pd_for.body.6|{<s0>T|<s1>F}}"];
+	Node0x71fae10:s0 -> Node0x71faeb0;
+	Node0x71fae10:s1 -> Node0x71fae60;
+	Node0x71fae60 [shape=record,label="{pd_for.body.6.for.inc_crit_edge}"];
+	Node0x71fae60 -> Node0x71faf00;
+	Node0x71faeb0 [shape=record,label="{pd_if.then}"];
+	Node0x71faeb0 -> Node0x71faf00;
+	Node0x71faf00 [shape=record,label="{pd_for.inc}"];
+	Node0x71faf00 -> Node0x71fadc0;
+	Node0x71faf50 [shape=record,label="{it_for.inc.10}"];
+	Node0x71faf50 -> Node0x71fad20;
+	Node0x71fafa0 [shape=record,label="{for.end.12}"];
+}

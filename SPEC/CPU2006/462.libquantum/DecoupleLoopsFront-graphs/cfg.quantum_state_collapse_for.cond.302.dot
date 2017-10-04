@@ -1,0 +1,26 @@
+digraph "CFG for 'quantum_state_collapse_for.cond' function" {
+	label="CFG for 'quantum_state_collapse_for.cond' function";
+
+	Node0x16f3530 [shape=record,label="{newFuncRoot}"];
+	Node0x16f3530 -> Node0x16f35d0;
+	Node0x16f3580 [shape=record,label="{for.end.exitStub}"];
+	Node0x16f35d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x16f35d0:s0 -> Node0x16f3620;
+	Node0x16f35d0:s1 -> Node0x16f3580;
+	Node0x16f3620 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x16f3620:s0 -> Node0x16f3760;
+	Node0x16f3620:s1 -> Node0x16f3670;
+	Node0x16f3670 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x16f3670:s0 -> Node0x16f3710;
+	Node0x16f3670:s1 -> Node0x16f36c0;
+	Node0x16f36c0 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x16f36c0 -> Node0x16f47e0;
+	Node0x16f3710 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x16f3710 -> Node0x16f4830;
+	Node0x16f3760 [shape=record,label="{pd_for.body.if.then_crit_edge}"];
+	Node0x16f3760 -> Node0x16f47e0;
+	Node0x16f47e0 [shape=record,label="{pd_if.then}"];
+	Node0x16f47e0 -> Node0x16f4830;
+	Node0x16f4830 [shape=record,label="{it_for.inc}"];
+	Node0x16f4830 -> Node0x16f35d0;
+}

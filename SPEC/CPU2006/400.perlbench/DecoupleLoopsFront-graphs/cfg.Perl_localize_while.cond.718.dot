@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_localize_while.cond' function" {
+	label="CFG for 'Perl_localize_while.cond' function";
+
+	Node0x4c0dba0 [shape=record,label="{newFuncRoot}"];
+	Node0x4c0dba0 -> Node0x4c15330;
+	Node0x4c0dbf0 [shape=record,label="{while.cond.while.body.35.preheader_crit_edge.exitStub}"];
+	Node0x4c0dc40 [shape=record,label="{land.rhs.while.body.35.preheader_crit_edge.exitStub}"];
+	Node0x4c15330 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4c15330:s0 -> Node0x4c15380;
+	Node0x4c15330:s1 -> Node0x4c0dbf0;
+	Node0x4c15380 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x4c15380:s0 -> Node0x4c153d0;
+	Node0x4c15380:s1 -> Node0x4c0dc40;
+	Node0x4c153d0 [shape=record,label="{it_while.body}"];
+	Node0x4c153d0 -> Node0x4c15330;
+}

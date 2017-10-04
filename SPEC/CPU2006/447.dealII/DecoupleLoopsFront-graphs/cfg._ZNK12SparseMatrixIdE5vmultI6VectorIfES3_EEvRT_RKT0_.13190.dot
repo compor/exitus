@@ -1,0 +1,21 @@
+digraph "CFG for '_ZNK12SparseMatrixIdE5vmultI6VectorIfES3_EEvRT_RKT0_' function" {
+	label="CFG for '_ZNK12SparseMatrixIdE5vmultI6VectorIfES3_EEvRT_RKT0_' function";
+
+	Node0x241de10 [shape=record,label="{entry}"];
+	Node0x241de10 -> Node0x241de60;
+	Node0x241de60 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x241de60:s0 -> Node0x241deb0;
+	Node0x241de60:s1 -> Node0x241dff0;
+	Node0x241deb0 [shape=record,label="{pd_for.body}"];
+	Node0x241deb0 -> Node0x241df00;
+	Node0x241df00 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x241df00:s0 -> Node0x241df50;
+	Node0x241df00:s1 -> Node0x241dfa0;
+	Node0x241df50 [shape=record,label="{pd_while.body}"];
+	Node0x241df50 -> Node0x241df00;
+	Node0x241dfa0 [shape=record,label="{pd_while.end}"];
+	Node0x241dfa0 -> Node0xb185a20;
+	Node0xb185a20 [shape=record,label="{it_while.end.split}"];
+	Node0xb185a20 -> Node0x241de60;
+	Node0x241dff0 [shape=record,label="{for.end}"];
+}

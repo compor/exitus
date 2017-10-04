@@ -1,0 +1,23 @@
+digraph "CFG for 'Perl_str_to_version_while.cond' function" {
+	label="CFG for 'Perl_str_to_version_while.cond' function";
+
+	Node0x5543f70 [shape=record,label="{newFuncRoot}"];
+	Node0x5543f70 -> Node0x5544010;
+	Node0x5543fc0 [shape=record,label="{while.end.exitStub}"];
+	Node0x5544010 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x5544010:s0 -> Node0x5544060;
+	Node0x5544010:s1 -> Node0x5543fc0;
+	Node0x5544060 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x5544060:s0 -> Node0x5544100;
+	Node0x5544060:s1 -> Node0x55440b0;
+	Node0x55440b0 [shape=record,label="{pd_if.else}"];
+	Node0x55440b0 -> Node0x5544150;
+	Node0x5544100 [shape=record,label="{pd_if.then}"];
+	Node0x5544100 -> Node0x5544150;
+	Node0x5544150 [shape=record,label="{pd_if.end}"];
+	Node0x5544150 -> Node0x6ea8180;
+	Node0x6ea8180 [shape=record,label="{it_if.end.split1}"];
+	Node0x6ea8180 -> Node0x6e5c650;
+	Node0x6e5c650 [shape=record,label="{pd_if.end.split}"];
+	Node0x6e5c650 -> Node0x5544010;
+}

@@ -1,0 +1,38 @@
+digraph "CFG for 'Perl_yylex_while.cond.2399' function" {
+	label="CFG for 'Perl_yylex_while.cond.2399' function";
+
+	Node0x555d510 [shape=record,label="{newFuncRoot}"];
+	Node0x555d510 -> Node0x555d600;
+	Node0x555d560 [shape=record,label="{while.cond.2399.while.end.2428_crit_edge.exitStub}"];
+	Node0x555d5b0 [shape=record,label="{lor.rhs.2418.while.end.2428_crit_edge.exitStub}"];
+	Node0x555d600 [shape=record,label="{it_while.cond.2399|{<s0>T|<s1>F}}"];
+	Node0x555d600:s0 -> Node0x555d650;
+	Node0x555d600:s1 -> Node0x555d560;
+	Node0x555d650 [shape=record,label="{it_land.rhs.2402|{<s0>T|<s1>F}}"];
+	Node0x555d650:s0 -> Node0x5568ea0;
+	Node0x555d650:s1 -> Node0x5568c20;
+	Node0x5568c20 [shape=record,label="{it_lor.lhs.false.2406|{<s0>T|<s1>F}}"];
+	Node0x5568c20:s0 -> Node0x5568e50;
+	Node0x5568c20:s1 -> Node0x5568c70;
+	Node0x5568c70 [shape=record,label="{it_lor.lhs.false.2410|{<s0>T|<s1>F}}"];
+	Node0x5568c70:s0 -> Node0x5568e00;
+	Node0x5568c70:s1 -> Node0x5568cc0;
+	Node0x5568cc0 [shape=record,label="{it_lor.lhs.false.2414|{<s0>T|<s1>F}}"];
+	Node0x5568cc0:s0 -> Node0x5568db0;
+	Node0x5568cc0:s1 -> Node0x5568d10;
+	Node0x5568d10 [shape=record,label="{it_lor.rhs.2418|{<s0>T|<s1>F}}"];
+	Node0x5568d10:s0 -> Node0x5568d60;
+	Node0x5568d10:s1 -> Node0x555d5b0;
+	Node0x5568d60 [shape=record,label="{pd_lor.rhs.2418.while.body.2426_crit_edge}"];
+	Node0x5568d60 -> Node0x5568ef0;
+	Node0x5568db0 [shape=record,label="{pd_lor.lhs.false.2414.while.body.2426_crit_edge}"];
+	Node0x5568db0 -> Node0x5568ef0;
+	Node0x5568e00 [shape=record,label="{pd_lor.lhs.false.2410.while.body.2426_crit_edge}"];
+	Node0x5568e00 -> Node0x5568ef0;
+	Node0x5568e50 [shape=record,label="{pd_lor.lhs.false.2406.while.body.2426_crit_edge}"];
+	Node0x5568e50 -> Node0x5568ef0;
+	Node0x5568ea0 [shape=record,label="{pd_land.rhs.2402.while.body.2426_crit_edge}"];
+	Node0x5568ea0 -> Node0x5568ef0;
+	Node0x5568ef0 [shape=record,label="{it_while.body.2426}"];
+	Node0x5568ef0 -> Node0x555d600;
+}

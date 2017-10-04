@@ -1,0 +1,18 @@
+digraph "CFG for '_ZNSt3__120get_temporary_bufferIN10xalanc_1_810NodeSorter11VectorEntryEEENS_4pairIPT_lEEl_while.cond' function" {
+	label="CFG for '_ZNSt3__120get_temporary_bufferIN10xalanc_1_810NodeSorter11VectorEntryEEENS_4pairIPT_lEEl_while.cond' function";
+
+	Node0x9f87be0 [shape=record,label="{newFuncRoot}"];
+	Node0x9f87be0 -> Node0x9f87cd0;
+	Node0x9f87c30 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0x9f87c80 [shape=record,label="{if.then.4.exitStub}"];
+	Node0x9f87cd0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9f87cd0:s0 -> Node0x9f87d20;
+	Node0x9f87cd0:s1 -> Node0x9f87c30;
+	Node0x9f87d20 [shape=record,label="{pd_while.body}"];
+	Node0x9f87d20 -> Node0xd0a7810;
+	Node0xd0a7810 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0xd0a7810:s0 -> Node0x9f87c80;
+	Node0xd0a7810:s1 -> Node0x9f87d70;
+	Node0x9f87d70 [shape=record,label="{it_if.end.5}"];
+	Node0x9f87d70 -> Node0x9f87cd0;
+}

@@ -1,0 +1,30 @@
+digraph "CFG for 'gametree_for.cond' function" {
+	label="CFG for 'gametree_for.cond' function";
+
+	Node0x3335c70 [shape=record,label="{newFuncRoot}"];
+	Node0x3335c70 -> Node0x3335d60;
+	Node0x3335cc0 [shape=record,label="{if.then.2.exitStub}"];
+	Node0x3335d10 [shape=record,label="{if.end.10.loopexit.exitStub}"];
+	Node0x3335d60 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3335d60:s0 -> Node0x3335cc0;
+	Node0x3335d60:s1 -> Node0x3335db0;
+	Node0x3335db0 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x3335db0:s0 -> Node0x3335e50;
+	Node0x3335db0:s1 -> Node0x3335e00;
+	Node0x3335e00 [shape=record,label="{pd_if.end.if.end.9_crit_edge}"];
+	Node0x3335e00 -> Node0x3335f90;
+	Node0x3335e50 [shape=record,label="{pd_while.cond.preheader}"];
+	Node0x3335e50 -> Node0x3335ea0;
+	Node0x3335ea0 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3335ea0:s0 -> Node0x3335fe0;
+	Node0x3335ea0:s1 -> Node0x3335ef0;
+	Node0x3335ef0 [shape=record,label="{it_while.end|{<s0>T|<s1>F}}"];
+	Node0x3335ef0:s0 -> Node0x3335d10;
+	Node0x3335ef0:s1 -> Node0x3335f40;
+	Node0x3335f40 [shape=record,label="{pd_while.end.if.end.9_crit_edge}"];
+	Node0x3335f40 -> Node0x3335f90;
+	Node0x3335f90 [shape=record,label="{pd_if.end.9}"];
+	Node0x3335f90 -> Node0x3335d60;
+	Node0x3335fe0 [shape=record,label="{pd_while.body}"];
+	Node0x3335fe0 -> Node0x3335ea0;
+}

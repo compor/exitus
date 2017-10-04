@@ -1,0 +1,43 @@
+digraph "CFG for 'normalize_coefficients' function" {
+	label="CFG for 'normalize_coefficients' function";
+
+	Node0x39d0cb0 [shape=record,label="{entry}"];
+	Node0x39d0cb0 -> Node0x39fa630;
+	Node0x39fa630 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x39fa630:s0 -> Node0x39fa680;
+	Node0x39fa630:s1 -> Node0x39faae0;
+	Node0x39fa680 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x39fa680 -> Node0x39fa6d0;
+	Node0x39fa6d0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x39fa6d0:s0 -> Node0x39fa720;
+	Node0x39fa6d0:s1 -> Node0x39faa90;
+	Node0x39fa720 [shape=record,label="{pd_for.body.2}"];
+	Node0x39fa720 -> Node0x39fa770;
+	Node0x39fa770 [shape=record,label="{pd_for.cond.3|{<s0>T|<s1>F}}"];
+	Node0x39fa770:s0 -> Node0x39fa7c0;
+	Node0x39fa770:s1 -> Node0x39fa9f0;
+	Node0x39fa7c0 [shape=record,label="{pd_for.body.5|{<s0>T|<s1>F}}"];
+	Node0x39fa7c0:s0 -> Node0x39fa810;
+	Node0x39fa7c0:s1 -> Node0x39fa9a0;
+	Node0x39fa810 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x39fa810:s0 -> Node0x39fa860;
+	Node0x39fa810:s1 -> Node0x39fa8b0;
+	Node0x39fa860 [shape=record,label="{pd_if.then.9}"];
+	Node0x39fa860 -> Node0x39faa40;
+	Node0x39fa8b0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x39fa8b0:s0 -> Node0x39fa950;
+	Node0x39fa8b0:s1 -> Node0x39fa900;
+	Node0x39fa900 [shape=record,label="{pd_if.else.for.inc.35_crit_edge}"];
+	Node0x39fa900 -> Node0x39faa40;
+	Node0x39fa950 [shape=record,label="{pd_if.then.17}"];
+	Node0x39fa950 -> Node0x39faa40;
+	Node0x39fa9a0 [shape=record,label="{pd_for.inc}"];
+	Node0x39fa9a0 -> Node0x39fa770;
+	Node0x39fa9f0 [shape=record,label="{pd_for.inc.35.loopexit}"];
+	Node0x39fa9f0 -> Node0x39faa40;
+	Node0x39faa40 [shape=record,label="{pd_for.inc.35}"];
+	Node0x39faa40 -> Node0x39fa6d0;
+	Node0x39faa90 [shape=record,label="{it_for.inc.37}"];
+	Node0x39faa90 -> Node0x39fa630;
+	Node0x39faae0 [shape=record,label="{for.end.38}"];
+}

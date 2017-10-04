@@ -1,0 +1,45 @@
+digraph "CFG for '_ZN3povL10in_polygonEiPA2_ddd' function" {
+	label="CFG for '_ZN3povL10in_polygonEiPA2_ddd' function";
+
+	Node0x1af8500 [shape=record,label="{entry}"];
+	Node0x1af8500 -> Node0x1af8550;
+	Node0x1af8550 [shape=record,label="{pd_for.cond.outer}"];
+	Node0x1af8550 -> Node0x1af85a0;
+	Node0x1af85a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1af85a0:s0 -> Node0x1af85f0;
+	Node0x1af85a0:s1 -> Node0x1af8a00;
+	Node0x1af85f0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x1af85f0:s0 -> Node0x1af8690;
+	Node0x1af85f0:s1 -> Node0x1af8640;
+	Node0x1af8640 [shape=record,label="{pd_for.body.if.end.25_crit_edge}"];
+	Node0x1af8640 -> Node0x1af8780;
+	Node0x1af8690 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x1af8690:s0 -> Node0x1af8730;
+	Node0x1af8690:s1 -> Node0x1af86e0;
+	Node0x1af86e0 [shape=record,label="{pd_if.then.if.end.25_crit_edge}"];
+	Node0x1af86e0 -> Node0x1af8780;
+	Node0x1af8730 [shape=record,label="{pd_if.then.23}"];
+	Node0x1af8730 -> Node0x1af8780;
+	Node0x1af8780 [shape=record,label="{it_if.end.25|{<s0>T|<s1>F}}"];
+	Node0x1af8780:s0 -> Node0x1af8820;
+	Node0x1af8780:s1 -> Node0x1af87d0;
+	Node0x1af87d0 [shape=record,label="{pd_if.end.25.if.else_crit_edge}"];
+	Node0x1af87d0 -> Node0x1af89b0;
+	Node0x1af8820 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x1af8820:s0 -> Node0x1af88c0;
+	Node0x1af8820:s1 -> Node0x1af8870;
+	Node0x1af8870 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0x1af8870 -> Node0x1af89b0;
+	Node0x1af88c0 [shape=record,label="{it_land.lhs.true.31|{<s0>T|<s1>F}}"];
+	Node0x1af88c0:s0 -> Node0x1af8960;
+	Node0x1af88c0:s1 -> Node0x1af8910;
+	Node0x1af8910 [shape=record,label="{pd_land.lhs.true.31.if.else_crit_edge}"];
+	Node0x1af8910 -> Node0x1af89b0;
+	Node0x1af8960 [shape=record,label="{it_if.then.35}"];
+	Node0x1af8960 -> Node0x3369be0;
+	Node0x3369be0 [shape=record,label="{pd_if.then.35.split}"];
+	Node0x3369be0 -> Node0x1af8550;
+	Node0x1af89b0 [shape=record,label="{it_if.else}"];
+	Node0x1af89b0 -> Node0x1af85a0;
+	Node0x1af8a00 [shape=record,label="{for.end}"];
+}

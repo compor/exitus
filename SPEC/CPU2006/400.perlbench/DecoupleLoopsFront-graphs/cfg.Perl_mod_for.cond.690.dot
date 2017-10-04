@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_mod_for.cond' function" {
+	label="CFG for 'Perl_mod_for.cond' function";
+
+	Node0x4c00930 [shape=record,label="{newFuncRoot}"];
+	Node0x4c00930 -> Node0x4c009d0;
+	Node0x4c00980 [shape=record,label="{sw.epilog.loopexit.exitStub}"];
+	Node0x4c009d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4c009d0:s0 -> Node0x4c00a20;
+	Node0x4c009d0:s1 -> Node0x4c00980;
+	Node0x4c00a20 [shape=record,label="{pd_for.body}"];
+	Node0x4c00a20 -> Node0x658c320;
+	Node0x658c320 [shape=record,label="{it_for.body.split}"];
+	Node0x658c320 -> Node0x4c009d0;
+}

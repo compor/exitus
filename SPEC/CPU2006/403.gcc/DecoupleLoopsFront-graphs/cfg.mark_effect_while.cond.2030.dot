@@ -1,0 +1,12 @@
+digraph "CFG for 'mark_effect_while.cond' function" {
+	label="CFG for 'mark_effect_while.cond' function";
+
+	Node0x7b00680 [shape=record,label="{newFuncRoot}"];
+	Node0x7b00680 -> Node0xa528b70;
+	Node0xa528b20 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xa528b70 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa528b70:s0 -> Node0xa528bc0;
+	Node0xa528b70:s1 -> Node0xa528b20;
+	Node0xa528bc0 [shape=record,label="{pd_while.body}"];
+	Node0xa528bc0 -> Node0xa528b70;
+}

@@ -1,0 +1,33 @@
+digraph "CFG for 'purge_mem_unchanging_flag_for.cond' function" {
+	label="CFG for 'purge_mem_unchanging_flag_for.cond' function";
+
+	Node0xc2852d0 [shape=record,label="{newFuncRoot}"];
+	Node0xc2852d0 -> Node0xc28bc60;
+	Node0xc28bc10 [shape=record,label="{for.end.70.loopexit.exitStub}"];
+	Node0xc28bc60 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc28bc60:s0 -> Node0xc28bcb0;
+	Node0xc28bc60:s1 -> Node0xc28bc10;
+	Node0xc28bcb0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xc28bcb0:s0 -> Node0xc28cfa0;
+	Node0xc28bcb0:s1 -> Node0xc28bd00;
+	Node0xc28bd00 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0xc28bd00:s0 -> Node0xc28bda0;
+	Node0xc28bd00:s1 -> Node0xc28bd50;
+	Node0xc28bd50 [shape=record,label="{pd_if.else.for.inc.68_crit_edge}"];
+	Node0xc28bd50 -> Node0xc28cff0;
+	Node0xc28bda0 [shape=record,label="{pd_for.cond.53.preheader}"];
+	Node0xc28bda0 -> Node0xc28bdf0;
+	Node0xc28bdf0 [shape=record,label="{pd_for.cond.53|{<s0>T|<s1>F}}"];
+	Node0xc28bdf0:s0 -> Node0xc28be90;
+	Node0xc28bdf0:s1 -> Node0xc28be40;
+	Node0xc28be40 [shape=record,label="{pd_for.inc.68.loopexit}"];
+	Node0xc28be40 -> Node0xc28cff0;
+	Node0xc28be90 [shape=record,label="{pd_for.body.59}"];
+	Node0xc28be90 -> Node0xc28bdf0;
+	Node0xc28cfa0 [shape=record,label="{pd_if.then.44}"];
+	Node0xc28cfa0 -> Node0xc28cff0;
+	Node0xc28cff0 [shape=record,label="{it_for.inc.68}"];
+	Node0xc28cff0 -> Node0xfad6a80;
+	Node0xfad6a80 [shape=record,label="{pd_for.inc.68.split}"];
+	Node0xfad6a80 -> Node0xc28bc60;
+}

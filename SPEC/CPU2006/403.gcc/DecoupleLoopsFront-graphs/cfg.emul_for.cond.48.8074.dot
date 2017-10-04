@@ -1,0 +1,16 @@
+digraph "CFG for 'emul_for.cond.48' function" {
+	label="CFG for 'emul_for.cond.48' function";
+
+	Node0xb7d8430 [shape=record,label="{newFuncRoot}"];
+	Node0xb7d8430 -> Node0xb7d88f0;
+	Node0xb7d8480 [shape=record,label="{for.end.64.exitStub}"];
+	Node0xb7d88a0 [shape=record,label="{if.then.57.exitStub}"];
+	Node0xb7d88f0 [shape=record,label="{it_for.cond.48|{<s0>T|<s1>F}}"];
+	Node0xb7d88f0:s0 -> Node0xb7d8940;
+	Node0xb7d88f0:s1 -> Node0xb7d8480;
+	Node0xb7d8940 [shape=record,label="{it_for.body.51|{<s0>T|<s1>F}}"];
+	Node0xb7d8940:s0 -> Node0xb7d88a0;
+	Node0xb7d8940:s1 -> Node0xb7d8990;
+	Node0xb7d8990 [shape=record,label="{it_for.inc.62}"];
+	Node0xb7d8990 -> Node0xb7d88f0;
+}

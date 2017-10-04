@@ -1,0 +1,12 @@
+digraph "CFG for 'invalidate_while.cond' function" {
+	label="CFG for 'invalidate_while.cond' function";
+
+	Node0xa7c3e30 [shape=record,label="{newFuncRoot}"];
+	Node0xa7c3e30 -> Node0xa8fdf60;
+	Node0xa8fdf10 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xa8fdf60 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa8fdf60:s0 -> Node0xa8fdfb0;
+	Node0xa8fdf60:s1 -> Node0xa8fdf10;
+	Node0xa8fdfb0 [shape=record,label="{pd_while.body}"];
+	Node0xa8fdfb0 -> Node0xa8fdf60;
+}

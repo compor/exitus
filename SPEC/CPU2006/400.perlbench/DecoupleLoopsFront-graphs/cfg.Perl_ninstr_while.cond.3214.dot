@@ -1,0 +1,37 @@
+digraph "CFG for 'Perl_ninstr_while.cond' function" {
+	label="CFG for 'Perl_ninstr_while.cond' function";
+
+	Node0x5801140 [shape=record,label="{newFuncRoot}"];
+	Node0x5801140 -> Node0x5801230;
+	Node0x5801190 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x58011e0 [shape=record,label="{if.then.33.exitStub}"];
+	Node0x5801230 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x5801230:s0 -> Node0x5801280;
+	Node0x5801230:s1 -> Node0x5801190;
+	Node0x5801280 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x5801280:s0 -> Node0x5801550;
+	Node0x5801280:s1 -> Node0x58012d0;
+	Node0x58012d0 [shape=record,label="{pd_for.cond.preheader}"];
+	Node0x58012d0 -> Node0x5801320;
+	Node0x5801320 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x5801320:s0 -> Node0x58013c0;
+	Node0x5801320:s1 -> Node0x5801370;
+	Node0x5801370 [shape=record,label="{pd_for.end.loopexit}"];
+	Node0x5801370 -> Node0x58014b0;
+	Node0x58013c0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x58013c0:s0 -> Node0x5801460;
+	Node0x58013c0:s1 -> Node0x5801410;
+	Node0x5801410 [shape=record,label="{pd_for.body.for.cond_crit_edge}"];
+	Node0x5801410 -> Node0x5801320;
+	Node0x5801460 [shape=record,label="{it_if.then.28}"];
+	Node0x5801460 -> Node0x58014b0;
+	Node0x58014b0 [shape=record,label="{it_for.end|{<s0>T|<s1>F}}"];
+	Node0x58014b0:s0 -> Node0x58011e0;
+	Node0x58014b0:s1 -> Node0x5801500;
+	Node0x5801500 [shape=record,label="{pd_for.end.while.cond.backedge_crit_edge}"];
+	Node0x5801500 -> Node0x58015a0;
+	Node0x5801550 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0x5801550 -> Node0x58015a0;
+	Node0x58015a0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x58015a0 -> Node0x5801230;
+}

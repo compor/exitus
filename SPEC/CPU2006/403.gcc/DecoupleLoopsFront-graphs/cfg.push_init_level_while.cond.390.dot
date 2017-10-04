@@ -1,0 +1,41 @@
+digraph "CFG for 'push_init_level_while.cond' function" {
+	label="CFG for 'push_init_level_while.cond' function";
+
+	Node0xa070f00 [shape=record,label="{newFuncRoot}"];
+	Node0xa070f00 -> Node0xa073e40;
+	Node0xa073d50 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xa073da0 [shape=record,label="{if.else.while.end_crit_edge.exitStub}"];
+	Node0xa073df0 [shape=record,label="{land.lhs.true.13.while.end_crit_edge.exitStub}"];
+	Node0xa073e40 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa073e40:s0 -> Node0xa073e90;
+	Node0xa073e40:s1 -> Node0xa073d50;
+	Node0xa073e90 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xa073e90:s0 -> Node0xa073fd0;
+	Node0xa073e90:s1 -> Node0xa073ee0;
+	Node0xa073ee0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xa073ee0:s0 -> Node0xa073f80;
+	Node0xa073ee0:s1 -> Node0xa073f30;
+	Node0xa073f30 [shape=record,label="{pd_lor.lhs.false.if.else_crit_edge}"];
+	Node0xa073f30 -> Node0xa074070;
+	Node0xa073f80 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0xa073f80 -> Node0xa0741b0;
+	Node0xa073fd0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xa073fd0:s0 -> Node0xa074160;
+	Node0xa073fd0:s1 -> Node0xa074020;
+	Node0xa074020 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0xa074020 -> Node0xa074070;
+	Node0xa074070 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0xa074070:s0 -> Node0xa0740c0;
+	Node0xa074070:s1 -> Node0xa073da0;
+	Node0xa0740c0 [shape=record,label="{it_land.lhs.true.13|{<s0>T|<s1>F}}"];
+	Node0xa0740c0:s0 -> Node0xa074110;
+	Node0xa0740c0:s1 -> Node0xa073df0;
+	Node0xa074110 [shape=record,label="{pd_if.then.16}"];
+	Node0xa074110 -> Node0xa074200;
+	Node0xa074160 [shape=record,label="{pd_land.lhs.true.if.then_crit_edge}"];
+	Node0xa074160 -> Node0xa0741b0;
+	Node0xa0741b0 [shape=record,label="{pd_if.then}"];
+	Node0xa0741b0 -> Node0xa074200;
+	Node0xa074200 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0xa074200 -> Node0xa073e40;
+}

@@ -1,0 +1,25 @@
+digraph "CFG for 'Perl_vload_module_while.cond' function" {
+	label="CFG for 'Perl_vload_module_while.cond' function";
+
+	Node0x4c33470 [shape=record,label="{newFuncRoot}"];
+	Node0x4c33470 -> Node0x4c33510;
+	Node0x4c334c0 [shape=record,label="{if.end.40.loopexit.exitStub}"];
+	Node0x4c33510 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4c33510:s0 -> Node0x4c33560;
+	Node0x4c33510:s1 -> Node0x4c334c0;
+	Node0x4c33560 [shape=record,label="{pd_while.body}"];
+	Node0x4c33560 -> Node0x6599850;
+	Node0x6599850 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x6599850:s0 -> Node0x4c33600;
+	Node0x6599850:s1 -> Node0x4c335b0;
+	Node0x4c335b0 [shape=record,label="{it_vaarg.in_mem.33}"];
+	Node0x4c335b0 -> Node0x65a0c90;
+	Node0x65a0c90 [shape=record,label="{pd_vaarg.in_mem.33.split}"];
+	Node0x65a0c90 -> Node0x4c33650;
+	Node0x4c33600 [shape=record,label="{it_vaarg.in_reg.31}"];
+	Node0x4c33600 -> Node0x6599800;
+	Node0x6599800 [shape=record,label="{pd_vaarg.in_reg.31.split}"];
+	Node0x6599800 -> Node0x4c33650;
+	Node0x4c33650 [shape=record,label="{it_vaarg.end.37}"];
+	Node0x4c33650 -> Node0x4c33510;
+}

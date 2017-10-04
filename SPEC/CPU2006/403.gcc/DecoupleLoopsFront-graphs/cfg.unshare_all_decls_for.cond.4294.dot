@@ -1,0 +1,26 @@
+digraph "CFG for 'unshare_all_decls_for.cond' function" {
+	label="CFG for 'unshare_all_decls_for.cond' function";
+
+	Node0xac973b0 [shape=record,label="{newFuncRoot}"];
+	Node0xac973b0 -> Node0xac97450;
+	Node0xac97400 [shape=record,label="{for.end.exitStub}"];
+	Node0xac97450 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xac97450:s0 -> Node0xac974a0;
+	Node0xac97450:s1 -> Node0xac97400;
+	Node0xac974a0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xac974a0:s0 -> Node0xac97540;
+	Node0xac974a0:s1 -> Node0xac974f0;
+	Node0xac974f0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xac974f0 -> Node0xac97680;
+	Node0xac97540 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0xac97540:s0 -> Node0xac975e0;
+	Node0xac97540:s1 -> Node0xac97590;
+	Node0xac97590 [shape=record,label="{pd_cond.false}"];
+	Node0xac97590 -> Node0xac97630;
+	Node0xac975e0 [shape=record,label="{pd_cond.true}"];
+	Node0xac975e0 -> Node0xac97630;
+	Node0xac97630 [shape=record,label="{pd_cond.end}"];
+	Node0xac97630 -> Node0xac97680;
+	Node0xac97680 [shape=record,label="{it_for.inc}"];
+	Node0xac97680 -> Node0xac97450;
+}

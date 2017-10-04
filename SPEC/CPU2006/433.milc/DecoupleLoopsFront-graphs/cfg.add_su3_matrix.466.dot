@@ -1,0 +1,19 @@
+digraph "CFG for 'add_su3_matrix' function" {
+	label="CFG for 'add_su3_matrix' function";
+
+	Node0x184b860 [shape=record,label="{entry}"];
+	Node0x184b860 -> Node0x184b8b0;
+	Node0x184b8b0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x184b8b0:s0 -> Node0x184b900;
+	Node0x184b8b0:s1 -> Node0x184ba40;
+	Node0x184b900 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x184b900 -> Node0x184b950;
+	Node0x184b950 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x184b950:s0 -> Node0x184b9a0;
+	Node0x184b950:s1 -> Node0x184b9f0;
+	Node0x184b9a0 [shape=record,label="{pd_for.body.3}"];
+	Node0x184b9a0 -> Node0x184b950;
+	Node0x184b9f0 [shape=record,label="{it_for.inc.36}"];
+	Node0x184b9f0 -> Node0x184b8b0;
+	Node0x184ba40 [shape=record,label="{for.end.38}"];
+}

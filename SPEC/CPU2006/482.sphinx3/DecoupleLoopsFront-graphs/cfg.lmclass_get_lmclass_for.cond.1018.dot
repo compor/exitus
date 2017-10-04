@@ -1,0 +1,16 @@
+digraph "CFG for 'lmclass_get_lmclass_for.cond' function" {
+	label="CFG for 'lmclass_get_lmclass_for.cond' function";
+
+	Node0x12b2b50 [shape=record,label="{newFuncRoot}"];
+	Node0x12b2b50 -> Node0x12b2c40;
+	Node0x12b2ba0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x12b2bf0 [shape=record,label="{land.rhs.for.end_crit_edge.exitStub}"];
+	Node0x12b2c40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x12b2c40:s0 -> Node0x12bf6c0;
+	Node0x12b2c40:s1 -> Node0x12b2ba0;
+	Node0x12bf6c0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x12bf6c0:s0 -> Node0x12bf710;
+	Node0x12bf6c0:s1 -> Node0x12b2bf0;
+	Node0x12bf710 [shape=record,label="{it_for.inc}"];
+	Node0x12bf710 -> Node0x12b2c40;
+}

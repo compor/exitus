@@ -1,0 +1,48 @@
+digraph "CFG for 'reversed_comparison_code_parts_for.cond' function" {
+	label="CFG for 'reversed_comparison_code_parts_for.cond' function";
+
+	Node0xb3764e0 [shape=record,label="{newFuncRoot}"];
+	Node0xb3764e0 -> Node0xb376670;
+	Node0xb376530 [shape=record,label="{for.cond.if.end.90.loopexit_crit_edge.exitStub}"];
+	Node0xb376580 [shape=record,label="{land.rhs.if.end.90.loopexit_crit_edge.exitStub}"];
+	Node0xb3765d0 [shape=record,label="{if.then.61.exitStub}"];
+	Node0xb376620 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xb376670 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb376670:s0 -> Node0xb3766c0;
+	Node0xb376670:s1 -> Node0xb376530;
+	Node0xb3766c0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xb3766c0:s0 -> Node0xb376710;
+	Node0xb3766c0:s1 -> Node0xb376580;
+	Node0xb376710 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb376710:s0 -> Node0xb376a80;
+	Node0xb376710:s1 -> Node0xb376760;
+	Node0xb376760 [shape=record,label="{it_land.lhs.true.44|{<s0>T|<s1>F}}"];
+	Node0xb376760:s0 -> Node0xb376800;
+	Node0xb376760:s1 -> Node0xb3767b0;
+	Node0xb3767b0 [shape=record,label="{pd_land.lhs.true.44.if.end.85_crit_edge}"];
+	Node0xb3767b0 -> Node0xb376990;
+	Node0xb376800 [shape=record,label="{it_land.lhs.true.49|{<s0>T|<s1>F}}"];
+	Node0xb376800:s0 -> Node0xb3768a0;
+	Node0xb376800:s1 -> Node0xb376850;
+	Node0xb376850 [shape=record,label="{pd_land.lhs.true.49.if.end.85_crit_edge}"];
+	Node0xb376850 -> Node0xb376990;
+	Node0xb3768a0 [shape=record,label="{it_if.then.53|{<s0>T|<s1>F}}"];
+	Node0xb3768a0:s0 -> Node0xb3765d0;
+	Node0xb3768a0:s1 -> Node0xb3768f0;
+	Node0xb3768f0 [shape=record,label="{it_if.end.78|{<s0>T|<s1>F}}"];
+	Node0xb3768f0:s0 -> Node0xb376a30;
+	Node0xb3768f0:s1 -> Node0xb376940;
+	Node0xb376940 [shape=record,label="{pd_if.end.78.if.end.85_crit_edge}"];
+	Node0xb376940 -> Node0xb376990;
+	Node0xb376990 [shape=record,label="{it_if.end.85|{<s0>T|<s1>F}}"];
+	Node0xb376990:s0 -> Node0xb376620;
+	Node0xb376990:s1 -> Node0xb3769e0;
+	Node0xb3769e0 [shape=record,label="{pd_if.end.85.for.inc_crit_edge}"];
+	Node0xb3769e0 -> Node0xb376ad0;
+	Node0xb376a30 [shape=record,label="{pd_if.end.78.for.inc_crit_edge}"];
+	Node0xb376a30 -> Node0xb376ad0;
+	Node0xb376a80 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xb376a80 -> Node0xb376ad0;
+	Node0xb376ad0 [shape=record,label="{it_for.inc}"];
+	Node0xb376ad0 -> Node0xb376670;
+}

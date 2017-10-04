@@ -1,0 +1,14 @@
+digraph "CFG for 'x86_order_regs_for_local_alloc_while.cond' function" {
+	label="CFG for 'x86_order_regs_for_local_alloc_while.cond' function";
+
+	Node0xc6d70c0 [shape=record,label="{newFuncRoot}"];
+	Node0xc6d70c0 -> Node0xc6d7440;
+	Node0xc6d73f0 [shape=record,label="{while.end.exitStub}"];
+	Node0xc6d7440 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc6d7440:s0 -> Node0xc6d7490;
+	Node0xc6d7440:s1 -> Node0xc6d73f0;
+	Node0xc6d7490 [shape=record,label="{it_while.body}"];
+	Node0xc6d7490 -> Node0xfe88490;
+	Node0xfe88490 [shape=record,label="{pd_while.body.split}"];
+	Node0xfe88490 -> Node0xc6d7440;
+}

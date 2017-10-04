@@ -1,0 +1,14 @@
+digraph "CFG for 'fields_length' function" {
+	label="CFG for 'fields_length' function";
+
+	Node0x95d09e0 [shape=record,label="{entry}"];
+	Node0x95d09e0 -> Node0x95d0a30;
+	Node0x95d0a30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x95d0a30:s0 -> Node0x95d0a80;
+	Node0x95d0a30:s1 -> Node0x95d0ad0;
+	Node0x95d0a80 [shape=record,label="{pd_for.body}"];
+	Node0x95d0a80 -> Node0xed8bdc0;
+	Node0xed8bdc0 [shape=record,label="{it_for.body.split}"];
+	Node0xed8bdc0 -> Node0x95d0a30;
+	Node0x95d0ad0 [shape=record,label="{for.end}"];
+}

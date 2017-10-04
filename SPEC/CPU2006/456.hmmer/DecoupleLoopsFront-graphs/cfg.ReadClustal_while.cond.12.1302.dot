@@ -1,0 +1,47 @@
+digraph "CFG for 'ReadClustal_while.cond.12' function" {
+	label="CFG for 'ReadClustal_while.cond.12' function";
+
+	Node0x3173bc0 [shape=record,label="{newFuncRoot}"];
+	Node0x3173bc0 -> Node0x3173c60;
+	Node0x3173c10 [shape=record,label="{while.end.43.exitStub}"];
+	Node0x3173c60 [shape=record,label="{it_while.cond.12}"];
+	Node0x3173c60 -> Node0x3943400;
+	Node0x3943400 [shape=record,label="{pd_while.cond.12.split1}"];
+	Node0x3943400 -> Node0x390f600;
+	Node0x390f600 [shape=record,label="{it_while.cond.12.split|{<s0>T|<s1>F}}"];
+	Node0x390f600:s0 -> Node0x3173cb0;
+	Node0x390f600:s1 -> Node0x3173c10;
+	Node0x3173cb0 [shape=record,label="{pd_while.body.15|{<s0>T|<s1>F}}"];
+	Node0x3173cb0:s0 -> Node0x3174070;
+	Node0x3173cb0:s1 -> Node0x3173d00;
+	Node0x3173d00 [shape=record,label="{pd_if.end.19|{<s0>T|<s1>F}}"];
+	Node0x3173d00:s0 -> Node0x3174020;
+	Node0x3173d00:s1 -> Node0x3173d50;
+	Node0x3173d50 [shape=record,label="{pd_if.end.23|{<s0>T|<s1>F}}"];
+	Node0x3173d50:s0 -> Node0x3173df0;
+	Node0x3173d50:s1 -> Node0x3173da0;
+	Node0x3173da0 [shape=record,label="{pd_if.end.23.if.end.31_crit_edge}"];
+	Node0x3173da0 -> Node0x3173e90;
+	Node0x3173df0 [shape=record,label="{pd_land.lhs.true.27|{<s0>T|<s1>F}}"];
+	Node0x3173df0:s0 -> Node0x3173fd0;
+	Node0x3173df0:s1 -> Node0x3173e40;
+	Node0x3173e40 [shape=record,label="{pd_land.lhs.true.27.if.end.31_crit_edge}"];
+	Node0x3173e40 -> Node0x3173e90;
+	Node0x3173e90 [shape=record,label="{pd_if.end.31|{<s0>T|<s1>F}}"];
+	Node0x3173e90:s0 -> Node0x3173f30;
+	Node0x3173e90:s1 -> Node0x3173ee0;
+	Node0x3173ee0 [shape=record,label="{pd_if.end.31.if.end.34_crit_edge}"];
+	Node0x3173ee0 -> Node0x3173f80;
+	Node0x3173f30 [shape=record,label="{pd_if.then.33}"];
+	Node0x3173f30 -> Node0x3173f80;
+	Node0x3173f80 [shape=record,label="{pd_if.end.34}"];
+	Node0x3173f80 -> Node0x31740c0;
+	Node0x3173fd0 [shape=record,label="{pd_land.lhs.true.27.while.cond.12.backedge_crit_edge}"];
+	Node0x3173fd0 -> Node0x31740c0;
+	Node0x3174020 [shape=record,label="{pd_if.end.19.while.cond.12.backedge_crit_edge}"];
+	Node0x3174020 -> Node0x31740c0;
+	Node0x3174070 [shape=record,label="{pd_while.body.15.while.cond.12.backedge_crit_edge}"];
+	Node0x3174070 -> Node0x31740c0;
+	Node0x31740c0 [shape=record,label="{pd_while.cond.12.backedge}"];
+	Node0x31740c0 -> Node0x3173c60;
+}

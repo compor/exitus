@@ -1,0 +1,16 @@
+digraph "CFG for 'set_up_snapback_moves_for.cond' function" {
+	label="CFG for 'set_up_snapback_moves_for.cond' function";
+
+	Node0x44674d0 [shape=record,label="{newFuncRoot}"];
+	Node0x44674d0 -> Node0x44675c0;
+	Node0x4467520 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x4467570 [shape=record,label="{if.then.24.exitStub}"];
+	Node0x44675c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x44675c0:s0 -> Node0x4467610;
+	Node0x44675c0:s1 -> Node0x4467520;
+	Node0x4467610 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4467610:s0 -> Node0x4467570;
+	Node0x4467610:s1 -> Node0x4467660;
+	Node0x4467660 [shape=record,label="{it_for.inc}"];
+	Node0x4467660 -> Node0x44675c0;
+}

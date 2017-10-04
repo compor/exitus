@@ -1,0 +1,26 @@
+digraph "CFG for 'quantum_kronecker_for.cond' function" {
+	label="CFG for 'quantum_kronecker_for.cond' function";
+
+	Node0x16e9900 [shape=record,label="{newFuncRoot}"];
+	Node0x16e9900 -> Node0x16e99a0;
+	Node0x16e9950 [shape=record,label="{for.end.71.exitStub}"];
+	Node0x16e99a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x16e99a0:s0 -> Node0x16e99f0;
+	Node0x16e99a0:s1 -> Node0x16e9950;
+	Node0x16e99f0 [shape=record,label="{pd_for.cond.34.preheader}"];
+	Node0x16e99f0 -> Node0x16e9a40;
+	Node0x16e9a40 [shape=record,label="{pd_for.cond.34|{<s0>T|<s1>F}}"];
+	Node0x16e9a40:s0 -> Node0x16e9ae0;
+	Node0x16e9a40:s1 -> Node0x16e9a90;
+	Node0x16e9a90 [shape=record,label="{it_for.inc.69}"];
+	Node0x16e9a90 -> Node0x16e99a0;
+	Node0x16e9ae0 [shape=record,label="{pd_for.body.38|{<s0>T|<s1>F}}"];
+	Node0x16e9ae0:s0 -> Node0x16e9b80;
+	Node0x16e9ae0:s1 -> Node0x16e9b30;
+	Node0x16e9b30 [shape=record,label="{pd_for.body.38.complex_mul_cont_crit_edge}"];
+	Node0x16e9b30 -> Node0x16e9bd0;
+	Node0x16e9b80 [shape=record,label="{pd_complex_mul_libcall}"];
+	Node0x16e9b80 -> Node0x16e9bd0;
+	Node0x16e9bd0 [shape=record,label="{pd_complex_mul_cont}"];
+	Node0x16e9bd0 -> Node0x16e9a40;
+}

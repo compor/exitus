@@ -1,0 +1,16 @@
+digraph "CFG for 'mark_target_live_regs_while.cond' function" {
+	label="CFG for 'mark_target_live_regs_while.cond' function";
+
+	Node0xc042a20 [shape=record,label="{newFuncRoot}"];
+	Node0xc042a20 -> Node0xc064110;
+	Node0xc042a70 [shape=record,label="{for.cond.76.preheader.loopexit.exitStub}"];
+	Node0xc0640c0 [shape=record,label="{while.end.exitStub}"];
+	Node0xc064110 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc064110:s0 -> Node0xc042a70;
+	Node0xc064110:s1 -> Node0xc064160;
+	Node0xc064160 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xc064160:s0 -> Node0xc0641b0;
+	Node0xc064160:s1 -> Node0xc0640c0;
+	Node0xc0641b0 [shape=record,label="{it_while.body}"];
+	Node0xc0641b0 -> Node0xc064110;
+}

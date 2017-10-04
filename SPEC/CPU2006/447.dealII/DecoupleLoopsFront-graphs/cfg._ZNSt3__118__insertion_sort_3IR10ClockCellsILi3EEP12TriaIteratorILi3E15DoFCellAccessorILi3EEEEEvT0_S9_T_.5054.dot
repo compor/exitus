@@ -1,0 +1,33 @@
+digraph "CFG for '_ZNSt3__118__insertion_sort_3IR10ClockCellsILi3EEP12TriaIteratorILi3E15DoFCellAccessorILi3EEEEEvT0_S9_T_' function" {
+	label="CFG for '_ZNSt3__118__insertion_sort_3IR10ClockCellsILi3EEP12TriaIteratorILi3E15DoFCellAccessorILi3EEEEEvT0_S9_T_' function";
+
+	Node0x4567b60 [shape=record,label="{entry}"];
+	Node0x4567b60 -> Node0x4567bb0;
+	Node0x4567bb0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4567bb0:s0 -> Node0x4567c00;
+	Node0x4567bb0:s1 -> Node0x4567f20;
+	Node0x4567c00 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4567c00:s0 -> Node0x4567ca0;
+	Node0x4567c00:s1 -> Node0x4567c50;
+	Node0x4567c50 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4567c50 -> Node0x4567ed0;
+	Node0x4567ca0 [shape=record,label="{pd_if.then}"];
+	Node0x4567ca0 -> Node0x4567cf0;
+	Node0x4567cf0 [shape=record,label="{pd_do.body|{<s0>T|<s1>F}}"];
+	Node0x4567cf0:s0 -> Node0x4567d90;
+	Node0x4567cf0:s1 -> Node0x4567d40;
+	Node0x4567d40 [shape=record,label="{pd_do.body.land.end_crit_edge}"];
+	Node0x4567d40 -> Node0x4567de0;
+	Node0x4567d90 [shape=record,label="{pd_land.rhs}"];
+	Node0x4567d90 -> Node0x4567de0;
+	Node0x4567de0 [shape=record,label="{pd_land.end|{<s0>T|<s1>F}}"];
+	Node0x4567de0:s0 -> Node0x4567e30;
+	Node0x4567de0:s1 -> Node0x4567e80;
+	Node0x4567e30 [shape=record,label="{pd_land.end.do.body_crit_edge}"];
+	Node0x4567e30 -> Node0x4567cf0;
+	Node0x4567e80 [shape=record,label="{pd_do.end}"];
+	Node0x4567e80 -> Node0x4567ed0;
+	Node0x4567ed0 [shape=record,label="{it_for.inc}"];
+	Node0x4567ed0 -> Node0x4567bb0;
+	Node0x4567f20 [shape=record,label="{for.end}"];
+}

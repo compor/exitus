@@ -1,0 +1,47 @@
+digraph "CFG for 'compute_surroundings_for.cond.230' function" {
+	label="CFG for 'compute_surroundings_for.cond.230' function";
+
+	Node0x4798570 [shape=record,label="{newFuncRoot}"];
+	Node0x4798570 -> Node0x4798610;
+	Node0x47985c0 [shape=record,label="{for.end.304.exitStub}"];
+	Node0x4798610 [shape=record,label="{it_for.cond.230|{<s0>T|<s1>F}}"];
+	Node0x4798610:s0 -> Node0x4798660;
+	Node0x4798610:s1 -> Node0x47985c0;
+	Node0x4798660 [shape=record,label="{pd_for.body.238}"];
+	Node0x4798660 -> Node0x47986b0;
+	Node0x47986b0 [shape=record,label="{pd_for.cond.254|{<s0>T|<s1>F}}"];
+	Node0x47986b0:s0 -> Node0x4798840;
+	Node0x47986b0:s1 -> Node0x4798700;
+	Node0x4798700 [shape=record,label="{pd_for.end.291|{<s0>T|<s1>F}}"];
+	Node0x4798700:s0 -> Node0x47987a0;
+	Node0x4798700:s1 -> Node0x4798750;
+	Node0x4798750 [shape=record,label="{pd_if.else.298}"];
+	Node0x4798750 -> Node0x47987f0;
+	Node0x47987a0 [shape=record,label="{pd_for.end.291.if.end.299_crit_edge}"];
+	Node0x47987a0 -> Node0x47987f0;
+	Node0x47987f0 [shape=record,label="{pd_if.end.299}"];
+	Node0x47987f0 -> Node0x4da0c00;
+	Node0x4da0c00 [shape=record,label="{it_if.end.299.split}"];
+	Node0x4da0c00 -> Node0x4798610;
+	Node0x4798840 [shape=record,label="{pd_for.body.257}"];
+	Node0x4798840 -> Node0x4798890;
+	Node0x4798890 [shape=record,label="{pd_for.cond.259|{<s0>T|<s1>F}}"];
+	Node0x4798890:s0 -> Node0x4798930;
+	Node0x4798890:s1 -> Node0x47988e0;
+	Node0x47988e0 [shape=record,label="{pd_for.cond.254.loopexit}"];
+	Node0x47988e0 -> Node0x47986b0;
+	Node0x4798930 [shape=record,label="{pd_for.body.262|{<s0>T|<s1>F}}"];
+	Node0x4798930:s0 -> Node0x47989d0;
+	Node0x4798930:s1 -> Node0x4798980;
+	Node0x4798980 [shape=record,label="{pd_for.body.262.for.inc.286_crit_edge}"];
+	Node0x4798980 -> Node0x4798ac0;
+	Node0x47989d0 [shape=record,label="{pd_if.then.269|{<s0>T|<s1>F}}"];
+	Node0x47989d0:s0 -> Node0x4798a70;
+	Node0x47989d0:s1 -> Node0x4798a20;
+	Node0x4798a20 [shape=record,label="{pd_if.then.269.for.inc.286_crit_edge}"];
+	Node0x4798a20 -> Node0x4798ac0;
+	Node0x4798a70 [shape=record,label="{pd_if.then.280}"];
+	Node0x4798a70 -> Node0x4798ac0;
+	Node0x4798ac0 [shape=record,label="{pd_for.inc.286}"];
+	Node0x4798ac0 -> Node0x4798890;
+}

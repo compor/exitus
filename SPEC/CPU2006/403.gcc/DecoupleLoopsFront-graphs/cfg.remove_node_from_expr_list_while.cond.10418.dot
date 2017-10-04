@@ -1,0 +1,16 @@
+digraph "CFG for 'remove_node_from_expr_list_while.cond' function" {
+	label="CFG for 'remove_node_from_expr_list_while.cond' function";
+
+	Node0xc109a90 [shape=record,label="{newFuncRoot}"];
+	Node0xc109a90 -> Node0xc109b80;
+	Node0xc109ae0 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0xc109b30 [shape=record,label="{if.then.exitStub}"];
+	Node0xc109b80 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc109b80:s0 -> Node0xc109bd0;
+	Node0xc109b80:s1 -> Node0xc109ae0;
+	Node0xc109bd0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc109bd0:s0 -> Node0xc109b30;
+	Node0xc109bd0:s1 -> Node0xc109c20;
+	Node0xc109c20 [shape=record,label="{it_if.end.12}"];
+	Node0xc109c20 -> Node0xc109b80;
+}

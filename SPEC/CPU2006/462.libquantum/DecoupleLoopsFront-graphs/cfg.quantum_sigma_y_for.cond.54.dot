@@ -1,0 +1,33 @@
+digraph "CFG for 'quantum_sigma_y_for.cond' function" {
+	label="CFG for 'quantum_sigma_y_for.cond' function";
+
+	Node0x162e880 [shape=record,label="{newFuncRoot}"];
+	Node0x162e880 -> Node0x162ecc0;
+	Node0x162ec70 [shape=record,label="{for.end.exitStub}"];
+	Node0x162ecc0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x162ecc0:s0 -> Node0x162ed10;
+	Node0x162ecc0:s1 -> Node0x162ec70;
+	Node0x162ed10 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x162ed10:s0 -> Node0x162eea0;
+	Node0x162ed10:s1 -> Node0x162ed60;
+	Node0x162ed60 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x162ed60:s0 -> Node0x162ee00;
+	Node0x162ed60:s1 -> Node0x162edb0;
+	Node0x162edb0 [shape=record,label="{pd_if.else.complex_mul_cont.30_crit_edge}"];
+	Node0x162edb0 -> Node0x162ee50;
+	Node0x162ee00 [shape=record,label="{pd_complex_mul_libcall.27}"];
+	Node0x162ee00 -> Node0x162ee50;
+	Node0x162ee50 [shape=record,label="{pd_complex_mul_cont.30}"];
+	Node0x162ee50 -> Node0x162efe0;
+	Node0x162eea0 [shape=record,label="{pd_if.then.8|{<s0>T|<s1>F}}"];
+	Node0x162eea0:s0 -> Node0x162ef40;
+	Node0x162eea0:s1 -> Node0x162eef0;
+	Node0x162eef0 [shape=record,label="{pd_if.then.8.complex_mul_cont_crit_edge}"];
+	Node0x162eef0 -> Node0x162ef90;
+	Node0x162ef40 [shape=record,label="{pd_complex_mul_libcall}"];
+	Node0x162ef40 -> Node0x162ef90;
+	Node0x162ef90 [shape=record,label="{pd_complex_mul_cont}"];
+	Node0x162ef90 -> Node0x162efe0;
+	Node0x162efe0 [shape=record,label="{it_for.inc}"];
+	Node0x162efe0 -> Node0x162ecc0;
+}

@@ -1,0 +1,22 @@
+digraph "CFG for '_ZNK10xalanc_1_85XPath15doGetMatchScoreEPNS_9XalanNodeERNS_21XPathExecutionContextERNS0_11eMatchScoreE_while.cond' function" {
+	label="CFG for '_ZNK10xalanc_1_85XPath15doGetMatchScoreEPNS_9XalanNodeERNS_21XPathExecutionContextERNS0_11eMatchScoreE_while.cond' function";
+
+	Node0x9e68580 [shape=record,label="{newFuncRoot}"];
+	Node0x9e68580 -> Node0x9e68670;
+	Node0x9e685d0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x9e68620 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0x9e68670 [shape=record,label="{it_while.cond}"];
+	Node0x9e68670 -> Node0xd068fb0;
+	Node0xd068fb0 [shape=record,label="{pd_while.cond.split1}"];
+	Node0xd068fb0 -> Node0xd08ca70;
+	Node0xd08ca70 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0xd08ca70:s0 -> Node0x9e686c0;
+	Node0xd08ca70:s1 -> Node0x9e685d0;
+	Node0x9e686c0 [shape=record,label="{pd_while.body}"];
+	Node0x9e686c0 -> Node0xd060150;
+	Node0xd060150 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0xd060150:s0 -> Node0x9e68710;
+	Node0xd060150:s1 -> Node0x9e68620;
+	Node0x9e68710 [shape=record,label="{pd_if.then}"];
+	Node0x9e68710 -> Node0x9e68670;
+}

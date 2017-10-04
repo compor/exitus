@@ -1,0 +1,14 @@
+digraph "CFG for 'BZ2_bzReadOpen_while.cond' function" {
+	label="CFG for 'BZ2_bzReadOpen_while.cond' function";
+
+	Node0x18378c0 [shape=record,label="{newFuncRoot}"];
+	Node0x18378c0 -> Node0x1837960;
+	Node0x1837910 [shape=record,label="{while.end.exitStub}"];
+	Node0x1837960 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1837960:s0 -> Node0x18379b0;
+	Node0x1837960:s1 -> Node0x1837910;
+	Node0x18379b0 [shape=record,label="{pd_while.body}"];
+	Node0x18379b0 -> Node0x175fba0;
+	Node0x175fba0 [shape=record,label="{it_while.body.split}"];
+	Node0x175fba0 -> Node0x1837960;
+}

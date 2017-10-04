@@ -1,0 +1,26 @@
+digraph "CFG for 'add_branch_dependences_while.cond.65' function" {
+	label="CFG for 'add_branch_dependences_while.cond.65' function";
+
+	Node0xc1d2d00 [shape=record,label="{newFuncRoot}"];
+	Node0xc1d2d00 -> Node0xc1d2da0;
+	Node0xc1d2d50 [shape=record,label="{if.end.93.loopexit.exitStub}"];
+	Node0xc1d2da0 [shape=record,label="{it_while.cond.65|{<s0>T|<s1>F}}"];
+	Node0xc1d2da0:s0 -> Node0xc1d2df0;
+	Node0xc1d2da0:s1 -> Node0xc1d2d50;
+	Node0xc1d2df0 [shape=record,label="{it_while.body.67|{<s0>T|<s1>F}}"];
+	Node0xc1d2df0:s0 -> Node0xc1d2f80;
+	Node0xc1d2df0:s1 -> Node0xc1d2e40;
+	Node0xc1d2e40 [shape=record,label="{pd_if.end.77}"];
+	Node0xc1d2e40 -> Node0xc1d2e90;
+	Node0xc1d2e90 [shape=record,label="{it_while.cond.84|{<s0>T|<s1>F}}"];
+	Node0xc1d2e90:s0 -> Node0xc1d2f30;
+	Node0xc1d2e90:s1 -> Node0xc1d2ee0;
+	Node0xc1d2ee0 [shape=record,label="{pd_while.cond.65.loopexit}"];
+	Node0xc1d2ee0 -> Node0xc1d2fd0;
+	Node0xc1d2f30 [shape=record,label="{it_while.body.89}"];
+	Node0xc1d2f30 -> Node0xc1d2e90;
+	Node0xc1d2f80 [shape=record,label="{pd_while.body.67.while.cond.65.backedge_crit_edge}"];
+	Node0xc1d2f80 -> Node0xc1d2fd0;
+	Node0xc1d2fd0 [shape=record,label="{pd_while.cond.65.backedge}"];
+	Node0xc1d2fd0 -> Node0xc1d2da0;
+}

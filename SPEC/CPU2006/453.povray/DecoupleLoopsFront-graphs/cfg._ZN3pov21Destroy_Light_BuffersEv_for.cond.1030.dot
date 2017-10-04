@@ -1,0 +1,38 @@
+digraph "CFG for '_ZN3pov21Destroy_Light_BuffersEv_for.cond' function" {
+	label="CFG for '_ZN3pov21Destroy_Light_BuffersEv_for.cond' function";
+
+	Node0x254e4e0 [shape=record,label="{newFuncRoot}"];
+	Node0x254e4e0 -> Node0x25524d0;
+	Node0x2552480 [shape=record,label="{if.end.23.loopexit.exitStub}"];
+	Node0x25524d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x25524d0:s0 -> Node0x2552520;
+	Node0x25524d0:s1 -> Node0x2552480;
+	Node0x2552520 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2552520:s0 -> Node0x2552840;
+	Node0x2552520:s1 -> Node0x2552570;
+	Node0x2552570 [shape=record,label="{pd_land.lhs.true.5|{<s0>T|<s1>F}}"];
+	Node0x2552570:s0 -> Node0x2552610;
+	Node0x2552570:s1 -> Node0x25525c0;
+	Node0x25525c0 [shape=record,label="{pd_land.lhs.true.5.for.inc.21_crit_edge}"];
+	Node0x25525c0 -> Node0x2552890;
+	Node0x2552610 [shape=record,label="{pd_for.cond.9.preheader}"];
+	Node0x2552610 -> Node0x2552660;
+	Node0x2552660 [shape=record,label="{pd_for.cond.9|{<s0>T|<s1>F}}"];
+	Node0x2552660:s0 -> Node0x2552700;
+	Node0x2552660:s1 -> Node0x25526b0;
+	Node0x25526b0 [shape=record,label="{pd_for.inc.21.loopexit}"];
+	Node0x25526b0 -> Node0x2552890;
+	Node0x2552700 [shape=record,label="{pd_for.body.11|{<s0>T|<s1>F}}"];
+	Node0x2552700:s0 -> Node0x25527a0;
+	Node0x2552700:s1 -> Node0x2552750;
+	Node0x2552750 [shape=record,label="{pd_for.body.11.if.end_crit_edge}"];
+	Node0x2552750 -> Node0x25527f0;
+	Node0x25527a0 [shape=record,label="{pd_if.then.13}"];
+	Node0x25527a0 -> Node0x25527f0;
+	Node0x25527f0 [shape=record,label="{pd_if.end}"];
+	Node0x25527f0 -> Node0x2552660;
+	Node0x2552840 [shape=record,label="{pd_for.body.for.inc.21_crit_edge}"];
+	Node0x2552840 -> Node0x2552890;
+	Node0x2552890 [shape=record,label="{it_for.inc.21}"];
+	Node0x2552890 -> Node0x25524d0;
+}

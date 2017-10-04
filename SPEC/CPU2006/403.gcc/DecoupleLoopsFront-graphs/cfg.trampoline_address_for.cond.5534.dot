@@ -1,0 +1,16 @@
+digraph "CFG for 'trampoline_address_for.cond' function" {
+	label="CFG for 'trampoline_address_for.cond' function";
+
+	Node0xafe4400 [shape=record,label="{newFuncRoot}"];
+	Node0xafe4400 -> Node0xb04a950;
+	Node0xb04a8b0 [shape=record,label="{for.end.exitStub}"];
+	Node0xb04a900 [shape=record,label="{if.then.exitStub}"];
+	Node0xb04a950 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb04a950:s0 -> Node0xb04a9a0;
+	Node0xb04a950:s1 -> Node0xb04a8b0;
+	Node0xb04a9a0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb04a9a0:s0 -> Node0xb04a900;
+	Node0xb04a9a0:s1 -> Node0xb04a9f0;
+	Node0xb04a9f0 [shape=record,label="{it_for.inc}"];
+	Node0xb04a9f0 -> Node0xb04a950;
+}

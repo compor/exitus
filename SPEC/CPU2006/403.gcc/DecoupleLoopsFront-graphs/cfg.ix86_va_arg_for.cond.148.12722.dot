@@ -1,0 +1,26 @@
+digraph "CFG for 'ix86_va_arg_for.cond.148' function" {
+	label="CFG for 'ix86_va_arg_for.cond.148' function";
+
+	Node0xc6c8c30 [shape=record,label="{newFuncRoot}"];
+	Node0xc6c8c30 -> Node0xc6c8cd0;
+	Node0xc6c8c80 [shape=record,label="{if.end.192.loopexit2.exitStub}"];
+	Node0xc6c8cd0 [shape=record,label="{it_for.cond.148|{<s0>T|<s1>F}}"];
+	Node0xc6c8cd0:s0 -> Node0xc6c8d20;
+	Node0xc6c8cd0:s1 -> Node0xc6c8c80;
+	Node0xc6c8d20 [shape=record,label="{it_for.body.159|{<s0>T|<s1>F}}"];
+	Node0xc6c8d20:s0 -> Node0xc6c8e60;
+	Node0xc6c8d20:s1 -> Node0xc6c8d70;
+	Node0xc6c8d70 [shape=record,label="{it_lor.lhs.false.175|{<s0>T|<s1>F}}"];
+	Node0xc6c8d70:s0 -> Node0xc6c8e10;
+	Node0xc6c8d70:s1 -> Node0xc6c8dc0;
+	Node0xc6c8dc0 [shape=record,label="{pd_lor.lhs.false.175.for.inc.188_crit_edge}"];
+	Node0xc6c8dc0 -> Node0xc6c8f00;
+	Node0xc6c8e10 [shape=record,label="{pd_lor.lhs.false.175.if.then.186_crit_edge}"];
+	Node0xc6c8e10 -> Node0xc6c8eb0;
+	Node0xc6c8e60 [shape=record,label="{pd_for.body.159.if.then.186_crit_edge}"];
+	Node0xc6c8e60 -> Node0xc6c8eb0;
+	Node0xc6c8eb0 [shape=record,label="{it_if.then.186}"];
+	Node0xc6c8eb0 -> Node0xc6c8f00;
+	Node0xc6c8f00 [shape=record,label="{it_for.inc.188}"];
+	Node0xc6c8f00 -> Node0xc6c8cd0;
+}

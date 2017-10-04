@@ -1,0 +1,28 @@
+digraph "CFG for 'compute_code_hoist_vbeinout_while.cond' function" {
+	label="CFG for 'compute_code_hoist_vbeinout_while.cond' function";
+
+	Node0xb134430 [shape=record,label="{newFuncRoot}"];
+	Node0xb134430 -> Node0xb1344d0;
+	Node0xb134480 [shape=record,label="{while.end.exitStub}"];
+	Node0xb1344d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb1344d0:s0 -> Node0xb134520;
+	Node0xb1344d0:s1 -> Node0xb134480;
+	Node0xb134520 [shape=record,label="{it_while.body}"];
+	Node0xb134520 -> Node0xb134570;
+	Node0xb134570 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb134570:s0 -> Node0xb134610;
+	Node0xb134570:s1 -> Node0xb1345c0;
+	Node0xb1345c0 [shape=record,label="{pd_for.end}"];
+	Node0xb1345c0 -> Node0xb1344d0;
+	Node0xb134610 [shape=record,label="{it_for.body}"];
+	Node0xb134610 -> Node0xf7c0720;
+	Node0xf7c0720 [shape=record,label="{pd_for.body.split|{<s0>T|<s1>F}}"];
+	Node0xf7c0720:s0 -> Node0xb1346b0;
+	Node0xf7c0720:s1 -> Node0xb134660;
+	Node0xb134660 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xb134660 -> Node0xb134700;
+	Node0xb1346b0 [shape=record,label="{pd_if.then}"];
+	Node0xb1346b0 -> Node0xb134700;
+	Node0xb134700 [shape=record,label="{it_for.inc}"];
+	Node0xb134700 -> Node0xb134570;
+}

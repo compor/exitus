@@ -1,0 +1,19 @@
+digraph "CFG for 'get_lively_stones_for.cond' function" {
+	label="CFG for 'get_lively_stones_for.cond' function";
+
+	Node0x46c8640 [shape=record,label="{newFuncRoot}"];
+	Node0x46c8640 -> Node0x46c86e0;
+	Node0x46c8690 [shape=record,label="{for.cond.4.preheader.exitStub}"];
+	Node0x46c86e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x46c86e0:s0 -> Node0x46c8730;
+	Node0x46c86e0:s1 -> Node0x46c8690;
+	Node0x46c8730 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x46c8730:s0 -> Node0x46c87d0;
+	Node0x46c8730:s1 -> Node0x46c8780;
+	Node0x46c8780 [shape=record,label="{pd_if.else}"];
+	Node0x46c8780 -> Node0x46c8820;
+	Node0x46c87d0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x46c87d0 -> Node0x46c8820;
+	Node0x46c8820 [shape=record,label="{it_for.inc}"];
+	Node0x46c8820 -> Node0x46c86e0;
+}

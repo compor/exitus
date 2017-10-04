@@ -1,0 +1,28 @@
+digraph "CFG for '_ZN11xercesc_2_512DOMNodeIDMap4findEPKt_while.body' function" {
+	label="CFG for '_ZN11xercesc_2_512DOMNodeIDMap4findEPKt_while.body' function";
+
+	Node0x9772af0 [shape=record,label="{newFuncRoot}"];
+	Node0x9772af0 -> Node0x97a0260;
+	Node0x97a01c0 [shape=record,label="{while.body.return_crit_edge.exitStub}"];
+	Node0x97a0210 [shape=record,label="{land.lhs.true.return_crit_edge.exitStub}"];
+	Node0x97a0260 [shape=record,label="{it_while.body|{<s0>def|<s1>0|<s2>-1}}"];
+	Node0x97a0260:s0 -> Node0x97a0300;
+	Node0x97a0260:s1 -> Node0x97a01c0;
+	Node0x97a0260:s2 -> Node0x97a02b0;
+	Node0x97a02b0 [shape=record,label="{pd_while.body.if.end.8_crit_edge}"];
+	Node0x97a02b0 -> Node0x97a03a0;
+	Node0x97a0300 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x97a0300:s0 -> Node0x97a0210;
+	Node0x97a0300:s1 -> Node0x97a0350;
+	Node0x97a0350 [shape=record,label="{pd_land.lhs.true.if.end.8_crit_edge}"];
+	Node0x97a0350 -> Node0x97a03a0;
+	Node0x97a03a0 [shape=record,label="{it_if.end.8|{<s0>T|<s1>F}}"];
+	Node0x97a03a0:s0 -> Node0x97a0440;
+	Node0x97a03a0:s1 -> Node0x97a03f0;
+	Node0x97a03f0 [shape=record,label="{pd_if.end.8.while.body.backedge_crit_edge}"];
+	Node0x97a03f0 -> Node0x97a0490;
+	Node0x97a0440 [shape=record,label="{it_if.then.11}"];
+	Node0x97a0440 -> Node0x97a0490;
+	Node0x97a0490 [shape=record,label="{pd_while.body.backedge}"];
+	Node0x97a0490 -> Node0x97a0260;
+}

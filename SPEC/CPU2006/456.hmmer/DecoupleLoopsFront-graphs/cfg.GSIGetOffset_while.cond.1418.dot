@@ -1,0 +1,29 @@
+digraph "CFG for 'GSIGetOffset_while.cond' function" {
+	label="CFG for 'GSIGetOffset_while.cond' function";
+
+	Node0x331a8c0 [shape=record,label="{newFuncRoot}"];
+	Node0x331a8c0 -> Node0x331aa00;
+	Node0x331a910 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x331a960 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0x331a9b0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x331aa00 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x331aa00:s0 -> Node0x331aa50;
+	Node0x331aa00:s1 -> Node0x331a910;
+	Node0x331aa50 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x331aa50:s0 -> Node0x331a960;
+	Node0x331aa50:s1 -> Node0x331aaa0;
+	Node0x331aaa0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x331aaa0:s0 -> Node0x331a9b0;
+	Node0x331aaa0:s1 -> Node0x331aaf0;
+	Node0x331aaf0 [shape=record,label="{it_if.else.14|{<s0>T|<s1>F}}"];
+	Node0x331aaf0:s0 -> Node0x331ab90;
+	Node0x331aaf0:s1 -> Node0x331ab40;
+	Node0x331ab40 [shape=record,label="{it_if.else.19}"];
+	Node0x331ab40 -> Node0x331abe0;
+	Node0x331ab90 [shape=record,label="{it_if.then.17}"];
+	Node0x331ab90 -> Node0x331abe0;
+	Node0x331abe0 [shape=record,label="{it_if.end.25}"];
+	Node0x331abe0 -> Node0x38c8320;
+	Node0x38c8320 [shape=record,label="{pd_if.end.25.split}"];
+	Node0x38c8320 -> Node0x331aa00;
+}

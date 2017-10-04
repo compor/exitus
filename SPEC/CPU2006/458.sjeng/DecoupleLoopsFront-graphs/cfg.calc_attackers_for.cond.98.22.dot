@@ -1,0 +1,44 @@
+digraph "CFG for 'calc_attackers_for.cond.98' function" {
+	label="CFG for 'calc_attackers_for.cond.98' function";
+
+	Node0xf8cfa0 [shape=record,label="{newFuncRoot}"];
+	Node0xf8cfa0 -> Node0xf8d950;
+	Node0xf8cff0 [shape=record,label="{for.cond.138.preheader.loopexit.exitStub}"];
+	Node0xf8d040 [shape=record,label="{if.then.107.exitStub}"];
+	Node0xf8d950 [shape=record,label="{it_for.cond.98|{<s0>T|<s1>F}}"];
+	Node0xf8d950:s0 -> Node0xf8d9a0;
+	Node0xf8d950:s1 -> Node0xf8cff0;
+	Node0xf8d9a0 [shape=record,label="{it_for.body.100|{<s0>T|<s1>F}}"];
+	Node0xf8d9a0:s0 -> Node0xf8d040;
+	Node0xf8d9a0:s1 -> Node0xf8d9f0;
+	Node0xf8d9f0 [shape=record,label="{pd_while.cond.110.preheader}"];
+	Node0xf8d9f0 -> Node0xf8da40;
+	Node0xf8da40 [shape=record,label="{pd_while.cond.110|{<s0>T|<s1>F}}"];
+	Node0xf8da40:s0 -> Node0xf8dae0;
+	Node0xf8da40:s1 -> Node0xf8da90;
+	Node0xf8da90 [shape=record,label="{pd_while.cond.110.for.inc.135.loopexit_crit_edge}"];
+	Node0xf8da90 -> Node0xf8dc70;
+	Node0xf8dae0 [shape=record,label="{pd_while.body.114|{<s0>T|<s1>F}}"];
+	Node0xf8dae0:s0 -> Node0xf8dd10;
+	Node0xf8dae0:s1 -> Node0xf8db30;
+	Node0xf8db30 [shape=record,label="{pd_lor.lhs.false.118|{<s0>T|<s1>F}}"];
+	Node0xf8db30:s0 -> Node0xf8dcc0;
+	Node0xf8db30:s1 -> Node0xf8db80;
+	Node0xf8db80 [shape=record,label="{pd_if.end.124|{<s0>T|<s1>F}}"];
+	Node0xf8db80:s0 -> Node0xf8dc20;
+	Node0xf8db80:s1 -> Node0xf8dbd0;
+	Node0xf8dbd0 [shape=record,label="{pd_if.end.129}"];
+	Node0xf8dbd0 -> Node0xf8da40;
+	Node0xf8dc20 [shape=record,label="{pd_if.end.124.for.inc.135.loopexit_crit_edge}"];
+	Node0xf8dc20 -> Node0xf8dc70;
+	Node0xf8dc70 [shape=record,label="{pd_for.inc.135.loopexit}"];
+	Node0xf8dc70 -> Node0xf8ddb0;
+	Node0xf8dcc0 [shape=record,label="{pd_lor.lhs.false.118.if.then.122_crit_edge}"];
+	Node0xf8dcc0 -> Node0xf8dd60;
+	Node0xf8dd10 [shape=record,label="{pd_while.body.114.if.then.122_crit_edge}"];
+	Node0xf8dd10 -> Node0xf8dd60;
+	Node0xf8dd60 [shape=record,label="{pd_if.then.122}"];
+	Node0xf8dd60 -> Node0xf8ddb0;
+	Node0xf8ddb0 [shape=record,label="{it_for.inc.135}"];
+	Node0xf8ddb0 -> Node0xf8d950;
+}

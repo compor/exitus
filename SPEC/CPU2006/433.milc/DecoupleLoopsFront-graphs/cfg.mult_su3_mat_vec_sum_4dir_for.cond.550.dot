@@ -1,0 +1,14 @@
+digraph "CFG for 'mult_su3_mat_vec_sum_4dir_for.cond' function" {
+	label="CFG for 'mult_su3_mat_vec_sum_4dir_for.cond' function";
+
+	Node0x1ac3be0 [shape=record,label="{newFuncRoot}"];
+	Node0x1ac3be0 -> Node0x1ac3c80;
+	Node0x1ac3c30 [shape=record,label="{for.cond.5.preheader.exitStub}"];
+	Node0x1ac3c80 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1ac3c80:s0 -> Node0x1ac3cd0;
+	Node0x1ac3c80:s1 -> Node0x1ac3c30;
+	Node0x1ac3cd0 [shape=record,label="{pd_for.body}"];
+	Node0x1ac3cd0 -> Node0x1c02bb0;
+	Node0x1c02bb0 [shape=record,label="{it_for.body.split}"];
+	Node0x1c02bb0 -> Node0x1ac3c80;
+}

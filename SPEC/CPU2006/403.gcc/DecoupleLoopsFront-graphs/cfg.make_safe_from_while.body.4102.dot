@@ -1,0 +1,25 @@
+digraph "CFG for 'make_safe_from_while.body' function" {
+	label="CFG for 'make_safe_from_while.body' function";
+
+	Node0xac43a00 [shape=record,label="{newFuncRoot}"];
+	Node0xac43a00 -> Node0xac43aa0;
+	Node0xac43a50 [shape=record,label="{done.exitStub}"];
+	Node0xac43aa0 [shape=record,label="{it_while.body|{<s0>def|<s1>63|<s2>64|<s3>120|<s4>121}}"];
+	Node0xac43aa0:s0 -> Node0xac43a50;
+	Node0xac43aa0:s1 -> Node0xac43c30;
+	Node0xac43aa0:s2 -> Node0xac43b90;
+	Node0xac43aa0:s3 -> Node0xac43b40;
+	Node0xac43aa0:s4 -> Node0xac43af0;
+	Node0xac43af0 [shape=record,label="{pd_while.body.sw.bb.1_crit_edge.2}"];
+	Node0xac43af0 -> Node0xac43be0;
+	Node0xac43b40 [shape=record,label="{pd_while.body.sw.bb.1_crit_edge.1}"];
+	Node0xac43b40 -> Node0xac43be0;
+	Node0xac43b90 [shape=record,label="{pd_while.body.sw.bb.1_crit_edge}"];
+	Node0xac43b90 -> Node0xac43be0;
+	Node0xac43be0 [shape=record,label="{it_sw.bb.1}"];
+	Node0xac43be0 -> Node0xac43c80;
+	Node0xac43c30 [shape=record,label="{it_sw.bb}"];
+	Node0xac43c30 -> Node0xac43c80;
+	Node0xac43c80 [shape=record,label="{pd_while.body.backedge}"];
+	Node0xac43c80 -> Node0xac43aa0;
+}

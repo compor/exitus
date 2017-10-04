@@ -1,0 +1,19 @@
+digraph "CFG for 'Perl_pp_goto_while.cond' function" {
+	label="CFG for 'Perl_pp_goto_while.cond' function";
+
+	Node0x4ef5a30 [shape=record,label="{newFuncRoot}"];
+	Node0x4ef5a30 -> Node0x4ef5ad0;
+	Node0x4ef5a80 [shape=record,label="{if.end.477.loopexit.exitStub}"];
+	Node0x4ef5ad0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4ef5ad0:s0 -> Node0x4ef5b20;
+	Node0x4ef5ad0:s1 -> Node0x4ef5a80;
+	Node0x4ef5b20 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x4ef5b20:s0 -> Node0x4ef5bc0;
+	Node0x4ef5b20:s1 -> Node0x4ef5b70;
+	Node0x4ef5b70 [shape=record,label="{pd_while.body.if.end.475_crit_edge}"];
+	Node0x4ef5b70 -> Node0x4ef5c10;
+	Node0x4ef5bc0 [shape=record,label="{pd_if.then.472}"];
+	Node0x4ef5bc0 -> Node0x4ef5c10;
+	Node0x4ef5c10 [shape=record,label="{pd_if.end.475}"];
+	Node0x4ef5c10 -> Node0x4ef5ad0;
+}

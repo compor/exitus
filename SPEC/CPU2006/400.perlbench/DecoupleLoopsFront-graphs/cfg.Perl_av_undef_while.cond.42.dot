@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_av_undef_while.cond' function" {
+	label="CFG for 'Perl_av_undef_while.cond' function";
+
+	Node0x4aa9080 [shape=record,label="{newFuncRoot}"];
+	Node0x4aa9080 -> Node0x4aa9120;
+	Node0x4aa90d0 [shape=record,label="{if.end.11.loopexit.exitStub}"];
+	Node0x4aa9120 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4aa9120:s0 -> Node0x4aa9170;
+	Node0x4aa9120:s1 -> Node0x4aa90d0;
+	Node0x4aa9170 [shape=record,label="{it_while.body}"];
+	Node0x4aa9170 -> Node0x6a90850;
+	Node0x6a90850 [shape=record,label="{pd_while.body.split}"];
+	Node0x6a90850 -> Node0x4aa9120;
+}

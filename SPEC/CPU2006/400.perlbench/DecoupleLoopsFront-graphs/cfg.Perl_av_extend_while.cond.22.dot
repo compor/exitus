@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_av_extend_while.cond' function" {
+	label="CFG for 'Perl_av_extend_while.cond' function";
+
+	Node0x4aa6110 [shape=record,label="{newFuncRoot}"];
+	Node0x4aa6110 -> Node0x4aa61b0;
+	Node0x4aa6160 [shape=record,label="{if.end.145.loopexit.exitStub}"];
+	Node0x4aa61b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4aa61b0:s0 -> Node0x4aa6200;
+	Node0x4aa61b0:s1 -> Node0x4aa6160;
+	Node0x4aa6200 [shape=record,label="{it_while.body}"];
+	Node0x4aa6200 -> Node0x6375280;
+	Node0x6375280 [shape=record,label="{pd_while.body.split}"];
+	Node0x6375280 -> Node0x4aa61b0;
+}

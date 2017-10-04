@@ -1,0 +1,38 @@
+digraph "CFG for '_ZN12MGDoFHandlerILi3EE11clear_spaceEv' function" {
+	label="CFG for '_ZN12MGDoFHandlerILi3EE11clear_spaceEv' function";
+
+	Node0x5625510 [shape=record,label="{entry}"];
+	Node0x5625510 -> Node0x5625560;
+	Node0x5625560 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x5625560:s0 -> Node0x56255b0;
+	Node0x5625560:s1 -> Node0x5636210;
+	Node0x56255b0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x56255b0:s0 -> Node0x5625600;
+	Node0x56255b0:s1 -> Node0x56360d0;
+	Node0x5625600 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x5625600 -> Node0x5636170;
+	Node0x56360d0 [shape=record,label="{it_delete.notnull}"];
+	Node0x56360d0 -> Node0x5636120;
+	Node0x56360d0 -> Node0x56361c0;
+	Node0x5636120 [shape=record,label="{pd_invoke.cont}"];
+	Node0x5636120 -> Node0x5636170;
+	Node0x5636170 [shape=record,label="{it_for.inc}"];
+	Node0x5636170 -> Node0x5625560;
+	Node0x56361c0 [shape=record,label="{lpad}"];
+	Node0x56361c0 -> Node0x56363f0;
+	Node0x5636210 [shape=record,label="{for.end}"];
+	Node0x5636210 -> Node0x5636260;
+	Node0x5636260 [shape=record,label="{codeRepl}"];
+	Node0x5636260 -> Node0x56362b0;
+	Node0x56362b0 [shape=record,label="{_ZNSt3__113__vector_baseIP8DoFLevelILi3EENS_9allocatorIS3_EEE5clearEv.exit.i}"];
+	Node0x56362b0 -> Node0x5636300;
+	Node0x56362b0 -> Node0x5636350;
+	Node0x5636300 [shape=record,label="{invoke.cont.7}"];
+	Node0x5636350 [shape=record,label="{lpad.6}"];
+	Node0x5636350 -> Node0x56363a0;
+	Node0x5636350 -> Node0x5636440;
+	Node0x56363a0 [shape=record,label="{lpad.6.eh.resume_crit_edge}"];
+	Node0x56363a0 -> Node0x56363f0;
+	Node0x56363f0 [shape=record,label="{eh.resume}"];
+	Node0x5636440 [shape=record,label="{terminate.lpad}"];
+}

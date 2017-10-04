@@ -1,0 +1,18 @@
+digraph "CFG for 'do_dfa_matchpat_for.cond' function" {
+	label="CFG for 'do_dfa_matchpat_for.cond' function";
+
+	Node0x4083fe0 [shape=record,label="{newFuncRoot}"];
+	Node0x4083fe0 -> Node0x40840d0;
+	Node0x4084030 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x4084080 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0x40840d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x40840d0:s0 -> Node0x4084120;
+	Node0x40840d0:s1 -> Node0x4084030;
+	Node0x4084120 [shape=record,label="{pd_for.body}"];
+	Node0x4084120 -> Node0x5043a00;
+	Node0x5043a00 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x5043a00:s0 -> Node0x4084080;
+	Node0x5043a00:s1 -> Node0x4084170;
+	Node0x4084170 [shape=record,label="{it_for.inc}"];
+	Node0x4084170 -> Node0x40840d0;
+}

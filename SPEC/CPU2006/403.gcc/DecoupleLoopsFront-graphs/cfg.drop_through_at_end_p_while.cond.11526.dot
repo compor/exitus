@@ -1,0 +1,16 @@
+digraph "CFG for 'drop_through_at_end_p_while.cond' function" {
+	label="CFG for 'drop_through_at_end_p_while.cond' function";
+
+	Node0xc3b9f80 [shape=record,label="{newFuncRoot}"];
+	Node0xc3b9f80 -> Node0xc3ba070;
+	Node0xc3b9fd0 [shape=record,label="{land.end.6.loopexit.exitStub}"];
+	Node0xc3ba020 [shape=record,label="{while.end.exitStub}"];
+	Node0xc3ba070 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc3ba070:s0 -> Node0xc3b9fd0;
+	Node0xc3ba070:s1 -> Node0xc3ba0c0;
+	Node0xc3ba0c0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xc3ba0c0:s0 -> Node0xc3ba110;
+	Node0xc3ba0c0:s1 -> Node0xc3ba020;
+	Node0xc3ba110 [shape=record,label="{it_while.body}"];
+	Node0xc3ba110 -> Node0xc3ba070;
+}

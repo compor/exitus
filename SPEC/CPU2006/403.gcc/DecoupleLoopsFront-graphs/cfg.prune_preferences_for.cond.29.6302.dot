@@ -1,0 +1,40 @@
+digraph "CFG for 'prune_preferences_for.cond.29' function" {
+	label="CFG for 'prune_preferences_for.cond.29' function";
+
+	Node0xb1fc280 [shape=record,label="{newFuncRoot}"];
+	Node0xb1fc280 -> Node0xb229220;
+	Node0xb228dc0 [shape=record,label="{for.end.87.exitStub}"];
+	Node0xb229220 [shape=record,label="{it_for.cond.29|{<s0>T|<s1>F}}"];
+	Node0xb229220:s0 -> Node0xb229270;
+	Node0xb229220:s1 -> Node0xb228dc0;
+	Node0xb229270 [shape=record,label="{pd_for.body.32}"];
+	Node0xb229270 -> Node0xb2292c0;
+	Node0xb2292c0 [shape=record,label="{pd_for.cond.38|{<s0>T|<s1>F}}"];
+	Node0xb2292c0:s0 -> Node0xb229360;
+	Node0xb2292c0:s1 -> Node0xb229310;
+	Node0xb229310 [shape=record,label="{pd_do.end}"];
+	Node0xb229310 -> Node0xf63f880;
+	Node0xf63f880 [shape=record,label="{it_do.end.split}"];
+	Node0xf63f880 -> Node0xb229220;
+	Node0xb229360 [shape=record,label="{pd_for.body.41}"];
+	Node0xb229360 -> Node0xb2293b0;
+	Node0xb2293b0 [shape=record,label="{pd_for.cond.42|{<s0>T|<s1>F}}"];
+	Node0xb2293b0:s0 -> Node0xb229450;
+	Node0xb2293b0:s1 -> Node0xb229400;
+	Node0xb229400 [shape=record,label="{pd_for.inc.74}"];
+	Node0xb229400 -> Node0xb2292c0;
+	Node0xb229450 [shape=record,label="{pd_for.body.43|{<s0>T|<s1>F}}"];
+	Node0xb229450:s0 -> Node0xb2294f0;
+	Node0xb229450:s1 -> Node0xb2294a0;
+	Node0xb2294a0 [shape=record,label="{pd_for.body.43.for.inc.72_crit_edge}"];
+	Node0xb2294a0 -> Node0xb2295e0;
+	Node0xb2294f0 [shape=record,label="{pd_if.then.46|{<s0>T|<s1>F}}"];
+	Node0xb2294f0:s0 -> Node0xb229590;
+	Node0xb2294f0:s1 -> Node0xb229540;
+	Node0xb229540 [shape=record,label="{pd_if.then.46.for.inc.72_crit_edge}"];
+	Node0xb229540 -> Node0xb2295e0;
+	Node0xb229590 [shape=record,label="{pd_if.then.51}"];
+	Node0xb229590 -> Node0xb2295e0;
+	Node0xb2295e0 [shape=record,label="{pd_for.inc.72}"];
+	Node0xb2295e0 -> Node0xb2293b0;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'straighten_stack_for.cond' function" {
+	label="CFG for 'straighten_stack_for.cond' function";
+
+	Node0xb90a6a0 [shape=record,label="{newFuncRoot}"];
+	Node0xb90a6a0 -> Node0xb90a740;
+	Node0xb90a6f0 [shape=record,label="{for.end.exitStub}"];
+	Node0xb90a740 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb90a740:s0 -> Node0xb90a790;
+	Node0xb90a740:s1 -> Node0xb90a6f0;
+	Node0xb90a790 [shape=record,label="{pd_for.body}"];
+	Node0xb90a790 -> Node0xf99ed80;
+	Node0xf99ed80 [shape=record,label="{it_for.body.split}"];
+	Node0xf99ed80 -> Node0xb90a740;
+}

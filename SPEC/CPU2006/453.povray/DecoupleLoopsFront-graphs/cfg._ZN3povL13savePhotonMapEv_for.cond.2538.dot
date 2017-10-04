@@ -1,0 +1,16 @@
+digraph "CFG for '_ZN3povL13savePhotonMapEv_for.cond' function" {
+	label="CFG for '_ZN3povL13savePhotonMapEv_for.cond' function";
+
+	Node0x2a01220 [shape=record,label="{newFuncRoot}"];
+	Node0x2a01220 -> Node0x2a01310;
+	Node0x2a01270 [shape=record,label="{if.end.12.loopexit.exitStub}"];
+	Node0x2a012c0 [shape=record,label="{if.then.9.exitStub}"];
+	Node0x2a01310 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2a01310:s0 -> Node0x2a01360;
+	Node0x2a01310:s1 -> Node0x2a01270;
+	Node0x2a01360 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x2a01360:s0 -> Node0x2a012c0;
+	Node0x2a01360:s1 -> Node0x2a013b0;
+	Node0x2a013b0 [shape=record,label="{it_for.inc}"];
+	Node0x2a013b0 -> Node0x2a01310;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'clear_table_for.cond' function" {
+	label="CFG for 'clear_table_for.cond' function";
+
+	Node0xaa0c9d0 [shape=record,label="{newFuncRoot}"];
+	Node0xaa0c9d0 -> Node0xaa0ca70;
+	Node0xaa0ca20 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0xaa0ca70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xaa0ca70:s0 -> Node0xaa0cac0;
+	Node0xaa0ca70:s1 -> Node0xaa0ca20;
+	Node0xaa0cac0 [shape=record,label="{pd_for.body}"];
+	Node0xaa0cac0 -> Node0xf2547d0;
+	Node0xf2547d0 [shape=record,label="{it_for.body.split}"];
+	Node0xf2547d0 -> Node0xaa0ca70;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'scope_die_for_for.cond' function" {
+	label="CFG for 'scope_die_for_for.cond' function";
+
+	Node0xabe4610 [shape=record,label="{newFuncRoot}"];
+	Node0xabe4610 -> Node0xabea060;
+	Node0xabe9fc0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0xabea010 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0xabea060 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xabea060:s0 -> Node0xabea0b0;
+	Node0xabea060:s1 -> Node0xabe9fc0;
+	Node0xabea0b0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xabea0b0:s0 -> Node0xabea010;
+	Node0xabea0b0:s1 -> Node0xabea100;
+	Node0xabea100 [shape=record,label="{it_for.inc}"];
+	Node0xabea100 -> Node0xabea060;
+}

@@ -1,0 +1,12 @@
+digraph "CFG for 'bsW' function" {
+	label="CFG for 'bsW' function";
+
+	Node0x16f0480 [shape=record,label="{entry}"];
+	Node0x16f0480 -> Node0x16f04d0;
+	Node0x16f04d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x16f04d0:s0 -> Node0x16f0520;
+	Node0x16f04d0:s1 -> Node0x16f0570;
+	Node0x16f0520 [shape=record,label="{pd_while.body}"];
+	Node0x16f0520 -> Node0x16f04d0;
+	Node0x16f0570 [shape=record,label="{while.end}"];
+}

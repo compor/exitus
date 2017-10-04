@@ -1,0 +1,14 @@
+digraph "CFG for 'set_block_origin_self_for.cond' function" {
+	label="CFG for 'set_block_origin_self_for.cond' function";
+
+	Node0xb363020 [shape=record,label="{newFuncRoot}"];
+	Node0xb363020 -> Node0xb3630c0;
+	Node0xb363070 [shape=record,label="{for.end.exitStub}"];
+	Node0xb3630c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb3630c0:s0 -> Node0xb363110;
+	Node0xb3630c0:s1 -> Node0xb363070;
+	Node0xb363110 [shape=record,label="{pd_for.body}"];
+	Node0xb363110 -> Node0xf66e770;
+	Node0xf66e770 [shape=record,label="{it_for.body.split}"];
+	Node0xf66e770 -> Node0xb3630c0;
+}

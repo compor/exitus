@@ -1,0 +1,12 @@
+digraph "CFG for 'init_resource_info_while.cond' function" {
+	label="CFG for 'init_resource_info_while.cond' function";
+
+	Node0xc065eb0 [shape=record,label="{newFuncRoot}"];
+	Node0xc065eb0 -> Node0xc065f50;
+	Node0xc065f00 [shape=record,label="{while.end.exitStub}"];
+	Node0xc065f50 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc065f50:s0 -> Node0xc065fa0;
+	Node0xc065f50:s1 -> Node0xc065f00;
+	Node0xc065fa0 [shape=record,label="{pd_while.body}"];
+	Node0xc065fa0 -> Node0xc065f50;
+}

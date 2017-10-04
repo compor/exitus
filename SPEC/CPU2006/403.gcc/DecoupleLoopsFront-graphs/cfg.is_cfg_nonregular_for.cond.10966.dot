@@ -1,0 +1,39 @@
+digraph "CFG for 'is_cfg_nonregular_for.cond' function" {
+	label="CFG for 'is_cfg_nonregular_for.cond' function";
+
+	Node0xc2242e0 [shape=record,label="{newFuncRoot}"];
+	Node0xc2242e0 -> Node0xc2248c0;
+	Node0xc2247d0 [shape=record,label="{return.loopexit1.exitStub}"];
+	Node0xc224820 [shape=record,label="{land.lhs.true.21.return.loopexit_crit_edge.exitStub}"];
+	Node0xc224870 [shape=record,label="{land.lhs.true.27.return.loopexit_crit_edge.exitStub}"];
+	Node0xc2248c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc2248c0:s0 -> Node0xc224910;
+	Node0xc2248c0:s1 -> Node0xc2247d0;
+	Node0xc224910 [shape=record,label="{it_for.body}"];
+	Node0xc224910 -> Node0xc224960;
+	Node0xc224960 [shape=record,label="{it_for.cond.9|{<s0>T|<s1>F}}"];
+	Node0xc224960:s0 -> Node0xc224a00;
+	Node0xc224960:s1 -> Node0xc2249b0;
+	Node0xc2249b0 [shape=record,label="{pd_for.cond.9.if.end.38_crit_edge}"];
+	Node0xc2249b0 -> Node0xc224b90;
+	Node0xc224a00 [shape=record,label="{it_if.then.18|{<s0>T|<s1>F}}"];
+	Node0xc224a00:s0 -> Node0xc224aa0;
+	Node0xc224a00:s1 -> Node0xc224a50;
+	Node0xc224a50 [shape=record,label="{pd_if.then.18.if.end.38_crit_edge}"];
+	Node0xc224a50 -> Node0xc224b90;
+	Node0xc224aa0 [shape=record,label="{it_land.lhs.true.21|{<s0>T|<s1>F}}"];
+	Node0xc224aa0:s0 -> Node0xc224af0;
+	Node0xc224aa0:s1 -> Node0xc224820;
+	Node0xc224af0 [shape=record,label="{it_land.lhs.true.27|{<s0>T|<s1>F}}"];
+	Node0xc224af0:s0 -> Node0xc224b40;
+	Node0xc224af0:s1 -> Node0xc224870;
+	Node0xc224b40 [shape=record,label="{pd_land.lhs.true.27.if.end.38_crit_edge}"];
+	Node0xc224b40 -> Node0xc224b90;
+	Node0xc224b90 [shape=record,label="{it_if.end.38|{<s0>T|<s1>F}}"];
+	Node0xc224b90:s0 -> Node0xc224c30;
+	Node0xc224b90:s1 -> Node0xc224be0;
+	Node0xc224be0 [shape=record,label="{it_for.inc}"];
+	Node0xc224be0 -> Node0xc224960;
+	Node0xc224c30 [shape=record,label="{it_for.inc.50}"];
+	Node0xc224c30 -> Node0xc2248c0;
+}

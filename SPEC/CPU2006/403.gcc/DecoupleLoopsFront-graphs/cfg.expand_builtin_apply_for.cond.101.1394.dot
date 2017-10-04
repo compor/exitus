@@ -1,0 +1,16 @@
+digraph "CFG for 'expand_builtin_apply_for.cond.101' function" {
+	label="CFG for 'expand_builtin_apply_for.cond.101' function";
+
+	Node0x79e0990 [shape=record,label="{newFuncRoot}"];
+	Node0x79e0990 -> Node0x79e0e30;
+	Node0x79e09e0 [shape=record,label="{if.then.112.loopexit.exitStub}"];
+	Node0x79e0de0 [shape=record,label="{for.end.110.exitStub}"];
+	Node0x79e0e30 [shape=record,label="{it_for.cond.101|{<s0>T|<s1>F}}"];
+	Node0x79e0e30:s0 -> Node0x79e09e0;
+	Node0x79e0e30:s1 -> Node0x79e0e80;
+	Node0x79e0e80 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x79e0e80:s0 -> Node0x79e0ed0;
+	Node0x79e0e80:s1 -> Node0x79e0de0;
+	Node0x79e0ed0 [shape=record,label="{it_for.inc.108}"];
+	Node0x79e0ed0 -> Node0x79e0e30;
+}

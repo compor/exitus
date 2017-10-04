@@ -1,0 +1,36 @@
+digraph "CFG for 'PerlIO_get_layers_while.cond' function" {
+	label="CFG for 'PerlIO_get_layers_while.cond' function";
+
+	Node0x4d85ed0 [shape=record,label="{newFuncRoot}"];
+	Node0x4d85ed0 -> Node0x4d86380;
+	Node0x4d85f20 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0x4d86380 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d86380:s0 -> Node0x4d863d0;
+	Node0x4d86380:s1 -> Node0x4d85f20;
+	Node0x4d863d0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x4d863d0:s0 -> Node0x4d86470;
+	Node0x4d863d0:s1 -> Node0x4d86420;
+	Node0x4d86420 [shape=record,label="{pd_while.body.cond.end_crit_edge}"];
+	Node0x4d86420 -> Node0x4d86560;
+	Node0x4d86470 [shape=record,label="{pd_land.lhs.true.4|{<s0>T|<s1>F}}"];
+	Node0x4d86470:s0 -> Node0x4d86510;
+	Node0x4d86470:s1 -> Node0x4d864c0;
+	Node0x4d864c0 [shape=record,label="{pd_land.lhs.true.4.cond.end_crit_edge}"];
+	Node0x4d864c0 -> Node0x4d86560;
+	Node0x4d86510 [shape=record,label="{pd_cond.true}"];
+	Node0x4d86510 -> Node0x4d86560;
+	Node0x4d86560 [shape=record,label="{pd_cond.end|{<s0>T|<s1>F}}"];
+	Node0x4d86560:s0 -> Node0x4d86600;
+	Node0x4d86560:s1 -> Node0x4d865b0;
+	Node0x4d865b0 [shape=record,label="{pd_cond.end.cond.end.21_crit_edge}"];
+	Node0x4d865b0 -> Node0x4d866f0;
+	Node0x4d86600 [shape=record,label="{pd_land.lhs.true.13|{<s0>T|<s1>F}}"];
+	Node0x4d86600:s0 -> Node0x4d866a0;
+	Node0x4d86600:s1 -> Node0x4d86650;
+	Node0x4d86650 [shape=record,label="{pd_land.lhs.true.13.cond.end.21_crit_edge}"];
+	Node0x4d86650 -> Node0x4d866f0;
+	Node0x4d866a0 [shape=record,label="{pd_cond.true.16}"];
+	Node0x4d866a0 -> Node0x4d866f0;
+	Node0x4d866f0 [shape=record,label="{pd_cond.end.21}"];
+	Node0x4d866f0 -> Node0x4d86380;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'make_letterbar_for.cond' function" {
+	label="CFG for 'make_letterbar_for.cond' function";
+
+	Node0x480c640 [shape=record,label="{newFuncRoot}"];
+	Node0x480c640 -> Node0x480c6e0;
+	Node0x480c690 [shape=record,label="{for.end.exitStub}"];
+	Node0x480c6e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x480c6e0:s0 -> Node0x480c730;
+	Node0x480c6e0:s1 -> Node0x480c690;
+	Node0x480c730 [shape=record,label="{pd_for.body}"];
+	Node0x480c730 -> Node0x514bbd0;
+	Node0x514bbd0 [shape=record,label="{it_for.body.split}"];
+	Node0x514bbd0 -> Node0x480c6e0;
+}

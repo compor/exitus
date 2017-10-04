@@ -1,0 +1,23 @@
+digraph "CFG for 'maybe_read_dollar_number_for.cond' function" {
+	label="CFG for 'maybe_read_dollar_number_for.cond' function";
+
+	Node0xa1b5290 [shape=record,label="{newFuncRoot}"];
+	Node0xa1b5290 -> Node0xa1b5330;
+	Node0xa1b52e0 [shape=record,label="{for.end.exitStub}"];
+	Node0xa1b5330 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa1b5330:s0 -> Node0xa1b53d0;
+	Node0xa1b5330:s1 -> Node0xa1b5380;
+	Node0xa1b5380 [shape=record,label="{it_for.cond.land.end_crit_edge}"];
+	Node0xa1b5380 -> Node0xa1b5420;
+	Node0xa1b53d0 [shape=record,label="{it_land.rhs}"];
+	Node0xa1b53d0 -> Node0xa1b5420;
+	Node0xa1b5420 [shape=record,label="{pd_land.end}"];
+	Node0xa1b5420 -> Node0xf03c080;
+	Node0xf03c080 [shape=record,label="{it_land.end.split|{<s0>T|<s1>F}}"];
+	Node0xf03c080:s0 -> Node0xa1b5470;
+	Node0xf03c080:s1 -> Node0xa1b52e0;
+	Node0xa1b5470 [shape=record,label="{pd_for.body}"];
+	Node0xa1b5470 -> Node0xf002330;
+	Node0xf002330 [shape=record,label="{it_for.body.split}"];
+	Node0xf002330 -> Node0xa1b5330;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'end_protect_partials' function" {
+	label="CFG for 'end_protect_partials' function";
+
+	Node0x3f77bc0 [shape=record,label="{entry}"];
+	Node0x3f77bc0 -> Node0x3f77c10;
+	Node0x3f77c10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3f77c10:s0 -> Node0x3f77c60;
+	Node0x3f77c10:s1 -> Node0x3f77cb0;
+	Node0x3f77c60 [shape=record,label="{pd_for.body}"];
+	Node0x3f77c60 -> Node0xd15bfb0;
+	Node0xd15bfb0 [shape=record,label="{it_for.body.split}"];
+	Node0xd15bfb0 -> Node0x3f77c10;
+	Node0x3f77cb0 [shape=record,label="{for.end}"];
+}

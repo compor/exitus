@@ -1,0 +1,21 @@
+digraph "CFG for 'sched_analyze_insn_while.cond.98' function" {
+	label="CFG for 'sched_analyze_insn_while.cond.98' function";
+
+	Node0xc187330 [shape=record,label="{newFuncRoot}"];
+	Node0xc187330 -> Node0xc1873d0;
+	Node0xc187380 [shape=record,label="{while.end.118.exitStub}"];
+	Node0xc1873d0 [shape=record,label="{it_while.cond.98|{<s0>T|<s1>F}}"];
+	Node0xc1873d0:s0 -> Node0xc187420;
+	Node0xc1873d0:s1 -> Node0xc187380;
+	Node0xc187420 [shape=record,label="{pd_while.body.100|{<s0>T|<s1>F}}"];
+	Node0xc187420:s0 -> Node0xc187d70;
+	Node0xc187420:s1 -> Node0xc187470;
+	Node0xc187470 [shape=record,label="{pd_while.body.100.if.end.111_crit_edge}"];
+	Node0xc187470 -> Node0xc187dc0;
+	Node0xc187d70 [shape=record,label="{pd_if.then.107}"];
+	Node0xc187d70 -> Node0xc187dc0;
+	Node0xc187dc0 [shape=record,label="{it_if.end.111}"];
+	Node0xc187dc0 -> Node0xfcc91c0;
+	Node0xfcc91c0 [shape=record,label="{pd_if.end.111.split}"];
+	Node0xfcc91c0 -> Node0xc1873d0;
+}

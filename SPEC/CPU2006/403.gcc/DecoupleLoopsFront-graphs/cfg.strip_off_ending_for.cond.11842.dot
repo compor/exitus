@@ -1,0 +1,16 @@
+digraph "CFG for 'strip_off_ending_for.cond' function" {
+	label="CFG for 'strip_off_ending_for.cond' function";
+
+	Node0xc46bbf0 [shape=record,label="{newFuncRoot}"];
+	Node0xc46bbf0 -> Node0xc46bce0;
+	Node0xc46bc40 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0xc46bc90 [shape=record,label="{if.then.exitStub}"];
+	Node0xc46bce0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc46bce0:s0 -> Node0xc46bd30;
+	Node0xc46bce0:s1 -> Node0xc46bc40;
+	Node0xc46bd30 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xc46bd30:s0 -> Node0xc46bc90;
+	Node0xc46bd30:s1 -> Node0xc46bd80;
+	Node0xc46bd80 [shape=record,label="{it_for.inc}"];
+	Node0xc46bd80 -> Node0xc46bce0;
+}

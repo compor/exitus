@@ -1,0 +1,21 @@
+digraph "CFG for 'vithist_lmstate_reset' function" {
+	label="CFG for 'vithist_lmstate_reset' function";
+
+	Node0x10fd0f0 [shape=record,label="{entry}"];
+	Node0x10fd0f0 -> Node0x10fd140;
+	Node0x10fd140 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x10fd140:s0 -> Node0x10fd190;
+	Node0x10fd140:s1 -> Node0x10fd2d0;
+	Node0x10fd190 [shape=record,label="{pd_for.body}"];
+	Node0x10fd190 -> Node0x10fd1e0;
+	Node0x10fd1e0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x10fd1e0:s0 -> Node0x10fd230;
+	Node0x10fd1e0:s1 -> Node0x10fd280;
+	Node0x10fd230 [shape=record,label="{pd_for.body.3}"];
+	Node0x10fd230 -> Node0x10fd1e0;
+	Node0x10fd280 [shape=record,label="{pd_for.end}"];
+	Node0x10fd280 -> Node0x152c420;
+	Node0x152c420 [shape=record,label="{it_for.end.split}"];
+	Node0x152c420 -> Node0x10fd140;
+	Node0x10fd2d0 [shape=record,label="{for.end.11}"];
+}

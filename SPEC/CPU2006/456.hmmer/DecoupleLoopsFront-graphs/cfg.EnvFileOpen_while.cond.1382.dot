@@ -1,0 +1,22 @@
+digraph "CFG for 'EnvFileOpen_while.cond' function" {
+	label="CFG for 'EnvFileOpen_while.cond' function";
+
+	Node0x330d380 [shape=record,label="{newFuncRoot}"];
+	Node0x330d380 -> Node0x330d4c0;
+	Node0x330d3d0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x330d420 [shape=record,label="{if.then.13.exitStub}"];
+	Node0x330d470 [shape=record,label="{if.end.14.while.end_crit_edge.exitStub}"];
+	Node0x330d4c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x330d4c0:s0 -> Node0x330d510;
+	Node0x330d4c0:s1 -> Node0x330d3d0;
+	Node0x330d510 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x330d510:s0 -> Node0x330d420;
+	Node0x330d510:s1 -> Node0x330d560;
+	Node0x330d560 [shape=record,label="{pd_if.end.14}"];
+	Node0x330d560 -> Node0x38fb6f0;
+	Node0x38fb6f0 [shape=record,label="{it_if.end.14.split|{<s0>T|<s1>F}}"];
+	Node0x38fb6f0:s0 -> Node0x330d470;
+	Node0x38fb6f0:s1 -> Node0x330d5b0;
+	Node0x330d5b0 [shape=record,label="{it_if.end.21}"];
+	Node0x330d5b0 -> Node0x330d4c0;
+}

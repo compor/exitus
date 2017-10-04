@@ -1,0 +1,33 @@
+digraph "CFG for 'clear_marks' function" {
+	label="CFG for 'clear_marks' function";
+
+	Node0x99cf7e0 [shape=record,label="{entry}"];
+	Node0x99cf7e0 -> Node0x99cf830;
+	Node0x99cf830 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x99cf830:s0 -> Node0x99cf880;
+	Node0x99cf830:s1 -> Node0x99cfba0;
+	Node0x99cf880 [shape=record,label="{pd_for.body}"];
+	Node0x99cf880 -> Node0x99cf8d0;
+	Node0x99cf8d0 [shape=record,label="{pd_for.cond.6|{<s0>T|<s1>F}}"];
+	Node0x99cf8d0:s0 -> Node0x99cf920;
+	Node0x99cf8d0:s1 -> Node0x99cfb50;
+	Node0x99cf920 [shape=record,label="{pd_for.body.9|{<s0>T|<s1>F}}"];
+	Node0x99cf920:s0 -> Node0x99cf9c0;
+	Node0x99cf920:s1 -> Node0x99cf970;
+	Node0x99cf970 [shape=record,label="{pd_for.body.9.if.end.17_crit_edge}"];
+	Node0x99cf970 -> Node0x99cfb00;
+	Node0x99cf9c0 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x99cf9c0:s0 -> Node0x99cfa10;
+	Node0x99cf9c0:s1 -> Node0x99cfa60;
+	Node0x99cfa10 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x99cfa10 -> Node0x99cfab0;
+	Node0x99cfa60 [shape=record,label="{pd_if.then.14}"];
+	Node0x99cfa60 -> Node0x99cfab0;
+	Node0x99cfab0 [shape=record,label="{pd_if.end}"];
+	Node0x99cfab0 -> Node0x99cfb00;
+	Node0x99cfb00 [shape=record,label="{pd_if.end.17}"];
+	Node0x99cfb00 -> Node0x99cf8d0;
+	Node0x99cfb50 [shape=record,label="{it_for.inc.23}"];
+	Node0x99cfb50 -> Node0x99cf830;
+	Node0x99cfba0 [shape=record,label="{for.end.24}"];
+}

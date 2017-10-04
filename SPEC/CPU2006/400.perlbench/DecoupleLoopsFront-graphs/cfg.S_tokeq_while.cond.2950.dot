@@ -1,0 +1,16 @@
+digraph "CFG for 'S_tokeq_while.cond' function" {
+	label="CFG for 'S_tokeq_while.cond' function";
+
+	Node0x56bb5b0 [shape=record,label="{newFuncRoot}"];
+	Node0x56bb5b0 -> Node0x56bbab0;
+	Node0x56bb600 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x56bb650 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x56bbab0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x56bbab0:s0 -> Node0x56bbb00;
+	Node0x56bbab0:s1 -> Node0x56bb600;
+	Node0x56bbb00 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x56bbb00:s0 -> Node0x56bbb50;
+	Node0x56bbb00:s1 -> Node0x56bb650;
+	Node0x56bbb50 [shape=record,label="{it_while.body}"];
+	Node0x56bbb50 -> Node0x56bbab0;
+}

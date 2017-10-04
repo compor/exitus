@@ -1,0 +1,43 @@
+digraph "CFG for 'gtp_dragon_data_for.cond' function" {
+	label="CFG for 'gtp_dragon_data_for.cond' function";
+
+	Node0x4811740 [shape=record,label="{newFuncRoot}"];
+	Node0x4811740 -> Node0x48117e0;
+	Node0x4811790 [shape=record,label="{if.end.56.loopexit.exitStub}"];
+	Node0x48117e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x48117e0:s0 -> Node0x4811830;
+	Node0x48117e0:s1 -> Node0x4811790;
+	Node0x4811830 [shape=record,label="{pd_for.cond.17.preheader}"];
+	Node0x4811830 -> Node0x4811880;
+	Node0x4811880 [shape=record,label="{pd_for.cond.17|{<s0>T|<s1>F}}"];
+	Node0x4811880:s0 -> Node0x4811920;
+	Node0x4811880:s1 -> Node0x48118d0;
+	Node0x48118d0 [shape=record,label="{it_for.inc.53}"];
+	Node0x48118d0 -> Node0x48117e0;
+	Node0x4811920 [shape=record,label="{pd_for.body.20|{<s0>T|<s1>F}}"];
+	Node0x4811920:s0 -> Node0x4811ba0;
+	Node0x4811920:s1 -> Node0x4811970;
+	Node0x4811970 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4811970:s0 -> Node0x4811a10;
+	Node0x4811970:s1 -> Node0x48119c0;
+	Node0x48119c0 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x48119c0 -> Node0x4811c40;
+	Node0x4811a10 [shape=record,label="{pd_land.lhs.true.28|{<s0>T|<s1>F}}"];
+	Node0x4811a10:s0 -> Node0x4811ab0;
+	Node0x4811a10:s1 -> Node0x4811a60;
+	Node0x4811a60 [shape=record,label="{pd_land.lhs.true.28.for.inc_crit_edge}"];
+	Node0x4811a60 -> Node0x4811c40;
+	Node0x4811ab0 [shape=record,label="{pd_land.lhs.true.37|{<s0>T|<s1>F}}"];
+	Node0x4811ab0:s0 -> Node0x4811b50;
+	Node0x4811ab0:s1 -> Node0x4811b00;
+	Node0x4811b00 [shape=record,label="{pd_land.lhs.true.37.for.inc_crit_edge}"];
+	Node0x4811b00 -> Node0x4811c40;
+	Node0x4811b50 [shape=record,label="{pd_land.lhs.true.37.if.then.48_crit_edge}"];
+	Node0x4811b50 -> Node0x4811bf0;
+	Node0x4811ba0 [shape=record,label="{pd_for.body.20.if.then.48_crit_edge}"];
+	Node0x4811ba0 -> Node0x4811bf0;
+	Node0x4811bf0 [shape=record,label="{pd_if.then.48}"];
+	Node0x4811bf0 -> Node0x4811c40;
+	Node0x4811c40 [shape=record,label="{pd_for.inc}"];
+	Node0x4811c40 -> Node0x4811880;
+}

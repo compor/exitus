@@ -1,0 +1,35 @@
+digraph "CFG for 'XS_Opcode_opset' function" {
+	label="CFG for 'XS_Opcode_opset' function";
+
+	Node0x4a64910 [shape=record,label="{entry}"];
+	Node0x4a64910 -> Node0x4a68d50;
+	Node0x4a68d50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4a68d50:s0 -> Node0x4a68da0;
+	Node0x4a68d50:s1 -> Node0x4a690c0;
+	Node0x4a68da0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4a68da0:s0 -> Node0x4a68df0;
+	Node0x4a68da0:s1 -> Node0x4a68e40;
+	Node0x4a68df0 [shape=record,label="{pd_for.body.if.end.37_crit_edge}"];
+	Node0x4a68df0 -> Node0x4a69070;
+	Node0x4a68e40 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x4a68e40:s0 -> Node0x4a68e90;
+	Node0x4a68e40:s1 -> Node0x4a68ee0;
+	Node0x4a68e90 [shape=record,label="{pd_cond.true}"];
+	Node0x4a68e90 -> Node0x4a68f30;
+	Node0x4a68ee0 [shape=record,label="{pd_cond.false}"];
+	Node0x4a68ee0 -> Node0x4a68f30;
+	Node0x4a68f30 [shape=record,label="{pd_cond.end|{<s0>T|<s1>F}}"];
+	Node0x4a68f30:s0 -> Node0x4a68fd0;
+	Node0x4a68f30:s1 -> Node0x4a68f80;
+	Node0x4a68f80 [shape=record,label="{pd_cond.end.if.end_crit_edge}"];
+	Node0x4a68f80 -> Node0x4a69020;
+	Node0x4a68fd0 [shape=record,label="{pd_if.then.34}"];
+	Node0x4a68fd0 -> Node0x4a69020;
+	Node0x4a69020 [shape=record,label="{pd_if.end}"];
+	Node0x4a69020 -> Node0x4a69070;
+	Node0x4a69070 [shape=record,label="{pd_if.end.37}"];
+	Node0x4a69070 -> Node0x6301040;
+	Node0x6301040 [shape=record,label="{it_if.end.37.split}"];
+	Node0x6301040 -> Node0x4a68d50;
+	Node0x4a690c0 [shape=record,label="{for.end}"];
+}

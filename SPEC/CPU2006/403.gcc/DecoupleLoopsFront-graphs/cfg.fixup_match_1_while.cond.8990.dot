@@ -1,0 +1,19 @@
+digraph "CFG for 'fixup_match_1_while.cond' function" {
+	label="CFG for 'fixup_match_1_while.cond' function";
+
+	Node0xbaa8350 [shape=record,label="{newFuncRoot}"];
+	Node0xbaa8350 -> Node0xbaa83f0;
+	Node0xbaa83a0 [shape=record,label="{while.end.exitStub}"];
+	Node0xbaa83f0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xbaa83f0:s0 -> Node0xbaa8490;
+	Node0xbaa83f0:s1 -> Node0xbaa8440;
+	Node0xbaa8440 [shape=record,label="{it_while.cond.lor.end_crit_edge}"];
+	Node0xbaa8440 -> Node0xbaa84e0;
+	Node0xbaa8490 [shape=record,label="{it_lor.rhs}"];
+	Node0xbaa8490 -> Node0xbaa84e0;
+	Node0xbaa84e0 [shape=record,label="{it_lor.end|{<s0>T|<s1>F}}"];
+	Node0xbaa84e0:s0 -> Node0xbaa8530;
+	Node0xbaa84e0:s1 -> Node0xbaa83a0;
+	Node0xbaa8530 [shape=record,label="{it_while.body}"];
+	Node0xbaa8530 -> Node0xbaa83f0;
+}

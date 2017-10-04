@@ -1,0 +1,23 @@
+digraph "CFG for 'check_operand_nalternatives_while.cond.outer' function" {
+	label="CFG for 'check_operand_nalternatives_while.cond.outer' function";
+
+	Node0xc400f00 [shape=record,label="{newFuncRoot}"];
+	Node0xc400f00 -> Node0xc409ce0;
+	Node0xc409c40 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xc409c90 [shape=record,label="{if.then.17.exitStub}"];
+	Node0xc409ce0 [shape=record,label="{pd_while.cond.outer}"];
+	Node0xc409ce0 -> Node0xc409d30;
+	Node0xc409d30 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc409d30:s0 -> Node0xc409d80;
+	Node0xc409d30:s1 -> Node0xc409c40;
+	Node0xc409d80 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc409d80:s0 -> Node0xc409c90;
+	Node0xc409d80:s1 -> Node0xc409dd0;
+	Node0xc409dd0 [shape=record,label="{it_if.end.18|{<s0>T|<s1>F}}"];
+	Node0xc409dd0:s0 -> Node0xc409e70;
+	Node0xc409dd0:s1 -> Node0xc409e20;
+	Node0xc409e20 [shape=record,label="{it_while.cond.outer.loopexit}"];
+	Node0xc409e20 -> Node0xc409ce0;
+	Node0xc409e70 [shape=record,label="{it_if.then.20}"];
+	Node0xc409e70 -> Node0xc409d30;
+}

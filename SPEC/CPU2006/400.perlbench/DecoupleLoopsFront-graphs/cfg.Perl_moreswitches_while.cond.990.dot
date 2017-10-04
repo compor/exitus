@@ -1,0 +1,43 @@
+digraph "CFG for 'Perl_moreswitches_while.cond' function" {
+	label="CFG for 'Perl_moreswitches_while.cond' function";
+
+	Node0x4d44270 [shape=record,label="{newFuncRoot}"];
+	Node0x4d44270 -> Node0x4d44310;
+	Node0x4d442c0 [shape=record,label="{while.end.exitStub}"];
+	Node0x4d44310 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d44310:s0 -> Node0x4d443b0;
+	Node0x4d44310:s1 -> Node0x4d44360;
+	Node0x4d44360 [shape=record,label="{it_while.cond.land.end_crit_edge}"];
+	Node0x4d44360 -> Node0x4d446d0;
+	Node0x4d443b0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x4d443b0:s0 -> Node0x4d44630;
+	Node0x4d443b0:s1 -> Node0x4d44400;
+	Node0x4d44400 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4d44400:s0 -> Node0x4d445e0;
+	Node0x4d44400:s1 -> Node0x4d44450;
+	Node0x4d44450 [shape=record,label="{it_lor.lhs.false.159|{<s0>T|<s1>F}}"];
+	Node0x4d44450:s0 -> Node0x4d44590;
+	Node0x4d44450:s1 -> Node0x4d444a0;
+	Node0x4d444a0 [shape=record,label="{it_lor.lhs.false.163|{<s0>T|<s1>F}}"];
+	Node0x4d444a0:s0 -> Node0x4d44540;
+	Node0x4d444a0:s1 -> Node0x4d444f0;
+	Node0x4d444f0 [shape=record,label="{it_lor.rhs}"];
+	Node0x4d444f0 -> Node0x4d44680;
+	Node0x4d44540 [shape=record,label="{it_lor.lhs.false.163.lor.end_crit_edge}"];
+	Node0x4d44540 -> Node0x4d44680;
+	Node0x4d44590 [shape=record,label="{it_lor.lhs.false.159.lor.end_crit_edge}"];
+	Node0x4d44590 -> Node0x4d44680;
+	Node0x4d445e0 [shape=record,label="{it_lor.lhs.false.lor.end_crit_edge}"];
+	Node0x4d445e0 -> Node0x4d44680;
+	Node0x4d44630 [shape=record,label="{it_land.rhs.lor.end_crit_edge}"];
+	Node0x4d44630 -> Node0x4d44680;
+	Node0x4d44680 [shape=record,label="{it_lor.end}"];
+	Node0x4d44680 -> Node0x4d446d0;
+	Node0x4d446d0 [shape=record,label="{pd_land.end}"];
+	Node0x4d446d0 -> Node0x66eded0;
+	Node0x66eded0 [shape=record,label="{it_land.end.split|{<s0>T|<s1>F}}"];
+	Node0x66eded0:s0 -> Node0x4d44720;
+	Node0x66eded0:s1 -> Node0x4d442c0;
+	Node0x4d44720 [shape=record,label="{pd_while.body}"];
+	Node0x4d44720 -> Node0x4d44310;
+}

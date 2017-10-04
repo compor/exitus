@@ -1,0 +1,38 @@
+digraph "CFG for 'writeMotionInfo2NAL_for.cond.82' function" {
+	label="CFG for 'writeMotionInfo2NAL_for.cond.82' function";
+
+	Node0x265cd60 [shape=record,label="{newFuncRoot}"];
+	Node0x265cd60 -> Node0x265ce00;
+	Node0x265cdb0 [shape=record,label="{if.end.134.loopexit.exitStub}"];
+	Node0x265ce00 [shape=record,label="{it_for.cond.82|{<s0>T|<s1>F}}"];
+	Node0x265ce00:s0 -> Node0x265ce50;
+	Node0x265ce00:s1 -> Node0x265cdb0;
+	Node0x265ce50 [shape=record,label="{pd_for.cond.86.preheader}"];
+	Node0x265ce50 -> Node0x265cea0;
+	Node0x265cea0 [shape=record,label="{pd_for.cond.86|{<s0>T|<s1>F}}"];
+	Node0x265cea0:s0 -> Node0x265cf40;
+	Node0x265cea0:s1 -> Node0x265cef0;
+	Node0x265cef0 [shape=record,label="{it_for.inc.130}"];
+	Node0x265cef0 -> Node0x265ce00;
+	Node0x265cf40 [shape=record,label="{pd_for.body.89|{<s0>T|<s1>F}}"];
+	Node0x265cf40:s0 -> Node0x265d080;
+	Node0x265cf40:s1 -> Node0x265cf90;
+	Node0x265cf90 [shape=record,label="{pd_lor.lhs.false.97|{<s0>T|<s1>F}}"];
+	Node0x265cf90:s0 -> Node0x265d030;
+	Node0x265cf90:s1 -> Node0x265cfe0;
+	Node0x265cfe0 [shape=record,label="{pd_lor.lhs.false.97.for.inc.127_crit_edge}"];
+	Node0x265cfe0 -> Node0x265d1c0;
+	Node0x265d030 [shape=record,label="{pd_lor.lhs.false.97.land.lhs.true.103_crit_edge}"];
+	Node0x265d030 -> Node0x265d0d0;
+	Node0x265d080 [shape=record,label="{pd_for.body.89.land.lhs.true.103_crit_edge}"];
+	Node0x265d080 -> Node0x265d0d0;
+	Node0x265d0d0 [shape=record,label="{pd_land.lhs.true.103|{<s0>T|<s1>F}}"];
+	Node0x265d0d0:s0 -> Node0x265d170;
+	Node0x265d0d0:s1 -> Node0x265d120;
+	Node0x265d120 [shape=record,label="{pd_land.lhs.true.103.for.inc.127_crit_edge}"];
+	Node0x265d120 -> Node0x265d1c0;
+	Node0x265d170 [shape=record,label="{pd_if.then.109}"];
+	Node0x265d170 -> Node0x265d1c0;
+	Node0x265d1c0 [shape=record,label="{pd_for.inc.127}"];
+	Node0x265d1c0 -> Node0x265cea0;
+}

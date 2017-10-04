@@ -1,0 +1,18 @@
+digraph "CFG for '_ZN3pov15Compute_PolygonEPNS_14Polygon_StructEiPA3_d_for.cond' function" {
+	label="CFG for '_ZN3pov15Compute_PolygonEPNS_14Polygon_StructEiPA3_d_for.cond' function";
+
+	Node0x29e3170 [shape=record,label="{newFuncRoot}"];
+	Node0x29e3170 -> Node0x2a3e560;
+	Node0x2a3e4c0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x2a3e510 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0x2a3e560 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2a3e560:s0 -> Node0x2a3e5b0;
+	Node0x2a3e560:s1 -> Node0x2a3e4c0;
+	Node0x2a3e5b0 [shape=record,label="{pd_for.body}"];
+	Node0x2a3e5b0 -> Node0x390b600;
+	Node0x390b600 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x390b600:s0 -> Node0x2a3e510;
+	Node0x390b600:s1 -> Node0x2a3e600;
+	Node0x2a3e600 [shape=record,label="{it_for.inc}"];
+	Node0x2a3e600 -> Node0x2a3e560;
+}

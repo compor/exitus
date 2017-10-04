@@ -1,0 +1,24 @@
+digraph "CFG for 'compute_surroundings_for.cond.1041' function" {
+	label="CFG for 'compute_surroundings_for.cond.1041' function";
+
+	Node0x4771390 [shape=record,label="{newFuncRoot}"];
+	Node0x4771390 -> Node0x4771430;
+	Node0x47713e0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x4771430 [shape=record,label="{it_for.cond.1041|{<s0>T|<s1>F}}"];
+	Node0x4771430:s0 -> Node0x4771480;
+	Node0x4771430:s1 -> Node0x47713e0;
+	Node0x4771480 [shape=record,label="{pd_for.body.1044|{<s0>T|<s1>F}}"];
+	Node0x4771480:s0 -> Node0x4771520;
+	Node0x4771480:s1 -> Node0x47714d0;
+	Node0x47714d0 [shape=record,label="{pd_for.body.1044.for.inc.1059_crit_edge}"];
+	Node0x47714d0 -> Node0x4771610;
+	Node0x4771520 [shape=record,label="{pd_land.lhs.true.1050|{<s0>T|<s1>F}}"];
+	Node0x4771520:s0 -> Node0x47715c0;
+	Node0x4771520:s1 -> Node0x4771570;
+	Node0x4771570 [shape=record,label="{pd_land.lhs.true.1050.for.inc.1059_crit_edge}"];
+	Node0x4771570 -> Node0x4771610;
+	Node0x47715c0 [shape=record,label="{pd_if.then.1056}"];
+	Node0x47715c0 -> Node0x4771610;
+	Node0x4771610 [shape=record,label="{it_for.inc.1059}"];
+	Node0x4771610 -> Node0x4771430;
+}

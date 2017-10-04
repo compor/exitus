@@ -1,0 +1,36 @@
+digraph "CFG for 'Perl_do_join_while.cond' function" {
+	label="CFG for 'Perl_do_join_while.cond' function";
+
+	Node0x464ceb0 [shape=record,label="{newFuncRoot}"];
+	Node0x464ceb0 -> Node0x464cf50;
+	Node0x464cf00 [shape=record,label="{while.end.exitStub}"];
+	Node0x464cf50 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x464cf50:s0 -> Node0x464cfa0;
+	Node0x464cf50:s1 -> Node0x464cf00;
+	Node0x464cfa0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x464cfa0:s0 -> Node0x464d040;
+	Node0x464cfa0:s1 -> Node0x464cff0;
+	Node0x464cff0 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x464cff0 -> Node0x464d2c0;
+	Node0x464d040 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x464d040:s0 -> Node0x464d270;
+	Node0x464d040:s1 -> Node0x464d090;
+	Node0x464d090 [shape=record,label="{pd_land.lhs.true.20|{<s0>T|<s1>F}}"];
+	Node0x464d090:s0 -> Node0x464d130;
+	Node0x464d090:s1 -> Node0x464d0e0;
+	Node0x464d0e0 [shape=record,label="{pd_land.lhs.true.20.if.end_crit_edge}"];
+	Node0x464d0e0 -> Node0x464d2c0;
+	Node0x464d130 [shape=record,label="{pd_if.then.24|{<s0>T|<s1>F}}"];
+	Node0x464d130:s0 -> Node0x464d1d0;
+	Node0x464d130:s1 -> Node0x464d180;
+	Node0x464d180 [shape=record,label="{pd_cond.false.34}"];
+	Node0x464d180 -> Node0x464d220;
+	Node0x464d1d0 [shape=record,label="{pd_cond.true.29}"];
+	Node0x464d1d0 -> Node0x464d220;
+	Node0x464d220 [shape=record,label="{pd_cond.end.36}"];
+	Node0x464d220 -> Node0x464d2c0;
+	Node0x464d270 [shape=record,label="{pd_land.lhs.true.if.end_crit_edge}"];
+	Node0x464d270 -> Node0x464d2c0;
+	Node0x464d2c0 [shape=record,label="{pd_if.end}"];
+	Node0x464d2c0 -> Node0x464cf50;
+}

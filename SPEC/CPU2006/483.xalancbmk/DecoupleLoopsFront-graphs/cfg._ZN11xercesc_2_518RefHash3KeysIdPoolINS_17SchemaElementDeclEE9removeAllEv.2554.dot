@@ -1,0 +1,40 @@
+digraph "CFG for '_ZN11xercesc_2_518RefHash3KeysIdPoolINS_17SchemaElementDeclEE9removeAllEv' function" {
+	label="CFG for '_ZN11xercesc_2_518RefHash3KeysIdPoolINS_17SchemaElementDeclEE9removeAllEv' function";
+
+	Node0x38a3200 [shape=record,label="{entry}"];
+	Node0x38a3200 -> Node0x38a3250;
+	Node0x38a3250 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x38a3250:s0 -> Node0x38a3720;
+	Node0x38a3250:s1 -> Node0x38a3ae0;
+	Node0x38a3720 [shape=record,label="{pd_for.body}"];
+	Node0x38a3720 -> Node0x38a3770;
+	Node0x38a3770 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x38a3770:s0 -> Node0x38a37c0;
+	Node0x38a3770:s1 -> Node0x38a3a90;
+	Node0x38a37c0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x38a37c0:s0 -> Node0x38a3860;
+	Node0x38a37c0:s1 -> Node0x38a3810;
+	Node0x38a3810 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x38a3810 -> Node0x38a3950;
+	Node0x38a3860 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x38a3860:s0 -> Node0x38a38b0;
+	Node0x38a3860:s1 -> Node0x38a3900;
+	Node0x38a38b0 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x38a38b0 -> Node0x38a3950;
+	Node0x38a3900 [shape=record,label="{pd_delete.notnull}"];
+	Node0x38a3900 -> Node0x38a3950;
+	Node0x38a3950 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x38a3950:s0 -> Node0x38a39a0;
+	Node0x38a3950:s1 -> Node0x38a39f0;
+	Node0x38a39a0 [shape=record,label="{pd_if.end.while.cond.backedge_crit_edge}"];
+	Node0x38a39a0 -> Node0x38a3a40;
+	Node0x38a39f0 [shape=record,label="{pd_delete.notnull.4}"];
+	Node0x38a39f0 -> Node0x38a3a40;
+	Node0x38a3a40 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x38a3a40 -> Node0x38a3770;
+	Node0x38a3a90 [shape=record,label="{pd_while.end}"];
+	Node0x38a3a90 -> Node0xaa8e830;
+	Node0xaa8e830 [shape=record,label="{it_while.end.split}"];
+	Node0xaa8e830 -> Node0x38a3250;
+	Node0x38a3ae0 [shape=record,label="{for.end}"];
+}

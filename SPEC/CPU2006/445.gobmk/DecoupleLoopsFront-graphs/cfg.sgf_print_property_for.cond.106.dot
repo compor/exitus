@@ -1,0 +1,31 @@
+digraph "CFG for 'sgf_print_property_for.cond' function" {
+	label="CFG for 'sgf_print_property_for.cond' function";
+
+	Node0x33382a0 [shape=record,label="{newFuncRoot}"];
+	Node0x33382a0 -> Node0x3338720;
+	Node0x33386d0 [shape=record,label="{for.end.exitStub}"];
+	Node0x3338720 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3338720:s0 -> Node0x3338770;
+	Node0x3338720:s1 -> Node0x33386d0;
+	Node0x3338770 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3338770:s0 -> Node0x3338810;
+	Node0x3338770:s1 -> Node0x33387c0;
+	Node0x33387c0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x33387c0 -> Node0x33389f0;
+	Node0x3338810 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x3338810:s0 -> Node0x3338950;
+	Node0x3338810:s1 -> Node0x3338860;
+	Node0x3338860 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x3338860:s0 -> Node0x3338900;
+	Node0x3338860:s1 -> Node0x33388b0;
+	Node0x33388b0 [shape=record,label="{pd_if.else.12}"];
+	Node0x33388b0 -> Node0x33389a0;
+	Node0x3338900 [shape=record,label="{pd_if.then.11}"];
+	Node0x3338900 -> Node0x33389a0;
+	Node0x3338950 [shape=record,label="{pd_if.then.9}"];
+	Node0x3338950 -> Node0x33389a0;
+	Node0x33389a0 [shape=record,label="{pd_if.end.13}"];
+	Node0x33389a0 -> Node0x33389f0;
+	Node0x33389f0 [shape=record,label="{it_for.inc}"];
+	Node0x33389f0 -> Node0x3338720;
+}

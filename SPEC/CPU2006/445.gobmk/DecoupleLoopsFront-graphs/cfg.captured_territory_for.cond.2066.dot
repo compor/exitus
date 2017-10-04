@@ -1,0 +1,32 @@
+digraph "CFG for 'captured_territory_for.cond' function" {
+	label="CFG for 'captured_territory_for.cond' function";
+
+	Node0x450c310 [shape=record,label="{newFuncRoot}"];
+	Node0x450c310 -> Node0x450c450;
+	Node0x450c360 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x450c3b0 [shape=record,label="{land.lhs.true.62.return.loopexit_crit_edge.exitStub}"];
+	Node0x450c400 [shape=record,label="{land.lhs.true.85.return.loopexit_crit_edge.exitStub}"];
+	Node0x450c450 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x450c450:s0 -> Node0x450c4a0;
+	Node0x450c450:s1 -> Node0x450c360;
+	Node0x450c4a0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x450c4a0:s0 -> Node0x451c570;
+	Node0x450c4a0:s1 -> Node0x450c4f0;
+	Node0x450c4f0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x450c4f0 -> Node0x451c700;
+	Node0x451c570 [shape=record,label="{it_land.lhs.true.62|{<s0>T|<s1>F}}"];
+	Node0x451c570:s0 -> Node0x450c3b0;
+	Node0x451c570:s1 -> Node0x451c5c0;
+	Node0x451c5c0 [shape=record,label="{it_lor.lhs.false.79|{<s0>T|<s1>F}}"];
+	Node0x451c5c0:s0 -> Node0x451c660;
+	Node0x451c5c0:s1 -> Node0x451c610;
+	Node0x451c610 [shape=record,label="{pd_lor.lhs.false.79.for.inc_crit_edge}"];
+	Node0x451c610 -> Node0x451c700;
+	Node0x451c660 [shape=record,label="{it_land.lhs.true.85|{<s0>T|<s1>F}}"];
+	Node0x451c660:s0 -> Node0x450c400;
+	Node0x451c660:s1 -> Node0x451c6b0;
+	Node0x451c6b0 [shape=record,label="{pd_land.lhs.true.85.for.inc_crit_edge}"];
+	Node0x451c6b0 -> Node0x451c700;
+	Node0x451c700 [shape=record,label="{it_for.inc}"];
+	Node0x451c700 -> Node0x450c450;
+}

@@ -1,0 +1,27 @@
+digraph "CFG for 'link_roots_while.cond.outer' function" {
+	label="CFG for 'link_roots_while.cond.outer' function";
+
+	Node0xab9ae40 [shape=record,label="{newFuncRoot}"];
+	Node0xab9ae40 -> Node0xab9aee0;
+	Node0xab9ae90 [shape=record,label="{while.end.exitStub}"];
+	Node0xab9aee0 [shape=record,label="{pd_while.cond.outer}"];
+	Node0xab9aee0 -> Node0xab9af30;
+	Node0xab9af30 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xab9af30:s0 -> Node0xab9af80;
+	Node0xab9af30:s1 -> Node0xab9ae90;
+	Node0xab9af80 [shape=record,label="{it_while.body}"];
+	Node0xab9af80 -> Node0xf49f5c0;
+	Node0xf49f5c0 [shape=record,label="{pd_while.body.split1}"];
+	Node0xf49f5c0 -> Node0xf49f8e0;
+	Node0xf49f8e0 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0xf49f8e0:s0 -> Node0xab9b020;
+	Node0xf49f8e0:s1 -> Node0xab9afd0;
+	Node0xab9afd0 [shape=record,label="{pd_if.else}"];
+	Node0xab9afd0 -> Node0xf49f390;
+	Node0xf49f390 [shape=record,label="{it_if.else.split2}"];
+	Node0xf49f390 -> Node0xf49f520;
+	Node0xf49f520 [shape=record,label="{pd_if.else.split}"];
+	Node0xf49f520 -> Node0xab9aee0;
+	Node0xab9b020 [shape=record,label="{pd_if.then}"];
+	Node0xab9b020 -> Node0xab9af30;
+}

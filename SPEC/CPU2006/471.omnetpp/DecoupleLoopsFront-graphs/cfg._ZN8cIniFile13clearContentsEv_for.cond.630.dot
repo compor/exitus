@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN8cIniFile13clearContentsEv_for.cond' function" {
+	label="CFG for '_ZN8cIniFile13clearContentsEv_for.cond' function";
+
+	Node0x20a83b0 [shape=record,label="{newFuncRoot}"];
+	Node0x20a83b0 -> Node0x20a8450;
+	Node0x20a8400 [shape=record,label="{for.cond.2.preheader.exitStub}"];
+	Node0x20a8450 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x20a8450:s0 -> Node0x20a84a0;
+	Node0x20a8450:s1 -> Node0x20a8400;
+	Node0x20a84a0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x20a84a0:s0 -> Node0x20a8540;
+	Node0x20a84a0:s1 -> Node0x20a84f0;
+	Node0x20a84f0 [shape=record,label="{pd_delete.notnull}"];
+	Node0x20a84f0 -> Node0x20a8590;
+	Node0x20a8540 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x20a8540 -> Node0x20a8590;
+	Node0x20a8590 [shape=record,label="{it_for.inc}"];
+	Node0x20a8590 -> Node0x20a8450;
+}

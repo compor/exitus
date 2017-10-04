@@ -1,0 +1,28 @@
+digraph "CFG for 'Perl_pp_uc_for.cond' function" {
+	label="CFG for 'Perl_pp_uc_for.cond' function";
+
+	Node0x4e3ee80 [shape=record,label="{newFuncRoot}"];
+	Node0x4e3ee80 -> Node0x4e3ef20;
+	Node0x4e3eed0 [shape=record,label="{if.end.135.loopexit.exitStub}"];
+	Node0x4e3ef20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4e3ef20:s0 -> Node0x4e3ef70;
+	Node0x4e3ef20:s1 -> Node0x4e3eed0;
+	Node0x4e3ef70 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4e3ef70:s0 -> Node0x4e3f010;
+	Node0x4e3ef70:s1 -> Node0x4e3efc0;
+	Node0x4e3efc0 [shape=record,label="{pd_for.body.cond.false.129_crit_edge}"];
+	Node0x4e3efc0 -> Node0x4e3f0b0;
+	Node0x4e3f010 [shape=record,label="{pd_land.lhs.true.122|{<s0>T|<s1>F}}"];
+	Node0x4e3f010:s0 -> Node0x4e3f100;
+	Node0x4e3f010:s1 -> Node0x4e3f060;
+	Node0x4e3f060 [shape=record,label="{pd_land.lhs.true.122.cond.false.129_crit_edge}"];
+	Node0x4e3f060 -> Node0x4e3f0b0;
+	Node0x4e3f0b0 [shape=record,label="{pd_cond.false.129}"];
+	Node0x4e3f0b0 -> Node0x4e3f150;
+	Node0x4e3f100 [shape=record,label="{pd_cond.true.126}"];
+	Node0x4e3f100 -> Node0x4e3f150;
+	Node0x4e3f150 [shape=record,label="{pd_cond.end.131}"];
+	Node0x4e3f150 -> Node0x6756d20;
+	Node0x6756d20 [shape=record,label="{it_cond.end.131.split}"];
+	Node0x6756d20 -> Node0x4e3ef20;
+}

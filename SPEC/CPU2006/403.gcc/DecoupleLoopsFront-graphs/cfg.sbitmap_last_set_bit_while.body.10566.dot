@@ -1,0 +1,14 @@
+digraph "CFG for 'sbitmap_last_set_bit_while.body' function" {
+	label="CFG for 'sbitmap_last_set_bit_while.body' function";
+
+	Node0xc146570 [shape=record,label="{newFuncRoot}"];
+	Node0xc146570 -> Node0xc146a40;
+	Node0xc1465c0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xc146a40 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc146a40:s0 -> Node0xc1465c0;
+	Node0xc146a40:s1 -> Node0xc146a90;
+	Node0xc146a90 [shape=record,label="{it_if.end}"];
+	Node0xc146a90 -> Node0xfa5af00;
+	Node0xfa5af00 [shape=record,label="{pd_if.end.split}"];
+	Node0xfa5af00 -> Node0xc146a40;
+}

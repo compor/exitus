@@ -1,0 +1,21 @@
+digraph "CFG for 'PerlIO_clone_list_for.cond' function" {
+	label="CFG for 'PerlIO_clone_list_for.cond' function";
+
+	Node0x4d82cc0 [shape=record,label="{newFuncRoot}"];
+	Node0x4d82cc0 -> Node0x4d82d60;
+	Node0x4d82d10 [shape=record,label="{if.end.13.loopexit.exitStub}"];
+	Node0x4d82d60 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4d82d60:s0 -> Node0x4d82db0;
+	Node0x4d82d60:s1 -> Node0x4d82d10;
+	Node0x4d82db0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4d82db0:s0 -> Node0x4d82e50;
+	Node0x4d82db0:s1 -> Node0x4d82e00;
+	Node0x4d82e00 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x4d82e00 -> Node0x4d82ea0;
+	Node0x4d82e50 [shape=record,label="{pd_if.then.4}"];
+	Node0x4d82e50 -> Node0x4d82ea0;
+	Node0x4d82ea0 [shape=record,label="{pd_if.end}"];
+	Node0x4d82ea0 -> Node0x65ba480;
+	Node0x65ba480 [shape=record,label="{it_if.end.split}"];
+	Node0x65ba480 -> Node0x4d82d60;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'find_base_term_for.cond' function" {
+	label="CFG for 'find_base_term_for.cond' function";
+
+	Node0xa304f10 [shape=record,label="{newFuncRoot}"];
+	Node0xa304f10 -> Node0xa305000;
+	Node0xa304f60 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0xa304fb0 [shape=record,label="{for.body.return.loopexit_crit_edge.exitStub}"];
+	Node0xa305000 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa305000:s0 -> Node0xa305050;
+	Node0xa305000:s1 -> Node0xa304f60;
+	Node0xa305050 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xa305050:s0 -> Node0xa304fb0;
+	Node0xa305050:s1 -> Node0xa3050a0;
+	Node0xa3050a0 [shape=record,label="{it_for.inc}"];
+	Node0xa3050a0 -> Node0xa305000;
+}

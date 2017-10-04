@@ -1,0 +1,31 @@
+digraph "CFG for 'reset_piece_square_for.cond.5' function" {
+	label="CFG for 'reset_piece_square_for.cond.5' function";
+
+	Node0x104a2d0 [shape=record,label="{newFuncRoot}"];
+	Node0x104a2d0 -> Node0x104a370;
+	Node0x104a320 [shape=record,label="{for.end.36.exitStub}"];
+	Node0x104a370 [shape=record,label="{it_for.cond.5|{<s0>T|<s1>F}}"];
+	Node0x104a370:s0 -> Node0x104a3c0;
+	Node0x104a370:s1 -> Node0x104a320;
+	Node0x104a3c0 [shape=record,label="{pd_for.body.7|{<s0>T|<s1>F}}"];
+	Node0x104a3c0:s0 -> Node0x104a460;
+	Node0x104a3c0:s1 -> Node0x104a410;
+	Node0x104a410 [shape=record,label="{pd_for.body.7.if.else_crit_edge}"];
+	Node0x104a410 -> Node0x104a500;
+	Node0x104a460 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x104a460:s0 -> Node0x104a550;
+	Node0x104a460:s1 -> Node0x104a4b0;
+	Node0x104a4b0 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0x104a4b0 -> Node0x104a500;
+	Node0x104a500 [shape=record,label="{pd_if.else}"];
+	Node0x104a500 -> Node0x104a640;
+	Node0x104a550 [shape=record,label="{pd_if.then.14|{<s0>T|<s1>F}}"];
+	Node0x104a550:s0 -> Node0x104a5f0;
+	Node0x104a550:s1 -> Node0x104a5a0;
+	Node0x104a5a0 [shape=record,label="{pd_if.then.14.for.inc.34_crit_edge}"];
+	Node0x104a5a0 -> Node0x104a640;
+	Node0x104a5f0 [shape=record,label="{pd_if.then.27}"];
+	Node0x104a5f0 -> Node0x104a640;
+	Node0x104a640 [shape=record,label="{it_for.inc.34}"];
+	Node0x104a640 -> Node0x104a370;
+}

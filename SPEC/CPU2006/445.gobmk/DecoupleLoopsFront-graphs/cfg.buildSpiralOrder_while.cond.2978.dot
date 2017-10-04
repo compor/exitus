@@ -1,0 +1,28 @@
+digraph "CFG for 'buildSpiralOrder_while.cond' function" {
+	label="CFG for 'buildSpiralOrder_while.cond' function";
+
+	Node0x482cd10 [shape=record,label="{newFuncRoot}"];
+	Node0x482cd10 -> Node0x486a7b0;
+	Node0x486a760 [shape=record,label="{for.cond.49.preheader.exitStub}"];
+	Node0x486a7b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x486a7b0:s0 -> Node0x486a800;
+	Node0x486a7b0:s1 -> Node0x486a760;
+	Node0x486a800 [shape=record,label="{pd_while.body}"];
+	Node0x486a800 -> Node0x53de5f0;
+	Node0x53de5f0 [shape=record,label="{it_while.body.split}"];
+	Node0x53de5f0 -> Node0x486b100;
+	Node0x486b100 [shape=record,label="{pd_for.cond.29|{<s0>T|<s1>F}}"];
+	Node0x486b100:s0 -> Node0x486b1a0;
+	Node0x486b100:s1 -> Node0x486b150;
+	Node0x486b150 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x486b150 -> Node0x486a7b0;
+	Node0x486b1a0 [shape=record,label="{pd_for.body.31|{<s0>T|<s1>F}}"];
+	Node0x486b1a0:s0 -> Node0x486b240;
+	Node0x486b1a0:s1 -> Node0x486b1f0;
+	Node0x486b1f0 [shape=record,label="{pd_if.then.37}"];
+	Node0x486b1f0 -> Node0x486b290;
+	Node0x486b240 [shape=record,label="{pd_for.body.31.for.inc.46_crit_edge}"];
+	Node0x486b240 -> Node0x486b290;
+	Node0x486b290 [shape=record,label="{pd_for.inc.46}"];
+	Node0x486b290 -> Node0x486b100;
+}

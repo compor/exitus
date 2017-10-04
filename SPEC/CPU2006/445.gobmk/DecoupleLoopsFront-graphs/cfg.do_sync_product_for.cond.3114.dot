@@ -1,0 +1,39 @@
+digraph "CFG for 'do_sync_product_for.cond' function" {
+	label="CFG for 'do_sync_product_for.cond' function";
+
+	Node0x48b66a0 [shape=record,label="{newFuncRoot}"];
+	Node0x48b66a0 -> Node0x48b67e0;
+	Node0x48b66f0 [shape=record,label="{for.end.exitStub}"];
+	Node0x48b6740 [shape=record,label="{cond.false.exitStub}"];
+	Node0x48b6790 [shape=record,label="{cond.false.26.exitStub}"];
+	Node0x48b67e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x48b67e0:s0 -> Node0x48b6830;
+	Node0x48b67e0:s1 -> Node0x48b66f0;
+	Node0x48b6830 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x48b6830:s0 -> Node0x48b6880;
+	Node0x48b6830:s1 -> Node0x48b6740;
+	Node0x48b6880 [shape=record,label="{it_cond.end|{<s0>T|<s1>F}}"];
+	Node0x48b6880:s0 -> Node0x48b68d0;
+	Node0x48b6880:s1 -> Node0x48b6790;
+	Node0x48b68d0 [shape=record,label="{pd_cond.end.27|{<s0>T|<s1>F}}"];
+	Node0x48b68d0:s0 -> Node0x48b6970;
+	Node0x48b68d0:s1 -> Node0x48b6920;
+	Node0x48b6920 [shape=record,label="{pd_if.else.55}"];
+	Node0x48b6920 -> Node0x48b6b50;
+	Node0x48b6970 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x48b6970:s0 -> Node0x48b6a10;
+	Node0x48b6970:s1 -> Node0x48b69c0;
+	Node0x48b69c0 [shape=record,label="{pd_if.else}"];
+	Node0x48b69c0 -> Node0x48b6b50;
+	Node0x48b6a10 [shape=record,label="{pd_if.then.32|{<s0>T|<s1>F}}"];
+	Node0x48b6a10:s0 -> Node0x48b6ab0;
+	Node0x48b6a10:s1 -> Node0x48b6a60;
+	Node0x48b6a60 [shape=record,label="{pd_if.then.32.if.end_crit_edge}"];
+	Node0x48b6a60 -> Node0x48b6b00;
+	Node0x48b6ab0 [shape=record,label="{pd_if.then.36}"];
+	Node0x48b6ab0 -> Node0x48b6b00;
+	Node0x48b6b00 [shape=record,label="{pd_if.end}"];
+	Node0x48b6b00 -> Node0x48b6b50;
+	Node0x48b6b50 [shape=record,label="{it_for.inc}"];
+	Node0x48b6b50 -> Node0x48b67e0;
+}

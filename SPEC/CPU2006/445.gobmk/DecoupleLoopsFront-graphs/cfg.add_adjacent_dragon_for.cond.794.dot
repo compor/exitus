@@ -1,0 +1,16 @@
+digraph "CFG for 'add_adjacent_dragon_for.cond' function" {
+	label="CFG for 'add_adjacent_dragon_for.cond' function";
+
+	Node0x3fa5950 [shape=record,label="{newFuncRoot}"];
+	Node0x3fa5950 -> Node0x3fa5a40;
+	Node0x3fa59a0 [shape=record,label="{for.end.exitStub}"];
+	Node0x3fa59f0 [shape=record,label="{if.end.44.loopexit.exitStub}"];
+	Node0x3fa5a40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3fa5a40:s0 -> Node0x3fa5a90;
+	Node0x3fa5a40:s1 -> Node0x3fa59a0;
+	Node0x3fa5a90 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x3fa5a90:s0 -> Node0x3fa59f0;
+	Node0x3fa5a90:s1 -> Node0x3fa5ae0;
+	Node0x3fa5ae0 [shape=record,label="{it_for.inc}"];
+	Node0x3fa5ae0 -> Node0x3fa5a40;
+}

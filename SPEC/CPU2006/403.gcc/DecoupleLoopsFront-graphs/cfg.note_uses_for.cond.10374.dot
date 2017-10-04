@@ -1,0 +1,14 @@
+digraph "CFG for 'note_uses_for.cond' function" {
+	label="CFG for 'note_uses_for.cond' function";
+
+	Node0xc0e5040 [shape=record,label="{newFuncRoot}"];
+	Node0xc0e5040 -> Node0xc0e50e0;
+	Node0xc0e5090 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xc0e50e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc0e50e0:s0 -> Node0xc0e5130;
+	Node0xc0e50e0:s1 -> Node0xc0e5090;
+	Node0xc0e5130 [shape=record,label="{pd_for.body}"];
+	Node0xc0e5130 -> Node0xf72c030;
+	Node0xf72c030 [shape=record,label="{it_for.body.split}"];
+	Node0xf72c030 -> Node0xc0e50e0;
+}

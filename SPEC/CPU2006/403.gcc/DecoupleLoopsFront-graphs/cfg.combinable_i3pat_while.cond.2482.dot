@@ -1,0 +1,24 @@
+digraph "CFG for 'combinable_i3pat_while.cond' function" {
+	label="CFG for 'combinable_i3pat_while.cond' function";
+
+	Node0xa614360 [shape=record,label="{newFuncRoot}"];
+	Node0xa614360 -> Node0xa61b470;
+	Node0xa61b420 [shape=record,label="{while.end.exitStub}"];
+	Node0xa61b470 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa61b470:s0 -> Node0xa61c7a0;
+	Node0xa61b470:s1 -> Node0xa61b4c0;
+	Node0xa61b4c0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xa61b4c0:s0 -> Node0xa61c750;
+	Node0xa61b4c0:s1 -> Node0xa61c6b0;
+	Node0xa61c6b0 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0xa61c6b0:s0 -> Node0xa61c700;
+	Node0xa61c6b0:s1 -> Node0xa61b420;
+	Node0xa61c700 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0xa61c700 -> Node0xa61c7f0;
+	Node0xa61c750 [shape=record,label="{pd_lor.lhs.false.while.body_crit_edge}"];
+	Node0xa61c750 -> Node0xa61c7f0;
+	Node0xa61c7a0 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0xa61c7a0 -> Node0xa61c7f0;
+	Node0xa61c7f0 [shape=record,label="{it_while.body}"];
+	Node0xa61c7f0 -> Node0xa61b470;
+}

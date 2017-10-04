@@ -1,0 +1,34 @@
+digraph "CFG for '_ZNK24TensorProductPolynomialsILi3EE12compute_gradEjRK5PointILi3EE' function" {
+	label="CFG for '_ZNK24TensorProductPolynomialsILi3EE12compute_gradEjRK5PointILi3EE' function";
+
+	Node0x76fd1f0 [shape=record,label="{entry}"];
+	Node0x76fd1f0 -> Node0x76fd240;
+	Node0x76fd1f0 -> Node0x76fd380;
+	Node0x76fd240 [shape=record,label="{invoke.cont}"];
+	Node0x76fd240 -> Node0x76fd290;
+	Node0x76fd290 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x76fd290:s0 -> Node0x76fd2e0;
+	Node0x76fd290:s1 -> Node0x76fd4c0;
+	Node0x76fd2e0 [shape=record,label="{it_for.body}"];
+	Node0x76fd2e0 -> Node0x76fd330;
+	Node0x76fd2e0 -> Node0x76fd420;
+	Node0x76fd330 [shape=record,label="{it_for.inc}"];
+	Node0x76fd330 -> Node0x76fd290;
+	Node0x76fd380 [shape=record,label="{lpad}"];
+	Node0x76fd380 -> Node0x76fd3d0;
+	Node0x76fd380 -> Node0x76fd600;
+	Node0x76fd3d0 [shape=record,label="{lpad.eh.resume_crit_edge}"];
+	Node0x76fd3d0 -> Node0x76fd5b0;
+	Node0x76fd420 [shape=record,label="{lpad.3}"];
+	Node0x76fd420 -> Node0x76fd470;
+	Node0x76fd420 -> Node0x76fd600;
+	Node0x76fd470 [shape=record,label="{lpad.3.eh.resume_crit_edge}"];
+	Node0x76fd470 -> Node0x76fd5b0;
+	Node0x76fd4c0 [shape=record,label="{for.end}"];
+	Node0x76fd4c0 -> Node0x76fd510;
+	Node0x76fd510 [shape=record,label="{codeRepl}"];
+	Node0x76fd510 -> Node0x76fd560;
+	Node0x76fd560 [shape=record,label="{for.end.35}"];
+	Node0x76fd5b0 [shape=record,label="{eh.resume}"];
+	Node0x76fd600 [shape=record,label="{terminate.lpad}"];
+}

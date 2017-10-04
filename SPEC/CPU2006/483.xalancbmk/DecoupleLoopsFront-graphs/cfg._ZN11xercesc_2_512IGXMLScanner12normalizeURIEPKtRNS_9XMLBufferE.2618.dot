@@ -1,0 +1,40 @@
+digraph "CFG for '_ZN11xercesc_2_512IGXMLScanner12normalizeURIEPKtRNS_9XMLBufferE' function" {
+	label="CFG for '_ZN11xercesc_2_512IGXMLScanner12normalizeURIEPKtRNS_9XMLBufferE' function";
+
+	Node0x393e620 [shape=record,label="{entry}"];
+	Node0x393e620 -> Node0x393e670;
+	Node0x393e670 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x393e670:s0 -> Node0x393e6c0;
+	Node0x393e670:s1 -> Node0x395a490;
+	Node0x393e6c0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x393e6c0:s0 -> Node0x393e760;
+	Node0x393e6c0:s1 -> Node0x393e710;
+	Node0x393e710 [shape=record,label="{pd_while.body.if.else_crit_edge}"];
+	Node0x393e710 -> Node0x393e8f0;
+	Node0x393e760 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x393e760:s0 -> Node0x393e800;
+	Node0x393e760:s1 -> Node0x393e7b0;
+	Node0x393e7b0 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0x393e7b0 -> Node0x393e8f0;
+	Node0x393e800 [shape=record,label="{it_land.lhs.true.4|{<s0>T|<s1>F}}"];
+	Node0x393e800:s0 -> Node0x393e8a0;
+	Node0x393e800:s1 -> Node0x393e850;
+	Node0x393e850 [shape=record,label="{pd_land.lhs.true.4.if.else_crit_edge}"];
+	Node0x393e850 -> Node0x393e8f0;
+	Node0x393e8a0 [shape=record,label="{it_if.then}"];
+	Node0x393e8a0 -> Node0xaba3610;
+	Node0xaba3610 [shape=record,label="{pd_if.then.split}"];
+	Node0xaba3610 -> Node0x395a440;
+	Node0x393e8f0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x393e8f0:s0 -> Node0x393e940;
+	Node0x393e8f0:s1 -> Node0x393e990;
+	Node0x393e940 [shape=record,label="{pd_if.else.if.end_crit_edge}"];
+	Node0x393e940 -> Node0x393e9e0;
+	Node0x393e990 [shape=record,label="{pd_if.else.12}"];
+	Node0x393e990 -> Node0x393e9e0;
+	Node0x393e9e0 [shape=record,label="{it_if.end}"];
+	Node0x393e9e0 -> Node0x395a440;
+	Node0x395a440 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x395a440 -> Node0x393e670;
+	Node0x395a490 [shape=record,label="{while.end}"];
+}

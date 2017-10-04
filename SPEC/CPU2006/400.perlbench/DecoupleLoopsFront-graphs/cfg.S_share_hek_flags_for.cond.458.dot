@@ -1,0 +1,40 @@
+digraph "CFG for 'S_share_hek_flags_for.cond' function" {
+	label="CFG for 'S_share_hek_flags_for.cond' function";
+
+	Node0x4ba3d80 [shape=record,label="{newFuncRoot}"];
+	Node0x4ba3d80 -> Node0x4ba3e70;
+	Node0x4ba3dd0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x4ba3e20 [shape=record,label="{if.end.17.for.end_crit_edge.exitStub}"];
+	Node0x4ba3e70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4ba3e70:s0 -> Node0x4ba3ec0;
+	Node0x4ba3e70:s1 -> Node0x4ba3dd0;
+	Node0x4ba3ec0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4ba3ec0:s0 -> Node0x4ba41e0;
+	Node0x4ba3ec0:s1 -> Node0x4ba3f10;
+	Node0x4ba3f10 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x4ba3f10:s0 -> Node0x4ba4190;
+	Node0x4ba3f10:s1 -> Node0x4ba3f60;
+	Node0x4ba3f60 [shape=record,label="{it_if.end.8|{<s0>T|<s1>F}}"];
+	Node0x4ba3f60:s0 -> Node0x4ba4000;
+	Node0x4ba3f60:s1 -> Node0x4ba3fb0;
+	Node0x4ba3fb0 [shape=record,label="{pd_if.end.8.if.end.17_crit_edge}"];
+	Node0x4ba3fb0 -> Node0x4ba40a0;
+	Node0x4ba4000 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4ba4000:s0 -> Node0x4ba4140;
+	Node0x4ba4000:s1 -> Node0x4ba4050;
+	Node0x4ba4050 [shape=record,label="{pd_land.lhs.true.if.end.17_crit_edge}"];
+	Node0x4ba4050 -> Node0x4ba40a0;
+	Node0x4ba40a0 [shape=record,label="{it_if.end.17|{<s0>T|<s1>F}}"];
+	Node0x4ba40a0:s0 -> Node0x4ba40f0;
+	Node0x4ba40a0:s1 -> Node0x4ba3e20;
+	Node0x4ba40f0 [shape=record,label="{pd_if.end.17.for.inc_crit_edge}"];
+	Node0x4ba40f0 -> Node0x4ba4230;
+	Node0x4ba4140 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x4ba4140 -> Node0x4ba4230;
+	Node0x4ba4190 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0x4ba4190 -> Node0x4ba4230;
+	Node0x4ba41e0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4ba41e0 -> Node0x4ba4230;
+	Node0x4ba4230 [shape=record,label="{it_for.inc}"];
+	Node0x4ba4230 -> Node0x4ba3e70;
+}

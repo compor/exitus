@@ -1,0 +1,26 @@
+digraph "CFG for 'Perl_pp_sort_for.cond.535' function" {
+	label="CFG for 'Perl_pp_sort_for.cond.535' function";
+
+	Node0x50a8680 [shape=record,label="{newFuncRoot}"];
+	Node0x50a8680 -> Node0x50a8720;
+	Node0x50a86d0 [shape=record,label="{if.end.554.loopexit.exitStub}"];
+	Node0x50a8720 [shape=record,label="{it_for.cond.535|{<s0>T|<s1>F}}"];
+	Node0x50a8720:s0 -> Node0x50a8770;
+	Node0x50a8720:s1 -> Node0x50a86d0;
+	Node0x50a8770 [shape=record,label="{pd_for.body.538|{<s0>T|<s1>F}}"];
+	Node0x50a8770:s0 -> Node0x50a8810;
+	Node0x50a8770:s1 -> Node0x50a87c0;
+	Node0x50a87c0 [shape=record,label="{pd_for.body.538.if.end.546_crit_edge}"];
+	Node0x50a87c0 -> Node0x50a8860;
+	Node0x50a8810 [shape=record,label="{pd_if.then.544}"];
+	Node0x50a8810 -> Node0x50a8860;
+	Node0x50a8860 [shape=record,label="{pd_if.end.546|{<s0>T|<s1>F}}"];
+	Node0x50a8860:s0 -> Node0x50a8900;
+	Node0x50a8860:s1 -> Node0x50a88b0;
+	Node0x50a88b0 [shape=record,label="{pd_if.then.548}"];
+	Node0x50a88b0 -> Node0x50a8950;
+	Node0x50a8900 [shape=record,label="{pd_if.end.546.for.inc.551_crit_edge}"];
+	Node0x50a8900 -> Node0x50a8950;
+	Node0x50a8950 [shape=record,label="{it_for.inc.551}"];
+	Node0x50a8950 -> Node0x50a8720;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'member_att_while.cond' function" {
+	label="CFG for 'member_att_while.cond' function";
+
+	Node0x48c0d90 [shape=record,label="{newFuncRoot}"];
+	Node0x48c0d90 -> Node0x48c0e80;
+	Node0x48c0de0 [shape=record,label="{while.cond.return_crit_edge.exitStub}"];
+	Node0x48c0e30 [shape=record,label="{while.body.return_crit_edge.exitStub}"];
+	Node0x48c0e80 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x48c0e80:s0 -> Node0x48c0ed0;
+	Node0x48c0e80:s1 -> Node0x48c0de0;
+	Node0x48c0ed0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x48c0ed0:s0 -> Node0x48c0e30;
+	Node0x48c0ed0:s1 -> Node0x48c0f20;
+	Node0x48c0f20 [shape=record,label="{it_if.end}"];
+	Node0x48c0f20 -> Node0x48c0e80;
+}

@@ -1,0 +1,19 @@
+digraph "CFG for 'Perl_despatch_signals' function" {
+	label="CFG for 'Perl_despatch_signals' function";
+
+	Node0x26bc7f0 [shape=record,label="{entry}"];
+	Node0x26bc7f0 -> Node0x26bc840;
+	Node0x26bc840 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x26bc840:s0 -> Node0x26c1420;
+	Node0x26bc840:s1 -> Node0x26c1560;
+	Node0x26c1420 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x26c1420:s0 -> Node0x26c14c0;
+	Node0x26c1420:s1 -> Node0x26c1470;
+	Node0x26c1470 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x26c1470 -> Node0x26c1510;
+	Node0x26c14c0 [shape=record,label="{pd_if.then}"];
+	Node0x26c14c0 -> Node0x26c1510;
+	Node0x26c1510 [shape=record,label="{it_for.inc}"];
+	Node0x26c1510 -> Node0x26bc840;
+	Node0x26c1560 [shape=record,label="{for.end}"];
+}

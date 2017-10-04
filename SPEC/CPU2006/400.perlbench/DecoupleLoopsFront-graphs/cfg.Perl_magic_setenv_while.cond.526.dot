@@ -1,0 +1,31 @@
+digraph "CFG for 'Perl_magic_setenv_while.cond' function" {
+	label="CFG for 'Perl_magic_setenv_while.cond' function";
+
+	Node0x4bbd8d0 [shape=record,label="{newFuncRoot}"];
+	Node0x4bbd8d0 -> Node0x4bbda60;
+	Node0x4bbd920 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x4bbd970 [shape=record,label="{while.body.if.then.54_crit_edge.exitStub}"];
+	Node0x4bbd9c0 [shape=record,label="{lor.lhs.false.if.then.54_crit_edge.exitStub}"];
+	Node0x4bbda10 [shape=record,label="{land.lhs.true.51.if.then.54_crit_edge.exitStub}"];
+	Node0x4bbda60 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4bbda60:s0 -> Node0x4bbdab0;
+	Node0x4bbda60:s1 -> Node0x4bbd920;
+	Node0x4bbdab0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4bbdab0:s0 -> Node0x4bbd970;
+	Node0x4bbdab0:s1 -> Node0x4bbdb00;
+	Node0x4bbdb00 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4bbdb00:s0 -> Node0x4bbd9c0;
+	Node0x4bbdb00:s1 -> Node0x4bbdb50;
+	Node0x4bbdb50 [shape=record,label="{it_lor.lhs.false.46|{<s0>T|<s1>F}}"];
+	Node0x4bbdb50:s0 -> Node0x4bbdbf0;
+	Node0x4bbdb50:s1 -> Node0x4bbdba0;
+	Node0x4bbdba0 [shape=record,label="{pd_lor.lhs.false.46.while.cond.backedge_crit_edge}"];
+	Node0x4bbdba0 -> Node0x4bbdc90;
+	Node0x4bbdbf0 [shape=record,label="{it_land.lhs.true.51|{<s0>T|<s1>F}}"];
+	Node0x4bbdbf0:s0 -> Node0x4bbda10;
+	Node0x4bbdbf0:s1 -> Node0x4bbdc40;
+	Node0x4bbdc40 [shape=record,label="{pd_land.lhs.true.51.while.cond.backedge_crit_edge}"];
+	Node0x4bbdc40 -> Node0x4bbdc90;
+	Node0x4bbdc90 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x4bbdc90 -> Node0x4bbda60;
+}

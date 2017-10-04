@@ -1,0 +1,39 @@
+digraph "CFG for 'S_scan_heredoc_while.cond' function" {
+	label="CFG for 'S_scan_heredoc_while.cond' function";
+
+	Node0x578a970 [shape=record,label="{newFuncRoot}"];
+	Node0x578a970 -> Node0x578ae20;
+	Node0x578a9c0 [shape=record,label="{while.end.exitStub}"];
+	Node0x578ae20 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x578ae20:s0 -> Node0x578ae70;
+	Node0x578ae20:s1 -> Node0x578a9c0;
+	Node0x578ae70 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x578ae70:s0 -> Node0x578b0a0;
+	Node0x578ae70:s1 -> Node0x578aec0;
+	Node0x578aec0 [shape=record,label="{it_if.else.172|{<s0>T|<s1>F}}"];
+	Node0x578aec0:s0 -> Node0x578af60;
+	Node0x578aec0:s1 -> Node0x578af10;
+	Node0x578af10 [shape=record,label="{pd_if.else.172.if.else.184_crit_edge}"];
+	Node0x578af10 -> Node0x578b000;
+	Node0x578af60 [shape=record,label="{it_land.lhs.true.176|{<s0>T|<s1>F}}"];
+	Node0x578af60:s0 -> Node0x578b050;
+	Node0x578af60:s1 -> Node0x578afb0;
+	Node0x578afb0 [shape=record,label="{pd_land.lhs.true.176.if.else.184_crit_edge}"];
+	Node0x578afb0 -> Node0x578b000;
+	Node0x578b000 [shape=record,label="{it_if.else.184}"];
+	Node0x578b000 -> Node0x6781da0;
+	Node0x6781da0 [shape=record,label="{pd_if.else.184.split}"];
+	Node0x6781da0 -> Node0x578b0f0;
+	Node0x578b050 [shape=record,label="{it_if.then.180}"];
+	Node0x578b050 -> Node0x6ddd8f0;
+	Node0x6ddd8f0 [shape=record,label="{pd_if.then.180.split1}"];
+	Node0x6ddd8f0 -> Node0x6dba240;
+	Node0x6dba240 [shape=record,label="{it_if.then.180.split}"];
+	Node0x6dba240 -> Node0x578b0f0;
+	Node0x578b0a0 [shape=record,label="{pd_if.then.163}"];
+	Node0x578b0a0 -> Node0x6da6130;
+	Node0x6da6130 [shape=record,label="{it_if.then.163.split}"];
+	Node0x6da6130 -> Node0x578b0f0;
+	Node0x578b0f0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x578b0f0 -> Node0x578ae20;
+}

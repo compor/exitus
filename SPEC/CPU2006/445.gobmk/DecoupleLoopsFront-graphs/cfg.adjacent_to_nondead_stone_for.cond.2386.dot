@@ -1,0 +1,28 @@
+digraph "CFG for 'adjacent_to_nondead_stone_for.cond' function" {
+	label="CFG for 'adjacent_to_nondead_stone_for.cond' function";
+
+	Node0x4681560 [shape=record,label="{newFuncRoot}"];
+	Node0x4681560 -> Node0x4693470;
+	Node0x46933d0 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0x4693420 [shape=record,label="{land.lhs.true.13.return_crit_edge.exitStub}"];
+	Node0x4693470 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4693470:s0 -> Node0x46934c0;
+	Node0x4693470:s1 -> Node0x46933d0;
+	Node0x46934c0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x46934c0:s0 -> Node0x4693560;
+	Node0x46934c0:s1 -> Node0x4693510;
+	Node0x4693510 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4693510 -> Node0x46936a0;
+	Node0x4693560 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4693560:s0 -> Node0x4693600;
+	Node0x4693560:s1 -> Node0x46935b0;
+	Node0x46935b0 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x46935b0 -> Node0x46936a0;
+	Node0x4693600 [shape=record,label="{it_land.lhs.true.13|{<s0>T|<s1>F}}"];
+	Node0x4693600:s0 -> Node0x4693420;
+	Node0x4693600:s1 -> Node0x4693650;
+	Node0x4693650 [shape=record,label="{pd_land.lhs.true.13.for.inc_crit_edge}"];
+	Node0x4693650 -> Node0x46936a0;
+	Node0x46936a0 [shape=record,label="{it_for.inc}"];
+	Node0x46936a0 -> Node0x4693470;
+}

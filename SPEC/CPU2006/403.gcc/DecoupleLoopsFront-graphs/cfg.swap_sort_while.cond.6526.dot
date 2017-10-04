@@ -1,0 +1,18 @@
+digraph "CFG for 'swap_sort_while.cond' function" {
+	label="CFG for 'swap_sort_while.cond' function";
+
+	Node0xb2c20d0 [shape=record,label="{newFuncRoot}"];
+	Node0xb2c20d0 -> Node0xb2c21c0;
+	Node0xb2c2120 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xb2c2170 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xb2c21c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb2c21c0:s0 -> Node0xb2c2210;
+	Node0xb2c21c0:s1 -> Node0xb2c2120;
+	Node0xb2c2210 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xb2c2210:s0 -> Node0xb2c2260;
+	Node0xb2c2210:s1 -> Node0xb2c2170;
+	Node0xb2c2260 [shape=record,label="{pd_while.body}"];
+	Node0xb2c2260 -> Node0xf6b4370;
+	Node0xf6b4370 [shape=record,label="{it_while.body.split}"];
+	Node0xf6b4370 -> Node0xb2c21c0;
+}

@@ -1,0 +1,12 @@
+digraph "CFG for 'fixup_fallthru_exit_predecessor_while.cond' function" {
+	label="CFG for 'fixup_fallthru_exit_predecessor_while.cond' function";
+
+	Node0xa533700 [shape=record,label="{newFuncRoot}"];
+	Node0xa533700 -> Node0xa5337a0;
+	Node0xa533750 [shape=record,label="{while.end.exitStub}"];
+	Node0xa5337a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa5337a0:s0 -> Node0xa5337f0;
+	Node0xa5337a0:s1 -> Node0xa533750;
+	Node0xa5337f0 [shape=record,label="{it_while.body}"];
+	Node0xa5337f0 -> Node0xa5337a0;
+}

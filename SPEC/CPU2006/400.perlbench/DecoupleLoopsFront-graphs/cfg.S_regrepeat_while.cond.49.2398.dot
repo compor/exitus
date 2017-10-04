@@ -1,0 +1,16 @@
+digraph "CFG for 'S_regrepeat_while.cond.49' function" {
+	label="CFG for 'S_regrepeat_while.cond.49' function";
+
+	Node0x540e390 [shape=record,label="{newFuncRoot}"];
+	Node0x540e390 -> Node0x540e480;
+	Node0x540e3e0 [shape=record,label="{while.cond.49.sw.epilog.loopexit22_crit_edge.exitStub}"];
+	Node0x540e430 [shape=record,label="{land.rhs.52.sw.epilog.loopexit22_crit_edge.exitStub}"];
+	Node0x540e480 [shape=record,label="{it_while.cond.49|{<s0>T|<s1>F}}"];
+	Node0x540e480:s0 -> Node0x540e4d0;
+	Node0x540e480:s1 -> Node0x540e3e0;
+	Node0x540e4d0 [shape=record,label="{it_land.rhs.52|{<s0>T|<s1>F}}"];
+	Node0x540e4d0:s0 -> Node0x540e520;
+	Node0x540e4d0:s1 -> Node0x540e430;
+	Node0x540e520 [shape=record,label="{it_while.body.58}"];
+	Node0x540e520 -> Node0x540e480;
+}

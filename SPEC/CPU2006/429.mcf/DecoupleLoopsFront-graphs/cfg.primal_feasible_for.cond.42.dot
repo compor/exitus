@@ -1,0 +1,32 @@
+digraph "CFG for 'primal_feasible_for.cond' function" {
+	label="CFG for 'primal_feasible_for.cond' function";
+
+	Node0x1e01470 [shape=record,label="{newFuncRoot}"];
+	Node0x1e01470 -> Node0x1e015b0;
+	Node0x1e014c0 [shape=record,label="{for.end.exitStub}"];
+	Node0x1e01510 [shape=record,label="{if.else.if.then.15_crit_edge.exitStub}"];
+	Node0x1e01560 [shape=record,label="{lor.lhs.false.if.then.15_crit_edge.exitStub}"];
+	Node0x1e015b0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1e015b0:s0 -> Node0x1e01600;
+	Node0x1e015b0:s1 -> Node0x1e014c0;
+	Node0x1e01600 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x1e01600:s0 -> Node0x1e01740;
+	Node0x1e01600:s1 -> Node0x1e01650;
+	Node0x1e01650 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x1e01650:s0 -> Node0x1e01510;
+	Node0x1e01650:s1 -> Node0x1e016a0;
+	Node0x1e016a0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x1e016a0:s0 -> Node0x1e01560;
+	Node0x1e016a0:s1 -> Node0x1e016f0;
+	Node0x1e016f0 [shape=record,label="{pd_lor.lhs.false.for.cond.backedge_crit_edge}"];
+	Node0x1e016f0 -> Node0x1e01830;
+	Node0x1e01740 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x1e01740:s0 -> Node0x1e017e0;
+	Node0x1e01740:s1 -> Node0x1e01790;
+	Node0x1e01790 [shape=record,label="{pd_if.then.for.cond.backedge_crit_edge}"];
+	Node0x1e01790 -> Node0x1e01830;
+	Node0x1e017e0 [shape=record,label="{pd_if.then.7}"];
+	Node0x1e017e0 -> Node0x1e01830;
+	Node0x1e01830 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x1e01830 -> Node0x1e015b0;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'remove_neighbor_for.cond' function" {
+	label="CFG for 'remove_neighbor_for.cond' function";
+
+	Node0x3324420 [shape=record,label="{newFuncRoot}"];
+	Node0x3324420 -> Node0x3324950;
+	Node0x3324470 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x3324900 [shape=record,label="{if.then.exitStub}"];
+	Node0x3324950 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3324950:s0 -> Node0x33249a0;
+	Node0x3324950:s1 -> Node0x3324470;
+	Node0x33249a0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x33249a0:s0 -> Node0x3324900;
+	Node0x33249a0:s1 -> Node0x33249f0;
+	Node0x33249f0 [shape=record,label="{it_for.inc}"];
+	Node0x33249f0 -> Node0x3324950;
+}

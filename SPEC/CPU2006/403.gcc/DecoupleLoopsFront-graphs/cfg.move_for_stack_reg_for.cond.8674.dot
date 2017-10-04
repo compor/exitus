@@ -1,0 +1,16 @@
+digraph "CFG for 'move_for_stack_reg_for.cond' function" {
+	label="CFG for 'move_for_stack_reg_for.cond' function";
+
+	Node0xb939720 [shape=record,label="{newFuncRoot}"];
+	Node0xb939720 -> Node0xb939810;
+	Node0xb939770 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0xb9397c0 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0xb939810 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb939810:s0 -> Node0xb939860;
+	Node0xb939810:s1 -> Node0xb939770;
+	Node0xb939860 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb939860:s0 -> Node0xb9397c0;
+	Node0xb939860:s1 -> Node0xb9398b0;
+	Node0xb9398b0 [shape=record,label="{it_for.inc}"];
+	Node0xb9398b0 -> Node0xb939810;
+}

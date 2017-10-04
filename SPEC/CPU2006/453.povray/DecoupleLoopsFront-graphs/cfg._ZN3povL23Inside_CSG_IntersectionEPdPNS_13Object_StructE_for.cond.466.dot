@@ -1,0 +1,30 @@
+digraph "CFG for '_ZN3povL23Inside_CSG_IntersectionEPdPNS_13Object_StructE_for.cond' function" {
+	label="CFG for '_ZN3povL23Inside_CSG_IntersectionEPdPNS_13Object_StructE_for.cond' function";
+
+	Node0x23a3d40 [shape=record,label="{newFuncRoot}"];
+	Node0x23a3d40 -> Node0x23a3e30;
+	Node0x23a3d90 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0x23a3de0 [shape=record,label="{if.then.return_crit_edge.exitStub}"];
+	Node0x23a3e30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x23a3e30:s0 -> Node0x23a3e80;
+	Node0x23a3e30:s1 -> Node0x23a3d90;
+	Node0x23a3e80 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x23a3e80:s0 -> Node0x23a3f20;
+	Node0x23a3e80:s1 -> Node0x23a3ed0;
+	Node0x23a3ed0 [shape=record,label="{pd_for.body.if.then_crit_edge}"];
+	Node0x23a3ed0 -> Node0x23a4010;
+	Node0x23a3f20 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x23a3f20:s0 -> Node0x23a3fc0;
+	Node0x23a3f20:s1 -> Node0x23a3f70;
+	Node0x23a3f70 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x23a3f70 -> Node0x23a40b0;
+	Node0x23a3fc0 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x23a3fc0 -> Node0x23a4010;
+	Node0x23a4010 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0x23a4010:s0 -> Node0x23a4060;
+	Node0x23a4010:s1 -> Node0x23a3de0;
+	Node0x23a4060 [shape=record,label="{pd_if.then.for.inc_crit_edge}"];
+	Node0x23a4060 -> Node0x23a40b0;
+	Node0x23a40b0 [shape=record,label="{it_for.inc}"];
+	Node0x23a40b0 -> Node0x23a3e30;
+}

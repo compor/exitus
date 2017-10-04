@@ -1,0 +1,18 @@
+digraph "CFG for 'sre_fgets_while.body' function" {
+	label="CFG for 'sre_fgets_while.body' function";
+
+	Node0x349d360 [shape=record,label="{newFuncRoot}"];
+	Node0x349d360 -> Node0x349d450;
+	Node0x349d3b0 [shape=record,label="{if.then.20.exitStub}"];
+	Node0x349d400 [shape=record,label="{if.then.30.exitStub}"];
+	Node0x349d450 [shape=record,label="{pd_while.body}"];
+	Node0x349d450 -> Node0x3960c00;
+	Node0x3960c00 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x3960c00:s0 -> Node0x349d3b0;
+	Node0x3960c00:s1 -> Node0x349d4a0;
+	Node0x349d4a0 [shape=record,label="{it_if.end.21|{<s0>T|<s1>F}}"];
+	Node0x349d4a0:s0 -> Node0x349d400;
+	Node0x349d4a0:s1 -> Node0x349d4f0;
+	Node0x349d4f0 [shape=record,label="{it_if.end.31}"];
+	Node0x349d4f0 -> Node0x349d450;
+}

@@ -1,0 +1,26 @@
+digraph "CFG for 'PerlIOStdio_unread_while.cond' function" {
+	label="CFG for 'PerlIOStdio_unread_while.cond' function";
+
+	Node0x4daa1b0 [shape=record,label="{newFuncRoot}"];
+	Node0x4daa1b0 -> Node0x4daa340;
+	Node0x4daa200 [shape=record,label="{while.cond.if.end.16.loopexit_crit_edge.exitStub}"];
+	Node0x4daa250 [shape=record,label="{while.body.if.end.16.loopexit_crit_edge.exitStub}"];
+	Node0x4daa2a0 [shape=record,label="{if.end.if.then.13_crit_edge.exitStub}"];
+	Node0x4daa2f0 [shape=record,label="{lor.lhs.false.if.then.13_crit_edge.exitStub}"];
+	Node0x4daa340 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4daa340:s0 -> Node0x4daa390;
+	Node0x4daa340:s1 -> Node0x4daa200;
+	Node0x4daa390 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4daa390:s0 -> Node0x4daa250;
+	Node0x4daa390:s1 -> Node0x4daa3e0;
+	Node0x4daa3e0 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x4daa3e0:s0 -> Node0x4daa2a0;
+	Node0x4daa3e0:s1 -> Node0x4daa430;
+	Node0x4daa430 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4daa430:s0 -> Node0x4daa2f0;
+	Node0x4daa430:s1 -> Node0x4daa480;
+	Node0x4daa480 [shape=record,label="{it_if.end.15}"];
+	Node0x4daa480 -> Node0x6623340;
+	Node0x6623340 [shape=record,label="{pd_if.end.15.split}"];
+	Node0x6623340 -> Node0x4daa340;
+}

@@ -1,0 +1,30 @@
+digraph "CFG for 'SSIWriteIndex_for.cond.338' function" {
+	label="CFG for 'SSIWriteIndex_for.cond.338' function";
+
+	Node0x34a30b0 [shape=record,label="{newFuncRoot}"];
+	Node0x34a30b0 -> Node0x34a3290;
+	Node0x34a3100 [shape=record,label="{for.end.378.exitStub}"];
+	Node0x34a3150 [shape=record,label="{for.body.342.return.loopexit_crit_edge.exitStub}"];
+	Node0x34a31a0 [shape=record,label="{if.end.348.return.loopexit_crit_edge.exitStub}"];
+	Node0x34a31f0 [shape=record,label="{if.end.353.return.loopexit_crit_edge.exitStub}"];
+	Node0x34a3240 [shape=record,label="{if.end.366.return.loopexit_crit_edge.exitStub}"];
+	Node0x34a3290 [shape=record,label="{it_for.cond.338|{<s0>T|<s1>F}}"];
+	Node0x34a3290:s0 -> Node0x34a32e0;
+	Node0x34a3290:s1 -> Node0x34a3100;
+	Node0x34a32e0 [shape=record,label="{it_for.body.342|{<s0>T|<s1>F}}"];
+	Node0x34a32e0:s0 -> Node0x34a3150;
+	Node0x34a32e0:s1 -> Node0x34a3330;
+	Node0x34a3330 [shape=record,label="{it_if.end.348|{<s0>T|<s1>F}}"];
+	Node0x34a3330:s0 -> Node0x34a31a0;
+	Node0x34a3330:s1 -> Node0x34a3380;
+	Node0x34a3380 [shape=record,label="{pd_if.end.353}"];
+	Node0x34a3380 -> Node0x3989e20;
+	Node0x3989e20 [shape=record,label="{it_if.end.353.split|{<s0>T|<s1>F}}"];
+	Node0x3989e20:s0 -> Node0x34a31f0;
+	Node0x3989e20:s1 -> Node0x34a33d0;
+	Node0x34a33d0 [shape=record,label="{it_if.end.366|{<s0>T|<s1>F}}"];
+	Node0x34a33d0:s0 -> Node0x34a3240;
+	Node0x34a33d0:s1 -> Node0x34a3420;
+	Node0x34a3420 [shape=record,label="{it_for.inc.376}"];
+	Node0x34a3420 -> Node0x34a3290;
+}

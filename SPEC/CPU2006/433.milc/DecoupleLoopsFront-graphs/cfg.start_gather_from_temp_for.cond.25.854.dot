@@ -1,0 +1,16 @@
+digraph "CFG for 'start_gather_from_temp_for.cond.25' function" {
+	label="CFG for 'start_gather_from_temp_for.cond.25' function";
+
+	Node0x1b3cec0 [shape=record,label="{newFuncRoot}"];
+	Node0x1b3cec0 -> Node0x1b3cf60;
+	Node0x1b3cf10 [shape=record,label="{sw.epilog.loopexit2.exitStub}"];
+	Node0x1b3cf60 [shape=record,label="{it_for.cond.25|{<s0>T|<s1>F}}"];
+	Node0x1b3cf60:s0 -> Node0x1b3cfb0;
+	Node0x1b3cf60:s1 -> Node0x1b3cf10;
+	Node0x1b3cfb0 [shape=record,label="{pd_for.body.27}"];
+	Node0x1b3cfb0 -> Node0x1ce9f70;
+	Node0x1ce9f70 [shape=record,label="{it_for.body.27.split1}"];
+	Node0x1ce9f70 -> Node0x1cabeb0;
+	Node0x1cabeb0 [shape=record,label="{pd_for.body.27.split}"];
+	Node0x1cabeb0 -> Node0x1b3cf60;
+}

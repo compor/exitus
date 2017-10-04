@@ -1,0 +1,38 @@
+digraph "CFG for 'Perl_init_argv_symbols_for.cond' function" {
+	label="CFG for 'Perl_init_argv_symbols_for.cond' function";
+
+	Node0x4d595a0 [shape=record,label="{newFuncRoot}"];
+	Node0x4d595a0 -> Node0x4d59730;
+	Node0x4d595f0 [shape=record,label="{for.cond.if.end.33.loopexit_crit_edge.exitStub}"];
+	Node0x4d59640 [shape=record,label="{land.rhs.if.end.33.loopexit_crit_edge.exitStub}"];
+	Node0x4d59690 [shape=record,label="{for.body.if.end.33.loopexit_crit_edge.exitStub}"];
+	Node0x4d596e0 [shape=record,label="{if.then.14.exitStub}"];
+	Node0x4d59730 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4d59730:s0 -> Node0x4d5a040;
+	Node0x4d59730:s1 -> Node0x4d595f0;
+	Node0x4d5a040 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x4d5a040:s0 -> Node0x4d5a090;
+	Node0x4d5a040:s1 -> Node0x4d59640;
+	Node0x4d5a090 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4d5a090:s0 -> Node0x4d5a0e0;
+	Node0x4d5a090:s1 -> Node0x4d59690;
+	Node0x4d5a0e0 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x4d5a0e0:s0 -> Node0x4d5a180;
+	Node0x4d5a0e0:s1 -> Node0x4d5a130;
+	Node0x4d5a130 [shape=record,label="{pd_if.end.if.end.17_crit_edge}"];
+	Node0x4d5a130 -> Node0x4d5a220;
+	Node0x4d5a180 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4d5a180:s0 -> Node0x4d5a1d0;
+	Node0x4d5a180:s1 -> Node0x4d596e0;
+	Node0x4d5a1d0 [shape=record,label="{pd_land.lhs.true.if.end.17_crit_edge}"];
+	Node0x4d5a1d0 -> Node0x4d5a220;
+	Node0x4d5a220 [shape=record,label="{pd_if.end.17|{<s0>T|<s1>F}}"];
+	Node0x4d5a220:s0 -> Node0x4d5a2c0;
+	Node0x4d5a220:s1 -> Node0x4d5a270;
+	Node0x4d5a270 [shape=record,label="{pd_if.else}"];
+	Node0x4d5a270 -> Node0x4d5a310;
+	Node0x4d5a2c0 [shape=record,label="{pd_if.then.20}"];
+	Node0x4d5a2c0 -> Node0x4d5a310;
+	Node0x4d5a310 [shape=record,label="{it_for.inc}"];
+	Node0x4d5a310 -> Node0x4d59730;
+}

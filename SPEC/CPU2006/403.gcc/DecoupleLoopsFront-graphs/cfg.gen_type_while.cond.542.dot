@@ -1,0 +1,20 @@
+digraph "CFG for 'gen_type_while.cond' function" {
+	label="CFG for 'gen_type_while.cond' function";
+
+	Node0xa119110 [shape=record,label="{newFuncRoot}"];
+	Node0xa119110 -> Node0xa119530;
+	Node0xa119160 [shape=record,label="{while.end.exitStub}"];
+	Node0xa119530 [shape=record,label="{it_while.cond}"];
+	Node0xa119530 -> Node0xef74020;
+	Node0xef74020 [shape=record,label="{pd_while.cond.split1}"];
+	Node0xef74020 -> Node0xf0ee330;
+	Node0xf0ee330 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0xf0ee330:s0 -> Node0xa119580;
+	Node0xf0ee330:s1 -> Node0xa119160;
+	Node0xa119580 [shape=record,label="{pd_while.body}"];
+	Node0xa119580 -> Node0xf0832d0;
+	Node0xf0832d0 [shape=record,label="{it_while.body.split2}"];
+	Node0xf0832d0 -> Node0xf0ca540;
+	Node0xf0ca540 [shape=record,label="{pd_while.body.split}"];
+	Node0xf0ca540 -> Node0xa119530;
+}

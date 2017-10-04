@@ -1,0 +1,14 @@
+digraph "CFG for '_Z11negbinomialidi' function" {
+	label="CFG for '_Z11negbinomialidi' function";
+
+	Node0x1e4a110 [shape=record,label="{entry}"];
+	Node0x1e4a110 -> Node0x1e4a160;
+	Node0x1e4a160 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1e4a160:s0 -> Node0x1e4a1b0;
+	Node0x1e4a160:s1 -> Node0x1e4a200;
+	Node0x1e4a1b0 [shape=record,label="{pd_for.body}"];
+	Node0x1e4a1b0 -> Node0x4637700;
+	Node0x4637700 [shape=record,label="{it_for.body.split}"];
+	Node0x4637700 -> Node0x1e4a160;
+	Node0x1e4a200 [shape=record,label="{for.end}"];
+}

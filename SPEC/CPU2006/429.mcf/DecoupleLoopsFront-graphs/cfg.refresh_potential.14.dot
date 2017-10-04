@@ -1,0 +1,40 @@
+digraph "CFG for 'refresh_potential' function" {
+	label="CFG for 'refresh_potential' function";
+
+	Node0x1db38f0 [shape=record,label="{entry}"];
+	Node0x1db38f0 -> Node0x1db3990;
+	Node0x1db3940 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x1db3940 -> Node0x1db3990;
+	Node0x1db3990 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1db3990:s0 -> Node0x1db39e0;
+	Node0x1db3990:s1 -> Node0x1db3da0;
+	Node0x1db39e0 [shape=record,label="{pd_while.cond.3.preheader}"];
+	Node0x1db39e0 -> Node0x1db3a30;
+	Node0x1db3a30 [shape=record,label="{it_while.cond.3|{<s0>T|<s1>F}}"];
+	Node0x1db3a30:s0 -> Node0x1db3ad0;
+	Node0x1db3a30:s1 -> Node0x1db3a80;
+	Node0x1db3a80 [shape=record,label="{pd_while.cond.14.preheader}"];
+	Node0x1db3a80 -> Node0x1db3c10;
+	Node0x1db3ad0 [shape=record,label="{pd_while.body.4|{<s0>T|<s1>F}}"];
+	Node0x1db3ad0:s0 -> Node0x1db3b20;
+	Node0x1db3ad0:s1 -> Node0x1db3b70;
+	Node0x1db3b20 [shape=record,label="{pd_if.then}"];
+	Node0x1db3b20 -> Node0x1db3bc0;
+	Node0x1db3b70 [shape=record,label="{pd_if.else}"];
+	Node0x1db3b70 -> Node0x1db3bc0;
+	Node0x1db3bc0 [shape=record,label="{it_if.end}"];
+	Node0x1db3bc0 -> Node0x1db3a30;
+	Node0x1db3c10 [shape=record,label="{it_while.cond.14|{<s0>T|<s1>F}}"];
+	Node0x1db3c10:s0 -> Node0x1db3cb0;
+	Node0x1db3c10:s1 -> Node0x1db3c60;
+	Node0x1db3c60 [shape=record,label="{pd_while.cond.14.while.cond.loopexit_crit_edge}"];
+	Node0x1db3c60 -> Node0x1db3940;
+	Node0x1db3cb0 [shape=record,label="{it_while.body.17|{<s0>T|<s1>F}}"];
+	Node0x1db3cb0:s0 -> Node0x1db3d00;
+	Node0x1db3cb0:s1 -> Node0x1db3d50;
+	Node0x1db3d00 [shape=record,label="{pd_while.body.17.while.cond.loopexit_crit_edge}"];
+	Node0x1db3d00 -> Node0x1db3940;
+	Node0x1db3d50 [shape=record,label="{it_if.else.20}"];
+	Node0x1db3d50 -> Node0x1db3c10;
+	Node0x1db3da0 [shape=record,label="{while.end.24}"];
+}

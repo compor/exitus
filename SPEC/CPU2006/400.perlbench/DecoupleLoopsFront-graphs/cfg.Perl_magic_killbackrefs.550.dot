@@ -1,0 +1,33 @@
+digraph "CFG for 'Perl_magic_killbackrefs' function" {
+	label="CFG for 'Perl_magic_killbackrefs' function";
+
+	Node0x2735450 [shape=record,label="{entry}"];
+	Node0x2735450 -> Node0x27354a0;
+	Node0x27354a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x27354a0:s0 -> Node0x27354f0;
+	Node0x27354a0:s1 -> Node0x27369a0;
+	Node0x27354f0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x27354f0:s0 -> Node0x2735590;
+	Node0x27354f0:s1 -> Node0x2735540;
+	Node0x2735540 [shape=record,label="{pd_while.body.if.end.20_crit_edge}"];
+	Node0x2735540 -> Node0x2736950;
+	Node0x2735590 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x2735590:s0 -> Node0x27355e0;
+	Node0x2735590:s1 -> Node0x2735630;
+	Node0x27355e0 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x27355e0 -> Node0x2735680;
+	Node0x2735630 [shape=record,label="{pd_if.then.4}"];
+	Node0x2735630 -> Node0x2735680;
+	Node0x2735680 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x2735680:s0 -> Node0x27368b0;
+	Node0x2735680:s1 -> Node0x27356d0;
+	Node0x27356d0 [shape=record,label="{pd_if.end.land.end_crit_edge}"];
+	Node0x27356d0 -> Node0x2736900;
+	Node0x27368b0 [shape=record,label="{pd_land.rhs}"];
+	Node0x27368b0 -> Node0x2736900;
+	Node0x2736900 [shape=record,label="{pd_land.end}"];
+	Node0x2736900 -> Node0x2736950;
+	Node0x2736950 [shape=record,label="{it_if.end.20}"];
+	Node0x2736950 -> Node0x27354a0;
+	Node0x27369a0 [shape=record,label="{while.end}"];
+}

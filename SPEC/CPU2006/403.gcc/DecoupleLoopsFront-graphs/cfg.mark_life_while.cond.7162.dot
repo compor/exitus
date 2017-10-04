@@ -1,0 +1,12 @@
+digraph "CFG for 'mark_life_while.cond' function" {
+	label="CFG for 'mark_life_while.cond' function";
+
+	Node0xb476960 [shape=record,label="{newFuncRoot}"];
+	Node0xb476960 -> Node0xb476dd0;
+	Node0xb476d80 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0xb476dd0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb476dd0:s0 -> Node0xb476e20;
+	Node0xb476dd0:s1 -> Node0xb476d80;
+	Node0xb476e20 [shape=record,label="{pd_while.body}"];
+	Node0xb476e20 -> Node0xb476dd0;
+}

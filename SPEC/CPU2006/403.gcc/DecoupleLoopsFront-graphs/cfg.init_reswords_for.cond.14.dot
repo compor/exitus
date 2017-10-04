@@ -1,0 +1,19 @@
+digraph "CFG for 'init_reswords_for.cond' function" {
+	label="CFG for 'init_reswords_for.cond' function";
+
+	Node0x9f25ca0 [shape=record,label="{newFuncRoot}"];
+	Node0x9f25ca0 -> Node0x9f25d40;
+	Node0x9f25cf0 [shape=record,label="{for.end.exitStub}"];
+	Node0x9f25d40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9f25d40:s0 -> Node0x9f25d90;
+	Node0x9f25d40:s1 -> Node0x9f25cf0;
+	Node0x9f25d90 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x9f25d90:s0 -> Node0x9f30d70;
+	Node0x9f25d90:s1 -> Node0x9f30d20;
+	Node0x9f30d20 [shape=record,label="{pd_if.end.13}"];
+	Node0x9f30d20 -> Node0x9f30dc0;
+	Node0x9f30d70 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x9f30d70 -> Node0x9f30dc0;
+	Node0x9f30dc0 [shape=record,label="{it_for.inc}"];
+	Node0x9f30dc0 -> Node0x9f25d40;
+}

@@ -1,0 +1,29 @@
+digraph "CFG for 'libcall_benefit' function" {
+	label="CFG for 'libcall_benefit' function";
+
+	Node0x805eae0 [shape=record,label="{entry}"];
+	Node0x805eae0 -> Node0x805eb30;
+	Node0x805eb30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x805eb30:s0 -> Node0x805eb80;
+	Node0x805eb30:s1 -> Node0x805ee00;
+	Node0x805eb80 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x805eb80:s0 -> Node0x805ebd0;
+	Node0x805eb80:s1 -> Node0x805ec20;
+	Node0x805ebd0 [shape=record,label="{pd_if.then}"];
+	Node0x805ebd0 -> Node0x805edb0;
+	Node0x805ec20 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x805ec20:s0 -> Node0x805ecc0;
+	Node0x805ec20:s1 -> Node0x805ec70;
+	Node0x805ec70 [shape=record,label="{pd_if.else.for.inc_crit_edge}"];
+	Node0x805ec70 -> Node0x805edb0;
+	Node0x805ecc0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x805ecc0:s0 -> Node0x805ed60;
+	Node0x805ecc0:s1 -> Node0x805ed10;
+	Node0x805ed10 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x805ed10 -> Node0x805edb0;
+	Node0x805ed60 [shape=record,label="{pd_land.lhs.true.11}"];
+	Node0x805ed60 -> Node0x805edb0;
+	Node0x805edb0 [shape=record,label="{it_for.inc}"];
+	Node0x805edb0 -> Node0x805eb30;
+	Node0x805ee00 [shape=record,label="{for.end}"];
+}

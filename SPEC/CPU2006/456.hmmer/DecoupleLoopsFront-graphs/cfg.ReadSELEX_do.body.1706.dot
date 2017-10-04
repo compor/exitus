@@ -1,0 +1,35 @@
+digraph "CFG for 'ReadSELEX_do.body' function" {
+	label="CFG for 'ReadSELEX_do.body' function";
+
+	Node0x33d92e0 [shape=record,label="{newFuncRoot}"];
+	Node0x33d92e0 -> Node0x33e4830;
+	Node0x33e4790 [shape=record,label="{if.then.7.exitStub}"];
+	Node0x33e47e0 [shape=record,label="{while.cond.preheader.exitStub}"];
+	Node0x33e4830 [shape=record,label="{it_do.body|{<s0>T|<s1>F}}"];
+	Node0x33e4830:s0 -> Node0x33e4790;
+	Node0x33e4830:s1 -> Node0x33e4880;
+	Node0x33e4880 [shape=record,label="{pd_if.end.8|{<s0>T|<s1>F}}"];
+	Node0x33e4880:s0 -> Node0x33e4920;
+	Node0x33e4880:s1 -> Node0x33e48d0;
+	Node0x33e48d0 [shape=record,label="{pd_if.end.8.do.cond_crit_edge}"];
+	Node0x33e48d0 -> Node0x33e4a10;
+	Node0x33e4920 [shape=record,label="{pd_if.then.15|{<s0>T|<s1>F}}"];
+	Node0x33e4920:s0 -> Node0x33e49c0;
+	Node0x33e4920:s1 -> Node0x33e4970;
+	Node0x33e4970 [shape=record,label="{pd_if.else}"];
+	Node0x33e4970 -> Node0x33e4a10;
+	Node0x33e49c0 [shape=record,label="{pd_if.then.15.do.cond_crit_edge}"];
+	Node0x33e49c0 -> Node0x33e4a10;
+	Node0x33e4a10 [shape=record,label="{it_do.cond|{<s0>T|<s1>F}}"];
+	Node0x33e4a10:s0 -> Node0x33e4b00;
+	Node0x33e4a10:s1 -> Node0x33e4a60;
+	Node0x33e4a60 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x33e4a60:s0 -> Node0x33e4ab0;
+	Node0x33e4a60:s1 -> Node0x33e47e0;
+	Node0x33e4ab0 [shape=record,label="{pd_lor.rhs.do.body.backedge_crit_edge}"];
+	Node0x33e4ab0 -> Node0x33e4b50;
+	Node0x33e4b00 [shape=record,label="{pd_do.cond.do.body.backedge_crit_edge}"];
+	Node0x33e4b00 -> Node0x33e4b50;
+	Node0x33e4b50 [shape=record,label="{pd_do.body.backedge}"];
+	Node0x33e4b50 -> Node0x33e4830;
+}

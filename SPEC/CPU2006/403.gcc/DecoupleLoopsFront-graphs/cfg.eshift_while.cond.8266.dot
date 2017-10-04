@@ -1,0 +1,14 @@
+digraph "CFG for 'eshift_while.cond' function" {
+	label="CFG for 'eshift_while.cond' function";
+
+	Node0xb801790 [shape=record,label="{newFuncRoot}"];
+	Node0xb801790 -> Node0xb801830;
+	Node0xb8017e0 [shape=record,label="{while.cond.8.preheader.exitStub}"];
+	Node0xb801830 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb801830:s0 -> Node0xb801880;
+	Node0xb801830:s1 -> Node0xb8017e0;
+	Node0xb801880 [shape=record,label="{pd_while.body}"];
+	Node0xb801880 -> Node0xf84e300;
+	Node0xf84e300 [shape=record,label="{it_while.body.split}"];
+	Node0xf84e300 -> Node0xb801830;
+}

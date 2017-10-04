@@ -1,0 +1,19 @@
+digraph "CFG for 'ix86_set_move_mem_attrs' function" {
+	label="CFG for 'ix86_set_move_mem_attrs' function";
+
+	Node0x9cd4640 [shape=record,label="{entry}"];
+	Node0x9cd4640 -> Node0x9cd4690;
+	Node0x9cd4690 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9cd4690:s0 -> Node0x9cd46e0;
+	Node0x9cd4690:s1 -> Node0x9ce7740;
+	Node0x9cd46e0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x9cd46e0:s0 -> Node0x9cd4780;
+	Node0x9cd46e0:s1 -> Node0x9cd4730;
+	Node0x9cd4730 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x9cd4730 -> Node0x9cd47d0;
+	Node0x9cd4780 [shape=record,label="{pd_if.then}"];
+	Node0x9cd4780 -> Node0x9cd47d0;
+	Node0x9cd47d0 [shape=record,label="{it_for.inc}"];
+	Node0x9cd47d0 -> Node0x9cd4690;
+	Node0x9ce7740 [shape=record,label="{for.end}"];
+}

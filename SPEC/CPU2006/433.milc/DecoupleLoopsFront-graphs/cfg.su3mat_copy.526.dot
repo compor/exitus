@@ -1,0 +1,19 @@
+digraph "CFG for 'su3mat_copy' function" {
+	label="CFG for 'su3mat_copy' function";
+
+	Node0x17bc250 [shape=record,label="{entry}"];
+	Node0x17bc250 -> Node0x17bcb10;
+	Node0x17bcb10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x17bcb10:s0 -> Node0x17bcb60;
+	Node0x17bcb10:s1 -> Node0x17bcca0;
+	Node0x17bcb60 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x17bcb60 -> Node0x17bcbb0;
+	Node0x17bcbb0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x17bcbb0:s0 -> Node0x17bcc00;
+	Node0x17bcbb0:s1 -> Node0x17bcc50;
+	Node0x17bcc00 [shape=record,label="{pd_for.body.3}"];
+	Node0x17bcc00 -> Node0x17bcbb0;
+	Node0x17bcc50 [shape=record,label="{it_for.inc.23}"];
+	Node0x17bcc50 -> Node0x17bcb10;
+	Node0x17bcca0 [shape=record,label="{for.end.25}"];
+}

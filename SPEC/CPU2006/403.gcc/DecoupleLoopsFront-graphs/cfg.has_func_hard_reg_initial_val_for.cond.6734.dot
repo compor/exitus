@@ -1,0 +1,16 @@
+digraph "CFG for 'has_func_hard_reg_initial_val_for.cond' function" {
+	label="CFG for 'has_func_hard_reg_initial_val_for.cond' function";
+
+	Node0xb326a40 [shape=record,label="{newFuncRoot}"];
+	Node0xb326a40 -> Node0xb326b30;
+	Node0xb326a90 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xb326ae0 [shape=record,label="{if.then.2.exitStub}"];
+	Node0xb326b30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb326b30:s0 -> Node0xb326b80;
+	Node0xb326b30:s1 -> Node0xb326a90;
+	Node0xb326b80 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb326b80:s0 -> Node0xb326ae0;
+	Node0xb326b80:s1 -> Node0xb326bd0;
+	Node0xb326bd0 [shape=record,label="{it_for.inc}"];
+	Node0xb326bd0 -> Node0xb326b30;
+}

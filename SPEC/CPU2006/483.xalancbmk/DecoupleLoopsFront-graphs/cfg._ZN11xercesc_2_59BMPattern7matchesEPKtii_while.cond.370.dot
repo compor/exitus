@@ -1,0 +1,42 @@
+digraph "CFG for '_ZN11xercesc_2_59BMPattern7matchesEPKtii_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_59BMPattern7matchesEPKtii_while.cond' function";
+
+	Node0x96fc150 [shape=record,label="{newFuncRoot}"];
+	Node0x96fc150 -> Node0x96fc240;
+	Node0x96fc1a0 [shape=record,label="{cleanup.loopexit1.exitStub}"];
+	Node0x96fc1f0 [shape=record,label="{cleanup.loopexit.exitStub}"];
+	Node0x96fc240 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x96fc240:s0 -> Node0x96fc290;
+	Node0x96fc240:s1 -> Node0x96fc1a0;
+	Node0x96fc290 [shape=record,label="{it_while.body}"];
+	Node0x96fc290 -> Node0x96fc2e0;
+	Node0x96fc2e0 [shape=record,label="{it_while.cond.8|{<s0>T|<s1>F}}"];
+	Node0x96fc2e0:s0 -> Node0x96fc380;
+	Node0x96fc2e0:s1 -> Node0x96fc330;
+	Node0x96fc330 [shape=record,label="{pd_while.cond.8.while.end_crit_edge}"];
+	Node0x96fc330 -> Node0x96fc650;
+	Node0x96fc380 [shape=record,label="{it_while.body.10|{<s0>T|<s1>F}}"];
+	Node0x96fc380:s0 -> Node0x96fc420;
+	Node0x96fc380:s1 -> Node0x96fc3d0;
+	Node0x96fc3d0 [shape=record,label="{pd_while.body.10.if.end.29_crit_edge}"];
+	Node0x96fc3d0 -> Node0x96fc560;
+	Node0x96fc420 [shape=record,label="{it_if.then.17|{<s0>T|<s1>F}}"];
+	Node0x96fc420:s0 -> Node0x96fc4c0;
+	Node0x96fc420:s1 -> Node0x96fc470;
+	Node0x96fc470 [shape=record,label="{pd_if.then.17.while.end_crit_edge}"];
+	Node0x96fc470 -> Node0x96fc650;
+	Node0x96fc4c0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x96fc4c0:s0 -> Node0x96fc600;
+	Node0x96fc4c0:s1 -> Node0x96fc510;
+	Node0x96fc510 [shape=record,label="{pd_lor.lhs.false.if.end.29_crit_edge}"];
+	Node0x96fc510 -> Node0x96fc560;
+	Node0x96fc560 [shape=record,label="{it_if.end.29|{<s0>T|<s1>F}}"];
+	Node0x96fc560:s0 -> Node0x96fc1f0;
+	Node0x96fc560:s1 -> Node0x96fc5b0;
+	Node0x96fc5b0 [shape=record,label="{pd_if.end.29.while.cond.8_crit_edge}"];
+	Node0x96fc5b0 -> Node0x96fc2e0;
+	Node0x96fc600 [shape=record,label="{pd_lor.lhs.false.while.end_crit_edge}"];
+	Node0x96fc600 -> Node0x96fc650;
+	Node0x96fc650 [shape=record,label="{it_while.end}"];
+	Node0x96fc650 -> Node0x96fc240;
+}

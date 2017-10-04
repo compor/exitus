@@ -1,0 +1,16 @@
+digraph "CFG for '_ZNK15PolynomialSpaceILi2EE13compute_indexEjRA2_j_for.cond' function" {
+	label="CFG for '_ZNK15PolynomialSpaceILi2EE13compute_indexEjRA2_j_for.cond' function";
+
+	Node0x963f1d0 [shape=record,label="{newFuncRoot}"];
+	Node0x963f1d0 -> Node0x963f2c0;
+	Node0x963f220 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x963f270 [shape=record,label="{if.then.exitStub}"];
+	Node0x963f2c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x963f2c0:s0 -> Node0x963f310;
+	Node0x963f2c0:s1 -> Node0x963f220;
+	Node0x963f310 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x963f310:s0 -> Node0x963f270;
+	Node0x963f310:s1 -> Node0x963f360;
+	Node0x963f360 [shape=record,label="{it_if.else}"];
+	Node0x963f360 -> Node0x963f2c0;
+}

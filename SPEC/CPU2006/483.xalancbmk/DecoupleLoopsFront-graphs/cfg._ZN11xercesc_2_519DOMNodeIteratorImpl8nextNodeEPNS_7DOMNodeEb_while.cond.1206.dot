@@ -1,0 +1,20 @@
+digraph "CFG for '_ZN11xercesc_2_519DOMNodeIteratorImpl8nextNodeEPNS_7DOMNodeEb_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_519DOMNodeIteratorImpl8nextNodeEPNS_7DOMNodeEb_while.cond' function";
+
+	Node0x97ba580 [shape=record,label="{newFuncRoot}"];
+	Node0x97ba580 -> Node0x97ba6c0;
+	Node0x97ba5d0 [shape=record,label="{while.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x97ba620 [shape=record,label="{land.rhs.return.loopexit_crit_edge.exitStub}"];
+	Node0x97ba670 [shape=record,label="{while.body.return.loopexit_crit_edge.exitStub}"];
+	Node0x97ba6c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x97ba6c0:s0 -> Node0x97ba710;
+	Node0x97ba6c0:s1 -> Node0x97ba5d0;
+	Node0x97ba710 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x97ba710:s0 -> Node0x97ba760;
+	Node0x97ba710:s1 -> Node0x97ba620;
+	Node0x97ba760 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x97ba760:s0 -> Node0x97ba670;
+	Node0x97ba760:s1 -> Node0x97ba7b0;
+	Node0x97ba7b0 [shape=record,label="{it_if.else}"];
+	Node0x97ba7b0 -> Node0x97ba6c0;
+}

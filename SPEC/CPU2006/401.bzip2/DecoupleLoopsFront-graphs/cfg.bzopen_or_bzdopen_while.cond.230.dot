@@ -1,0 +1,30 @@
+digraph "CFG for 'bzopen_or_bzdopen_while.cond' function" {
+	label="CFG for 'bzopen_or_bzdopen_while.cond' function";
+
+	Node0x1882d90 [shape=record,label="{newFuncRoot}"];
+	Node0x1882d90 -> Node0x1882e30;
+	Node0x1882de0 [shape=record,label="{while.end.exitStub}"];
+	Node0x1882e30 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1882e30:s0 -> Node0x1882e80;
+	Node0x1882e30:s1 -> Node0x1882de0;
+	Node0x1882e80 [shape=record,label="{pd_while.body|{<s0>def|<s1>114|<s2>119|<s3>115}}"];
+	Node0x1882e80:s0 -> Node0x1882fc0;
+	Node0x1882e80:s1 -> Node0x1882f70;
+	Node0x1882e80:s2 -> Node0x1882f20;
+	Node0x1882e80:s3 -> Node0x1882ed0;
+	Node0x1882ed0 [shape=record,label="{pd_sw.bb.2}"];
+	Node0x1882ed0 -> Node0x18830b0;
+	Node0x1882f20 [shape=record,label="{pd_sw.bb.1}"];
+	Node0x1882f20 -> Node0x18830b0;
+	Node0x1882f70 [shape=record,label="{pd_while.body.sw.epilog_crit_edge}"];
+	Node0x1882f70 -> Node0x18830b0;
+	Node0x1882fc0 [shape=record,label="{pd_sw.default|{<s0>T|<s1>F}}"];
+	Node0x1882fc0:s0 -> Node0x1883060;
+	Node0x1882fc0:s1 -> Node0x1883010;
+	Node0x1883010 [shape=record,label="{pd_sw.default.sw.epilog_crit_edge}"];
+	Node0x1883010 -> Node0x18830b0;
+	Node0x1883060 [shape=record,label="{pd_if.then.6}"];
+	Node0x1883060 -> Node0x18830b0;
+	Node0x18830b0 [shape=record,label="{it_sw.epilog}"];
+	Node0x18830b0 -> Node0x1882e30;
+}

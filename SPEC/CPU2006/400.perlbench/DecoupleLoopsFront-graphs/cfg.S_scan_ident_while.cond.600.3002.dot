@@ -1,0 +1,23 @@
+digraph "CFG for 'S_scan_ident_while.cond.600' function" {
+	label="CFG for 'S_scan_ident_while.cond.600' function";
+
+	Node0x571b690 [shape=record,label="{newFuncRoot}"];
+	Node0x571b690 -> Node0x571bc20;
+	Node0x571bb80 [shape=record,label="{while.cond.600.while.end.615_crit_edge.exitStub}"];
+	Node0x571bbd0 [shape=record,label="{lor.rhs.607.while.end.615_crit_edge.exitStub}"];
+	Node0x571bc20 [shape=record,label="{it_while.cond.600|{<s0>T|<s1>F}}"];
+	Node0x571bc20:s0 -> Node0x571bc70;
+	Node0x571bc20:s1 -> Node0x571bb80;
+	Node0x571bc70 [shape=record,label="{it_land.rhs.603|{<s0>T|<s1>F}}"];
+	Node0x571bc70:s0 -> Node0x571bd60;
+	Node0x571bc70:s1 -> Node0x571bcc0;
+	Node0x571bcc0 [shape=record,label="{it_lor.rhs.607|{<s0>T|<s1>F}}"];
+	Node0x571bcc0:s0 -> Node0x571bd10;
+	Node0x571bcc0:s1 -> Node0x571bbd0;
+	Node0x571bd10 [shape=record,label="{pd_lor.rhs.607.while.body.613_crit_edge}"];
+	Node0x571bd10 -> Node0x571bdb0;
+	Node0x571bd60 [shape=record,label="{pd_land.rhs.603.while.body.613_crit_edge}"];
+	Node0x571bd60 -> Node0x571bdb0;
+	Node0x571bdb0 [shape=record,label="{it_while.body.613}"];
+	Node0x571bdb0 -> Node0x571bc20;
+}

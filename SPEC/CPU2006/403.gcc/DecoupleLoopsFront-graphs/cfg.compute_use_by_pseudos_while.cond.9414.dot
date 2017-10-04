@@ -1,0 +1,16 @@
+digraph "CFG for 'compute_use_by_pseudos_while.cond' function" {
+	label="CFG for 'compute_use_by_pseudos_while.cond' function";
+
+	Node0xbd7c700 [shape=record,label="{newFuncRoot}"];
+	Node0xbd7c700 -> Node0xbd85c00;
+	Node0xbd7c750 [shape=record,label="{for.cond.preheader.loopexit.exitStub}"];
+	Node0xbd85bb0 [shape=record,label="{while.end.exitStub}"];
+	Node0xbd85c00 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xbd85c00:s0 -> Node0xbd7c750;
+	Node0xbd85c00:s1 -> Node0xbd85c50;
+	Node0xbd85c50 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xbd85c50:s0 -> Node0xbd85ca0;
+	Node0xbd85c50:s1 -> Node0xbd85bb0;
+	Node0xbd85ca0 [shape=record,label="{it_while.body}"];
+	Node0xbd85ca0 -> Node0xbd85c00;
+}

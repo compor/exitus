@@ -1,0 +1,43 @@
+digraph "CFG for '_ZN3povL19intersect_bbox_treeEPNS_11Mesh_StructEPNS_10Ray_StructES3_dPNS_13istack_structE_while.cond.outer' function" {
+	label="CFG for '_ZN3povL19intersect_bbox_treeEPNS_11Mesh_StructEPNS_10Ray_StructES3_dPNS_13istack_structE_while.cond.outer' function";
+
+	Node0x26b05e0 [shape=record,label="{newFuncRoot}"];
+	Node0x26b05e0 -> Node0x26b06d0;
+	Node0x26b0630 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x26b0680 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0x26b06d0 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x26b06d0 -> Node0x26b0720;
+	Node0x26b0720 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x26b0720:s0 -> Node0x26b0770;
+	Node0x26b0720:s1 -> Node0x26b0630;
+	Node0x26b0770 [shape=record,label="{pd_while.body}"];
+	Node0x26b0770 -> Node0x37f7fe0;
+	Node0x37f7fe0 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x37f7fe0:s0 -> Node0x26b0680;
+	Node0x37f7fe0:s1 -> Node0x26b07c0;
+	Node0x26b07c0 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x26b07c0:s0 -> Node0x26b0900;
+	Node0x26b07c0:s1 -> Node0x26b0810;
+	Node0x26b0810 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x26b0810:s0 -> Node0x26b08b0;
+	Node0x26b0810:s1 -> Node0x26b0860;
+	Node0x26b0860 [shape=record,label="{pd_if.else.while.cond.backedge_crit_edge}"];
+	Node0x26b0860 -> Node0x26b09f0;
+	Node0x26b08b0 [shape=record,label="{it_if.then.14}"];
+	Node0x26b08b0 -> Node0x37f7d60;
+	Node0x37f7d60 [shape=record,label="{pd_if.then.14.split1}"];
+	Node0x37f7d60 -> Node0x37f7f40;
+	Node0x37f7f40 [shape=record,label="{it_if.then.14.split}"];
+	Node0x37f7f40 -> Node0x26b06d0;
+	Node0x26b0900 [shape=record,label="{pd_for.cond.preheader}"];
+	Node0x26b0900 -> Node0x26b0950;
+	Node0x26b0950 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x26b0950:s0 -> Node0x26b0a40;
+	Node0x26b0950:s1 -> Node0x26b09a0;
+	Node0x26b09a0 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x26b09a0 -> Node0x26b09f0;
+	Node0x26b09f0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x26b09f0 -> Node0x26b0720;
+	Node0x26b0a40 [shape=record,label="{pd_for.body}"];
+	Node0x26b0a40 -> Node0x26b0950;
+}

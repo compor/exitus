@@ -1,0 +1,19 @@
+digraph "CFG for 'rinput' function" {
+	label="CFG for 'rinput' function";
+
+	Node0xf57d80 [shape=record,label="{entry}"];
+	Node0xf57d80 -> Node0xf60b90;
+	Node0xf60b90 [shape=record,label="{pd_while.cond.outer}"];
+	Node0xf60b90 -> Node0xf60be0;
+	Node0xf60be0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xf60be0:s0 -> Node0xf60c30;
+	Node0xf60be0:s1 -> Node0xf60d20;
+	Node0xf60c30 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0xf60c30:s0 -> Node0xf60cd0;
+	Node0xf60c30:s1 -> Node0xf60c80;
+	Node0xf60c80 [shape=record,label="{pd_while.body.while.cond_crit_edge}"];
+	Node0xf60c80 -> Node0xf60be0;
+	Node0xf60cd0 [shape=record,label="{pd_if.then}"];
+	Node0xf60cd0 -> Node0xf60b90;
+	Node0xf60d20 [shape=record,label="{while.end}"];
+}

@@ -1,0 +1,31 @@
+digraph "CFG for 'get_defense_threats_for.cond' function" {
+	label="CFG for 'get_defense_threats_for.cond' function";
+
+	Node0x4094350 [shape=record,label="{newFuncRoot}"];
+	Node0x4094350 -> Node0x4094490;
+	Node0x40943a0 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x40943f0 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0x4094440 [shape=record,label="{if.end.12.for.end_crit_edge.exitStub}"];
+	Node0x4094490 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4094490:s0 -> Node0x40944e0;
+	Node0x4094490:s1 -> Node0x40943a0;
+	Node0x40944e0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x40944e0:s0 -> Node0x40943f0;
+	Node0x40944e0:s1 -> Node0x4094530;
+	Node0x4094530 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x4094530:s0 -> Node0x40945d0;
+	Node0x4094530:s1 -> Node0x4094580;
+	Node0x4094580 [shape=record,label="{pd_if.end.if.end.12_crit_edge}"];
+	Node0x4094580 -> Node0x4094620;
+	Node0x40945d0 [shape=record,label="{pd_if.then.7}"];
+	Node0x40945d0 -> Node0x50842d0;
+	Node0x50842d0 [shape=record,label="{it_if.then.7.split1}"];
+	Node0x50842d0 -> Node0x5069080;
+	Node0x5069080 [shape=record,label="{pd_if.then.7.split}"];
+	Node0x5069080 -> Node0x4094620;
+	Node0x4094620 [shape=record,label="{it_if.end.12|{<s0>T|<s1>F}}"];
+	Node0x4094620:s0 -> Node0x4094440;
+	Node0x4094620:s1 -> Node0x4094670;
+	Node0x4094670 [shape=record,label="{it_for.inc}"];
+	Node0x4094670 -> Node0x4094490;
+}

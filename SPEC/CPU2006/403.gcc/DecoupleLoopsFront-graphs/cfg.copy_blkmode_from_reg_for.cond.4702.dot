@@ -1,0 +1,30 @@
+digraph "CFG for 'copy_blkmode_from_reg_for.cond' function" {
+	label="CFG for 'copy_blkmode_from_reg_for.cond' function";
+
+	Node0xad77f40 [shape=record,label="{newFuncRoot}"];
+	Node0xad77f40 -> Node0xad77fe0;
+	Node0xad77f90 [shape=record,label="{for.end.exitStub}"];
+	Node0xad77fe0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xad77fe0:s0 -> Node0xad78030;
+	Node0xad77fe0:s1 -> Node0xad77f90;
+	Node0xad78030 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xad78030:s0 -> Node0xad780d0;
+	Node0xad78030:s1 -> Node0xad78080;
+	Node0xad78080 [shape=record,label="{pd_for.body.if.end.76_crit_edge}"];
+	Node0xad78080 -> Node0xad78120;
+	Node0xad780d0 [shape=record,label="{pd_if.then.66}"];
+	Node0xad780d0 -> Node0xad78120;
+	Node0xad78120 [shape=record,label="{pd_if.end.76|{<s0>T|<s1>F}}"];
+	Node0xad78120:s0 -> Node0xad781c0;
+	Node0xad78120:s1 -> Node0xad78170;
+	Node0xad78170 [shape=record,label="{pd_if.end.76.if.end.92_crit_edge}"];
+	Node0xad78170 -> Node0xad78210;
+	Node0xad781c0 [shape=record,label="{pd_if.then.84}"];
+	Node0xad781c0 -> Node0xad78210;
+	Node0xad78210 [shape=record,label="{pd_if.end.92}"];
+	Node0xad78210 -> Node0xdc51740;
+	Node0xdc51740 [shape=record,label="{it_if.end.92.split1}"];
+	Node0xdc51740 -> Node0xf521680;
+	Node0xf521680 [shape=record,label="{pd_if.end.92.split}"];
+	Node0xf521680 -> Node0xad77fe0;
+}

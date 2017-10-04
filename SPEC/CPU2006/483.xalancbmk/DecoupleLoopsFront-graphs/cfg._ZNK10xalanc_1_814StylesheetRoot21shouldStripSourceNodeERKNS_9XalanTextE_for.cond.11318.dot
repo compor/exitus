@@ -1,0 +1,22 @@
+digraph "CFG for '_ZNK10xalanc_1_814StylesheetRoot21shouldStripSourceNodeERKNS_9XalanTextE_for.cond' function" {
+	label="CFG for '_ZNK10xalanc_1_814StylesheetRoot21shouldStripSourceNodeERKNS_9XalanTextE_for.cond' function";
+
+	Node0xa099ec0 [shape=record,label="{newFuncRoot}"];
+	Node0xa099ec0 -> Node0xa099fb0;
+	Node0xa099f10 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xa099f60 [shape=record,label="{if.then.18.exitStub}"];
+	Node0xa099fb0 [shape=record,label="{pd_for.cond}"];
+	Node0xa099fb0 -> Node0xd15da20;
+	Node0xd15da20 [shape=record,label="{it_for.cond.split|{<s0>T|<s1>F}}"];
+	Node0xd15da20:s0 -> Node0xa09a000;
+	Node0xd15da20:s1 -> Node0xa099f10;
+	Node0xa09a000 [shape=record,label="{it_for.body}"];
+	Node0xa09a000 -> Node0xd167110;
+	Node0xd167110 [shape=record,label="{pd_for.body.split1}"];
+	Node0xd167110 -> Node0xd15d8e0;
+	Node0xd15d8e0 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0xd15d8e0:s0 -> Node0xa099f60;
+	Node0xd15d8e0:s1 -> Node0xa09a050;
+	Node0xa09a050 [shape=record,label="{pd_for.inc}"];
+	Node0xa09a050 -> Node0xa099fb0;
+}

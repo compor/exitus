@@ -1,0 +1,32 @@
+digraph "CFG for 'fold_while.cond.2087' function" {
+	label="CFG for 'fold_while.cond.2087' function";
+
+	Node0xaf5c130 [shape=record,label="{newFuncRoot}"];
+	Node0xaf5c130 -> Node0xaf5c270;
+	Node0xaf5c180 [shape=record,label="{lor.lhs.false.2101.while.end.2140_crit_edge.exitStub}"];
+	Node0xaf5c1d0 [shape=record,label="{land.lhs.true.2108.while.end.2140_crit_edge.exitStub}"];
+	Node0xaf5c220 [shape=record,label="{land.rhs.2114.while.end.2140_crit_edge.exitStub}"];
+	Node0xaf5c270 [shape=record,label="{it_while.cond.2087|{<s0>T|<s1>F}}"];
+	Node0xaf5c270:s0 -> Node0xaf5cd60;
+	Node0xaf5c270:s1 -> Node0xaf5c2c0;
+	Node0xaf5c2c0 [shape=record,label="{it_lor.lhs.false.2094|{<s0>T|<s1>F}}"];
+	Node0xaf5c2c0:s0 -> Node0xaf5cd10;
+	Node0xaf5c2c0:s1 -> Node0xaf5cc70;
+	Node0xaf5cc70 [shape=record,label="{it_lor.lhs.false.2101|{<s0>T|<s1>F}}"];
+	Node0xaf5cc70:s0 -> Node0xaf5ccc0;
+	Node0xaf5cc70:s1 -> Node0xaf5c180;
+	Node0xaf5ccc0 [shape=record,label="{pd_lor.lhs.false.2101.land.lhs.true.2108_crit_edge}"];
+	Node0xaf5ccc0 -> Node0xaf5cdb0;
+	Node0xaf5cd10 [shape=record,label="{pd_lor.lhs.false.2094.land.lhs.true.2108_crit_edge}"];
+	Node0xaf5cd10 -> Node0xaf5cdb0;
+	Node0xaf5cd60 [shape=record,label="{pd_while.cond.2087.land.lhs.true.2108_crit_edge}"];
+	Node0xaf5cd60 -> Node0xaf5cdb0;
+	Node0xaf5cdb0 [shape=record,label="{it_land.lhs.true.2108|{<s0>T|<s1>F}}"];
+	Node0xaf5cdb0:s0 -> Node0xaf5ce00;
+	Node0xaf5cdb0:s1 -> Node0xaf5c1d0;
+	Node0xaf5ce00 [shape=record,label="{it_land.rhs.2114|{<s0>T|<s1>F}}"];
+	Node0xaf5ce00:s0 -> Node0xaf5ce50;
+	Node0xaf5ce00:s1 -> Node0xaf5c220;
+	Node0xaf5ce50 [shape=record,label="{it_while.body.2136}"];
+	Node0xaf5ce50 -> Node0xaf5c270;
+}

@@ -1,0 +1,27 @@
+digraph "CFG for 'is_attacked_for.cond.35' function" {
+	label="CFG for 'is_attacked_for.cond.35' function";
+
+	Node0xf903d0 [shape=record,label="{newFuncRoot}"];
+	Node0xf903d0 -> Node0xf90560;
+	Node0xf90420 [shape=record,label="{for.cond.35.return.loopexit4_crit_edge.exitStub}"];
+	Node0xf90470 [shape=record,label="{for.body.37.return.loopexit4_crit_edge.exitStub}"];
+	Node0xf904c0 [shape=record,label="{while.cond.46.return.loopexit_crit_edge.exitStub}"];
+	Node0xf90510 [shape=record,label="{while.cond.46.return.loopexit_crit_edge.2.exitStub}"];
+	Node0xf90560 [shape=record,label="{it_for.cond.35|{<s0>T|<s1>F}}"];
+	Node0xf90560:s0 -> Node0xf905b0;
+	Node0xf90560:s1 -> Node0xf90420;
+	Node0xf905b0 [shape=record,label="{it_for.body.37|{<s0>T|<s1>F}}"];
+	Node0xf905b0:s0 -> Node0xf90470;
+	Node0xf905b0:s1 -> Node0xf90600;
+	Node0xf90600 [shape=record,label="{pd_while.cond.46.preheader}"];
+	Node0xf90600 -> Node0xf90650;
+	Node0xf90650 [shape=record,label="{it_while.cond.46|{<s0>def|<s1>13|<s2>7|<s3>9}}"];
+	Node0xf90650:s0 -> Node0xf906f0;
+	Node0xf90650:s1 -> Node0xf906a0;
+	Node0xf90650:s2 -> Node0xf904c0;
+	Node0xf90650:s3 -> Node0xf90510;
+	Node0xf906a0 [shape=record,label="{it_if.end.56}"];
+	Node0xf906a0 -> Node0xf90650;
+	Node0xf906f0 [shape=record,label="{it_for.inc.61}"];
+	Node0xf906f0 -> Node0xf90560;
+}

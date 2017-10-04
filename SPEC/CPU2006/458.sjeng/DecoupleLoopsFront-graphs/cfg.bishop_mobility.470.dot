@@ -1,0 +1,19 @@
+digraph "CFG for 'bishop_mobility' function" {
+	label="CFG for 'bishop_mobility' function";
+
+	Node0xe45b70 [shape=record,label="{entry}"];
+	Node0xe45b70 -> Node0xe45bc0;
+	Node0xe45bc0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xe45bc0:s0 -> Node0xe45c10;
+	Node0xe45bc0:s1 -> Node0xe45d50;
+	Node0xe45c10 [shape=record,label="{pd_for.body}"];
+	Node0xe45c10 -> Node0xe45c60;
+	Node0xe45c60 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0xe45c60:s0 -> Node0xe45cb0;
+	Node0xe45c60:s1 -> Node0xe45d00;
+	Node0xe45cb0 [shape=record,label="{pd_for.body.5}"];
+	Node0xe45cb0 -> Node0xe45c60;
+	Node0xe45d00 [shape=record,label="{it_for.inc.9}"];
+	Node0xe45d00 -> Node0xe45bc0;
+	Node0xe45d50 [shape=record,label="{for.end.11}"];
+}

@@ -1,0 +1,40 @@
+digraph "CFG for 'merge_overlapping_regs' function" {
+	label="CFG for 'merge_overlapping_regs' function";
+
+	Node0x87b9730 [shape=record,label="{entry}"];
+	Node0x87b9730 -> Node0x87b9780;
+	Node0x87b9780 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x87b9780:s0 -> Node0x87b97d0;
+	Node0x87b9780:s1 -> Node0x87bacc0;
+	Node0x87b97d0 [shape=record,label="{pd_while.cond.1.preheader}"];
+	Node0x87b97d0 -> Node0x87b9820;
+	Node0x87b9820 [shape=record,label="{pd_while.cond.1|{<s0>T|<s1>F}}"];
+	Node0x87b9820:s0 -> Node0x87b9870;
+	Node0x87b9820:s1 -> Node0x87b9aa0;
+	Node0x87b9870 [shape=record,label="{pd_while.body.3|{<s0>T|<s1>F}}"];
+	Node0x87b9870:s0 -> Node0x87b9910;
+	Node0x87b9870:s1 -> Node0x87b98c0;
+	Node0x87b98c0 [shape=record,label="{pd_while.body.3.if.end.16_crit_edge}"];
+	Node0x87b98c0 -> Node0x87b9a50;
+	Node0x87b9910 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x87b9910:s0 -> Node0x87b99b0;
+	Node0x87b9910:s1 -> Node0x87b9960;
+	Node0x87b9960 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x87b9960 -> Node0x87b9a00;
+	Node0x87b99b0 [shape=record,label="{pd_if.then.12}"];
+	Node0x87b99b0 -> Node0x87b9a00;
+	Node0x87b9a00 [shape=record,label="{pd_if.end}"];
+	Node0x87b9a00 -> Node0x87b9a50;
+	Node0x87b9a50 [shape=record,label="{pd_if.end.16}"];
+	Node0x87b9a50 -> Node0x87b9820;
+	Node0x87b9aa0 [shape=record,label="{pd_while.end|{<s0>T|<s1>F}}"];
+	Node0x87b9aa0:s0 -> Node0x87babd0;
+	Node0x87b9aa0:s1 -> Node0x87bac20;
+	Node0x87babd0 [shape=record,label="{pd_while.end.if.end.26_crit_edge}"];
+	Node0x87babd0 -> Node0x87bac70;
+	Node0x87bac20 [shape=record,label="{pd_if.then.22}"];
+	Node0x87bac20 -> Node0x87bac70;
+	Node0x87bac70 [shape=record,label="{it_if.end.26}"];
+	Node0x87bac70 -> Node0x87b9780;
+	Node0x87bacc0 [shape=record,label="{while.end.28}"];
+}

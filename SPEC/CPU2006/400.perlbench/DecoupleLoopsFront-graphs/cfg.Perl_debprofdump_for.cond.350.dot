@@ -1,0 +1,19 @@
+digraph "CFG for 'Perl_debprofdump_for.cond' function" {
+	label="CFG for 'Perl_debprofdump_for.cond' function";
+
+	Node0x4b5b730 [shape=record,label="{newFuncRoot}"];
+	Node0x4b5b730 -> Node0x4b5ea50;
+	Node0x4b5ea00 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x4b5ea50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4b5ea50:s0 -> Node0x4b5eaa0;
+	Node0x4b5ea50:s1 -> Node0x4b5ea00;
+	Node0x4b5eaa0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4b5eaa0:s0 -> Node0x4b5eb40;
+	Node0x4b5eaa0:s1 -> Node0x4b5eaf0;
+	Node0x4b5eaf0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4b5eaf0 -> Node0x4b5eb90;
+	Node0x4b5eb40 [shape=record,label="{pd_if.then.2}"];
+	Node0x4b5eb40 -> Node0x4b5eb90;
+	Node0x4b5eb90 [shape=record,label="{it_for.inc}"];
+	Node0x4b5eb90 -> Node0x4b5ea50;
+}

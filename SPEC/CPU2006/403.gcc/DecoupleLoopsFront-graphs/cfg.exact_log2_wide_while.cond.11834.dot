@@ -1,0 +1,12 @@
+digraph "CFG for 'exact_log2_wide_while.cond' function" {
+	label="CFG for 'exact_log2_wide_while.cond' function";
+
+	Node0xc46b1f0 [shape=record,label="{newFuncRoot}"];
+	Node0xc46b1f0 -> Node0xc46b290;
+	Node0xc46b240 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xc46b290 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc46b290:s0 -> Node0xc46b2e0;
+	Node0xc46b290:s1 -> Node0xc46b240;
+	Node0xc46b2e0 [shape=record,label="{pd_while.body}"];
+	Node0xc46b2e0 -> Node0xc46b290;
+}

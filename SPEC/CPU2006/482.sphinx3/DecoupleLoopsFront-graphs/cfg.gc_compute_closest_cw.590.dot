@@ -1,0 +1,21 @@
+digraph "CFG for 'gc_compute_closest_cw' function" {
+	label="CFG for 'gc_compute_closest_cw' function";
+
+	Node0xe7a0d0 [shape=record,label="{entry}"];
+	Node0xe7a0d0 -> Node0xe968c0;
+	Node0xe968c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xe968c0:s0 -> Node0xe96910;
+	Node0xe968c0:s1 -> Node0xe972c0;
+	Node0xe96910 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0xe96910 -> Node0xe96960;
+	Node0xe96960 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0xe96960:s0 -> Node0xe97220;
+	Node0xe96960:s1 -> Node0xe97270;
+	Node0xe97220 [shape=record,label="{pd_for.body.3}"];
+	Node0xe97220 -> Node0xe96960;
+	Node0xe97270 [shape=record,label="{pd_for.end}"];
+	Node0xe97270 -> Node0x149ffe0;
+	Node0x149ffe0 [shape=record,label="{it_for.end.split}"];
+	Node0x149ffe0 -> Node0xe968c0;
+	Node0xe972c0 [shape=record,label="{for.end.29}"];
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'init_global_buffers_for.cond' function" {
+	label="CFG for 'init_global_buffers_for.cond' function";
+
+	Node0x227bba0 [shape=record,label="{newFuncRoot}"];
+	Node0x227bba0 -> Node0x227bc40;
+	Node0x227bbf0 [shape=record,label="{for.end.exitStub}"];
+	Node0x227bc40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x227bc40:s0 -> Node0x227bc90;
+	Node0x227bc40:s1 -> Node0x227bbf0;
+	Node0x227bc90 [shape=record,label="{pd_for.body}"];
+	Node0x227bc90 -> Node0x34f7780;
+	Node0x34f7780 [shape=record,label="{it_for.body.split}"];
+	Node0x34f7780 -> Node0x227bc40;
+}

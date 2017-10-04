@@ -1,0 +1,37 @@
+digraph "CFG for '_ZNK10xalanc_1_814XSLTEngineImpl29pendingAttributesHasDefaultNSEv' function" {
+	label="CFG for '_ZNK10xalanc_1_814XSLTEngineImpl29pendingAttributesHasDefaultNSEv' function";
+
+	Node0x671ebf0 [shape=record,label="{entry}"];
+	Node0x671ebf0 -> Node0x6724930;
+	Node0x671ebf0 -> Node0x6724bb0;
+	Node0x6724930 [shape=record,label="{for.cond.preheader}"];
+	Node0x6724930 -> Node0x6724980;
+	Node0x6724980 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x6724980:s0 -> Node0x6724a20;
+	Node0x6724980:s1 -> Node0x67249d0;
+	Node0x67249d0 [shape=record,label="{for.cond.cleanup_crit_edge}"];
+	Node0x67249d0 -> Node0x6724ca0;
+	Node0x6724a20 [shape=record,label="{it_for.body}"];
+	Node0x6724a20 -> Node0x6724a70;
+	Node0x6724a20 -> Node0x6724b60;
+	Node0x6724a70 [shape=record,label="{it_invoke.cont.5}"];
+	Node0x6724a70 -> Node0x6724ac0;
+	Node0x6724a70 -> Node0x6724b60;
+	Node0x6724ac0 [shape=record,label="{it_invoke.cont.7|{<s0>T|<s1>F}}"];
+	Node0x6724ac0:s0 -> Node0x6724b10;
+	Node0x6724ac0:s1 -> Node0x6724c50;
+	Node0x6724b10 [shape=record,label="{invoke.cont.7.cleanup_crit_edge}"];
+	Node0x6724b10 -> Node0x6724ca0;
+	Node0x6724b60 [shape=record,label="{lpad.loopexit}"];
+	Node0x6724b60 -> Node0x6724c00;
+	Node0x6724bb0 [shape=record,label="{lpad.loopexit.split-lp}"];
+	Node0x6724bb0 -> Node0x6724c00;
+	Node0x6724c00 [shape=record,label="{lpad}"];
+	Node0x6724c00 -> Node0x6724cf0;
+	Node0x6724c00 -> Node0x6724d40;
+	Node0x6724c50 [shape=record,label="{it_for.inc}"];
+	Node0x6724c50 -> Node0x6724980;
+	Node0x6724ca0 [shape=record,label="{cleanup}"];
+	Node0x6724cf0 [shape=record,label="{eh.resume}"];
+	Node0x6724d40 [shape=record,label="{terminate.lpad}"];
+}

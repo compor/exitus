@@ -1,0 +1,27 @@
+digraph "CFG for '_ZN9regmngobj13findfreeplaceEiiRiS0__while.cond' function" {
+	label="CFG for '_ZN9regmngobj13findfreeplaceEiiRiS0__while.cond' function";
+
+	Node0x2440300 [shape=record,label="{newFuncRoot}"];
+	Node0x2440300 -> Node0x24403f0;
+	Node0x2440350 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x24403a0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x24403f0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x24403f0:s0 -> Node0x2440440;
+	Node0x24403f0:s1 -> Node0x2440350;
+	Node0x2440440 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x2440440:s0 -> Node0x2440490;
+	Node0x2440440:s1 -> Node0x24403a0;
+	Node0x2440490 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x2440490:s0 -> Node0x2440530;
+	Node0x2440490:s1 -> Node0x24404e0;
+	Node0x24404e0 [shape=record,label="{pd_if.else}"];
+	Node0x24404e0 -> Node0x257a0d0;
+	Node0x257a0d0 [shape=record,label="{it_if.else.split}"];
+	Node0x257a0d0 -> Node0x2440580;
+	Node0x2440530 [shape=record,label="{pd_if.then.69}"];
+	Node0x2440530 -> Node0x24fdc10;
+	Node0x24fdc10 [shape=record,label="{it_if.then.69.split}"];
+	Node0x24fdc10 -> Node0x2440580;
+	Node0x2440580 [shape=record,label="{it_if.end.72}"];
+	Node0x2440580 -> Node0x24403f0;
+}

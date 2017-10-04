@@ -1,0 +1,24 @@
+digraph "CFG for 'cancel_changes' function" {
+	label="CFG for 'cancel_changes' function";
+
+	Node0x84e0700 [shape=record,label="{entry}"];
+	Node0x84e0700 -> Node0x84e0750;
+	Node0x84e0750 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x84e0750:s0 -> Node0x84e07a0;
+	Node0x84e0750:s1 -> Node0x84e0980;
+	Node0x84e07a0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x84e07a0:s0 -> Node0x84e0840;
+	Node0x84e07a0:s1 -> Node0x84e07f0;
+	Node0x84e07f0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x84e07f0 -> Node0x84e0930;
+	Node0x84e0840 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x84e0840:s0 -> Node0x84e08e0;
+	Node0x84e0840:s1 -> Node0x84e0890;
+	Node0x84e0890 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x84e0890 -> Node0x84e0930;
+	Node0x84e08e0 [shape=record,label="{pd_if.then}"];
+	Node0x84e08e0 -> Node0x84e0930;
+	Node0x84e0930 [shape=record,label="{it_for.inc}"];
+	Node0x84e0930 -> Node0x84e0750;
+	Node0x84e0980 [shape=record,label="{for.end}"];
+}

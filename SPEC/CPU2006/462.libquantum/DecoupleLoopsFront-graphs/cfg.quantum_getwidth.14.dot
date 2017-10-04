@@ -1,0 +1,12 @@
+digraph "CFG for 'quantum_getwidth' function" {
+	label="CFG for 'quantum_getwidth' function";
+
+	Node0x1599560 [shape=record,label="{entry}"];
+	Node0x1599560 -> Node0x15995b0;
+	Node0x15995b0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x15995b0:s0 -> Node0x1599600;
+	Node0x15995b0:s1 -> Node0x1599650;
+	Node0x1599600 [shape=record,label="{it_for.inc}"];
+	Node0x1599600 -> Node0x15995b0;
+	Node0x1599650 [shape=record,label="{for.end}"];
+}

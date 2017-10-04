@@ -1,0 +1,19 @@
+digraph "CFG for 'ix86_emit_restore_regs_using_mov' function" {
+	label="CFG for 'ix86_emit_restore_regs_using_mov' function";
+
+	Node0x9dfb900 [shape=record,label="{entry}"];
+	Node0x9dfb900 -> Node0x9dfb950;
+	Node0x9dfb950 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9dfb950:s0 -> Node0x9dfb9a0;
+	Node0x9dfb950:s1 -> Node0x9dfbae0;
+	Node0x9dfb9a0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x9dfb9a0:s0 -> Node0x9dfba40;
+	Node0x9dfb9a0:s1 -> Node0x9dfb9f0;
+	Node0x9dfb9f0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x9dfb9f0 -> Node0x9dfba90;
+	Node0x9dfba40 [shape=record,label="{pd_if.then}"];
+	Node0x9dfba40 -> Node0x9dfba90;
+	Node0x9dfba90 [shape=record,label="{it_for.inc}"];
+	Node0x9dfba90 -> Node0x9dfb950;
+	Node0x9dfbae0 [shape=record,label="{for.end}"];
+}

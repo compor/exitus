@@ -1,0 +1,16 @@
+digraph "CFG for '_ZN11xercesc_2_511DStringPool15getPooledStringERKNS_9DOMStringE_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_511DStringPool15getPooledStringERKNS_9DOMStringE_while.cond' function";
+
+	Node0x982ebd0 [shape=record,label="{newFuncRoot}"];
+	Node0x982ebd0 -> Node0x982ecc0;
+	Node0x982ec20 [shape=record,label="{while.end.exitStub}"];
+	Node0x982ec70 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x982ecc0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x982ecc0:s0 -> Node0x982ed10;
+	Node0x982ecc0:s1 -> Node0x982ec20;
+	Node0x982ed10 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x982ed10:s0 -> Node0x982ec70;
+	Node0x982ed10:s1 -> Node0x982ed60;
+	Node0x982ed60 [shape=record,label="{it_if.end}"];
+	Node0x982ed60 -> Node0x982ecc0;
+}

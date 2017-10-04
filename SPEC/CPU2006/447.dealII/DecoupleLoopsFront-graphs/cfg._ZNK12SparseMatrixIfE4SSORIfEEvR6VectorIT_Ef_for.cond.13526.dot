@@ -1,0 +1,28 @@
+digraph "CFG for '_ZNK12SparseMatrixIfE4SSORIfEEvR6VectorIT_Ef_for.cond' function" {
+	label="CFG for '_ZNK12SparseMatrixIfE4SSORIfEEvR6VectorIT_Ef_for.cond' function";
+
+	Node0x96ceb10 [shape=record,label="{newFuncRoot}"];
+	Node0x96ceb10 -> Node0x96cebb0;
+	Node0x96ceb60 [shape=record,label="{for.end.36.exitStub}"];
+	Node0x96cebb0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x96cebb0:s0 -> Node0x96cf400;
+	Node0x96cebb0:s1 -> Node0x96ceb60;
+	Node0x96cf400 [shape=record,label="{pd_for.body}"];
+	Node0x96cf400 -> Node0x96cf450;
+	Node0x96cf450 [shape=record,label="{pd_for.cond.3|{<s0>T|<s1>F}}"];
+	Node0x96cf450:s0 -> Node0x96cf4f0;
+	Node0x96cf450:s1 -> Node0x96cf4a0;
+	Node0x96cf4a0 [shape=record,label="{pd_for.end}"];
+	Node0x96cf4a0 -> Node0xab0a080;
+	Node0xab0a080 [shape=record,label="{it_for.end.split}"];
+	Node0xab0a080 -> Node0x96cebb0;
+	Node0x96cf4f0 [shape=record,label="{pd_for.body.10|{<s0>T|<s1>F}}"];
+	Node0x96cf4f0:s0 -> Node0x96cf590;
+	Node0x96cf4f0:s1 -> Node0x96cf540;
+	Node0x96cf540 [shape=record,label="{pd_for.body.10.for.inc_crit_edge}"];
+	Node0x96cf540 -> Node0x96cf5e0;
+	Node0x96cf590 [shape=record,label="{pd_if.then.17}"];
+	Node0x96cf590 -> Node0x96cf5e0;
+	Node0x96cf5e0 [shape=record,label="{pd_for.inc}"];
+	Node0x96cf5e0 -> Node0x96cf450;
+}

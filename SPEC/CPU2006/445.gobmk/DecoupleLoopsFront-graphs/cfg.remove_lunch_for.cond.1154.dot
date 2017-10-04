@@ -1,0 +1,23 @@
+digraph "CFG for 'remove_lunch_for.cond' function" {
+	label="CFG for 'remove_lunch_for.cond' function";
+
+	Node0x408ee30 [shape=record,label="{newFuncRoot}"];
+	Node0x408ee30 -> Node0x408ef20;
+	Node0x408ee80 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x408eed0 [shape=record,label="{land.lhs.true.30.for.end_crit_edge.exitStub}"];
+	Node0x408ef20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x408ef20:s0 -> Node0x408ef70;
+	Node0x408ef20:s1 -> Node0x408ee80;
+	Node0x408ef70 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x408ef70:s0 -> Node0x408f010;
+	Node0x408ef70:s1 -> Node0x408efc0;
+	Node0x408efc0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x408efc0 -> Node0x408f0b0;
+	Node0x408f010 [shape=record,label="{it_land.lhs.true.30|{<s0>T|<s1>F}}"];
+	Node0x408f010:s0 -> Node0x408eed0;
+	Node0x408f010:s1 -> Node0x408f060;
+	Node0x408f060 [shape=record,label="{pd_land.lhs.true.30.for.inc_crit_edge}"];
+	Node0x408f060 -> Node0x408f0b0;
+	Node0x408f0b0 [shape=record,label="{it_for.inc}"];
+	Node0x408f0b0 -> Node0x408ef20;
+}

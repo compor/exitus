@@ -1,0 +1,16 @@
+digraph "CFG for 'approx_reg_cost_while.cond' function" {
+	label="CFG for 'approx_reg_cost_while.cond' function";
+
+	Node0xa99b330 [shape=record,label="{newFuncRoot}"];
+	Node0xa99b330 -> Node0xa9a0a00;
+	Node0xa9a0960 [shape=record,label="{while.cond.for.cond.preheader_crit_edge.exitStub}"];
+	Node0xa9a09b0 [shape=record,label="{land.rhs.for.cond.preheader_crit_edge.exitStub}"];
+	Node0xa9a0a00 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa9a0a00:s0 -> Node0xa9a0960;
+	Node0xa9a0a00:s1 -> Node0xa9a0a50;
+	Node0xa9a0a50 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xa9a0a50:s0 -> Node0xa9a0aa0;
+	Node0xa9a0a50:s1 -> Node0xa9a09b0;
+	Node0xa9a0aa0 [shape=record,label="{it_while.body}"];
+	Node0xa9a0aa0 -> Node0xa9a0a00;
+}

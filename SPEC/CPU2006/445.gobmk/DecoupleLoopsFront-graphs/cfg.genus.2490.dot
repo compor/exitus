@@ -1,0 +1,36 @@
+digraph "CFG for 'genus' function" {
+	label="CFG for 'genus' function";
+
+	Node0x362e2e0 [shape=record,label="{entry}"];
+	Node0x362e2e0 -> Node0x362e330;
+	Node0x362e330 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x362e330:s0 -> Node0x362e810;
+	Node0x362e330:s1 -> Node0x362eb80;
+	Node0x362e810 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x362e810:s0 -> Node0x362e8b0;
+	Node0x362e810:s1 -> Node0x362e860;
+	Node0x362e860 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x362e860 -> Node0x362eb30;
+	Node0x362e8b0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x362e8b0:s0 -> Node0x362e900;
+	Node0x362e8b0:s1 -> Node0x362e950;
+	Node0x362e900 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x362e900 -> Node0x362eb30;
+	Node0x362e950 [shape=record,label="{pd_land.lhs.true.5|{<s0>T|<s1>F}}"];
+	Node0x362e950:s0 -> Node0x362e9a0;
+	Node0x362e950:s1 -> Node0x362e9f0;
+	Node0x362e9a0 [shape=record,label="{pd_land.lhs.true.5.if.then_crit_edge}"];
+	Node0x362e9a0 -> Node0x362eae0;
+	Node0x362e9f0 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x362e9f0:s0 -> Node0x362ea90;
+	Node0x362e9f0:s1 -> Node0x362ea40;
+	Node0x362ea40 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x362ea40 -> Node0x362eae0;
+	Node0x362ea90 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x362ea90 -> Node0x362eb30;
+	Node0x362eae0 [shape=record,label="{pd_if.then}"];
+	Node0x362eae0 -> Node0x362eb30;
+	Node0x362eb30 [shape=record,label="{it_for.inc}"];
+	Node0x362eb30 -> Node0x362e330;
+	Node0x362eb80 [shape=record,label="{for.end}"];
+}

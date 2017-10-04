@@ -1,0 +1,14 @@
+digraph "CFG for 'gtp_test_eyeshape_while.cond' function" {
+	label="CFG for 'gtp_test_eyeshape_while.cond' function";
+
+	Node0x48198c0 [shape=record,label="{newFuncRoot}"];
+	Node0x48198c0 -> Node0x482eb80;
+	Node0x482eb30 [shape=record,label="{while.end.exitStub}"];
+	Node0x482eb80 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x482eb80:s0 -> Node0x482ebd0;
+	Node0x482eb80:s1 -> Node0x482eb30;
+	Node0x482ebd0 [shape=record,label="{pd_while.body}"];
+	Node0x482ebd0 -> Node0x510ec40;
+	Node0x510ec40 [shape=record,label="{it_while.body.split}"];
+	Node0x510ec40 -> Node0x482eb80;
+}

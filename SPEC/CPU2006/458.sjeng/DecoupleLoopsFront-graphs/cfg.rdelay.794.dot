@@ -1,0 +1,12 @@
+digraph "CFG for 'rdelay' function" {
+	label="CFG for 'rdelay' function";
+
+	Node0xf72f70 [shape=record,label="{entry}"];
+	Node0xf72f70 -> Node0xf72fc0;
+	Node0xf72fc0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xf72fc0:s0 -> Node0xf73010;
+	Node0xf72fc0:s1 -> Node0xf73060;
+	Node0xf73010 [shape=record,label="{it_while.body}"];
+	Node0xf73010 -> Node0xf72fc0;
+	Node0xf73060 [shape=record,label="{while.end}"];
+}

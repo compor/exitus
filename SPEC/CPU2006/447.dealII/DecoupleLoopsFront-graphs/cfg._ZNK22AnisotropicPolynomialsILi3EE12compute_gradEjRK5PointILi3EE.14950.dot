@@ -1,0 +1,34 @@
+digraph "CFG for '_ZNK22AnisotropicPolynomialsILi3EE12compute_gradEjRK5PointILi3EE' function" {
+	label="CFG for '_ZNK22AnisotropicPolynomialsILi3EE12compute_gradEjRK5PointILi3EE' function";
+
+	Node0x7747150 [shape=record,label="{entry}"];
+	Node0x7747150 -> Node0x77471a0;
+	Node0x7747150 -> Node0x77472e0;
+	Node0x77471a0 [shape=record,label="{invoke.cont}"];
+	Node0x77471a0 -> Node0x77471f0;
+	Node0x77471f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x77471f0:s0 -> Node0x7747240;
+	Node0x77471f0:s1 -> Node0x7747420;
+	Node0x7747240 [shape=record,label="{it_for.body}"];
+	Node0x7747240 -> Node0x7747290;
+	Node0x7747240 -> Node0x7747380;
+	Node0x7747290 [shape=record,label="{it_for.inc}"];
+	Node0x7747290 -> Node0x77471f0;
+	Node0x77472e0 [shape=record,label="{lpad}"];
+	Node0x77472e0 -> Node0x7747330;
+	Node0x77472e0 -> Node0x7747560;
+	Node0x7747330 [shape=record,label="{lpad.eh.resume_crit_edge}"];
+	Node0x7747330 -> Node0x7747510;
+	Node0x7747380 [shape=record,label="{lpad.3}"];
+	Node0x7747380 -> Node0x77473d0;
+	Node0x7747380 -> Node0x7747560;
+	Node0x77473d0 [shape=record,label="{lpad.3.eh.resume_crit_edge}"];
+	Node0x77473d0 -> Node0x7747510;
+	Node0x7747420 [shape=record,label="{for.end}"];
+	Node0x7747420 -> Node0x7747470;
+	Node0x7747470 [shape=record,label="{codeRepl}"];
+	Node0x7747470 -> Node0x77474c0;
+	Node0x77474c0 [shape=record,label="{for.end.38}"];
+	Node0x7747510 [shape=record,label="{eh.resume}"];
+	Node0x7747560 [shape=record,label="{terminate.lpad}"];
+}

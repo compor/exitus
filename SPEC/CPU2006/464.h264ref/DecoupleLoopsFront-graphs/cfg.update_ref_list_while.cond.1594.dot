@@ -1,0 +1,14 @@
+digraph "CFG for 'update_ref_list_while.cond' function" {
+	label="CFG for 'update_ref_list_while.cond' function";
+
+	Node0x26ee0c0 [shape=record,label="{newFuncRoot}"];
+	Node0x26ee0c0 -> Node0x26ee9a0;
+	Node0x26ee110 [shape=record,label="{while.end.exitStub}"];
+	Node0x26ee9a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x26ee9a0:s0 -> Node0x26ee9f0;
+	Node0x26ee9a0:s1 -> Node0x26ee110;
+	Node0x26ee9f0 [shape=record,label="{it_while.body}"];
+	Node0x26ee9f0 -> Node0x37cefc0;
+	Node0x37cefc0 [shape=record,label="{pd_while.body.split}"];
+	Node0x37cefc0 -> Node0x26ee9a0;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'S_regcurly_while.cond' function" {
+	label="CFG for 'S_regcurly_while.cond' function";
+
+	Node0x5207b90 [shape=record,label="{newFuncRoot}"];
+	Node0x5207b90 -> Node0x52080a0;
+	Node0x5207be0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x5208050 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x52080a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x52080a0:s0 -> Node0x52080f0;
+	Node0x52080a0:s1 -> Node0x5207be0;
+	Node0x52080f0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x52080f0:s0 -> Node0x5208140;
+	Node0x52080f0:s1 -> Node0x5208050;
+	Node0x5208140 [shape=record,label="{it_while.body}"];
+	Node0x5208140 -> Node0x52080a0;
+}

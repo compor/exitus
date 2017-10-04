@@ -1,0 +1,23 @@
+digraph "CFG for 'S_do_trans_simple_while.cond.outer' function" {
+	label="CFG for 'S_do_trans_simple_while.cond.outer' function";
+
+	Node0x4b1be60 [shape=record,label="{newFuncRoot}"];
+	Node0x4b1be60 -> Node0x4b1bf00;
+	Node0x4b1beb0 [shape=record,label="{while.end.exitStub}"];
+	Node0x4b1bf00 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x4b1bf00 -> Node0x4b1bf50;
+	Node0x4b1bf50 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4b1bf50:s0 -> Node0x4b1bfa0;
+	Node0x4b1bf50:s1 -> Node0x4b1beb0;
+	Node0x4b1bfa0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4b1bfa0:s0 -> Node0x4b1c040;
+	Node0x4b1bfa0:s1 -> Node0x4b1bff0;
+	Node0x4b1bff0 [shape=record,label="{it_if.else}"];
+	Node0x4b1bff0 -> Node0x4b1bf50;
+	Node0x4b1c040 [shape=record,label="{pd_if.then.14}"];
+	Node0x4b1c040 -> Node0x63107f0;
+	Node0x63107f0 [shape=record,label="{it_if.then.14.split1}"];
+	Node0x63107f0 -> Node0x63193d0;
+	Node0x63193d0 [shape=record,label="{pd_if.then.14.split}"];
+	Node0x63193d0 -> Node0x4b1bf00;
+}

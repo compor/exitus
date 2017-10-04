@@ -1,0 +1,14 @@
+digraph "CFG for 'reset_board' function" {
+	label="CFG for 'reset_board' function";
+
+	Node0xf78870 [shape=record,label="{entry}"];
+	Node0xf78870 -> Node0xf788c0;
+	Node0xf788c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xf788c0:s0 -> Node0xf7bc20;
+	Node0xf788c0:s1 -> Node0xf7bc70;
+	Node0xf7bc20 [shape=record,label="{pd_for.body}"];
+	Node0xf7bc20 -> Node0x132dca0;
+	Node0x132dca0 [shape=record,label="{it_for.body.split}"];
+	Node0x132dca0 -> Node0xf788c0;
+	Node0xf7bc70 [shape=record,label="{for.end}"];
+}

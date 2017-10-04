@@ -1,0 +1,20 @@
+digraph "CFG for '_ZN5Patch8readfileEP8_IO_FILE_for.cond' function" {
+	label="CFG for '_ZN5Patch8readfileEP8_IO_FILE_for.cond' function";
+
+	Node0x25ef0a0 [shape=record,label="{newFuncRoot}"];
+	Node0x25ef0a0 -> Node0x25ef190;
+	Node0x25ef0f0 [shape=record,label="{for.end.exitStub}"];
+	Node0x25ef140 [shape=record,label="{if.then.52.exitStub}"];
+	Node0x25ef190 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x25ef190:s0 -> Node0x25ef1e0;
+	Node0x25ef190:s1 -> Node0x25ef0f0;
+	Node0x25ef1e0 [shape=record,label="{pd_for.body}"];
+	Node0x25ef1e0 -> Node0x2925550;
+	Node0x2925550 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x2925550:s0 -> Node0x25ef140;
+	Node0x2925550:s1 -> Node0x25ef230;
+	Node0x25ef230 [shape=record,label="{pd_if.end.54}"];
+	Node0x25ef230 -> Node0x291c4a0;
+	Node0x291c4a0 [shape=record,label="{it_if.end.54.split}"];
+	Node0x291c4a0 -> Node0x25ef190;
+}

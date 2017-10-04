@@ -1,0 +1,30 @@
+digraph "CFG for 'Getline_do.body' function" {
+	label="CFG for 'Getline_do.body' function";
+
+	Node0x3152810 [shape=record,label="{newFuncRoot}"];
+	Node0x3152810 -> Node0x3156240;
+	Node0x31561a0 [shape=record,label="{do.body.return_crit_edge.exitStub}"];
+	Node0x31561f0 [shape=record,label="{lor.rhs.return_crit_edge.exitStub}"];
+	Node0x3156240 [shape=record,label="{it_do.body|{<s0>T|<s1>F}}"];
+	Node0x3156240:s0 -> Node0x31561a0;
+	Node0x3156240:s1 -> Node0x3156290;
+	Node0x3156290 [shape=record,label="{pd_while.cond.preheader}"];
+	Node0x3156290 -> Node0x31562e0;
+	Node0x31562e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x31562e0:s0 -> Node0x31564c0;
+	Node0x31562e0:s1 -> Node0x3156330;
+	Node0x3156330 [shape=record,label="{it_do.cond|{<s0>T|<s1>F}}"];
+	Node0x3156330:s0 -> Node0x3156420;
+	Node0x3156330:s1 -> Node0x3156380;
+	Node0x3156380 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x3156380:s0 -> Node0x31563d0;
+	Node0x3156380:s1 -> Node0x31561f0;
+	Node0x31563d0 [shape=record,label="{pd_lor.rhs.do.body.backedge_crit_edge}"];
+	Node0x31563d0 -> Node0x3156470;
+	Node0x3156420 [shape=record,label="{pd_do.cond.do.body.backedge_crit_edge}"];
+	Node0x3156420 -> Node0x3156470;
+	Node0x3156470 [shape=record,label="{pd_do.body.backedge}"];
+	Node0x3156470 -> Node0x3156240;
+	Node0x31564c0 [shape=record,label="{it_while.body}"];
+	Node0x31564c0 -> Node0x31562e0;
+}

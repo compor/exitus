@@ -1,0 +1,23 @@
+digraph "CFG for 'add_pending_init_while.cond.20' function" {
+	label="CFG for 'add_pending_init_while.cond.20' function";
+
+	Node0xa108830 [shape=record,label="{newFuncRoot}"];
+	Node0xa108830 -> Node0xa108d30;
+	Node0xa108880 [shape=record,label="{if.end.48.loopexit1.exitStub}"];
+	Node0xa1088d0 [shape=record,label="{if.else.34.exitStub}"];
+	Node0xa108d30 [shape=record,label="{it_while.cond.20|{<s0>T|<s1>F}}"];
+	Node0xa108d30:s0 -> Node0xa108d80;
+	Node0xa108d30:s1 -> Node0xa108880;
+	Node0xa108d80 [shape=record,label="{it_while.body.22|{<s0>T|<s1>F}}"];
+	Node0xa108d80:s0 -> Node0xa108e70;
+	Node0xa108d80:s1 -> Node0xa108dd0;
+	Node0xa108dd0 [shape=record,label="{it_if.else.29|{<s0>T|<s1>F}}"];
+	Node0xa108dd0:s0 -> Node0xa108e20;
+	Node0xa108dd0:s1 -> Node0xa1088d0;
+	Node0xa108e20 [shape=record,label="{it_if.then.32}"];
+	Node0xa108e20 -> Node0xa108ec0;
+	Node0xa108e70 [shape=record,label="{it_if.then.27}"];
+	Node0xa108e70 -> Node0xa108ec0;
+	Node0xa108ec0 [shape=record,label="{pd_while.cond.20.backedge}"];
+	Node0xa108ec0 -> Node0xa108d30;
+}

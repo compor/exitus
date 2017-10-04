@@ -1,0 +1,24 @@
+digraph "CFG for 'readGenBank_while.cond.84' function" {
+	label="CFG for 'readGenBank_while.cond.84' function";
+
+	Node0x32d0ce0 [shape=record,label="{newFuncRoot}"];
+	Node0x32d0ce0 -> Node0x32d1150;
+	Node0x32d1100 [shape=record,label="{while.cond.99.preheader.exitStub}"];
+	Node0x32d1150 [shape=record,label="{it_while.cond.84|{<s0>T|<s1>F}}"];
+	Node0x32d1150:s0 -> Node0x32d1290;
+	Node0x32d1150:s1 -> Node0x32d11a0;
+	Node0x32d11a0 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x32d11a0:s0 -> Node0x32d1240;
+	Node0x32d11a0:s1 -> Node0x32d11f0;
+	Node0x32d11f0 [shape=record,label="{it_lor.rhs.lor.end_crit_edge}"];
+	Node0x32d11f0 -> Node0x32d12e0;
+	Node0x32d1240 [shape=record,label="{it_land.rhs}"];
+	Node0x32d1240 -> Node0x32d12e0;
+	Node0x32d1290 [shape=record,label="{it_while.cond.84.lor.end_crit_edge}"];
+	Node0x32d1290 -> Node0x32d12e0;
+	Node0x32d12e0 [shape=record,label="{it_lor.end|{<s0>T|<s1>F}}"];
+	Node0x32d12e0:s0 -> Node0x32d1330;
+	Node0x32d12e0:s1 -> Node0x32d1100;
+	Node0x32d1330 [shape=record,label="{pd_while.body.97}"];
+	Node0x32d1330 -> Node0x32d1150;
+}

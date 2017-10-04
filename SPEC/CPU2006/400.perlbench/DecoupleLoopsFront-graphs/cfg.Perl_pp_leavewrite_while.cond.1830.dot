@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_pp_leavewrite_while.cond' function" {
+	label="CFG for 'Perl_pp_leavewrite_while.cond' function";
+
+	Node0x50f5410 [shape=record,label="{newFuncRoot}"];
+	Node0x50f5410 -> Node0x50f5500;
+	Node0x50f5460 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x50f54b0 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0x50f5500 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x50f5500:s0 -> Node0x50f5550;
+	Node0x50f5500:s1 -> Node0x50f5460;
+	Node0x50f5550 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x50f5550:s0 -> Node0x50f55a0;
+	Node0x50f5550:s1 -> Node0x50f54b0;
+	Node0x50f55a0 [shape=record,label="{it_if.end.77}"];
+	Node0x50f55a0 -> Node0x50f5500;
+}

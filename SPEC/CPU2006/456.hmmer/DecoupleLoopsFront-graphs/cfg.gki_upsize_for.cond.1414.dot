@@ -1,0 +1,19 @@
+digraph "CFG for 'gki_upsize_for.cond' function" {
+	label="CFG for 'gki_upsize_for.cond' function";
+
+	Node0x33184b0 [shape=record,label="{newFuncRoot}"];
+	Node0x33184b0 -> Node0x3318550;
+	Node0x3318500 [shape=record,label="{for.end.exitStub}"];
+	Node0x3318550 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3318550:s0 -> Node0x33185a0;
+	Node0x3318550:s1 -> Node0x3318500;
+	Node0x33185a0 [shape=record,label="{pd_for.body}"];
+	Node0x33185a0 -> Node0x3318a20;
+	Node0x3318a20 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3318a20:s0 -> Node0x3318ac0;
+	Node0x3318a20:s1 -> Node0x3318a70;
+	Node0x3318a70 [shape=record,label="{it_for.inc}"];
+	Node0x3318a70 -> Node0x3318550;
+	Node0x3318ac0 [shape=record,label="{pd_while.body}"];
+	Node0x3318ac0 -> Node0x3318a20;
+}

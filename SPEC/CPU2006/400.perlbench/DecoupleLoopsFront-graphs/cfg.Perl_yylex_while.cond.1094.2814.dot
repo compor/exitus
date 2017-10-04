@@ -1,0 +1,23 @@
+digraph "CFG for 'Perl_yylex_while.cond.1094' function" {
+	label="CFG for 'Perl_yylex_while.cond.1094' function";
+
+	Node0x55511e0 [shape=record,label="{newFuncRoot}"];
+	Node0x55511e0 -> Node0x55512d0;
+	Node0x5551230 [shape=record,label="{while.cond.1094.while.end.1110_crit_edge.exitStub}"];
+	Node0x5551280 [shape=record,label="{lor.rhs.1101.while.end.1110_crit_edge.exitStub}"];
+	Node0x55512d0 [shape=record,label="{it_while.cond.1094|{<s0>T|<s1>F}}"];
+	Node0x55512d0:s0 -> Node0x5551320;
+	Node0x55512d0:s1 -> Node0x5551230;
+	Node0x5551320 [shape=record,label="{it_land.rhs.1097|{<s0>T|<s1>F}}"];
+	Node0x5551320:s0 -> Node0x555c310;
+	Node0x5551320:s1 -> Node0x555c270;
+	Node0x555c270 [shape=record,label="{it_lor.rhs.1101|{<s0>T|<s1>F}}"];
+	Node0x555c270:s0 -> Node0x555c2c0;
+	Node0x555c270:s1 -> Node0x5551280;
+	Node0x555c2c0 [shape=record,label="{pd_lor.rhs.1101.while.body.1108_crit_edge}"];
+	Node0x555c2c0 -> Node0x555c360;
+	Node0x555c310 [shape=record,label="{pd_land.rhs.1097.while.body.1108_crit_edge}"];
+	Node0x555c310 -> Node0x555c360;
+	Node0x555c360 [shape=record,label="{it_while.body.1108}"];
+	Node0x555c360 -> Node0x55512d0;
+}

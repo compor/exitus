@@ -1,0 +1,21 @@
+digraph "CFG for 'proofnumberscan_for.cond' function" {
+	label="CFG for 'proofnumberscan_for.cond' function";
+
+	Node0x10dacd0 [shape=record,label="{newFuncRoot}"];
+	Node0x10dacd0 -> Node0x10dad70;
+	Node0x10dad20 [shape=record,label="{for.end.exitStub}"];
+	Node0x10dad70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x10dad70:s0 -> Node0x10dadc0;
+	Node0x10dad70:s1 -> Node0x10dad20;
+	Node0x10dadc0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x10dadc0:s0 -> Node0x10dae60;
+	Node0x10dadc0:s1 -> Node0x10dae10;
+	Node0x10dae10 [shape=record,label="{pd_if.else}"];
+	Node0x10dae10 -> Node0x10daeb0;
+	Node0x10dae60 [shape=record,label="{pd_if.then}"];
+	Node0x10dae60 -> Node0x10daeb0;
+	Node0x10daeb0 [shape=record,label="{pd_if.end}"];
+	Node0x10daeb0 -> Node0x1441960;
+	Node0x1441960 [shape=record,label="{it_if.end.split}"];
+	Node0x1441960 -> Node0x10dad70;
+}

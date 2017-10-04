@@ -1,0 +1,14 @@
+digraph "CFG for 'char_num_for.cond' function" {
+	label="CFG for 'char_num_for.cond' function";
+
+	Node0x1a3a9c0 [shape=record,label="{newFuncRoot}"];
+	Node0x1a3a9c0 -> Node0x1a3ae30;
+	Node0x1a3ade0 [shape=record,label="{for.end.exitStub}"];
+	Node0x1a3ae30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1a3ae30:s0 -> Node0x1a3ae80;
+	Node0x1a3ae30:s1 -> Node0x1a3ade0;
+	Node0x1a3ae80 [shape=record,label="{pd_for.body}"];
+	Node0x1a3ae80 -> Node0x1bf5b10;
+	Node0x1bf5b10 [shape=record,label="{it_for.body.split}"];
+	Node0x1bf5b10 -> Node0x1a3ae30;
+}

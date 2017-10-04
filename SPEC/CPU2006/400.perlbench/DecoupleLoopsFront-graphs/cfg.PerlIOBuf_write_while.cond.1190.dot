@@ -1,0 +1,16 @@
+digraph "CFG for 'PerlIOBuf_write_while.cond' function" {
+	label="CFG for 'PerlIOBuf_write_while.cond' function";
+
+	Node0x4db3fd0 [shape=record,label="{newFuncRoot}"];
+	Node0x4db3fd0 -> Node0x4db4960;
+	Node0x4db4020 [shape=record,label="{while.cond.if.end.21.loopexit_crit_edge.exitStub}"];
+	Node0x4db4070 [shape=record,label="{land.rhs.if.end.21.loopexit_crit_edge.exitStub}"];
+	Node0x4db4960 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4db4960:s0 -> Node0x4db49b0;
+	Node0x4db4960:s1 -> Node0x4db4020;
+	Node0x4db49b0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x4db49b0:s0 -> Node0x4db4a00;
+	Node0x4db49b0:s1 -> Node0x4db4070;
+	Node0x4db4a00 [shape=record,label="{it_while.body}"];
+	Node0x4db4a00 -> Node0x4db4960;
+}

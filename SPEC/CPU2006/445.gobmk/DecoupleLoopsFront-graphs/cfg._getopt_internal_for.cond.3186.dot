@@ -1,0 +1,16 @@
+digraph "CFG for '_getopt_internal_for.cond' function" {
+	label="CFG for '_getopt_internal_for.cond' function";
+
+	Node0x487aae0 [shape=record,label="{newFuncRoot}"];
+	Node0x487aae0 -> Node0x48d1fd0;
+	Node0x48d1f30 [shape=record,label="{for.cond.for.cond.142.preheader_crit_edge.exitStub}"];
+	Node0x48d1f80 [shape=record,label="{land.rhs.136.for.cond.142.preheader_crit_edge.exitStub}"];
+	Node0x48d1fd0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x48d1fd0:s0 -> Node0x48d2020;
+	Node0x48d1fd0:s1 -> Node0x48d1f30;
+	Node0x48d2020 [shape=record,label="{it_land.rhs.136|{<s0>T|<s1>F}}"];
+	Node0x48d2020:s0 -> Node0x48d2070;
+	Node0x48d2020:s1 -> Node0x48d1f80;
+	Node0x48d2070 [shape=record,label="{it_for.inc}"];
+	Node0x48d2070 -> Node0x48d1fd0;
+}

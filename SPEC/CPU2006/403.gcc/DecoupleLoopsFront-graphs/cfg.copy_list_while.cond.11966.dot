@@ -1,0 +1,14 @@
+digraph "CFG for 'copy_list_while.cond' function" {
+	label="CFG for 'copy_list_while.cond' function";
+
+	Node0xc4aa3a0 [shape=record,label="{newFuncRoot}"];
+	Node0xc4aa3a0 -> Node0xc4aa440;
+	Node0xc4aa3f0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xc4aa440 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc4aa440:s0 -> Node0xc4aa490;
+	Node0xc4aa440:s1 -> Node0xc4aa3f0;
+	Node0xc4aa490 [shape=record,label="{pd_while.body}"];
+	Node0xc4aa490 -> Node0xfd220d0;
+	Node0xfd220d0 [shape=record,label="{it_while.body.split}"];
+	Node0xfd220d0 -> Node0xc4aa440;
+}

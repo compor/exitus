@@ -1,0 +1,37 @@
+digraph "CFG for 'S_regpiece_while.cond' function" {
+	label="CFG for 'S_regpiece_while.cond' function";
+
+	Node0x51dfac0 [shape=record,label="{newFuncRoot}"];
+	Node0x51dfac0 -> Node0x51dfbb0;
+	Node0x51dfb10 [shape=record,label="{lor.rhs.while.end_crit_edge.exitStub}"];
+	Node0x51dfb60 [shape=record,label="{if.then.25.while.end_crit_edge.exitStub}"];
+	Node0x51dfbb0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x51dfbb0:s0 -> Node0x51dfc50;
+	Node0x51dfbb0:s1 -> Node0x51dfc00;
+	Node0x51dfc00 [shape=record,label="{pd_while.cond.lor.rhs_crit_edge}"];
+	Node0x51dfc00 -> Node0x51dfcf0;
+	Node0x51dfc50 [shape=record,label="{it_land.lhs.true.15|{<s0>T|<s1>F}}"];
+	Node0x51dfc50:s0 -> Node0x51dfd90;
+	Node0x51dfc50:s1 -> Node0x51dfca0;
+	Node0x51dfca0 [shape=record,label="{pd_land.lhs.true.15.lor.rhs_crit_edge}"];
+	Node0x51dfca0 -> Node0x51dfcf0;
+	Node0x51dfcf0 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x51dfcf0:s0 -> Node0x51dfd40;
+	Node0x51dfcf0:s1 -> Node0x51dfb10;
+	Node0x51dfd40 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0x51dfd40 -> Node0x51dfde0;
+	Node0x51dfd90 [shape=record,label="{pd_land.lhs.true.15.while.body_crit_edge}"];
+	Node0x51dfd90 -> Node0x51dfde0;
+	Node0x51dfde0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x51dfde0:s0 -> Node0x51dfe80;
+	Node0x51dfde0:s1 -> Node0x51dfe30;
+	Node0x51dfe30 [shape=record,label="{pd_while.body.if.end.29_crit_edge}"];
+	Node0x51dfe30 -> Node0x51dff20;
+	Node0x51dfe80 [shape=record,label="{it_if.then.25|{<s0>T|<s1>F}}"];
+	Node0x51dfe80:s0 -> Node0x51dfb60;
+	Node0x51dfe80:s1 -> Node0x51dfed0;
+	Node0x51dfed0 [shape=record,label="{pd_if.then.25.if.end.29_crit_edge}"];
+	Node0x51dfed0 -> Node0x51dff20;
+	Node0x51dff20 [shape=record,label="{it_if.end.29}"];
+	Node0x51dff20 -> Node0x51dfbb0;
+}

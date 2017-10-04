@@ -1,0 +1,21 @@
+digraph "CFG for 'BZ2_decompress_for.cond.2322' function" {
+	label="CFG for 'BZ2_decompress_for.cond.2322' function";
+
+	Node0x19758a0 [shape=record,label="{newFuncRoot}"];
+	Node0x19758a0 -> Node0x1975940;
+	Node0x19758f0 [shape=record,label="{if.end.2352.loopexit.exitStub}"];
+	Node0x1975940 [shape=record,label="{it_for.cond.2322|{<s0>T|<s1>F}}"];
+	Node0x1975940:s0 -> Node0x1975990;
+	Node0x1975940:s1 -> Node0x19758f0;
+	Node0x1975990 [shape=record,label="{pd_for.cond.2326.preheader}"];
+	Node0x1975990 -> Node0x19759e0;
+	Node0x19759e0 [shape=record,label="{pd_for.cond.2326|{<s0>T|<s1>F}}"];
+	Node0x19759e0:s0 -> Node0x1975a80;
+	Node0x19759e0:s1 -> Node0x1975a30;
+	Node0x1975a30 [shape=record,label="{pd_for.end.2343}"];
+	Node0x1975a30 -> Node0x1c1a680;
+	Node0x1c1a680 [shape=record,label="{it_for.end.2343.split}"];
+	Node0x1c1a680 -> Node0x1975940;
+	Node0x1975a80 [shape=record,label="{pd_for.body.2329}"];
+	Node0x1975a80 -> Node0x19759e0;
+}

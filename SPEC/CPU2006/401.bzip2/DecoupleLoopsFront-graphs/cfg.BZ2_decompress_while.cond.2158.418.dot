@@ -1,0 +1,18 @@
+digraph "CFG for 'BZ2_decompress_while.cond.2158' function" {
+	label="CFG for 'BZ2_decompress_while.cond.2158' function";
+
+	Node0x1966260 [shape=record,label="{newFuncRoot}"];
+	Node0x1966260 -> Node0x1966350;
+	Node0x19662b0 [shape=record,label="{while.body.1929.loopexit19.exitStub}"];
+	Node0x1966300 [shape=record,label="{save_state_and_return.loopexit20.exitStub}"];
+	Node0x1966350 [shape=record,label="{it_while.cond.2158|{<s0>T|<s1>F}}"];
+	Node0x1966350:s0 -> Node0x19663a0;
+	Node0x1966350:s1 -> Node0x19662b0;
+	Node0x19663a0 [shape=record,label="{it_while.body.2161|{<s0>T|<s1>F}}"];
+	Node0x19663a0:s0 -> Node0x1966300;
+	Node0x19663a0:s1 -> Node0x19663f0;
+	Node0x19663f0 [shape=record,label="{pd_if.end.2165}"];
+	Node0x19663f0 -> Node0x1c29dd0;
+	Node0x1c29dd0 [shape=record,label="{it_if.end.2165.split}"];
+	Node0x1c29dd0 -> Node0x1966350;
+}

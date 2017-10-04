@@ -1,0 +1,19 @@
+digraph "CFG for 'reg_becomes_live_while.cond' function" {
+	label="CFG for 'reg_becomes_live_while.cond' function";
+
+	Node0xb262070 [shape=record,label="{newFuncRoot}"];
+	Node0xb262070 -> Node0xb262110;
+	Node0xb2620c0 [shape=record,label="{if.end.79.loopexit.exitStub}"];
+	Node0xb262110 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb262110:s0 -> Node0xb262160;
+	Node0xb262110:s1 -> Node0xb2620c0;
+	Node0xb262160 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0xb262160:s0 -> Node0xb262200;
+	Node0xb262160:s1 -> Node0xb2621b0;
+	Node0xb2621b0 [shape=record,label="{pd_if.then.70}"];
+	Node0xb2621b0 -> Node0xb262250;
+	Node0xb262200 [shape=record,label="{pd_while.body.if.end.71_crit_edge}"];
+	Node0xb262200 -> Node0xb262250;
+	Node0xb262250 [shape=record,label="{pd_if.end.71}"];
+	Node0xb262250 -> Node0xb262110;
+}

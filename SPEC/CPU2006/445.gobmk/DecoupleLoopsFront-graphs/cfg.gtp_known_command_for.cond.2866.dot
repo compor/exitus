@@ -1,0 +1,16 @@
+digraph "CFG for 'gtp_known_command_for.cond' function" {
+	label="CFG for 'gtp_known_command_for.cond' function";
+
+	Node0x48266f0 [shape=record,label="{newFuncRoot}"];
+	Node0x48266f0 -> Node0x4826c30;
+	Node0x4826740 [shape=record,label="{if.end.10.loopexit.exitStub}"];
+	Node0x4826790 [shape=record,label="{if.then.8.exitStub}"];
+	Node0x4826c30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4826c30:s0 -> Node0x4826c80;
+	Node0x4826c30:s1 -> Node0x4826740;
+	Node0x4826c80 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4826c80:s0 -> Node0x4826790;
+	Node0x4826c80:s1 -> Node0x4826cd0;
+	Node0x4826cd0 [shape=record,label="{it_for.inc}"];
+	Node0x4826cd0 -> Node0x4826c30;
+}

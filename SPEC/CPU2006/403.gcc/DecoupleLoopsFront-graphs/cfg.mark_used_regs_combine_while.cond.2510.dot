@@ -1,0 +1,29 @@
+digraph "CFG for 'mark_used_regs_combine_while.cond' function" {
+	label="CFG for 'mark_used_regs_combine_while.cond' function";
+
+	Node0xa646460 [shape=record,label="{newFuncRoot}"];
+	Node0xa646460 -> Node0xa646500;
+	Node0xa6464b0 [shape=record,label="{while.end.exitStub}"];
+	Node0xa646500 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa646500:s0 -> Node0xa646730;
+	Node0xa646500:s1 -> Node0xa646550;
+	Node0xa646550 [shape=record,label="{it_lor.lhs.false.109|{<s0>T|<s1>F}}"];
+	Node0xa646550:s0 -> Node0xa6466e0;
+	Node0xa646550:s1 -> Node0xa6465a0;
+	Node0xa6465a0 [shape=record,label="{it_lor.lhs.false.114|{<s0>T|<s1>F}}"];
+	Node0xa6465a0:s0 -> Node0xa646690;
+	Node0xa6465a0:s1 -> Node0xa6465f0;
+	Node0xa6465f0 [shape=record,label="{it_lor.rhs.119|{<s0>T|<s1>F}}"];
+	Node0xa6465f0:s0 -> Node0xa646640;
+	Node0xa6465f0:s1 -> Node0xa6464b0;
+	Node0xa646640 [shape=record,label="{pd_lor.rhs.119.while.body_crit_edge}"];
+	Node0xa646640 -> Node0xa646780;
+	Node0xa646690 [shape=record,label="{pd_lor.lhs.false.114.while.body_crit_edge}"];
+	Node0xa646690 -> Node0xa646780;
+	Node0xa6466e0 [shape=record,label="{pd_lor.lhs.false.109.while.body_crit_edge}"];
+	Node0xa6466e0 -> Node0xa646780;
+	Node0xa646730 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0xa646730 -> Node0xa646780;
+	Node0xa646780 [shape=record,label="{it_while.body}"];
+	Node0xa646780 -> Node0xa646500;
+}

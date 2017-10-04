@@ -1,0 +1,35 @@
+digraph "CFG for 'free_mem_mincost' function" {
+	label="CFG for 'free_mem_mincost' function";
+
+	Node0x17e93a0 [shape=record,label="{entry}"];
+	Node0x17e93a0 -> Node0x17e93f0;
+	Node0x17e93f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x17e93f0:s0 -> Node0x17e9440;
+	Node0x17e93f0:s1 -> Node0x17e9760;
+	Node0x17e9440 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x17e9440 -> Node0x17e9490;
+	Node0x17e9490 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x17e9490:s0 -> Node0x17e94e0;
+	Node0x17e9490:s1 -> Node0x17e9710;
+	Node0x17e94e0 [shape=record,label="{pd_for.cond.5.preheader}"];
+	Node0x17e94e0 -> Node0x17e9530;
+	Node0x17e9530 [shape=record,label="{pd_for.cond.5|{<s0>T|<s1>F}}"];
+	Node0x17e9530:s0 -> Node0x17e9580;
+	Node0x17e9530:s1 -> Node0x17e96c0;
+	Node0x17e9580 [shape=record,label="{pd_for.cond.8.preheader}"];
+	Node0x17e9580 -> Node0x17e95d0;
+	Node0x17e95d0 [shape=record,label="{pd_for.cond.8|{<s0>T|<s1>F}}"];
+	Node0x17e95d0:s0 -> Node0x17e9620;
+	Node0x17e95d0:s1 -> Node0x17e9670;
+	Node0x17e9620 [shape=record,label="{pd_for.body.10}"];
+	Node0x17e9620 -> Node0x17e95d0;
+	Node0x17e9670 [shape=record,label="{pd_for.end}"];
+	Node0x17e9670 -> Node0x17e9530;
+	Node0x17e96c0 [shape=record,label="{pd_for.end.25}"];
+	Node0x17e96c0 -> Node0x17e9490;
+	Node0x17e9710 [shape=record,label="{pd_for.end.32}"];
+	Node0x17e9710 -> Node0x307f2a0;
+	Node0x307f2a0 [shape=record,label="{it_for.end.32.split}"];
+	Node0x307f2a0 -> Node0x17e93f0;
+	Node0x17e9760 [shape=record,label="{for.end.37}"];
+}

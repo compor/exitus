@@ -1,0 +1,46 @@
+digraph "CFG for 'tidy_fallthru_edges' function" {
+	label="CFG for 'tidy_fallthru_edges' function";
+
+	Node0x30e5670 [shape=record,label="{entry}"];
+	Node0x30e5670 -> Node0x30e56c0;
+	Node0x30e56c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x30e56c0:s0 -> Node0x30e5710;
+	Node0x30e56c0:s1 -> Node0x30e5bc0;
+	Node0x30e5710 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x30e5710:s0 -> Node0x30e57b0;
+	Node0x30e5710:s1 -> Node0x30e5760;
+	Node0x30e5760 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x30e5760 -> Node0x30e5b70;
+	Node0x30e57b0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x30e57b0:s0 -> Node0x30e5800;
+	Node0x30e57b0:s1 -> Node0x30e5850;
+	Node0x30e5800 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x30e5800 -> Node0x30e5b70;
+	Node0x30e5850 [shape=record,label="{pd_land.lhs.true.6|{<s0>T|<s1>F}}"];
+	Node0x30e5850:s0 -> Node0x30e58f0;
+	Node0x30e5850:s1 -> Node0x30e58a0;
+	Node0x30e58a0 [shape=record,label="{pd_land.lhs.true.6.for.inc_crit_edge}"];
+	Node0x30e58a0 -> Node0x30e5b70;
+	Node0x30e58f0 [shape=record,label="{pd_land.lhs.true.8|{<s0>T|<s1>F}}"];
+	Node0x30e58f0:s0 -> Node0x30e5990;
+	Node0x30e58f0:s1 -> Node0x30e5940;
+	Node0x30e5940 [shape=record,label="{pd_land.lhs.true.8.for.inc_crit_edge}"];
+	Node0x30e5940 -> Node0x30e5b70;
+	Node0x30e5990 [shape=record,label="{pd_land.lhs.true.10|{<s0>T|<s1>F}}"];
+	Node0x30e5990:s0 -> Node0x30e59e0;
+	Node0x30e5990:s1 -> Node0x30e5a30;
+	Node0x30e59e0 [shape=record,label="{pd_land.lhs.true.10.if.then_crit_edge}"];
+	Node0x30e59e0 -> Node0x30e5b20;
+	Node0x30e5a30 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x30e5a30:s0 -> Node0x30e5ad0;
+	Node0x30e5a30:s1 -> Node0x30e5a80;
+	Node0x30e5a80 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x30e5a80 -> Node0x30e5b70;
+	Node0x30e5ad0 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x30e5ad0 -> Node0x30e5b20;
+	Node0x30e5b20 [shape=record,label="{pd_if.then}"];
+	Node0x30e5b20 -> Node0x30e5b70;
+	Node0x30e5b70 [shape=record,label="{it_for.inc}"];
+	Node0x30e5b70 -> Node0x30e56c0;
+	Node0x30e5bc0 [shape=record,label="{for.end}"];
+}

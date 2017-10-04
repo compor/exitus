@@ -1,0 +1,12 @@
+digraph "CFG for 'note_sets_while.cond' function" {
+	label="CFG for 'note_sets_while.cond' function";
+
+	Node0xbb3ea20 [shape=record,label="{newFuncRoot}"];
+	Node0xbb3ea20 -> Node0xbb3eac0;
+	Node0xbb3ea70 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0xbb3eac0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xbb3eac0:s0 -> Node0xbb3eb10;
+	Node0xbb3eac0:s1 -> Node0xbb3ea70;
+	Node0xbb3eb10 [shape=record,label="{pd_while.body}"];
+	Node0xbb3eb10 -> Node0xbb3eac0;
+}

@@ -1,0 +1,31 @@
+digraph "CFG for 'move_reason_known_for.cond' function" {
+	label="CFG for 'move_reason_known_for.cond' function";
+
+	Node0x408dbf0 [shape=record,label="{newFuncRoot}"];
+	Node0x408dbf0 -> Node0x4090350;
+	Node0x4090210 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0x4090260 [shape=record,label="{for.body.return_crit_edge.exitStub}"];
+	Node0x40902b0 [shape=record,label="{land.lhs.true.19.return_crit_edge.exitStub}"];
+	Node0x4090300 [shape=record,label="{lor.lhs.false.return_crit_edge.exitStub}"];
+	Node0x4090350 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4090350:s0 -> Node0x40903a0;
+	Node0x4090350:s1 -> Node0x4090210;
+	Node0x40903a0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x40903a0:s0 -> Node0x4090260;
+	Node0x40903a0:s1 -> Node0x40903f0;
+	Node0x40903f0 [shape=record,label="{it_if.end.13|{<s0>T|<s1>F}}"];
+	Node0x40903f0:s0 -> Node0x4090490;
+	Node0x40903f0:s1 -> Node0x4090440;
+	Node0x4090440 [shape=record,label="{pd_if.end.13.for.inc_crit_edge}"];
+	Node0x4090440 -> Node0x4090580;
+	Node0x4090490 [shape=record,label="{it_land.lhs.true.19|{<s0>T|<s1>F}}"];
+	Node0x4090490:s0 -> Node0x40902b0;
+	Node0x4090490:s1 -> Node0x40904e0;
+	Node0x40904e0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x40904e0:s0 -> Node0x4090300;
+	Node0x40904e0:s1 -> Node0x4090530;
+	Node0x4090530 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x4090530 -> Node0x4090580;
+	Node0x4090580 [shape=record,label="{it_for.inc}"];
+	Node0x4090580 -> Node0x4090350;
+}

@@ -1,0 +1,19 @@
+digraph "CFG for 'purge_dead_edges_for.cond.outer' function" {
+	label="CFG for 'purge_dead_edges_for.cond.outer' function";
+
+	Node0xa5bb030 [shape=record,label="{newFuncRoot}"];
+	Node0xa5bb030 -> Node0xa5bb480;
+	Node0xa5bb080 [shape=record,label="{if.end.20.loopexit.exitStub}"];
+	Node0xa5bb480 [shape=record,label="{pd_for.cond.outer}"];
+	Node0xa5bb480 -> Node0xa5bb4d0;
+	Node0xa5bb4d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa5bb4d0:s0 -> Node0xa5bb520;
+	Node0xa5bb4d0:s1 -> Node0xa5bb080;
+	Node0xa5bb520 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xa5bb520:s0 -> Node0xa5bb5c0;
+	Node0xa5bb520:s1 -> Node0xa5bb570;
+	Node0xa5bb570 [shape=record,label="{pd_for.body.for.cond_crit_edge}"];
+	Node0xa5bb570 -> Node0xa5bb4d0;
+	Node0xa5bb5c0 [shape=record,label="{pd_if.then.18}"];
+	Node0xa5bb5c0 -> Node0xa5bb480;
+}

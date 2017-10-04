@@ -1,0 +1,14 @@
+digraph "CFG for 'glist_myfree' function" {
+	label="CFG for 'glist_myfree' function";
+
+	Node0xe89730 [shape=record,label="{entry}"];
+	Node0xe89730 -> Node0xe89780;
+	Node0xe89780 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xe89780:s0 -> Node0xe897d0;
+	Node0xe89780:s1 -> Node0xe89820;
+	Node0xe897d0 [shape=record,label="{it_while.body}"];
+	Node0xe897d0 -> Node0x1278220;
+	Node0x1278220 [shape=record,label="{pd_while.body.split}"];
+	Node0x1278220 -> Node0xe89780;
+	Node0xe89820 [shape=record,label="{while.end}"];
+}

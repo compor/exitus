@@ -1,0 +1,20 @@
+digraph "CFG for 'owl_add_move_for.cond' function" {
+	label="CFG for 'owl_add_move_for.cond' function";
+
+	Node0x420d9f0 [shape=record,label="{newFuncRoot}"];
+	Node0x420d9f0 -> Node0x420db30;
+	Node0x420da40 [shape=record,label="{for.cond.for.end.loopexit_crit_edge.exitStub}"];
+	Node0x420da90 [shape=record,label="{for.body.for.end.loopexit_crit_edge.exitStub}"];
+	Node0x420dae0 [shape=record,label="{if.then.12.exitStub}"];
+	Node0x420db30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x420db30:s0 -> Node0x420db80;
+	Node0x420db30:s1 -> Node0x420da40;
+	Node0x420db80 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x420db80:s0 -> Node0x420da90;
+	Node0x420db80:s1 -> Node0x420dbd0;
+	Node0x420dbd0 [shape=record,label="{it_if.end.8|{<s0>T|<s1>F}}"];
+	Node0x420dbd0:s0 -> Node0x420dae0;
+	Node0x420dbd0:s1 -> Node0x420dc20;
+	Node0x420dc20 [shape=record,label="{it_for.inc}"];
+	Node0x420dc20 -> Node0x420db30;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'propagate_one_insn_while.cond' function" {
+	label="CFG for 'propagate_one_insn_while.cond' function";
+
+	Node0xaea0f50 [shape=record,label="{newFuncRoot}"];
+	Node0xaea0f50 -> Node0xaea1040;
+	Node0xaea0fa0 [shape=record,label="{while.cond.for.cond.preheader_crit_edge.exitStub}"];
+	Node0xaea0ff0 [shape=record,label="{land.rhs.134.for.cond.preheader_crit_edge.exitStub}"];
+	Node0xaea1040 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xaea1040:s0 -> Node0xaea0fa0;
+	Node0xaea1040:s1 -> Node0xaea1090;
+	Node0xaea1090 [shape=record,label="{it_land.rhs.134|{<s0>T|<s1>F}}"];
+	Node0xaea1090:s0 -> Node0xaea18f0;
+	Node0xaea1090:s1 -> Node0xaea0ff0;
+	Node0xaea18f0 [shape=record,label="{it_while.body}"];
+	Node0xaea18f0 -> Node0xaea1040;
+}

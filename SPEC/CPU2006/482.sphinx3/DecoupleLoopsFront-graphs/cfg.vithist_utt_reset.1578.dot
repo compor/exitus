@@ -1,0 +1,14 @@
+digraph "CFG for 'vithist_utt_reset' function" {
+	label="CFG for 'vithist_utt_reset' function";
+
+	Node0xf12590 [shape=record,label="{entry}"];
+	Node0xf12590 -> Node0xf125e0;
+	Node0xf125e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xf125e0:s0 -> Node0xf12630;
+	Node0xf125e0:s1 -> Node0xf12680;
+	Node0xf12630 [shape=record,label="{pd_for.body}"];
+	Node0xf12630 -> Node0x156fa20;
+	Node0x156fa20 [shape=record,label="{it_for.body.split}"];
+	Node0x156fa20 -> Node0xf125e0;
+	Node0xf12680 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'update_live_status_for.cond' function" {
+	label="CFG for 'update_live_status_for.cond' function";
+
+	Node0xc06c370 [shape=record,label="{newFuncRoot}"];
+	Node0xc06c370 -> Node0xc06c410;
+	Node0xc06c3c0 [shape=record,label="{if.end.94.loopexit.exitStub}"];
+	Node0xc06c410 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc06c410:s0 -> Node0xc06c460;
+	Node0xc06c410:s1 -> Node0xc06c3c0;
+	Node0xc06c460 [shape=record,label="{pd_for.body}"];
+	Node0xc06c460 -> Node0xfbfe8d0;
+	Node0xfbfe8d0 [shape=record,label="{it_for.body.split}"];
+	Node0xfbfe8d0 -> Node0xc06c410;
+}

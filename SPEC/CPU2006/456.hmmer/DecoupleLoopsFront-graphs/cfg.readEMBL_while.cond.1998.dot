@@ -1,0 +1,16 @@
+digraph "CFG for 'readEMBL_while.cond' function" {
+	label="CFG for 'readEMBL_while.cond' function";
+
+	Node0x32de220 [shape=record,label="{newFuncRoot}"];
+	Node0x32de220 -> Node0x32de310;
+	Node0x32de270 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x32de2c0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x32de310 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x32de310:s0 -> Node0x32de270;
+	Node0x32de310:s1 -> Node0x32de360;
+	Node0x32de360 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x32de360:s0 -> Node0x32de3b0;
+	Node0x32de360:s1 -> Node0x32de2c0;
+	Node0x32de3b0 [shape=record,label="{pd_while.body}"];
+	Node0x32de3b0 -> Node0x32de310;
+}

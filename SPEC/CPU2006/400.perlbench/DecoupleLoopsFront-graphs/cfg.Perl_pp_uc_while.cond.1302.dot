@@ -1,0 +1,35 @@
+digraph "CFG for 'Perl_pp_uc_while.cond' function" {
+	label="CFG for 'Perl_pp_uc_while.cond' function";
+
+	Node0x4e404d0 [shape=record,label="{newFuncRoot}"];
+	Node0x4e404d0 -> Node0x4e40570;
+	Node0x4e40520 [shape=record,label="{while.end.exitStub}"];
+	Node0x4e40570 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4e40570:s0 -> Node0x4e405c0;
+	Node0x4e40570:s1 -> Node0x4e40520;
+	Node0x4e405c0 [shape=record,label="{it_while.body}"];
+	Node0x4e405c0 -> Node0x649a290;
+	Node0x649a290 [shape=record,label="{pd_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x649a290:s0 -> Node0x4e40660;
+	Node0x649a290:s1 -> Node0x4e40610;
+	Node0x4e40610 [shape=record,label="{pd_while.body.if.end.69_crit_edge}"];
+	Node0x4e40610 -> Node0x4e40840;
+	Node0x4e40660 [shape=record,label="{pd_land.lhs.true.46|{<s0>T|<s1>F}}"];
+	Node0x4e40660:s0 -> Node0x4e40700;
+	Node0x4e40660:s1 -> Node0x4e406b0;
+	Node0x4e406b0 [shape=record,label="{pd_land.lhs.true.46.if.end.69_crit_edge}"];
+	Node0x4e406b0 -> Node0x4e40840;
+	Node0x4e40700 [shape=record,label="{pd_if.then.52|{<s0>T|<s1>F}}"];
+	Node0x4e40700:s0 -> Node0x4e407a0;
+	Node0x4e40700:s1 -> Node0x4e40750;
+	Node0x4e40750 [shape=record,label="{pd_cond.false.61}"];
+	Node0x4e40750 -> Node0x4e407f0;
+	Node0x4e407a0 [shape=record,label="{pd_cond.true.59}"];
+	Node0x4e407a0 -> Node0x4e407f0;
+	Node0x4e407f0 [shape=record,label="{pd_cond.end.64}"];
+	Node0x4e407f0 -> Node0x4e40840;
+	Node0x4e40840 [shape=record,label="{pd_if.end.69}"];
+	Node0x4e40840 -> Node0x649a1f0;
+	Node0x649a1f0 [shape=record,label="{it_if.end.69.split}"];
+	Node0x649a1f0 -> Node0x4e40570;
+}

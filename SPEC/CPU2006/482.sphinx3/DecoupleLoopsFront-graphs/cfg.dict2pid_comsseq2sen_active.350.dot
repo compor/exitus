@@ -1,0 +1,33 @@
+digraph "CFG for 'dict2pid_comsseq2sen_active' function" {
+	label="CFG for 'dict2pid_comsseq2sen_active' function";
+
+	Node0xe1b290 [shape=record,label="{entry}"];
+	Node0xe1b290 -> Node0xe1b2e0;
+	Node0xe1b2e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xe1b2e0:s0 -> Node0xe1b330;
+	Node0xe1b2e0:s1 -> Node0xe1b650;
+	Node0xe1b330 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xe1b330:s0 -> Node0xe1b3d0;
+	Node0xe1b330:s1 -> Node0xe1b380;
+	Node0xe1b380 [shape=record,label="{pd_for.body.for.inc.24_crit_edge}"];
+	Node0xe1b380 -> Node0xe1b600;
+	Node0xe1b3d0 [shape=record,label="{pd_if.then}"];
+	Node0xe1b3d0 -> Node0xe1b420;
+	Node0xe1b420 [shape=record,label="{pd_for.cond.3|{<s0>T|<s1>F}}"];
+	Node0xe1b420:s0 -> Node0xe1b470;
+	Node0xe1b420:s1 -> Node0xe1b5b0;
+	Node0xe1b470 [shape=record,label="{pd_for.body.5}"];
+	Node0xe1b470 -> Node0xe1b4c0;
+	Node0xe1b4c0 [shape=record,label="{pd_for.cond.10|{<s0>T|<s1>F}}"];
+	Node0xe1b4c0:s0 -> Node0xe1b510;
+	Node0xe1b4c0:s1 -> Node0xe1b560;
+	Node0xe1b510 [shape=record,label="{pd_for.body.16}"];
+	Node0xe1b510 -> Node0xe1b4c0;
+	Node0xe1b560 [shape=record,label="{pd_for.inc.21}"];
+	Node0xe1b560 -> Node0xe1b420;
+	Node0xe1b5b0 [shape=record,label="{pd_for.inc.24.loopexit}"];
+	Node0xe1b5b0 -> Node0xe1b600;
+	Node0xe1b600 [shape=record,label="{it_for.inc.24}"];
+	Node0xe1b600 -> Node0xe1b2e0;
+	Node0xe1b650 [shape=record,label="{for.end.26}"];
+}

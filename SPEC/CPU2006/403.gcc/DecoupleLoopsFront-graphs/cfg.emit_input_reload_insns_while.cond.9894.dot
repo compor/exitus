@@ -1,0 +1,16 @@
+digraph "CFG for 'emit_input_reload_insns_while.cond' function" {
+	label="CFG for 'emit_input_reload_insns_while.cond' function";
+
+	Node0xbf9cc80 [shape=record,label="{newFuncRoot}"];
+	Node0xbf9cc80 -> Node0xbf9cd70;
+	Node0xbf9ccd0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xbf9cd20 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xbf9cd70 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xbf9cd70:s0 -> Node0xbf9cdc0;
+	Node0xbf9cd70:s1 -> Node0xbf9ccd0;
+	Node0xbf9cdc0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xbf9cdc0:s0 -> Node0xbf9ce10;
+	Node0xbf9cdc0:s1 -> Node0xbf9cd20;
+	Node0xbf9ce10 [shape=record,label="{it_while.body}"];
+	Node0xbf9ce10 -> Node0xbf9cd70;
+}

@@ -1,0 +1,29 @@
+digraph "CFG for '_ZN3pov13Copy_TexturesEPNS_14Texture_StructE' function" {
+	label="CFG for '_ZN3pov13Copy_TexturesEPNS_14Texture_StructE' function";
+
+	Node0x20acdb0 [shape=record,label="{entry}"];
+	Node0x20acdb0 -> Node0x20ace00;
+	Node0x20ace00 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x20ace00:s0 -> Node0x20ace50;
+	Node0x20ace00:s1 -> Node0x20ad0d0;
+	Node0x20ace50 [shape=record,label="{pd_for.body|{<s0>def|<s1>1|<s2>4}}"];
+	Node0x20ace50:s0 -> Node0x20acea0;
+	Node0x20ace50:s1 -> Node0x20acef0;
+	Node0x20ace50:s2 -> Node0x20acf40;
+	Node0x20acea0 [shape=record,label="{pd_for.body.sw.epilog_crit_edge}"];
+	Node0x20acea0 -> Node0x20acf90;
+	Node0x20acef0 [shape=record,label="{pd_sw.bb}"];
+	Node0x20acef0 -> Node0x20acf90;
+	Node0x20acf40 [shape=record,label="{pd_sw.bb.7}"];
+	Node0x20acf40 -> Node0x20acf90;
+	Node0x20acf90 [shape=record,label="{pd_sw.epilog|{<s0>T|<s1>F}}"];
+	Node0x20acf90:s0 -> Node0x20ad030;
+	Node0x20acf90:s1 -> Node0x20acfe0;
+	Node0x20acfe0 [shape=record,label="{pd_sw.epilog.for.inc_crit_edge}"];
+	Node0x20acfe0 -> Node0x20ad080;
+	Node0x20ad030 [shape=record,label="{pd_if.then.13}"];
+	Node0x20ad030 -> Node0x20ad080;
+	Node0x20ad080 [shape=record,label="{it_for.inc}"];
+	Node0x20ad080 -> Node0x20ace00;
+	Node0x20ad0d0 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,20 @@
+digraph "CFG for 'etoasc_roun' function" {
+	label="CFG for 'etoasc_roun' function";
+
+	Node0xb7e4af0 [shape=record,label="{newFuncRoot}"];
+	Node0xb7e4af0 -> Node0xb7e4be0;
+	Node0xb7e4b40 [shape=record,label="{if.then.346.exitStub}"];
+	Node0xb7e4b90 [shape=record,label="{doexp.loopexit.exitStub}"];
+	Node0xb7e4be0 [shape=record,label="{it_roun|{<s0>T|<s1>F}}"];
+	Node0xb7e4be0:s0 -> Node0xb7e4b40;
+	Node0xb7e4be0:s1 -> Node0xb7e4c30;
+	Node0xb7e4c30 [shape=record,label="{it_if.end.356}"];
+	Node0xb7e4c30 -> Node0xf94b4a0;
+	Node0xf94b4a0 [shape=record,label="{pd_if.end.356.split1}"];
+	Node0xf94b4a0 -> Node0xf99e0a0;
+	Node0xf99e0a0 [shape=record,label="{it_if.end.356.split|{<s0>T|<s1>F}}"];
+	Node0xf99e0a0:s0 -> Node0xb7e4c80;
+	Node0xf99e0a0:s1 -> Node0xb7e4b90;
+	Node0xb7e4c80 [shape=record,label="{pd_if.then.361}"];
+	Node0xb7e4c80 -> Node0xb7e4be0;
+}

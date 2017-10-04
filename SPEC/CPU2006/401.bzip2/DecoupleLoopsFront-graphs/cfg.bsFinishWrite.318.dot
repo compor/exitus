@@ -1,0 +1,12 @@
+digraph "CFG for 'bsFinishWrite' function" {
+	label="CFG for 'bsFinishWrite' function";
+
+	Node0x16f47f0 [shape=record,label="{entry}"];
+	Node0x16f47f0 -> Node0x16f4840;
+	Node0x16f4840 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x16f4840:s0 -> Node0x16f4890;
+	Node0x16f4840:s1 -> Node0x16f48e0;
+	Node0x16f4890 [shape=record,label="{pd_while.body}"];
+	Node0x16f4890 -> Node0x16f4840;
+	Node0x16f48e0 [shape=record,label="{while.end}"];
+}

@@ -1,0 +1,29 @@
+digraph "CFG for 'canon_list_insert_while.cond' function" {
+	label="CFG for 'canon_list_insert_while.cond' function";
+
+	Node0xb1681d0 [shape=record,label="{newFuncRoot}"];
+	Node0xb1681d0 -> Node0xb18a350;
+	Node0xb18a300 [shape=record,label="{while.end.exitStub}"];
+	Node0xb18a350 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb18a350:s0 -> Node0xb18a580;
+	Node0xb18a350:s1 -> Node0xb18a3a0;
+	Node0xb18a3a0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xb18a3a0:s0 -> Node0xb18a530;
+	Node0xb18a3a0:s1 -> Node0xb18a3f0;
+	Node0xb18a3f0 [shape=record,label="{it_lor.lhs.false.4|{<s0>T|<s1>F}}"];
+	Node0xb18a3f0:s0 -> Node0xb18a4e0;
+	Node0xb18a3f0:s1 -> Node0xb18a440;
+	Node0xb18a440 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0xb18a440:s0 -> Node0xb18a490;
+	Node0xb18a440:s1 -> Node0xb18a300;
+	Node0xb18a490 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0xb18a490 -> Node0xb18a5d0;
+	Node0xb18a4e0 [shape=record,label="{pd_lor.lhs.false.4.while.body_crit_edge}"];
+	Node0xb18a4e0 -> Node0xb18a5d0;
+	Node0xb18a530 [shape=record,label="{pd_lor.lhs.false.while.body_crit_edge}"];
+	Node0xb18a530 -> Node0xb18a5d0;
+	Node0xb18a580 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0xb18a580 -> Node0xb18a5d0;
+	Node0xb18a5d0 [shape=record,label="{it_while.body}"];
+	Node0xb18a5d0 -> Node0xb18a350;
+}

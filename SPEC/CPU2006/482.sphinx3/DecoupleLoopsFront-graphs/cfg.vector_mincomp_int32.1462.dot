@@ -1,0 +1,14 @@
+digraph "CFG for 'vector_mincomp_int32' function" {
+	label="CFG for 'vector_mincomp_int32' function";
+
+	Node0x10bade0 [shape=record,label="{entry}"];
+	Node0x10bade0 -> Node0x10bb1e0;
+	Node0x10bb1e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x10bb1e0:s0 -> Node0x10bb230;
+	Node0x10bb1e0:s1 -> Node0x10bb280;
+	Node0x10bb230 [shape=record,label="{pd_for.body}"];
+	Node0x10bb230 -> Node0x154fb20;
+	Node0x154fb20 [shape=record,label="{it_for.body.split}"];
+	Node0x154fb20 -> Node0x10bb1e0;
+	Node0x10bb280 [shape=record,label="{for.end}"];
+}

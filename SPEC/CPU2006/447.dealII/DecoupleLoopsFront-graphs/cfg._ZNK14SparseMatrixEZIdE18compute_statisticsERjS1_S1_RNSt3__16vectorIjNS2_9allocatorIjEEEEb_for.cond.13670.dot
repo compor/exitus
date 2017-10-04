@@ -1,0 +1,23 @@
+digraph "CFG for '_ZNK14SparseMatrixEZIdE18compute_statisticsERjS1_S1_RNSt3__16vectorIjNS2_9allocatorIjEEEEb_for.cond' function" {
+	label="CFG for '_ZNK14SparseMatrixEZIdE18compute_statisticsERjS1_S1_RNSt3__16vectorIjNS2_9allocatorIjEEEEb_for.cond' function";
+
+	Node0x96ebd90 [shape=record,label="{newFuncRoot}"];
+	Node0x96ebd90 -> Node0x96ebe30;
+	Node0x96ebde0 [shape=record,label="{for.end.exitStub}"];
+	Node0x96ebe30 [shape=record,label="{it_for.cond}"];
+	Node0x96ebe30 -> Node0xab16f10;
+	Node0xab16f10 [shape=record,label="{pd_for.cond.split1}"];
+	Node0xab16f10 -> Node0xab17050;
+	Node0xab17050 [shape=record,label="{it_for.cond.split|{<s0>T|<s1>F}}"];
+	Node0xab17050:s0 -> Node0x96ebe80;
+	Node0xab17050:s1 -> Node0x96ebde0;
+	Node0x96ebe80 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x96ebe80:s0 -> Node0x96ebf20;
+	Node0x96ebe80:s1 -> Node0x96ebed0;
+	Node0x96ebed0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x96ebed0 -> Node0x96ebf70;
+	Node0x96ebf20 [shape=record,label="{pd_if.then}"];
+	Node0x96ebf20 -> Node0x96ebf70;
+	Node0x96ebf70 [shape=record,label="{pd_for.inc}"];
+	Node0x96ebf70 -> Node0x96ebe30;
+}

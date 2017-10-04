@@ -1,0 +1,19 @@
+digraph "CFG for 'S_scan_heredoc_for.cond' function" {
+	label="CFG for 'S_scan_heredoc_for.cond' function";
+
+	Node0x578d300 [shape=record,label="{newFuncRoot}"];
+	Node0x578d300 -> Node0x57923a0;
+	Node0x5792350 [shape=record,label="{for.end.exitStub}"];
+	Node0x57923a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x57923a0:s0 -> Node0x5792490;
+	Node0x57923a0:s1 -> Node0x57923f0;
+	Node0x57923f0 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x57923f0:s0 -> Node0x5792440;
+	Node0x57923f0:s1 -> Node0x5792350;
+	Node0x5792440 [shape=record,label="{pd_lor.rhs.for.inc_crit_edge}"];
+	Node0x5792440 -> Node0x57924e0;
+	Node0x5792490 [shape=record,label="{pd_for.cond.for.inc_crit_edge}"];
+	Node0x5792490 -> Node0x57924e0;
+	Node0x57924e0 [shape=record,label="{it_for.inc}"];
+	Node0x57924e0 -> Node0x57923a0;
+}

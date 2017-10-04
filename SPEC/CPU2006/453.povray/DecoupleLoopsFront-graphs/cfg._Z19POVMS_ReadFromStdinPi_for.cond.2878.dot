@@ -1,0 +1,31 @@
+digraph "CFG for '_Z19POVMS_ReadFromStdinPi_for.cond' function" {
+	label="CFG for '_Z19POVMS_ReadFromStdinPi_for.cond' function";
+
+	Node0x2a7f070 [shape=record,label="{newFuncRoot}"];
+	Node0x2a7f070 -> Node0x2a7f110;
+	Node0x2a7f0c0 [shape=record,label="{for.end.exitStub}"];
+	Node0x2a7f110 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2a7f110:s0 -> Node0x2a7f160;
+	Node0x2a7f110:s1 -> Node0x2a7f0c0;
+	Node0x2a7f160 [shape=record,label="{pd_while.cond.preheader}"];
+	Node0x2a7f160 -> Node0x2a7f1b0;
+	Node0x2a7f1b0 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2a7f1b0:s0 -> Node0x2a7f3e0;
+	Node0x2a7f1b0:s1 -> Node0x2a7f200;
+	Node0x2a7f200 [shape=record,label="{pd_while.end|{<s0>T|<s1>F}}"];
+	Node0x2a7f200:s0 -> Node0x2a7f2a0;
+	Node0x2a7f200:s1 -> Node0x2a7f250;
+	Node0x2a7f250 [shape=record,label="{pd_if.else.25}"];
+	Node0x2a7f250 -> Node0x2a7f390;
+	Node0x2a7f2a0 [shape=record,label="{pd_if.then.10|{<s0>T|<s1>F}}"];
+	Node0x2a7f2a0:s0 -> Node0x2a7f340;
+	Node0x2a7f2a0:s1 -> Node0x2a7f2f0;
+	Node0x2a7f2f0 [shape=record,label="{pd_if.else}"];
+	Node0x2a7f2f0 -> Node0x2a7f390;
+	Node0x2a7f340 [shape=record,label="{pd_if.then.13}"];
+	Node0x2a7f340 -> Node0x2a7f390;
+	Node0x2a7f390 [shape=record,label="{it_for.inc}"];
+	Node0x2a7f390 -> Node0x2a7f110;
+	Node0x2a7f3e0 [shape=record,label="{pd_while.cond.while.cond_crit_edge}"];
+	Node0x2a7f3e0 -> Node0x2a7f1b0;
+}

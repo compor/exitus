@@ -1,0 +1,36 @@
+digraph "CFG for '_ZN6soplex11SPxWeightST12setupWeightsERNS_6SoPlexE_for.cond' function" {
+	label="CFG for '_ZN6soplex11SPxWeightST12setupWeightsERNS_6SoPlexE_for.cond' function";
+
+	Node0x2b33070 [shape=record,label="{newFuncRoot}"];
+	Node0x2b33070 -> Node0x2b33110;
+	Node0x2b330c0 [shape=record,label="{for.cond.24.preheader.exitStub}"];
+	Node0x2b33110 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2b33110:s0 -> Node0x2b33160;
+	Node0x2b33110:s1 -> Node0x2b330c0;
+	Node0x2b33160 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2b33160:s0 -> Node0x2b33200;
+	Node0x2b33160:s1 -> Node0x2b331b0;
+	Node0x2b331b0 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x2b331b0 -> Node0x2b332f0;
+	Node0x2b33200 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x2b33200:s0 -> Node0x2b332a0;
+	Node0x2b33200:s1 -> Node0x2b33250;
+	Node0x2b33250 [shape=record,label="{pd_land.lhs.true.if.end_crit_edge}"];
+	Node0x2b33250 -> Node0x2b332f0;
+	Node0x2b332a0 [shape=record,label="{pd_if.then}"];
+	Node0x2b332a0 -> Node0x2b332f0;
+	Node0x2b332f0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x2b332f0:s0 -> Node0x2b33390;
+	Node0x2b332f0:s1 -> Node0x2b33340;
+	Node0x2b33340 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0x2b33340 -> Node0x2b33480;
+	Node0x2b33390 [shape=record,label="{pd_land.lhs.true.16|{<s0>T|<s1>F}}"];
+	Node0x2b33390:s0 -> Node0x2b33430;
+	Node0x2b33390:s1 -> Node0x2b333e0;
+	Node0x2b333e0 [shape=record,label="{pd_land.lhs.true.16.for.inc_crit_edge}"];
+	Node0x2b333e0 -> Node0x2b33480;
+	Node0x2b33430 [shape=record,label="{pd_if.then.20}"];
+	Node0x2b33430 -> Node0x2b33480;
+	Node0x2b33480 [shape=record,label="{it_for.inc}"];
+	Node0x2b33480 -> Node0x2b33110;
+}

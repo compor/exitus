@@ -1,0 +1,16 @@
+digraph "CFG for 'dead_or_predicable_while.cond' function" {
+	label="CFG for 'dead_or_predicable_while.cond' function";
+
+	Node0xb2de5f0 [shape=record,label="{newFuncRoot}"];
+	Node0xb2de5f0 -> Node0xb2de6e0;
+	Node0xb2de640 [shape=record,label="{while.cond.for.cond.92.preheader_crit_edge.exitStub}"];
+	Node0xb2de690 [shape=record,label="{land.rhs.for.cond.92.preheader_crit_edge.exitStub}"];
+	Node0xb2de6e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb2de6e0:s0 -> Node0xb2de640;
+	Node0xb2de6e0:s1 -> Node0xb2de730;
+	Node0xb2de730 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xb2de730:s0 -> Node0xb2de780;
+	Node0xb2de730:s1 -> Node0xb2de690;
+	Node0xb2de780 [shape=record,label="{it_while.body}"];
+	Node0xb2de780 -> Node0xb2de6e0;
+}

@@ -1,0 +1,32 @@
+digraph "CFG for 'atari_atari_find_attack_moves_for.cond' function" {
+	label="CFG for 'atari_atari_find_attack_moves_for.cond' function";
+
+	Node0x3ea6b30 [shape=record,label="{newFuncRoot}"];
+	Node0x3ea6b30 -> Node0x3eab4c0;
+	Node0x3eab420 [shape=record,label="{for.cond.for.end.25_crit_edge.exitStub}"];
+	Node0x3eab470 [shape=record,label="{land.rhs.for.end.25_crit_edge.exitStub}"];
+	Node0x3eab4c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3eab4c0:s0 -> Node0x3eab510;
+	Node0x3eab4c0:s1 -> Node0x3eab420;
+	Node0x3eab510 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x3eab510:s0 -> Node0x3eab560;
+	Node0x3eab510:s1 -> Node0x3eab470;
+	Node0x3eab560 [shape=record,label="{pd_for.body}"];
+	Node0x3eab560 -> Node0x3eab5b0;
+	Node0x3eab5b0 [shape=record,label="{pd_for.cond.6|{<s0>T|<s1>F}}"];
+	Node0x3eab5b0:s0 -> Node0x3eab650;
+	Node0x3eab5b0:s1 -> Node0x3eab600;
+	Node0x3eab600 [shape=record,label="{pd_for.cond.6.for.end_crit_edge}"];
+	Node0x3eab600 -> Node0x3eab740;
+	Node0x3eab650 [shape=record,label="{pd_for.body.8|{<s0>T|<s1>F}}"];
+	Node0x3eab650:s0 -> Node0x3eab6f0;
+	Node0x3eab650:s1 -> Node0x3eab6a0;
+	Node0x3eab6a0 [shape=record,label="{pd_if.end}"];
+	Node0x3eab6a0 -> Node0x3eab5b0;
+	Node0x3eab6f0 [shape=record,label="{pd_for.body.8.for.end_crit_edge}"];
+	Node0x3eab6f0 -> Node0x3eab740;
+	Node0x3eab740 [shape=record,label="{pd_for.end}"];
+	Node0x3eab740 -> Node0x4f74350;
+	Node0x4f74350 [shape=record,label="{it_for.end.split}"];
+	Node0x4f74350 -> Node0x3eab4c0;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'mark_dies' function" {
+	label="CFG for 'mark_dies' function";
+
+	Node0x3d6dad0 [shape=record,label="{entry}"];
+	Node0x3d6dad0 -> Node0x3d6db20;
+	Node0x3d6db20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3d6db20:s0 -> Node0x3d6db70;
+	Node0x3d6db20:s1 -> Node0x3d6dbc0;
+	Node0x3d6db70 [shape=record,label="{pd_for.body}"];
+	Node0x3d6db70 -> Node0xcb8ae90;
+	Node0xcb8ae90 [shape=record,label="{it_for.body.split}"];
+	Node0xcb8ae90 -> Node0x3d6db20;
+	Node0x3d6dbc0 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,33 @@
+digraph "CFG for 'AppendTmpbits2Buf_for.cond' function" {
+	label="CFG for 'AppendTmpbits2Buf_for.cond' function";
+
+	Node0x2680f10 [shape=record,label="{newFuncRoot}"];
+	Node0x2680f10 -> Node0x2680fb0;
+	Node0x2680f60 [shape=record,label="{for.end.27.exitStub}"];
+	Node0x2680fb0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2680fb0:s0 -> Node0x2681000;
+	Node0x2680fb0:s1 -> Node0x2680f60;
+	Node0x2681000 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x2681000 -> Node0x2681050;
+	Node0x2681050 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x2681050:s0 -> Node0x26810f0;
+	Node0x2681050:s1 -> Node0x26810a0;
+	Node0x26810a0 [shape=record,label="{it_for.inc.25}"];
+	Node0x26810a0 -> Node0x2680fb0;
+	Node0x26810f0 [shape=record,label="{pd_for.body.3|{<s0>T|<s1>F}}"];
+	Node0x26810f0:s0 -> Node0x2681190;
+	Node0x26810f0:s1 -> Node0x2681140;
+	Node0x2681140 [shape=record,label="{pd_for.body.3.if.end_crit_edge}"];
+	Node0x2681140 -> Node0x26811e0;
+	Node0x2681190 [shape=record,label="{pd_if.then}"];
+	Node0x2681190 -> Node0x26811e0;
+	Node0x26811e0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x26811e0:s0 -> Node0x2681280;
+	Node0x26811e0:s1 -> Node0x2681230;
+	Node0x2681230 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0x2681230 -> Node0x26812d0;
+	Node0x2681280 [shape=record,label="{pd_if.then.15}"];
+	Node0x2681280 -> Node0x26812d0;
+	Node0x26812d0 [shape=record,label="{pd_for.inc}"];
+	Node0x26812d0 -> Node0x2681050;
+}

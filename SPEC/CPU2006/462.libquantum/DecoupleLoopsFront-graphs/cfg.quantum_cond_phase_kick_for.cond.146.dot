@@ -1,0 +1,31 @@
+digraph "CFG for 'quantum_cond_phase_kick_for.cond' function" {
+	label="CFG for 'quantum_cond_phase_kick_for.cond' function";
+
+	Node0x16bf1e0 [shape=record,label="{newFuncRoot}"];
+	Node0x16bf1e0 -> Node0x16bf280;
+	Node0x16bf230 [shape=record,label="{for.end.exitStub}"];
+	Node0x16bf280 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x16bf280:s0 -> Node0x16bf2d0;
+	Node0x16bf280:s1 -> Node0x16bf230;
+	Node0x16bf2d0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x16bf2d0:s0 -> Node0x16bf370;
+	Node0x16bf2d0:s1 -> Node0x16bf320;
+	Node0x16bf320 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x16bf320 -> Node0x16bf550;
+	Node0x16bf370 [shape=record,label="{pd_if.then.4|{<s0>T|<s1>F}}"];
+	Node0x16bf370:s0 -> Node0x16bf410;
+	Node0x16bf370:s1 -> Node0x16bf3c0;
+	Node0x16bf3c0 [shape=record,label="{pd_if.then.4.for.inc_crit_edge}"];
+	Node0x16bf3c0 -> Node0x16bf550;
+	Node0x16bf410 [shape=record,label="{pd_if.then.13|{<s0>T|<s1>F}}"];
+	Node0x16bf410:s0 -> Node0x16bf4b0;
+	Node0x16bf410:s1 -> Node0x16bf460;
+	Node0x16bf460 [shape=record,label="{pd_if.then.13.complex_mul_cont_crit_edge}"];
+	Node0x16bf460 -> Node0x16bf500;
+	Node0x16bf4b0 [shape=record,label="{pd_complex_mul_libcall}"];
+	Node0x16bf4b0 -> Node0x16bf500;
+	Node0x16bf500 [shape=record,label="{pd_complex_mul_cont}"];
+	Node0x16bf500 -> Node0x16bf550;
+	Node0x16bf550 [shape=record,label="{it_for.inc}"];
+	Node0x16bf550 -> Node0x16bf280;
+}

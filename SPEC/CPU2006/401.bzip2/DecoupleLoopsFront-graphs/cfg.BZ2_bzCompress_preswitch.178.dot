@@ -1,0 +1,29 @@
+digraph "CFG for 'BZ2_bzCompress_preswitch' function" {
+	label="CFG for 'BZ2_bzCompress_preswitch' function";
+
+	Node0x182c830 [shape=record,label="{newFuncRoot}"];
+	Node0x182c830 -> Node0x182ca60;
+	Node0x182c880 [shape=record,label="{sw.epilog.exitStub}"];
+	Node0x182c8d0 [shape=record,label="{preswitch.return.loopexit_crit_edge.exitStub}"];
+	Node0x182c920 [shape=record,label="{sw.bb.23.exitStub}"];
+	Node0x182c970 [shape=record,label="{sw.bb.47.exitStub}"];
+	Node0x182c9c0 [shape=record,label="{sw.bb.8.return.loopexit_crit_edge.exitStub}"];
+	Node0x182ca10 [shape=record,label="{if.then.10.exitStub}"];
+	Node0x182ca60 [shape=record,label="{it_preswitch|{<s0>def|<s1>1|<s2>2|<s3>3|<s4>4}}"];
+	Node0x182ca60:s0 -> Node0x182c880;
+	Node0x182ca60:s1 -> Node0x182c8d0;
+	Node0x182ca60:s2 -> Node0x182cab0;
+	Node0x182ca60:s3 -> Node0x182c920;
+	Node0x182ca60:s4 -> Node0x182c970;
+	Node0x182cab0 [shape=record,label="{it_sw.bb.8|{<s0>def|<s1>0|<s2>1|<s3>2}}"];
+	Node0x182cab0:s0 -> Node0x182c9c0;
+	Node0x182cab0:s1 -> Node0x182ca10;
+	Node0x182cab0:s2 -> Node0x182cb50;
+	Node0x182cab0:s3 -> Node0x182cb00;
+	Node0x182cb00 [shape=record,label="{pd_if.then.18}"];
+	Node0x182cb00 -> Node0x182cba0;
+	Node0x182cb50 [shape=record,label="{pd_if.then.13}"];
+	Node0x182cb50 -> Node0x182cba0;
+	Node0x182cba0 [shape=record,label="{pd_preswitch.backedge}"];
+	Node0x182cba0 -> Node0x182ca60;
+}

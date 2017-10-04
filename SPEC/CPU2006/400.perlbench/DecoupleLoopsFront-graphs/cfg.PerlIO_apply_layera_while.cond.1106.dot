@@ -1,0 +1,23 @@
+digraph "CFG for 'PerlIO_apply_layera_while.cond' function" {
+	label="CFG for 'PerlIO_apply_layera_while.cond' function";
+
+	Node0x4d993b0 [shape=record,label="{newFuncRoot}"];
+	Node0x4d993b0 -> Node0x4d994a0;
+	Node0x4d99400 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x4d99450 [shape=record,label="{if.then.while.end_crit_edge.exitStub}"];
+	Node0x4d994a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d994a0:s0 -> Node0x4d994f0;
+	Node0x4d994a0:s1 -> Node0x4d99400;
+	Node0x4d994f0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4d994f0:s0 -> Node0x4d99590;
+	Node0x4d994f0:s1 -> Node0x4d99540;
+	Node0x4d99540 [shape=record,label="{pd_while.body.if.end.5_crit_edge}"];
+	Node0x4d99540 -> Node0x4d99630;
+	Node0x4d99590 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0x4d99590:s0 -> Node0x4d995e0;
+	Node0x4d99590:s1 -> Node0x4d99450;
+	Node0x4d995e0 [shape=record,label="{pd_if.then.if.end.5_crit_edge}"];
+	Node0x4d995e0 -> Node0x4d99630;
+	Node0x4d99630 [shape=record,label="{it_if.end.5}"];
+	Node0x4d99630 -> Node0x4d994a0;
+}

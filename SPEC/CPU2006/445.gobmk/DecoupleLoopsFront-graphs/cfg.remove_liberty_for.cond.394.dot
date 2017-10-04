@@ -1,0 +1,16 @@
+digraph "CFG for 'remove_liberty_for.cond' function" {
+	label="CFG for 'remove_liberty_for.cond' function";
+
+	Node0x3e62280 [shape=record,label="{newFuncRoot}"];
+	Node0x3e62280 -> Node0x3e62370;
+	Node0x3e622d0 [shape=record,label="{if.end.39.loopexit.exitStub}"];
+	Node0x3e62320 [shape=record,label="{if.then.6.exitStub}"];
+	Node0x3e62370 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3e62370:s0 -> Node0x3e623c0;
+	Node0x3e62370:s1 -> Node0x3e622d0;
+	Node0x3e623c0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x3e623c0:s0 -> Node0x3e62320;
+	Node0x3e623c0:s1 -> Node0x3e62410;
+	Node0x3e62410 [shape=record,label="{it_for.inc}"];
+	Node0x3e62410 -> Node0x3e62370;
+}

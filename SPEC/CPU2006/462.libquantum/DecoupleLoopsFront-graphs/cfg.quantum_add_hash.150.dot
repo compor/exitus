@@ -1,0 +1,12 @@
+digraph "CFG for 'quantum_add_hash' function" {
+	label="CFG for 'quantum_add_hash' function";
+
+	Node0x15dbc70 [shape=record,label="{entry}"];
+	Node0x15dbc70 -> Node0x15dbcc0;
+	Node0x15dbcc0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x15dbcc0:s0 -> Node0x15dbd10;
+	Node0x15dbcc0:s1 -> Node0x15dbd60;
+	Node0x15dbd10 [shape=record,label="{it_while.body}"];
+	Node0x15dbd10 -> Node0x15dbcc0;
+	Node0x15dbd60 [shape=record,label="{while.end}"];
+}

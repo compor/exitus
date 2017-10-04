@@ -1,0 +1,40 @@
+digraph "CFG for '_ZN3povL11supersampleEPfii_for.cond' function" {
+	label="CFG for '_ZN3povL11supersampleEPfii_for.cond' function";
+
+	Node0x2be4c00 [shape=record,label="{newFuncRoot}"];
+	Node0x2be4c00 -> Node0x2be4ca0;
+	Node0x2be4c50 [shape=record,label="{for.end.37.exitStub}"];
+	Node0x2be4ca0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2be4ca0:s0 -> Node0x2be4cf0;
+	Node0x2be4ca0:s1 -> Node0x2be4c50;
+	Node0x2be4cf0 [shape=record,label="{pd_for.body}"];
+	Node0x2be4cf0 -> Node0x2be4d40;
+	Node0x2be4d40 [shape=record,label="{pd_for.cond.7|{<s0>T|<s1>F}}"];
+	Node0x2be4d40:s0 -> Node0x2be4de0;
+	Node0x2be4d40:s1 -> Node0x2be4d90;
+	Node0x2be4d90 [shape=record,label="{it_for.inc.35}"];
+	Node0x2be4d90 -> Node0x2be4ca0;
+	Node0x2be4de0 [shape=record,label="{pd_for.body.9|{<s0>T|<s1>F}}"];
+	Node0x2be4de0:s0 -> Node0x2be5060;
+	Node0x2be4de0:s1 -> Node0x2be4e30;
+	Node0x2be4e30 [shape=record,label="{pd_if.end.13|{<s0>T|<s1>F}}"];
+	Node0x2be4e30:s0 -> Node0x2be4ed0;
+	Node0x2be4e30:s1 -> Node0x2be4e80;
+	Node0x2be4e80 [shape=record,label="{pd_if.else.31}"];
+	Node0x2be4e80 -> Node0x2be5010;
+	Node0x2be4ed0 [shape=record,label="{pd_if.then.22|{<s0>T|<s1>F}}"];
+	Node0x2be4ed0:s0 -> Node0x2be4f70;
+	Node0x2be4ed0:s1 -> Node0x2be4f20;
+	Node0x2be4f20 [shape=record,label="{pd_if.else}"];
+	Node0x2be4f20 -> Node0x2be4fc0;
+	Node0x2be4f70 [shape=record,label="{pd_if.then.25}"];
+	Node0x2be4f70 -> Node0x2be4fc0;
+	Node0x2be4fc0 [shape=record,label="{pd_if.end.29}"];
+	Node0x2be4fc0 -> Node0x2be5010;
+	Node0x2be5010 [shape=record,label="{pd_if.end.33}"];
+	Node0x2be5010 -> Node0x2be50b0;
+	Node0x2be5060 [shape=record,label="{pd_for.body.9.for.inc_crit_edge}"];
+	Node0x2be5060 -> Node0x2be50b0;
+	Node0x2be50b0 [shape=record,label="{pd_for.inc}"];
+	Node0x2be50b0 -> Node0x2be4d40;
+}

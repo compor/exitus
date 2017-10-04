@@ -1,0 +1,42 @@
+digraph "CFG for 'decl_type_context_while.cond' function" {
+	label="CFG for 'decl_type_context_while.cond' function";
+
+	Node0xc4f8a40 [shape=record,label="{newFuncRoot}"];
+	Node0xc4f8a40 -> Node0xc4f8c20;
+	Node0xc4f8a90 [shape=record,label="{while.cond.return_crit_edge.exitStub}"];
+	Node0xc4f8ae0 [shape=record,label="{while.body.return_crit_edge.exitStub}"];
+	Node0xc4f8b30 [shape=record,label="{lor.lhs.false.return_crit_edge.exitStub}"];
+	Node0xc4f8b80 [shape=record,label="{lor.lhs.false.8.return_crit_edge.exitStub}"];
+	Node0xc4f8bd0 [shape=record,label="{if.else.34.exitStub}"];
+	Node0xc4f8c20 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc4f8c20:s0 -> Node0xc4f8c70;
+	Node0xc4f8c20:s1 -> Node0xc4f8a90;
+	Node0xc4f8c70 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc4f8c70:s0 -> Node0xc4f8ae0;
+	Node0xc4f8c70:s1 -> Node0xc4f8cc0;
+	Node0xc4f8cc0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xc4f8cc0:s0 -> Node0xc4f8b30;
+	Node0xc4f8cc0:s1 -> Node0xc4f8d10;
+	Node0xc4f8d10 [shape=record,label="{it_lor.lhs.false.8|{<s0>T|<s1>F}}"];
+	Node0xc4f8d10:s0 -> Node0xc4f8b80;
+	Node0xc4f8d10:s1 -> Node0xc4f8d60;
+	Node0xc4f8d60 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0xc4f8d60:s0 -> Node0xc4f8ef0;
+	Node0xc4f8d60:s1 -> Node0xc4f8db0;
+	Node0xc4f8db0 [shape=record,label="{it_lor.lhs.false.19|{<s0>T|<s1>F}}"];
+	Node0xc4f8db0:s0 -> Node0xc4f8ea0;
+	Node0xc4f8db0:s1 -> Node0xc4f8e00;
+	Node0xc4f8e00 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0xc4f8e00:s0 -> Node0xc4f8e50;
+	Node0xc4f8e00:s1 -> Node0xc4f8bd0;
+	Node0xc4f8e50 [shape=record,label="{it_if.then.33}"];
+	Node0xc4f8e50 -> Node0xc4f8f90;
+	Node0xc4f8ea0 [shape=record,label="{pd_lor.lhs.false.19.if.then.25_crit_edge}"];
+	Node0xc4f8ea0 -> Node0xc4f8f40;
+	Node0xc4f8ef0 [shape=record,label="{pd_if.end.if.then.25_crit_edge}"];
+	Node0xc4f8ef0 -> Node0xc4f8f40;
+	Node0xc4f8f40 [shape=record,label="{it_if.then.25}"];
+	Node0xc4f8f40 -> Node0xc4f8f90;
+	Node0xc4f8f90 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0xc4f8f90 -> Node0xc4f8c20;
+}

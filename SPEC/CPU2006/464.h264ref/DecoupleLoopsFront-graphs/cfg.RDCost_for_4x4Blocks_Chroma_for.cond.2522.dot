@@ -1,0 +1,35 @@
+digraph "CFG for 'RDCost_for_4x4Blocks_Chroma_for.cond' function" {
+	label="CFG for 'RDCost_for_4x4Blocks_Chroma_for.cond' function";
+
+	Node0x2afef10 [shape=record,label="{newFuncRoot}"];
+	Node0x2afef10 -> Node0x2afefb0;
+	Node0x2afef60 [shape=record,label="{if.end.73.loopexit.exitStub}"];
+	Node0x2afefb0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2afefb0:s0 -> Node0x2aff000;
+	Node0x2afefb0:s1 -> Node0x2afef60;
+	Node0x2aff000 [shape=record,label="{it_for.body}"];
+	Node0x2aff000 -> Node0x37e63a0;
+	Node0x37e63a0 [shape=record,label="{pd_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x37e63a0:s0 -> Node0x2aff0a0;
+	Node0x37e63a0:s1 -> Node0x2aff050;
+	Node0x2aff050 [shape=record,label="{pd_if.else.54}"];
+	Node0x2aff050 -> Node0x2aff0f0;
+	Node0x2aff0a0 [shape=record,label="{pd_if.then.53}"];
+	Node0x2aff0a0 -> Node0x2aff0f0;
+	Node0x2aff0f0 [shape=record,label="{pd_if.end.55|{<s0>T|<s1>F}}"];
+	Node0x2aff0f0:s0 -> Node0x2aff230;
+	Node0x2aff0f0:s1 -> Node0x2aff140;
+	Node0x2aff140 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x2aff140:s0 -> Node0x2aff1e0;
+	Node0x2aff140:s1 -> Node0x2aff190;
+	Node0x2aff190 [shape=record,label="{pd_lor.rhs}"];
+	Node0x2aff190 -> Node0x2aff280;
+	Node0x2aff1e0 [shape=record,label="{pd_lor.lhs.false.lor.end_crit_edge}"];
+	Node0x2aff1e0 -> Node0x2aff280;
+	Node0x2aff230 [shape=record,label="{pd_if.end.55.lor.end_crit_edge}"];
+	Node0x2aff230 -> Node0x2aff280;
+	Node0x2aff280 [shape=record,label="{pd_lor.end}"];
+	Node0x2aff280 -> Node0x3963410;
+	Node0x3963410 [shape=record,label="{it_lor.end.split}"];
+	Node0x3963410 -> Node0x2afefb0;
+}

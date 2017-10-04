@@ -1,0 +1,19 @@
+digraph "CFG for 'calc_buffer_for.cond.25' function" {
+	label="CFG for 'calc_buffer_for.cond.25' function";
+
+	Node0x25250c0 [shape=record,label="{newFuncRoot}"];
+	Node0x25250c0 -> Node0x2525160;
+	Node0x2525110 [shape=record,label="{if.end.55.loopexit.exitStub}"];
+	Node0x2525160 [shape=record,label="{it_for.cond.25|{<s0>T|<s1>F}}"];
+	Node0x2525160:s0 -> Node0x25251b0;
+	Node0x2525160:s1 -> Node0x2525110;
+	Node0x25251b0 [shape=record,label="{pd_for.body.28|{<s0>T|<s1>F}}"];
+	Node0x25251b0:s0 -> Node0x2525250;
+	Node0x25251b0:s1 -> Node0x2525200;
+	Node0x2525200 [shape=record,label="{pd_if.else}"];
+	Node0x2525200 -> Node0x25252a0;
+	Node0x2525250 [shape=record,label="{pd_if.then.31}"];
+	Node0x2525250 -> Node0x25252a0;
+	Node0x25252a0 [shape=record,label="{it_for.inc.52}"];
+	Node0x25252a0 -> Node0x2525160;
+}

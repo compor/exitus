@@ -1,0 +1,29 @@
+digraph "CFG for 'PerlIOCrlf_unread_while.cond' function" {
+	label="CFG for 'PerlIOCrlf_unread_while.cond' function";
+
+	Node0x4db6a90 [shape=record,label="{newFuncRoot}"];
+	Node0x4db6a90 -> Node0x4db6bd0;
+	Node0x4db6ae0 [shape=record,label="{while.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x4db6b30 [shape=record,label="{land.rhs.return.loopexit_crit_edge.exitStub}"];
+	Node0x4db6b80 [shape=record,label="{if.else.44.exitStub}"];
+	Node0x4db6bd0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4db6bd0:s0 -> Node0x4db6c20;
+	Node0x4db6bd0:s1 -> Node0x4db6ae0;
+	Node0x4db6c20 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x4db6c20:s0 -> Node0x4db6c70;
+	Node0x4db6c20:s1 -> Node0x4db6b30;
+	Node0x4db6c70 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4db6c70:s0 -> Node0x4db6d10;
+	Node0x4db6c70:s1 -> Node0x4db6cc0;
+	Node0x4db6cc0 [shape=record,label="{pd_if.else.47}"];
+	Node0x4db6cc0 -> Node0x4db6db0;
+	Node0x4db6d10 [shape=record,label="{it_if.then.33|{<s0>T|<s1>F}}"];
+	Node0x4db6d10:s0 -> Node0x4db6d60;
+	Node0x4db6d10:s1 -> Node0x4db6b80;
+	Node0x4db6d60 [shape=record,label="{pd_if.then.39}"];
+	Node0x4db6d60 -> Node0x4db6db0;
+	Node0x4db6db0 [shape=record,label="{pd_if.end.53}"];
+	Node0x4db6db0 -> Node0x65d65d0;
+	Node0x65d65d0 [shape=record,label="{it_if.end.53.split}"];
+	Node0x65d65d0 -> Node0x4db6bd0;
+}

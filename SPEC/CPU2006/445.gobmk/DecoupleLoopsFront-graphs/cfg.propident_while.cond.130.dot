@@ -1,0 +1,23 @@
+digraph "CFG for 'propident_while.cond' function" {
+	label="CFG for 'propident_while.cond' function";
+
+	Node0x333c3e0 [shape=record,label="{newFuncRoot}"];
+	Node0x333c3e0 -> Node0x333c4d0;
+	Node0x333c430 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x333c480 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x333c4d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x333c4d0:s0 -> Node0x333c520;
+	Node0x333c4d0:s1 -> Node0x333c430;
+	Node0x333c520 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x333c520:s0 -> Node0x333c570;
+	Node0x333c520:s1 -> Node0x333c480;
+	Node0x333c570 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x333c570:s0 -> Node0x333c610;
+	Node0x333c570:s1 -> Node0x333c5c0;
+	Node0x333c5c0 [shape=record,label="{pd_while.body.if.end.19_crit_edge}"];
+	Node0x333c5c0 -> Node0x333c660;
+	Node0x333c610 [shape=record,label="{pd_if.then.17}"];
+	Node0x333c610 -> Node0x333c660;
+	Node0x333c660 [shape=record,label="{pd_if.end.19}"];
+	Node0x333c660 -> Node0x333c4d0;
+}

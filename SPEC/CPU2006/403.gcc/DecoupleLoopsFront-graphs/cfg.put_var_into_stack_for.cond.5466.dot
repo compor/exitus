@@ -1,0 +1,16 @@
+digraph "CFG for 'put_var_into_stack_for.cond' function" {
+	label="CFG for 'put_var_into_stack_for.cond' function";
+
+	Node0xafdbc40 [shape=record,label="{newFuncRoot}"];
+	Node0xafdbc40 -> Node0xafdbd30;
+	Node0xafdbc90 [shape=record,label="{for.cond.if.end.71.loopexit_crit_edge.exitStub}"];
+	Node0xafdbce0 [shape=record,label="{for.body.if.end.71.loopexit_crit_edge.exitStub}"];
+	Node0xafdbd30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xafdbd30:s0 -> Node0xafdbd80;
+	Node0xafdbd30:s1 -> Node0xafdbc90;
+	Node0xafdbd80 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xafdbd80:s0 -> Node0xafdbce0;
+	Node0xafdbd80:s1 -> Node0xafdbdd0;
+	Node0xafdbdd0 [shape=record,label="{it_for.inc}"];
+	Node0xafdbdd0 -> Node0xafdbd30;
+}

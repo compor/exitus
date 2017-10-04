@@ -1,0 +1,28 @@
+digraph "CFG for 'accum_gauge_hit_for.cond' function" {
+	label="CFG for 'accum_gauge_hit_for.cond' function";
+
+	Node0x1987540 [shape=record,label="{newFuncRoot}"];
+	Node0x1987540 -> Node0x19875e0;
+	Node0x1987590 [shape=record,label="{for.end.exitStub}"];
+	Node0x19875e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x19875e0:s0 -> Node0x1987630;
+	Node0x19875e0:s1 -> Node0x1987590;
+	Node0x1987630 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x1987630:s0 -> Node0x19876d0;
+	Node0x1987630:s1 -> Node0x1987680;
+	Node0x1987680 [shape=record,label="{pd_if.else}"];
+	Node0x1987680 -> Node0x1987720;
+	Node0x19876d0 [shape=record,label="{pd_if.then}"];
+	Node0x19876d0 -> Node0x1987720;
+	Node0x1987720 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x1987720:s0 -> Node0x19877c0;
+	Node0x1987720:s1 -> Node0x1987770;
+	Node0x1987770 [shape=record,label="{pd_if.else.14}"];
+	Node0x1987770 -> Node0x1987810;
+	Node0x19877c0 [shape=record,label="{pd_if.then.11}"];
+	Node0x19877c0 -> Node0x1987810;
+	Node0x1987810 [shape=record,label="{it_for.inc}"];
+	Node0x1987810 -> Node0x1bd2d00;
+	Node0x1bd2d00 [shape=record,label="{pd_for.inc.split}"];
+	Node0x1bd2d00 -> Node0x19875e0;
+}

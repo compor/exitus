@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_re_intuit_start_while.cond' function" {
+	label="CFG for 'Perl_re_intuit_start_while.cond' function";
+
+	Node0x525cf40 [shape=record,label="{newFuncRoot}"];
+	Node0x525cf40 -> Node0x525d030;
+	Node0x525cf90 [shape=record,label="{fail_finish.loopexit.exitStub}"];
+	Node0x525cfe0 [shape=record,label="{if.then.803.exitStub}"];
+	Node0x525d030 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x525d030:s0 -> Node0x525d080;
+	Node0x525d030:s1 -> Node0x525cf90;
+	Node0x525d080 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x525d080:s0 -> Node0x525cfe0;
+	Node0x525d080:s1 -> Node0x525d0d0;
+	Node0x525d0d0 [shape=record,label="{it_if.end.832}"];
+	Node0x525d0d0 -> Node0x525d030;
+}

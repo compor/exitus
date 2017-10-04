@@ -1,0 +1,21 @@
+digraph "CFG for '_ZNK10FullMatrixIfE18matrix_norm_squareIdEET_RK6VectorIS2_E' function" {
+	label="CFG for '_ZNK10FullMatrixIfE18matrix_norm_squareIdEET_RK6VectorIS2_E' function";
+
+	Node0x5763d90 [shape=record,label="{entry}"];
+	Node0x5763d90 -> Node0x5763de0;
+	Node0x5763de0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x5763de0:s0 -> Node0x5764230;
+	Node0x5763de0:s1 -> Node0x5764370;
+	Node0x5764230 [shape=record,label="{pd_for.body}"];
+	Node0x5764230 -> Node0x5764280;
+	Node0x5764280 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x5764280:s0 -> Node0x57642d0;
+	Node0x5764280:s1 -> Node0x5764320;
+	Node0x57642d0 [shape=record,label="{pd_while.body}"];
+	Node0x57642d0 -> Node0x5764280;
+	Node0x5764320 [shape=record,label="{pd_while.end}"];
+	Node0x5764320 -> Node0xa890300;
+	Node0xa890300 [shape=record,label="{it_while.end.split}"];
+	Node0xa890300 -> Node0x5763de0;
+	Node0x5764370 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,12 @@
+digraph "CFG for 'type_main_variant_while.cond' function" {
+	label="CFG for 'type_main_variant_while.cond' function";
+
+	Node0xabd6190 [shape=record,label="{newFuncRoot}"];
+	Node0xabd6190 -> Node0xabd6230;
+	Node0xabd61e0 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0xabd6230 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xabd6230:s0 -> Node0xabd6280;
+	Node0xabd6230:s1 -> Node0xabd61e0;
+	Node0xabd6280 [shape=record,label="{it_while.body}"];
+	Node0xabd6280 -> Node0xabd6230;
+}

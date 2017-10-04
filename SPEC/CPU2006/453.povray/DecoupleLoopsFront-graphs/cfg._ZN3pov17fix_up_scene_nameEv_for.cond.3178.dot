@@ -1,0 +1,20 @@
+digraph "CFG for '_ZN3pov17fix_up_scene_nameEv_for.cond' function" {
+	label="CFG for '_ZN3pov17fix_up_scene_nameEv_for.cond' function";
+
+	Node0x13c6f80 [shape=record,label="{newFuncRoot}"];
+	Node0x13c6f80 -> Node0x13c70c0;
+	Node0x13c6fd0 [shape=record,label="{for.cond.for.end.loopexit_crit_edge.exitStub}"];
+	Node0x13c7020 [shape=record,label="{for.body.for.end.loopexit_crit_edge.exitStub}"];
+	Node0x13c7070 [shape=record,label="{if.then.12.exitStub}"];
+	Node0x13c70c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x13c70c0:s0 -> Node0x13c7110;
+	Node0x13c70c0:s1 -> Node0x13c6fd0;
+	Node0x13c7110 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x13c7110:s0 -> Node0x13c7020;
+	Node0x13c7110:s1 -> Node0x13c7160;
+	Node0x13c7160 [shape=record,label="{it_if.end.7|{<s0>T|<s1>F}}"];
+	Node0x13c7160:s0 -> Node0x13c7070;
+	Node0x13c7160:s1 -> Node0x13c71b0;
+	Node0x13c71b0 [shape=record,label="{it_for.inc}"];
+	Node0x13c71b0 -> Node0x13c70c0;
+}

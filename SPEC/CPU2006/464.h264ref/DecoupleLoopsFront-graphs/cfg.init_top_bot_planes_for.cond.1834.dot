@@ -1,0 +1,14 @@
+digraph "CFG for 'init_top_bot_planes_for.cond' function" {
+	label="CFG for 'init_top_bot_planes_for.cond' function";
+
+	Node0x28459f0 [shape=record,label="{newFuncRoot}"];
+	Node0x28459f0 -> Node0x2845a90;
+	Node0x2845a40 [shape=record,label="{for.end.exitStub}"];
+	Node0x2845a90 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2845a90:s0 -> Node0x2845ae0;
+	Node0x2845a90:s1 -> Node0x2845a40;
+	Node0x2845ae0 [shape=record,label="{pd_for.body}"];
+	Node0x2845ae0 -> Node0x3522ca0;
+	Node0x3522ca0 [shape=record,label="{it_for.body.split}"];
+	Node0x3522ca0 -> Node0x2845a90;
+}

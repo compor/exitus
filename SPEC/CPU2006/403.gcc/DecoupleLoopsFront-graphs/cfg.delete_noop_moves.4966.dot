@@ -1,0 +1,43 @@
+digraph "CFG for 'delete_noop_moves' function" {
+	label="CFG for 'delete_noop_moves' function";
+
+	Node0x45e4d70 [shape=record,label="{entry}"];
+	Node0x45e4d70 -> Node0x45e79e0;
+	Node0x45e79e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x45e79e0:s0 -> Node0x45e7a30;
+	Node0x45e79e0:s1 -> Node0x45e7e90;
+	Node0x45e7a30 [shape=record,label="{pd_for.body}"];
+	Node0x45e7a30 -> Node0x45e7a80;
+	Node0x45e7a80 [shape=record,label="{pd_for.cond.2|{<s0>T|<s1>F}}"];
+	Node0x45e7a80:s0 -> Node0x45e7ad0;
+	Node0x45e7a80:s1 -> Node0x45e7e40;
+	Node0x45e7ad0 [shape=record,label="{pd_for.body.5|{<s0>T|<s1>F}}"];
+	Node0x45e7ad0:s0 -> Node0x45e7bc0;
+	Node0x45e7ad0:s1 -> Node0x45e7b20;
+	Node0x45e7b20 [shape=record,label="{pd_for.body.5.for.cond.2.backedge_crit_edge}"];
+	Node0x45e7b20 -> Node0x45e7b70;
+	Node0x45e7b70 [shape=record,label="{pd_for.cond.2.backedge}"];
+	Node0x45e7b70 -> Node0x45e7a80;
+	Node0x45e7bc0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x45e7bc0:s0 -> Node0x45e7c60;
+	Node0x45e7bc0:s1 -> Node0x45e7c10;
+	Node0x45e7c10 [shape=record,label="{pd_land.lhs.true.for.cond.2.backedge_crit_edge}"];
+	Node0x45e7c10 -> Node0x45e7b70;
+	Node0x45e7c60 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x45e7c60:s0 -> Node0x45e7d00;
+	Node0x45e7c60:s1 -> Node0x45e7cb0;
+	Node0x45e7cb0 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x45e7cb0 -> Node0x45e7df0;
+	Node0x45e7d00 [shape=record,label="{pd_land.lhs.true.15|{<s0>T|<s1>F}}"];
+	Node0x45e7d00:s0 -> Node0x45e7da0;
+	Node0x45e7d00:s1 -> Node0x45e7d50;
+	Node0x45e7d50 [shape=record,label="{pd_land.lhs.true.15.if.end_crit_edge}"];
+	Node0x45e7d50 -> Node0x45e7df0;
+	Node0x45e7da0 [shape=record,label="{pd_if.then.21}"];
+	Node0x45e7da0 -> Node0x45e7df0;
+	Node0x45e7df0 [shape=record,label="{pd_if.end}"];
+	Node0x45e7df0 -> Node0x45e7b70;
+	Node0x45e7e40 [shape=record,label="{it_for.inc.47}"];
+	Node0x45e7e40 -> Node0x45e79e0;
+	Node0x45e7e90 [shape=record,label="{for.end.48}"];
+}

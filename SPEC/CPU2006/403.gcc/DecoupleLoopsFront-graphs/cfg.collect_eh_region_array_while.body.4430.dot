@@ -1,0 +1,33 @@
+digraph "CFG for 'collect_eh_region_array_while.body' function" {
+	label="CFG for 'collect_eh_region_array_while.body' function";
+
+	Node0xacc5460 [shape=record,label="{newFuncRoot}"];
+	Node0xacc5460 -> Node0xacc5500;
+	Node0xacc54b0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xacc5500 [shape=record,label="{pd_while.body}"];
+	Node0xacc5500 -> Node0xdc18ef0;
+	Node0xdc18ef0 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0xdc18ef0:s0 -> Node0xacc5780;
+	Node0xdc18ef0:s1 -> Node0xacc5550;
+	Node0xacc5550 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0xacc5550:s0 -> Node0xacc5730;
+	Node0xacc5550:s1 -> Node0xacc55a0;
+	Node0xacc55a0 [shape=record,label="{pd_do.body.preheader}"];
+	Node0xacc55a0 -> Node0xacc55f0;
+	Node0xacc55f0 [shape=record,label="{it_do.body|{<s0>T|<s1>F}}"];
+	Node0xacc55f0:s0 -> Node0xacc54b0;
+	Node0xacc55f0:s1 -> Node0xacc5640;
+	Node0xacc5640 [shape=record,label="{it_do.cond|{<s0>T|<s1>F}}"];
+	Node0xacc5640:s0 -> Node0xacc56e0;
+	Node0xacc5640:s1 -> Node0xacc5690;
+	Node0xacc5690 [shape=record,label="{it_do.end}"];
+	Node0xacc5690 -> Node0xacc57d0;
+	Node0xacc56e0 [shape=record,label="{pd_do.cond.do.body_crit_edge}"];
+	Node0xacc56e0 -> Node0xacc55f0;
+	Node0xacc5730 [shape=record,label="{it_if.then.7}"];
+	Node0xacc5730 -> Node0xacc57d0;
+	Node0xacc5780 [shape=record,label="{it_if.then.4}"];
+	Node0xacc5780 -> Node0xacc57d0;
+	Node0xacc57d0 [shape=record,label="{pd_while.body.backedge}"];
+	Node0xacc57d0 -> Node0xacc5500;
+}

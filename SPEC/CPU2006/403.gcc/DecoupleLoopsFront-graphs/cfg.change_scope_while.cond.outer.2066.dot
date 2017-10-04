@@ -1,0 +1,30 @@
+digraph "CFG for 'change_scope_while.cond.outer' function" {
+	label="CFG for 'change_scope_while.cond.outer' function";
+
+	Node0xa52fe60 [shape=record,label="{newFuncRoot}"];
+	Node0xa52fe60 -> Node0xa52ff50;
+	Node0xa52feb0 [shape=record,label="{while.cond.29.preheader.exitStub}"];
+	Node0xa52ff00 [shape=record,label="{if.then.exitStub}"];
+	Node0xa52ff50 [shape=record,label="{pd_while.cond.outer}"];
+	Node0xa52ff50 -> Node0xa52ffa0;
+	Node0xa52ffa0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa52ffa0:s0 -> Node0xa52fff0;
+	Node0xa52ffa0:s1 -> Node0xa52feb0;
+	Node0xa52fff0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xa52fff0:s0 -> Node0xa52ff00;
+	Node0xa52fff0:s1 -> Node0xa530040;
+	Node0xa530040 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0xa530040:s0 -> Node0xa530180;
+	Node0xa530040:s1 -> Node0xa530090;
+	Node0xa530090 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0xa530090:s0 -> Node0xa530130;
+	Node0xa530090:s1 -> Node0xa5300e0;
+	Node0xa5300e0 [shape=record,label="{it_if.else.22}"];
+	Node0xa5300e0 -> Node0xa5301d0;
+	Node0xa530130 [shape=record,label="{it_if.then.19}"];
+	Node0xa530130 -> Node0xa52ffa0;
+	Node0xa530180 [shape=record,label="{it_if.then.8}"];
+	Node0xa530180 -> Node0xa5301d0;
+	Node0xa5301d0 [shape=record,label="{pd_while.cond.outer.backedge}"];
+	Node0xa5301d0 -> Node0xa52ff50;
+}

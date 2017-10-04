@@ -1,0 +1,19 @@
+digraph "CFG for 'split_ti' function" {
+	label="CFG for 'split_ti' function";
+
+	Node0x9be8340 [shape=record,label="{entry}"];
+	Node0x9be8340 -> Node0x9be8390;
+	Node0x9be8390 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9be8390:s0 -> Node0x9be83e0;
+	Node0x9be8390:s1 -> Node0x9be8dd0;
+	Node0x9be83e0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x9be83e0:s0 -> Node0x9be8ce0;
+	Node0x9be83e0:s1 -> Node0x9be8d30;
+	Node0x9be8ce0 [shape=record,label="{pd_if.then}"];
+	Node0x9be8ce0 -> Node0x9be8d80;
+	Node0x9be8d30 [shape=record,label="{pd_if.else}"];
+	Node0x9be8d30 -> Node0x9be8d80;
+	Node0x9be8d80 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x9be8d80 -> Node0x9be8390;
+	Node0x9be8dd0 [shape=record,label="{while.end}"];
+}

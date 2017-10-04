@@ -1,0 +1,27 @@
+digraph "CFG for 'is_attacked_for.cond.64' function" {
+	label="CFG for 'is_attacked_for.cond.64' function";
+
+	Node0xf972a0 [shape=record,label="{newFuncRoot}"];
+	Node0xf972a0 -> Node0xf97430;
+	Node0xf972f0 [shape=record,label="{for.cond.99.preheader.exitStub}"];
+	Node0xf97340 [shape=record,label="{return.loopexit13.exitStub}"];
+	Node0xf97390 [shape=record,label="{while.cond.81.return.loopexit12_crit_edge.exitStub}"];
+	Node0xf973e0 [shape=record,label="{while.cond.81.return.loopexit12_crit_edge.3.exitStub}"];
+	Node0xf97430 [shape=record,label="{it_for.cond.64|{<s0>T|<s1>F}}"];
+	Node0xf97430:s0 -> Node0xf97480;
+	Node0xf97430:s1 -> Node0xf972f0;
+	Node0xf97480 [shape=record,label="{it_for.body.66|{<s0>T|<s1>F}}"];
+	Node0xf97480:s0 -> Node0xf97340;
+	Node0xf97480:s1 -> Node0xf974d0;
+	Node0xf974d0 [shape=record,label="{pd_while.cond.81.preheader}"];
+	Node0xf974d0 -> Node0xf97520;
+	Node0xf97520 [shape=record,label="{it_while.cond.81|{<s0>def|<s1>13|<s2>12|<s3>10}}"];
+	Node0xf97520:s0 -> Node0xf975c0;
+	Node0xf97520:s1 -> Node0xf97570;
+	Node0xf97520:s2 -> Node0xf97390;
+	Node0xf97520:s3 -> Node0xf973e0;
+	Node0xf97570 [shape=record,label="{it_if.end.91}"];
+	Node0xf97570 -> Node0xf97520;
+	Node0xf975c0 [shape=record,label="{it_for.inc.96}"];
+	Node0xf975c0 -> Node0xf97430;
+}

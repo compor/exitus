@@ -1,0 +1,27 @@
+digraph "CFG for '_ZN11xercesc_2_512XMLBufferMgrD2Ev' function" {
+	label="CFG for '_ZN11xercesc_2_512XMLBufferMgrD2Ev' function";
+
+	Node0x4f4e9d0 [shape=record,label="{entry}"];
+	Node0x4f4e9d0 -> Node0x4f4ea20;
+	Node0x4f4ea20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4f4ea20:s0 -> Node0x4f4ea70;
+	Node0x4f4ea20:s1 -> Node0x4f4ec50;
+	Node0x4f4ea70 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4f4ea70:s0 -> Node0x4f4eac0;
+	Node0x4f4ea70:s1 -> Node0x4f4eb10;
+	Node0x4f4eac0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4f4eac0 -> Node0x4f4ebb0;
+	Node0x4f4eb10 [shape=record,label="{it_delete.notnull}"];
+	Node0x4f4eb10 -> Node0x4f4eb60;
+	Node0x4f4eb10 -> Node0x4f4ec00;
+	Node0x4f4eb60 [shape=record,label="{pd_invoke.cont}"];
+	Node0x4f4eb60 -> Node0x4f4ebb0;
+	Node0x4f4ebb0 [shape=record,label="{it_for.inc}"];
+	Node0x4f4ebb0 -> Node0x4f4ea20;
+	Node0x4f4ec00 [shape=record,label="{lpad}"];
+	Node0x4f4ec00 -> Node0x4f4eca0;
+	Node0x4f4ec00 -> Node0x4f4ecf0;
+	Node0x4f4ec50 [shape=record,label="{for.end}"];
+	Node0x4f4eca0 [shape=record,label="{eh.resume}"];
+	Node0x4f4ecf0 [shape=record,label="{terminate.lpad}"];
+}

@@ -1,0 +1,29 @@
+digraph "CFG for 'poc_based_ref_management_for.cond' function" {
+	label="CFG for 'poc_based_ref_management_for.cond' function";
+
+	Node0x23e9250 [shape=record,label="{newFuncRoot}"];
+	Node0x23e9250 -> Node0x240a820;
+	Node0x240a7d0 [shape=record,label="{for.end.exitStub}"];
+	Node0x240a820 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x240a820:s0 -> Node0x240a870;
+	Node0x240a820:s1 -> Node0x240a7d0;
+	Node0x240a870 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x240a870:s0 -> Node0x240a910;
+	Node0x240a870:s1 -> Node0x240a8c0;
+	Node0x240a8c0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x240a8c0 -> Node0x240bbe0;
+	Node0x240a910 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x240a910:s0 -> Node0x240bb90;
+	Node0x240a910:s1 -> Node0x240a960;
+	Node0x240a960 [shape=record,label="{pd_land.lhs.true.8|{<s0>T|<s1>F}}"];
+	Node0x240a960:s0 -> Node0x240bb40;
+	Node0x240a960:s1 -> Node0x240baf0;
+	Node0x240baf0 [shape=record,label="{pd_land.lhs.true.8.for.inc_crit_edge}"];
+	Node0x240baf0 -> Node0x240bbe0;
+	Node0x240bb40 [shape=record,label="{pd_if.then.12}"];
+	Node0x240bb40 -> Node0x240bbe0;
+	Node0x240bb90 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x240bb90 -> Node0x240bbe0;
+	Node0x240bbe0 [shape=record,label="{it_for.inc}"];
+	Node0x240bbe0 -> Node0x240a820;
+}

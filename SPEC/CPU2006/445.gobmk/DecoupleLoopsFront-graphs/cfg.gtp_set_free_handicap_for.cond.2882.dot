@@ -1,0 +1,22 @@
+digraph "CFG for 'gtp_set_free_handicap_for.cond' function" {
+	label="CFG for 'gtp_set_free_handicap_for.cond' function";
+
+	Node0x482cd60 [shape=record,label="{newFuncRoot}"];
+	Node0x482cd60 -> Node0x482cea0;
+	Node0x482cdb0 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x482ce00 [shape=record,label="{if.else.exitStub}"];
+	Node0x482ce50 [shape=record,label="{if.then.9.exitStub}"];
+	Node0x482cea0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x482cea0:s0 -> Node0x482cef0;
+	Node0x482cea0:s1 -> Node0x482cdb0;
+	Node0x482cef0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x482cef0:s0 -> Node0x482cf40;
+	Node0x482cef0:s1 -> Node0x482ce00;
+	Node0x482cf40 [shape=record,label="{it_if.then.5|{<s0>T|<s1>F}}"];
+	Node0x482cf40:s0 -> Node0x482ce50;
+	Node0x482cf40:s1 -> Node0x482cf90;
+	Node0x482cf90 [shape=record,label="{pd_if.end.11}"];
+	Node0x482cf90 -> Node0x5634af0;
+	Node0x5634af0 [shape=record,label="{it_if.end.11.split}"];
+	Node0x5634af0 -> Node0x482cea0;
+}

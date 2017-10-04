@@ -1,0 +1,12 @@
+digraph "CFG for 'clean_store_context_while.cond' function" {
+	label="CFG for 'clean_store_context_while.cond' function";
+
+	Node0x58a25c0 [shape=record,label="{newFuncRoot}"];
+	Node0x58a25c0 -> Node0x58a2660;
+	Node0x58a2610 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0x58a2660 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x58a2660:s0 -> Node0x58a26b0;
+	Node0x58a2660:s1 -> Node0x58a2610;
+	Node0x58a26b0 [shape=record,label="{pd_while.body}"];
+	Node0x58a26b0 -> Node0x58a2660;
+}

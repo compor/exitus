@@ -1,0 +1,25 @@
+digraph "CFG for '_ZN10cStatistic10freadvarsfEP8_IO_FILEPKcz_while.cond' function" {
+	label="CFG for '_ZN10cStatistic10freadvarsfEP8_IO_FILEPKcz_while.cond' function";
+
+	Node0x21c12a0 [shape=record,label="{newFuncRoot}"];
+	Node0x21c12a0 -> Node0x21c1390;
+	Node0x21c12f0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x21c1340 [shape=record,label="{lor.rhs.while.end_crit_edge.exitStub}"];
+	Node0x21c1390 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x21c1390:s0 -> Node0x21c13e0;
+	Node0x21c1390:s1 -> Node0x21c12f0;
+	Node0x21c13e0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x21c13e0:s0 -> Node0x21c14d0;
+	Node0x21c13e0:s1 -> Node0x21c1430;
+	Node0x21c1430 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x21c1430:s0 -> Node0x21c1480;
+	Node0x21c1430:s1 -> Node0x21c1340;
+	Node0x21c1480 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0x21c1480 -> Node0x21c1520;
+	Node0x21c14d0 [shape=record,label="{pd_land.rhs.while.body_crit_edge}"];
+	Node0x21c14d0 -> Node0x21c1520;
+	Node0x21c1520 [shape=record,label="{it_while.body}"];
+	Node0x21c1520 -> Node0x45c8240;
+	Node0x45c8240 [shape=record,label="{pd_while.body.split}"];
+	Node0x45c8240 -> Node0x21c1390;
+}

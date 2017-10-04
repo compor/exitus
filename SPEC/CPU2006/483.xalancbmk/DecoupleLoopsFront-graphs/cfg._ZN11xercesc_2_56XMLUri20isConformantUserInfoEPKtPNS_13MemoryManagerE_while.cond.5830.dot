@@ -1,0 +1,38 @@
+digraph "CFG for '_ZN11xercesc_2_56XMLUri20isConformantUserInfoEPKtPNS_13MemoryManagerE_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_56XMLUri20isConformantUserInfoEPKtPNS_13MemoryManagerE_while.cond' function";
+
+	Node0x9b93440 [shape=record,label="{newFuncRoot}"];
+	Node0x9b93440 -> Node0x9babaf0;
+	Node0x9bab9b0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x9baba00 [shape=record,label="{if.else.18.exitStub}"];
+	Node0x9baba50 [shape=record,label="{if.then.5.if.else.11_crit_edge.exitStub}"];
+	Node0x9babaa0 [shape=record,label="{land.lhs.true.if.else.11_crit_edge.exitStub}"];
+	Node0x9babaf0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9babaf0:s0 -> Node0x9babb40;
+	Node0x9babaf0:s1 -> Node0x9bab9b0;
+	Node0x9babb40 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x9babb40:s0 -> Node0x9babd70;
+	Node0x9babb40:s1 -> Node0x9babb90;
+	Node0x9babb90 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x9babb90:s0 -> Node0x9babd20;
+	Node0x9babb90:s1 -> Node0x9babbe0;
+	Node0x9babbe0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x9babbe0:s0 -> Node0x9babc30;
+	Node0x9babbe0:s1 -> Node0x9baba00;
+	Node0x9babc30 [shape=record,label="{it_if.then.5|{<s0>T|<s1>F}}"];
+	Node0x9babc30:s0 -> Node0x9babc80;
+	Node0x9babc30:s1 -> Node0x9baba50;
+	Node0x9babc80 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x9babc80:s0 -> Node0x9babcd0;
+	Node0x9babc80:s1 -> Node0x9babaa0;
+	Node0x9babcd0 [shape=record,label="{it_if.then.9}"];
+	Node0x9babcd0 -> Node0x9babe10;
+	Node0x9babd20 [shape=record,label="{pd_lor.lhs.false.if.then.3_crit_edge}"];
+	Node0x9babd20 -> Node0x9babdc0;
+	Node0x9babd70 [shape=record,label="{pd_while.body.if.then.3_crit_edge}"];
+	Node0x9babd70 -> Node0x9babdc0;
+	Node0x9babdc0 [shape=record,label="{it_if.then.3}"];
+	Node0x9babdc0 -> Node0x9babe10;
+	Node0x9babe10 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x9babe10 -> Node0x9babaf0;
+}

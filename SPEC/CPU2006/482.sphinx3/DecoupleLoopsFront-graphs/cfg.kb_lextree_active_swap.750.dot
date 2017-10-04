@@ -1,0 +1,14 @@
+digraph "CFG for 'kb_lextree_active_swap' function" {
+	label="CFG for 'kb_lextree_active_swap' function";
+
+	Node0xecaf40 [shape=record,label="{entry}"];
+	Node0xecaf40 -> Node0xefa9a0;
+	Node0xefa9a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xefa9a0:s0 -> Node0xefa9f0;
+	Node0xefa9a0:s1 -> Node0xefaa40;
+	Node0xefa9f0 [shape=record,label="{pd_for.body}"];
+	Node0xefa9f0 -> Node0x147cac0;
+	Node0x147cac0 [shape=record,label="{it_for.body.split}"];
+	Node0x147cac0 -> Node0xefa9a0;
+	Node0xefaa40 [shape=record,label="{for.end}"];
+}

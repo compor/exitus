@@ -1,0 +1,20 @@
+digraph "CFG for '_ZN3pov15is_image_opaqueEPNS_12Image_StructE_for.cond' function" {
+	label="CFG for '_ZN3pov15is_image_opaqueEPNS_12Image_StructE_for.cond' function";
+
+	Node0x1d123e0 [shape=record,label="{newFuncRoot}"];
+	Node0x1d123e0 -> Node0x1d128c0;
+	Node0x1d127d0 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x1d12820 [shape=record,label="{for.body.return.loopexit_crit_edge.exitStub}"];
+	Node0x1d12870 [shape=record,label="{if.end.return.loopexit_crit_edge.exitStub}"];
+	Node0x1d128c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1d128c0:s0 -> Node0x1d12910;
+	Node0x1d128c0:s1 -> Node0x1d127d0;
+	Node0x1d12910 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x1d12910:s0 -> Node0x1d12820;
+	Node0x1d12910:s1 -> Node0x1d12960;
+	Node0x1d12960 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x1d12960:s0 -> Node0x1d12870;
+	Node0x1d12960:s1 -> Node0x1d129b0;
+	Node0x1d129b0 [shape=record,label="{it_for.inc}"];
+	Node0x1d129b0 -> Node0x1d128c0;
+}

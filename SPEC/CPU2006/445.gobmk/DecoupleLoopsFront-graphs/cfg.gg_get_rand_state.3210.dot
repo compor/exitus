@@ -1,0 +1,14 @@
+digraph "CFG for 'gg_get_rand_state' function" {
+	label="CFG for 'gg_get_rand_state' function";
+
+	Node0x331e0e0 [shape=record,label="{entry}"];
+	Node0x331e0e0 -> Node0x331e130;
+	Node0x331e130 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x331e130:s0 -> Node0x331e180;
+	Node0x331e130:s1 -> Node0x331e1d0;
+	Node0x331e180 [shape=record,label="{pd_for.body}"];
+	Node0x331e180 -> Node0x4f970f0;
+	Node0x4f970f0 [shape=record,label="{it_for.body.split}"];
+	Node0x4f970f0 -> Node0x331e130;
+	Node0x331e1d0 [shape=record,label="{for.end}"];
+}

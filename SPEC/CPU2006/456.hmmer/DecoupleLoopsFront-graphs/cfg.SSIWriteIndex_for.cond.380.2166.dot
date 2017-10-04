@@ -1,0 +1,22 @@
+digraph "CFG for 'SSIWriteIndex_for.cond.380' function" {
+	label="CFG for 'SSIWriteIndex_for.cond.380' function";
+
+	Node0x34a56b0 [shape=record,label="{newFuncRoot}"];
+	Node0x34a56b0 -> Node0x34a57f0;
+	Node0x34a5700 [shape=record,label="{if.end.416.loopexit.exitStub}"];
+	Node0x34a5750 [shape=record,label="{for.body.384.return.loopexit1_crit_edge.exitStub}"];
+	Node0x34a57a0 [shape=record,label="{if.end.403.return.loopexit1_crit_edge.exitStub}"];
+	Node0x34a57f0 [shape=record,label="{it_for.cond.380|{<s0>T|<s1>F}}"];
+	Node0x34a57f0:s0 -> Node0x34a5840;
+	Node0x34a57f0:s1 -> Node0x34a5700;
+	Node0x34a5840 [shape=record,label="{pd_for.body.384}"];
+	Node0x34a5840 -> Node0x3987ab0;
+	Node0x3987ab0 [shape=record,label="{it_for.body.384.split|{<s0>T|<s1>F}}"];
+	Node0x3987ab0:s0 -> Node0x34a5750;
+	Node0x3987ab0:s1 -> Node0x34a5890;
+	Node0x34a5890 [shape=record,label="{it_if.end.403|{<s0>T|<s1>F}}"];
+	Node0x34a5890:s0 -> Node0x34a57a0;
+	Node0x34a5890:s1 -> Node0x34a58e0;
+	Node0x34a58e0 [shape=record,label="{it_for.inc.413}"];
+	Node0x34a58e0 -> Node0x34a57f0;
+}

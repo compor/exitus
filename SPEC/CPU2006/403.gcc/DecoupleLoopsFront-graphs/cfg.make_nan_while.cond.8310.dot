@@ -1,0 +1,12 @@
+digraph "CFG for 'make_nan_while.cond' function" {
+	label="CFG for 'make_nan_while.cond' function";
+
+	Node0xb804c70 [shape=record,label="{newFuncRoot}"];
+	Node0xb804c70 -> Node0xb804d10;
+	Node0xb804cc0 [shape=record,label="{while.end.exitStub}"];
+	Node0xb804d10 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb804d10:s0 -> Node0xb804d60;
+	Node0xb804d10:s1 -> Node0xb804cc0;
+	Node0xb804d60 [shape=record,label="{pd_while.body}"];
+	Node0xb804d60 -> Node0xb804d10;
+}

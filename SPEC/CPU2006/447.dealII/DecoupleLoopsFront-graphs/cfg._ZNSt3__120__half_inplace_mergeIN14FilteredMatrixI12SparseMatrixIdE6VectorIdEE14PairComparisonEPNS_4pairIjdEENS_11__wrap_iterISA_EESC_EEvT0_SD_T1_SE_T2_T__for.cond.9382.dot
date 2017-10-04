@@ -1,0 +1,29 @@
+digraph "CFG for '_ZNSt3__120__half_inplace_mergeIN14FilteredMatrixI12SparseMatrixIdE6VectorIdEE14PairComparisonEPNS_4pairIjdEENS_11__wrap_iterISA_EESC_EEvT0_SD_T1_SE_T2_T__for.cond' function" {
+	label="CFG for '_ZNSt3__120__half_inplace_mergeIN14FilteredMatrixI12SparseMatrixIdE6VectorIdEE14PairComparisonEPNS_4pairIjdEENS_11__wrap_iterISA_EESC_EEvT0_SD_T1_SE_T2_T__for.cond' function";
+
+	Node0x9377760 [shape=record,label="{newFuncRoot}"];
+	Node0x9377760 -> Node0x9377850;
+	Node0x93777b0 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x9377800 [shape=record,label="{if.then.exitStub}"];
+	Node0x9377850 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9377850:s0 -> Node0x93778a0;
+	Node0x9377850:s1 -> Node0x93777b0;
+	Node0x93778a0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x93778a0:s0 -> Node0x9377800;
+	Node0x93778a0:s1 -> Node0x93778f0;
+	Node0x93778f0 [shape=record,label="{it_if.end}"];
+	Node0x93778f0 -> Node0x927c780;
+	Node0x927c780 [shape=record,label="{pd_if.end.split1}"];
+	Node0x927c780 -> Node0xb5ca350;
+	Node0xb5ca350 [shape=record,label="{it_if.end.split|{<s0>T|<s1>F}}"];
+	Node0xb5ca350:s0 -> Node0x9377bb0;
+	Node0xb5ca350:s1 -> Node0x9377940;
+	Node0x9377940 [shape=record,label="{pd_if.else}"];
+	Node0x9377940 -> Node0xb5ca260;
+	Node0xb5ca260 [shape=record,label="{it_if.else.split}"];
+	Node0xb5ca260 -> Node0x9377c00;
+	Node0x9377bb0 [shape=record,label="{pd_if.then.8}"];
+	Node0x9377bb0 -> Node0x9377c00;
+	Node0x9377c00 [shape=record,label="{pd_for.inc}"];
+	Node0x9377c00 -> Node0x9377850;
+}

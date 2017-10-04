@@ -1,0 +1,16 @@
+digraph "CFG for 'lex_number_while.cond' function" {
+	label="CFG for 'lex_number_while.cond' function";
+
+	Node0x9f5d780 [shape=record,label="{newFuncRoot}"];
+	Node0x9f5d780 -> Node0x9f5d870;
+	Node0x9f5d7d0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x9f5d820 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x9f5d870 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9f5d870:s0 -> Node0x9f5d8c0;
+	Node0x9f5d870:s1 -> Node0x9f5d7d0;
+	Node0x9f5d8c0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x9f5d8c0:s0 -> Node0x9f5d910;
+	Node0x9f5d8c0:s1 -> Node0x9f5d820;
+	Node0x9f5d910 [shape=record,label="{it_while.body}"];
+	Node0x9f5d910 -> Node0x9f5d870;
+}

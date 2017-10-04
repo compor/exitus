@@ -1,0 +1,27 @@
+digraph "CFG for '_ZN3pov12Ray_In_BoundEPNS_10Ray_StructEPNS_13Object_StructE_for.cond' function" {
+	label="CFG for '_ZN3pov12Ray_In_BoundEPNS_10Ray_StructEPNS_13Object_StructE_for.cond' function";
+
+	Node0x26ce110 [shape=record,label="{newFuncRoot}"];
+	Node0x26ce110 -> Node0x26ce200;
+	Node0x26ce160 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0x26ce1b0 [shape=record,label="{if.then.return_crit_edge.exitStub}"];
+	Node0x26ce200 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x26ce200:s0 -> Node0x26ce250;
+	Node0x26ce200:s1 -> Node0x26ce160;
+	Node0x26ce250 [shape=record,label="{pd_for.body}"];
+	Node0x26ce250 -> Node0x3683df0;
+	Node0x3683df0 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x3683df0:s0 -> Node0x26ce340;
+	Node0x3683df0:s1 -> Node0x26ce2a0;
+	Node0x26ce2a0 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0x26ce2a0:s0 -> Node0x26ce2f0;
+	Node0x26ce2a0:s1 -> Node0x26ce1b0;
+	Node0x26ce2f0 [shape=record,label="{pd_if.then.if.end.3_crit_edge}"];
+	Node0x26ce2f0 -> Node0x26ce390;
+	Node0x26ce340 [shape=record,label="{pd_for.body.if.end.3_crit_edge}"];
+	Node0x26ce340 -> Node0x26ce390;
+	Node0x26ce390 [shape=record,label="{pd_if.end.3}"];
+	Node0x26ce390 -> Node0x37b5e80;
+	Node0x37b5e80 [shape=record,label="{it_if.end.3.split}"];
+	Node0x37b5e80 -> Node0x26ce200;
+}

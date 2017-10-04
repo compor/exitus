@@ -1,0 +1,14 @@
+digraph "CFG for 'allocate_reg_life_data' function" {
+	label="CFG for 'allocate_reg_life_data' function";
+
+	Node0x45e7950 [shape=record,label="{entry}"];
+	Node0x45e7950 -> Node0x45ebfa0;
+	Node0x45ebfa0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x45ebfa0:s0 -> Node0x45ebff0;
+	Node0x45ebfa0:s1 -> Node0x45ec040;
+	Node0x45ebff0 [shape=record,label="{pd_for.body}"];
+	Node0x45ebff0 -> Node0xda0fb20;
+	Node0xda0fb20 [shape=record,label="{it_for.body.split}"];
+	Node0xda0fb20 -> Node0x45ebfa0;
+	Node0x45ec040 [shape=record,label="{for.end}"];
+}

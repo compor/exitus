@@ -1,0 +1,37 @@
+digraph "CFG for 'contains_replace_regs_for.cond' function" {
+	label="CFG for 'contains_replace_regs_for.cond' function";
+
+	Node0xb478e40 [shape=record,label="{newFuncRoot}"];
+	Node0xb478e40 -> Node0xb479390;
+	Node0xb4792a0 [shape=record,label="{for.cond.return.loopexit1_crit_edge.exitStub}"];
+	Node0xb4792f0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xb479340 [shape=record,label="{sw.bb.12.return.loopexit1_crit_edge.exitStub}"];
+	Node0xb479390 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb479390:s0 -> Node0xb4793e0;
+	Node0xb479390:s1 -> Node0xb4792a0;
+	Node0xb4793e0 [shape=record,label="{it_for.body|{<s0>def|<s1>101|<s2>69}}"];
+	Node0xb4793e0:s0 -> Node0xb479660;
+	Node0xb4793e0:s1 -> Node0xb4795c0;
+	Node0xb4793e0:s2 -> Node0xb479430;
+	Node0xb479430 [shape=record,label="{it_sw.bb.16}"];
+	Node0xb479430 -> Node0xb479480;
+	Node0xb479480 [shape=record,label="{it_for.cond.21|{<s0>T|<s1>F}}"];
+	Node0xb479480:s0 -> Node0xb479520;
+	Node0xb479480:s1 -> Node0xb4794d0;
+	Node0xb4794d0 [shape=record,label="{pd_for.inc.36.loopexit}"];
+	Node0xb4794d0 -> Node0xb4796b0;
+	Node0xb479520 [shape=record,label="{it_for.body.24|{<s0>T|<s1>F}}"];
+	Node0xb479520:s0 -> Node0xb4792f0;
+	Node0xb479520:s1 -> Node0xb479570;
+	Node0xb479570 [shape=record,label="{it_for.inc}"];
+	Node0xb479570 -> Node0xb479480;
+	Node0xb4795c0 [shape=record,label="{it_sw.bb.12|{<s0>T|<s1>F}}"];
+	Node0xb4795c0:s0 -> Node0xb479340;
+	Node0xb4795c0:s1 -> Node0xb479610;
+	Node0xb479610 [shape=record,label="{pd_sw.bb.12.for.inc.36_crit_edge}"];
+	Node0xb479610 -> Node0xb4796b0;
+	Node0xb479660 [shape=record,label="{pd_for.body.for.inc.36_crit_edge}"];
+	Node0xb479660 -> Node0xb4796b0;
+	Node0xb4796b0 [shape=record,label="{it_for.inc.36}"];
+	Node0xb4796b0 -> Node0xb479390;
+}

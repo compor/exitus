@@ -1,0 +1,19 @@
+digraph "CFG for 'primal_start_artificial_for.cond' function" {
+	label="CFG for 'primal_start_artificial_for.cond' function";
+
+	Node0x1e319d0 [shape=record,label="{newFuncRoot}"];
+	Node0x1e319d0 -> Node0x1e31a70;
+	Node0x1e31a20 [shape=record,label="{for.end.exitStub}"];
+	Node0x1e31a70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1e31a70:s0 -> Node0x1e31ac0;
+	Node0x1e31a70:s1 -> Node0x1e31a20;
+	Node0x1e31ac0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x1e31ac0:s0 -> Node0x1e31fc0;
+	Node0x1e31ac0:s1 -> Node0x1e31f70;
+	Node0x1e31f70 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x1e31f70 -> Node0x1e32010;
+	Node0x1e31fc0 [shape=record,label="{pd_if.then}"];
+	Node0x1e31fc0 -> Node0x1e32010;
+	Node0x1e32010 [shape=record,label="{it_for.inc}"];
+	Node0x1e32010 -> Node0x1e31a70;
+}

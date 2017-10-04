@@ -1,0 +1,14 @@
+digraph "CFG for 'S_do_trans_count_while.cond' function" {
+	label="CFG for 'S_do_trans_count_while.cond' function";
+
+	Node0x4b20a30 [shape=record,label="{newFuncRoot}"];
+	Node0x4b20a30 -> Node0x4b20f30;
+	Node0x4b20ee0 [shape=record,label="{if.end.39.loopexit1.exitStub}"];
+	Node0x4b20f30 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4b20f30:s0 -> Node0x4b20f80;
+	Node0x4b20f30:s1 -> Node0x4b20ee0;
+	Node0x4b20f80 [shape=record,label="{it_while.body}"];
+	Node0x4b20f80 -> Node0x66a3d90;
+	Node0x66a3d90 [shape=record,label="{pd_while.body.split}"];
+	Node0x66a3d90 -> Node0x4b20f30;
+}

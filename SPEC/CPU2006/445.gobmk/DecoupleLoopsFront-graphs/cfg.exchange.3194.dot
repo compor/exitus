@@ -1,0 +1,33 @@
+digraph "CFG for 'exchange' function" {
+	label="CFG for 'exchange' function";
+
+	Node0x329cce0 [shape=record,label="{entry}"];
+	Node0x329cce0 -> Node0x330bd60;
+	Node0x330bd60 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x330bd60 -> Node0x330bdb0;
+	Node0x330bdb0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x330bdb0:s0 -> Node0x330be00;
+	Node0x330bdb0:s1 -> Node0x330c0d0;
+	Node0x330be00 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x330be00:s0 -> Node0x330be50;
+	Node0x330be00:s1 -> Node0x330bf90;
+	Node0x330be50 [shape=record,label="{it_if.then}"];
+	Node0x330be50 -> Node0x330bea0;
+	Node0x330bea0 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x330bea0:s0 -> Node0x330bef0;
+	Node0x330bea0:s1 -> Node0x330bf40;
+	Node0x330bef0 [shape=record,label="{pd_for.body}"];
+	Node0x330bef0 -> Node0x330bea0;
+	Node0x330bf40 [shape=record,label="{it_for.end}"];
+	Node0x330bf40 -> Node0x330bd60;
+	Node0x330bf90 [shape=record,label="{it_if.else}"];
+	Node0x330bf90 -> Node0x330bfe0;
+	Node0x330bfe0 [shape=record,label="{pd_for.cond.23|{<s0>T|<s1>F}}"];
+	Node0x330bfe0:s0 -> Node0x330c030;
+	Node0x330bfe0:s1 -> Node0x330c080;
+	Node0x330c030 [shape=record,label="{pd_for.body.25}"];
+	Node0x330c030 -> Node0x330bfe0;
+	Node0x330c080 [shape=record,label="{it_for.end.40}"];
+	Node0x330c080 -> Node0x330bdb0;
+	Node0x330c0d0 [shape=record,label="{while.end}"];
+}

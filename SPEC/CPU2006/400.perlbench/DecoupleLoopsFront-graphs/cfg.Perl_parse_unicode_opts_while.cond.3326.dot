@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_parse_unicode_opts_while.cond' function" {
+	label="CFG for 'Perl_parse_unicode_opts_while.cond' function";
+
+	Node0x58279a0 [shape=record,label="{newFuncRoot}"];
+	Node0x58279a0 -> Node0x582ff60;
+	Node0x582fec0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x582ff10 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x582ff60 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x582ff60:s0 -> Node0x582ffb0;
+	Node0x582ff60:s1 -> Node0x582fec0;
+	Node0x582ffb0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x582ffb0:s0 -> Node0x5830000;
+	Node0x582ffb0:s1 -> Node0x582ff10;
+	Node0x5830000 [shape=record,label="{it_while.body}"];
+	Node0x5830000 -> Node0x582ff60;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'PerlIO_findFILE_while.cond' function" {
+	label="CFG for 'PerlIO_findFILE_while.cond' function";
+
+	Node0x4dad5f0 [shape=record,label="{newFuncRoot}"];
+	Node0x4dad5f0 -> Node0x4dad6e0;
+	Node0x4dad640 [shape=record,label="{while.end.exitStub}"];
+	Node0x4dad690 [shape=record,label="{if.then.exitStub}"];
+	Node0x4dad6e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4dad6e0:s0 -> Node0x4dad730;
+	Node0x4dad6e0:s1 -> Node0x4dad640;
+	Node0x4dad730 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4dad730:s0 -> Node0x4dad690;
+	Node0x4dad730:s1 -> Node0x4dad780;
+	Node0x4dad780 [shape=record,label="{it_if.end}"];
+	Node0x4dad780 -> Node0x4dad6e0;
+}

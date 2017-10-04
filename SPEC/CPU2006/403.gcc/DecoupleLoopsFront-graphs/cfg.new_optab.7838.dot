@@ -1,0 +1,14 @@
+digraph "CFG for 'new_optab' function" {
+	label="CFG for 'new_optab' function";
+
+	Node0x83302f0 [shape=record,label="{entry}"];
+	Node0x83302f0 -> Node0x8330340;
+	Node0x8330340 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x8330340:s0 -> Node0x8330390;
+	Node0x8330340:s1 -> Node0x83303e0;
+	Node0x8330390 [shape=record,label="{pd_for.body}"];
+	Node0x8330390 -> Node0xe3e1660;
+	Node0xe3e1660 [shape=record,label="{it_for.body.split}"];
+	Node0xe3e1660 -> Node0x8330340;
+	Node0x83303e0 [shape=record,label="{for.end}"];
+}

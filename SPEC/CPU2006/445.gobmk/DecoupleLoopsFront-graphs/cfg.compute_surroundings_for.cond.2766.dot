@@ -1,0 +1,29 @@
+digraph "CFG for 'compute_surroundings_for.cond' function" {
+	label="CFG for 'compute_surroundings_for.cond' function";
+
+	Node0x47a8100 [shape=record,label="{newFuncRoot}"];
+	Node0x47a8100 -> Node0x47a8a40;
+	Node0x47a89f0 [shape=record,label="{for.end.exitStub}"];
+	Node0x47a8a40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x47a8a40:s0 -> Node0x47a8a90;
+	Node0x47a8a40:s1 -> Node0x47a89f0;
+	Node0x47a8a90 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x47a8a90:s0 -> Node0x47a8b30;
+	Node0x47a8a90:s1 -> Node0x47a8ae0;
+	Node0x47a8ae0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x47a8ae0 -> Node0x47a8cc0;
+	Node0x47a8b30 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x47a8b30:s0 -> Node0x47a8bd0;
+	Node0x47a8b30:s1 -> Node0x47a8b80;
+	Node0x47a8b80 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x47a8b80 -> Node0x47a8cc0;
+	Node0x47a8bd0 [shape=record,label="{pd_land.lhs.true.11|{<s0>T|<s1>F}}"];
+	Node0x47a8bd0:s0 -> Node0x47a8c70;
+	Node0x47a8bd0:s1 -> Node0x47a8c20;
+	Node0x47a8c20 [shape=record,label="{pd_land.lhs.true.11.for.inc_crit_edge}"];
+	Node0x47a8c20 -> Node0x47a8cc0;
+	Node0x47a8c70 [shape=record,label="{pd_if.then}"];
+	Node0x47a8c70 -> Node0x47a8cc0;
+	Node0x47a8cc0 [shape=record,label="{it_for.inc}"];
+	Node0x47a8cc0 -> Node0x47a8a40;
+}

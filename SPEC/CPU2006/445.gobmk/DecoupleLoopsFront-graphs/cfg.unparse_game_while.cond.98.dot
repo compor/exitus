@@ -1,0 +1,18 @@
+digraph "CFG for 'unparse_game_while.cond' function" {
+	label="CFG for 'unparse_game_while.cond' function";
+
+	Node0x33377d0 [shape=record,label="{newFuncRoot}"];
+	Node0x33377d0 -> Node0x33378c0;
+	Node0x3337820 [shape=record,label="{while.cond.while.cond.6.preheader_crit_edge.exitStub}"];
+	Node0x3337870 [shape=record,label="{land.rhs.while.cond.6.preheader_crit_edge.exitStub}"];
+	Node0x33378c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x33378c0:s0 -> Node0x3337910;
+	Node0x33378c0:s1 -> Node0x3337820;
+	Node0x3337910 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x3337910:s0 -> Node0x3337960;
+	Node0x3337910:s1 -> Node0x3337870;
+	Node0x3337960 [shape=record,label="{pd_while.body}"];
+	Node0x3337960 -> Node0x4fb50b0;
+	Node0x4fb50b0 [shape=record,label="{it_while.body.split}"];
+	Node0x4fb50b0 -> Node0x33378c0;
+}

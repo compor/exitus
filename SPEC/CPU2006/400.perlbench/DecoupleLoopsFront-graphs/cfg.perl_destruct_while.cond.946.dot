@@ -1,0 +1,16 @@
+digraph "CFG for 'perl_destruct_while.cond' function" {
+	label="CFG for 'perl_destruct_while.cond' function";
+
+	Node0x4d2a050 [shape=record,label="{newFuncRoot}"];
+	Node0x4d2a050 -> Node0x4d2a0f0;
+	Node0x4d2a0a0 [shape=record,label="{while.end.exitStub}"];
+	Node0x4d2a0f0 [shape=record,label="{it_while.cond}"];
+	Node0x4d2a0f0 -> Node0x6553e20;
+	Node0x6553e20 [shape=record,label="{pd_while.cond.split1}"];
+	Node0x6553e20 -> Node0x64533a0;
+	Node0x64533a0 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0x64533a0:s0 -> Node0x4d2a140;
+	Node0x64533a0:s1 -> Node0x4d2a0a0;
+	Node0x4d2a140 [shape=record,label="{pd_while.body}"];
+	Node0x4d2a140 -> Node0x4d2a0f0;
+}

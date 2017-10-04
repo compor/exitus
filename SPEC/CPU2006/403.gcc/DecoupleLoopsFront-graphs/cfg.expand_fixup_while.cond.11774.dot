@@ -1,0 +1,12 @@
+digraph "CFG for 'expand_fixup_while.cond' function" {
+	label="CFG for 'expand_fixup_while.cond' function";
+
+	Node0xc4537d0 [shape=record,label="{newFuncRoot}"];
+	Node0xc4537d0 -> Node0xc453870;
+	Node0xc453820 [shape=record,label="{while.end.exitStub}"];
+	Node0xc453870 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc453870:s0 -> Node0xc4538c0;
+	Node0xc453870:s1 -> Node0xc453820;
+	Node0xc4538c0 [shape=record,label="{it_while.body}"];
+	Node0xc4538c0 -> Node0xc453870;
+}

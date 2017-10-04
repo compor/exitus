@@ -1,0 +1,25 @@
+digraph "CFG for 'build_nt' function" {
+	label="CFG for 'build_nt' function";
+
+	Node0x962c0e0 [shape=record,label="{entry}"];
+	Node0x962c0e0 -> Node0x962c130;
+	Node0x962c130 [shape=record,label="{it_for.cond}"];
+	Node0x962c130 -> Node0xebd8230;
+	Node0xebd8230 [shape=record,label="{pd_for.cond.split1}"];
+	Node0xebd8230 -> Node0xec89370;
+	Node0xec89370 [shape=record,label="{it_for.cond.split|{<s0>T|<s1>F}}"];
+	Node0xec89370:s0 -> Node0x962c180;
+	Node0xec89370:s1 -> Node0x962d360;
+	Node0x962c180 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x962c180:s0 -> Node0x962c1d0;
+	Node0x962c180:s1 -> Node0x962d2c0;
+	Node0x962c1d0 [shape=record,label="{pd_vaarg.in_reg}"];
+	Node0x962c1d0 -> Node0x962d310;
+	Node0x962d2c0 [shape=record,label="{pd_vaarg.in_mem}"];
+	Node0x962d2c0 -> Node0x962d310;
+	Node0x962d310 [shape=record,label="{pd_vaarg.end}"];
+	Node0x962d310 -> Node0xebd8190;
+	Node0xebd8190 [shape=record,label="{it_vaarg.end.split}"];
+	Node0xebd8190 -> Node0x962c130;
+	Node0x962d360 [shape=record,label="{for.end}"];
+}

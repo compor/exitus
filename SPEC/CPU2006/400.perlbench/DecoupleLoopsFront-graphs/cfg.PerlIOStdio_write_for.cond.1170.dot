@@ -1,0 +1,23 @@
+digraph "CFG for 'PerlIOStdio_write_for.cond' function" {
+	label="CFG for 'PerlIOStdio_write_for.cond' function";
+
+	Node0x4dac240 [shape=record,label="{newFuncRoot}"];
+	Node0x4dac240 -> Node0x4dac330;
+	Node0x4dac290 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x4dac2e0 [shape=record,label="{lor.lhs.false.for.end_crit_edge.exitStub}"];
+	Node0x4dac330 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4dac330:s0 -> Node0x4dac290;
+	Node0x4dac330:s1 -> Node0x4dac380;
+	Node0x4dac380 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4dac380:s0 -> Node0x4dac2e0;
+	Node0x4dac380:s1 -> Node0x4dac3d0;
+	Node0x4dac3d0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x4dac3d0:s0 -> Node0x4dac470;
+	Node0x4dac3d0:s1 -> Node0x4dac420;
+	Node0x4dac420 [shape=record,label="{pd_if.end.if.end.4_crit_edge}"];
+	Node0x4dac420 -> Node0x4dac4c0;
+	Node0x4dac470 [shape=record,label="{pd_if.then.3}"];
+	Node0x4dac470 -> Node0x4dac4c0;
+	Node0x4dac4c0 [shape=record,label="{pd_if.end.4}"];
+	Node0x4dac4c0 -> Node0x4dac330;
+}

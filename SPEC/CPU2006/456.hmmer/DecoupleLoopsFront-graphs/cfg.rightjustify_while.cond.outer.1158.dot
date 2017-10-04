@@ -1,0 +1,43 @@
+digraph "CFG for 'rightjustify_while.cond.outer' function" {
+	label="CFG for 'rightjustify_while.cond.outer' function";
+
+	Node0x328dbb0 [shape=record,label="{newFuncRoot}"];
+	Node0x328dbb0 -> Node0x328dc50;
+	Node0x328dc00 [shape=record,label="{while.cond.33.preheader.exitStub}"];
+	Node0x328dc50 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x328dc50 -> Node0x328dca0;
+	Node0x328dca0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x328dca0:s0 -> Node0x328dcf0;
+	Node0x328dca0:s1 -> Node0x328dc00;
+	Node0x328dcf0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x328dcf0:s0 -> Node0x328e010;
+	Node0x328dcf0:s1 -> Node0x328dd40;
+	Node0x328dd40 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x328dd40:s0 -> Node0x328dfc0;
+	Node0x328dd40:s1 -> Node0x328dd90;
+	Node0x328dd90 [shape=record,label="{it_lor.lhs.false.9|{<s0>T|<s1>F}}"];
+	Node0x328dd90:s0 -> Node0x328df70;
+	Node0x328dd90:s1 -> Node0x328dde0;
+	Node0x328dde0 [shape=record,label="{it_lor.lhs.false.15|{<s0>T|<s1>F}}"];
+	Node0x328dde0:s0 -> Node0x328df20;
+	Node0x328dde0:s1 -> Node0x328de30;
+	Node0x328de30 [shape=record,label="{it_lor.lhs.false.21|{<s0>T|<s1>F}}"];
+	Node0x328de30:s0 -> Node0x328ded0;
+	Node0x328de30:s1 -> Node0x328de80;
+	Node0x328de80 [shape=record,label="{it_if.else}"];
+	Node0x328de80 -> Node0x38fafe0;
+	Node0x38fafe0 [shape=record,label="{pd_if.else.split}"];
+	Node0x38fafe0 -> Node0x328dc50;
+	Node0x328ded0 [shape=record,label="{pd_lor.lhs.false.21.if.then_crit_edge}"];
+	Node0x328ded0 -> Node0x328e060;
+	Node0x328df20 [shape=record,label="{pd_lor.lhs.false.15.if.then_crit_edge}"];
+	Node0x328df20 -> Node0x328e060;
+	Node0x328df70 [shape=record,label="{pd_lor.lhs.false.9.if.then_crit_edge}"];
+	Node0x328df70 -> Node0x328e060;
+	Node0x328dfc0 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x328dfc0 -> Node0x328e060;
+	Node0x328e010 [shape=record,label="{pd_while.body.if.then_crit_edge}"];
+	Node0x328e010 -> Node0x328e060;
+	Node0x328e060 [shape=record,label="{it_if.then}"];
+	Node0x328e060 -> Node0x328dca0;
+}

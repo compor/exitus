@@ -1,0 +1,18 @@
+digraph "CFG for '_ZN11xercesc_2_512XPathScanner10scanNumberEPKtiiPNS_13ValueVectorOfIiEE_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_512XPathScanner10scanNumberEPKtiiPNS_13ValueVectorOfIiEE_while.cond' function";
+
+	Node0x9cc0110 [shape=record,label="{newFuncRoot}"];
+	Node0x9cc0110 -> Node0x9cc0200;
+	Node0x9cc0160 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x9cc01b0 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0x9cc0200 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9cc0200:s0 -> Node0x9cc0250;
+	Node0x9cc0200:s1 -> Node0x9cc0160;
+	Node0x9cc0250 [shape=record,label="{pd_while.body}"];
+	Node0x9cc0250 -> Node0xcfcd2c0;
+	Node0xcfcd2c0 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0xcfcd2c0:s0 -> Node0x9cc01b0;
+	Node0xcfcd2c0:s1 -> Node0x9cc02a0;
+	Node0x9cc02a0 [shape=record,label="{it_if.end}"];
+	Node0x9cc02a0 -> Node0x9cc0200;
+}

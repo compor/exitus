@@ -1,0 +1,19 @@
+digraph "CFG for 'create_pyramid_for.cond' function" {
+	label="CFG for 'create_pyramid_for.cond' function";
+
+	Node0x234bc70 [shape=record,label="{newFuncRoot}"];
+	Node0x234bc70 -> Node0x23dc380;
+	Node0x23dc330 [shape=record,label="{if.end.200.loopexit.exitStub}"];
+	Node0x23dc380 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x23dc380:s0 -> Node0x23dc3d0;
+	Node0x23dc380:s1 -> Node0x23dc330;
+	Node0x23dc3d0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x23dc3d0:s0 -> Node0x23dc470;
+	Node0x23dc3d0:s1 -> Node0x23dc420;
+	Node0x23dc420 [shape=record,label="{pd_if.else}"];
+	Node0x23dc420 -> Node0x23dc4c0;
+	Node0x23dc470 [shape=record,label="{pd_if.then.4}"];
+	Node0x23dc470 -> Node0x23dc4c0;
+	Node0x23dc4c0 [shape=record,label="{it_for.inc}"];
+	Node0x23dc4c0 -> Node0x23dc380;
+}

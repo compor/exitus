@@ -1,0 +1,14 @@
+digraph "CFG for 'CeilLog2' function" {
+	label="CFG for 'CeilLog2' function";
+
+	Node0x1710b30 [shape=record,label="{entry}"];
+	Node0x1710b30 -> Node0x1710b80;
+	Node0x1710b80 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1710b80:s0 -> Node0x1710bd0;
+	Node0x1710b80:s1 -> Node0x1710c20;
+	Node0x1710bd0 [shape=record,label="{it_while.body}"];
+	Node0x1710bd0 -> Node0x3048380;
+	Node0x3048380 [shape=record,label="{pd_while.body.split}"];
+	Node0x3048380 -> Node0x1710b80;
+	Node0x1710c20 [shape=record,label="{while.end}"];
+}

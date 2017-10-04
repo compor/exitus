@@ -1,0 +1,31 @@
+digraph "CFG for 'Perl_grok_number_while.cond.169' function" {
+	label="CFG for 'Perl_grok_number_while.cond.169' function";
+
+	Node0x4bbb6f0 [shape=record,label="{newFuncRoot}"];
+	Node0x4bbb6f0 -> Node0x4bde270;
+	Node0x4bde180 [shape=record,label="{while.cond.169.while.end.199_crit_edge.exitStub}"];
+	Node0x4bde1d0 [shape=record,label="{lor.rhs.178.while.end.199_crit_edge.exitStub}"];
+	Node0x4bde220 [shape=record,label="{while.body.187.while.end.199_crit_edge.exitStub}"];
+	Node0x4bde270 [shape=record,label="{it_while.cond.169|{<s0>T|<s1>F}}"];
+	Node0x4bde270:s0 -> Node0x4bde2c0;
+	Node0x4bde270:s1 -> Node0x4bde180;
+	Node0x4bde2c0 [shape=record,label="{it_land.rhs.175|{<s0>T|<s1>F}}"];
+	Node0x4bde2c0:s0 -> Node0x4bde3b0;
+	Node0x4bde2c0:s1 -> Node0x4bde310;
+	Node0x4bde310 [shape=record,label="{it_lor.rhs.178|{<s0>T|<s1>F}}"];
+	Node0x4bde310:s0 -> Node0x4bde360;
+	Node0x4bde310:s1 -> Node0x4bde1d0;
+	Node0x4bde360 [shape=record,label="{pd_lor.rhs.178.while.body.187_crit_edge}"];
+	Node0x4bde360 -> Node0x4bde400;
+	Node0x4bde3b0 [shape=record,label="{pd_land.rhs.175.while.body.187_crit_edge}"];
+	Node0x4bde3b0 -> Node0x4bde400;
+	Node0x4bde400 [shape=record,label="{it_while.body.187}"];
+	Node0x4bde400 -> Node0x6559b00;
+	Node0x6559b00 [shape=record,label="{pd_while.body.187.split1}"];
+	Node0x6559b00 -> Node0x6559d30;
+	Node0x6559d30 [shape=record,label="{it_while.body.187.split|{<s0>T|<s1>F}}"];
+	Node0x6559d30:s0 -> Node0x4bde450;
+	Node0x6559d30:s1 -> Node0x4bde220;
+	Node0x4bde450 [shape=record,label="{it_if.then.194}"];
+	Node0x4bde450 -> Node0x4bde270;
+}

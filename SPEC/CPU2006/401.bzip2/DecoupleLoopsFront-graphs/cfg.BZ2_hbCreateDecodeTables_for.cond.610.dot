@@ -1,0 +1,26 @@
+digraph "CFG for 'BZ2_hbCreateDecodeTables_for.cond' function" {
+	label="CFG for 'BZ2_hbCreateDecodeTables_for.cond' function";
+
+	Node0x19d39b0 [shape=record,label="{newFuncRoot}"];
+	Node0x19d39b0 -> Node0x19d3a50;
+	Node0x19d3a00 [shape=record,label="{for.cond.12.preheader.exitStub}"];
+	Node0x19d3a50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x19d3a50:s0 -> Node0x19d3aa0;
+	Node0x19d3a50:s1 -> Node0x19d3a00;
+	Node0x19d3aa0 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x19d3aa0 -> Node0x19d3af0;
+	Node0x19d3af0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x19d3af0:s0 -> Node0x19d3b90;
+	Node0x19d3af0:s1 -> Node0x19d3b40;
+	Node0x19d3b40 [shape=record,label="{it_for.inc.9}"];
+	Node0x19d3b40 -> Node0x19d3a50;
+	Node0x19d3b90 [shape=record,label="{pd_for.body.3|{<s0>T|<s1>F}}"];
+	Node0x19d3b90:s0 -> Node0x19d3c30;
+	Node0x19d3b90:s1 -> Node0x19d3be0;
+	Node0x19d3be0 [shape=record,label="{pd_for.body.3.for.inc_crit_edge}"];
+	Node0x19d3be0 -> Node0x19d3c80;
+	Node0x19d3c30 [shape=record,label="{pd_if.then}"];
+	Node0x19d3c30 -> Node0x19d3c80;
+	Node0x19d3c80 [shape=record,label="{pd_for.inc}"];
+	Node0x19d3c80 -> Node0x19d3af0;
+}

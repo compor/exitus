@@ -1,0 +1,24 @@
+digraph "CFG for '_ZN3pov11Warp_EPointEPdS0_PNS_14Pattern_StructE_for.cond' function" {
+	label="CFG for '_ZN3pov11Warp_EPointEPdS0_PNS_14Pattern_StructE_for.cond' function";
+
+	Node0x2e12bf0 [shape=record,label="{newFuncRoot}"];
+	Node0x2e12bf0 -> Node0x2e13020;
+	Node0x2e12c40 [shape=record,label="{for.end.exitStub}"];
+	Node0x2e13020 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2e13020:s0 -> Node0x2e13070;
+	Node0x2e13020:s1 -> Node0x2e12c40;
+	Node0x2e13070 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2e13070:s0 -> Node0x2e131b0;
+	Node0x2e13070:s1 -> Node0x2e130c0;
+	Node0x2e130c0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x2e130c0:s0 -> Node0x2e13160;
+	Node0x2e130c0:s1 -> Node0x2e13110;
+	Node0x2e13110 [shape=record,label="{pd_if.else.for.inc_crit_edge}"];
+	Node0x2e13110 -> Node0x2e13200;
+	Node0x2e13160 [shape=record,label="{pd_if.then.206}"];
+	Node0x2e13160 -> Node0x2e13200;
+	Node0x2e131b0 [shape=record,label="{pd_if.then.200}"];
+	Node0x2e131b0 -> Node0x2e13200;
+	Node0x2e13200 [shape=record,label="{it_for.inc}"];
+	Node0x2e13200 -> Node0x2e13020;
+}

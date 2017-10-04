@@ -1,0 +1,24 @@
+digraph "CFG for 'dump_global_regs_for.cond' function" {
+	label="CFG for 'dump_global_regs_for.cond' function";
+
+	Node0xb227770 [shape=record,label="{newFuncRoot}"];
+	Node0xb227770 -> Node0xb227810;
+	Node0xb2277c0 [shape=record,label="{for.end.exitStub}"];
+	Node0xb227810 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb227810:s0 -> Node0xb227860;
+	Node0xb227810:s1 -> Node0xb2277c0;
+	Node0xb227860 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xb227860:s0 -> Node0xb227900;
+	Node0xb227860:s1 -> Node0xb2278b0;
+	Node0xb2278b0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xb2278b0 -> Node0xb2279f0;
+	Node0xb227900 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0xb227900:s0 -> Node0xb2279a0;
+	Node0xb227900:s1 -> Node0xb227950;
+	Node0xb227950 [shape=record,label="{pd_if.then.for.inc_crit_edge}"];
+	Node0xb227950 -> Node0xb2279f0;
+	Node0xb2279a0 [shape=record,label="{pd_if.then.9}"];
+	Node0xb2279a0 -> Node0xb2279f0;
+	Node0xb2279f0 [shape=record,label="{it_for.inc}"];
+	Node0xb2279f0 -> Node0xb227810;
+}

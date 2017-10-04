@@ -1,0 +1,41 @@
+digraph "CFG for 'semeai_move_value_for.cond' function" {
+	label="CFG for 'semeai_move_value_for.cond' function";
+
+	Node0x4234bb0 [shape=record,label="{newFuncRoot}"];
+	Node0x4234bb0 -> Node0x42354e0;
+	Node0x4235490 [shape=record,label="{for.end.exitStub}"];
+	Node0x42354e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x42354e0:s0 -> Node0x4235530;
+	Node0x42354e0:s1 -> Node0x4235490;
+	Node0x4235530 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4235530:s0 -> Node0x42355d0;
+	Node0x4235530:s1 -> Node0x4235580;
+	Node0x4235580 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4235580 -> Node0x42358f0;
+	Node0x42355d0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x42355d0:s0 -> Node0x4235670;
+	Node0x42355d0:s1 -> Node0x4235620;
+	Node0x4235620 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x4235620 -> Node0x42358f0;
+	Node0x4235670 [shape=record,label="{pd_if.then.16|{<s0>T|<s1>F}}"];
+	Node0x4235670:s0 -> Node0x42358a0;
+	Node0x4235670:s1 -> Node0x42356c0;
+	Node0x42356c0 [shape=record,label="{pd_if.end.21|{<s0>T|<s1>F}}"];
+	Node0x42356c0:s0 -> Node0x4235760;
+	Node0x42356c0:s1 -> Node0x4235710;
+	Node0x4235710 [shape=record,label="{pd_if.end.21.if.end.27_crit_edge}"];
+	Node0x4235710 -> Node0x42357b0;
+	Node0x4235760 [shape=record,label="{pd_if.then.25}"];
+	Node0x4235760 -> Node0x42357b0;
+	Node0x42357b0 [shape=record,label="{pd_if.end.27|{<s0>T|<s1>F}}"];
+	Node0x42357b0:s0 -> Node0x4235850;
+	Node0x42357b0:s1 -> Node0x4235800;
+	Node0x4235800 [shape=record,label="{pd_if.end.27.for.inc_crit_edge}"];
+	Node0x4235800 -> Node0x42358f0;
+	Node0x4235850 [shape=record,label="{pd_if.then.32}"];
+	Node0x4235850 -> Node0x42358f0;
+	Node0x42358a0 [shape=record,label="{pd_if.then.16.for.inc_crit_edge}"];
+	Node0x42358a0 -> Node0x42358f0;
+	Node0x42358f0 [shape=record,label="{it_for.inc}"];
+	Node0x42358f0 -> Node0x42354e0;
+}

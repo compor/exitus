@@ -1,0 +1,38 @@
+digraph "CFG for 'aftermath_genmove_while.cond' function" {
+	label="CFG for 'aftermath_genmove_while.cond' function";
+
+	Node0x3342380 [shape=record,label="{newFuncRoot}"];
+	Node0x3342380 -> Node0x3342420;
+	Node0x33423d0 [shape=record,label="{while.end.exitStub}"];
+	Node0x3342420 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3342420:s0 -> Node0x3342470;
+	Node0x3342420:s1 -> Node0x33423d0;
+	Node0x3342470 [shape=record,label="{it_for.cond.621.preheader}"];
+	Node0x3342470 -> Node0x33424c0;
+	Node0x33424c0 [shape=record,label="{it_for.cond.621|{<s0>T|<s1>F}}"];
+	Node0x33424c0:s0 -> Node0x3342560;
+	Node0x33424c0:s1 -> Node0x3342510;
+	Node0x3342510 [shape=record,label="{pd_for.cond.621.while.cond.loopexit_crit_edge}"];
+	Node0x3342510 -> Node0x33427e0;
+	Node0x3342560 [shape=record,label="{it_for.body.624|{<s0>T|<s1>F}}"];
+	Node0x3342560:s0 -> Node0x3342600;
+	Node0x3342560:s1 -> Node0x33425b0;
+	Node0x33425b0 [shape=record,label="{pd_for.body.624.for.inc.650_crit_edge}"];
+	Node0x33425b0 -> Node0x3342740;
+	Node0x3342600 [shape=record,label="{it_land.lhs.true.634|{<s0>T|<s1>F}}"];
+	Node0x3342600:s0 -> Node0x33426a0;
+	Node0x3342600:s1 -> Node0x3342650;
+	Node0x3342650 [shape=record,label="{pd_land.lhs.true.634.for.inc.650_crit_edge}"];
+	Node0x3342650 -> Node0x3342740;
+	Node0x33426a0 [shape=record,label="{it_land.lhs.true.640|{<s0>T|<s1>F}}"];
+	Node0x33426a0:s0 -> Node0x3342790;
+	Node0x33426a0:s1 -> Node0x33426f0;
+	Node0x33426f0 [shape=record,label="{pd_land.lhs.true.640.for.inc.650_crit_edge}"];
+	Node0x33426f0 -> Node0x3342740;
+	Node0x3342740 [shape=record,label="{it_for.inc.650}"];
+	Node0x3342740 -> Node0x33424c0;
+	Node0x3342790 [shape=record,label="{pd_land.lhs.true.640.while.cond.loopexit_crit_edge}"];
+	Node0x3342790 -> Node0x33427e0;
+	Node0x33427e0 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x33427e0 -> Node0x3342420;
+}

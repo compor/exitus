@@ -1,0 +1,18 @@
+digraph "CFG for 'reg_while.cond' function" {
+	label="CFG for 'reg_while.cond' function";
+
+	Node0x332d1a0 [shape=record,label="{newFuncRoot}"];
+	Node0x332d1a0 -> Node0x332d290;
+	Node0x332d1f0 [shape=record,label="{while.end.exitStub}"];
+	Node0x332d240 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x332d290 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x332d290:s0 -> Node0x332d2e0;
+	Node0x332d290:s1 -> Node0x332d1f0;
+	Node0x332d2e0 [shape=record,label="{pd_while.body}"];
+	Node0x332d2e0 -> Node0x39521d0;
+	Node0x39521d0 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x39521d0:s0 -> Node0x332d240;
+	Node0x39521d0:s1 -> Node0x332d330;
+	Node0x332d330 [shape=record,label="{pd_if.end.22}"];
+	Node0x332d330 -> Node0x332d290;
+}

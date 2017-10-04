@@ -1,0 +1,14 @@
+digraph "CFG for 'owl_hotspots_for.cond' function" {
+	label="CFG for 'owl_hotspots_for.cond' function";
+
+	Node0x474e150 [shape=record,label="{newFuncRoot}"];
+	Node0x474e150 -> Node0x474e5a0;
+	Node0x474e1a0 [shape=record,label="{for.cond.1.preheader.exitStub}"];
+	Node0x474e5a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x474e5a0:s0 -> Node0x474e5f0;
+	Node0x474e5a0:s1 -> Node0x474e1a0;
+	Node0x474e5f0 [shape=record,label="{pd_for.body}"];
+	Node0x474e5f0 -> Node0x576b140;
+	Node0x576b140 [shape=record,label="{it_for.body.split}"];
+	Node0x576b140 -> Node0x474e5a0;
+}

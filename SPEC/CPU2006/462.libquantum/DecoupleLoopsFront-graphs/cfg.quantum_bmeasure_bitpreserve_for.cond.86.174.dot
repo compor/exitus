@@ -1,0 +1,26 @@
+digraph "CFG for 'quantum_bmeasure_bitpreserve_for.cond.86' function" {
+	label="CFG for 'quantum_bmeasure_bitpreserve_for.cond.86' function";
+
+	Node0x16cba20 [shape=record,label="{newFuncRoot}"];
+	Node0x16cba20 -> Node0x16cbac0;
+	Node0x16cba70 [shape=record,label="{for.end.126.exitStub}"];
+	Node0x16cbac0 [shape=record,label="{it_for.cond.86|{<s0>T|<s1>F}}"];
+	Node0x16cbac0:s0 -> Node0x16cbb10;
+	Node0x16cbac0:s1 -> Node0x16cba70;
+	Node0x16cbb10 [shape=record,label="{pd_for.body.90|{<s0>T|<s1>F}}"];
+	Node0x16cbb10:s0 -> Node0x16cbbb0;
+	Node0x16cbb10:s1 -> Node0x16cbb60;
+	Node0x16cbb60 [shape=record,label="{pd_for.body.90.for.inc.124_crit_edge}"];
+	Node0x16cbb60 -> Node0x16cbcf0;
+	Node0x16cbbb0 [shape=record,label="{pd_if.then.98|{<s0>T|<s1>F}}"];
+	Node0x16cbbb0:s0 -> Node0x16cbc50;
+	Node0x16cbbb0:s1 -> Node0x16cbc00;
+	Node0x16cbc00 [shape=record,label="{pd_if.then.98.complex_mul_cont_crit_edge}"];
+	Node0x16cbc00 -> Node0x16cbca0;
+	Node0x16cbc50 [shape=record,label="{pd_complex_mul_libcall}"];
+	Node0x16cbc50 -> Node0x16cbca0;
+	Node0x16cbca0 [shape=record,label="{pd_complex_mul_cont}"];
+	Node0x16cbca0 -> Node0x16cbcf0;
+	Node0x16cbcf0 [shape=record,label="{it_for.inc.124}"];
+	Node0x16cbcf0 -> Node0x16cbac0;
+}

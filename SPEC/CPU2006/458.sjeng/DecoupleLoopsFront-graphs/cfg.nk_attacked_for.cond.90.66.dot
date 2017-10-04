@@ -1,0 +1,16 @@
+digraph "CFG for 'nk_attacked_for.cond.90' function" {
+	label="CFG for 'nk_attacked_for.cond.90' function";
+
+	Node0xf98bc0 [shape=record,label="{newFuncRoot}"];
+	Node0xf98bc0 -> Node0xf9e4c0;
+	Node0xf9e420 [shape=record,label="{for.cond.104.preheader.exitStub}"];
+	Node0xf9e470 [shape=record,label="{return.loopexit8.exitStub}"];
+	Node0xf9e4c0 [shape=record,label="{it_for.cond.90|{<s0>T|<s1>F}}"];
+	Node0xf9e4c0:s0 -> Node0xf9e510;
+	Node0xf9e4c0:s1 -> Node0xf9e420;
+	Node0xf9e510 [shape=record,label="{it_for.body.92|{<s0>T|<s1>F}}"];
+	Node0xf9e510:s0 -> Node0xf9e470;
+	Node0xf9e510:s1 -> Node0xf9e560;
+	Node0xf9e560 [shape=record,label="{it_for.inc.101}"];
+	Node0xf9e560 -> Node0xf9e4c0;
+}

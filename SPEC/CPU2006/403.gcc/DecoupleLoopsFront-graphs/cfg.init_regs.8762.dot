@@ -1,0 +1,14 @@
+digraph "CFG for 'init_regs' function" {
+	label="CFG for 'init_regs' function";
+
+	Node0x8654050 [shape=record,label="{entry}"];
+	Node0x8654050 -> Node0x86540a0;
+	Node0x86540a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x86540a0:s0 -> Node0x86540f0;
+	Node0x86540a0:s1 -> Node0x8654140;
+	Node0x86540f0 [shape=record,label="{pd_for.body}"];
+	Node0x86540f0 -> Node0xe214ad0;
+	Node0xe214ad0 [shape=record,label="{it_for.body.split}"];
+	Node0xe214ad0 -> Node0x86540a0;
+	Node0x8654140 [shape=record,label="{for.end}"];
+}

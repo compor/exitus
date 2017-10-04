@@ -1,0 +1,33 @@
+digraph "CFG for 'add_pending_init_while.cond.54' function" {
+	label="CFG for 'add_pending_init_while.cond.54' function";
+
+	Node0xa105460 [shape=record,label="{newFuncRoot}"];
+	Node0xa105460 -> Node0xa1055a0;
+	Node0xa1054b0 [shape=record,label="{while.end.238.loopexit.exitStub}"];
+	Node0xa105500 [shape=record,label="{if.else.150.exitStub}"];
+	Node0xa105550 [shape=record,label="{if.else.64.exitStub}"];
+	Node0xa1055a0 [shape=record,label="{it_while.cond.54|{<s0>T|<s1>F}}"];
+	Node0xa1055a0:s0 -> Node0xa1055f0;
+	Node0xa1055a0:s1 -> Node0xa1054b0;
+	Node0xa1055f0 [shape=record,label="{it_while.body.56}"];
+	Node0xa1055f0 -> Node0xf039b20;
+	Node0xf039b20 [shape=record,label="{pd_while.body.56.split1}"];
+	Node0xf039b20 -> Node0xf039ad0;
+	Node0xf039ad0 [shape=record,label="{it_while.body.56.split|{<s0>T|<s1>F}}"];
+	Node0xf039ad0:s0 -> Node0xa1056e0;
+	Node0xf039ad0:s1 -> Node0xa105640;
+	Node0xa105640 [shape=record,label="{pd_if.else.144}"];
+	Node0xa105640 -> Node0xf0f1790;
+	Node0xf0f1790 [shape=record,label="{it_if.else.144.split|{<s0>T|<s1>F}}"];
+	Node0xf0f1790:s0 -> Node0xa105690;
+	Node0xf0f1790:s1 -> Node0xa105500;
+	Node0xa105690 [shape=record,label="{pd_if.then.148}"];
+	Node0xa105690 -> Node0xa105780;
+	Node0xa1056e0 [shape=record,label="{it_if.then.59|{<s0>T|<s1>F}}"];
+	Node0xa1056e0:s0 -> Node0xa105730;
+	Node0xa1056e0:s1 -> Node0xa105550;
+	Node0xa105730 [shape=record,label="{pd_if.then.62}"];
+	Node0xa105730 -> Node0xa105780;
+	Node0xa105780 [shape=record,label="{it_if.end.236}"];
+	Node0xa105780 -> Node0xa1055a0;
+}

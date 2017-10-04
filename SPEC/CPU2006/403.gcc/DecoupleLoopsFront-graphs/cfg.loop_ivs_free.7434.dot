@@ -1,0 +1,28 @@
+digraph "CFG for 'loop_ivs_free' function" {
+	label="CFG for 'loop_ivs_free' function";
+
+	Node0x80810c0 [shape=record,label="{entry}"];
+	Node0x80810c0 -> Node0x8081110;
+	Node0x8081110 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x8081110:s0 -> Node0x8081160;
+	Node0x8081110:s1 -> Node0x8081390;
+	Node0x8081160 [shape=record,label="{it_while.body}"];
+	Node0x8081160 -> Node0xe38bd10;
+	Node0xe38bd10 [shape=record,label="{pd_while.body.split}"];
+	Node0xe38bd10 -> Node0x80811b0;
+	Node0x80811b0 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x80811b0:s0 -> Node0x8081200;
+	Node0x80811b0:s1 -> Node0x8081250;
+	Node0x8081200 [shape=record,label="{pd_for.body}"];
+	Node0x8081200 -> Node0x80811b0;
+	Node0x8081250 [shape=record,label="{pd_for.end}"];
+	Node0x8081250 -> Node0x80812a0;
+	Node0x80812a0 [shape=record,label="{pd_for.cond.4|{<s0>T|<s1>F}}"];
+	Node0x80812a0:s0 -> Node0x80812f0;
+	Node0x80812a0:s1 -> Node0x8081340;
+	Node0x80812f0 [shape=record,label="{pd_for.body.6}"];
+	Node0x80812f0 -> Node0x80812a0;
+	Node0x8081340 [shape=record,label="{pd_for.end.9}"];
+	Node0x8081340 -> Node0x8081110;
+	Node0x8081390 [shape=record,label="{while.end}"];
+}

@@ -1,0 +1,19 @@
+digraph "CFG for 'do_replace' function" {
+	label="CFG for 'do_replace' function";
+
+	Node0x87bda30 [shape=record,label="{entry}"];
+	Node0x87bda30 -> Node0x87bda80;
+	Node0x87bda80 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x87bda80:s0 -> Node0x87bdad0;
+	Node0x87bda80:s1 -> Node0x87be440;
+	Node0x87bdad0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x87bdad0:s0 -> Node0x87bdb70;
+	Node0x87bdad0:s1 -> Node0x87bdb20;
+	Node0x87bdb20 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x87bdb20 -> Node0x87bdbc0;
+	Node0x87bdb70 [shape=record,label="{pd_if.then}"];
+	Node0x87bdb70 -> Node0x87bdbc0;
+	Node0x87bdbc0 [shape=record,label="{it_if.end}"];
+	Node0x87bdbc0 -> Node0x87bda80;
+	Node0x87be440 [shape=record,label="{while.end}"];
+}

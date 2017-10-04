@@ -1,0 +1,21 @@
+digraph "CFG for 'instantiate_decls' function" {
+	label="CFG for 'instantiate_decls' function";
+
+	Node0x4ce9680 [shape=record,label="{entry}"];
+	Node0x4ce9680 -> Node0x4ce96d0;
+	Node0x4ce96d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4ce96d0:s0 -> Node0x4ce9720;
+	Node0x4ce96d0:s1 -> Node0x4ce9860;
+	Node0x4ce9720 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4ce9720:s0 -> Node0x4ce9770;
+	Node0x4ce9720:s1 -> Node0x4ce97c0;
+	Node0x4ce9770 [shape=record,label="{pd_cond.true}"];
+	Node0x4ce9770 -> Node0x4ce9810;
+	Node0x4ce97c0 [shape=record,label="{pd_cond.false}"];
+	Node0x4ce97c0 -> Node0x4ce9810;
+	Node0x4ce9810 [shape=record,label="{pd_cond.end}"];
+	Node0x4ce9810 -> Node0xda49730;
+	Node0xda49730 [shape=record,label="{it_cond.end.split}"];
+	Node0xda49730 -> Node0x4ce96d0;
+	Node0x4ce9860 [shape=record,label="{for.end}"];
+}

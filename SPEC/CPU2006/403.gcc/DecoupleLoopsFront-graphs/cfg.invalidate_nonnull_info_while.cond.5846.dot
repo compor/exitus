@@ -1,0 +1,12 @@
+digraph "CFG for 'invalidate_nonnull_info_while.cond' function" {
+	label="CFG for 'invalidate_nonnull_info_while.cond' function";
+
+	Node0xb105e90 [shape=record,label="{newFuncRoot}"];
+	Node0xb105e90 -> Node0xb111320;
+	Node0xb105ee0 [shape=record,label="{while.end.exitStub}"];
+	Node0xb111320 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb111320:s0 -> Node0xb111370;
+	Node0xb111320:s1 -> Node0xb105ee0;
+	Node0xb111370 [shape=record,label="{it_while.body}"];
+	Node0xb111370 -> Node0xb111320;
+}

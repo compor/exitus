@@ -1,0 +1,16 @@
+digraph "CFG for 'vithist_backtrace' function" {
+	label="CFG for 'vithist_backtrace' function";
+
+	Node0xf13d40 [shape=record,label="{entry}"];
+	Node0xf13d40 -> Node0xf13d90;
+	Node0xf13d90 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xf13d90:s0 -> Node0xf13de0;
+	Node0xf13d90:s1 -> Node0xf13e30;
+	Node0xf13de0 [shape=record,label="{it_while.body}"];
+	Node0xf13de0 -> Node0x14f0a40;
+	Node0x14f0a40 [shape=record,label="{pd_while.body.split1}"];
+	Node0x14f0a40 -> Node0x14d08f0;
+	Node0x14d08f0 [shape=record,label="{it_while.body.split}"];
+	Node0x14d08f0 -> Node0xf13d90;
+	Node0xf13e30 [shape=record,label="{while.end}"];
+}

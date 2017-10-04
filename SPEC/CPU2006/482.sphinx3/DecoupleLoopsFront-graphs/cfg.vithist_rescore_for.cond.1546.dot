@@ -1,0 +1,24 @@
+digraph "CFG for 'vithist_rescore_for.cond' function" {
+	label="CFG for 'vithist_rescore_for.cond' function";
+
+	Node0x13b0940 [shape=record,label="{newFuncRoot}"];
+	Node0x13b0940 -> Node0x13b09e0;
+	Node0x13b0990 [shape=record,label="{if.end.93.loopexit.exitStub}"];
+	Node0x13b09e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x13b09e0:s0 -> Node0x13b0a30;
+	Node0x13b09e0:s1 -> Node0x13b0990;
+	Node0x13b0a30 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x13b0a30:s0 -> Node0x13b0ad0;
+	Node0x13b0a30:s1 -> Node0x13b0a80;
+	Node0x13b0a80 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x13b0a80 -> Node0x13b0bc0;
+	Node0x13b0ad0 [shape=record,label="{pd_if.then.56|{<s0>T|<s1>F}}"];
+	Node0x13b0ad0:s0 -> Node0x13b0b70;
+	Node0x13b0ad0:s1 -> Node0x13b0b20;
+	Node0x13b0b20 [shape=record,label="{pd_if.then.56.for.inc_crit_edge}"];
+	Node0x13b0b20 -> Node0x13b0bc0;
+	Node0x13b0b70 [shape=record,label="{pd_if.then.81}"];
+	Node0x13b0b70 -> Node0x13b0bc0;
+	Node0x13b0bc0 [shape=record,label="{it_for.inc}"];
+	Node0x13b0bc0 -> Node0x13b09e0;
+}

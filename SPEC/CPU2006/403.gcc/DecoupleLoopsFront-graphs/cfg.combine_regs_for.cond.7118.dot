@@ -1,0 +1,14 @@
+digraph "CFG for 'combine_regs_for.cond' function" {
+	label="CFG for 'combine_regs_for.cond' function";
+
+	Node0xb3aab00 [shape=record,label="{newFuncRoot}"];
+	Node0xb3aab00 -> Node0xb45fcf0;
+	Node0xb45fca0 [shape=record,label="{for.end.exitStub}"];
+	Node0xb45fcf0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb45fcf0:s0 -> Node0xb460160;
+	Node0xb45fcf0:s1 -> Node0xb45fca0;
+	Node0xb460160 [shape=record,label="{pd_for.body}"];
+	Node0xb460160 -> Node0xf712840;
+	Node0xf712840 [shape=record,label="{it_for.body.split}"];
+	Node0xf712840 -> Node0xb45fcf0;
+}

@@ -1,0 +1,24 @@
+digraph "CFG for 'reg_scan_mark_refs_for.cond' function" {
+	label="CFG for 'reg_scan_mark_refs_for.cond' function";
+
+	Node0xb9b19b0 [shape=record,label="{newFuncRoot}"];
+	Node0xb9b19b0 -> Node0xb9b1a50;
+	Node0xb9b1a00 [shape=record,label="{for.end.exitStub}"];
+	Node0xb9b1a50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb9b1a50:s0 -> Node0xb9b1be0;
+	Node0xb9b1a50:s1 -> Node0xb9b1aa0;
+	Node0xb9b1aa0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xb9b1aa0:s0 -> Node0xb9b1b90;
+	Node0xb9b1aa0:s1 -> Node0xb9b1af0;
+	Node0xb9b1af0 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0xb9b1af0:s0 -> Node0xb9b1b40;
+	Node0xb9b1af0:s1 -> Node0xb9b1a00;
+	Node0xb9b1b40 [shape=record,label="{pd_lor.rhs.for.inc_crit_edge}"];
+	Node0xb9b1b40 -> Node0xb9b1c30;
+	Node0xb9b1b90 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0xb9b1b90 -> Node0xb9b1c30;
+	Node0xb9b1be0 [shape=record,label="{pd_for.cond.for.inc_crit_edge}"];
+	Node0xb9b1be0 -> Node0xb9b1c30;
+	Node0xb9b1c30 [shape=record,label="{it_for.inc}"];
+	Node0xb9b1c30 -> Node0xb9b1a50;
+}

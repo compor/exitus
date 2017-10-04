@@ -1,0 +1,20 @@
+digraph "CFG for 'BZ2_decompress_for.cond.2589' function" {
+	label="CFG for 'BZ2_decompress_for.cond.2589' function";
+
+	Node0x1961850 [shape=record,label="{newFuncRoot}"];
+	Node0x1961850 -> Node0x1961df0;
+	Node0x19618a0 [shape=record,label="{for.end.2608.exitStub}"];
+	Node0x1961d50 [shape=record,label="{for.body.2592.save_state_and_return.loopexit17_crit_edge.exitStub}"];
+	Node0x1961da0 [shape=record,label="{lor.lhs.false.2598.save_state_and_return.loopexit17_crit_edge.exitStub}"];
+	Node0x1961df0 [shape=record,label="{it_for.cond.2589|{<s0>T|<s1>F}}"];
+	Node0x1961df0:s0 -> Node0x1961e40;
+	Node0x1961df0:s1 -> Node0x19618a0;
+	Node0x1961e40 [shape=record,label="{it_for.body.2592|{<s0>T|<s1>F}}"];
+	Node0x1961e40:s0 -> Node0x1961d50;
+	Node0x1961e40:s1 -> Node0x1961e90;
+	Node0x1961e90 [shape=record,label="{it_lor.lhs.false.2598|{<s0>T|<s1>F}}"];
+	Node0x1961e90:s0 -> Node0x1961da0;
+	Node0x1961e90:s1 -> Node0x1961ee0;
+	Node0x1961ee0 [shape=record,label="{it_for.inc.2606}"];
+	Node0x1961ee0 -> Node0x1961df0;
+}

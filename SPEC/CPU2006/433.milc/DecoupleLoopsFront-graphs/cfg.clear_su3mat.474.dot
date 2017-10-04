@@ -1,0 +1,19 @@
+digraph "CFG for 'clear_su3mat' function" {
+	label="CFG for 'clear_su3mat' function";
+
+	Node0x18505e0 [shape=record,label="{entry}"];
+	Node0x18505e0 -> Node0x1850630;
+	Node0x1850630 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1850630:s0 -> Node0x1850680;
+	Node0x1850630:s1 -> Node0x18507c0;
+	Node0x1850680 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x1850680 -> Node0x18506d0;
+	Node0x18506d0 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x18506d0:s0 -> Node0x1850720;
+	Node0x18506d0:s1 -> Node0x1850770;
+	Node0x1850720 [shape=record,label="{pd_for.body.3}"];
+	Node0x1850720 -> Node0x18506d0;
+	Node0x1850770 [shape=record,label="{it_for.inc.11}"];
+	Node0x1850770 -> Node0x1850630;
+	Node0x18507c0 [shape=record,label="{for.end.13}"];
+}

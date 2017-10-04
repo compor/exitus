@@ -1,0 +1,25 @@
+digraph "CFG for 'quantum_swaptheleads_for.cond.3' function" {
+	label="CFG for 'quantum_swaptheleads_for.cond.3' function";
+
+	Node0x1660210 [shape=record,label="{newFuncRoot}"];
+	Node0x1660210 -> Node0x1660300;
+	Node0x1660260 [shape=record,label="{for.cond.3.if.end.43.loopexit1_crit_edge.exitStub}"];
+	Node0x16602b0 [shape=record,label="{for.body.5.if.end.43.loopexit1_crit_edge.exitStub}"];
+	Node0x1660300 [shape=record,label="{it_for.cond.3|{<s0>T|<s1>F}}"];
+	Node0x1660300:s0 -> Node0x1660350;
+	Node0x1660300:s1 -> Node0x1660260;
+	Node0x1660350 [shape=record,label="{it_for.body.5|{<s0>T|<s1>F}}"];
+	Node0x1660350:s0 -> Node0x16602b0;
+	Node0x1660350:s1 -> Node0x16603a0;
+	Node0x16603a0 [shape=record,label="{pd_if.end}"];
+	Node0x16603a0 -> Node0x16603f0;
+	Node0x16603f0 [shape=record,label="{pd_for.cond.8|{<s0>T|<s1>F}}"];
+	Node0x16603f0:s0 -> Node0x1660490;
+	Node0x16603f0:s1 -> Node0x1660440;
+	Node0x1660440 [shape=record,label="{pd_for.end.24}"];
+	Node0x1660440 -> Node0x179b1f0;
+	Node0x179b1f0 [shape=record,label="{it_for.end.24.split}"];
+	Node0x179b1f0 -> Node0x1660300;
+	Node0x1660490 [shape=record,label="{pd_for.body.11}"];
+	Node0x1660490 -> Node0x16603f0;
+}

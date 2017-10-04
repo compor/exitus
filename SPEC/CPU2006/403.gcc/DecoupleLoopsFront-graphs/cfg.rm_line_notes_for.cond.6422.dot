@@ -1,0 +1,31 @@
+digraph "CFG for 'rm_line_notes_for.cond' function" {
+	label="CFG for 'rm_line_notes_for.cond' function";
+
+	Node0xb227370 [shape=record,label="{newFuncRoot}"];
+	Node0xb227370 -> Node0xb286140;
+	Node0xb285b70 [shape=record,label="{for.end.exitStub}"];
+	Node0xb285bc0 [shape=record,label="{if.then.3.exitStub}"];
+	Node0xb2860a0 [shape=record,label="{if.then.5.exitStub}"];
+	Node0xb2860f0 [shape=record,label="{if.then.8.exitStub}"];
+	Node0xb286140 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb286140:s0 -> Node0xb286190;
+	Node0xb286140:s1 -> Node0xb285b70;
+	Node0xb286190 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb286190:s0 -> Node0xb286230;
+	Node0xb286190:s1 -> Node0xb2861e0;
+	Node0xb2861e0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xb2861e0 -> Node0xb286370;
+	Node0xb286230 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0xb286230:s0 -> Node0xb285bc0;
+	Node0xb286230:s1 -> Node0xb286280;
+	Node0xb286280 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0xb286280:s0 -> Node0xb2860a0;
+	Node0xb286280:s1 -> Node0xb2862d0;
+	Node0xb2862d0 [shape=record,label="{it_if.end.6|{<s0>T|<s1>F}}"];
+	Node0xb2862d0:s0 -> Node0xb2860f0;
+	Node0xb2862d0:s1 -> Node0xb286320;
+	Node0xb286320 [shape=record,label="{pd_if.end.6.for.inc_crit_edge}"];
+	Node0xb286320 -> Node0xb286370;
+	Node0xb286370 [shape=record,label="{it_for.inc}"];
+	Node0xb286370 -> Node0xb286140;
+}

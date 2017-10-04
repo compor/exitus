@@ -1,0 +1,26 @@
+digraph "CFG for '_ZN6wayobj9addsphereERK8rvectortf_for.cond' function" {
+	label="CFG for '_ZN6wayobj9addsphereERK8rvectortf_for.cond' function";
+
+	Node0x2477920 [shape=record,label="{newFuncRoot}"];
+	Node0x2477920 -> Node0x24779c0;
+	Node0x2477970 [shape=record,label="{for.end.131.loopexit.exitStub}"];
+	Node0x24779c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x24779c0:s0 -> Node0x2477a10;
+	Node0x24779c0:s1 -> Node0x2477970;
+	Node0x2477a10 [shape=record,label="{pd_for.cond.92.preheader}"];
+	Node0x2477a10 -> Node0x2477a60;
+	Node0x2477a60 [shape=record,label="{pd_for.cond.92|{<s0>T|<s1>F}}"];
+	Node0x2477a60:s0 -> Node0x2477b00;
+	Node0x2477a60:s1 -> Node0x2477ab0;
+	Node0x2477ab0 [shape=record,label="{it_for.inc.129}"];
+	Node0x2477ab0 -> Node0x24779c0;
+	Node0x2477b00 [shape=record,label="{pd_for.body.94|{<s0>T|<s1>F}}"];
+	Node0x2477b00:s0 -> Node0x2477ba0;
+	Node0x2477b00:s1 -> Node0x2477b50;
+	Node0x2477b50 [shape=record,label="{pd_for.body.94.for.inc_crit_edge}"];
+	Node0x2477b50 -> Node0x2477bf0;
+	Node0x2477ba0 [shape=record,label="{pd_if.then.126}"];
+	Node0x2477ba0 -> Node0x2477bf0;
+	Node0x2477bf0 [shape=record,label="{pd_for.inc}"];
+	Node0x2477bf0 -> Node0x2477a60;
+}

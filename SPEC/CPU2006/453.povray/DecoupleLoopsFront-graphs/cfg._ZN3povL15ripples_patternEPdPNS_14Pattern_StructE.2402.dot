@@ -1,0 +1,21 @@
+digraph "CFG for '_ZN3povL15ripples_patternEPdPNS_14Pattern_StructE' function" {
+	label="CFG for '_ZN3povL15ripples_patternEPdPNS_14Pattern_StructE' function";
+
+	Node0x19ad0b0 [shape=record,label="{entry}"];
+	Node0x19ad0b0 -> Node0x19ad100;
+	Node0x19ad100 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x19ad100:s0 -> Node0x19ad150;
+	Node0x19ad100:s1 -> Node0x19ad290;
+	Node0x19ad150 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x19ad150:s0 -> Node0x19ad1f0;
+	Node0x19ad150:s1 -> Node0x19ad1a0;
+	Node0x19ad1a0 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x19ad1a0 -> Node0x19ad240;
+	Node0x19ad1f0 [shape=record,label="{pd_if.then}"];
+	Node0x19ad1f0 -> Node0x19ad240;
+	Node0x19ad240 [shape=record,label="{pd_if.end}"];
+	Node0x19ad240 -> Node0x3147b20;
+	Node0x3147b20 [shape=record,label="{it_if.end.split}"];
+	Node0x3147b20 -> Node0x19ad100;
+	Node0x19ad290 [shape=record,label="{for.end}"];
+}

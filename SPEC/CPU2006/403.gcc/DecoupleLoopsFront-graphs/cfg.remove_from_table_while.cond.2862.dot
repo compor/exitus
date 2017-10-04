@@ -1,0 +1,14 @@
+digraph "CFG for 'remove_from_table_while.cond' function" {
+	label="CFG for 'remove_from_table_while.cond' function";
+
+	Node0xa94b6c0 [shape=record,label="{newFuncRoot}"];
+	Node0xa94b6c0 -> Node0xa94baf0;
+	Node0xa94baa0 [shape=record,label="{if.end.10.loopexit.exitStub}"];
+	Node0xa94baf0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa94baf0:s0 -> Node0xa94bb40;
+	Node0xa94baf0:s1 -> Node0xa94baa0;
+	Node0xa94bb40 [shape=record,label="{pd_while.body}"];
+	Node0xa94bb40 -> Node0xf30fe20;
+	Node0xf30fe20 [shape=record,label="{it_while.body.split}"];
+	Node0xf30fe20 -> Node0xa94baf0;
+}

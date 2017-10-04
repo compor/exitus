@@ -1,0 +1,21 @@
+digraph "CFG for 'quantum_phase_scale_for.cond' function" {
+	label="CFG for 'quantum_phase_scale_for.cond' function";
+
+	Node0x16b61e0 [shape=record,label="{newFuncRoot}"];
+	Node0x16b61e0 -> Node0x16b6280;
+	Node0x16b6230 [shape=record,label="{for.end.exitStub}"];
+	Node0x16b6280 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x16b6280:s0 -> Node0x16b62d0;
+	Node0x16b6280:s1 -> Node0x16b6230;
+	Node0x16b62d0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x16b62d0:s0 -> Node0x16b6370;
+	Node0x16b62d0:s1 -> Node0x16b6320;
+	Node0x16b6320 [shape=record,label="{pd_for.body.complex_mul_cont_crit_edge}"];
+	Node0x16b6320 -> Node0x16b63c0;
+	Node0x16b6370 [shape=record,label="{pd_complex_mul_libcall}"];
+	Node0x16b6370 -> Node0x16b63c0;
+	Node0x16b63c0 [shape=record,label="{pd_complex_mul_cont}"];
+	Node0x16b63c0 -> Node0x1762fa0;
+	Node0x1762fa0 [shape=record,label="{it_complex_mul_cont.split}"];
+	Node0x1762fa0 -> Node0x16b6280;
+}

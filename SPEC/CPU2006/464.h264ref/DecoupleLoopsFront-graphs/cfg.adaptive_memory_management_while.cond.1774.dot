@@ -1,0 +1,46 @@
+digraph "CFG for 'adaptive_memory_management_while.cond' function" {
+	label="CFG for 'adaptive_memory_management_while.cond' function";
+
+	Node0x2554c90 [shape=record,label="{newFuncRoot}"];
+	Node0x2554c90 -> Node0x2554d30;
+	Node0x2554ce0 [shape=record,label="{while.end.exitStub}"];
+	Node0x2554d30 [shape=record,label="{it_while.cond}"];
+	Node0x2554d30 -> Node0x34f3bb0;
+	Node0x34f3bb0 [shape=record,label="{pd_while.cond.split1}"];
+	Node0x34f3bb0 -> Node0x36585b0;
+	Node0x36585b0 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0x36585b0:s0 -> Node0x2554d80;
+	Node0x36585b0:s1 -> Node0x2554ce0;
+	Node0x2554d80 [shape=record,label="{pd_while.body|{<s0>def|<s1>0|<s2>1|<s3>2|<s4>3|<s5>4|<s6>5|<s7>6}}"];
+	Node0x2554d80:s0 -> Node0x25550a0;
+	Node0x2554d80:s1 -> Node0x2554fb0;
+	Node0x2554d80:s2 -> Node0x2554f60;
+	Node0x2554d80:s3 -> Node0x2554f10;
+	Node0x2554d80:s4 -> Node0x2554ec0;
+	Node0x2554d80:s5 -> Node0x2554e70;
+	Node0x2554d80:s6 -> Node0x2554e20;
+	Node0x2554d80:s7 -> Node0x2554dd0;
+	Node0x2554dd0 [shape=record,label="{pd_sw.bb.14}"];
+	Node0x2554dd0 -> Node0x25550f0;
+	Node0x2554e20 [shape=record,label="{pd_sw.bb.12}"];
+	Node0x2554e20 -> Node0x25550f0;
+	Node0x2554e70 [shape=record,label="{pd_sw.bb.11}"];
+	Node0x2554e70 -> Node0x25550f0;
+	Node0x2554ec0 [shape=record,label="{pd_sw.bb.9}"];
+	Node0x2554ec0 -> Node0x25550f0;
+	Node0x2554f10 [shape=record,label="{pd_sw.bb.8}"];
+	Node0x2554f10 -> Node0x25550f0;
+	Node0x2554f60 [shape=record,label="{pd_sw.bb.7}"];
+	Node0x2554f60 -> Node0x25550f0;
+	Node0x2554fb0 [shape=record,label="{pd_sw.bb|{<s0>T|<s1>F}}"];
+	Node0x2554fb0:s0 -> Node0x2555050;
+	Node0x2554fb0:s1 -> Node0x2555000;
+	Node0x2555000 [shape=record,label="{pd_sw.bb.sw.epilog_crit_edge}"];
+	Node0x2555000 -> Node0x25550f0;
+	Node0x2555050 [shape=record,label="{pd_if.then}"];
+	Node0x2555050 -> Node0x25550f0;
+	Node0x25550a0 [shape=record,label="{pd_sw.default}"];
+	Node0x25550a0 -> Node0x25550f0;
+	Node0x25550f0 [shape=record,label="{pd_sw.epilog}"];
+	Node0x25550f0 -> Node0x2554d30;
+}

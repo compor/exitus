@@ -1,0 +1,19 @@
+digraph "CFG for 'vithist_init_for.cond' function" {
+	label="CFG for 'vithist_init_for.cond' function";
+
+	Node0x13af210 [shape=record,label="{newFuncRoot}"];
+	Node0x13af210 -> Node0x13af2b0;
+	Node0x13af260 [shape=record,label="{for.end.exitStub}"];
+	Node0x13af2b0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x13af2b0:s0 -> Node0x13af300;
+	Node0x13af2b0:s1 -> Node0x13af260;
+	Node0x13af300 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x13af300:s0 -> Node0x13af3a0;
+	Node0x13af300:s1 -> Node0x13af350;
+	Node0x13af350 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x13af350 -> Node0x13af3f0;
+	Node0x13af3a0 [shape=record,label="{pd_if.then.16}"];
+	Node0x13af3a0 -> Node0x13af3f0;
+	Node0x13af3f0 [shape=record,label="{it_for.inc}"];
+	Node0x13af3f0 -> Node0x13af2b0;
+}

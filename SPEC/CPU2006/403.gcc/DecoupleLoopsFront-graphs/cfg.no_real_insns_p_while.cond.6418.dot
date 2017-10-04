@@ -1,0 +1,23 @@
+digraph "CFG for 'no_real_insns_p_while.cond' function" {
+	label="CFG for 'no_real_insns_p_while.cond' function";
+
+	Node0xb284850 [shape=record,label="{newFuncRoot}"];
+	Node0xb284850 -> Node0xb284940;
+	Node0xb2848a0 [shape=record,label="{while.cond.return_crit_edge.exitStub}"];
+	Node0xb2848f0 [shape=record,label="{land.lhs.true.return_crit_edge.exitStub}"];
+	Node0xb284940 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb284940:s0 -> Node0xb284990;
+	Node0xb284940:s1 -> Node0xb2848a0;
+	Node0xb284990 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xb284990:s0 -> Node0xb284a30;
+	Node0xb284990:s1 -> Node0xb2849e0;
+	Node0xb2849e0 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0xb2849e0 -> Node0xb284ad0;
+	Node0xb284a30 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xb284a30:s0 -> Node0xb2848f0;
+	Node0xb284a30:s1 -> Node0xb284a80;
+	Node0xb284a80 [shape=record,label="{pd_land.lhs.true.if.end_crit_edge}"];
+	Node0xb284a80 -> Node0xb284ad0;
+	Node0xb284ad0 [shape=record,label="{it_if.end}"];
+	Node0xb284ad0 -> Node0xb284940;
+}

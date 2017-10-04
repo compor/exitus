@@ -1,0 +1,23 @@
+digraph "CFG for 'find_reg_fusage_for.cond' function" {
+	label="CFG for 'find_reg_fusage_for.cond' function";
+
+	Node0xc0b5340 [shape=record,label="{newFuncRoot}"];
+	Node0xc0b5340 -> Node0xc0b5430;
+	Node0xc0b5390 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0xc0b53e0 [shape=record,label="{land.lhs.true.return.loopexit_crit_edge.exitStub}"];
+	Node0xc0b5430 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc0b5430:s0 -> Node0xc0b5480;
+	Node0xc0b5430:s1 -> Node0xc0b5390;
+	Node0xc0b5480 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xc0b5480:s0 -> Node0xc0b5520;
+	Node0xc0b5480:s1 -> Node0xc0b54d0;
+	Node0xc0b54d0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xc0b54d0 -> Node0xc0b55c0;
+	Node0xc0b5520 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xc0b5520:s0 -> Node0xc0b53e0;
+	Node0xc0b5520:s1 -> Node0xc0b5570;
+	Node0xc0b5570 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0xc0b5570 -> Node0xc0b55c0;
+	Node0xc0b55c0 [shape=record,label="{it_for.inc}"];
+	Node0xc0b55c0 -> Node0xc0b5430;
+}

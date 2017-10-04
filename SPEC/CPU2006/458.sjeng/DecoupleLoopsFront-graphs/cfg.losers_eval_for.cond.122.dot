@@ -1,0 +1,14 @@
+digraph "CFG for 'losers_eval_for.cond' function" {
+	label="CFG for 'losers_eval_for.cond' function";
+
+	Node0xff4d70 [shape=record,label="{newFuncRoot}"];
+	Node0xff4d70 -> Node0xff4e10;
+	Node0xff4dc0 [shape=record,label="{for.cond.6.preheader.exitStub}"];
+	Node0xff4e10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xff4e10:s0 -> Node0xff4e60;
+	Node0xff4e10:s1 -> Node0xff4dc0;
+	Node0xff4e60 [shape=record,label="{pd_for.body}"];
+	Node0xff4e60 -> Node0x1338dd0;
+	Node0x1338dd0 [shape=record,label="{it_for.body.split}"];
+	Node0x1338dd0 -> Node0xff4e10;
+}

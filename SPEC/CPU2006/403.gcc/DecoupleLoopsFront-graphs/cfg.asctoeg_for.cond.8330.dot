@@ -1,0 +1,16 @@
+digraph "CFG for 'asctoeg_for.cond' function" {
+	label="CFG for 'asctoeg_for.cond' function";
+
+	Node0xb80aca0 [shape=record,label="{newFuncRoot}"];
+	Node0xb80aca0 -> Node0xb80ad90;
+	Node0xb80acf0 [shape=record,label="{aexit.loopexit.exitStub}"];
+	Node0xb80ad40 [shape=record,label="{read_expnt.exitStub}"];
+	Node0xb80ad90 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb80ad90:s0 -> Node0xb80ade0;
+	Node0xb80ad90:s1 -> Node0xb80acf0;
+	Node0xb80ade0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb80ade0:s0 -> Node0xb80ad40;
+	Node0xb80ade0:s1 -> Node0xb80ae30;
+	Node0xb80ae30 [shape=record,label="{it_for.inc}"];
+	Node0xb80ae30 -> Node0xb80ad90;
+}

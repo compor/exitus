@@ -1,0 +1,39 @@
+digraph "CFG for '_ZN13TriangulationILi3EE25update_number_cache_hexesEv_for.cond' function" {
+	label="CFG for '_ZN13TriangulationILi3EE25update_number_cache_hexesEv_for.cond' function";
+
+	Node0x98a4480 [shape=record,label="{newFuncRoot}"];
+	Node0x98a4480 -> Node0x98a4e10;
+	Node0x98a4dc0 [shape=record,label="{for.end.36.exitStub}"];
+	Node0x98a4e10 [shape=record,label="{it_for.cond}"];
+	Node0x98a4e10 -> Node0xbad8d60;
+	Node0xbad8d60 [shape=record,label="{pd_for.cond.split1}"];
+	Node0xbad8d60 -> Node0xbad8fe0;
+	Node0xbad8fe0 [shape=record,label="{it_for.cond.split|{<s0>T|<s1>F}}"];
+	Node0xbad8fe0:s0 -> Node0x98a4e60;
+	Node0xbad8fe0:s1 -> Node0x98a4dc0;
+	Node0x98a4e60 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x98a4e60:s0 -> Node0x98a4f00;
+	Node0x98a4e60:s1 -> Node0x98a4eb0;
+	Node0x98a4eb0 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x98a4eb0 -> Node0x98a50e0;
+	Node0x98a4f00 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x98a4f00:s0 -> Node0x98a4fa0;
+	Node0x98a4f00:s1 -> Node0x98a4f50;
+	Node0x98a4f50 [shape=record,label="{pd_cond.false}"];
+	Node0x98a4f50 -> Node0x98a4ff0;
+	Node0x98a4fa0 [shape=record,label="{pd_cond.true}"];
+	Node0x98a4fa0 -> Node0x98a4ff0;
+	Node0x98a4ff0 [shape=record,label="{pd_for.cond.19.preheader}"];
+	Node0x98a4ff0 -> Node0x98a5040;
+	Node0x98a5040 [shape=record,label="{pd_for.cond.19|{<s0>T|<s1>F}}"];
+	Node0x98a5040:s0 -> Node0x98a5130;
+	Node0x98a5040:s1 -> Node0x98a5090;
+	Node0x98a5090 [shape=record,label="{pd_if.end.loopexit}"];
+	Node0x98a5090 -> Node0x98a50e0;
+	Node0x98a50e0 [shape=record,label="{pd_if.end}"];
+	Node0x98a50e0 -> Node0xbad8a40;
+	Node0xbad8a40 [shape=record,label="{it_if.end.split}"];
+	Node0xbad8a40 -> Node0x98a4e10;
+	Node0x98a5130 [shape=record,label="{pd_for.body.21}"];
+	Node0x98a5130 -> Node0x98a5040;
+}

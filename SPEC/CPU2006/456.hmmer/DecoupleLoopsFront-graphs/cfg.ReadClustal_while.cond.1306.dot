@@ -1,0 +1,27 @@
+digraph "CFG for 'ReadClustal_while.cond' function" {
+	label="CFG for 'ReadClustal_while.cond' function";
+
+	Node0x3176660 [shape=record,label="{newFuncRoot}"];
+	Node0x3176660 -> Node0x3176750;
+	Node0x31766b0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x3176700 [shape=record,label="{land.lhs.true.while.end_crit_edge.exitStub}"];
+	Node0x3176750 [shape=record,label="{it_while.cond}"];
+	Node0x3176750 -> Node0x378d720;
+	Node0x378d720 [shape=record,label="{pd_while.cond.split1}"];
+	Node0x378d720 -> Node0x38a5a60;
+	Node0x38a5a60 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0x38a5a60:s0 -> Node0x31767a0;
+	Node0x38a5a60:s1 -> Node0x31766b0;
+	Node0x31767a0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x31767a0:s0 -> Node0x3176840;
+	Node0x31767a0:s1 -> Node0x31767f0;
+	Node0x31767f0 [shape=record,label="{pd_while.body.while.cond.backedge_crit_edge}"];
+	Node0x31767f0 -> Node0x31768e0;
+	Node0x3176840 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x3176840:s0 -> Node0x3176700;
+	Node0x3176840:s1 -> Node0x3176890;
+	Node0x3176890 [shape=record,label="{pd_land.lhs.true.while.cond.backedge_crit_edge}"];
+	Node0x3176890 -> Node0x31768e0;
+	Node0x31768e0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x31768e0 -> Node0x3176750;
+}

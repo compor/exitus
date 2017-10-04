@@ -1,0 +1,14 @@
+digraph "CFG for 'ReverseIntStack' function" {
+	label="CFG for 'ReverseIntStack' function";
+
+	Node0x2e548d0 [shape=record,label="{entry}"];
+	Node0x2e548d0 -> Node0x2e54920;
+	Node0x2e54920 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2e54920:s0 -> Node0x2e54ce0;
+	Node0x2e54920:s1 -> Node0x2e54d30;
+	Node0x2e54ce0 [shape=record,label="{it_while.body}"];
+	Node0x2e54ce0 -> Node0x360b130;
+	Node0x360b130 [shape=record,label="{pd_while.body.split}"];
+	Node0x360b130 -> Node0x2e54920;
+	Node0x2e54d30 [shape=record,label="{while.end}"];
+}

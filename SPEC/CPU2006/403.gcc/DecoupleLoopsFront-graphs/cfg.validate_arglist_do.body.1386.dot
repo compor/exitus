@@ -1,0 +1,33 @@
+digraph "CFG for 'validate_arglist_do.body' function" {
+	label="CFG for 'validate_arglist_do.body' function";
+
+	Node0x79d3930 [shape=record,label="{newFuncRoot}"];
+	Node0x79d3930 -> Node0x79ddbe0;
+	Node0x79d3980 [shape=record,label="{vaarg.end.end.loopexit_crit_edge.exitStub}"];
+	Node0x79ddaf0 [shape=record,label="{sw.bb.3.exitStub}"];
+	Node0x79ddb40 [shape=record,label="{sw.default.end.loopexit_crit_edge.exitStub}"];
+	Node0x79ddb90 [shape=record,label="{lor.lhs.false.end.loopexit_crit_edge.exitStub}"];
+	Node0x79ddbe0 [shape=record,label="{it_do.body|{<s0>T|<s1>F}}"];
+	Node0x79ddbe0:s0 -> Node0x79ddc80;
+	Node0x79ddbe0:s1 -> Node0x79ddc30;
+	Node0x79ddc30 [shape=record,label="{it_vaarg.in_mem}"];
+	Node0x79ddc30 -> Node0xedc4130;
+	Node0xedc4130 [shape=record,label="{pd_vaarg.in_mem.split}"];
+	Node0xedc4130 -> Node0x79ddcd0;
+	Node0x79ddc80 [shape=record,label="{it_vaarg.in_reg}"];
+	Node0x79ddc80 -> Node0xf03ee50;
+	Node0xf03ee50 [shape=record,label="{pd_vaarg.in_reg.split}"];
+	Node0xf03ee50 -> Node0x79ddcd0;
+	Node0x79ddcd0 [shape=record,label="{it_vaarg.end|{<s0>def|<s1>0|<s2>5}}"];
+	Node0x79ddcd0:s0 -> Node0x79ddd20;
+	Node0x79ddcd0:s1 -> Node0x79d3980;
+	Node0x79ddcd0:s2 -> Node0x79ddaf0;
+	Node0x79ddd20 [shape=record,label="{it_sw.default|{<s0>T|<s1>F}}"];
+	Node0x79ddd20:s0 -> Node0x79ddb40;
+	Node0x79ddd20:s1 -> Node0x79ddd70;
+	Node0x79ddd70 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x79ddd70:s0 -> Node0x79ddb90;
+	Node0x79ddd70:s1 -> Node0x79dddc0;
+	Node0x79dddc0 [shape=record,label="{it_sw.epilog}"];
+	Node0x79dddc0 -> Node0x79ddbe0;
+}

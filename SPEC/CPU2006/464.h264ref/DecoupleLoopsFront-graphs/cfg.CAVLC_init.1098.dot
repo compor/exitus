@@ -1,0 +1,26 @@
+digraph "CFG for 'CAVLC_init' function" {
+	label="CFG for 'CAVLC_init' function";
+
+	Node0x19be740 [shape=record,label="{entry}"];
+	Node0x19be740 -> Node0x19be790;
+	Node0x19be790 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x19be790:s0 -> Node0x19be7e0;
+	Node0x19be790:s1 -> Node0x19bea10;
+	Node0x19be7e0 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x19be7e0 -> Node0x19be830;
+	Node0x19be830 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x19be830:s0 -> Node0x19be880;
+	Node0x19be830:s1 -> Node0x19be9c0;
+	Node0x19be880 [shape=record,label="{pd_for.cond.4.preheader}"];
+	Node0x19be880 -> Node0x19be8d0;
+	Node0x19be8d0 [shape=record,label="{pd_for.cond.4|{<s0>T|<s1>F}}"];
+	Node0x19be8d0:s0 -> Node0x19be920;
+	Node0x19be8d0:s1 -> Node0x19be970;
+	Node0x19be920 [shape=record,label="{pd_for.body.6}"];
+	Node0x19be920 -> Node0x19be8d0;
+	Node0x19be970 [shape=record,label="{pd_for.inc.11}"];
+	Node0x19be970 -> Node0x19be830;
+	Node0x19be9c0 [shape=record,label="{it_for.inc.14}"];
+	Node0x19be9c0 -> Node0x19be790;
+	Node0x19bea10 [shape=record,label="{for.end.16}"];
+}

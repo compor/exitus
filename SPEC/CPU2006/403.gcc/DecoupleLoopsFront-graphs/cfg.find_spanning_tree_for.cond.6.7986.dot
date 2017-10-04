@@ -1,0 +1,29 @@
+digraph "CFG for 'find_spanning_tree_for.cond.6' function" {
+	label="CFG for 'find_spanning_tree_for.cond.6' function";
+
+	Node0xb7a1630 [shape=record,label="{newFuncRoot}"];
+	Node0xb7a1630 -> Node0xb7a16d0;
+	Node0xb7a1680 [shape=record,label="{for.cond.24.preheader.exitStub}"];
+	Node0xb7a16d0 [shape=record,label="{it_for.cond.6|{<s0>T|<s1>F}}"];
+	Node0xb7a16d0:s0 -> Node0xb7a1720;
+	Node0xb7a16d0:s1 -> Node0xb7a1680;
+	Node0xb7a1720 [shape=record,label="{pd_for.body.8|{<s0>T|<s1>F}}"];
+	Node0xb7a1720:s0 -> Node0xb7a17c0;
+	Node0xb7a1720:s1 -> Node0xb7a1770;
+	Node0xb7a1770 [shape=record,label="{pd_for.body.8.for.inc.21_crit_edge}"];
+	Node0xb7a1770 -> Node0xb7a1950;
+	Node0xb7a17c0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xb7a17c0:s0 -> Node0xb7a1900;
+	Node0xb7a17c0:s1 -> Node0xb7a1810;
+	Node0xb7a1810 [shape=record,label="{pd_land.lhs.true.13|{<s0>T|<s1>F}}"];
+	Node0xb7a1810:s0 -> Node0xb7a18b0;
+	Node0xb7a1810:s1 -> Node0xb7a1860;
+	Node0xb7a1860 [shape=record,label="{pd_land.lhs.true.13.for.inc.21_crit_edge}"];
+	Node0xb7a1860 -> Node0xb7a1950;
+	Node0xb7a18b0 [shape=record,label="{pd_if.then}"];
+	Node0xb7a18b0 -> Node0xb7a1950;
+	Node0xb7a1900 [shape=record,label="{pd_land.lhs.true.for.inc.21_crit_edge}"];
+	Node0xb7a1900 -> Node0xb7a1950;
+	Node0xb7a1950 [shape=record,label="{it_for.inc.21}"];
+	Node0xb7a1950 -> Node0xb7a16d0;
+}

@@ -1,0 +1,36 @@
+digraph "CFG for 'finish_dollar_format_checking_for.cond' function" {
+	label="CFG for 'finish_dollar_format_checking_for.cond' function";
+
+	Node0xa1b3220 [shape=record,label="{newFuncRoot}"];
+	Node0xa1b3220 -> Node0xa1b32c0;
+	Node0xa1b3270 [shape=record,label="{for.end.exitStub}"];
+	Node0xa1b32c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa1b32c0:s0 -> Node0xa1b3310;
+	Node0xa1b32c0:s1 -> Node0xa1b3270;
+	Node0xa1b3310 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xa1b3310:s0 -> Node0xa1b35e0;
+	Node0xa1b3310:s1 -> Node0xa1b3360;
+	Node0xa1b3360 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0xa1b3360:s0 -> Node0xa1b3400;
+	Node0xa1b3360:s1 -> Node0xa1b33b0;
+	Node0xa1b33b0 [shape=record,label="{pd_if.then.if.else_crit_edge}"];
+	Node0xa1b33b0 -> Node0xa1b34f0;
+	Node0xa1b3400 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xa1b3400:s0 -> Node0xa1b3590;
+	Node0xa1b3400:s1 -> Node0xa1b3450;
+	Node0xa1b3450 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xa1b3450:s0 -> Node0xa1b3540;
+	Node0xa1b3450:s1 -> Node0xa1b34a0;
+	Node0xa1b34a0 [shape=record,label="{pd_lor.lhs.false.if.else_crit_edge}"];
+	Node0xa1b34a0 -> Node0xa1b34f0;
+	Node0xa1b34f0 [shape=record,label="{pd_if.else}"];
+	Node0xa1b34f0 -> Node0xa1b3630;
+	Node0xa1b3540 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0xa1b3540 -> Node0xa1b3630;
+	Node0xa1b3590 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0xa1b3590 -> Node0xa1b3630;
+	Node0xa1b35e0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xa1b35e0 -> Node0xa1b3630;
+	Node0xa1b3630 [shape=record,label="{it_for.inc}"];
+	Node0xa1b3630 -> Node0xa1b32c0;
+}

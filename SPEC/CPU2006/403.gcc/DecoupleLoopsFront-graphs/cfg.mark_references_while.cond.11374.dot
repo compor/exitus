@@ -1,0 +1,29 @@
+digraph "CFG for 'mark_references_while.cond' function" {
+	label="CFG for 'mark_references_while.cond' function";
+
+	Node0xc33d910 [shape=record,label="{newFuncRoot}"];
+	Node0xc33d910 -> Node0xc33d9b0;
+	Node0xc33d960 [shape=record,label="{while.end.exitStub}"];
+	Node0xc33d9b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc33d9b0:s0 -> Node0xc33dbe0;
+	Node0xc33d9b0:s1 -> Node0xc33da00;
+	Node0xc33da00 [shape=record,label="{it_lor.lhs.false.21|{<s0>T|<s1>F}}"];
+	Node0xc33da00:s0 -> Node0xc33db90;
+	Node0xc33da00:s1 -> Node0xc33da50;
+	Node0xc33da50 [shape=record,label="{it_lor.lhs.false.25|{<s0>T|<s1>F}}"];
+	Node0xc33da50:s0 -> Node0xc33db40;
+	Node0xc33da50:s1 -> Node0xc33daa0;
+	Node0xc33daa0 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0xc33daa0:s0 -> Node0xc33daf0;
+	Node0xc33daa0:s1 -> Node0xc33d960;
+	Node0xc33daf0 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0xc33daf0 -> Node0xc33dc30;
+	Node0xc33db40 [shape=record,label="{pd_lor.lhs.false.25.while.body_crit_edge}"];
+	Node0xc33db40 -> Node0xc33dc30;
+	Node0xc33db90 [shape=record,label="{pd_lor.lhs.false.21.while.body_crit_edge}"];
+	Node0xc33db90 -> Node0xc33dc30;
+	Node0xc33dbe0 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0xc33dbe0 -> Node0xc33dc30;
+	Node0xc33dc30 [shape=record,label="{it_while.body}"];
+	Node0xc33dc30 -> Node0xc33d9b0;
+}

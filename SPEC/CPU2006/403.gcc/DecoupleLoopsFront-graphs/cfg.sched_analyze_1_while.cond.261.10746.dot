@@ -1,0 +1,21 @@
+digraph "CFG for 'sched_analyze_1_while.cond.261' function" {
+	label="CFG for 'sched_analyze_1_while.cond.261' function";
+
+	Node0xc19b310 [shape=record,label="{newFuncRoot}"];
+	Node0xc19b310 -> Node0xc19b3b0;
+	Node0xc19b360 [shape=record,label="{while.end.280.exitStub}"];
+	Node0xc19b3b0 [shape=record,label="{it_while.cond.261|{<s0>T|<s1>F}}"];
+	Node0xc19b3b0:s0 -> Node0xc19b400;
+	Node0xc19b3b0:s1 -> Node0xc19b360;
+	Node0xc19b400 [shape=record,label="{pd_while.body.263|{<s0>T|<s1>F}}"];
+	Node0xc19b400:s0 -> Node0xc19b4a0;
+	Node0xc19b400:s1 -> Node0xc19b450;
+	Node0xc19b450 [shape=record,label="{pd_while.body.263.if.end.273_crit_edge}"];
+	Node0xc19b450 -> Node0xc19b4f0;
+	Node0xc19b4a0 [shape=record,label="{pd_if.then.269}"];
+	Node0xc19b4a0 -> Node0xc19b4f0;
+	Node0xc19b4f0 [shape=record,label="{it_if.end.273}"];
+	Node0xc19b4f0 -> Node0xfcc17a0;
+	Node0xfcc17a0 [shape=record,label="{pd_if.end.273.split}"];
+	Node0xfcc17a0 -> Node0xc19b3b0;
+}

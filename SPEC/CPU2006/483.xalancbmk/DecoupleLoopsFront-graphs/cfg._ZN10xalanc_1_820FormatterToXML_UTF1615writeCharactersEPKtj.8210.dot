@@ -1,0 +1,23 @@
+digraph "CFG for '_ZN10xalanc_1_820FormatterToXML_UTF1615writeCharactersEPKtj' function" {
+	label="CFG for '_ZN10xalanc_1_820FormatterToXML_UTF1615writeCharactersEPKtj' function";
+
+	Node0x619c030 [shape=record,label="{entry}"];
+	Node0x619c030 -> Node0x619c4f0;
+	Node0x619c4f0 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x619c4f0 -> Node0x619c540;
+	Node0x619c540 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x619c540:s0 -> Node0x619c590;
+	Node0x619c540:s1 -> Node0x619c680;
+	Node0x619c590 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x619c590:s0 -> Node0x619c5e0;
+	Node0x619c590:s1 -> Node0x619c630;
+	Node0x619c5e0 [shape=record,label="{it_if.then}"];
+	Node0x619c5e0 -> Node0x619c540;
+	Node0x619c630 [shape=record,label="{pd_if.else}"];
+	Node0x619c630 -> Node0xb8d7130;
+	Node0xb8d7130 [shape=record,label="{it_if.else.split1}"];
+	Node0xb8d7130 -> Node0xb8e0910;
+	Node0xb8e0910 [shape=record,label="{pd_if.else.split}"];
+	Node0xb8e0910 -> Node0x619c4f0;
+	Node0x619c680 [shape=record,label="{while.end}"];
+}

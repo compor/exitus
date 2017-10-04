@@ -1,0 +1,39 @@
+digraph "CFG for 'S_find_byclass_while.cond.2003' function" {
+	label="CFG for 'S_find_byclass_while.cond.2003' function";
+
+	Node0x52e48a0 [shape=record,label="{newFuncRoot}"];
+	Node0x52e48a0 -> Node0x52e5340;
+	Node0x52e5250 [shape=record,label="{return.loopexit80.exitStub}"];
+	Node0x52e52a0 [shape=record,label="{land.lhs.true.2021.got_it.loopexit81_crit_edge.exitStub}"];
+	Node0x52e52f0 [shape=record,label="{lor.lhs.false.2023.got_it.loopexit81_crit_edge.exitStub}"];
+	Node0x52e5340 [shape=record,label="{it_while.cond.2003|{<s0>T|<s1>F}}"];
+	Node0x52e5340:s0 -> Node0x52e5390;
+	Node0x52e5340:s1 -> Node0x52e5250;
+	Node0x52e5390 [shape=record,label="{it_while.body.2006|{<s0>T|<s1>F}}"];
+	Node0x52e5390:s0 -> Node0x52e5430;
+	Node0x52e5390:s1 -> Node0x52e53e0;
+	Node0x52e53e0 [shape=record,label="{pd_while.body.2006.if.then.2019_crit_edge}"];
+	Node0x52e53e0 -> Node0x52e54d0;
+	Node0x52e5430 [shape=record,label="{it_land.lhs.true.2011|{<s0>T|<s1>F}}"];
+	Node0x52e5430:s0 -> Node0x52e5660;
+	Node0x52e5430:s1 -> Node0x52e5480;
+	Node0x52e5480 [shape=record,label="{pd_land.lhs.true.2011.if.then.2019_crit_edge}"];
+	Node0x52e5480 -> Node0x52e54d0;
+	Node0x52e54d0 [shape=record,label="{it_if.then.2019|{<s0>T|<s1>F}}"];
+	Node0x52e54d0:s0 -> Node0x52e5570;
+	Node0x52e54d0:s1 -> Node0x52e5520;
+	Node0x52e5520 [shape=record,label="{pd_if.then.2019.if.end.2030_crit_edge}"];
+	Node0x52e5520 -> Node0x52e56b0;
+	Node0x52e5570 [shape=record,label="{it_land.lhs.true.2021|{<s0>T|<s1>F}}"];
+	Node0x52e5570:s0 -> Node0x52e52a0;
+	Node0x52e5570:s1 -> Node0x52e55c0;
+	Node0x52e55c0 [shape=record,label="{it_lor.lhs.false.2023|{<s0>T|<s1>F}}"];
+	Node0x52e55c0:s0 -> Node0x52e52f0;
+	Node0x52e55c0:s1 -> Node0x52e5610;
+	Node0x52e5610 [shape=record,label="{pd_lor.lhs.false.2023.if.end.2030_crit_edge}"];
+	Node0x52e5610 -> Node0x52e56b0;
+	Node0x52e5660 [shape=record,label="{it_land.lhs.true.2011.if.end.2030_crit_edge}"];
+	Node0x52e5660 -> Node0x52e56b0;
+	Node0x52e56b0 [shape=record,label="{it_if.end.2030}"];
+	Node0x52e56b0 -> Node0x52e5340;
+}

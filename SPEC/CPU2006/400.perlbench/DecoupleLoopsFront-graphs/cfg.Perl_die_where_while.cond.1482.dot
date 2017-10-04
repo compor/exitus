@@ -1,0 +1,47 @@
+digraph "CFG for 'Perl_die_where_while.cond' function" {
+	label="CFG for 'Perl_die_where_while.cond' function";
+
+	Node0x4ee8180 [shape=record,label="{newFuncRoot}"];
+	Node0x4ee8180 -> Node0x4ee8270;
+	Node0x4ee81d0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x4ee8220 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x4ee8270 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4ee8270:s0 -> Node0x4ee82c0;
+	Node0x4ee8270:s1 -> Node0x4ee81d0;
+	Node0x4ee82c0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x4ee82c0:s0 -> Node0x4ee8310;
+	Node0x4ee82c0:s1 -> Node0x4ee8220;
+	Node0x4ee8310 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x4ee8310:s0 -> Node0x4ee86d0;
+	Node0x4ee8310:s1 -> Node0x4ee8360;
+	Node0x4ee8360 [shape=record,label="{pd_if.then.92|{<s0>T|<s1>F}}"];
+	Node0x4ee8360:s0 -> Node0x4ee8400;
+	Node0x4ee8360:s1 -> Node0x4ee83b0;
+	Node0x4ee83b0 [shape=record,label="{pd_if.then.92.cond.false.115_crit_edge}"];
+	Node0x4ee83b0 -> Node0x4ee85e0;
+	Node0x4ee8400 [shape=record,label="{pd_land.lhs.true.94|{<s0>T|<s1>F}}"];
+	Node0x4ee8400:s0 -> Node0x4ee84a0;
+	Node0x4ee8400:s1 -> Node0x4ee8450;
+	Node0x4ee8450 [shape=record,label="{pd_land.lhs.true.94.cond.false.115_crit_edge}"];
+	Node0x4ee8450 -> Node0x4ee85e0;
+	Node0x4ee84a0 [shape=record,label="{pd_land.lhs.true.99|{<s0>T|<s1>F}}"];
+	Node0x4ee84a0:s0 -> Node0x4ee8540;
+	Node0x4ee84a0:s1 -> Node0x4ee84f0;
+	Node0x4ee84f0 [shape=record,label="{pd_land.lhs.true.99.cond.false.115_crit_edge}"];
+	Node0x4ee84f0 -> Node0x4ee85e0;
+	Node0x4ee8540 [shape=record,label="{pd_land.lhs.true.103|{<s0>T|<s1>F}}"];
+	Node0x4ee8540:s0 -> Node0x4ee8630;
+	Node0x4ee8540:s1 -> Node0x4ee8590;
+	Node0x4ee8590 [shape=record,label="{pd_land.lhs.true.103.cond.false.115_crit_edge}"];
+	Node0x4ee8590 -> Node0x4ee85e0;
+	Node0x4ee85e0 [shape=record,label="{pd_cond.false.115}"];
+	Node0x4ee85e0 -> Node0x4ee8680;
+	Node0x4ee8630 [shape=record,label="{pd_cond.true.109}"];
+	Node0x4ee8630 -> Node0x4ee8680;
+	Node0x4ee8680 [shape=record,label="{pd_cond.end.117}"];
+	Node0x4ee8680 -> Node0x4ee8720;
+	Node0x4ee86d0 [shape=record,label="{pd_while.body.if.end.120_crit_edge}"];
+	Node0x4ee86d0 -> Node0x4ee8720;
+	Node0x4ee8720 [shape=record,label="{pd_if.end.120}"];
+	Node0x4ee8720 -> Node0x4ee8270;
+}

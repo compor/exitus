@@ -1,0 +1,38 @@
+digraph "CFG for 'PerlIOBase_read_while.cond' function" {
+	label="CFG for 'PerlIOBase_read_while.cond' function";
+
+	Node0x4d9f7e0 [shape=record,label="{newFuncRoot}"];
+	Node0x4d9f7e0 -> Node0x4d9f8d0;
+	Node0x4d9f830 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x4d9f880 [shape=record,label="{if.then.23.while.end_crit_edge.exitStub}"];
+	Node0x4d9f8d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4d9f8d0:s0 -> Node0x4d9f920;
+	Node0x4d9f8d0:s1 -> Node0x4d9f830;
+	Node0x4d9f920 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4d9f920:s0 -> Node0x4d9f9c0;
+	Node0x4d9f920:s1 -> Node0x4d9f970;
+	Node0x4d9f970 [shape=record,label="{pd_while.body.if.end.18_crit_edge}"];
+	Node0x4d9f970 -> Node0x4d9fa10;
+	Node0x4d9f9c0 [shape=record,label="{pd_if.then.13}"];
+	Node0x4d9f9c0 -> Node0x6465d50;
+	Node0x6465d50 [shape=record,label="{it_if.then.13.split3}"];
+	Node0x6465d50 -> Node0x6465df0;
+	Node0x6465df0 [shape=record,label="{pd_if.then.13.split2}"];
+	Node0x6465df0 -> Node0x6451610;
+	Node0x6451610 [shape=record,label="{it_if.then.13.split1}"];
+	Node0x6451610 -> Node0x6465e40;
+	Node0x6465e40 [shape=record,label="{pd_if.then.13.split}"];
+	Node0x6465e40 -> Node0x4d9fa10;
+	Node0x4d9fa10 [shape=record,label="{it_if.end.18|{<s0>T|<s1>F}}"];
+	Node0x4d9fa10:s0 -> Node0x4d9fab0;
+	Node0x4d9fa10:s1 -> Node0x4d9fa60;
+	Node0x4d9fa60 [shape=record,label="{pd_if.end.18.while.cond.backedge_crit_edge}"];
+	Node0x4d9fa60 -> Node0x4d9fb50;
+	Node0x4d9fab0 [shape=record,label="{it_if.then.23|{<s0>T|<s1>F}}"];
+	Node0x4d9fab0:s0 -> Node0x4d9f880;
+	Node0x4d9fab0:s1 -> Node0x4d9fb00;
+	Node0x4d9fb00 [shape=record,label="{pd_if.then.23.while.cond.backedge_crit_edge}"];
+	Node0x4d9fb00 -> Node0x4d9fb50;
+	Node0x4d9fb50 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x4d9fb50 -> Node0x4d9f8d0;
+}

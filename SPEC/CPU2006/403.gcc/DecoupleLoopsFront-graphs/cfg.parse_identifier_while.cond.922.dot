@@ -1,0 +1,12 @@
+digraph "CFG for 'parse_identifier_while.cond' function" {
+	label="CFG for 'parse_identifier_while.cond' function";
+
+	Node0xa230000 [shape=record,label="{newFuncRoot}"];
+	Node0xa230000 -> Node0xa235b70;
+	Node0xa230050 [shape=record,label="{while.end.exitStub}"];
+	Node0xa235b70 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa235b70:s0 -> Node0xa235bc0;
+	Node0xa235b70:s1 -> Node0xa230050;
+	Node0xa235bc0 [shape=record,label="{it_while.body}"];
+	Node0xa235bc0 -> Node0xa235b70;
+}

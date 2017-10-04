@@ -1,0 +1,31 @@
+digraph "CFG for 'Perl_ck_sort_for.cond' function" {
+	label="CFG for 'Perl_ck_sort_for.cond' function";
+
+	Node0x4c84640 [shape=record,label="{newFuncRoot}"];
+	Node0x4c84640 -> Node0x4c846e0;
+	Node0x4c84690 [shape=record,label="{if.end.59.loopexit.exitStub}"];
+	Node0x4c846e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4c846e0:s0 -> Node0x4c84730;
+	Node0x4c846e0:s1 -> Node0x4c84690;
+	Node0x4c84730 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4c84730:s0 -> Node0x4c84960;
+	Node0x4c84730:s1 -> Node0x4c84780;
+	Node0x4c84780 [shape=record,label="{it_if.else.43|{<s0>T|<s1>F}}"];
+	Node0x4c84780:s0 -> Node0x4c848c0;
+	Node0x4c84780:s1 -> Node0x4c847d0;
+	Node0x4c847d0 [shape=record,label="{it_lor.lhs.false.48|{<s0>T|<s1>F}}"];
+	Node0x4c847d0:s0 -> Node0x4c84870;
+	Node0x4c847d0:s1 -> Node0x4c84820;
+	Node0x4c84820 [shape=record,label="{pd_lor.lhs.false.48.for.inc_crit_edge}"];
+	Node0x4c84820 -> Node0x4c849b0;
+	Node0x4c84870 [shape=record,label="{pd_lor.lhs.false.48.if.then.53_crit_edge}"];
+	Node0x4c84870 -> Node0x4c84910;
+	Node0x4c848c0 [shape=record,label="{pd_if.else.43.if.then.53_crit_edge}"];
+	Node0x4c848c0 -> Node0x4c84910;
+	Node0x4c84910 [shape=record,label="{it_if.then.53}"];
+	Node0x4c84910 -> Node0x4c849b0;
+	Node0x4c84960 [shape=record,label="{pd_if.then.41}"];
+	Node0x4c84960 -> Node0x4c849b0;
+	Node0x4c849b0 [shape=record,label="{it_for.inc}"];
+	Node0x4c849b0 -> Node0x4c846e0;
+}

@@ -1,0 +1,31 @@
+digraph "CFG for 'count_reg_usage_for.cond' function" {
+	label="CFG for 'count_reg_usage_for.cond' function";
+
+	Node0xa80e970 [shape=record,label="{newFuncRoot}"];
+	Node0xa80e970 -> Node0xa80ea10;
+	Node0xa80e9c0 [shape=record,label="{for.end.114.loopexit.exitStub}"];
+	Node0xa80ea10 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa80ea10:s0 -> Node0xa80ea60;
+	Node0xa80ea10:s1 -> Node0xa80e9c0;
+	Node0xa80ea60 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xa80ea60:s0 -> Node0xa80ec90;
+	Node0xa80ea60:s1 -> Node0xa80eab0;
+	Node0xa80eab0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0xa80eab0:s0 -> Node0xa80eb50;
+	Node0xa80eab0:s1 -> Node0xa80eb00;
+	Node0xa80eb00 [shape=record,label="{pd_if.else.for.inc.112_crit_edge}"];
+	Node0xa80eb00 -> Node0xa80ece0;
+	Node0xa80eb50 [shape=record,label="{pd_if.then.95}"];
+	Node0xa80eb50 -> Node0xa80eba0;
+	Node0xa80eba0 [shape=record,label="{pd_for.cond.100|{<s0>T|<s1>F}}"];
+	Node0xa80eba0:s0 -> Node0xa80ec40;
+	Node0xa80eba0:s1 -> Node0xa80ebf0;
+	Node0xa80ebf0 [shape=record,label="{pd_for.inc.112.loopexit}"];
+	Node0xa80ebf0 -> Node0xa80ece0;
+	Node0xa80ec40 [shape=record,label="{pd_for.body.103}"];
+	Node0xa80ec40 -> Node0xa80eba0;
+	Node0xa80ec90 [shape=record,label="{pd_if.then.85}"];
+	Node0xa80ec90 -> Node0xa80ece0;
+	Node0xa80ece0 [shape=record,label="{it_for.inc.112}"];
+	Node0xa80ece0 -> Node0xa80ea10;
+}

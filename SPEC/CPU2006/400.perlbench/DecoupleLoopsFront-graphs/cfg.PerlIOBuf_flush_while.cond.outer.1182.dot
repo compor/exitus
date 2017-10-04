@@ -1,0 +1,27 @@
+digraph "CFG for 'PerlIOBuf_flush_while.cond.outer' function" {
+	label="CFG for 'PerlIOBuf_flush_while.cond.outer' function";
+
+	Node0x4da4060 [shape=record,label="{newFuncRoot}"];
+	Node0x4da4060 -> Node0x4daf720;
+	Node0x4daf630 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0x4daf680 [shape=record,label="{if.else.if.then.8_crit_edge.exitStub}"];
+	Node0x4daf6d0 [shape=record,label="{lor.lhs.false.if.then.8_crit_edge.exitStub}"];
+	Node0x4daf720 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x4daf720 -> Node0x4daf770;
+	Node0x4daf770 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4daf770:s0 -> Node0x4daf7c0;
+	Node0x4daf770:s1 -> Node0x4daf630;
+	Node0x4daf7c0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4daf7c0:s0 -> Node0x4daf900;
+	Node0x4daf7c0:s1 -> Node0x4daf810;
+	Node0x4daf810 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x4daf810:s0 -> Node0x4daf680;
+	Node0x4daf810:s1 -> Node0x4daf860;
+	Node0x4daf860 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4daf860:s0 -> Node0x4daf6d0;
+	Node0x4daf860:s1 -> Node0x4daf8b0;
+	Node0x4daf8b0 [shape=record,label="{pd_lor.lhs.false.while.cond_crit_edge}"];
+	Node0x4daf8b0 -> Node0x4daf770;
+	Node0x4daf900 [shape=record,label="{it_if.then.4}"];
+	Node0x4daf900 -> Node0x4daf720;
+}

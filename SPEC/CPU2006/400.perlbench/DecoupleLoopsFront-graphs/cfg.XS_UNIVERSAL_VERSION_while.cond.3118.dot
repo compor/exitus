@@ -1,0 +1,39 @@
+digraph "CFG for 'XS_UNIVERSAL_VERSION_while.cond' function" {
+	label="CFG for 'XS_UNIVERSAL_VERSION_while.cond' function";
+
+	Node0x57b2290 [shape=record,label="{newFuncRoot}"];
+	Node0x57b2290 -> Node0x57b2380;
+	Node0x57b22e0 [shape=record,label="{while.end.loopexit1.exitStub}"];
+	Node0x57b2330 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0x57b2380 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x57b2380:s0 -> Node0x57b23d0;
+	Node0x57b2380:s1 -> Node0x57b22e0;
+	Node0x57b23d0 [shape=record,label="{pd_while.body.preheader}"];
+	Node0x57b23d0 -> Node0x57b2420;
+	Node0x57b2420 [shape=record,label="{pd_while.body}"];
+	Node0x57b2420 -> Node0x6daa830;
+	Node0x6daa830 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x6daa830:s0 -> Node0x57b24c0;
+	Node0x6daa830:s1 -> Node0x57b2470;
+	Node0x57b2470 [shape=record,label="{pd_while.body.land.lhs.true.86_crit_edge}"];
+	Node0x57b2470 -> Node0x57b2560;
+	Node0x57b24c0 [shape=record,label="{it_land.lhs.true.81|{<s0>T|<s1>F}}"];
+	Node0x57b24c0:s0 -> Node0x57b26a0;
+	Node0x57b24c0:s1 -> Node0x57b2510;
+	Node0x57b2510 [shape=record,label="{pd_land.lhs.true.81.land.lhs.true.86_crit_edge}"];
+	Node0x57b2510 -> Node0x57b2560;
+	Node0x57b2560 [shape=record,label="{it_land.lhs.true.86|{<s0>T|<s1>F}}"];
+	Node0x57b2560:s0 -> Node0x57b2600;
+	Node0x57b2560:s1 -> Node0x57b25b0;
+	Node0x57b25b0 [shape=record,label="{pd_land.lhs.true.86.while.cond.loopexit_crit_edge}"];
+	Node0x57b25b0 -> Node0x57b26f0;
+	Node0x57b2600 [shape=record,label="{it_land.lhs.true.91|{<s0>T|<s1>F}}"];
+	Node0x57b2600:s0 -> Node0x57b2650;
+	Node0x57b2600:s1 -> Node0x57b2330;
+	Node0x57b2650 [shape=record,label="{pd_land.lhs.true.91.while.body_crit_edge}"];
+	Node0x57b2650 -> Node0x57b2420;
+	Node0x57b26a0 [shape=record,label="{pd_land.lhs.true.81.while.cond.loopexit_crit_edge}"];
+	Node0x57b26a0 -> Node0x57b26f0;
+	Node0x57b26f0 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x57b26f0 -> Node0x57b2380;
+}

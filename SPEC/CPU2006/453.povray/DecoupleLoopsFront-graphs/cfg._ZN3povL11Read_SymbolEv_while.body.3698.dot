@@ -1,0 +1,28 @@
+digraph "CFG for '_ZN3povL11Read_SymbolEv_while.body' function" {
+	label="CFG for '_ZN3povL11Read_SymbolEv_while.body' function";
+
+	Node0x2d384f0 [shape=record,label="{newFuncRoot}"];
+	Node0x2d384f0 -> Node0x2d38930;
+	Node0x2d388e0 [shape=record,label="{if.else.exitStub}"];
+	Node0x2d38930 [shape=record,label="{it_while.body}"];
+	Node0x2d38930 -> Node0x3a069b0;
+	Node0x3a069b0 [shape=record,label="{pd_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x3a069b0:s0 -> Node0x2d389d0;
+	Node0x3a069b0:s1 -> Node0x2d38980;
+	Node0x2d38980 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x2d38980 -> Node0x2d38a20;
+	Node0x2d389d0 [shape=record,label="{pd_if.then}"];
+	Node0x2d389d0 -> Node0x2d38a20;
+	Node0x2d38a20 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x2d38a20:s0 -> Node0x2d38b10;
+	Node0x2d38a20:s1 -> Node0x2d38a70;
+	Node0x2d38a70 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x2d38a70:s0 -> Node0x2d38ac0;
+	Node0x2d38a70:s1 -> Node0x2d388e0;
+	Node0x2d38ac0 [shape=record,label="{pd_lor.lhs.false.if.then.7_crit_edge}"];
+	Node0x2d38ac0 -> Node0x2d38b60;
+	Node0x2d38b10 [shape=record,label="{pd_if.end.if.then.7_crit_edge}"];
+	Node0x2d38b10 -> Node0x2d38b60;
+	Node0x2d38b60 [shape=record,label="{pd_if.then.7}"];
+	Node0x2d38b60 -> Node0x2d38930;
+}

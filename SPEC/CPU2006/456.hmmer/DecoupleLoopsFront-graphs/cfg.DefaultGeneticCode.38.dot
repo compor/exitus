@@ -1,0 +1,19 @@
+digraph "CFG for 'DefaultGeneticCode' function" {
+	label="CFG for 'DefaultGeneticCode' function";
+
+	Node0x28b1490 [shape=record,label="{entry}"];
+	Node0x28b1490 -> Node0x28b1810;
+	Node0x28b1810 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x28b1810:s0 -> Node0x28b1860;
+	Node0x28b1810:s1 -> Node0x28b19a0;
+	Node0x28b1860 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x28b1860:s0 -> Node0x28b18b0;
+	Node0x28b1860:s1 -> Node0x28b1900;
+	Node0x28b18b0 [shape=record,label="{pd_if.then}"];
+	Node0x28b18b0 -> Node0x28b1950;
+	Node0x28b1900 [shape=record,label="{pd_if.else}"];
+	Node0x28b1900 -> Node0x28b1950;
+	Node0x28b1950 [shape=record,label="{it_for.inc}"];
+	Node0x28b1950 -> Node0x28b1810;
+	Node0x28b19a0 [shape=record,label="{for.end}"];
+}

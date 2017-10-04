@@ -1,0 +1,16 @@
+digraph "CFG for 'S_regatom_while.cond' function" {
+	label="CFG for 'S_regatom_while.cond' function";
+
+	Node0x51eef70 [shape=record,label="{newFuncRoot}"];
+	Node0x51eef70 -> Node0x51ef060;
+	Node0x51eefc0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x51ef010 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x51ef060 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x51ef060:s0 -> Node0x51ef0b0;
+	Node0x51ef060:s1 -> Node0x51eefc0;
+	Node0x51ef0b0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x51ef0b0:s0 -> Node0x51ef100;
+	Node0x51ef0b0:s1 -> Node0x51ef010;
+	Node0x51ef100 [shape=record,label="{pd_while.body}"];
+	Node0x51ef100 -> Node0x51ef060;
+}

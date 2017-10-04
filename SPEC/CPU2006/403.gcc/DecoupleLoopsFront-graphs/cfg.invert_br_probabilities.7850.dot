@@ -1,0 +1,24 @@
+digraph "CFG for 'invert_br_probabilities' function" {
+	label="CFG for 'invert_br_probabilities' function";
+
+	Node0x833d7d0 [shape=record,label="{entry}"];
+	Node0x833d7d0 -> Node0x833d820;
+	Node0x833d820 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x833d820:s0 -> Node0x833d870;
+	Node0x833d820:s1 -> Node0x833da50;
+	Node0x833d870 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x833d870:s0 -> Node0x833d8c0;
+	Node0x833d870:s1 -> Node0x833d910;
+	Node0x833d8c0 [shape=record,label="{pd_if.then}"];
+	Node0x833d8c0 -> Node0x833da00;
+	Node0x833d910 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x833d910:s0 -> Node0x833d9b0;
+	Node0x833d910:s1 -> Node0x833d960;
+	Node0x833d960 [shape=record,label="{pd_if.else.for.inc_crit_edge}"];
+	Node0x833d960 -> Node0x833da00;
+	Node0x833d9b0 [shape=record,label="{pd_if.then.13}"];
+	Node0x833d9b0 -> Node0x833da00;
+	Node0x833da00 [shape=record,label="{it_for.inc}"];
+	Node0x833da00 -> Node0x833d820;
+	Node0x833da50 [shape=record,label="{for.end}"];
+}

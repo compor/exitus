@@ -1,0 +1,33 @@
+digraph "CFG for 'do_owl_attack_for.cond' function" {
+	label="CFG for 'do_owl_attack_for.cond' function";
+
+	Node0x4188030 [shape=record,label="{newFuncRoot}"];
+	Node0x4188030 -> Node0x4188120;
+	Node0x4188080 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x41880d0 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0x4188120 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4188120:s0 -> Node0x4188170;
+	Node0x4188120:s1 -> Node0x4188080;
+	Node0x4188170 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4188170:s0 -> Node0x41880d0;
+	Node0x4188170:s1 -> Node0x41881c0;
+	Node0x41881c0 [shape=record,label="{pd_if.end.88|{<s0>T|<s1>F}}"];
+	Node0x41881c0:s0 -> Node0x41883a0;
+	Node0x41881c0:s1 -> Node0x4188210;
+	Node0x4188210 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4188210:s0 -> Node0x4188350;
+	Node0x4188210:s1 -> Node0x4188260;
+	Node0x4188260 [shape=record,label="{pd_if.end.102|{<s0>T|<s1>F}}"];
+	Node0x4188260:s0 -> Node0x4188300;
+	Node0x4188260:s1 -> Node0x41882b0;
+	Node0x41882b0 [shape=record,label="{pd_if.end.102.for.inc_crit_edge}"];
+	Node0x41882b0 -> Node0x41883f0;
+	Node0x4188300 [shape=record,label="{pd_if.then.110}"];
+	Node0x4188300 -> Node0x41883f0;
+	Node0x4188350 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x4188350 -> Node0x41883f0;
+	Node0x41883a0 [shape=record,label="{pd_if.end.88.for.inc_crit_edge}"];
+	Node0x41883a0 -> Node0x41883f0;
+	Node0x41883f0 [shape=record,label="{it_for.inc}"];
+	Node0x41883f0 -> Node0x4188120;
+}

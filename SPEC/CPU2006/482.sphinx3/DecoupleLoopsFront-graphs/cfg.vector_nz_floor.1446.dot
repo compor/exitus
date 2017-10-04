@@ -1,0 +1,24 @@
+digraph "CFG for 'vector_nz_floor' function" {
+	label="CFG for 'vector_nz_floor' function";
+
+	Node0x10b76b0 [shape=record,label="{entry}"];
+	Node0x10b76b0 -> Node0x10b7700;
+	Node0x10b7700 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x10b7700:s0 -> Node0x10b7750;
+	Node0x10b7700:s1 -> Node0x10b7930;
+	Node0x10b7750 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x10b7750:s0 -> Node0x10b77f0;
+	Node0x10b7750:s1 -> Node0x10b77a0;
+	Node0x10b77a0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x10b77a0 -> Node0x10b78e0;
+	Node0x10b77f0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x10b77f0:s0 -> Node0x10b7890;
+	Node0x10b77f0:s1 -> Node0x10b7840;
+	Node0x10b7840 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x10b7840 -> Node0x10b78e0;
+	Node0x10b7890 [shape=record,label="{pd_if.then}"];
+	Node0x10b7890 -> Node0x10b78e0;
+	Node0x10b78e0 [shape=record,label="{it_for.inc}"];
+	Node0x10b78e0 -> Node0x10b7700;
+	Node0x10b7930 [shape=record,label="{for.end}"];
+}

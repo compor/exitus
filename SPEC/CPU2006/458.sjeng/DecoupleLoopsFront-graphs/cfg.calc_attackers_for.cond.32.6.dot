@@ -1,0 +1,48 @@
+digraph "CFG for 'calc_attackers_for.cond.32' function" {
+	label="CFG for 'calc_attackers_for.cond.32' function";
+
+	Node0xf82f20 [shape=record,label="{newFuncRoot}"];
+	Node0xf82f20 -> Node0xf83060;
+	Node0xf82f70 [shape=record,label="{for.cond.82.preheader.loopexit.exitStub}"];
+	Node0xf82fc0 [shape=record,label="{if.then.43.exitStub}"];
+	Node0xf83010 [shape=record,label="{if.then.49.exitStub}"];
+	Node0xf83060 [shape=record,label="{it_for.cond.32|{<s0>T|<s1>F}}"];
+	Node0xf83060:s0 -> Node0xf830b0;
+	Node0xf83060:s1 -> Node0xf82f70;
+	Node0xf830b0 [shape=record,label="{it_for.body.34|{<s0>T|<s1>F}}"];
+	Node0xf830b0:s0 -> Node0xf82fc0;
+	Node0xf830b0:s1 -> Node0xf83100;
+	Node0xf83100 [shape=record,label="{it_if.else.45|{<s0>T|<s1>F}}"];
+	Node0xf83100:s0 -> Node0xf83010;
+	Node0xf83100:s1 -> Node0xf83150;
+	Node0xf83150 [shape=record,label="{pd_while.cond.52.preheader}"];
+	Node0xf83150 -> Node0xf831a0;
+	Node0xf831a0 [shape=record,label="{pd_while.cond.52|{<s0>T|<s1>F}}"];
+	Node0xf831a0:s0 -> Node0xf83240;
+	Node0xf831a0:s1 -> Node0xf831f0;
+	Node0xf831f0 [shape=record,label="{pd_while.cond.52.for.inc.79.loopexit_crit_edge}"];
+	Node0xf831f0 -> Node0xf833d0;
+	Node0xf83240 [shape=record,label="{pd_while.body.56|{<s0>T|<s1>F}}"];
+	Node0xf83240:s0 -> Node0xf83470;
+	Node0xf83240:s1 -> Node0xf83290;
+	Node0xf83290 [shape=record,label="{pd_lor.lhs.false.60|{<s0>T|<s1>F}}"];
+	Node0xf83290:s0 -> Node0xf83420;
+	Node0xf83290:s1 -> Node0xf832e0;
+	Node0xf832e0 [shape=record,label="{pd_if.else.66|{<s0>T|<s1>F}}"];
+	Node0xf832e0:s0 -> Node0xf83380;
+	Node0xf832e0:s1 -> Node0xf83330;
+	Node0xf83330 [shape=record,label="{pd_if.end.72}"];
+	Node0xf83330 -> Node0xf831a0;
+	Node0xf83380 [shape=record,label="{pd_if.else.66.for.inc.79.loopexit_crit_edge}"];
+	Node0xf83380 -> Node0xf833d0;
+	Node0xf833d0 [shape=record,label="{pd_for.inc.79.loopexit}"];
+	Node0xf833d0 -> Node0xf83510;
+	Node0xf83420 [shape=record,label="{pd_lor.lhs.false.60.if.then.64_crit_edge}"];
+	Node0xf83420 -> Node0xf834c0;
+	Node0xf83470 [shape=record,label="{pd_while.body.56.if.then.64_crit_edge}"];
+	Node0xf83470 -> Node0xf834c0;
+	Node0xf834c0 [shape=record,label="{pd_if.then.64}"];
+	Node0xf834c0 -> Node0xf83510;
+	Node0xf83510 [shape=record,label="{it_for.inc.79}"];
+	Node0xf83510 -> Node0xf83060;
+}

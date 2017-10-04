@@ -1,0 +1,16 @@
+digraph "CFG for 'binfo_member_while.cond' function" {
+	label="CFG for 'binfo_member_while.cond' function";
+
+	Node0xc4c9550 [shape=record,label="{newFuncRoot}"];
+	Node0xc4c9550 -> Node0xc4c9640;
+	Node0xc4c95a0 [shape=record,label="{while.cond.return_crit_edge.exitStub}"];
+	Node0xc4c95f0 [shape=record,label="{while.body.return_crit_edge.exitStub}"];
+	Node0xc4c9640 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc4c9640:s0 -> Node0xc4c9690;
+	Node0xc4c9640:s1 -> Node0xc4c95a0;
+	Node0xc4c9690 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc4c9690:s0 -> Node0xc4c95f0;
+	Node0xc4c9690:s1 -> Node0xc4c96e0;
+	Node0xc4c96e0 [shape=record,label="{it_if.end}"];
+	Node0xc4c96e0 -> Node0xc4c9640;
+}

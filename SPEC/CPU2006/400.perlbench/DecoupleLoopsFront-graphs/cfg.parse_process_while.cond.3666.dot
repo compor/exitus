@@ -1,0 +1,34 @@
+digraph "CFG for 'parse_process_while.cond' function" {
+	label="CFG for 'parse_process_while.cond' function";
+
+	Node0x59bd860 [shape=record,label="{newFuncRoot}"];
+	Node0x59bd860 -> Node0x59bd9a0;
+	Node0x59bd8b0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x59bd900 [shape=record,label="{if.end.14.loopexit.exitStub}"];
+	Node0x59bd950 [shape=record,label="{if.end.exitStub}"];
+	Node0x59bd9a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x59bd9a0:s0 -> Node0x59bd9f0;
+	Node0x59bd9a0:s1 -> Node0x59bd8b0;
+	Node0x59bd9f0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x59bd9f0:s0 -> Node0x59bda90;
+	Node0x59bd9f0:s1 -> Node0x59bda40;
+	Node0x59bda40 [shape=record,label="{it_if.end.15}"];
+	Node0x59bda40 -> Node0x59bdc20;
+	Node0x59bda90 [shape=record,label="{pd_if.then}"];
+	Node0x59bda90 -> Node0x690a6f0;
+	Node0x690a6f0 [shape=record,label="{it_if.then.split|{<s0>T|<s1>F}}"];
+	Node0x690a6f0:s0 -> Node0x59bdae0;
+	Node0x690a6f0:s1 -> Node0x59bd900;
+	Node0x59bdae0 [shape=record,label="{it_if.then.5|{<s0>T|<s1>F}}"];
+	Node0x59bdae0:s0 -> Node0x59bdbd0;
+	Node0x59bdae0:s1 -> Node0x59bdb30;
+	Node0x59bdb30 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x59bdb30:s0 -> Node0x59bdb80;
+	Node0x59bdb30:s1 -> Node0x59bd950;
+	Node0x59bdb80 [shape=record,label="{pd_lor.lhs.false.while.cond.backedge_crit_edge}"];
+	Node0x59bdb80 -> Node0x59bdc20;
+	Node0x59bdbd0 [shape=record,label="{pd_if.then.5.while.cond.backedge_crit_edge}"];
+	Node0x59bdbd0 -> Node0x59bdc20;
+	Node0x59bdc20 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x59bdc20 -> Node0x59bd9a0;
+}

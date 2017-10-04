@@ -1,0 +1,27 @@
+digraph "CFG for 'Perl_utf8_to_bytes_for.cond' function" {
+	label="CFG for 'Perl_utf8_to_bytes_for.cond' function";
+
+	Node0x57e27f0 [shape=record,label="{newFuncRoot}"];
+	Node0x57e27f0 -> Node0x57e2930;
+	Node0x57e2840 [shape=record,label="{while.cond.preheader.exitStub}"];
+	Node0x57e2890 [shape=record,label="{land.lhs.true.if.then_crit_edge.exitStub}"];
+	Node0x57e28e0 [shape=record,label="{lor.lhs.false.8.if.then_crit_edge.exitStub}"];
+	Node0x57e2930 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x57e2930:s0 -> Node0x57e2980;
+	Node0x57e2930:s1 -> Node0x57e2840;
+	Node0x57e2980 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x57e2980:s0 -> Node0x57e2ac0;
+	Node0x57e2980:s1 -> Node0x57e29d0;
+	Node0x57e29d0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x57e29d0:s0 -> Node0x57e2890;
+	Node0x57e29d0:s1 -> Node0x57e2a20;
+	Node0x57e2a20 [shape=record,label="{it_lor.lhs.false.8|{<s0>T|<s1>F}}"];
+	Node0x57e2a20:s0 -> Node0x57e2a70;
+	Node0x57e2a20:s1 -> Node0x57e28e0;
+	Node0x57e2a70 [shape=record,label="{pd_lor.lhs.false.8.for.cond.backedge_crit_edge}"];
+	Node0x57e2a70 -> Node0x57e2b10;
+	Node0x57e2ac0 [shape=record,label="{pd_for.body.for.cond.backedge_crit_edge}"];
+	Node0x57e2ac0 -> Node0x57e2b10;
+	Node0x57e2b10 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x57e2b10 -> Node0x57e2930;
+}

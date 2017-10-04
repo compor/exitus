@@ -1,0 +1,26 @@
+digraph "CFG for 'clear_board_for.cond' function" {
+	label="CFG for 'clear_board_for.cond' function";
+
+	Node0x3ddcb30 [shape=record,label="{newFuncRoot}"];
+	Node0x3ddcb30 -> Node0x3ddcbd0;
+	Node0x3ddcb80 [shape=record,label="{for.end.exitStub}"];
+	Node0x3ddcbd0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3ddcbd0:s0 -> Node0x3ddcc20;
+	Node0x3ddcbd0:s1 -> Node0x3ddcb80;
+	Node0x3ddcc20 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3ddcc20:s0 -> Node0x3ddccc0;
+	Node0x3ddcc20:s1 -> Node0x3ddcc70;
+	Node0x3ddcc70 [shape=record,label="{pd_for.body.if.then.7_crit_edge}"];
+	Node0x3ddcc70 -> Node0x3ddcd60;
+	Node0x3ddccc0 [shape=record,label="{pd_land.lhs.true.4|{<s0>T|<s1>F}}"];
+	Node0x3ddccc0:s0 -> Node0x3ddcdb0;
+	Node0x3ddccc0:s1 -> Node0x3ddcd10;
+	Node0x3ddcd10 [shape=record,label="{pd_land.lhs.true.4.if.then.7_crit_edge}"];
+	Node0x3ddcd10 -> Node0x3ddcd60;
+	Node0x3ddcd60 [shape=record,label="{pd_if.then.7}"];
+	Node0x3ddcd60 -> Node0x3ddce00;
+	Node0x3ddcdb0 [shape=record,label="{pd_land.lhs.true.4.for.inc_crit_edge}"];
+	Node0x3ddcdb0 -> Node0x3ddce00;
+	Node0x3ddce00 [shape=record,label="{it_for.inc}"];
+	Node0x3ddce00 -> Node0x3ddcbd0;
+}

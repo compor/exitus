@@ -1,0 +1,19 @@
+digraph "CFG for 'img2buf_for.cond' function" {
+	label="CFG for 'img2buf_for.cond' function";
+
+	Node0x2a4a6d0 [shape=record,label="{newFuncRoot}"];
+	Node0x2a4a6d0 -> Node0x2a4a770;
+	Node0x2a4a720 [shape=record,label="{if.end.123.loopexit.exitStub}"];
+	Node0x2a4a770 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2a4a770:s0 -> Node0x2a4a7c0;
+	Node0x2a4a770:s1 -> Node0x2a4a720;
+	Node0x2a4a7c0 [shape=record,label="{pd_for.cond.5.preheader}"];
+	Node0x2a4a7c0 -> Node0x2a4a810;
+	Node0x2a4a810 [shape=record,label="{pd_for.cond.5|{<s0>T|<s1>F}}"];
+	Node0x2a4a810:s0 -> Node0x2a4a8b0;
+	Node0x2a4a810:s1 -> Node0x2a4a860;
+	Node0x2a4a860 [shape=record,label="{it_for.inc.15}"];
+	Node0x2a4a860 -> Node0x2a4a770;
+	Node0x2a4a8b0 [shape=record,label="{pd_for.body.8}"];
+	Node0x2a4a8b0 -> Node0x2a4a810;
+}

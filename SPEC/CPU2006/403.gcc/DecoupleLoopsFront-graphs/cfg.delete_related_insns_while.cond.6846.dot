@@ -1,0 +1,16 @@
+digraph "CFG for 'delete_related_insns_while.cond' function" {
+	label="CFG for 'delete_related_insns_while.cond' function";
+
+	Node0xb36fe10 [shape=record,label="{newFuncRoot}"];
+	Node0xb36fe10 -> Node0xb36ff00;
+	Node0xb36fe60 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xb36feb0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xb36ff00 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb36ff00:s0 -> Node0xb36ff50;
+	Node0xb36ff00:s1 -> Node0xb36fe60;
+	Node0xb36ff50 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xb36ff50:s0 -> Node0xb36ffa0;
+	Node0xb36ff50:s1 -> Node0xb36feb0;
+	Node0xb36ffa0 [shape=record,label="{it_while.body}"];
+	Node0xb36ffa0 -> Node0xb36ff00;
+}

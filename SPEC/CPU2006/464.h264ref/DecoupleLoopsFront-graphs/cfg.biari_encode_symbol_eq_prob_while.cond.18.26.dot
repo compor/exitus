@@ -1,0 +1,26 @@
+digraph "CFG for 'biari_encode_symbol_eq_prob_while.cond.18' function" {
+	label="CFG for 'biari_encode_symbol_eq_prob_while.cond.18' function";
+
+	Node0x218b700 [shape=record,label="{newFuncRoot}"];
+	Node0x218b700 -> Node0x2195500;
+	Node0x218b750 [shape=record,label="{while.end.51.exitStub}"];
+	Node0x2195500 [shape=record,label="{it_while.cond.18|{<s0>T|<s1>F}}"];
+	Node0x2195500:s0 -> Node0x2195550;
+	Node0x2195500:s1 -> Node0x218b750;
+	Node0x2195550 [shape=record,label="{pd_while.body.21|{<s0>T|<s1>F}}"];
+	Node0x2195550:s0 -> Node0x21955f0;
+	Node0x2195550:s1 -> Node0x21955a0;
+	Node0x21955a0 [shape=record,label="{pd_while.body.21.while.cond.18.backedge_crit_edge}"];
+	Node0x21955a0 -> Node0x21956e0;
+	Node0x21955f0 [shape=record,label="{pd_if.then.31}"];
+	Node0x21955f0 -> Node0x2195640;
+	Node0x2195640 [shape=record,label="{pd_while.cond.40|{<s0>T|<s1>F}}"];
+	Node0x2195640:s0 -> Node0x2195730;
+	Node0x2195640:s1 -> Node0x2195690;
+	Node0x2195690 [shape=record,label="{pd_while.cond.18.loopexit}"];
+	Node0x2195690 -> Node0x21956e0;
+	Node0x21956e0 [shape=record,label="{pd_while.cond.18.backedge}"];
+	Node0x21956e0 -> Node0x2195500;
+	Node0x2195730 [shape=record,label="{pd_while.body.44}"];
+	Node0x2195730 -> Node0x2195640;
+}

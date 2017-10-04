@@ -1,0 +1,44 @@
+digraph "CFG for 'copy_loop_headers' function" {
+	label="CFG for 'copy_loop_headers' function";
+
+	Node0x7e57df0 [shape=record,label="{entry}"];
+	Node0x7e57df0 -> Node0x7e57e40;
+	Node0x7e57e40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x7e57e40:s0 -> Node0x7e57e90;
+	Node0x7e57e40:s1 -> Node0x7e582f0;
+	Node0x7e57e90 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x7e57e90:s0 -> Node0x7e57f80;
+	Node0x7e57e90:s1 -> Node0x7e57ee0;
+	Node0x7e57ee0 [shape=record,label="{pd_for.body.for.cond.backedge_crit_edge}"];
+	Node0x7e57ee0 -> Node0x7e57f30;
+	Node0x7e57f30 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x7e57f30 -> Node0x7e57e40;
+	Node0x7e57f80 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x7e57f80:s0 -> Node0x7e58020;
+	Node0x7e57f80:s1 -> Node0x7e57fd0;
+	Node0x7e57fd0 [shape=record,label="{pd_land.lhs.true.for.cond.backedge_crit_edge}"];
+	Node0x7e57fd0 -> Node0x7e57f30;
+	Node0x7e58020 [shape=record,label="{it_land.lhs.true.4|{<s0>T|<s1>F}}"];
+	Node0x7e58020:s0 -> Node0x7e580c0;
+	Node0x7e58020:s1 -> Node0x7e58070;
+	Node0x7e58070 [shape=record,label="{pd_land.lhs.true.4.for.cond.backedge_crit_edge}"];
+	Node0x7e58070 -> Node0x7e57f30;
+	Node0x7e580c0 [shape=record,label="{it_land.lhs.true.6|{<s0>T|<s1>F}}"];
+	Node0x7e580c0:s0 -> Node0x7e58160;
+	Node0x7e580c0:s1 -> Node0x7e58110;
+	Node0x7e58110 [shape=record,label="{pd_land.lhs.true.6.for.cond.backedge_crit_edge}"];
+	Node0x7e58110 -> Node0x7e57f30;
+	Node0x7e58160 [shape=record,label="{it_land.lhs.true.9|{<s0>T|<s1>F}}"];
+	Node0x7e58160:s0 -> Node0x7e58200;
+	Node0x7e58160:s1 -> Node0x7e581b0;
+	Node0x7e581b0 [shape=record,label="{pd_land.lhs.true.9.for.cond.backedge_crit_edge}"];
+	Node0x7e581b0 -> Node0x7e57f30;
+	Node0x7e58200 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0x7e58200:s0 -> Node0x7e582a0;
+	Node0x7e58200:s1 -> Node0x7e58250;
+	Node0x7e58250 [shape=record,label="{pd_if.then.for.cond.backedge_crit_edge}"];
+	Node0x7e58250 -> Node0x7e57f30;
+	Node0x7e582a0 [shape=record,label="{it_if.then.17}"];
+	Node0x7e582a0 -> Node0x7e57f30;
+	Node0x7e582f0 [shape=record,label="{for.end}"];
+}

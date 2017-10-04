@@ -1,0 +1,16 @@
+digraph "CFG for 'first_active_insn_while.cond' function" {
+	label="CFG for 'first_active_insn_while.cond' function";
+
+	Node0xb2e1740 [shape=record,label="{newFuncRoot}"];
+	Node0xb2e1740 -> Node0xb2e45d0;
+	Node0xb2e40f0 [shape=record,label="{while.end.exitStub}"];
+	Node0xb2e4140 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xb2e45d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb2e45d0:s0 -> Node0xb2e4620;
+	Node0xb2e45d0:s1 -> Node0xb2e40f0;
+	Node0xb2e4620 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xb2e4620:s0 -> Node0xb2e4140;
+	Node0xb2e4620:s1 -> Node0xb2e4670;
+	Node0xb2e4670 [shape=record,label="{it_if.end.10}"];
+	Node0xb2e4670 -> Node0xb2e45d0;
+}

@@ -1,0 +1,25 @@
+digraph "CFG for '_ZNK10xalanc_1_822XPathEnvSupportDefault14findURIFromDocEPKNS_13XalanDocumentE_while.cond.outer' function" {
+	label="CFG for '_ZNK10xalanc_1_822XPathEnvSupportDefault14findURIFromDocEPKNS_13XalanDocumentE_while.cond.outer' function";
+
+	Node0x9e73840 [shape=record,label="{newFuncRoot}"];
+	Node0x9e73840 -> Node0x9e73930;
+	Node0x9e73890 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x9e738e0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x9e73930 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x9e73930 -> Node0x9e73980;
+	Node0x9e73980 [shape=record,label="{pd_while.cond}"];
+	Node0x9e73980 -> Node0xd06e7a0;
+	Node0xd06e7a0 [shape=record,label="{it_while.cond.split|{<s0>T|<s1>F}}"];
+	Node0xd06e7a0:s0 -> Node0x9e739d0;
+	Node0xd06e7a0:s1 -> Node0x9e73890;
+	Node0x9e739d0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x9e739d0:s0 -> Node0x9e73a20;
+	Node0x9e739d0:s1 -> Node0x9e738e0;
+	Node0x9e73a20 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x9e73a20:s0 -> Node0x9e73ac0;
+	Node0x9e73a20:s1 -> Node0x9e73a70;
+	Node0x9e73a70 [shape=record,label="{pd_if.else}"];
+	Node0x9e73a70 -> Node0x9e73980;
+	Node0x9e73ac0 [shape=record,label="{it_while.cond.outer.loopexit}"];
+	Node0x9e73ac0 -> Node0x9e73930;
+}

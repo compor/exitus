@@ -1,0 +1,37 @@
+digraph "CFG for 'ReadPhylip_while.cond.20.outer' function" {
+	label="CFG for 'ReadPhylip_while.cond.20.outer' function";
+
+	Node0x33a1500 [shape=record,label="{newFuncRoot}"];
+	Node0x33a1500 -> Node0x33a15a0;
+	Node0x33a1550 [shape=record,label="{while.end.60.exitStub}"];
+	Node0x33a15a0 [shape=record,label="{pd_while.cond.20.outer}"];
+	Node0x33a15a0 -> Node0x33a15f0;
+	Node0x33a15f0 [shape=record,label="{it_while.cond.20}"];
+	Node0x33a15f0 -> Node0x38ee530;
+	Node0x38ee530 [shape=record,label="{pd_while.cond.20.split1}"];
+	Node0x38ee530 -> Node0x38ee9b0;
+	Node0x38ee9b0 [shape=record,label="{it_while.cond.20.split|{<s0>T|<s1>F}}"];
+	Node0x38ee9b0:s0 -> Node0x33a1640;
+	Node0x38ee9b0:s1 -> Node0x33a1550;
+	Node0x33a1640 [shape=record,label="{pd_while.body.23|{<s0>T|<s1>F}}"];
+	Node0x33a1640:s0 -> Node0x33a18c0;
+	Node0x33a1640:s1 -> Node0x33a1690;
+	Node0x33a1690 [shape=record,label="{pd_if.end.28|{<s0>T|<s1>F}}"];
+	Node0x33a1690:s0 -> Node0x33a1730;
+	Node0x33a1690:s1 -> Node0x33a16e0;
+	Node0x33a16e0 [shape=record,label="{pd_if.end.28.if.end.40_crit_edge}"];
+	Node0x33a16e0 -> Node0x33a1780;
+	Node0x33a1730 [shape=record,label="{pd_if.then.31}"];
+	Node0x33a1730 -> Node0x33a1780;
+	Node0x33a1780 [shape=record,label="{pd_if.end.40|{<s0>T|<s1>F}}"];
+	Node0x33a1780:s0 -> Node0x33a1820;
+	Node0x33a1780:s1 -> Node0x33a17d0;
+	Node0x33a17d0 [shape=record,label="{pd_if.end.40.if.end.46_crit_edge}"];
+	Node0x33a17d0 -> Node0x33a1870;
+	Node0x33a1820 [shape=record,label="{pd_if.then.44}"];
+	Node0x33a1820 -> Node0x33a1870;
+	Node0x33a1870 [shape=record,label="{pd_if.end.46}"];
+	Node0x33a1870 -> Node0x33a15a0;
+	Node0x33a18c0 [shape=record,label="{pd_while.body.23.while.cond.20_crit_edge}"];
+	Node0x33a18c0 -> Node0x33a15f0;
+}

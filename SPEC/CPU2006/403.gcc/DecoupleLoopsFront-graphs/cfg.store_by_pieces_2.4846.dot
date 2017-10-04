@@ -1,0 +1,33 @@
+digraph "CFG for 'store_by_pieces_2' function" {
+	label="CFG for 'store_by_pieces_2' function";
+
+	Node0x4560920 [shape=record,label="{entry}"];
+	Node0x4560920 -> Node0x4560970;
+	Node0x4560970 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4560970:s0 -> Node0x45609c0;
+	Node0x4560970:s1 -> Node0x4560ce0;
+	Node0x45609c0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x45609c0:s0 -> Node0x4560a60;
+	Node0x45609c0:s1 -> Node0x4560a10;
+	Node0x4560a10 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x4560a10 -> Node0x4560ab0;
+	Node0x4560a60 [shape=record,label="{pd_if.then}"];
+	Node0x4560a60 -> Node0x4560ab0;
+	Node0x4560ab0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x4560ab0:s0 -> Node0x4560b00;
+	Node0x4560ab0:s1 -> Node0x4560b50;
+	Node0x4560b00 [shape=record,label="{pd_if.then.5}"];
+	Node0x4560b00 -> Node0x4560ba0;
+	Node0x4560b50 [shape=record,label="{pd_if.else}"];
+	Node0x4560b50 -> Node0x4560ba0;
+	Node0x4560ba0 [shape=record,label="{pd_if.end.10|{<s0>T|<s1>F}}"];
+	Node0x4560ba0:s0 -> Node0x4560bf0;
+	Node0x4560ba0:s1 -> Node0x4560c40;
+	Node0x4560bf0 [shape=record,label="{pd_if.end.10.if.end.20_crit_edge}"];
+	Node0x4560bf0 -> Node0x4560c90;
+	Node0x4560c40 [shape=record,label="{pd_if.then.17}"];
+	Node0x4560c40 -> Node0x4560c90;
+	Node0x4560c90 [shape=record,label="{pd_if.end.20}"];
+	Node0x4560c90 -> Node0x4560970;
+	Node0x4560ce0 [shape=record,label="{while.end}"];
+}

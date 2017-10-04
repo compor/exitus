@@ -1,0 +1,42 @@
+digraph "CFG for 'binary_search_while.body.outer' function" {
+	label="CFG for 'binary_search_while.body.outer' function";
+
+	Node0x34b70c0 [shape=record,label="{newFuncRoot}"];
+	Node0x34b70c0 -> Node0x34b72a0;
+	Node0x34b7110 [shape=record,label="{if.then.9.exitStub}"];
+	Node0x34b7160 [shape=record,label="{if.then.16.exitStub}"];
+	Node0x34b71b0 [shape=record,label="{while.end.exitStub}"];
+	Node0x34b7200 [shape=record,label="{if.then.24.exitStub}"];
+	Node0x34b7250 [shape=record,label="{if.then.36.exitStub}"];
+	Node0x34b72a0 [shape=record,label="{pd_while.body.outer}"];
+	Node0x34b72a0 -> Node0x34b72f0;
+	Node0x34b72f0 [shape=record,label="{pd_while.body.outer1}"];
+	Node0x34b72f0 -> Node0x34b7340;
+	Node0x34b7340 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x34b7340:s0 -> Node0x34b7110;
+	Node0x34b7340:s1 -> Node0x34b7390;
+	Node0x34b7390 [shape=record,label="{it_if.end.10|{<s0>T|<s1>F}}"];
+	Node0x34b7390:s0 -> Node0x34b7160;
+	Node0x34b7390:s1 -> Node0x34b73e0;
+	Node0x34b73e0 [shape=record,label="{it_if.end.17|{<s0>T|<s1>F}}"];
+	Node0x34b73e0:s0 -> Node0x34b71b0;
+	Node0x34b73e0:s1 -> Node0x34b7430;
+	Node0x34b7430 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x34b7430:s0 -> Node0x34b7200;
+	Node0x34b7430:s1 -> Node0x34b7480;
+	Node0x34b7480 [shape=record,label="{it_if.else.25|{<s0>T|<s1>F}}"];
+	Node0x34b7480:s0 -> Node0x34b7610;
+	Node0x34b7480:s1 -> Node0x34b74d0;
+	Node0x34b74d0 [shape=record,label="{it_if.else.30|{<s0>T|<s1>F}}"];
+	Node0x34b74d0:s0 -> Node0x34b7570;
+	Node0x34b74d0:s1 -> Node0x34b7520;
+	Node0x34b7520 [shape=record,label="{pd_if.else.30.while.body_crit_edge}"];
+	Node0x34b7520 -> Node0x34b7340;
+	Node0x34b7570 [shape=record,label="{it_if.then.33|{<s0>T|<s1>F}}"];
+	Node0x34b7570:s0 -> Node0x34b7250;
+	Node0x34b7570:s1 -> Node0x34b75c0;
+	Node0x34b75c0 [shape=record,label="{it_if.else.37}"];
+	Node0x34b75c0 -> Node0x34b72f0;
+	Node0x34b7610 [shape=record,label="{it_if.then.28}"];
+	Node0x34b7610 -> Node0x34b72a0;
+}

@@ -1,0 +1,39 @@
+digraph "CFG for 'free_eh_status_while.body' function" {
+	label="CFG for 'free_eh_status_while.body' function";
+
+	Node0xac9d800 [shape=record,label="{newFuncRoot}"];
+	Node0xac9d800 -> Node0xaca4fb0;
+	Node0xaca4f60 [shape=record,label="{do.body.29.loopexit.exitStub}"];
+	Node0xaca4fb0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xaca4fb0:s0 -> Node0xaca5230;
+	Node0xaca4fb0:s1 -> Node0xaca5000;
+	Node0xaca5000 [shape=record,label="{it_if.else.14|{<s0>T|<s1>F}}"];
+	Node0xaca5000:s0 -> Node0xaca51e0;
+	Node0xaca5000:s1 -> Node0xaca5050;
+	Node0xaca5050 [shape=record,label="{pd_do.body.preheader}"];
+	Node0xaca5050 -> Node0xaca50a0;
+	Node0xaca50a0 [shape=record,label="{it_do.body}"];
+	Node0xaca50a0 -> Node0xf60e730;
+	Node0xf60e730 [shape=record,label="{pd_do.body.split1}"];
+	Node0xf60e730 -> Node0xf60e7d0;
+	Node0xf60e7d0 [shape=record,label="{it_do.body.split|{<s0>T|<s1>F}}"];
+	Node0xf60e7d0:s0 -> Node0xaca4f60;
+	Node0xf60e7d0:s1 -> Node0xaca50f0;
+	Node0xaca50f0 [shape=record,label="{it_do.cond|{<s0>T|<s1>F}}"];
+	Node0xaca50f0:s0 -> Node0xaca5190;
+	Node0xaca50f0:s1 -> Node0xaca5140;
+	Node0xaca5140 [shape=record,label="{it_do.end}"];
+	Node0xaca5140 -> Node0xf60d830;
+	Node0xf60d830 [shape=record,label="{pd_do.end.split}"];
+	Node0xf60d830 -> Node0xaca5280;
+	Node0xaca5190 [shape=record,label="{pd_do.cond.do.body_crit_edge}"];
+	Node0xaca5190 -> Node0xaca50a0;
+	Node0xaca51e0 [shape=record,label="{it_if.then.16}"];
+	Node0xaca51e0 -> Node0xf60d880;
+	Node0xf60d880 [shape=record,label="{pd_if.then.16.split}"];
+	Node0xf60d880 -> Node0xaca5280;
+	Node0xaca5230 [shape=record,label="{it_if.then.12}"];
+	Node0xaca5230 -> Node0xaca5280;
+	Node0xaca5280 [shape=record,label="{pd_while.body.backedge}"];
+	Node0xaca5280 -> Node0xaca4fb0;
+}

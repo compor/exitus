@@ -1,0 +1,33 @@
+digraph "CFG for 'gtp_place_free_handicap_for.cond' function" {
+	label="CFG for 'gtp_place_free_handicap_for.cond' function";
+
+	Node0x4829c40 [shape=record,label="{newFuncRoot}"];
+	Node0x4829c40 -> Node0x4829ce0;
+	Node0x4829c90 [shape=record,label="{for.end.25.exitStub}"];
+	Node0x4829ce0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4829ce0:s0 -> Node0x4829d30;
+	Node0x4829ce0:s1 -> Node0x4829c90;
+	Node0x4829d30 [shape=record,label="{pd_for.cond.13.preheader}"];
+	Node0x4829d30 -> Node0x4829d80;
+	Node0x4829d80 [shape=record,label="{pd_for.cond.13|{<s0>T|<s1>F}}"];
+	Node0x4829d80:s0 -> Node0x4829e20;
+	Node0x4829d80:s1 -> Node0x4829dd0;
+	Node0x4829dd0 [shape=record,label="{it_for.inc.23}"];
+	Node0x4829dd0 -> Node0x4829ce0;
+	Node0x4829e20 [shape=record,label="{pd_for.body.15|{<s0>T|<s1>F}}"];
+	Node0x4829e20:s0 -> Node0x4829ec0;
+	Node0x4829e20:s1 -> Node0x4829e70;
+	Node0x4829e70 [shape=record,label="{pd_for.body.15.for.inc_crit_edge}"];
+	Node0x4829e70 -> Node0x482a000;
+	Node0x4829ec0 [shape=record,label="{pd_if.then.19|{<s0>T|<s1>F}}"];
+	Node0x4829ec0:s0 -> Node0x4829f60;
+	Node0x4829ec0:s1 -> Node0x4829f10;
+	Node0x4829f10 [shape=record,label="{pd_if.then.20}"];
+	Node0x4829f10 -> Node0x4829fb0;
+	Node0x4829f60 [shape=record,label="{pd_if.then.19.if.end.21_crit_edge}"];
+	Node0x4829f60 -> Node0x4829fb0;
+	Node0x4829fb0 [shape=record,label="{pd_if.end.21}"];
+	Node0x4829fb0 -> Node0x482a000;
+	Node0x482a000 [shape=record,label="{pd_for.inc}"];
+	Node0x482a000 -> Node0x4829d80;
+}

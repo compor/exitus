@@ -1,0 +1,19 @@
+digraph "CFG for '_ZL15skip_whitespaceRPKc' function" {
+	label="CFG for '_ZL15skip_whitespaceRPKc' function";
+
+	Node0x1892880 [shape=record,label="{entry}"];
+	Node0x1892880 -> Node0x18979d0;
+	Node0x18979d0 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0x18979d0:s0 -> Node0x1897a20;
+	Node0x18979d0:s1 -> Node0x1897a70;
+	Node0x1897a20 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0x1897a20 -> Node0x1897b10;
+	Node0x1897a70 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x1897a70:s0 -> Node0x1897ac0;
+	Node0x1897a70:s1 -> Node0x1897b60;
+	Node0x1897ac0 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0x1897ac0 -> Node0x1897b10;
+	Node0x1897b10 [shape=record,label="{pd_while.body}"];
+	Node0x1897b10 -> Node0x18979d0;
+	Node0x1897b60 [shape=record,label="{while.end}"];
+}

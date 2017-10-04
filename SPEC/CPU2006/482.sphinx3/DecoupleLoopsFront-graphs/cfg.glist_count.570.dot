@@ -1,0 +1,14 @@
+digraph "CFG for 'glist_count' function" {
+	label="CFG for 'glist_count' function";
+
+	Node0xe8a2f0 [shape=record,label="{entry}"];
+	Node0xe8a2f0 -> Node0xe8a340;
+	Node0xe8a340 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xe8a340:s0 -> Node0xe8a390;
+	Node0xe8a340:s1 -> Node0xe8a3e0;
+	Node0xe8a390 [shape=record,label="{it_for.inc}"];
+	Node0xe8a390 -> Node0x1453c90;
+	Node0x1453c90 [shape=record,label="{pd_for.inc.split}"];
+	Node0x1453c90 -> Node0xe8a340;
+	Node0xe8a3e0 [shape=record,label="{for.end}"];
+}

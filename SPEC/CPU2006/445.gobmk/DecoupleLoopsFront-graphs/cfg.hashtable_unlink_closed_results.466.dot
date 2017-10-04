@@ -1,0 +1,43 @@
+digraph "CFG for 'hashtable_unlink_closed_results' function" {
+	label="CFG for 'hashtable_unlink_closed_results' function";
+
+	Node0x2e06290 [shape=record,label="{entry}"];
+	Node0x2e06290 -> Node0x2e062e0;
+	Node0x2e062e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2e062e0:s0 -> Node0x2e06330;
+	Node0x2e062e0:s1 -> Node0x2e06790;
+	Node0x2e06330 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x2e06330:s0 -> Node0x2e06380;
+	Node0x2e06330:s1 -> Node0x2e063d0;
+	Node0x2e06380 [shape=record,label="{pd_while.body.if.end.11_crit_edge}"];
+	Node0x2e06380 -> Node0x2e06420;
+	Node0x2e063d0 [shape=record,label="{pd_if.else}"];
+	Node0x2e063d0 -> Node0x2e06420;
+	Node0x2e06420 [shape=record,label="{pd_if.end.11|{<s0>T|<s1>F}}"];
+	Node0x2e06420:s0 -> Node0x2e064c0;
+	Node0x2e06420:s1 -> Node0x2e06470;
+	Node0x2e06470 [shape=record,label="{pd_if.end.11.if.end.39_crit_edge}"];
+	Node0x2e06470 -> Node0x2e06740;
+	Node0x2e064c0 [shape=record,label="{pd_land.lhs.true.17|{<s0>T|<s1>F}}"];
+	Node0x2e064c0:s0 -> Node0x2e06560;
+	Node0x2e064c0:s1 -> Node0x2e06510;
+	Node0x2e06510 [shape=record,label="{pd_land.lhs.true.17.if.end.39_crit_edge}"];
+	Node0x2e06510 -> Node0x2e06740;
+	Node0x2e06560 [shape=record,label="{pd_land.lhs.true.23|{<s0>T|<s1>F}}"];
+	Node0x2e06560:s0 -> Node0x2e06600;
+	Node0x2e06560:s1 -> Node0x2e065b0;
+	Node0x2e065b0 [shape=record,label="{pd_land.lhs.true.23.if.end.39_crit_edge}"];
+	Node0x2e065b0 -> Node0x2e06740;
+	Node0x2e06600 [shape=record,label="{pd_if.then.29|{<s0>T|<s1>F}}"];
+	Node0x2e06600:s0 -> Node0x2e06650;
+	Node0x2e06600:s1 -> Node0x2e066a0;
+	Node0x2e06650 [shape=record,label="{pd_if.then.31}"];
+	Node0x2e06650 -> Node0x2e066f0;
+	Node0x2e066a0 [shape=record,label="{pd_if.else.33}"];
+	Node0x2e066a0 -> Node0x2e066f0;
+	Node0x2e066f0 [shape=record,label="{pd_if.end.36}"];
+	Node0x2e066f0 -> Node0x2e06740;
+	Node0x2e06740 [shape=record,label="{it_if.end.39}"];
+	Node0x2e06740 -> Node0x2e062e0;
+	Node0x2e06790 [shape=record,label="{while.end}"];
+}

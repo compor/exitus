@@ -1,0 +1,32 @@
+digraph "CFG for 'S_reginclass_for.cond' function" {
+	label="CFG for 'S_reginclass_for.cond' function";
+
+	Node0x52ea940 [shape=record,label="{newFuncRoot}"];
+	Node0x52ea940 -> Node0x52eaa30;
+	Node0x52ea990 [shape=record,label="{if.end.146.loopexit.exitStub}"];
+	Node0x52ea9e0 [shape=record,label="{if.then.144.exitStub}"];
+	Node0x52eaa30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x52eaa30:s0 -> Node0x52eaa80;
+	Node0x52eaa30:s1 -> Node0x52ea990;
+	Node0x52eaa80 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x52eaa80:s0 -> Node0x52eab20;
+	Node0x52eaa80:s1 -> Node0x52eaad0;
+	Node0x52eaad0 [shape=record,label="{it_cond.false.135}"];
+	Node0x52eaad0 -> Node0x52eab70;
+	Node0x52eab20 [shape=record,label="{pd_cond.true.131}"];
+	Node0x52eab20 -> Node0x52004b0;
+	Node0x52004b0 [shape=record,label="{it_cond.true.131.split}"];
+	Node0x52004b0 -> Node0x52eab70;
+	Node0x52eab70 [shape=record,label="{it_cond.end.137|{<s0>T|<s1>F}}"];
+	Node0x52eab70:s0 -> Node0x52eac10;
+	Node0x52eab70:s1 -> Node0x52eabc0;
+	Node0x52eabc0 [shape=record,label="{pd_cond.end.137.for.inc_crit_edge}"];
+	Node0x52eabc0 -> Node0x52eacb0;
+	Node0x52eac10 [shape=record,label="{it_land.lhs.true.141|{<s0>T|<s1>F}}"];
+	Node0x52eac10:s0 -> Node0x52eac60;
+	Node0x52eac10:s1 -> Node0x52ea9e0;
+	Node0x52eac60 [shape=record,label="{pd_land.lhs.true.141.for.inc_crit_edge}"];
+	Node0x52eac60 -> Node0x52eacb0;
+	Node0x52eacb0 [shape=record,label="{it_for.inc}"];
+	Node0x52eacb0 -> Node0x52eaa30;
+}

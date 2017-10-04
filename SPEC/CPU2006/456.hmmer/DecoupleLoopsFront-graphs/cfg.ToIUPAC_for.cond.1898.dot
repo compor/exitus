@@ -1,0 +1,44 @@
+digraph "CFG for 'ToIUPAC_for.cond' function" {
+	label="CFG for 'ToIUPAC_for.cond' function";
+
+	Node0x3443740 [shape=record,label="{newFuncRoot}"];
+	Node0x3443740 -> Node0x34437e0;
+	Node0x3443790 [shape=record,label="{if.end.38.loopexit.exitStub}"];
+	Node0x34437e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x34437e0:s0 -> Node0x3443830;
+	Node0x34437e0:s1 -> Node0x3443790;
+	Node0x3443830 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3443830:s0 -> Node0x34438d0;
+	Node0x3443830:s1 -> Node0x3443880;
+	Node0x3443880 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x3443880 -> Node0x3443c40;
+	Node0x34438d0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x34438d0:s0 -> Node0x3443bf0;
+	Node0x34438d0:s1 -> Node0x3443920;
+	Node0x3443920 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x3443920:s0 -> Node0x3443ba0;
+	Node0x3443920:s1 -> Node0x3443970;
+	Node0x3443970 [shape=record,label="{pd_lor.lhs.false.11|{<s0>T|<s1>F}}"];
+	Node0x3443970:s0 -> Node0x3443b50;
+	Node0x3443970:s1 -> Node0x34439c0;
+	Node0x34439c0 [shape=record,label="{pd_lor.lhs.false.15|{<s0>T|<s1>F}}"];
+	Node0x34439c0:s0 -> Node0x3443b00;
+	Node0x34439c0:s1 -> Node0x3443a10;
+	Node0x3443a10 [shape=record,label="{pd_lor.lhs.false.19|{<s0>T|<s1>F}}"];
+	Node0x3443a10:s0 -> Node0x3443ab0;
+	Node0x3443a10:s1 -> Node0x3443a60;
+	Node0x3443a60 [shape=record,label="{pd_if.then.23}"];
+	Node0x3443a60 -> Node0x3443c40;
+	Node0x3443ab0 [shape=record,label="{pd_lor.lhs.false.19.for.inc_crit_edge}"];
+	Node0x3443ab0 -> Node0x3443c40;
+	Node0x3443b00 [shape=record,label="{pd_lor.lhs.false.15.for.inc_crit_edge}"];
+	Node0x3443b00 -> Node0x3443c40;
+	Node0x3443b50 [shape=record,label="{pd_lor.lhs.false.11.for.inc_crit_edge}"];
+	Node0x3443b50 -> Node0x3443c40;
+	Node0x3443ba0 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x3443ba0 -> Node0x3443c40;
+	Node0x3443bf0 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x3443bf0 -> Node0x3443c40;
+	Node0x3443c40 [shape=record,label="{it_for.inc}"];
+	Node0x3443c40 -> Node0x34437e0;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'feat_stream_len_sum' function" {
+	label="CFG for 'feat_stream_len_sum' function";
+
+	Node0xe659d0 [shape=record,label="{entry}"];
+	Node0xe659d0 -> Node0xe65a20;
+	Node0xe65a20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xe65a20:s0 -> Node0xe65a70;
+	Node0xe65a20:s1 -> Node0xe65ac0;
+	Node0xe65a70 [shape=record,label="{pd_for.body}"];
+	Node0xe65a70 -> Node0x1277fc0;
+	Node0x1277fc0 [shape=record,label="{it_for.body.split}"];
+	Node0x1277fc0 -> Node0xe65a20;
+	Node0xe65ac0 [shape=record,label="{for.end}"];
+}

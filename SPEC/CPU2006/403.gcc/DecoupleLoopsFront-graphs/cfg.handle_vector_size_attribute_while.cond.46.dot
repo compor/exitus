@@ -1,0 +1,29 @@
+digraph "CFG for 'handle_vector_size_attribute_while.cond' function" {
+	label="CFG for 'handle_vector_size_attribute_while.cond' function";
+
+	Node0x9f537c0 [shape=record,label="{newFuncRoot}"];
+	Node0x9f537c0 -> Node0x9f53860;
+	Node0x9f53810 [shape=record,label="{while.end.exitStub}"];
+	Node0x9f53860 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9f53860:s0 -> Node0x9f53a90;
+	Node0x9f53860:s1 -> Node0x9f538b0;
+	Node0x9f538b0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x9f538b0:s0 -> Node0x9f53a40;
+	Node0x9f538b0:s1 -> Node0x9f53900;
+	Node0x9f53900 [shape=record,label="{it_lor.lhs.false.9|{<s0>T|<s1>F}}"];
+	Node0x9f53900:s0 -> Node0x9f539f0;
+	Node0x9f53900:s1 -> Node0x9f53950;
+	Node0x9f53950 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x9f53950:s0 -> Node0x9f539a0;
+	Node0x9f53950:s1 -> Node0x9f53810;
+	Node0x9f539a0 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0x9f539a0 -> Node0x9f53ae0;
+	Node0x9f539f0 [shape=record,label="{pd_lor.lhs.false.9.while.body_crit_edge}"];
+	Node0x9f539f0 -> Node0x9f53ae0;
+	Node0x9f53a40 [shape=record,label="{pd_lor.lhs.false.while.body_crit_edge}"];
+	Node0x9f53a40 -> Node0x9f53ae0;
+	Node0x9f53a90 [shape=record,label="{pd_while.cond.while.body_crit_edge}"];
+	Node0x9f53a90 -> Node0x9f53ae0;
+	Node0x9f53ae0 [shape=record,label="{it_while.body}"];
+	Node0x9f53ae0 -> Node0x9f53860;
+}

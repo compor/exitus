@@ -1,0 +1,19 @@
+digraph "CFG for 'split_insn_while.body' function" {
+	label="CFG for 'split_insn_while.body' function";
+
+	Node0xb8d4e20 [shape=record,label="{newFuncRoot}"];
+	Node0xb8d4e20 -> Node0xb8dd3a0;
+	Node0xb8dd350 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xb8dd3a0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0xb8dd3a0:s0 -> Node0xb8dd440;
+	Node0xb8dd3a0:s1 -> Node0xb8dd3f0;
+	Node0xb8dd3f0 [shape=record,label="{pd_while.body.if.end.72_crit_edge}"];
+	Node0xb8dd3f0 -> Node0xb8dd490;
+	Node0xb8dd440 [shape=record,label="{pd_if.then.71}"];
+	Node0xb8dd440 -> Node0xb8dd490;
+	Node0xb8dd490 [shape=record,label="{it_if.end.72|{<s0>T|<s1>F}}"];
+	Node0xb8dd490:s0 -> Node0xb8dd350;
+	Node0xb8dd490:s1 -> Node0xb8dd4e0;
+	Node0xb8dd4e0 [shape=record,label="{it_if.end.76}"];
+	Node0xb8dd4e0 -> Node0xb8dd3a0;
+}

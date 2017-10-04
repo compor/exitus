@@ -1,0 +1,16 @@
+digraph "CFG for 'ephi_add_node_for.cond' function" {
+	label="CFG for 'ephi_add_node_for.cond' function";
+
+	Node0xc2ebc10 [shape=record,label="{newFuncRoot}"];
+	Node0xc2ebc10 -> Node0xc2ebd00;
+	Node0xc2ebc60 [shape=record,label="{for.end.exitStub}"];
+	Node0xc2ebcb0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xc2ebd00 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc2ebd00:s0 -> Node0xc2ebd50;
+	Node0xc2ebd00:s1 -> Node0xc2ebc60;
+	Node0xc2ebd50 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xc2ebd50:s0 -> Node0xc2ebcb0;
+	Node0xc2ebd50:s1 -> Node0xc2ebda0;
+	Node0xc2ebda0 [shape=record,label="{it_for.inc}"];
+	Node0xc2ebda0 -> Node0xc2ebd00;
+}

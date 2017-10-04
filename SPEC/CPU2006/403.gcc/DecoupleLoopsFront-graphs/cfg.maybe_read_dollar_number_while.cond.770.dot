@@ -1,0 +1,14 @@
+digraph "CFG for 'maybe_read_dollar_number_while.cond' function" {
+	label="CFG for 'maybe_read_dollar_number_while.cond' function";
+
+	Node0xa1b7400 [shape=record,label="{newFuncRoot}"];
+	Node0xa1b7400 -> Node0xa1b74a0;
+	Node0xa1b7450 [shape=record,label="{while.end.exitStub}"];
+	Node0xa1b74a0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa1b74a0:s0 -> Node0xa1b74f0;
+	Node0xa1b74a0:s1 -> Node0xa1b7450;
+	Node0xa1b74f0 [shape=record,label="{pd_while.body}"];
+	Node0xa1b74f0 -> Node0xf17f2c0;
+	Node0xf17f2c0 [shape=record,label="{it_while.body.split}"];
+	Node0xf17f2c0 -> Node0xa1b74a0;
+}

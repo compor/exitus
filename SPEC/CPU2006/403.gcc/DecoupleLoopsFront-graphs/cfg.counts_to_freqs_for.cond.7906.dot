@@ -1,0 +1,19 @@
+digraph "CFG for 'counts_to_freqs_for.cond' function" {
+	label="CFG for 'counts_to_freqs_for.cond' function";
+
+	Node0xb72f050 [shape=record,label="{newFuncRoot}"];
+	Node0xb72f050 -> Node0xb76dc70;
+	Node0xb76dc20 [shape=record,label="{for.cond.7.preheader.exitStub}"];
+	Node0xb76dc70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb76dc70:s0 -> Node0xb76dcc0;
+	Node0xb76dc70:s1 -> Node0xb76dc20;
+	Node0xb76dcc0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xb76dcc0:s0 -> Node0xb76e160;
+	Node0xb76dcc0:s1 -> Node0xb76e110;
+	Node0xb76e110 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xb76e110 -> Node0xb76e1b0;
+	Node0xb76e160 [shape=record,label="{pd_cond.true}"];
+	Node0xb76e160 -> Node0xb76e1b0;
+	Node0xb76e1b0 [shape=record,label="{it_for.inc}"];
+	Node0xb76e1b0 -> Node0xb76dc70;
+}

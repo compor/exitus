@@ -1,0 +1,25 @@
+digraph "CFG for 'S_scan_ident_while.cond' function" {
+	label="CFG for 'S_scan_ident_while.cond' function";
+
+	Node0x4e749f0 [shape=record,label="{newFuncRoot}"];
+	Node0x4e749f0 -> Node0x4e74ae0;
+	Node0x4e74a40 [shape=record,label="{while.cond.if.end.207.loopexit_crit_edge.exitStub}"];
+	Node0x4e74a90 [shape=record,label="{land.rhs.if.end.207.loopexit_crit_edge.exitStub}"];
+	Node0x4e74ae0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4e74ae0:s0 -> Node0x4e74b30;
+	Node0x4e74ae0:s1 -> Node0x4e74a40;
+	Node0x4e74b30 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x4e74b30:s0 -> Node0x4e74b80;
+	Node0x4e74b30:s1 -> Node0x4e74a90;
+	Node0x4e74b80 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x4e74b80:s0 -> Node0x4e74c20;
+	Node0x4e74b80:s1 -> Node0x4e74bd0;
+	Node0x4e74bd0 [shape=record,label="{pd_while.body.if.end.34_crit_edge}"];
+	Node0x4e74bd0 -> Node0x4e74c70;
+	Node0x4e74c20 [shape=record,label="{pd_if.then.33}"];
+	Node0x4e74c20 -> Node0x4e74c70;
+	Node0x4e74c70 [shape=record,label="{it_if.end.34}"];
+	Node0x4e74c70 -> Node0x652ca50;
+	Node0x652ca50 [shape=record,label="{pd_if.end.34.split}"];
+	Node0x652ca50 -> Node0x4e74ae0;
+}

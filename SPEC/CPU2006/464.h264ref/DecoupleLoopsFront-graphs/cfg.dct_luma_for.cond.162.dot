@@ -1,0 +1,21 @@
+digraph "CFG for 'dct_luma_for.cond' function" {
+	label="CFG for 'dct_luma_for.cond' function";
+
+	Node0x2225ce0 [shape=record,label="{newFuncRoot}"];
+	Node0x2225ce0 -> Node0x2225d80;
+	Node0x2225d30 [shape=record,label="{for.cond.96.preheader.exitStub}"];
+	Node0x2225d80 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2225d80:s0 -> Node0x2225dd0;
+	Node0x2225d80:s1 -> Node0x2225d30;
+	Node0x2225dd0 [shape=record,label="{pd_for.cond.34.preheader}"];
+	Node0x2225dd0 -> Node0x2225e20;
+	Node0x2225e20 [shape=record,label="{pd_for.cond.34|{<s0>T|<s1>F}}"];
+	Node0x2225e20:s0 -> Node0x2225ec0;
+	Node0x2225e20:s1 -> Node0x2225e70;
+	Node0x2225e70 [shape=record,label="{pd_for.end}"];
+	Node0x2225e70 -> Node0x370f960;
+	Node0x370f960 [shape=record,label="{it_for.end.split}"];
+	Node0x370f960 -> Node0x2225d80;
+	Node0x2225ec0 [shape=record,label="{pd_for.body.36}"];
+	Node0x2225ec0 -> Node0x2225e20;
+}

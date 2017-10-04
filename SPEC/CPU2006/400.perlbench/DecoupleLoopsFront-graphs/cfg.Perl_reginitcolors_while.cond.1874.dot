@@ -1,0 +1,19 @@
+digraph "CFG for 'Perl_reginitcolors_while.cond' function" {
+	label="CFG for 'Perl_reginitcolors_while.cond' function";
+
+	Node0x5102210 [shape=record,label="{newFuncRoot}"];
+	Node0x5102210 -> Node0x5104d90;
+	Node0x5104d40 [shape=record,label="{if.end.15.loopexit.exitStub}"];
+	Node0x5104d90 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x5104d90:s0 -> Node0x5104de0;
+	Node0x5104d90:s1 -> Node0x5104d40;
+	Node0x5104de0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x5104de0:s0 -> Node0x5104e80;
+	Node0x5104de0:s1 -> Node0x5104e30;
+	Node0x5104e30 [shape=record,label="{pd_if.else}"];
+	Node0x5104e30 -> Node0x5104ed0;
+	Node0x5104e80 [shape=record,label="{pd_if.then.4}"];
+	Node0x5104e80 -> Node0x5104ed0;
+	Node0x5104ed0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x5104ed0 -> Node0x5104d90;
+}

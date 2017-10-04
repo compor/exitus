@@ -1,0 +1,27 @@
+digraph "CFG for 'Perl_pp_pow_for.cond.223' function" {
+	label="CFG for 'Perl_pp_pow_for.cond.223' function";
+
+	Node0x4e2f660 [shape=record,label="{newFuncRoot}"];
+	Node0x4e2f660 -> Node0x4e2fb00;
+	Node0x4e2fa60 [shape=record,label="{for.cond.223.for.end.243_crit_edge.exitStub}"];
+	Node0x4e2fab0 [shape=record,label="{if.then.232.for.end.243_crit_edge.exitStub}"];
+	Node0x4e2fb00 [shape=record,label="{it_for.cond.223|{<s0>T|<s1>F}}"];
+	Node0x4e2fb00:s0 -> Node0x4e2fb50;
+	Node0x4e2fb00:s1 -> Node0x4e2fa60;
+	Node0x4e2fb50 [shape=record,label="{it_for.body.225|{<s0>T|<s1>F}}"];
+	Node0x4e2fb50:s0 -> Node0x4e2fbf0;
+	Node0x4e2fb50:s1 -> Node0x4e2fba0;
+	Node0x4e2fba0 [shape=record,label="{pd_for.body.225.for.inc.240_crit_edge}"];
+	Node0x4e2fba0 -> Node0x4e2fc90;
+	Node0x4e2fbf0 [shape=record,label="{pd_if.then.232}"];
+	Node0x4e2fbf0 -> Node0x64585b0;
+	Node0x64585b0 [shape=record,label="{it_if.then.232.split|{<s0>T|<s1>F}}"];
+	Node0x64585b0:s0 -> Node0x4e2fab0;
+	Node0x64585b0:s1 -> Node0x4e2fc40;
+	Node0x4e2fc40 [shape=record,label="{pd_if.then.232.for.inc.240_crit_edge}"];
+	Node0x4e2fc40 -> Node0x4e2fc90;
+	Node0x4e2fc90 [shape=record,label="{pd_for.inc.240}"];
+	Node0x4e2fc90 -> Node0x6444c30;
+	Node0x6444c30 [shape=record,label="{it_for.inc.240.split}"];
+	Node0x6444c30 -> Node0x4e2fb00;
+}

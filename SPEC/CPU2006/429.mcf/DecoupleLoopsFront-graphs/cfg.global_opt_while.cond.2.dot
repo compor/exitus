@@ -1,0 +1,43 @@
+digraph "CFG for 'global_opt_while.cond' function" {
+	label="CFG for 'global_opt_while.cond' function";
+
+	Node0x1df4640 [shape=record,label="{newFuncRoot}"];
+	Node0x1df4640 -> Node0x1df4bd0;
+	Node0x1df4ae0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x1df4b30 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0x1df4b80 [shape=record,label="{if.then.21.exitStub}"];
+	Node0x1df4bd0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1df4bd0:s0 -> Node0x1df4c20;
+	Node0x1df4bd0:s1 -> Node0x1df4ae0;
+	Node0x1df4c20 [shape=record,label="{pd_while.body}"];
+	Node0x1df4c20 -> Node0x1e87970;
+	Node0x1e87970 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x1e87970:s0 -> Node0x1df4c70;
+	Node0x1e87970:s1 -> Node0x1df4b30;
+	Node0x1df4c70 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x1df4c70:s0 -> Node0x1df4d10;
+	Node0x1df4c70:s1 -> Node0x1df4cc0;
+	Node0x1df4cc0 [shape=record,label="{pd_if.end.if.end.13_crit_edge}"];
+	Node0x1df4cc0 -> Node0x1df4e00;
+	Node0x1df4d10 [shape=record,label="{pd_if.then.7|{<s0>T|<s1>F}}"];
+	Node0x1df4d10:s0 -> Node0x1df4db0;
+	Node0x1df4d10:s1 -> Node0x1df4d60;
+	Node0x1df4d60 [shape=record,label="{pd_if.then.7.if.end.13_crit_edge}"];
+	Node0x1df4d60 -> Node0x1df4e00;
+	Node0x1df4db0 [shape=record,label="{pd_if.then.10}"];
+	Node0x1df4db0 -> Node0x1df4e00;
+	Node0x1df4e00 [shape=record,label="{it_if.end.13}"];
+	Node0x1df4e00 -> Node0x1e89210;
+	Node0x1e89210 [shape=record,label="{pd_if.end.13.split|{<s0>T|<s1>F}}"];
+	Node0x1e89210:s0 -> Node0x1df4ea0;
+	Node0x1e89210:s1 -> Node0x1df4e50;
+	Node0x1df4e50 [shape=record,label="{pd_if.end.13.if.end.18_crit_edge}"];
+	Node0x1df4e50 -> Node0x1df4ef0;
+	Node0x1df4ea0 [shape=record,label="{pd_if.then.16}"];
+	Node0x1df4ea0 -> Node0x1df4ef0;
+	Node0x1df4ef0 [shape=record,label="{it_if.end.18|{<s0>T|<s1>F}}"];
+	Node0x1df4ef0:s0 -> Node0x1df4b80;
+	Node0x1df4ef0:s1 -> Node0x1df4f40;
+	Node0x1df4f40 [shape=record,label="{it_if.end.23}"];
+	Node0x1df4f40 -> Node0x1df4bd0;
+}

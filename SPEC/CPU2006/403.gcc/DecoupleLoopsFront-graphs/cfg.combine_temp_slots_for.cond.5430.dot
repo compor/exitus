@@ -1,0 +1,20 @@
+digraph "CFG for 'combine_temp_slots_for.cond' function" {
+	label="CFG for 'combine_temp_slots_for.cond' function";
+
+	Node0xafce580 [shape=record,label="{newFuncRoot}"];
+	Node0xafce580 -> Node0xafd4600;
+	Node0xafd4510 [shape=record,label="{if.end.8.loopexit.exitStub}"];
+	Node0xafd4560 [shape=record,label="{for.body.for.end.79.loopexit1_crit_edge.exitStub}"];
+	Node0xafd45b0 [shape=record,label="{lor.lhs.false.for.end.79.loopexit1_crit_edge.exitStub}"];
+	Node0xafd4600 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xafd4600:s0 -> Node0xafd4650;
+	Node0xafd4600:s1 -> Node0xafd4510;
+	Node0xafd4650 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xafd4650:s0 -> Node0xafd4560;
+	Node0xafd4650:s1 -> Node0xafd46a0;
+	Node0xafd46a0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0xafd46a0:s0 -> Node0xafd45b0;
+	Node0xafd46a0:s1 -> Node0xafd46f0;
+	Node0xafd46f0 [shape=record,label="{it_for.inc}"];
+	Node0xafd46f0 -> Node0xafd4600;
+}

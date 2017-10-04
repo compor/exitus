@@ -1,0 +1,16 @@
+digraph "CFG for 'lookup_static_chain_for.cond' function" {
+	label="CFG for 'lookup_static_chain_for.cond' function";
+
+	Node0xb046550 [shape=record,label="{newFuncRoot}"];
+	Node0xb046550 -> Node0xb046640;
+	Node0xb0465a0 [shape=record,label="{for.end.exitStub}"];
+	Node0xb0465f0 [shape=record,label="{if.then.12.exitStub}"];
+	Node0xb046640 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb046640:s0 -> Node0xb046690;
+	Node0xb046640:s1 -> Node0xb0465a0;
+	Node0xb046690 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb046690:s0 -> Node0xb0465f0;
+	Node0xb046690:s1 -> Node0xb0466e0;
+	Node0xb0466e0 [shape=record,label="{it_for.inc}"];
+	Node0xb0466e0 -> Node0xb046640;
+}

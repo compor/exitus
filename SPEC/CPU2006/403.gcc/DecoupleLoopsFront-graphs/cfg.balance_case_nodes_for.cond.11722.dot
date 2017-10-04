@@ -1,0 +1,14 @@
+digraph "CFG for 'balance_case_nodes_for.cond' function" {
+	label="CFG for 'balance_case_nodes_for.cond' function";
+
+	Node0xc442c50 [shape=record,label="{newFuncRoot}"];
+	Node0xc442c50 -> Node0xc442cf0;
+	Node0xc442ca0 [shape=record,label="{if.end.110.loopexit.exitStub}"];
+	Node0xc442cf0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc442cf0:s0 -> Node0xc442d40;
+	Node0xc442cf0:s1 -> Node0xc442ca0;
+	Node0xc442d40 [shape=record,label="{pd_for.body}"];
+	Node0xc442d40 -> Node0xfc48340;
+	Node0xfc48340 [shape=record,label="{it_for.body.split}"];
+	Node0xfc48340 -> Node0xc442cf0;
+}

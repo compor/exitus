@@ -1,0 +1,41 @@
+digraph "CFG for 'Perl_moreswitches_while.cond.401' function" {
+	label="CFG for 'Perl_moreswitches_while.cond.401' function";
+
+	Node0x4d51b10 [shape=record,label="{newFuncRoot}"];
+	Node0x4d51b10 -> Node0x4d51bb0;
+	Node0x4d51b60 [shape=record,label="{while.end.428.exitStub}"];
+	Node0x4d51bb0 [shape=record,label="{it_while.cond.401|{<s0>T|<s1>F}}"];
+	Node0x4d51bb0:s0 -> Node0x4d51c50;
+	Node0x4d51bb0:s1 -> Node0x4d51c00;
+	Node0x4d51c00 [shape=record,label="{it_while.cond.401.land.end.425_crit_edge}"];
+	Node0x4d51c00 -> Node0x4d51f20;
+	Node0x4d51c50 [shape=record,label="{it_land.rhs.404|{<s0>T|<s1>F}}"];
+	Node0x4d51c50:s0 -> Node0x4d51ed0;
+	Node0x4d51c50:s1 -> Node0x4d51ca0;
+	Node0x4d51ca0 [shape=record,label="{it_lor.lhs.false.408|{<s0>T|<s1>F}}"];
+	Node0x4d51ca0:s0 -> Node0x4d51e80;
+	Node0x4d51ca0:s1 -> Node0x4d51cf0;
+	Node0x4d51cf0 [shape=record,label="{it_lor.lhs.false.412|{<s0>T|<s1>F}}"];
+	Node0x4d51cf0:s0 -> Node0x4d51e30;
+	Node0x4d51cf0:s1 -> Node0x4d51d40;
+	Node0x4d51d40 [shape=record,label="{it_lor.lhs.false.416|{<s0>T|<s1>F}}"];
+	Node0x4d51d40:s0 -> Node0x4d51de0;
+	Node0x4d51d40:s1 -> Node0x4d51d90;
+	Node0x4d51d90 [shape=record,label="{it_lor.rhs.420}"];
+	Node0x4d51d90 -> Node0x4d51f20;
+	Node0x4d51de0 [shape=record,label="{it_lor.lhs.false.416.land.end.425_crit_edge}"];
+	Node0x4d51de0 -> Node0x4d51f20;
+	Node0x4d51e30 [shape=record,label="{it_lor.lhs.false.412.land.end.425_crit_edge}"];
+	Node0x4d51e30 -> Node0x4d51f20;
+	Node0x4d51e80 [shape=record,label="{it_lor.lhs.false.408.land.end.425_crit_edge}"];
+	Node0x4d51e80 -> Node0x4d51f20;
+	Node0x4d51ed0 [shape=record,label="{it_land.rhs.404.land.end.425_crit_edge}"];
+	Node0x4d51ed0 -> Node0x4d51f20;
+	Node0x4d51f20 [shape=record,label="{pd_land.end.425}"];
+	Node0x4d51f20 -> Node0x6b29980;
+	Node0x6b29980 [shape=record,label="{it_land.end.425.split|{<s0>T|<s1>F}}"];
+	Node0x6b29980:s0 -> Node0x4d51f70;
+	Node0x6b29980:s1 -> Node0x4d51b60;
+	Node0x4d51f70 [shape=record,label="{pd_while.body.426}"];
+	Node0x4d51f70 -> Node0x4d51bb0;
+}

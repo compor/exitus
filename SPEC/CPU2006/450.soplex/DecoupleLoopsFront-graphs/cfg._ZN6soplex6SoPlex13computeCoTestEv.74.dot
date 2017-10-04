@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN6soplex6SoPlex13computeCoTestEv' function" {
+	label="CFG for '_ZN6soplex6SoPlex13computeCoTestEv' function";
+
+	Node0x21d38a0 [shape=record,label="{entry}"];
+	Node0x21d38a0 -> Node0x21d38f0;
+	Node0x21d38f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x21d38f0:s0 -> Node0x21d8110;
+	Node0x21d38f0:s1 -> Node0x21d8250;
+	Node0x21d8110 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x21d8110:s0 -> Node0x21d8160;
+	Node0x21d8110:s1 -> Node0x21d81b0;
+	Node0x21d8160 [shape=record,label="{pd_if.then}"];
+	Node0x21d8160 -> Node0x21d8200;
+	Node0x21d81b0 [shape=record,label="{pd_if.else}"];
+	Node0x21d81b0 -> Node0x21d8200;
+	Node0x21d8200 [shape=record,label="{it_for.inc}"];
+	Node0x21d8200 -> Node0x21d38f0;
+	Node0x21d8250 [shape=record,label="{for.end}"];
+}

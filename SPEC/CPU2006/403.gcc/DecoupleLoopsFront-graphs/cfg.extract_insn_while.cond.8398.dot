@@ -1,0 +1,14 @@
+digraph "CFG for 'extract_insn_while.cond' function" {
+	label="CFG for 'extract_insn_while.cond' function";
+
+	Node0xb82bc60 [shape=record,label="{newFuncRoot}"];
+	Node0xb82bc60 -> Node0xb82bd00;
+	Node0xb82bcb0 [shape=record,label="{sw.epilog.loopexit1.exitStub}"];
+	Node0xb82bd00 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb82bd00:s0 -> Node0xb82bd50;
+	Node0xb82bd00:s1 -> Node0xb82bcb0;
+	Node0xb82bd50 [shape=record,label="{it_while.body}"];
+	Node0xb82bd50 -> Node0xf971ec0;
+	Node0xf971ec0 [shape=record,label="{pd_while.body.split}"];
+	Node0xf971ec0 -> Node0xb82bd00;
+}

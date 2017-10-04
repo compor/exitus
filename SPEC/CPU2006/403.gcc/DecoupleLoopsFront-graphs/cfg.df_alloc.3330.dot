@@ -1,0 +1,14 @@
+digraph "CFG for 'df_alloc' function" {
+	label="CFG for 'df_alloc' function";
+
+	Node0x3a65af0 [shape=record,label="{entry}"];
+	Node0x3a65af0 -> Node0x3a65b40;
+	Node0x3a65b40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3a65b40:s0 -> Node0x3a6c9c0;
+	Node0x3a65b40:s1 -> Node0x3a6ca10;
+	Node0x3a6c9c0 [shape=record,label="{pd_for.body}"];
+	Node0x3a6c9c0 -> Node0xcb8f680;
+	Node0xcb8f680 [shape=record,label="{it_for.body.split}"];
+	Node0xcb8f680 -> Node0x3a65b40;
+	Node0x3a6ca10 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'Perl_free_tied_hv_pool' function" {
+	label="CFG for 'Perl_free_tied_hv_pool' function";
+
+	Node0x25cf900 [shape=record,label="{entry}"];
+	Node0x25cf900 -> Node0x25cf950;
+	Node0x25cf950 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x25cf950:s0 -> Node0x25cf9a0;
+	Node0x25cf950:s1 -> Node0x25cf9f0;
+	Node0x25cf9a0 [shape=record,label="{pd_while.body}"];
+	Node0x25cf9a0 -> Node0x3fa1ec0;
+	Node0x3fa1ec0 [shape=record,label="{it_while.body.split1}"];
+	Node0x3fa1ec0 -> Node0x4017a90;
+	Node0x4017a90 [shape=record,label="{pd_while.body.split}"];
+	Node0x4017a90 -> Node0x25cf950;
+	Node0x25cf9f0 [shape=record,label="{while.end}"];
+}

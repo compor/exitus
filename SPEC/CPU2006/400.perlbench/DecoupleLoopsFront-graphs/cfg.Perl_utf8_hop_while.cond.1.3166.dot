@@ -1,0 +1,26 @@
+digraph "CFG for 'Perl_utf8_hop_while.cond.1' function" {
+	label="CFG for 'Perl_utf8_hop_while.cond.1' function";
+
+	Node0x57e0240 [shape=record,label="{newFuncRoot}"];
+	Node0x57e0240 -> Node0x57e06e0;
+	Node0x57e0690 [shape=record,label="{if.end.loopexit1.exitStub}"];
+	Node0x57e06e0 [shape=record,label="{it_while.cond.1|{<s0>T|<s1>F}}"];
+	Node0x57e06e0:s0 -> Node0x57e0730;
+	Node0x57e06e0:s1 -> Node0x57e0690;
+	Node0x57e0730 [shape=record,label="{pd_while.cond.4.preheader}"];
+	Node0x57e0730 -> Node0x57e0780;
+	Node0x57e0780 [shape=record,label="{pd_while.cond.4|{<s0>T|<s1>F}}"];
+	Node0x57e0780:s0 -> Node0x57e0820;
+	Node0x57e0780:s1 -> Node0x57e07d0;
+	Node0x57e07d0 [shape=record,label="{pd_while.cond.4.while.cond.1.loopexit_crit_edge}"];
+	Node0x57e07d0 -> Node0x57e08c0;
+	Node0x57e0820 [shape=record,label="{pd_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x57e0820:s0 -> Node0x57e0910;
+	Node0x57e0820:s1 -> Node0x57e0870;
+	Node0x57e0870 [shape=record,label="{pd_land.rhs.while.cond.1.loopexit_crit_edge}"];
+	Node0x57e0870 -> Node0x57e08c0;
+	Node0x57e08c0 [shape=record,label="{pd_while.cond.1.loopexit}"];
+	Node0x57e08c0 -> Node0x57e06e0;
+	Node0x57e0910 [shape=record,label="{pd_land.rhs.while.cond.4_crit_edge}"];
+	Node0x57e0910 -> Node0x57e0780;
+}

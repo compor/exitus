@@ -1,0 +1,19 @@
+digraph "CFG for 'free_resource_info_for.cond' function" {
+	label="CFG for 'free_resource_info_for.cond' function";
+
+	Node0xc067200 [shape=record,label="{newFuncRoot}"];
+	Node0xc067200 -> Node0xc067600;
+	Node0xc0675b0 [shape=record,label="{for.end.exitStub}"];
+	Node0xc067600 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc067600:s0 -> Node0xc067650;
+	Node0xc067600:s1 -> Node0xc0675b0;
+	Node0xc067650 [shape=record,label="{pd_for.body}"];
+	Node0xc067650 -> Node0xc0676a0;
+	Node0xc0676a0 [shape=record,label="{pd_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc0676a0:s0 -> Node0xc067740;
+	Node0xc0676a0:s1 -> Node0xc0676f0;
+	Node0xc0676f0 [shape=record,label="{it_for.inc}"];
+	Node0xc0676f0 -> Node0xc067600;
+	Node0xc067740 [shape=record,label="{pd_while.body}"];
+	Node0xc067740 -> Node0xc0676a0;
+}

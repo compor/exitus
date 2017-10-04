@@ -1,0 +1,12 @@
+digraph "CFG for 'quantum_gcd' function" {
+	label="CFG for 'quantum_gcd' function";
+
+	Node0x1592f40 [shape=record,label="{entry}"];
+	Node0x1592f40 -> Node0x1592f90;
+	Node0x1592f90 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x1592f90:s0 -> Node0x1592fe0;
+	Node0x1592f90:s1 -> Node0x1593030;
+	Node0x1592fe0 [shape=record,label="{it_while.body}"];
+	Node0x1592fe0 -> Node0x1592f90;
+	Node0x1593030 [shape=record,label="{while.end}"];
+}

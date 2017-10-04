@@ -1,0 +1,16 @@
+digraph "CFG for '_ZN6soplexL10enQueueMaxEPiS0_i_while.cond' function" {
+	label="CFG for '_ZN6soplexL10enQueueMaxEPiS0_i_while.cond' function";
+
+	Node0x3026d30 [shape=record,label="{newFuncRoot}"];
+	Node0x3026d30 -> Node0x3026e20;
+	Node0x3026d80 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x3026dd0 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0x3026e20 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3026e20:s0 -> Node0x3026e70;
+	Node0x3026e20:s1 -> Node0x3026d80;
+	Node0x3026e70 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x3026e70:s0 -> Node0x3026ec0;
+	Node0x3026e70:s1 -> Node0x3026dd0;
+	Node0x3026ec0 [shape=record,label="{pd_if.then}"];
+	Node0x3026ec0 -> Node0x3026e20;
+}

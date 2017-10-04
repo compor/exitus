@@ -1,0 +1,20 @@
+digraph "CFG for 'Perl_pp_prototype_while.cond' function" {
+	label="CFG for 'Perl_pp_prototype_while.cond' function";
+
+	Node0x4e29f80 [shape=record,label="{newFuncRoot}"];
+	Node0x4e29f80 -> Node0x4e2a940;
+	Node0x4e29fd0 [shape=record,label="{nonesuch.loopexit.exitStub}"];
+	Node0x4e2a020 [shape=record,label="{while.body.found_crit_edge.exitStub}"];
+	Node0x4e2a070 [shape=record,label="{lor.lhs.false.20.found_crit_edge.exitStub}"];
+	Node0x4e2a940 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4e2a940:s0 -> Node0x4e2a990;
+	Node0x4e2a940:s1 -> Node0x4e29fd0;
+	Node0x4e2a990 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4e2a990:s0 -> Node0x4e2a9e0;
+	Node0x4e2a990:s1 -> Node0x4e2a020;
+	Node0x4e2a9e0 [shape=record,label="{it_lor.lhs.false.20|{<s0>T|<s1>F}}"];
+	Node0x4e2a9e0:s0 -> Node0x4e2aa30;
+	Node0x4e2a9e0:s1 -> Node0x4e2a070;
+	Node0x4e2aa30 [shape=record,label="{it_if.end.27}"];
+	Node0x4e2aa30 -> Node0x4e2a940;
+}

@@ -1,0 +1,24 @@
+digraph "CFG for 'feat_readfile_for.cond' function" {
+	label="CFG for 'feat_readfile_for.cond' function";
+
+	Node0x11c2ca0 [shape=record,label="{newFuncRoot}"];
+	Node0x11c2ca0 -> Node0x11c2d40;
+	Node0x11c2cf0 [shape=record,label="{for.end.exitStub}"];
+	Node0x11c2d40 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x11c2d40:s0 -> Node0x11c2d90;
+	Node0x11c2d40:s1 -> Node0x11c2cf0;
+	Node0x11c2d90 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x11c2d90:s0 -> Node0x11c3270;
+	Node0x11c2d90:s1 -> Node0x11c3220;
+	Node0x11c3220 [shape=record,label="{pd_if.else}"];
+	Node0x11c3220 -> Node0x11c3360;
+	Node0x11c3270 [shape=record,label="{pd_if.then.14|{<s0>T|<s1>F}}"];
+	Node0x11c3270:s0 -> Node0x11c3310;
+	Node0x11c3270:s1 -> Node0x11c32c0;
+	Node0x11c32c0 [shape=record,label="{pd_if.then.14.for.inc_crit_edge}"];
+	Node0x11c32c0 -> Node0x11c3360;
+	Node0x11c3310 [shape=record,label="{pd_if.then.19}"];
+	Node0x11c3310 -> Node0x11c3360;
+	Node0x11c3360 [shape=record,label="{it_for.inc}"];
+	Node0x11c3360 -> Node0x11c2d40;
+}

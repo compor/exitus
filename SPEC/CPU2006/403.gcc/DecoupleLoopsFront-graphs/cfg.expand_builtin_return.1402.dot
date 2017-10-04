@@ -1,0 +1,26 @@
+digraph "CFG for 'expand_builtin_return' function" {
+	label="CFG for 'expand_builtin_return' function";
+
+	Node0x2d89810 [shape=record,label="{entry}"];
+	Node0x2d89810 -> Node0x2d89860;
+	Node0x2d89860 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2d89860:s0 -> Node0x2d898b0;
+	Node0x2d89860:s1 -> Node0x2d89ae0;
+	Node0x2d898b0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2d898b0:s0 -> Node0x2d89950;
+	Node0x2d898b0:s1 -> Node0x2d89900;
+	Node0x2d89900 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x2d89900 -> Node0x2d89a90;
+	Node0x2d89950 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x2d89950:s0 -> Node0x2d899f0;
+	Node0x2d89950:s1 -> Node0x2d899a0;
+	Node0x2d899a0 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x2d899a0 -> Node0x2d89a40;
+	Node0x2d899f0 [shape=record,label="{pd_if.then.5}"];
+	Node0x2d899f0 -> Node0x2d89a40;
+	Node0x2d89a40 [shape=record,label="{pd_if.end}"];
+	Node0x2d89a40 -> Node0x2d89a90;
+	Node0x2d89a90 [shape=record,label="{it_for.inc}"];
+	Node0x2d89a90 -> Node0x2d89860;
+	Node0x2d89ae0 [shape=record,label="{for.end}"];
+}

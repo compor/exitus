@@ -1,0 +1,40 @@
+digraph "CFG for '_ZN10xalanc_1_824XalanExtensionsInstaller17doUninstallGlobalEPKtPKNS0_18FunctionTableEntryE' function" {
+	label="CFG for '_ZN10xalanc_1_824XalanExtensionsInstaller17doUninstallGlobalEPKtPKNS0_18FunctionTableEntryE' function";
+
+	Node0x8bd9a80 [shape=record,label="{entry|{<s0>T|<s1>F}}"];
+	Node0x8bd9a80:s0 -> Node0x8bd9b20;
+	Node0x8bd9a80:s1 -> Node0x8bd9ad0;
+	Node0x8bd9ad0 [shape=record,label="{cond.false}"];
+	Node0x8bd9b20 [shape=record,label="{cond.end}"];
+	Node0x8bd9b20 -> Node0x8bd9b70;
+	Node0x8bd9b20 -> Node0x8bd9d00;
+	Node0x8bd9b70 [shape=record,label="{for.cond.preheader}"];
+	Node0x8bd9b70 -> Node0x8bd9bc0;
+	Node0x8bd9bc0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x8bd9bc0:s0 -> Node0x8bd9c10;
+	Node0x8bd9bc0:s1 -> Node0x8bd9df0;
+	Node0x8bd9c10 [shape=record,label="{it_for.body}"];
+	Node0x8bd9c10 -> Node0x8bd9c60;
+	Node0x8bd9c10 -> Node0x8bd9d50;
+	Node0x8bd9c60 [shape=record,label="{it_invoke.cont.5}"];
+	Node0x8bd9c60 -> Node0x8bd9cb0;
+	Node0x8bd9c60 -> Node0x8bd9d50;
+	Node0x8bd9cb0 [shape=record,label="{it_for.inc}"];
+	Node0x8bd9cb0 -> Node0x8bd9bc0;
+	Node0x8bd9d00 [shape=record,label="{lpad}"];
+	Node0x8bd9d00 -> Node0x8bd9e90;
+	Node0x8bd9d50 [shape=record,label="{lpad.4}"];
+	Node0x8bd9d50 -> Node0x8bd9da0;
+	Node0x8bd9d50 -> Node0x8bd9f30;
+	Node0x8bd9da0 [shape=record,label="{lpad.4.ehcleanup_crit_edge}"];
+	Node0x8bd9da0 -> Node0x8bd9e90;
+	Node0x8bd9df0 [shape=record,label="{for.end}"];
+	Node0x8bd9df0 -> Node0x8bd9e40;
+	Node0x8bd9df0 -> Node0x8bd9d00;
+	Node0x8bd9e40 [shape=record,label="{invoke.cont.7}"];
+	Node0x8bd9e90 [shape=record,label="{ehcleanup}"];
+	Node0x8bd9e90 -> Node0x8bd9ee0;
+	Node0x8bd9e90 -> Node0x8bd9f30;
+	Node0x8bd9ee0 [shape=record,label="{eh.resume}"];
+	Node0x8bd9f30 [shape=record,label="{terminate.lpad}"];
+}

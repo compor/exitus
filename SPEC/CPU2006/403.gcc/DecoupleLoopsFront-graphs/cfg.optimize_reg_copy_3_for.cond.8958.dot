@@ -1,0 +1,20 @@
+digraph "CFG for 'optimize_reg_copy_3_for.cond' function" {
+	label="CFG for 'optimize_reg_copy_3_for.cond' function";
+
+	Node0xba5a290 [shape=record,label="{newFuncRoot}"];
+	Node0xba5a290 -> Node0xba5a3d0;
+	Node0xba5a2e0 [shape=record,label="{if.end.147.loopexit.exitStub}"];
+	Node0xba5a330 [shape=record,label="{land.rhs.for.end_crit_edge.exitStub}"];
+	Node0xba5a380 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0xba5a3d0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xba5a3d0:s0 -> Node0xba5a2e0;
+	Node0xba5a3d0:s1 -> Node0xba5a420;
+	Node0xba5a420 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xba5a420:s0 -> Node0xba5a470;
+	Node0xba5a420:s1 -> Node0xba5a330;
+	Node0xba5a470 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xba5a470:s0 -> Node0xba5a380;
+	Node0xba5a470:s1 -> Node0xba5a4c0;
+	Node0xba5a4c0 [shape=record,label="{it_for.inc}"];
+	Node0xba5a4c0 -> Node0xba5a3d0;
+}

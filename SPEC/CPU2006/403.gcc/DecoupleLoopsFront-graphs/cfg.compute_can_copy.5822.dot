@@ -1,0 +1,24 @@
+digraph "CFG for 'compute_can_copy' function" {
+	label="CFG for 'compute_can_copy' function";
+
+	Node0x4dd2020 [shape=record,label="{entry}"];
+	Node0x4dd2020 -> Node0x4dd2070;
+	Node0x4dd2070 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4dd2070:s0 -> Node0x4dd20c0;
+	Node0x4dd2070:s1 -> Node0x4dd22a0;
+	Node0x4dd20c0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4dd20c0:s0 -> Node0x4dd2110;
+	Node0x4dd20c0:s1 -> Node0x4dd2200;
+	Node0x4dd2110 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x4dd2110:s0 -> Node0x4dd21b0;
+	Node0x4dd2110:s1 -> Node0x4dd2160;
+	Node0x4dd2160 [shape=record,label="{pd_if.then.for.inc_crit_edge}"];
+	Node0x4dd2160 -> Node0x4dd2250;
+	Node0x4dd21b0 [shape=record,label="{pd_if.then.7}"];
+	Node0x4dd21b0 -> Node0x4dd2250;
+	Node0x4dd2200 [shape=record,label="{pd_if.else}"];
+	Node0x4dd2200 -> Node0x4dd2250;
+	Node0x4dd2250 [shape=record,label="{it_for.inc}"];
+	Node0x4dd2250 -> Node0x4dd2070;
+	Node0x4dd22a0 [shape=record,label="{for.end}"];
+}

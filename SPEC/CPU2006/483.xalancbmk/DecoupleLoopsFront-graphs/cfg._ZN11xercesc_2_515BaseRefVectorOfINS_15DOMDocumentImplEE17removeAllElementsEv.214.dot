@@ -1,0 +1,26 @@
+digraph "CFG for '_ZN11xercesc_2_515BaseRefVectorOfINS_15DOMDocumentImplEE17removeAllElementsEv' function" {
+	label="CFG for '_ZN11xercesc_2_515BaseRefVectorOfINS_15DOMDocumentImplEE17removeAllElementsEv' function";
+
+	Node0x23f9810 [shape=record,label="{entry}"];
+	Node0x23f9810 -> Node0x23f9860;
+	Node0x23f9860 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x23f9860:s0 -> Node0x23f98b0;
+	Node0x23f9860:s1 -> Node0x23f9a90;
+	Node0x23f98b0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x23f98b0:s0 -> Node0x23f9950;
+	Node0x23f98b0:s1 -> Node0x23f9900;
+	Node0x23f9900 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x23f9900 -> Node0x23f9a40;
+	Node0x23f9950 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x23f9950:s0 -> Node0x23f99a0;
+	Node0x23f9950:s1 -> Node0x23f99f0;
+	Node0x23f99a0 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x23f99a0 -> Node0x23f9a40;
+	Node0x23f99f0 [shape=record,label="{pd_delete.notnull}"];
+	Node0x23f99f0 -> Node0x23f9a40;
+	Node0x23f9a40 [shape=record,label="{pd_if.end}"];
+	Node0x23f9a40 -> Node0x8545260;
+	Node0x8545260 [shape=record,label="{it_if.end.split}"];
+	Node0x8545260 -> Node0x23f9860;
+	Node0x23f9a90 [shape=record,label="{for.end}"];
+}

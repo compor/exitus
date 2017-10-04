@@ -1,0 +1,30 @@
+digraph "CFG for 'test_gray_border_for.cond' function" {
+	label="CFG for 'test_gray_border_for.cond' function";
+
+	Node0x3dde0b0 [shape=record,label="{newFuncRoot}"];
+	Node0x3dde0b0 -> Node0x3dde1a0;
+	Node0x3dde100 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0x3dde150 [shape=record,label="{if.then.7.return_crit_edge.exitStub}"];
+	Node0x3dde1a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3dde1a0:s0 -> Node0x3dde1f0;
+	Node0x3dde1a0:s1 -> Node0x3dde100;
+	Node0x3dde1f0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x3dde1f0:s0 -> Node0x3dde290;
+	Node0x3dde1f0:s1 -> Node0x3dde240;
+	Node0x3dde240 [shape=record,label="{pd_for.body.if.then.7_crit_edge}"];
+	Node0x3dde240 -> Node0x3dde330;
+	Node0x3dde290 [shape=record,label="{it_land.lhs.true.4|{<s0>T|<s1>F}}"];
+	Node0x3dde290:s0 -> Node0x3dde3d0;
+	Node0x3dde290:s1 -> Node0x3dde2e0;
+	Node0x3dde2e0 [shape=record,label="{pd_land.lhs.true.4.if.then.7_crit_edge}"];
+	Node0x3dde2e0 -> Node0x3dde330;
+	Node0x3dde330 [shape=record,label="{it_if.then.7|{<s0>T|<s1>F}}"];
+	Node0x3dde330:s0 -> Node0x3dde150;
+	Node0x3dde330:s1 -> Node0x3dde380;
+	Node0x3dde380 [shape=record,label="{pd_if.then.7.for.inc_crit_edge}"];
+	Node0x3dde380 -> Node0x3dde420;
+	Node0x3dde3d0 [shape=record,label="{pd_land.lhs.true.4.for.inc_crit_edge}"];
+	Node0x3dde3d0 -> Node0x3dde420;
+	Node0x3dde420 [shape=record,label="{it_for.inc}"];
+	Node0x3dde420 -> Node0x3dde1a0;
+}

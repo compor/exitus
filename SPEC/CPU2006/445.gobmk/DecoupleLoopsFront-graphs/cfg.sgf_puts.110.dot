@@ -1,0 +1,33 @@
+digraph "CFG for 'sgf_puts' function" {
+	label="CFG for 'sgf_puts' function";
+
+	Node0x2a45560 [shape=record,label="{entry}"];
+	Node0x2a45560 -> Node0x2a45910;
+	Node0x2a45910 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2a45910:s0 -> Node0x2a45960;
+	Node0x2a45910:s1 -> Node0x2a45c30;
+	Node0x2a45960 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2a45960:s0 -> Node0x2a459b0;
+	Node0x2a45960:s1 -> Node0x2a45a00;
+	Node0x2a459b0 [shape=record,label="{pd_for.body.if.then_crit_edge}"];
+	Node0x2a459b0 -> Node0x2a45b90;
+	Node0x2a45a00 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x2a45a00:s0 -> Node0x2a45a50;
+	Node0x2a45a00:s1 -> Node0x2a45aa0;
+	Node0x2a45a50 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x2a45a50 -> Node0x2a45b90;
+	Node0x2a45aa0 [shape=record,label="{pd_lor.lhs.false.5|{<s0>T|<s1>F}}"];
+	Node0x2a45aa0:s0 -> Node0x2a45b40;
+	Node0x2a45aa0:s1 -> Node0x2a45af0;
+	Node0x2a45af0 [shape=record,label="{pd_lor.lhs.false.5.if.end_crit_edge}"];
+	Node0x2a45af0 -> Node0x2a45be0;
+	Node0x2a45b40 [shape=record,label="{pd_lor.lhs.false.5.if.then_crit_edge}"];
+	Node0x2a45b40 -> Node0x2a45b90;
+	Node0x2a45b90 [shape=record,label="{pd_if.then}"];
+	Node0x2a45b90 -> Node0x2a45be0;
+	Node0x2a45be0 [shape=record,label="{pd_if.end}"];
+	Node0x2a45be0 -> Node0x48e5250;
+	Node0x48e5250 [shape=record,label="{it_if.end.split}"];
+	Node0x48e5250 -> Node0x2a45910;
+	Node0x2a45c30 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,23 @@
+digraph "CFG for 'check_dbra_loop_for.cond.305' function" {
+	label="CFG for 'check_dbra_loop_for.cond.305' function";
+
+	Node0xb642730 [shape=record,label="{newFuncRoot}"];
+	Node0xb642730 -> Node0xb642c70;
+	Node0xb642780 [shape=record,label="{for.cond.305.if.end.321.loopexit_crit_edge.exitStub}"];
+	Node0xb642c20 [shape=record,label="{land.lhs.true.309.if.end.321.loopexit_crit_edge.exitStub}"];
+	Node0xb642c70 [shape=record,label="{it_for.cond.305|{<s0>T|<s1>F}}"];
+	Node0xb642c70:s0 -> Node0xb642cc0;
+	Node0xb642c70:s1 -> Node0xb642780;
+	Node0xb642cc0 [shape=record,label="{it_for.body.307|{<s0>T|<s1>F}}"];
+	Node0xb642cc0:s0 -> Node0xb642d60;
+	Node0xb642cc0:s1 -> Node0xb642d10;
+	Node0xb642d10 [shape=record,label="{pd_for.body.307.for.inc.318_crit_edge}"];
+	Node0xb642d10 -> Node0xb642e00;
+	Node0xb642d60 [shape=record,label="{it_land.lhs.true.309|{<s0>T|<s1>F}}"];
+	Node0xb642d60:s0 -> Node0xb642c20;
+	Node0xb642d60:s1 -> Node0xb642db0;
+	Node0xb642db0 [shape=record,label="{pd_land.lhs.true.309.for.inc.318_crit_edge}"];
+	Node0xb642db0 -> Node0xb642e00;
+	Node0xb642e00 [shape=record,label="{it_for.inc.318}"];
+	Node0xb642e00 -> Node0xb642c70;
+}

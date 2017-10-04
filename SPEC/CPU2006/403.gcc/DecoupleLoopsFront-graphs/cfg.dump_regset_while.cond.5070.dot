@@ -1,0 +1,16 @@
+digraph "CFG for 'dump_regset_while.cond' function" {
+	label="CFG for 'dump_regset_while.cond' function";
+
+	Node0xaeae6f0 [shape=record,label="{newFuncRoot}"];
+	Node0xaeae6f0 -> Node0xaeae7e0;
+	Node0xaeae740 [shape=record,label="{while.cond.for.cond.preheader_crit_edge.exitStub}"];
+	Node0xaeae790 [shape=record,label="{land.rhs.for.cond.preheader_crit_edge.exitStub}"];
+	Node0xaeae7e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xaeae7e0:s0 -> Node0xaeae740;
+	Node0xaeae7e0:s1 -> Node0xaeae830;
+	Node0xaeae830 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xaeae830:s0 -> Node0xaeaf0c0;
+	Node0xaeae830:s1 -> Node0xaeae790;
+	Node0xaeaf0c0 [shape=record,label="{it_while.body}"];
+	Node0xaeaf0c0 -> Node0xaeae7e0;
+}

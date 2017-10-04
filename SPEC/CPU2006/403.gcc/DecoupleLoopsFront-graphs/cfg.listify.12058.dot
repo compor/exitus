@@ -1,0 +1,19 @@
+digraph "CFG for 'listify' function" {
+	label="CFG for 'listify' function";
+
+	Node0x95d3860 [shape=record,label="{entry}"];
+	Node0x95d3860 -> Node0x95d38b0;
+	Node0x95d38b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x95d38b0:s0 -> Node0x95d3900;
+	Node0x95d38b0:s1 -> Node0x95d3a40;
+	Node0x95d3900 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x95d3900:s0 -> Node0x95d39a0;
+	Node0x95d3900:s1 -> Node0x95d3950;
+	Node0x95d3950 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x95d3950 -> Node0x95d39f0;
+	Node0x95d39a0 [shape=record,label="{pd_if.then}"];
+	Node0x95d39a0 -> Node0x95d39f0;
+	Node0x95d39f0 [shape=record,label="{it_if.end}"];
+	Node0x95d39f0 -> Node0x95d38b0;
+	Node0x95d3a40 [shape=record,label="{while.end}"];
+}

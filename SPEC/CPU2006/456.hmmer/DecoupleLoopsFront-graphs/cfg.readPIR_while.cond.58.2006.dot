@@ -1,0 +1,16 @@
+digraph "CFG for 'readPIR_while.cond.58' function" {
+	label="CFG for 'readPIR_while.cond.58' function";
+
+	Node0x32e0890 [shape=record,label="{newFuncRoot}"];
+	Node0x32e0890 -> Node0x32e0980;
+	Node0x32e08e0 [shape=record,label="{while.cond.58.while.end.68.loopexit_crit_edge.exitStub}"];
+	Node0x32e0930 [shape=record,label="{land.rhs.62.while.end.68.loopexit_crit_edge.exitStub}"];
+	Node0x32e0980 [shape=record,label="{it_while.cond.58|{<s0>T|<s1>F}}"];
+	Node0x32e0980:s0 -> Node0x32e08e0;
+	Node0x32e0980:s1 -> Node0x32e09d0;
+	Node0x32e09d0 [shape=record,label="{it_land.rhs.62|{<s0>T|<s1>F}}"];
+	Node0x32e09d0:s0 -> Node0x32e0a20;
+	Node0x32e09d0:s1 -> Node0x32e0930;
+	Node0x32e0a20 [shape=record,label="{pd_while.body.67}"];
+	Node0x32e0a20 -> Node0x32e0980;
+}

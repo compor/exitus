@@ -1,0 +1,24 @@
+digraph "CFG for 'optimize_bit_field_while.cond.293' function" {
+	label="CFG for 'optimize_bit_field_while.cond.293' function";
+
+	Node0xb0ef730 [shape=record,label="{newFuncRoot}"];
+	Node0xb0ef730 -> Node0xb0ef8c0;
+	Node0xb0ef780 [shape=record,label="{while.cond.293.while.end.340_crit_edge.exitStub}"];
+	Node0xb0ef7d0 [shape=record,label="{land.lhs.true.298.while.end.340_crit_edge.exitStub}"];
+	Node0xb0ef820 [shape=record,label="{land.lhs.true.304.while.end.340_crit_edge.exitStub}"];
+	Node0xb0ef870 [shape=record,label="{land.rhs.320.while.end.340_crit_edge.exitStub}"];
+	Node0xb0ef8c0 [shape=record,label="{it_while.cond.293|{<s0>T|<s1>F}}"];
+	Node0xb0ef8c0:s0 -> Node0xb0ef910;
+	Node0xb0ef8c0:s1 -> Node0xb0ef780;
+	Node0xb0ef910 [shape=record,label="{it_land.lhs.true.298|{<s0>T|<s1>F}}"];
+	Node0xb0ef910:s0 -> Node0xb0ef960;
+	Node0xb0ef910:s1 -> Node0xb0ef7d0;
+	Node0xb0ef960 [shape=record,label="{it_land.lhs.true.304|{<s0>T|<s1>F}}"];
+	Node0xb0ef960:s0 -> Node0xb0ef9b0;
+	Node0xb0ef960:s1 -> Node0xb0ef820;
+	Node0xb0ef9b0 [shape=record,label="{it_land.rhs.320|{<s0>T|<s1>F}}"];
+	Node0xb0ef9b0:s0 -> Node0xb0efa00;
+	Node0xb0ef9b0:s1 -> Node0xb0ef870;
+	Node0xb0efa00 [shape=record,label="{it_while.body.336}"];
+	Node0xb0efa00 -> Node0xb0ef8c0;
+}

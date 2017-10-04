@@ -1,0 +1,35 @@
+digraph "CFG for '_ZN3pov12Clip_PolygonEPA3_dPiPKdS4_S4_S4_dddd_for.cond' function" {
+	label="CFG for '_ZN3pov12Clip_PolygonEPA3_dPiPKdS4_S4_S4_dddd_for.cond' function";
+
+	Node0x2e0bc40 [shape=record,label="{newFuncRoot}"];
+	Node0x2e0bc40 -> Node0x2e0bce0;
+	Node0x2e0bc90 [shape=record,label="{for.end.exitStub}"];
+	Node0x2e0bce0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2e0bce0:s0 -> Node0x2e0bd30;
+	Node0x2e0bce0:s1 -> Node0x2e0bc90;
+	Node0x2e0bd30 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2e0bd30:s0 -> Node0x2e0be70;
+	Node0x2e0bd30:s1 -> Node0x2e0bd80;
+	Node0x2e0bd80 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x2e0bd80:s0 -> Node0x2e0be20;
+	Node0x2e0bd80:s1 -> Node0x2e0bdd0;
+	Node0x2e0bdd0 [shape=record,label="{pd_lor.lhs.false.if.end.85_crit_edge}"];
+	Node0x2e0bdd0 -> Node0x2e0bf10;
+	Node0x2e0be20 [shape=record,label="{pd_lor.lhs.false.if.then.40_crit_edge}"];
+	Node0x2e0be20 -> Node0x2e0bec0;
+	Node0x2e0be70 [shape=record,label="{pd_for.body.if.then.40_crit_edge}"];
+	Node0x2e0be70 -> Node0x2e0bec0;
+	Node0x2e0bec0 [shape=record,label="{pd_if.then.40}"];
+	Node0x2e0bec0 -> Node0x2e0bf10;
+	Node0x2e0bf10 [shape=record,label="{pd_if.end.85|{<s0>T|<s1>F}}"];
+	Node0x2e0bf10:s0 -> Node0x2e0bfb0;
+	Node0x2e0bf10:s1 -> Node0x2e0bf60;
+	Node0x2e0bf60 [shape=record,label="{pd_if.end.85.if.end.93_crit_edge}"];
+	Node0x2e0bf60 -> Node0x2e0c000;
+	Node0x2e0bfb0 [shape=record,label="{pd_if.then.87}"];
+	Node0x2e0bfb0 -> Node0x2e0c000;
+	Node0x2e0c000 [shape=record,label="{pd_if.end.93}"];
+	Node0x2e0c000 -> Node0x39fb5a0;
+	Node0x39fb5a0 [shape=record,label="{it_if.end.93.split}"];
+	Node0x39fb5a0 -> Node0x2e0bce0;
+}

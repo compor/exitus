@@ -1,0 +1,16 @@
+digraph "CFG for 'fibheap_cascading_cut_while.cond' function" {
+	label="CFG for 'fibheap_cascading_cut_while.cond' function";
+
+	Node0xc743360 [shape=record,label="{newFuncRoot}"];
+	Node0xc743360 -> Node0xc743810;
+	Node0xc743770 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0xc7437c0 [shape=record,label="{if.then.exitStub}"];
+	Node0xc743810 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc743810:s0 -> Node0xc743860;
+	Node0xc743810:s1 -> Node0xc743770;
+	Node0xc743860 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc743860:s0 -> Node0xc7437c0;
+	Node0xc743860:s1 -> Node0xc7438b0;
+	Node0xc7438b0 [shape=record,label="{pd_if.else}"];
+	Node0xc7438b0 -> Node0xc743810;
+}

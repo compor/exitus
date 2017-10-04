@@ -1,0 +1,12 @@
+digraph "CFG for 'merge_blocks_nomove_while.cond' function" {
+	label="CFG for 'merge_blocks_nomove_while.cond' function";
+
+	Node0xa57fd10 [shape=record,label="{newFuncRoot}"];
+	Node0xa57fd10 -> Node0xa57fdb0;
+	Node0xa57fd60 [shape=record,label="{while.end.exitStub}"];
+	Node0xa57fdb0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa57fdb0:s0 -> Node0xa57fe00;
+	Node0xa57fdb0:s1 -> Node0xa57fd60;
+	Node0xa57fe00 [shape=record,label="{pd_while.body}"];
+	Node0xa57fe00 -> Node0xa57fdb0;
+}

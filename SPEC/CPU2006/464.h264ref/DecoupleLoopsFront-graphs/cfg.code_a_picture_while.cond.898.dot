@@ -1,0 +1,21 @@
+digraph "CFG for 'code_a_picture_while.cond' function" {
+	label="CFG for 'code_a_picture_while.cond' function";
+
+	Node0x2493d20 [shape=record,label="{newFuncRoot}"];
+	Node0x2493d20 -> Node0x2493dc0;
+	Node0x2493d70 [shape=record,label="{while.end.22.exitStub}"];
+	Node0x2493dc0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2493dc0:s0 -> Node0x2493e10;
+	Node0x2493dc0:s1 -> Node0x2493d70;
+	Node0x2493e10 [shape=record,label="{pd_while.cond.15.preheader}"];
+	Node0x2493e10 -> Node0x2493e60;
+	Node0x2493e60 [shape=record,label="{it_while.cond.15|{<s0>T|<s1>F}}"];
+	Node0x2493e60:s0 -> Node0x2493f00;
+	Node0x2493e60:s1 -> Node0x2493eb0;
+	Node0x2493eb0 [shape=record,label="{it_while.end}"];
+	Node0x2493eb0 -> Node0x2493dc0;
+	Node0x2493f00 [shape=record,label="{it_while.body.19}"];
+	Node0x2493f00 -> Node0x33f2080;
+	Node0x33f2080 [shape=record,label="{pd_while.body.19.split}"];
+	Node0x33f2080 -> Node0x2493e60;
+}

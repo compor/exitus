@@ -1,0 +1,14 @@
+digraph "CFG for 'ptmr_reset_all' function" {
+	label="CFG for 'ptmr_reset_all' function";
+
+	Node0x1062670 [shape=record,label="{entry}"];
+	Node0x1062670 -> Node0x10626c0;
+	Node0x10626c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x10626c0:s0 -> Node0x1062710;
+	Node0x10626c0:s1 -> Node0x1062760;
+	Node0x1062710 [shape=record,label="{pd_for.body}"];
+	Node0x1062710 -> Node0x155dd10;
+	Node0x155dd10 [shape=record,label="{it_for.body.split}"];
+	Node0x155dd10 -> Node0x10626c0;
+	Node0x1062760 [shape=record,label="{for.end}"];
+}

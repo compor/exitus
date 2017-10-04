@@ -1,0 +1,30 @@
+digraph "CFG for 'get_block_head_tail_while.cond.outer' function" {
+	label="CFG for 'get_block_head_tail_while.cond.outer' function";
+
+	Node0xb282480 [shape=record,label="{newFuncRoot}"];
+	Node0xb282480 -> Node0xb282570;
+	Node0xb2824d0 [shape=record,label="{while.end.loopexit.exitStub}"];
+	Node0xb282520 [shape=record,label="{while.end.loopexit1.exitStub}"];
+	Node0xb282570 [shape=record,label="{pd_while.cond.outer}"];
+	Node0xb282570 -> Node0xb2825c0;
+	Node0xb2825c0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb2825c0:s0 -> Node0xb282610;
+	Node0xb2825c0:s1 -> Node0xb2824d0;
+	Node0xb282610 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xb282610:s0 -> Node0xb2827a0;
+	Node0xb282610:s1 -> Node0xb282660;
+	Node0xb282660 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0xb282660:s0 -> Node0xb282750;
+	Node0xb282660:s1 -> Node0xb2826b0;
+	Node0xb2826b0 [shape=record,label="{it_if.else.15|{<s0>T|<s1>F}}"];
+	Node0xb2826b0:s0 -> Node0xb282700;
+	Node0xb2826b0:s1 -> Node0xb282520;
+	Node0xb282700 [shape=record,label="{it_if.then.19}"];
+	Node0xb282700 -> Node0xb2827f0;
+	Node0xb282750 [shape=record,label="{it_if.then.11}"];
+	Node0xb282750 -> Node0xb2825c0;
+	Node0xb2827a0 [shape=record,label="{it_if.then}"];
+	Node0xb2827a0 -> Node0xb2827f0;
+	Node0xb2827f0 [shape=record,label="{pd_while.cond.outer.backedge}"];
+	Node0xb2827f0 -> Node0xb282570;
+}

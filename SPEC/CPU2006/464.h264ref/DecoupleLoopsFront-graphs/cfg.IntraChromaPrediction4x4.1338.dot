@@ -1,0 +1,19 @@
+digraph "CFG for 'IntraChromaPrediction4x4' function" {
+	label="CFG for 'IntraChromaPrediction4x4' function";
+
+	Node0x1a30df0 [shape=record,label="{entry}"];
+	Node0x1a30df0 -> Node0x1aecfa0;
+	Node0x1aecfa0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1aecfa0:s0 -> Node0x1aecff0;
+	Node0x1aecfa0:s1 -> Node0x1aed9d0;
+	Node0x1aecff0 [shape=record,label="{pd_for.cond.1.preheader}"];
+	Node0x1aecff0 -> Node0x1aed040;
+	Node0x1aed040 [shape=record,label="{pd_for.cond.1|{<s0>T|<s1>F}}"];
+	Node0x1aed040:s0 -> Node0x1aed090;
+	Node0x1aed040:s1 -> Node0x1aed980;
+	Node0x1aed090 [shape=record,label="{pd_for.body.4}"];
+	Node0x1aed090 -> Node0x1aed040;
+	Node0x1aed980 [shape=record,label="{it_for.inc.17}"];
+	Node0x1aed980 -> Node0x1aecfa0;
+	Node0x1aed9d0 [shape=record,label="{for.end.19}"];
+}

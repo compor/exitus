@@ -1,0 +1,23 @@
+digraph "CFG for '_ZN9regmngobj7destroyEv' function" {
+	label="CFG for '_ZN9regmngobj7destroyEv' function";
+
+	Node0x2367770 [shape=record,label="{entry}"];
+	Node0x2367770 -> Node0x23677c0;
+	Node0x23677c0 [shape=record,label="{it_for.cond}"];
+	Node0x23677c0 -> Node0x2503550;
+	Node0x2503550 [shape=record,label="{pd_for.cond.split1}"];
+	Node0x2503550 -> Node0x2503960;
+	Node0x2503960 [shape=record,label="{it_for.cond.split|{<s0>T|<s1>F}}"];
+	Node0x2503960:s0 -> Node0x2367810;
+	Node0x2503960:s1 -> Node0x2367950;
+	Node0x2367810 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2367810:s0 -> Node0x2367860;
+	Node0x2367810:s1 -> Node0x23678b0;
+	Node0x2367860 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x2367860 -> Node0x2367900;
+	Node0x23678b0 [shape=record,label="{pd_delete.notnull}"];
+	Node0x23678b0 -> Node0x2367900;
+	Node0x2367900 [shape=record,label="{it_for.inc}"];
+	Node0x2367900 -> Node0x23677c0;
+	Node0x2367950 [shape=record,label="{for.end}"];
+}

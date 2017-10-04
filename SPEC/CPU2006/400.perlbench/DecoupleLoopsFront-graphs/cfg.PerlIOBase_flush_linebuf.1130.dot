@@ -1,0 +1,33 @@
+digraph "CFG for 'PerlIOBase_flush_linebuf' function" {
+	label="CFG for 'PerlIOBase_flush_linebuf' function";
+
+	Node0x2c5eb40 [shape=record,label="{entry}"];
+	Node0x2c5eb40 -> Node0x2c5ebe0;
+	Node0x2c5eb90 [shape=record,label="{pd_while.cond.loopexit}"];
+	Node0x2c5eb90 -> Node0x2c5ebe0;
+	Node0x2c5ebe0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2c5ebe0:s0 -> Node0x2c5ec30;
+	Node0x2c5ebe0:s1 -> Node0x2c5eeb0;
+	Node0x2c5ec30 [shape=record,label="{pd_while.body}"];
+	Node0x2c5ec30 -> Node0x5c368d0;
+	Node0x5c368d0 [shape=record,label="{it_while.body.split}"];
+	Node0x5c368d0 -> Node0x2c5ec80;
+	Node0x2c5ec80 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2c5ec80:s0 -> Node0x2c5ecd0;
+	Node0x2c5ec80:s1 -> Node0x2c5eb90;
+	Node0x2c5ecd0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2c5ecd0:s0 -> Node0x2c5ed70;
+	Node0x2c5ecd0:s1 -> Node0x2c5ed20;
+	Node0x2c5ed20 [shape=record,label="{pd_for.body.if.end_crit_edge}"];
+	Node0x2c5ed20 -> Node0x2c5ee60;
+	Node0x2c5ed70 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x2c5ed70:s0 -> Node0x2c5ee10;
+	Node0x2c5ed70:s1 -> Node0x2c5edc0;
+	Node0x2c5edc0 [shape=record,label="{pd_land.lhs.true.if.end_crit_edge}"];
+	Node0x2c5edc0 -> Node0x2c5ee60;
+	Node0x2c5ee10 [shape=record,label="{pd_if.then}"];
+	Node0x2c5ee10 -> Node0x2c5ee60;
+	Node0x2c5ee60 [shape=record,label="{pd_if.end}"];
+	Node0x2c5ee60 -> Node0x2c5ec80;
+	Node0x2c5eeb0 [shape=record,label="{while.end}"];
+}

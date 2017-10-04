@@ -1,0 +1,46 @@
+digraph "CFG for 'modify_stupid_eye_vital_point_for.cond' function" {
+	label="CFG for 'modify_stupid_eye_vital_point_for.cond' function";
+
+	Node0x420d9a0 [shape=record,label="{newFuncRoot}"];
+	Node0x420d9a0 -> Node0x4221590;
+	Node0x4221070 [shape=record,label="{for.end.exitStub}"];
+	Node0x42214a0 [shape=record,label="{if.end.28.if.then.51_crit_edge.exitStub}"];
+	Node0x42214f0 [shape=record,label="{lor.lhs.false.35.if.then.51_crit_edge.exitStub}"];
+	Node0x4221540 [shape=record,label="{lor.lhs.false.43.if.then.51_crit_edge.exitStub}"];
+	Node0x4221590 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4221590:s0 -> Node0x42215e0;
+	Node0x4221590:s1 -> Node0x4221070;
+	Node0x42215e0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x42215e0:s0 -> Node0x4221950;
+	Node0x42215e0:s1 -> Node0x4221630;
+	Node0x4221630 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0x4221630:s0 -> Node0x4221900;
+	Node0x4221630:s1 -> Node0x4221680;
+	Node0x4221680 [shape=record,label="{it_if.end.11|{<s0>T|<s1>F}}"];
+	Node0x4221680:s0 -> Node0x42218b0;
+	Node0x4221680:s1 -> Node0x42216d0;
+	Node0x42216d0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x42216d0:s0 -> Node0x4221860;
+	Node0x42216d0:s1 -> Node0x4221720;
+	Node0x4221720 [shape=record,label="{it_if.end.28|{<s0>T|<s1>F}}"];
+	Node0x4221720:s0 -> Node0x42214a0;
+	Node0x4221720:s1 -> Node0x4221770;
+	Node0x4221770 [shape=record,label="{it_lor.lhs.false.35|{<s0>T|<s1>F}}"];
+	Node0x4221770:s0 -> Node0x42214f0;
+	Node0x4221770:s1 -> Node0x42217c0;
+	Node0x42217c0 [shape=record,label="{it_lor.lhs.false.43|{<s0>T|<s1>F}}"];
+	Node0x42217c0:s0 -> Node0x4221540;
+	Node0x42217c0:s1 -> Node0x4221810;
+	Node0x4221810 [shape=record,label="{pd_lor.lhs.false.43.for.inc_crit_edge}"];
+	Node0x4221810 -> Node0x42219a0;
+	Node0x4221860 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x4221860 -> Node0x42219a0;
+	Node0x42218b0 [shape=record,label="{pd_if.end.11.for.inc_crit_edge}"];
+	Node0x42218b0 -> Node0x42219a0;
+	Node0x4221900 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0x4221900 -> Node0x42219a0;
+	Node0x4221950 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4221950 -> Node0x42219a0;
+	Node0x42219a0 [shape=record,label="{it_for.inc}"];
+	Node0x42219a0 -> Node0x4221590;
+}

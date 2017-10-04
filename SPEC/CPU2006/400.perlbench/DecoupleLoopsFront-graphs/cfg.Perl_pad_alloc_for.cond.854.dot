@@ -1,0 +1,26 @@
+digraph "CFG for 'Perl_pad_alloc_for.cond' function" {
+	label="CFG for 'Perl_pad_alloc_for.cond' function";
+
+	Node0x4ce96b0 [shape=record,label="{newFuncRoot}"];
+	Node0x4ce96b0 -> Node0x4ce9750;
+	Node0x4ce9700 [shape=record,label="{for.end.exitStub}"];
+	Node0x4ce9750 [shape=record,label="{pd_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4ce9750:s0 -> Node0x4ce97f0;
+	Node0x4ce9750:s1 -> Node0x4ce97a0;
+	Node0x4ce97a0 [shape=record,label="{pd_for.cond.if.end.20_crit_edge}"];
+	Node0x4ce97a0 -> Node0x4ce9890;
+	Node0x4ce97f0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4ce97f0:s0 -> Node0x4ce9930;
+	Node0x4ce97f0:s1 -> Node0x4ce9840;
+	Node0x4ce9840 [shape=record,label="{pd_land.lhs.true.if.end.20_crit_edge}"];
+	Node0x4ce9840 -> Node0x4ce9890;
+	Node0x4ce9890 [shape=record,label="{it_if.end.20|{<s0>T|<s1>F}}"];
+	Node0x4ce9890:s0 -> Node0x4ce98e0;
+	Node0x4ce9890:s1 -> Node0x4ce9700;
+	Node0x4ce98e0 [shape=record,label="{pd_if.end.20.for.cond.backedge_crit_edge}"];
+	Node0x4ce98e0 -> Node0x4ce9980;
+	Node0x4ce9930 [shape=record,label="{pd_land.lhs.true.for.cond.backedge_crit_edge}"];
+	Node0x4ce9930 -> Node0x4ce9980;
+	Node0x4ce9980 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x4ce9980 -> Node0x4ce9750;
+}

@@ -1,0 +1,12 @@
+digraph "CFG for 'builtin_macro_while.cond' function" {
+	label="CFG for 'builtin_macro_while.cond' function";
+
+	Node0xa276a70 [shape=record,label="{newFuncRoot}"];
+	Node0xa276a70 -> Node0xa276b10;
+	Node0xa276ac0 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0xa276b10 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa276b10:s0 -> Node0xa276b60;
+	Node0xa276b10:s1 -> Node0xa276ac0;
+	Node0xa276b60 [shape=record,label="{it_while.body}"];
+	Node0xa276b60 -> Node0xa276b10;
+}

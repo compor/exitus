@@ -1,0 +1,14 @@
+digraph "CFG for 'mark_reg_death_while.cond' function" {
+	label="CFG for 'mark_reg_death_while.cond' function";
+
+	Node0xb266630 [shape=record,label="{newFuncRoot}"];
+	Node0xb266630 -> Node0xb2666d0;
+	Node0xb266680 [shape=record,label="{if.end.103.loopexit.exitStub}"];
+	Node0xb2666d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb2666d0:s0 -> Node0xb266720;
+	Node0xb2666d0:s1 -> Node0xb266680;
+	Node0xb266720 [shape=record,label="{pd_while.body}"];
+	Node0xb266720 -> Node0xf703590;
+	Node0xf703590 [shape=record,label="{it_while.body.split}"];
+	Node0xf703590 -> Node0xb2666d0;
+}

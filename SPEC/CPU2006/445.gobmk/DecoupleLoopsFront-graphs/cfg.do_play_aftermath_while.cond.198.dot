@@ -1,0 +1,48 @@
+digraph "CFG for 'do_play_aftermath_while.cond' function" {
+	label="CFG for 'do_play_aftermath_while.cond' function";
+
+	Node0x3dc2800 [shape=record,label="{newFuncRoot}"];
+	Node0x3dc2800 -> Node0x3dd70e0;
+	Node0x3dd7040 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0x3dd7090 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0x3dd70e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x3dd70e0:s0 -> Node0x3dd7130;
+	Node0x3dd70e0:s1 -> Node0x3dd7040;
+	Node0x3dd7130 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x3dd7130:s0 -> Node0x3dd7180;
+	Node0x3dd7130:s1 -> Node0x3dd7090;
+	Node0x3dd7180 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x3dd7180:s0 -> Node0x3dd7220;
+	Node0x3dd7180:s1 -> Node0x3dd71d0;
+	Node0x3dd71d0 [shape=record,label="{pd_while.body.if.end.14_crit_edge}"];
+	Node0x3dd71d0 -> Node0x3dd7360;
+	Node0x3dd7220 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x3dd7220:s0 -> Node0x3dd72c0;
+	Node0x3dd7220:s1 -> Node0x3dd7270;
+	Node0x3dd7270 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x3dd7270 -> Node0x3dd7310;
+	Node0x3dd72c0 [shape=record,label="{pd_if.then.7}"];
+	Node0x3dd72c0 -> Node0x3dd7310;
+	Node0x3dd7310 [shape=record,label="{pd_if.end}"];
+	Node0x3dd7310 -> Node0x3dd7360;
+	Node0x3dd7360 [shape=record,label="{pd_if.end.14|{<s0>T|<s1>F}}"];
+	Node0x3dd7360:s0 -> Node0x3dd7400;
+	Node0x3dd7360:s1 -> Node0x3dd73b0;
+	Node0x3dd73b0 [shape=record,label="{pd_if.end.14.if.end.18_crit_edge}"];
+	Node0x3dd73b0 -> Node0x3dd7450;
+	Node0x3dd7400 [shape=record,label="{pd_if.then.16}"];
+	Node0x3dd7400 -> Node0x3dd7450;
+	Node0x3dd7450 [shape=record,label="{it_if.end.18}"];
+	Node0x3dd7450 -> Node0x4f45110;
+	Node0x4f45110 [shape=record,label="{pd_if.end.18.split|{<s0>T|<s1>F}}"];
+	Node0x4f45110:s0 -> Node0x3dd74f0;
+	Node0x4f45110:s1 -> Node0x3dd74a0;
+	Node0x3dd74a0 [shape=record,label="{pd_if.end.18.cond.end.30_crit_edge}"];
+	Node0x3dd74a0 -> Node0x3dd7540;
+	Node0x3dd74f0 [shape=record,label="{pd_cond.false.22}"];
+	Node0x3dd74f0 -> Node0x3dd7540;
+	Node0x3dd7540 [shape=record,label="{it_cond.end.30}"];
+	Node0x3dd7540 -> Node0x4fa4880;
+	Node0x4fa4880 [shape=record,label="{pd_cond.end.30.split}"];
+	Node0x4fa4880 -> Node0x3dd70e0;
+}

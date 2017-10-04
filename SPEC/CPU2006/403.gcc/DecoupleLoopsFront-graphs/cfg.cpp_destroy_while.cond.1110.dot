@@ -1,0 +1,12 @@
+digraph "CFG for 'cpp_destroy_while.cond' function" {
+	label="CFG for 'cpp_destroy_while.cond' function";
+
+	Node0xa2cb330 [shape=record,label="{newFuncRoot}"];
+	Node0xa2cb330 -> Node0xa2cb770;
+	Node0xa2cb720 [shape=record,label="{while.end.exitStub}"];
+	Node0xa2cb770 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa2cb770:s0 -> Node0xa2cb7c0;
+	Node0xa2cb770:s1 -> Node0xa2cb720;
+	Node0xa2cb7c0 [shape=record,label="{pd_while.body}"];
+	Node0xa2cb7c0 -> Node0xa2cb770;
+}

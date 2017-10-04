@@ -1,0 +1,16 @@
+digraph "CFG for 'maybe_apply_pragma_weak_for.cond' function" {
+	label="CFG for 'maybe_apply_pragma_weak_for.cond' function";
+
+	Node0x9f72140 [shape=record,label="{newFuncRoot}"];
+	Node0x9f72140 -> Node0x9f72230;
+	Node0x9f72190 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x9f721e0 [shape=record,label="{if.then.27.exitStub}"];
+	Node0x9f72230 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9f72230:s0 -> Node0x9f72280;
+	Node0x9f72230:s1 -> Node0x9f72190;
+	Node0x9f72280 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x9f72280:s0 -> Node0x9f721e0;
+	Node0x9f72280:s1 -> Node0x9f722d0;
+	Node0x9f722d0 [shape=record,label="{it_for.inc}"];
+	Node0x9f722d0 -> Node0x9f72230;
+}

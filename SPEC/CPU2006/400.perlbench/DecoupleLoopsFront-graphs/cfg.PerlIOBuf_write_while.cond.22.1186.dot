@@ -1,0 +1,39 @@
+digraph "CFG for 'PerlIOBuf_write_while.cond.22' function" {
+	label="CFG for 'PerlIOBuf_write_while.cond.22' function";
+
+	Node0x4db1100 [shape=record,label="{newFuncRoot}"];
+	Node0x4db1100 -> Node0x4db11a0;
+	Node0x4db1150 [shape=record,label="{while.end.64.exitStub}"];
+	Node0x4db11a0 [shape=record,label="{it_while.cond.22|{<s0>T|<s1>F}}"];
+	Node0x4db11a0:s0 -> Node0x4db11f0;
+	Node0x4db11a0:s1 -> Node0x4db1150;
+	Node0x4db11f0 [shape=record,label="{it_while.body.25}"];
+	Node0x4db11f0 -> Node0x65bb330;
+	Node0x65bb330 [shape=record,label="{pd_while.body.25.split1}"];
+	Node0x65bb330 -> Node0x65bb470;
+	Node0x65bb470 [shape=record,label="{it_while.body.25.split|{<s0>T|<s1>F}}"];
+	Node0x65bb470:s0 -> Node0x4db1290;
+	Node0x65bb470:s1 -> Node0x4db1240;
+	Node0x4db1240 [shape=record,label="{pd_while.body.25.if.end.54_crit_edge}"];
+	Node0x4db1240 -> Node0x4db1380;
+	Node0x4db1290 [shape=record,label="{pd_if.then.43}"];
+	Node0x4db1290 -> Node0x65bb150;
+	Node0x65bb150 [shape=record,label="{it_if.then.43.split2}"];
+	Node0x65bb150 -> Node0x65bb060;
+	Node0x65bb060 [shape=record,label="{pd_if.then.43.split|{<s0>T|<s1>F}}"];
+	Node0x65bb060:s0 -> Node0x4db1330;
+	Node0x65bb060:s1 -> Node0x4db12e0;
+	Node0x4db12e0 [shape=record,label="{pd_if.then.43.if.end.54_crit_edge}"];
+	Node0x4db12e0 -> Node0x4db1380;
+	Node0x4db1330 [shape=record,label="{pd_if.then.51}"];
+	Node0x4db1330 -> Node0x4db1380;
+	Node0x4db1380 [shape=record,label="{pd_if.end.54|{<s0>T|<s1>F}}"];
+	Node0x4db1380:s0 -> Node0x4db1420;
+	Node0x4db1380:s1 -> Node0x4db13d0;
+	Node0x4db13d0 [shape=record,label="{pd_if.end.54.while.cond.22.backedge_crit_edge}"];
+	Node0x4db13d0 -> Node0x4db1470;
+	Node0x4db1420 [shape=record,label="{pd_if.then.61}"];
+	Node0x4db1420 -> Node0x4db1470;
+	Node0x4db1470 [shape=record,label="{pd_while.cond.22.backedge}"];
+	Node0x4db1470 -> Node0x4db11a0;
+}

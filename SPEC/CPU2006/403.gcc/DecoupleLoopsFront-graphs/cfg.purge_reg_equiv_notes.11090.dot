@@ -1,0 +1,19 @@
+digraph "CFG for 'purge_reg_equiv_notes' function" {
+	label="CFG for 'purge_reg_equiv_notes' function";
+
+	Node0x9009850 [shape=record,label="{entry}"];
+	Node0x9009850 -> Node0x900bb30;
+	Node0x900bb30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x900bb30:s0 -> Node0x900bb80;
+	Node0x900bb30:s1 -> Node0x900bcc0;
+	Node0x900bb80 [shape=record,label="{pd_while.body.preheader}"];
+	Node0x900bb80 -> Node0x900bbd0;
+	Node0x900bbd0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x900bbd0:s0 -> Node0x900bc20;
+	Node0x900bbd0:s1 -> Node0x900bc70;
+	Node0x900bc20 [shape=record,label="{pd_if.then}"];
+	Node0x900bc20 -> Node0x900bbd0;
+	Node0x900bc70 [shape=record,label="{it_for.inc}"];
+	Node0x900bc70 -> Node0x900bb30;
+	Node0x900bcc0 [shape=record,label="{for.end}"];
+}

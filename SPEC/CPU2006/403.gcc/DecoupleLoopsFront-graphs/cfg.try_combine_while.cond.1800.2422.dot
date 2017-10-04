@@ -1,0 +1,24 @@
+digraph "CFG for 'try_combine_while.cond.1800' function" {
+	label="CFG for 'try_combine_while.cond.1800' function";
+
+	Node0xa5f9900 [shape=record,label="{newFuncRoot}"];
+	Node0xa5f9900 -> Node0xa5f99a0;
+	Node0xa5f9950 [shape=record,label="{while.end.1821.exitStub}"];
+	Node0xa5f99a0 [shape=record,label="{it_while.cond.1800|{<s0>T|<s1>F}}"];
+	Node0xa5f99a0:s0 -> Node0xa5f9b30;
+	Node0xa5f99a0:s1 -> Node0xa5f99f0;
+	Node0xa5f99f0 [shape=record,label="{it_lor.lhs.false.1805|{<s0>T|<s1>F}}"];
+	Node0xa5f99f0:s0 -> Node0xa5f9ae0;
+	Node0xa5f99f0:s1 -> Node0xa5f9a40;
+	Node0xa5f9a40 [shape=record,label="{it_lor.rhs.1810|{<s0>T|<s1>F}}"];
+	Node0xa5f9a40:s0 -> Node0xa5f9a90;
+	Node0xa5f9a40:s1 -> Node0xa5f9950;
+	Node0xa5f9a90 [shape=record,label="{pd_lor.rhs.1810.while.body.1817_crit_edge}"];
+	Node0xa5f9a90 -> Node0xa5f9b80;
+	Node0xa5f9ae0 [shape=record,label="{pd_lor.lhs.false.1805.while.body.1817_crit_edge}"];
+	Node0xa5f9ae0 -> Node0xa5f9b80;
+	Node0xa5f9b30 [shape=record,label="{pd_while.cond.1800.while.body.1817_crit_edge}"];
+	Node0xa5f9b30 -> Node0xa5f9b80;
+	Node0xa5f9b80 [shape=record,label="{it_while.body.1817}"];
+	Node0xa5f9b80 -> Node0xa5f99a0;
+}

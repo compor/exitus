@@ -1,0 +1,14 @@
+digraph "CFG for 'sbitmap_vector_zero' function" {
+	label="CFG for 'sbitmap_vector_zero' function";
+
+	Node0x8e84ae0 [shape=record,label="{entry}"];
+	Node0x8e84ae0 -> Node0x8e84b30;
+	Node0x8e84b30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x8e84b30:s0 -> Node0x8e84b80;
+	Node0x8e84b30:s1 -> Node0x8e84bd0;
+	Node0x8e84b80 [shape=record,label="{pd_for.body}"];
+	Node0x8e84b80 -> Node0xea95c70;
+	Node0xea95c70 [shape=record,label="{it_for.body.split}"];
+	Node0xea95c70 -> Node0x8e84b30;
+	Node0x8e84bd0 [shape=record,label="{for.end}"];
+}

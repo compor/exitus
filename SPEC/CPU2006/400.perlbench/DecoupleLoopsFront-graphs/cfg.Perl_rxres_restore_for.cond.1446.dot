@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_rxres_restore_for.cond' function" {
+	label="CFG for 'Perl_rxres_restore_for.cond' function";
+
+	Node0x4e96800 [shape=record,label="{newFuncRoot}"];
+	Node0x4e96800 -> Node0x4e968a0;
+	Node0x4e96850 [shape=record,label="{for.end.exitStub}"];
+	Node0x4e968a0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4e968a0:s0 -> Node0x4e968f0;
+	Node0x4e968a0:s1 -> Node0x4e96850;
+	Node0x4e968f0 [shape=record,label="{pd_for.body}"];
+	Node0x4e968f0 -> Node0x674ef30;
+	Node0x674ef30 [shape=record,label="{it_for.body.split}"];
+	Node0x674ef30 -> Node0x4e968a0;
+}

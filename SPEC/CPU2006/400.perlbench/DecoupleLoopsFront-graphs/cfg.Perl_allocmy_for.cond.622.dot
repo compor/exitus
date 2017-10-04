@@ -1,0 +1,14 @@
+digraph "CFG for 'Perl_allocmy_for.cond' function" {
+	label="CFG for 'Perl_allocmy_for.cond' function";
+
+	Node0x4bdfbd0 [shape=record,label="{newFuncRoot}"];
+	Node0x4bdfbd0 -> Node0x4bf3df0;
+	Node0x4bf3da0 [shape=record,label="{for.end.exitStub}"];
+	Node0x4bf3df0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bf3df0:s0 -> Node0x4bf3e40;
+	Node0x4bf3df0:s1 -> Node0x4bf3da0;
+	Node0x4bf3e40 [shape=record,label="{pd_for.body}"];
+	Node0x4bf3e40 -> Node0x6311bd0;
+	Node0x6311bd0 [shape=record,label="{it_for.body.split}"];
+	Node0x6311bd0 -> Node0x4bf3df0;
+}

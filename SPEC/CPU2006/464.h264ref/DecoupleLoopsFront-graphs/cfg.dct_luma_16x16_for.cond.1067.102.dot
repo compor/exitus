@@ -1,0 +1,19 @@
+digraph "CFG for 'dct_luma_16x16_for.cond.1067' function" {
+	label="CFG for 'dct_luma_16x16_for.cond.1067' function";
+
+	Node0x21bf060 [shape=record,label="{newFuncRoot}"];
+	Node0x21bf060 -> Node0x21bf100;
+	Node0x21bf0b0 [shape=record,label="{if.end.1152.loopexit8.exitStub}"];
+	Node0x21bf100 [shape=record,label="{it_for.cond.1067|{<s0>T|<s1>F}}"];
+	Node0x21bf100:s0 -> Node0x21bf150;
+	Node0x21bf100:s1 -> Node0x21bf0b0;
+	Node0x21bf150 [shape=record,label="{pd_for.cond.1071.preheader}"];
+	Node0x21bf150 -> Node0x21bf1a0;
+	Node0x21bf1a0 [shape=record,label="{pd_for.cond.1071|{<s0>T|<s1>F}}"];
+	Node0x21bf1a0:s0 -> Node0x21bf240;
+	Node0x21bf1a0:s1 -> Node0x21bf1f0;
+	Node0x21bf1f0 [shape=record,label="{it_for.inc.1094}"];
+	Node0x21bf1f0 -> Node0x21bf100;
+	Node0x21bf240 [shape=record,label="{pd_for.body.1074}"];
+	Node0x21bf240 -> Node0x21bf1a0;
+}

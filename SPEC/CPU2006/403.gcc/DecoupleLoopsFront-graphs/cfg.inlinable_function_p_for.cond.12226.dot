@@ -1,0 +1,16 @@
+digraph "CFG for 'inlinable_function_p_for.cond' function" {
+	label="CFG for 'inlinable_function_p_for.cond' function";
+
+	Node0xaf04b40 [shape=record,label="{newFuncRoot}"];
+	Node0xaf04b40 -> Node0xaf04c30;
+	Node0xaf04b90 [shape=record,label="{for.end.exitStub}"];
+	Node0xaf04be0 [shape=record,label="{return.loopexit1.exitStub}"];
+	Node0xaf04c30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xaf04c30:s0 -> Node0xaf04c80;
+	Node0xaf04c30:s1 -> Node0xaf04b90;
+	Node0xaf04c80 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xaf04c80:s0 -> Node0xaf04be0;
+	Node0xaf04c80:s1 -> Node0xaf04cd0;
+	Node0xaf04cd0 [shape=record,label="{it_for.inc}"];
+	Node0xaf04cd0 -> Node0xaf04c30;
+}

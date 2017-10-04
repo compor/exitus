@@ -1,0 +1,24 @@
+digraph "CFG for 'Perl_ck_require_for.cond' function" {
+	label="CFG for 'Perl_ck_require_for.cond' function";
+
+	Node0x4c85e10 [shape=record,label="{newFuncRoot}"];
+	Node0x4c85e10 -> Node0x4c86350;
+	Node0x4c85e60 [shape=record,label="{for.end.exitStub}"];
+	Node0x4c86350 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4c86350:s0 -> Node0x4c863a0;
+	Node0x4c86350:s1 -> Node0x4c85e60;
+	Node0x4c863a0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4c863a0:s0 -> Node0x4c86440;
+	Node0x4c863a0:s1 -> Node0x4c863f0;
+	Node0x4c863f0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4c863f0 -> Node0x4c86530;
+	Node0x4c86440 [shape=record,label="{pd_land.lhs.true.11|{<s0>T|<s1>F}}"];
+	Node0x4c86440:s0 -> Node0x4c864e0;
+	Node0x4c86440:s1 -> Node0x4c86490;
+	Node0x4c86490 [shape=record,label="{pd_land.lhs.true.11.for.inc_crit_edge}"];
+	Node0x4c86490 -> Node0x4c86530;
+	Node0x4c864e0 [shape=record,label="{pd_if.then.15}"];
+	Node0x4c864e0 -> Node0x4c86530;
+	Node0x4c86530 [shape=record,label="{it_for.inc}"];
+	Node0x4c86530 -> Node0x4c86350;
+}

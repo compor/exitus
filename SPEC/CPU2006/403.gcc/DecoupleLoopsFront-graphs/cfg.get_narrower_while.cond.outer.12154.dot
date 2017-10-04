@@ -1,0 +1,41 @@
+digraph "CFG for 'get_narrower_while.cond.outer' function" {
+	label="CFG for 'get_narrower_while.cond.outer' function";
+
+	Node0xc4f4a70 [shape=record,label="{newFuncRoot}"];
+	Node0xc4f4a70 -> Node0xc4f4bb0;
+	Node0xc4f4ac0 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xc4f4b10 [shape=record,label="{while.body.while.end_crit_edge.exitStub}"];
+	Node0xc4f4b60 [shape=record,label="{if.else.while.end_crit_edge.exitStub}"];
+	Node0xc4f4bb0 [shape=record,label="{pd_while.cond.outer}"];
+	Node0xc4f4bb0 -> Node0xc4f4c00;
+	Node0xc4f4c00 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc4f4c00:s0 -> Node0xc4f4c50;
+	Node0xc4f4c00:s1 -> Node0xc4f4ac0;
+	Node0xc4f4c50 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0xc4f4c50:s0 -> Node0xc4f4b10;
+	Node0xc4f4c50:s1 -> Node0xc4f4ca0;
+	Node0xc4f4ca0 [shape=record,label="{it_if.end|{<s0>T|<s1>F}}"];
+	Node0xc4f4ca0:s0 -> Node0xc4f4de0;
+	Node0xc4f4ca0:s1 -> Node0xc4f4cf0;
+	Node0xc4f4cf0 [shape=record,label="{it_if.else.34|{<s0>T|<s1>F}}"];
+	Node0xc4f4cf0:s0 -> Node0xc4f4d90;
+	Node0xc4f4cf0:s1 -> Node0xc4f4d40;
+	Node0xc4f4d40 [shape=record,label="{pd_if.else.34.while.cond.backedge_crit_edge}"];
+	Node0xc4f4d40 -> Node0xc4f4ed0;
+	Node0xc4f4d90 [shape=record,label="{it_if.then.36}"];
+	Node0xc4f4d90 -> Node0xc4f4f70;
+	Node0xc4f4de0 [shape=record,label="{it_if.then.16|{<s0>T|<s1>F}}"];
+	Node0xc4f4de0:s0 -> Node0xc4f4f20;
+	Node0xc4f4de0:s1 -> Node0xc4f4e30;
+	Node0xc4f4e30 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0xc4f4e30:s0 -> Node0xc4f4b60;
+	Node0xc4f4e30:s1 -> Node0xc4f4e80;
+	Node0xc4f4e80 [shape=record,label="{pd_if.else.while.cond.backedge_crit_edge}"];
+	Node0xc4f4e80 -> Node0xc4f4ed0;
+	Node0xc4f4ed0 [shape=record,label="{it_while.cond.backedge}"];
+	Node0xc4f4ed0 -> Node0xc4f4c00;
+	Node0xc4f4f20 [shape=record,label="{pd_while.cond.outer.loopexit}"];
+	Node0xc4f4f20 -> Node0xc4f4f70;
+	Node0xc4f4f70 [shape=record,label="{it_while.cond.outer.backedge}"];
+	Node0xc4f4f70 -> Node0xc4f4bb0;
+}

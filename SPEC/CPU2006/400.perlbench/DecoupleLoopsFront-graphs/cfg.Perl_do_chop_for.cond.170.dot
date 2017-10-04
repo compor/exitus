@@ -1,0 +1,24 @@
+digraph "CFG for 'Perl_do_chop_for.cond' function" {
+	label="CFG for 'Perl_do_chop_for.cond' function";
+
+	Node0x4afce60 [shape=record,label="{newFuncRoot}"];
+	Node0x4afce60 -> Node0x4afcf00;
+	Node0x4afceb0 [shape=record,label="{if.end.124.loopexit.exitStub}"];
+	Node0x4afcf00 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4afcf00:s0 -> Node0x4afcf50;
+	Node0x4afcf00:s1 -> Node0x4afceb0;
+	Node0x4afcf50 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4afcf50:s0 -> Node0x4afcff0;
+	Node0x4afcf50:s1 -> Node0x4afcfa0;
+	Node0x4afcfa0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4afcfa0 -> Node0x4afd0e0;
+	Node0x4afcff0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4afcff0:s0 -> Node0x4afd090;
+	Node0x4afcff0:s1 -> Node0x4afd040;
+	Node0x4afd040 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x4afd040 -> Node0x4afd0e0;
+	Node0x4afd090 [shape=record,label="{pd_if.then.7}"];
+	Node0x4afd090 -> Node0x4afd0e0;
+	Node0x4afd0e0 [shape=record,label="{it_for.inc}"];
+	Node0x4afd0e0 -> Node0x4afcf00;
+}

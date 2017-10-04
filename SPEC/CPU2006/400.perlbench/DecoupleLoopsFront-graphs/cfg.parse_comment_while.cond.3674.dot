@@ -1,0 +1,16 @@
+digraph "CFG for 'parse_comment_while.cond' function" {
+	label="CFG for 'parse_comment_while.cond' function";
+
+	Node0x59c3d60 [shape=record,label="{newFuncRoot}"];
+	Node0x59c3d60 -> Node0x59c3e50;
+	Node0x59c3db0 [shape=record,label="{while.cond.while.end.77_crit_edge.exitStub}"];
+	Node0x59c3e00 [shape=record,label="{land.rhs.70.while.end.77_crit_edge.exitStub}"];
+	Node0x59c3e50 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x59c3e50:s0 -> Node0x59c3ea0;
+	Node0x59c3e50:s1 -> Node0x59c3db0;
+	Node0x59c3ea0 [shape=record,label="{it_land.rhs.70|{<s0>T|<s1>F}}"];
+	Node0x59c3ea0:s0 -> Node0x59c3ef0;
+	Node0x59c3ea0:s1 -> Node0x59c3e00;
+	Node0x59c3ef0 [shape=record,label="{it_while.body.75}"];
+	Node0x59c3ef0 -> Node0x59c3e50;
+}

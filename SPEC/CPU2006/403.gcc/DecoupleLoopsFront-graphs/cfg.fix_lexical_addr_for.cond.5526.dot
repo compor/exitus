@@ -1,0 +1,16 @@
+digraph "CFG for 'fix_lexical_addr_for.cond' function" {
+	label="CFG for 'fix_lexical_addr_for.cond' function";
+
+	Node0xb048100 [shape=record,label="{newFuncRoot}"];
+	Node0xb048100 -> Node0xb0485c0;
+	Node0xb048520 [shape=record,label="{if.end.66.loopexit.exitStub}"];
+	Node0xb048570 [shape=record,label="{if.then.61.exitStub}"];
+	Node0xb0485c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb0485c0:s0 -> Node0xb048610;
+	Node0xb0485c0:s1 -> Node0xb048520;
+	Node0xb048610 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xb048610:s0 -> Node0xb048570;
+	Node0xb048610:s1 -> Node0xb048660;
+	Node0xb048660 [shape=record,label="{it_for.inc}"];
+	Node0xb048660 -> Node0xb0485c0;
+}

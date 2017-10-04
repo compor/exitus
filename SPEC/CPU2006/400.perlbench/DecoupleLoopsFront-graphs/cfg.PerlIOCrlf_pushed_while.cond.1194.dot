@@ -1,0 +1,27 @@
+digraph "CFG for 'PerlIOCrlf_pushed_while.cond' function" {
+	label="CFG for 'PerlIOCrlf_pushed_while.cond' function";
+
+	Node0x4db56a0 [shape=record,label="{newFuncRoot}"];
+	Node0x4db56a0 -> Node0x4db57e0;
+	Node0x4db56f0 [shape=record,label="{while.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0x4db5740 [shape=record,label="{land.rhs.return.loopexit_crit_edge.exitStub}"];
+	Node0x4db5790 [shape=record,label="{if.then.exitStub}"];
+	Node0x4db57e0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x4db57e0:s0 -> Node0x4db5830;
+	Node0x4db57e0:s1 -> Node0x4db56f0;
+	Node0x4db5830 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x4db5830:s0 -> Node0x4db5880;
+	Node0x4db5830:s1 -> Node0x4db5740;
+	Node0x4db5880 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x4db5880:s0 -> Node0x4db5920;
+	Node0x4db5880:s1 -> Node0x4db58d0;
+	Node0x4db58d0 [shape=record,label="{pd_while.body.if.end.9_crit_edge}"];
+	Node0x4db58d0 -> Node0x4db59c0;
+	Node0x4db5920 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4db5920:s0 -> Node0x4db5790;
+	Node0x4db5920:s1 -> Node0x4db5970;
+	Node0x4db5970 [shape=record,label="{pd_land.lhs.true.if.end.9_crit_edge}"];
+	Node0x4db5970 -> Node0x4db59c0;
+	Node0x4db59c0 [shape=record,label="{it_if.end.9}"];
+	Node0x4db59c0 -> Node0x4db57e0;
+}

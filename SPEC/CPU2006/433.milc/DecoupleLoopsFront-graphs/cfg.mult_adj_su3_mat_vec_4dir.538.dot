@@ -1,0 +1,16 @@
+digraph "CFG for 'mult_adj_su3_mat_vec_4dir' function" {
+	label="CFG for 'mult_adj_su3_mat_vec_4dir' function";
+
+	Node0x18c0e20 [shape=record,label="{entry}"];
+	Node0x18c0e20 -> Node0x18c0e70;
+	Node0x18c0e70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x18c0e70:s0 -> Node0x18c0ec0;
+	Node0x18c0e70:s1 -> Node0x18c0f10;
+	Node0x18c0ec0 [shape=record,label="{pd_for.body}"];
+	Node0x18c0ec0 -> Node0x1c28a70;
+	Node0x1c28a70 [shape=record,label="{it_for.body.split1}"];
+	Node0x1c28a70 -> Node0x1c29c80;
+	Node0x1c29c80 [shape=record,label="{pd_for.body.split}"];
+	Node0x1c29c80 -> Node0x18c0e70;
+	Node0x18c0f10 [shape=record,label="{for.end}"];
+}

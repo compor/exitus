@@ -1,0 +1,35 @@
+digraph "CFG for 'purge_persistent_owl_cache_for.cond' function" {
+	label="CFG for 'purge_persistent_owl_cache_for.cond' function";
+
+	Node0x4733bb0 [shape=record,label="{newFuncRoot}"];
+	Node0x4733bb0 -> Node0x4733c50;
+	Node0x4733c00 [shape=record,label="{for.end.loopexit.exitStub}"];
+	Node0x4733c50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4733c50:s0 -> Node0x4733ca0;
+	Node0x4733c50:s1 -> Node0x4733c00;
+	Node0x4733ca0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x4733ca0:s0 -> Node0x4733de0;
+	Node0x4733ca0:s1 -> Node0x4733cf0;
+	Node0x4733cf0 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x4733cf0:s0 -> Node0x4733d90;
+	Node0x4733cf0:s1 -> Node0x4733d40;
+	Node0x4733d40 [shape=record,label="{pd_lor.lhs.false.if.then.9_crit_edge}"];
+	Node0x4733d40 -> Node0x4733e30;
+	Node0x4733d90 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x4733d90 -> Node0x4733f70;
+	Node0x4733de0 [shape=record,label="{pd_for.body.if.then.9_crit_edge}"];
+	Node0x4733de0 -> Node0x4733e30;
+	Node0x4733e30 [shape=record,label="{pd_if.then.9|{<s0>T|<s1>F}}"];
+	Node0x4733e30:s0 -> Node0x4733ed0;
+	Node0x4733e30:s1 -> Node0x4733e80;
+	Node0x4733e80 [shape=record,label="{pd_if.then.9.if.end.17_crit_edge}"];
+	Node0x4733e80 -> Node0x4733f20;
+	Node0x4733ed0 [shape=record,label="{pd_if.then.11}"];
+	Node0x4733ed0 -> Node0x4733f20;
+	Node0x4733f20 [shape=record,label="{it_if.end.17}"];
+	Node0x4733f20 -> Node0x57772b0;
+	Node0x57772b0 [shape=record,label="{pd_if.end.17.split}"];
+	Node0x57772b0 -> Node0x4733f70;
+	Node0x4733f70 [shape=record,label="{it_for.inc}"];
+	Node0x4733f70 -> Node0x4733c50;
+}

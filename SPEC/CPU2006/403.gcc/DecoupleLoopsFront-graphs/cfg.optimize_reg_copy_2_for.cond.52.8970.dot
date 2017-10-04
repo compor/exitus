@@ -1,0 +1,31 @@
+digraph "CFG for 'optimize_reg_copy_2_for.cond.52' function" {
+	label="CFG for 'optimize_reg_copy_2_for.cond.52' function";
+
+	Node0xba662d0 [shape=record,label="{newFuncRoot}"];
+	Node0xba662d0 -> Node0xba66370;
+	Node0xba66320 [shape=record,label="{for.end.exitStub}"];
+	Node0xba66370 [shape=record,label="{it_for.cond.52|{<s0>T|<s1>F}}"];
+	Node0xba66370:s0 -> Node0xba663c0;
+	Node0xba66370:s1 -> Node0xba66320;
+	Node0xba663c0 [shape=record,label="{pd_for.body.58|{<s0>T|<s1>F}}"];
+	Node0xba663c0:s0 -> Node0xba66460;
+	Node0xba663c0:s1 -> Node0xba66410;
+	Node0xba66410 [shape=record,label="{pd_for.body.58.for.inc_crit_edge}"];
+	Node0xba66410 -> Node0xba66640;
+	Node0xba66460 [shape=record,label="{pd_if.then.66|{<s0>T|<s1>F}}"];
+	Node0xba66460:s0 -> Node0xba66500;
+	Node0xba66460:s1 -> Node0xba664b0;
+	Node0xba664b0 [shape=record,label="{pd_if.then.66.if.end.80_crit_edge}"];
+	Node0xba664b0 -> Node0xba66550;
+	Node0xba66500 [shape=record,label="{pd_if.then.72}"];
+	Node0xba66500 -> Node0xba66550;
+	Node0xba66550 [shape=record,label="{pd_if.end.80|{<s0>T|<s1>F}}"];
+	Node0xba66550:s0 -> Node0xba665f0;
+	Node0xba66550:s1 -> Node0xba665a0;
+	Node0xba665a0 [shape=record,label="{pd_if.end.80.for.inc_crit_edge}"];
+	Node0xba665a0 -> Node0xba66640;
+	Node0xba665f0 [shape=record,label="{pd_if.then.85}"];
+	Node0xba665f0 -> Node0xba66640;
+	Node0xba66640 [shape=record,label="{it_for.inc}"];
+	Node0xba66640 -> Node0xba66370;
+}

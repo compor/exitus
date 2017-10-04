@@ -1,0 +1,27 @@
+digraph "CFG for 'play_solo_while.cond' function" {
+	label="CFG for 'play_solo_while.cond' function";
+
+	Node0x484caf0 [shape=record,label="{newFuncRoot}"];
+	Node0x484caf0 -> Node0x484cb90;
+	Node0x484cb40 [shape=record,label="{while.end.exitStub}"];
+	Node0x484cb90 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x484cb90:s0 -> Node0x484cbe0;
+	Node0x484cb90:s1 -> Node0x484cb40;
+	Node0x484cbe0 [shape=record,label="{pd_while.body}"];
+	Node0x484cbe0 -> Node0x561bda0;
+	Node0x561bda0 [shape=record,label="{it_while.body.split2}"];
+	Node0x561bda0 -> Node0x561be90;
+	Node0x561be90 [shape=record,label="{pd_while.body.split1}"];
+	Node0x561be90 -> Node0x561c160;
+	Node0x561c160 [shape=record,label="{it_while.body.split|{<s0>T|<s1>F}}"];
+	Node0x561c160:s0 -> Node0x484cc80;
+	Node0x561c160:s1 -> Node0x484cc30;
+	Node0x484cc30 [shape=record,label="{pd_if.else}"];
+	Node0x484cc30 -> Node0x484ccd0;
+	Node0x484cc80 [shape=record,label="{it_if.then.37}"];
+	Node0x484cc80 -> Node0x4da0ac0;
+	Node0x4da0ac0 [shape=record,label="{pd_if.then.37.split}"];
+	Node0x4da0ac0 -> Node0x484ccd0;
+	Node0x484ccd0 [shape=record,label="{pd_if.end.45}"];
+	Node0x484ccd0 -> Node0x484cb90;
+}

@@ -1,0 +1,14 @@
+digraph "CFG for 'invert_mod2n' function" {
+	label="CFG for 'invert_mod2n' function";
+
+	Node0x419b1c0 [shape=record,label="{entry}"];
+	Node0x419b1c0 -> Node0x419e6b0;
+	Node0x419e6b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x419e6b0:s0 -> Node0x419e700;
+	Node0x419e6b0:s1 -> Node0x419e750;
+	Node0x419e700 [shape=record,label="{pd_while.body}"];
+	Node0x419e700 -> Node0xd253dc0;
+	Node0xd253dc0 [shape=record,label="{it_while.body.split}"];
+	Node0xd253dc0 -> Node0x419e6b0;
+	Node0x419e750 [shape=record,label="{while.end}"];
+}

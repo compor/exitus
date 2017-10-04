@@ -1,0 +1,26 @@
+digraph "CFG for 'expand_builtin_apply_for.cond' function" {
+	label="CFG for 'expand_builtin_apply_for.cond' function";
+
+	Node0x79e1d50 [shape=record,label="{newFuncRoot}"];
+	Node0x79e1d50 -> Node0x79e1df0;
+	Node0x79e1da0 [shape=record,label="{for.end.exitStub}"];
+	Node0x79e1df0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x79e1df0:s0 -> Node0x79e1e40;
+	Node0x79e1df0:s1 -> Node0x79e1da0;
+	Node0x79e1e40 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x79e1e40:s0 -> Node0x79e1ee0;
+	Node0x79e1e40:s1 -> Node0x79e1e90;
+	Node0x79e1e90 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x79e1e90 -> Node0x79e2020;
+	Node0x79e1ee0 [shape=record,label="{pd_if.then.40|{<s0>T|<s1>F}}"];
+	Node0x79e1ee0:s0 -> Node0x79e1f80;
+	Node0x79e1ee0:s1 -> Node0x79e1f30;
+	Node0x79e1f30 [shape=record,label="{pd_if.then.40.if.end.47_crit_edge}"];
+	Node0x79e1f30 -> Node0x79e1fd0;
+	Node0x79e1f80 [shape=record,label="{pd_if.then.44}"];
+	Node0x79e1f80 -> Node0x79e1fd0;
+	Node0x79e1fd0 [shape=record,label="{pd_if.end.47}"];
+	Node0x79e1fd0 -> Node0x79e2020;
+	Node0x79e2020 [shape=record,label="{it_for.inc}"];
+	Node0x79e2020 -> Node0x79e1df0;
+}

@@ -1,0 +1,19 @@
+digraph "CFG for 'optimize_mode_switching_for.cond' function" {
+	label="CFG for 'optimize_mode_switching_for.cond' function";
+
+	Node0xb3c9970 [shape=record,label="{newFuncRoot}"];
+	Node0xb3c9970 -> Node0xb3d6850;
+	Node0xb3d6800 [shape=record,label="{for.end.exitStub}"];
+	Node0xb3d6850 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xb3d6850:s0 -> Node0xb3d68a0;
+	Node0xb3d6850:s1 -> Node0xb3d6800;
+	Node0xb3d68a0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0xb3d68a0:s0 -> Node0xb3d6940;
+	Node0xb3d68a0:s1 -> Node0xb3d68f0;
+	Node0xb3d68f0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xb3d68f0 -> Node0xb3d6990;
+	Node0xb3d6940 [shape=record,label="{pd_if.then}"];
+	Node0xb3d6940 -> Node0xb3d6990;
+	Node0xb3d6990 [shape=record,label="{it_for.inc}"];
+	Node0xb3d6990 -> Node0xb3d6850;
+}

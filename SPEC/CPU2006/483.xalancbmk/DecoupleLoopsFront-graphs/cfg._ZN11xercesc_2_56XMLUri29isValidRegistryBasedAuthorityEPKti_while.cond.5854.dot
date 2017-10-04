@@ -1,0 +1,38 @@
+digraph "CFG for '_ZN11xercesc_2_56XMLUri29isValidRegistryBasedAuthorityEPKti_while.cond' function" {
+	label="CFG for '_ZN11xercesc_2_56XMLUri29isValidRegistryBasedAuthorityEPKti_while.cond' function";
+
+	Node0x9bb9820 [shape=record,label="{newFuncRoot}"];
+	Node0x9bb9820 -> Node0x9bba2d0;
+	Node0x9bb9870 [shape=record,label="{while.cond.return_crit_edge.exitStub}"];
+	Node0x9bb98c0 [shape=record,label="{if.else.return_crit_edge.exitStub}"];
+	Node0x9bb9910 [shape=record,label="{if.then.8.return_crit_edge.exitStub}"];
+	Node0x9bba280 [shape=record,label="{land.lhs.true.return_crit_edge.exitStub}"];
+	Node0x9bba2d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x9bba2d0:s0 -> Node0x9bba320;
+	Node0x9bba2d0:s1 -> Node0x9bb9870;
+	Node0x9bba320 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x9bba320:s0 -> Node0x9bba550;
+	Node0x9bba320:s1 -> Node0x9bba370;
+	Node0x9bba370 [shape=record,label="{it_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x9bba370:s0 -> Node0x9bba500;
+	Node0x9bba370:s1 -> Node0x9bba3c0;
+	Node0x9bba3c0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x9bba3c0:s0 -> Node0x9bba410;
+	Node0x9bba3c0:s1 -> Node0x9bb98c0;
+	Node0x9bba410 [shape=record,label="{it_if.then.8|{<s0>T|<s1>F}}"];
+	Node0x9bba410:s0 -> Node0x9bba460;
+	Node0x9bba410:s1 -> Node0x9bb9910;
+	Node0x9bba460 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x9bba460:s0 -> Node0x9bba4b0;
+	Node0x9bba460:s1 -> Node0x9bba280;
+	Node0x9bba4b0 [shape=record,label="{it_if.then.16}"];
+	Node0x9bba4b0 -> Node0x9bba5f0;
+	Node0x9bba500 [shape=record,label="{pd_lor.lhs.false.if.then_crit_edge}"];
+	Node0x9bba500 -> Node0x9bba5a0;
+	Node0x9bba550 [shape=record,label="{pd_while.body.if.then_crit_edge}"];
+	Node0x9bba550 -> Node0x9bba5a0;
+	Node0x9bba5a0 [shape=record,label="{it_if.then}"];
+	Node0x9bba5a0 -> Node0x9bba5f0;
+	Node0x9bba5f0 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x9bba5f0 -> Node0x9bba2d0;
+}

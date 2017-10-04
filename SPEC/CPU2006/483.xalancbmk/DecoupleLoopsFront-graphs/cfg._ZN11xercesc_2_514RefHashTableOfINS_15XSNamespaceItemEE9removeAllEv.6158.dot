@@ -1,0 +1,48 @@
+digraph "CFG for '_ZN11xercesc_2_514RefHashTableOfINS_15XSNamespaceItemEE9removeAllEv' function" {
+	label="CFG for '_ZN11xercesc_2_514RefHashTableOfINS_15XSNamespaceItemEE9removeAllEv' function";
+
+	Node0x55c27e0 [shape=record,label="{entry}"];
+	Node0x55c27e0 -> Node0x55c2830;
+	Node0x55c2830 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x55c2830:s0 -> Node0x55c2880;
+	Node0x55c2830:s1 -> Node0x55c2ce0;
+	Node0x55c2880 [shape=record,label="{it_for.body}"];
+	Node0x55c2880 -> Node0x55c28d0;
+	Node0x55c28d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x55c28d0:s0 -> Node0x55c2920;
+	Node0x55c28d0:s1 -> Node0x55c2c90;
+	Node0x55c2920 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x55c2920:s0 -> Node0x55c29c0;
+	Node0x55c2920:s1 -> Node0x55c2970;
+	Node0x55c2970 [shape=record,label="{pd_while.body.if.end_crit_edge}"];
+	Node0x55c2970 -> Node0x55c2b50;
+	Node0x55c29c0 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0x55c29c0:s0 -> Node0x55c2a10;
+	Node0x55c29c0:s1 -> Node0x55c2a60;
+	Node0x55c2a10 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x55c2a10 -> Node0x55c2b50;
+	Node0x55c2a60 [shape=record,label="{it_delete.notnull}"];
+	Node0x55c2a60 -> Node0x55c2ab0;
+	Node0x55c2a60 -> Node0x55c2b00;
+	Node0x55c2ab0 [shape=record,label="{pd_invoke.cont}"];
+	Node0x55c2ab0 -> Node0x55c2b50;
+	Node0x55c2b00 [shape=record,label="{lpad}"];
+	Node0x55c2b00 -> Node0x55c2d30;
+	Node0x55c2b00 -> Node0x55c2d80;
+	Node0x55c2b50 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x55c2b50:s0 -> Node0x55c2ba0;
+	Node0x55c2b50:s1 -> Node0x55c2bf0;
+	Node0x55c2ba0 [shape=record,label="{pd_if.end.while.cond.backedge_crit_edge}"];
+	Node0x55c2ba0 -> Node0x55c2c40;
+	Node0x55c2bf0 [shape=record,label="{pd_delete.notnull.5}"];
+	Node0x55c2bf0 -> Node0x55c2c40;
+	Node0x55c2c40 [shape=record,label="{pd_while.cond.backedge}"];
+	Node0x55c2c40 -> Node0x55c28d0;
+	Node0x55c2c90 [shape=record,label="{pd_while.end}"];
+	Node0x55c2c90 -> Node0xb497b60;
+	Node0xb497b60 [shape=record,label="{it_while.end.split}"];
+	Node0xb497b60 -> Node0x55c2830;
+	Node0x55c2ce0 [shape=record,label="{for.end}"];
+	Node0x55c2d30 [shape=record,label="{eh.resume}"];
+	Node0x55c2d80 [shape=record,label="{terminate.lpad}"];
+}

@@ -1,0 +1,12 @@
+digraph "CFG for 'sgfRoot' function" {
+	label="CFG for 'sgfRoot' function";
+
+	Node0x2a1c520 [shape=record,label="{entry}"];
+	Node0x2a1c520 -> Node0x2a1c570;
+	Node0x2a1c570 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2a1c570:s0 -> Node0x2a1c950;
+	Node0x2a1c570:s1 -> Node0x2a1c9a0;
+	Node0x2a1c950 [shape=record,label="{it_while.body}"];
+	Node0x2a1c950 -> Node0x2a1c570;
+	Node0x2a1c9a0 [shape=record,label="{while.end}"];
+}

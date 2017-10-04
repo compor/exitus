@@ -1,0 +1,19 @@
+digraph "CFG for 'sge_plus_while.cond' function" {
+	label="CFG for 'sge_plus_while.cond' function";
+
+	Node0xb6b08e0 [shape=record,label="{newFuncRoot}"];
+	Node0xb6b08e0 -> Node0xb6b0980;
+	Node0xb6b0930 [shape=record,label="{while.end.exitStub}"];
+	Node0xb6b0980 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xb6b0980:s0 -> Node0xb6b09d0;
+	Node0xb6b0980:s1 -> Node0xb6b0930;
+	Node0xb6b09d0 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0xb6b09d0:s0 -> Node0xb6b0a70;
+	Node0xb6b09d0:s1 -> Node0xb6b0a20;
+	Node0xb6b0a20 [shape=record,label="{pd_if.else}"];
+	Node0xb6b0a20 -> Node0xb6b0ac0;
+	Node0xb6b0a70 [shape=record,label="{pd_if.then}"];
+	Node0xb6b0a70 -> Node0xb6b0ac0;
+	Node0xb6b0ac0 [shape=record,label="{it_if.end}"];
+	Node0xb6b0ac0 -> Node0xb6b0980;
+}

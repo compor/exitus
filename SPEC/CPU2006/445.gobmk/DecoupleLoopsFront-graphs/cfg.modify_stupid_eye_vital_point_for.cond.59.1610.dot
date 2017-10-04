@@ -1,0 +1,23 @@
+digraph "CFG for 'modify_stupid_eye_vital_point_for.cond.59' function" {
+	label="CFG for 'modify_stupid_eye_vital_point_for.cond.59' function";
+
+	Node0x421fbe0 [shape=record,label="{newFuncRoot}"];
+	Node0x421fbe0 -> Node0x421fcd0;
+	Node0x421fc30 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x421fc80 [shape=record,label="{if.then.76.exitStub}"];
+	Node0x421fcd0 [shape=record,label="{it_for.cond.59|{<s0>T|<s1>F}}"];
+	Node0x421fcd0:s0 -> Node0x421fd20;
+	Node0x421fcd0:s1 -> Node0x421fc30;
+	Node0x421fd20 [shape=record,label="{it_for.body.62|{<s0>T|<s1>F}}"];
+	Node0x421fd20:s0 -> Node0x421fdc0;
+	Node0x421fd20:s1 -> Node0x421fd70;
+	Node0x421fd70 [shape=record,label="{pd_for.body.62.for.inc.79_crit_edge}"];
+	Node0x421fd70 -> Node0x421fe60;
+	Node0x421fdc0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x421fdc0:s0 -> Node0x421fc80;
+	Node0x421fdc0:s1 -> Node0x421fe10;
+	Node0x421fe10 [shape=record,label="{pd_land.lhs.true.for.inc.79_crit_edge}"];
+	Node0x421fe10 -> Node0x421fe60;
+	Node0x421fe60 [shape=record,label="{it_for.inc.79}"];
+	Node0x421fe60 -> Node0x421fcd0;
+}

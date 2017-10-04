@@ -1,0 +1,16 @@
+digraph "CFG for 'sched_analyze_insn_while.cond.255' function" {
+	label="CFG for 'sched_analyze_insn_while.cond.255' function";
+
+	Node0xc166220 [shape=record,label="{newFuncRoot}"];
+	Node0xc166220 -> Node0xc166310;
+	Node0xc166270 [shape=record,label="{while.cond.255.for.cond.270.preheader_crit_edge.exitStub}"];
+	Node0xc1662c0 [shape=record,label="{land.rhs.257.for.cond.270.preheader_crit_edge.exitStub}"];
+	Node0xc166310 [shape=record,label="{it_while.cond.255|{<s0>T|<s1>F}}"];
+	Node0xc166310:s0 -> Node0xc166270;
+	Node0xc166310:s1 -> Node0xc166360;
+	Node0xc166360 [shape=record,label="{it_land.rhs.257|{<s0>T|<s1>F}}"];
+	Node0xc166360:s0 -> Node0xc166c40;
+	Node0xc166360:s1 -> Node0xc1662c0;
+	Node0xc166c40 [shape=record,label="{it_while.body.261}"];
+	Node0xc166c40 -> Node0xc166310;
+}

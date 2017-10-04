@@ -1,0 +1,41 @@
+digraph "CFG for 'owl_threaten_defense_for.cond' function" {
+	label="CFG for 'owl_threaten_defense_for.cond' function";
+
+	Node0x414bb50 [shape=record,label="{newFuncRoot}"];
+	Node0x414bb50 -> Node0x414bc90;
+	Node0x414bba0 [shape=record,label="{for.cond.for.end.loopexit_crit_edge.exitStub}"];
+	Node0x414bbf0 [shape=record,label="{for.body.for.end.loopexit_crit_edge.exitStub}"];
+	Node0x414bc40 [shape=record,label="{if.then.44.exitStub}"];
+	Node0x414bc90 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x414bc90:s0 -> Node0x414bce0;
+	Node0x414bc90:s1 -> Node0x414bba0;
+	Node0x414bce0 [shape=record,label="{pd_for.body}"];
+	Node0x414bce0 -> Node0x501f250;
+	Node0x501f250 [shape=record,label="{it_for.body.split|{<s0>T|<s1>F}}"];
+	Node0x501f250:s0 -> Node0x414bd30;
+	Node0x501f250:s1 -> Node0x414bbf0;
+	Node0x414bd30 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x414bd30:s0 -> Node0x414bdd0;
+	Node0x414bd30:s1 -> Node0x414bd80;
+	Node0x414bd80 [shape=record,label="{pd_if.else.for.inc_crit_edge}"];
+	Node0x414bd80 -> Node0x414bfb0;
+	Node0x414bdd0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x414bdd0:s0 -> Node0x414be70;
+	Node0x414bdd0:s1 -> Node0x414be20;
+	Node0x414be20 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x414be20 -> Node0x414bfb0;
+	Node0x414be70 [shape=record,label="{it_if.then.27|{<s0>T|<s1>F}}"];
+	Node0x414be70:s0 -> Node0x414bf10;
+	Node0x414be70:s1 -> Node0x414bec0;
+	Node0x414bec0 [shape=record,label="{pd_if.then.27.for.inc_crit_edge}"];
+	Node0x414bec0 -> Node0x414bfb0;
+	Node0x414bf10 [shape=record,label="{pd_if.then.35}"];
+	Node0x414bf10 -> Node0x501ecf0;
+	Node0x501ecf0 [shape=record,label="{it_if.then.35.split|{<s0>T|<s1>F}}"];
+	Node0x501ecf0:s0 -> Node0x414bc40;
+	Node0x501ecf0:s1 -> Node0x414bf60;
+	Node0x414bf60 [shape=record,label="{pd_if.else.63}"];
+	Node0x414bf60 -> Node0x414bfb0;
+	Node0x414bfb0 [shape=record,label="{it_for.inc}"];
+	Node0x414bfb0 -> Node0x414bc90;
+}

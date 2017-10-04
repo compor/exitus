@@ -1,0 +1,38 @@
+digraph "CFG for 'idoms_to_doms' function" {
+	label="CFG for 'idoms_to_doms' function";
+
+	Node0x3b76be0 [shape=record,label="{entry}"];
+	Node0x3b76be0 -> Node0x3b76c30;
+	Node0x3b76c30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3b76c30:s0 -> Node0x3b76c80;
+	Node0x3b76c30:s1 -> Node0x3b77040;
+	Node0x3b76c80 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x3b76c80:s0 -> Node0x3b76cd0;
+	Node0x3b76c80:s1 -> Node0x3b76d20;
+	Node0x3b76cd0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x3b76cd0 -> Node0x3b76ff0;
+	Node0x3b76d20 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x3b76d20:s0 -> Node0x3b76dc0;
+	Node0x3b76d20:s1 -> Node0x3b76d70;
+	Node0x3b76d70 [shape=record,label="{pd_if.end.if.else_crit_edge}"];
+	Node0x3b76d70 -> Node0x3b76eb0;
+	Node0x3b76dc0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x3b76dc0:s0 -> Node0x3b76e60;
+	Node0x3b76dc0:s1 -> Node0x3b76e10;
+	Node0x3b76e10 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0x3b76e10 -> Node0x3b76eb0;
+	Node0x3b76e60 [shape=record,label="{pd_if.then.10}"];
+	Node0x3b76e60 -> Node0x3b76fa0;
+	Node0x3b76eb0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x3b76eb0:s0 -> Node0x3b76f00;
+	Node0x3b76eb0:s1 -> Node0x3b76f50;
+	Node0x3b76f00 [shape=record,label="{pd_if.else.if.end.30_crit_edge}"];
+	Node0x3b76f00 -> Node0x3b76fa0;
+	Node0x3b76f50 [shape=record,label="{pd_if.then.26}"];
+	Node0x3b76f50 -> Node0x3b76fa0;
+	Node0x3b76fa0 [shape=record,label="{pd_if.end.30}"];
+	Node0x3b76fa0 -> Node0x3b76ff0;
+	Node0x3b76ff0 [shape=record,label="{it_for.inc}"];
+	Node0x3b76ff0 -> Node0x3b76c30;
+	Node0x3b77040 [shape=record,label="{for.end}"];
+}

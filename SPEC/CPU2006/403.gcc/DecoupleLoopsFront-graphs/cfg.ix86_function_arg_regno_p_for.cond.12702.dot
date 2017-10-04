@@ -1,0 +1,16 @@
+digraph "CFG for 'ix86_function_arg_regno_p_for.cond' function" {
+	label="CFG for 'ix86_function_arg_regno_p_for.cond' function";
+
+	Node0xc6bd760 [shape=record,label="{newFuncRoot}"];
+	Node0xc6bd760 -> Node0xc6bdc00;
+	Node0xc6bdb60 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0xc6bdbb0 [shape=record,label="{for.body.return.loopexit_crit_edge.exitStub}"];
+	Node0xc6bdc00 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xc6bdc00:s0 -> Node0xc6bdc50;
+	Node0xc6bdc00:s1 -> Node0xc6bdb60;
+	Node0xc6bdc50 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xc6bdc50:s0 -> Node0xc6bdbb0;
+	Node0xc6bdc50:s1 -> Node0xc6bdca0;
+	Node0xc6bdca0 [shape=record,label="{it_for.inc}"];
+	Node0xc6bdca0 -> Node0xc6bdc00;
+}

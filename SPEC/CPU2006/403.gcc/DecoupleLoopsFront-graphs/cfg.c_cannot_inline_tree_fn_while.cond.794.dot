@@ -1,0 +1,12 @@
+digraph "CFG for 'c_cannot_inline_tree_fn_while.cond' function" {
+	label="CFG for 'c_cannot_inline_tree_fn_while.cond' function";
+
+	Node0xa1e0230 [shape=record,label="{newFuncRoot}"];
+	Node0xa1e0230 -> Node0xa1e02d0;
+	Node0xa1e0280 [shape=record,label="{while.end.exitStub}"];
+	Node0xa1e02d0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa1e02d0:s0 -> Node0xa1e0320;
+	Node0xa1e02d0:s1 -> Node0xa1e0280;
+	Node0xa1e0320 [shape=record,label="{it_while.body}"];
+	Node0xa1e0320 -> Node0xa1e02d0;
+}

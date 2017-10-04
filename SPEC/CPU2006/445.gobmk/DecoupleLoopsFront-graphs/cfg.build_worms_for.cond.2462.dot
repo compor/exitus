@@ -1,0 +1,19 @@
+digraph "CFG for 'build_worms_for.cond' function" {
+	label="CFG for 'build_worms_for.cond' function";
+
+	Node0x46d3f50 [shape=record,label="{newFuncRoot}"];
+	Node0x46d3f50 -> Node0x46d48c0;
+	Node0x46d4870 [shape=record,label="{for.cond.5.preheader.exitStub}"];
+	Node0x46d48c0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x46d48c0:s0 -> Node0x46d4910;
+	Node0x46d48c0:s1 -> Node0x46d4870;
+	Node0x46d4910 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x46d4910:s0 -> Node0x46d49b0;
+	Node0x46d4910:s1 -> Node0x46d4960;
+	Node0x46d4960 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x46d4960 -> Node0x46d4a00;
+	Node0x46d49b0 [shape=record,label="{pd_if.then}"];
+	Node0x46d49b0 -> Node0x46d4a00;
+	Node0x46d4a00 [shape=record,label="{it_for.inc}"];
+	Node0x46d4a00 -> Node0x46d48c0;
+}

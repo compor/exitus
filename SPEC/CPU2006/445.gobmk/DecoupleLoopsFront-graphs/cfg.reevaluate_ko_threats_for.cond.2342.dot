@@ -1,0 +1,23 @@
+digraph "CFG for 'reevaluate_ko_threats_for.cond' function" {
+	label="CFG for 'reevaluate_ko_threats_for.cond' function";
+
+	Node0x4601de0 [shape=record,label="{newFuncRoot}"];
+	Node0x4601de0 -> Node0x460cb70;
+	Node0x4601e30 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x4601e80 [shape=record,label="{land.lhs.true.for.end_crit_edge.exitStub}"];
+	Node0x460cb70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x460cb70:s0 -> Node0x460cbc0;
+	Node0x460cb70:s1 -> Node0x4601e30;
+	Node0x460cbc0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x460cbc0:s0 -> Node0x460cc60;
+	Node0x460cbc0:s1 -> Node0x460cc10;
+	Node0x460cc10 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x460cc10 -> Node0x460cd00;
+	Node0x460cc60 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x460cc60:s0 -> Node0x4601e80;
+	Node0x460cc60:s1 -> Node0x460ccb0;
+	Node0x460ccb0 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x460ccb0 -> Node0x460cd00;
+	Node0x460cd00 [shape=record,label="{it_for.inc}"];
+	Node0x460cd00 -> Node0x460cb70;
+}

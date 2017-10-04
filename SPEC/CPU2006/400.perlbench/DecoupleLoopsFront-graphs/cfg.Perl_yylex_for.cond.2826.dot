@@ -1,0 +1,38 @@
+digraph "CFG for 'Perl_yylex_for.cond' function" {
+	label="CFG for 'Perl_yylex_for.cond' function";
+
+	Node0x556ced0 [shape=record,label="{newFuncRoot}"];
+	Node0x556ced0 -> Node0x556cf70;
+	Node0x556cf20 [shape=record,label="{while.cond.2399.preheader.loopexit.exitStub}"];
+	Node0x556cf70 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x556cf70:s0 -> Node0x556d010;
+	Node0x556cf70:s1 -> Node0x556cfc0;
+	Node0x556cfc0 [shape=record,label="{it_for.cond.land.end.1964_crit_edge}"];
+	Node0x556cfc0 -> Node0x556d060;
+	Node0x556d010 [shape=record,label="{it_land.rhs.1959}"];
+	Node0x556d010 -> Node0x556d060;
+	Node0x556d060 [shape=record,label="{it_land.end.1964|{<s0>T|<s1>F}}"];
+	Node0x556d060:s0 -> Node0x556d0b0;
+	Node0x556d060:s1 -> Node0x556cf20;
+	Node0x556d0b0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x556d0b0:s0 -> Node0x556d150;
+	Node0x556d0b0:s1 -> Node0x556d100;
+	Node0x556d100 [shape=record,label="{pd_for.body.for.cond.backedge_crit_edge}"];
+	Node0x556d100 -> Node0x556d330;
+	Node0x556d150 [shape=record,label="{it_land.lhs.true.1970|{<s0>T|<s1>F}}"];
+	Node0x556d150:s0 -> Node0x556d290;
+	Node0x556d150:s1 -> Node0x556d1a0;
+	Node0x556d1a0 [shape=record,label="{it_lor.lhs.false.1974|{<s0>T|<s1>F}}"];
+	Node0x556d1a0:s0 -> Node0x556d240;
+	Node0x556d1a0:s1 -> Node0x556d1f0;
+	Node0x556d1f0 [shape=record,label="{pd_lor.lhs.false.1974.for.cond.backedge_crit_edge}"];
+	Node0x556d1f0 -> Node0x556d330;
+	Node0x556d240 [shape=record,label="{pd_lor.lhs.false.1974.if.then.1979_crit_edge}"];
+	Node0x556d240 -> Node0x556d2e0;
+	Node0x556d290 [shape=record,label="{pd_land.lhs.true.1970.if.then.1979_crit_edge}"];
+	Node0x556d290 -> Node0x556d2e0;
+	Node0x556d2e0 [shape=record,label="{it_if.then.1979}"];
+	Node0x556d2e0 -> Node0x556d330;
+	Node0x556d330 [shape=record,label="{pd_for.cond.backedge}"];
+	Node0x556d330 -> Node0x556cf70;
+}

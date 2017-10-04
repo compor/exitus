@@ -1,0 +1,26 @@
+digraph "CFG for 'Perl_apply_while.cond.25' function" {
+	label="CFG for 'Perl_apply_while.cond.25' function";
+
+	Node0x4aef8c0 [shape=record,label="{newFuncRoot}"];
+	Node0x4aef8c0 -> Node0x4aef960;
+	Node0x4aef910 [shape=record,label="{sw.epilog.loopexit.exitStub}"];
+	Node0x4aef960 [shape=record,label="{it_while.cond.25|{<s0>T|<s1>F}}"];
+	Node0x4aef960:s0 -> Node0x4aef9b0;
+	Node0x4aef960:s1 -> Node0x4aef910;
+	Node0x4aef9b0 [shape=record,label="{pd_while.body.29|{<s0>T|<s1>F}}"];
+	Node0x4aef9b0:s0 -> Node0x4aefa50;
+	Node0x4aef9b0:s1 -> Node0x4aefa00;
+	Node0x4aefa00 [shape=record,label="{pd_cond.false.37}"];
+	Node0x4aefa00 -> Node0x4aefaa0;
+	Node0x4aefa50 [shape=record,label="{pd_cond.true.34}"];
+	Node0x4aefa50 -> Node0x4aefaa0;
+	Node0x4aefaa0 [shape=record,label="{pd_cond.end.39|{<s0>T|<s1>F}}"];
+	Node0x4aefaa0:s0 -> Node0x4aefb40;
+	Node0x4aefaa0:s1 -> Node0x4aefaf0;
+	Node0x4aefaf0 [shape=record,label="{pd_cond.end.39.if.end.46_crit_edge}"];
+	Node0x4aefaf0 -> Node0x4aefb90;
+	Node0x4aefb40 [shape=record,label="{pd_if.then.44}"];
+	Node0x4aefb40 -> Node0x4aefb90;
+	Node0x4aefb90 [shape=record,label="{pd_if.end.46}"];
+	Node0x4aefb90 -> Node0x4aef960;
+}

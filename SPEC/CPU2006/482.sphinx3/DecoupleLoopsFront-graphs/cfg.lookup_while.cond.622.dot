@@ -1,0 +1,23 @@
+digraph "CFG for 'lookup_while.cond' function" {
+	label="CFG for 'lookup_while.cond' function";
+
+	Node0x11fe580 [shape=record,label="{newFuncRoot}"];
+	Node0x11fe580 -> Node0x11fe670;
+	Node0x11fe5d0 [shape=record,label="{while.cond.if.end.21.loopexit_crit_edge.exitStub}"];
+	Node0x11fe620 [shape=record,label="{lor.rhs.if.end.21.loopexit_crit_edge.exitStub}"];
+	Node0x11fe670 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x11fe670:s0 -> Node0x11fe6c0;
+	Node0x11fe670:s1 -> Node0x11fe5d0;
+	Node0x11fe6c0 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0x11fe6c0:s0 -> Node0x11fe7b0;
+	Node0x11fe6c0:s1 -> Node0x11fe710;
+	Node0x11fe710 [shape=record,label="{it_lor.rhs|{<s0>T|<s1>F}}"];
+	Node0x11fe710:s0 -> Node0x11fe760;
+	Node0x11fe710:s1 -> Node0x11fe620;
+	Node0x11fe760 [shape=record,label="{pd_lor.rhs.while.body_crit_edge}"];
+	Node0x11fe760 -> Node0x11fe800;
+	Node0x11fe7b0 [shape=record,label="{pd_land.rhs.while.body_crit_edge}"];
+	Node0x11fe7b0 -> Node0x11fe800;
+	Node0x11fe800 [shape=record,label="{it_while.body}"];
+	Node0x11fe800 -> Node0x11fe670;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'is_zeros_p_for.cond' function" {
+	label="CFG for 'is_zeros_p_for.cond' function";
+
+	Node0xadfd3f0 [shape=record,label="{newFuncRoot}"];
+	Node0xadfd3f0 -> Node0xadfd4e0;
+	Node0xadfd440 [shape=record,label="{for.cond.return.loopexit_crit_edge.exitStub}"];
+	Node0xadfd490 [shape=record,label="{for.body.return.loopexit_crit_edge.exitStub}"];
+	Node0xadfd4e0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xadfd4e0:s0 -> Node0xadfd530;
+	Node0xadfd4e0:s1 -> Node0xadfd440;
+	Node0xadfd530 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xadfd530:s0 -> Node0xadfd580;
+	Node0xadfd530:s1 -> Node0xadfd490;
+	Node0xadfd580 [shape=record,label="{it_for.inc}"];
+	Node0xadfd580 -> Node0xadfd4e0;
+}

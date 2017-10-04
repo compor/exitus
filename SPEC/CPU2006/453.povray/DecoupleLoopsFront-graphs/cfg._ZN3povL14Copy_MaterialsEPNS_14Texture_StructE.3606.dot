@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN3povL14Copy_MaterialsEPNS_14Texture_StructE' function" {
+	label="CFG for '_ZN3povL14Copy_MaterialsEPNS_14Texture_StructE' function";
+
+	Node0x20b8110 [shape=record,label="{entry}"];
+	Node0x20b8110 -> Node0x20b8160;
+	Node0x20b8160 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x20b8160:s0 -> Node0x20b81b0;
+	Node0x20b8160:s1 -> Node0x20b82f0;
+	Node0x20b81b0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x20b81b0:s0 -> Node0x20b8250;
+	Node0x20b81b0:s1 -> Node0x20b8200;
+	Node0x20b8200 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x20b8200 -> Node0x20b82a0;
+	Node0x20b8250 [shape=record,label="{pd_if.then.3}"];
+	Node0x20b8250 -> Node0x20b82a0;
+	Node0x20b82a0 [shape=record,label="{it_for.inc}"];
+	Node0x20b82a0 -> Node0x20b8160;
+	Node0x20b82f0 [shape=record,label="{for.end}"];
+}

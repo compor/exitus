@@ -1,0 +1,45 @@
+digraph "CFG for 'loop_givs_reduce' function" {
+	label="CFG for 'loop_givs_reduce' function";
+
+	Node0x80dde70 [shape=record,label="{entry}"];
+	Node0x80dde70 -> Node0x80ddec0;
+	Node0x80ddec0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x80ddec0:s0 -> Node0x80ddf10;
+	Node0x80ddec0:s1 -> Node0x80de3c0;
+	Node0x80ddf10 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x80ddf10:s0 -> Node0x80ddf60;
+	Node0x80ddf10:s1 -> Node0x80ddfb0;
+	Node0x80ddf60 [shape=record,label="{pd_for.body.for.inc.33_crit_edge}"];
+	Node0x80ddf60 -> Node0x80de370;
+	Node0x80ddfb0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x80ddfb0:s0 -> Node0x80de050;
+	Node0x80ddfb0:s1 -> Node0x80de000;
+	Node0x80de000 [shape=record,label="{pd_land.lhs.true.for.inc.33_crit_edge}"];
+	Node0x80de000 -> Node0x80de370;
+	Node0x80de050 [shape=record,label="{pd_if.then|{<s0>T|<s1>F}}"];
+	Node0x80de050:s0 -> Node0x80de0a0;
+	Node0x80de050:s1 -> Node0x80de0f0;
+	Node0x80de0a0 [shape=record,label="{pd_if.then.if.end_crit_edge}"];
+	Node0x80de0a0 -> Node0x80de140;
+	Node0x80de0f0 [shape=record,label="{pd_if.then.3}"];
+	Node0x80de0f0 -> Node0x80de140;
+	Node0x80de140 [shape=record,label="{pd_if.end}"];
+	Node0x80de140 -> Node0x80de190;
+	Node0x80de190 [shape=record,label="{pd_for.cond.5|{<s0>T|<s1>F}}"];
+	Node0x80de190:s0 -> Node0x80de1e0;
+	Node0x80de190:s1 -> Node0x80de320;
+	Node0x80de1e0 [shape=record,label="{pd_if.then.9|{<s0>T|<s1>F}}"];
+	Node0x80de1e0:s0 -> Node0x80de230;
+	Node0x80de1e0:s1 -> Node0x80de280;
+	Node0x80de230 [shape=record,label="{pd_if.then.18}"];
+	Node0x80de230 -> Node0x80de2d0;
+	Node0x80de280 [shape=record,label="{pd_if.else.22}"];
+	Node0x80de280 -> Node0x80de2d0;
+	Node0x80de2d0 [shape=record,label="{pd_for.inc}"];
+	Node0x80de2d0 -> Node0x80de190;
+	Node0x80de320 [shape=record,label="{pd_for.end}"];
+	Node0x80de320 -> Node0x80de370;
+	Node0x80de370 [shape=record,label="{it_for.inc.33}"];
+	Node0x80de370 -> Node0x80ddec0;
+	Node0x80de3c0 [shape=record,label="{for.end.35}"];
+}

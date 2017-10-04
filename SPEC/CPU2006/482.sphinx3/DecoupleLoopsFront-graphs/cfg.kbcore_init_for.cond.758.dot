@@ -1,0 +1,19 @@
+digraph "CFG for 'kbcore_init_for.cond' function" {
+	label="CFG for 'kbcore_init_for.cond' function";
+
+	Node0x12297f0 [shape=record,label="{newFuncRoot}"];
+	Node0x12297f0 -> Node0x1229890;
+	Node0x1229840 [shape=record,label="{if.end.164.loopexit.exitStub}"];
+	Node0x1229890 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x1229890:s0 -> Node0x12298e0;
+	Node0x1229890:s1 -> Node0x1229840;
+	Node0x12298e0 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x12298e0:s0 -> Node0x1229980;
+	Node0x12298e0:s1 -> Node0x1229930;
+	Node0x1229930 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x1229930 -> Node0x12299d0;
+	Node0x1229980 [shape=record,label="{pd_if.then.158}"];
+	Node0x1229980 -> Node0x12299d0;
+	Node0x12299d0 [shape=record,label="{it_for.inc}"];
+	Node0x12299d0 -> Node0x1229890;
+}

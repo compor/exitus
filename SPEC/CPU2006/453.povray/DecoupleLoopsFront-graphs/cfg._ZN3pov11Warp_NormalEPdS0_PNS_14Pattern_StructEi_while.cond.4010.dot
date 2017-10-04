@@ -1,0 +1,19 @@
+digraph "CFG for '_ZN3pov11Warp_NormalEPdS0_PNS_14Pattern_StructEi_while.cond' function" {
+	label="CFG for '_ZN3pov11Warp_NormalEPdS0_PNS_14Pattern_StructEi_while.cond' function";
+
+	Node0x2e22be0 [shape=record,label="{newFuncRoot}"];
+	Node0x2e22be0 -> Node0x2e144b0;
+	Node0x2e22c30 [shape=record,label="{while.end.exitStub}"];
+	Node0x2e144b0 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x2e144b0:s0 -> Node0x2e14500;
+	Node0x2e144b0:s1 -> Node0x2e22c30;
+	Node0x2e14500 [shape=record,label="{pd_while.body|{<s0>T|<s1>F}}"];
+	Node0x2e14500:s0 -> Node0x2e145a0;
+	Node0x2e14500:s1 -> Node0x2e14550;
+	Node0x2e14550 [shape=record,label="{pd_while.body.sw.epilog_crit_edge}"];
+	Node0x2e14550 -> Node0x2e24e10;
+	Node0x2e145a0 [shape=record,label="{pd_sw.bb.1}"];
+	Node0x2e145a0 -> Node0x2e24e10;
+	Node0x2e24e10 [shape=record,label="{it_sw.epilog}"];
+	Node0x2e24e10 -> Node0x2e144b0;
+}

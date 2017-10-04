@@ -1,0 +1,14 @@
+digraph "CFG for 'buildSpiralOrder_for.cond' function" {
+	label="CFG for 'buildSpiralOrder_for.cond' function";
+
+	Node0x486e1c0 [shape=record,label="{newFuncRoot}"];
+	Node0x486e1c0 -> Node0x486e260;
+	Node0x486e210 [shape=record,label="{for.cond.2.preheader.exitStub}"];
+	Node0x486e260 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x486e260:s0 -> Node0x486e2b0;
+	Node0x486e260:s1 -> Node0x486e210;
+	Node0x486e2b0 [shape=record,label="{pd_for.body}"];
+	Node0x486e2b0 -> Node0x502a380;
+	Node0x502a380 [shape=record,label="{it_for.body.split}"];
+	Node0x502a380 -> Node0x486e260;
+}

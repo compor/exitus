@@ -1,0 +1,37 @@
+digraph "CFG for 'verify_stored_board_for.cond' function" {
+	label="CFG for 'verify_stored_board_for.cond' function";
+
+	Node0x474edc0 [shape=record,label="{newFuncRoot}"];
+	Node0x474edc0 -> Node0x474ef00;
+	Node0x474ee10 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0x474ee60 [shape=record,label="{if.else.9.return_crit_edge.exitStub}"];
+	Node0x474eeb0 [shape=record,label="{if.else.25.return_crit_edge.exitStub}"];
+	Node0x474ef00 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x474ef00:s0 -> Node0x474ef50;
+	Node0x474ef00:s1 -> Node0x474ee10;
+	Node0x474ef50 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x474ef50:s0 -> Node0x474eff0;
+	Node0x474ef50:s1 -> Node0x474efa0;
+	Node0x474efa0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x474efa0 -> Node0x474f220;
+	Node0x474eff0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x474eff0:s0 -> Node0x474f1d0;
+	Node0x474eff0:s1 -> Node0x474f040;
+	Node0x474f040 [shape=record,label="{it_if.else.9|{<s0>T|<s1>F}}"];
+	Node0x474f040:s0 -> Node0x474ee60;
+	Node0x474f040:s1 -> Node0x474f090;
+	Node0x474f090 [shape=record,label="{it_if.else.19|{<s0>T|<s1>F}}"];
+	Node0x474f090:s0 -> Node0x474f130;
+	Node0x474f090:s1 -> Node0x474f0e0;
+	Node0x474f0e0 [shape=record,label="{pd_if.else.19.for.inc_crit_edge}"];
+	Node0x474f0e0 -> Node0x474f220;
+	Node0x474f130 [shape=record,label="{it_if.else.25|{<s0>T|<s1>F}}"];
+	Node0x474f130:s0 -> Node0x474eeb0;
+	Node0x474f130:s1 -> Node0x474f180;
+	Node0x474f180 [shape=record,label="{pd_if.else.25.for.inc_crit_edge}"];
+	Node0x474f180 -> Node0x474f220;
+	Node0x474f1d0 [shape=record,label="{pd_if.else.for.inc_crit_edge}"];
+	Node0x474f1d0 -> Node0x474f220;
+	Node0x474f220 [shape=record,label="{it_for.inc}"];
+	Node0x474f220 -> Node0x474ef00;
+}

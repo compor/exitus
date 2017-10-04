@@ -1,0 +1,31 @@
+digraph "CFG for 'utt_word_trans_for.cond.17' function" {
+	label="CFG for 'utt_word_trans_for.cond.17' function";
+
+	Node0x135fdc0 [shape=record,label="{newFuncRoot}"];
+	Node0x135fdc0 -> Node0x135fe60;
+	Node0x135fe10 [shape=record,label="{for.end.59.exitStub}"];
+	Node0x135fe60 [shape=record,label="{it_for.cond.17|{<s0>T|<s1>F}}"];
+	Node0x135fe60:s0 -> Node0x135feb0;
+	Node0x135fe60:s1 -> Node0x135fe10;
+	Node0x135feb0 [shape=record,label="{pd_for.body.20|{<s0>T|<s1>F}}"];
+	Node0x135feb0:s0 -> Node0x135ff50;
+	Node0x135feb0:s1 -> Node0x135ff00;
+	Node0x135ff00 [shape=record,label="{pd_for.body.20.for.inc.57_crit_edge}"];
+	Node0x135ff00 -> Node0x1360130;
+	Node0x135ff50 [shape=record,label="{pd_if.end.24|{<s0>T|<s1>F}}"];
+	Node0x135ff50:s0 -> Node0x135fff0;
+	Node0x135ff50:s1 -> Node0x135ffa0;
+	Node0x135ffa0 [shape=record,label="{pd_if.end.24.if.end.41_crit_edge}"];
+	Node0x135ffa0 -> Node0x1360040;
+	Node0x135fff0 [shape=record,label="{pd_if.then.39}"];
+	Node0x135fff0 -> Node0x1360040;
+	Node0x1360040 [shape=record,label="{pd_if.end.41|{<s0>T|<s1>F}}"];
+	Node0x1360040:s0 -> Node0x13600e0;
+	Node0x1360040:s1 -> Node0x1360090;
+	Node0x1360090 [shape=record,label="{pd_if.end.41.for.inc.57_crit_edge}"];
+	Node0x1360090 -> Node0x1360130;
+	Node0x13600e0 [shape=record,label="{pd_if.then.47}"];
+	Node0x13600e0 -> Node0x1360130;
+	Node0x1360130 [shape=record,label="{it_for.inc.57}"];
+	Node0x1360130 -> Node0x135fe60;
+}

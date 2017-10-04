@@ -1,0 +1,19 @@
+digraph "CFG for 'fibheap_consolidate_while.cond' function" {
+	label="CFG for 'fibheap_consolidate_while.cond' function";
+
+	Node0xc746590 [shape=record,label="{newFuncRoot}"];
+	Node0xc746590 -> Node0xc746630;
+	Node0xc7465e0 [shape=record,label="{while.end.14.exitStub}"];
+	Node0xc746630 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xc746630:s0 -> Node0xc746680;
+	Node0xc746630:s1 -> Node0xc7465e0;
+	Node0xc746680 [shape=record,label="{pd_while.body}"];
+	Node0xc746680 -> Node0xc7466d0;
+	Node0xc7466d0 [shape=record,label="{pd_while.cond.2|{<s0>T|<s1>F}}"];
+	Node0xc7466d0:s0 -> Node0xc746770;
+	Node0xc7466d0:s1 -> Node0xc746720;
+	Node0xc746720 [shape=record,label="{pd_while.end}"];
+	Node0xc746720 -> Node0xc746630;
+	Node0xc746770 [shape=record,label="{pd_while.body.5}"];
+	Node0xc746770 -> Node0xc7466d0;
+}

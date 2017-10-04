@@ -1,0 +1,39 @@
+digraph "CFG for 'coalesce_regs_in_copies' function" {
+	label="CFG for 'coalesce_regs_in_copies' function";
+
+	Node0x9194e70 [shape=record,label="{entry}"];
+	Node0x9194e70 -> Node0x9194ec0;
+	Node0x9194ec0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x9194ec0:s0 -> Node0x9194f10;
+	Node0x9194ec0:s1 -> Node0x91952d0;
+	Node0x9194f10 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x9194f10:s0 -> Node0x9194f60;
+	Node0x9194f10:s1 -> Node0x9194fb0;
+	Node0x9194f60 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x9194f60 -> Node0x9195280;
+	Node0x9194fb0 [shape=record,label="{pd_if.end|{<s0>T|<s1>F}}"];
+	Node0x9194fb0:s0 -> Node0x9195000;
+	Node0x9194fb0:s1 -> Node0x9195050;
+	Node0x9195000 [shape=record,label="{pd_if.end.for.inc_crit_edge}"];
+	Node0x9195000 -> Node0x9195280;
+	Node0x9195050 [shape=record,label="{pd_if.end.7|{<s0>T|<s1>F}}"];
+	Node0x9195050:s0 -> Node0x91950a0;
+	Node0x9195050:s1 -> Node0x91950f0;
+	Node0x91950a0 [shape=record,label="{pd_if.end.7.for.inc_crit_edge}"];
+	Node0x91950a0 -> Node0x9195280;
+	Node0x91950f0 [shape=record,label="{pd_lor.lhs.false|{<s0>T|<s1>F}}"];
+	Node0x91950f0:s0 -> Node0x9195140;
+	Node0x91950f0:s1 -> Node0x9195190;
+	Node0x9195140 [shape=record,label="{pd_lor.lhs.false.for.inc_crit_edge}"];
+	Node0x9195140 -> Node0x9195280;
+	Node0x9195190 [shape=record,label="{pd_if.end.21|{<s0>T|<s1>F}}"];
+	Node0x9195190:s0 -> Node0x91951e0;
+	Node0x9195190:s1 -> Node0x9195230;
+	Node0x91951e0 [shape=record,label="{pd_if.end.21.for.inc_crit_edge}"];
+	Node0x91951e0 -> Node0x9195280;
+	Node0x9195230 [shape=record,label="{pd_if.end.29}"];
+	Node0x9195230 -> Node0x9195280;
+	Node0x9195280 [shape=record,label="{it_for.inc}"];
+	Node0x9195280 -> Node0x9194ec0;
+	Node0x91952d0 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,29 @@
+digraph "CFG for 'pop_temp_slots' function" {
+	label="CFG for 'pop_temp_slots' function";
+
+	Node0x4bfdae0 [shape=record,label="{entry}"];
+	Node0x4bfdae0 -> Node0x4bfdb30;
+	Node0x4bfdb30 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4bfdb30:s0 -> Node0x4bfdb80;
+	Node0x4bfdb30:s1 -> Node0x4bfde00;
+	Node0x4bfdb80 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4bfdb80:s0 -> Node0x4bfdc20;
+	Node0x4bfdb80:s1 -> Node0x4bfdbd0;
+	Node0x4bfdbd0 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x4bfdbd0 -> Node0x4bfddb0;
+	Node0x4bfdc20 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x4bfdc20:s0 -> Node0x4bfdcc0;
+	Node0x4bfdc20:s1 -> Node0x4bfdc70;
+	Node0x4bfdc70 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0x4bfdc70 -> Node0x4bfddb0;
+	Node0x4bfdcc0 [shape=record,label="{pd_land.lhs.true.3|{<s0>T|<s1>F}}"];
+	Node0x4bfdcc0:s0 -> Node0x4bfdd60;
+	Node0x4bfdcc0:s1 -> Node0x4bfdd10;
+	Node0x4bfdd10 [shape=record,label="{pd_land.lhs.true.3.for.inc_crit_edge}"];
+	Node0x4bfdd10 -> Node0x4bfddb0;
+	Node0x4bfdd60 [shape=record,label="{pd_if.then}"];
+	Node0x4bfdd60 -> Node0x4bfddb0;
+	Node0x4bfddb0 [shape=record,label="{it_for.inc}"];
+	Node0x4bfddb0 -> Node0x4bfdb30;
+	Node0x4bfde00 [shape=record,label="{for.end}"];
+}

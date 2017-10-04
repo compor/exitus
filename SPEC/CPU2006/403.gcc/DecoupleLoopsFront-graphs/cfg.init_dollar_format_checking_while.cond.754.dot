@@ -1,0 +1,14 @@
+digraph "CFG for 'init_dollar_format_checking_while.cond' function" {
+	label="CFG for 'init_dollar_format_checking_while.cond' function";
+
+	Node0xa1b2790 [shape=record,label="{newFuncRoot}"];
+	Node0xa1b2790 -> Node0xa1b2830;
+	Node0xa1b27e0 [shape=record,label="{if.end.loopexit.exitStub}"];
+	Node0xa1b2830 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa1b2830:s0 -> Node0xa1b2880;
+	Node0xa1b2830:s1 -> Node0xa1b27e0;
+	Node0xa1b2880 [shape=record,label="{pd_while.body}"];
+	Node0xa1b2880 -> Node0xf0d0f60;
+	Node0xf0d0f60 [shape=record,label="{it_while.body.split}"];
+	Node0xf0d0f60 -> Node0xa1b2830;
+}

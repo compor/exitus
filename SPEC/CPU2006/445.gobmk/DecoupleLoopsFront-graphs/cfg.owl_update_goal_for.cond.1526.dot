@@ -1,0 +1,16 @@
+digraph "CFG for 'owl_update_goal_for.cond' function" {
+	label="CFG for 'owl_update_goal_for.cond' function";
+
+	Node0x41cdd90 [shape=record,label="{newFuncRoot}"];
+	Node0x41cdd90 -> Node0x41ce300;
+	Node0x41cdde0 [shape=record,label="{for.cond.if.end.13.loopexit_crit_edge.exitStub}"];
+	Node0x41ce2b0 [shape=record,label="{for.body.if.end.13.loopexit_crit_edge.exitStub}"];
+	Node0x41ce300 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x41ce300:s0 -> Node0x41ce350;
+	Node0x41ce300:s1 -> Node0x41cdde0;
+	Node0x41ce350 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x41ce350:s0 -> Node0x41ce2b0;
+	Node0x41ce350:s1 -> Node0x41ce3a0;
+	Node0x41ce3a0 [shape=record,label="{it_for.inc}"];
+	Node0x41ce3a0 -> Node0x41ce300;
+}

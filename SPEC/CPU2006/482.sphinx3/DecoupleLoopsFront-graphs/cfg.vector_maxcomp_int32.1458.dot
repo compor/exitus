@@ -1,0 +1,14 @@
+digraph "CFG for 'vector_maxcomp_int32' function" {
+	label="CFG for 'vector_maxcomp_int32' function";
+
+	Node0x10ba3f0 [shape=record,label="{entry}"];
+	Node0x10ba3f0 -> Node0x10ba440;
+	Node0x10ba440 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x10ba440:s0 -> Node0x10ba490;
+	Node0x10ba440:s1 -> Node0x10ba4e0;
+	Node0x10ba490 [shape=record,label="{pd_for.body}"];
+	Node0x10ba490 -> Node0x1551020;
+	Node0x1551020 [shape=record,label="{it_for.body.split}"];
+	Node0x1551020 -> Node0x10ba440;
+	Node0x10ba4e0 [shape=record,label="{for.end}"];
+}

@@ -1,0 +1,27 @@
+digraph "CFG for 'add_case_node_while.cond.45' function" {
+	label="CFG for 'add_case_node_while.cond.45' function";
+
+	Node0xc3ce630 [shape=record,label="{newFuncRoot}"];
+	Node0xc3ce630 -> Node0xc3ce770;
+	Node0xc3ce680 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0xc3ce6d0 [shape=record,label="{if.else.142.exitStub}"];
+	Node0xc3ce720 [shape=record,label="{if.else.55.exitStub}"];
+	Node0xc3ce770 [shape=record,label="{it_while.cond.45|{<s0>T|<s1>F}}"];
+	Node0xc3ce770:s0 -> Node0xc3ce7c0;
+	Node0xc3ce770:s1 -> Node0xc3ce680;
+	Node0xc3ce7c0 [shape=record,label="{it_while.body.47|{<s0>T|<s1>F}}"];
+	Node0xc3ce7c0:s0 -> Node0xc3ce8b0;
+	Node0xc3ce7c0:s1 -> Node0xc3ce810;
+	Node0xc3ce810 [shape=record,label="{it_if.else.136|{<s0>T|<s1>F}}"];
+	Node0xc3ce810:s0 -> Node0xc3ce6d0;
+	Node0xc3ce810:s1 -> Node0xc3ce860;
+	Node0xc3ce860 [shape=record,label="{pd_if.then.140}"];
+	Node0xc3ce860 -> Node0xc3ce950;
+	Node0xc3ce8b0 [shape=record,label="{it_if.then.50|{<s0>T|<s1>F}}"];
+	Node0xc3ce8b0:s0 -> Node0xc3ce720;
+	Node0xc3ce8b0:s1 -> Node0xc3ce900;
+	Node0xc3ce900 [shape=record,label="{pd_if.then.53}"];
+	Node0xc3ce900 -> Node0xc3ce950;
+	Node0xc3ce950 [shape=record,label="{it_if.end.230}"];
+	Node0xc3ce950 -> Node0xc3ce770;
+}

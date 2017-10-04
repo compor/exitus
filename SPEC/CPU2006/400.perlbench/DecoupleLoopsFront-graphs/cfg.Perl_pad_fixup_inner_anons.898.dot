@@ -1,0 +1,24 @@
+digraph "CFG for 'Perl_pad_fixup_inner_anons' function" {
+	label="CFG for 'Perl_pad_fixup_inner_anons' function";
+
+	Node0x2af25a0 [shape=record,label="{entry}"];
+	Node0x2af25a0 -> Node0x2af25f0;
+	Node0x2af25f0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x2af25f0:s0 -> Node0x2af2640;
+	Node0x2af25f0:s1 -> Node0x2af2820;
+	Node0x2af2640 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x2af2640:s0 -> Node0x2af26e0;
+	Node0x2af2640:s1 -> Node0x2af2690;
+	Node0x2af2690 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0x2af2690 -> Node0x2af27d0;
+	Node0x2af26e0 [shape=record,label="{pd_land.lhs.true.11|{<s0>T|<s1>F}}"];
+	Node0x2af26e0:s0 -> Node0x2af2780;
+	Node0x2af26e0:s1 -> Node0x2af2730;
+	Node0x2af2730 [shape=record,label="{pd_land.lhs.true.11.for.inc_crit_edge}"];
+	Node0x2af2730 -> Node0x2af27d0;
+	Node0x2af2780 [shape=record,label="{pd_if.then}"];
+	Node0x2af2780 -> Node0x2af27d0;
+	Node0x2af27d0 [shape=record,label="{it_for.inc}"];
+	Node0x2af27d0 -> Node0x2af25f0;
+	Node0x2af2820 [shape=record,label="{for.end}"];
+}

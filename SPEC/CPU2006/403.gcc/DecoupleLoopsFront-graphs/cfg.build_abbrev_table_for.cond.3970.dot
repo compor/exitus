@@ -1,0 +1,28 @@
+digraph "CFG for 'build_abbrev_table_for.cond' function" {
+	label="CFG for 'build_abbrev_table_for.cond' function";
+
+	Node0xabff880 [shape=record,label="{newFuncRoot}"];
+	Node0xabff880 -> Node0xabff970;
+	Node0xabff8d0 [shape=record,label="{for.cond.7.preheader.exitStub}"];
+	Node0xabff920 [shape=record,label="{if.then.5.exitStub}"];
+	Node0xabff970 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xabff970:s0 -> Node0xabff9c0;
+	Node0xabff970:s1 -> Node0xabff8d0;
+	Node0xabff9c0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xabff9c0:s0 -> Node0xac002d0;
+	Node0xabff9c0:s1 -> Node0xabffa10;
+	Node0xabffa10 [shape=record,label="{pd_for.body.for.inc_crit_edge}"];
+	Node0xabffa10 -> Node0xac00410;
+	Node0xac002d0 [shape=record,label="{it_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0xac002d0:s0 -> Node0xac00370;
+	Node0xac002d0:s1 -> Node0xac00320;
+	Node0xac00320 [shape=record,label="{pd_land.lhs.true.for.inc_crit_edge}"];
+	Node0xac00320 -> Node0xac00410;
+	Node0xac00370 [shape=record,label="{it_if.then|{<s0>T|<s1>F}}"];
+	Node0xac00370:s0 -> Node0xabff920;
+	Node0xac00370:s1 -> Node0xac003c0;
+	Node0xac003c0 [shape=record,label="{pd_if.end}"];
+	Node0xac003c0 -> Node0xac00410;
+	Node0xac00410 [shape=record,label="{it_for.inc}"];
+	Node0xac00410 -> Node0xabff970;
+}

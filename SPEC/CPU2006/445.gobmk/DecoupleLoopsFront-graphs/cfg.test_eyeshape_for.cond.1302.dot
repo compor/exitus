@@ -1,0 +1,28 @@
+digraph "CFG for 'test_eyeshape_for.cond' function" {
+	label="CFG for 'test_eyeshape_for.cond' function";
+
+	Node0x40edf20 [shape=record,label="{newFuncRoot}"];
+	Node0x40edf20 -> Node0x40edfc0;
+	Node0x40edf70 [shape=record,label="{for.cond.17.preheader.exitStub}"];
+	Node0x40edfc0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x40edfc0:s0 -> Node0x40ee010;
+	Node0x40edfc0:s1 -> Node0x40edf70;
+	Node0x40ee010 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x40ee010:s0 -> Node0x40ee0b0;
+	Node0x40ee010:s1 -> Node0x40ee060;
+	Node0x40ee060 [shape=record,label="{pd_for.body.if.else_crit_edge}"];
+	Node0x40ee060 -> Node0x40ee150;
+	Node0x40ee0b0 [shape=record,label="{pd_land.lhs.true|{<s0>T|<s1>F}}"];
+	Node0x40ee0b0:s0 -> Node0x40ee1a0;
+	Node0x40ee0b0:s1 -> Node0x40ee100;
+	Node0x40ee100 [shape=record,label="{pd_land.lhs.true.if.else_crit_edge}"];
+	Node0x40ee100 -> Node0x40ee150;
+	Node0x40ee150 [shape=record,label="{pd_if.else}"];
+	Node0x40ee150 -> Node0x40ee1f0;
+	Node0x40ee1a0 [shape=record,label="{pd_land.lhs.true.if.end_crit_edge}"];
+	Node0x40ee1a0 -> Node0x40ee1f0;
+	Node0x40ee1f0 [shape=record,label="{pd_if.end}"];
+	Node0x40ee1f0 -> Node0x4fdb360;
+	Node0x4fdb360 [shape=record,label="{it_if.end.split}"];
+	Node0x4fdb360 -> Node0x40edfc0;
+}

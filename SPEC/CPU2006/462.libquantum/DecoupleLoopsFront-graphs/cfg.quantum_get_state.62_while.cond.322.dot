@@ -1,0 +1,16 @@
+digraph "CFG for 'quantum_get_state.62_while.cond' function" {
+	label="CFG for 'quantum_get_state.62_while.cond' function";
+
+	Node0x16fcf70 [shape=record,label="{newFuncRoot}"];
+	Node0x16fcf70 -> Node0x16fd060;
+	Node0x16fcfc0 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x16fd010 [shape=record,label="{if.then.exitStub}"];
+	Node0x16fd060 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x16fd060:s0 -> Node0x16fd0b0;
+	Node0x16fd060:s1 -> Node0x16fcfc0;
+	Node0x16fd0b0 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x16fd0b0:s0 -> Node0x16fd010;
+	Node0x16fd0b0:s1 -> Node0x16fd100;
+	Node0x16fd100 [shape=record,label="{it_if.end}"];
+	Node0x16fd100 -> Node0x16fd060;
+}

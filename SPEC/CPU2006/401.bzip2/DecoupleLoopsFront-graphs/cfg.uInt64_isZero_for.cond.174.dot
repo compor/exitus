@@ -1,0 +1,16 @@
+digraph "CFG for 'uInt64_isZero_for.cond' function" {
+	label="CFG for 'uInt64_isZero_for.cond' function";
+
+	Node0x182ba60 [shape=record,label="{newFuncRoot}"];
+	Node0x182ba60 -> Node0x182bb50;
+	Node0x182bab0 [shape=record,label="{for.cond.return_crit_edge.exitStub}"];
+	Node0x182bb00 [shape=record,label="{for.body.return_crit_edge.exitStub}"];
+	Node0x182bb50 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x182bb50:s0 -> Node0x182bba0;
+	Node0x182bb50:s1 -> Node0x182bab0;
+	Node0x182bba0 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x182bba0:s0 -> Node0x182bb00;
+	Node0x182bba0:s1 -> Node0x182bbf0;
+	Node0x182bbf0 [shape=record,label="{it_for.inc}"];
+	Node0x182bbf0 -> Node0x182bb50;
+}

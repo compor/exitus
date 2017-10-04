@@ -1,0 +1,26 @@
+digraph "CFG for 'Perl_pmtrans_for.cond' function" {
+	label="CFG for 'Perl_pmtrans_for.cond' function";
+
+	Node0x4c23d80 [shape=record,label="{newFuncRoot}"];
+	Node0x4c23d80 -> Node0x4c23e20;
+	Node0x4c23dd0 [shape=record,label="{for.end.exitStub}"];
+	Node0x4c23e20 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x4c23e20:s0 -> Node0x4c23e70;
+	Node0x4c23e20:s1 -> Node0x4c23dd0;
+	Node0x4c23e70 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x4c23e70:s0 -> Node0x4c23f10;
+	Node0x4c23e70:s1 -> Node0x4c23ec0;
+	Node0x4c23ec0 [shape=record,label="{pd_for.body.if.end.122_crit_edge}"];
+	Node0x4c23ec0 -> Node0x4c24000;
+	Node0x4c23f10 [shape=record,label="{pd_if.then.103|{<s0>T|<s1>F}}"];
+	Node0x4c23f10:s0 -> Node0x4c23fb0;
+	Node0x4c23f10:s1 -> Node0x4c23f60;
+	Node0x4c23f60 [shape=record,label="{pd_if.then.103.if.end.122_crit_edge}"];
+	Node0x4c23f60 -> Node0x4c24000;
+	Node0x4c23fb0 [shape=record,label="{pd_if.then.112}"];
+	Node0x4c23fb0 -> Node0x4c24000;
+	Node0x4c24000 [shape=record,label="{pd_if.end.122}"];
+	Node0x4c24000 -> Node0x65965d0;
+	Node0x65965d0 [shape=record,label="{it_if.end.122.split}"];
+	Node0x65965d0 -> Node0x4c23e20;
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'lookup_pragma_entry_while.cond' function" {
+	label="CFG for 'lookup_pragma_entry_while.cond' function";
+
+	Node0xa1e5230 [shape=record,label="{newFuncRoot}"];
+	Node0xa1e5230 -> Node0xa1e5320;
+	Node0xa1e5280 [shape=record,label="{while.cond.while.end_crit_edge.exitStub}"];
+	Node0xa1e52d0 [shape=record,label="{land.rhs.while.end_crit_edge.exitStub}"];
+	Node0xa1e5320 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0xa1e5320:s0 -> Node0xa1e5370;
+	Node0xa1e5320:s1 -> Node0xa1e5280;
+	Node0xa1e5370 [shape=record,label="{it_land.rhs|{<s0>T|<s1>F}}"];
+	Node0xa1e5370:s0 -> Node0xa1e53c0;
+	Node0xa1e5370:s1 -> Node0xa1e52d0;
+	Node0xa1e53c0 [shape=record,label="{it_while.body}"];
+	Node0xa1e53c0 -> Node0xa1e5320;
+}

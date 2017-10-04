@@ -1,0 +1,29 @@
+digraph "CFG for '_ZN3pov18pre_init_tokenizerEv' function" {
+	label="CFG for '_ZN3pov18pre_init_tokenizerEv' function";
+
+	Node0x20bec90 [shape=record,label="{entry}"];
+	Node0x20bec90 -> Node0x20bece0;
+	Node0x20bece0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x20bece0:s0 -> Node0x20bed30;
+	Node0x20bece0:s1 -> Node0x20bf840;
+	Node0x20bed30 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x20bed30:s0 -> Node0x20bed80;
+	Node0x20bed30:s1 -> Node0x20bedd0;
+	Node0x20bed80 [shape=record,label="{pd_if.then}"];
+	Node0x20bed80 -> Node0x20bf7f0;
+	Node0x20bedd0 [shape=record,label="{pd_if.else|{<s0>T|<s1>F}}"];
+	Node0x20bedd0:s0 -> Node0x20bee20;
+	Node0x20bedd0:s1 -> Node0x20bee70;
+	Node0x20bee20 [shape=record,label="{pd_if.then.5}"];
+	Node0x20bee20 -> Node0x20bf7f0;
+	Node0x20bee70 [shape=record,label="{pd_if.else.8|{<s0>T|<s1>F}}"];
+	Node0x20bee70:s0 -> Node0x20bef10;
+	Node0x20bee70:s1 -> Node0x20beec0;
+	Node0x20beec0 [shape=record,label="{pd_if.else.8.for.inc_crit_edge}"];
+	Node0x20beec0 -> Node0x20bf7f0;
+	Node0x20bef10 [shape=record,label="{pd_if.then.10}"];
+	Node0x20bef10 -> Node0x20bf7f0;
+	Node0x20bf7f0 [shape=record,label="{it_for.inc}"];
+	Node0x20bf7f0 -> Node0x20bece0;
+	Node0x20bf840 [shape=record,label="{for.end}"];
+}

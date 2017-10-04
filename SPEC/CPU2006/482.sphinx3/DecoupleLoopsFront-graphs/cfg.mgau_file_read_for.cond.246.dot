@@ -1,0 +1,24 @@
+digraph "CFG for 'mgau_file_read_for.cond' function" {
+	label="CFG for 'mgau_file_read_for.cond' function";
+
+	Node0x116cef0 [shape=record,label="{newFuncRoot}"];
+	Node0x116cef0 -> Node0x116d340;
+	Node0x116d2f0 [shape=record,label="{for.end.exitStub}"];
+	Node0x116d340 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x116d340:s0 -> Node0x116d390;
+	Node0x116d340:s1 -> Node0x116d2f0;
+	Node0x116d390 [shape=record,label="{pd_for.body|{<s0>T|<s1>F}}"];
+	Node0x116d390:s0 -> Node0x116d430;
+	Node0x116d390:s1 -> Node0x116d3e0;
+	Node0x116d3e0 [shape=record,label="{pd_if.else}"];
+	Node0x116d3e0 -> Node0x116d520;
+	Node0x116d430 [shape=record,label="{pd_if.then.23|{<s0>T|<s1>F}}"];
+	Node0x116d430:s0 -> Node0x116d4d0;
+	Node0x116d430:s1 -> Node0x116d480;
+	Node0x116d480 [shape=record,label="{pd_if.then.23.for.inc_crit_edge}"];
+	Node0x116d480 -> Node0x116d520;
+	Node0x116d4d0 [shape=record,label="{pd_if.then.28}"];
+	Node0x116d4d0 -> Node0x116d520;
+	Node0x116d520 [shape=record,label="{it_for.inc}"];
+	Node0x116d520 -> Node0x116d340;
+}

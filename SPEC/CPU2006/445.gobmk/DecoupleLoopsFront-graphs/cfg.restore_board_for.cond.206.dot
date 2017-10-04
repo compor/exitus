@@ -1,0 +1,14 @@
+digraph "CFG for 'restore_board_for.cond' function" {
+	label="CFG for 'restore_board_for.cond' function";
+
+	Node0x3ddb9f0 [shape=record,label="{newFuncRoot}"];
+	Node0x3ddb9f0 -> Node0x3ddba90;
+	Node0x3ddba40 [shape=record,label="{for.end.exitStub}"];
+	Node0x3ddba90 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3ddba90:s0 -> Node0x3ddbae0;
+	Node0x3ddba90:s1 -> Node0x3ddba40;
+	Node0x3ddbae0 [shape=record,label="{pd_for.body}"];
+	Node0x3ddbae0 -> Node0x4f0c480;
+	Node0x4f0c480 [shape=record,label="{it_for.body.split}"];
+	Node0x4f0c480 -> Node0x3ddba90;
+}

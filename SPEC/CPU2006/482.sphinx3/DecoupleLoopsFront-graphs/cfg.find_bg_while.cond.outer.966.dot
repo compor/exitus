@@ -1,0 +1,23 @@
+digraph "CFG for 'find_bg_while.cond.outer' function" {
+	label="CFG for 'find_bg_while.cond.outer' function";
+
+	Node0x12a4ad0 [shape=record,label="{newFuncRoot}"];
+	Node0x12a4ad0 -> Node0x12a4bc0;
+	Node0x12a4b20 [shape=record,label="{for.cond.preheader.exitStub}"];
+	Node0x12a4b70 [shape=record,label="{return.loopexit.exitStub}"];
+	Node0x12a4bc0 [shape=record,label="{pd_while.cond.outer}"];
+	Node0x12a4bc0 -> Node0x12a4c10;
+	Node0x12a4c10 [shape=record,label="{it_while.cond|{<s0>T|<s1>F}}"];
+	Node0x12a4c10:s0 -> Node0x12a4c60;
+	Node0x12a4c10:s1 -> Node0x12a4b20;
+	Node0x12a4c60 [shape=record,label="{it_while.body|{<s0>T|<s1>F}}"];
+	Node0x12a4c60:s0 -> Node0x12a4d50;
+	Node0x12a4c60:s1 -> Node0x12a4cb0;
+	Node0x12a4cb0 [shape=record,label="{it_if.else|{<s0>T|<s1>F}}"];
+	Node0x12a4cb0:s0 -> Node0x12a4d00;
+	Node0x12a4cb0:s1 -> Node0x12a4b70;
+	Node0x12a4d00 [shape=record,label="{pd_if.else.while.cond_crit_edge}"];
+	Node0x12a4d00 -> Node0x12a4c10;
+	Node0x12a4d50 [shape=record,label="{it_if.then}"];
+	Node0x12a4d50 -> Node0x12a4bc0;
+}

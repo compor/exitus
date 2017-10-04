@@ -1,0 +1,20 @@
+digraph "CFG for 'search_fuseki_database_for.cond' function" {
+	label="CFG for 'search_fuseki_database_for.cond' function";
+
+	Node0x3fd5ab0 [shape=record,label="{newFuncRoot}"];
+	Node0x3fd5ab0 -> Node0x3fd5bf0;
+	Node0x3fd5b00 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0x3fd5b50 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0x3fd5ba0 [shape=record,label="{if.end.19.for.end_crit_edge.exitStub}"];
+	Node0x3fd5bf0 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0x3fd5bf0:s0 -> Node0x3fd5c40;
+	Node0x3fd5bf0:s1 -> Node0x3fd5b00;
+	Node0x3fd5c40 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0x3fd5c40:s0 -> Node0x3fd5b50;
+	Node0x3fd5c40:s1 -> Node0x3fd5c90;
+	Node0x3fd5c90 [shape=record,label="{it_if.end.19|{<s0>T|<s1>F}}"];
+	Node0x3fd5c90:s0 -> Node0x3fd5ba0;
+	Node0x3fd5c90:s1 -> Node0x3fd5ce0;
+	Node0x3fd5ce0 [shape=record,label="{it_for.inc}"];
+	Node0x3fd5ce0 -> Node0x3fd5bf0;
+}

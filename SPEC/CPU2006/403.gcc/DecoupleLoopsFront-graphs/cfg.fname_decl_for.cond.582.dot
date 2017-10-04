@@ -1,0 +1,16 @@
+digraph "CFG for 'fname_decl_for.cond' function" {
+	label="CFG for 'fname_decl_for.cond' function";
+
+	Node0xa125310 [shape=record,label="{newFuncRoot}"];
+	Node0xa125310 -> Node0xa125400;
+	Node0xa125360 [shape=record,label="{for.cond.for.end_crit_edge.exitStub}"];
+	Node0xa1253b0 [shape=record,label="{for.body.for.end_crit_edge.exitStub}"];
+	Node0xa125400 [shape=record,label="{it_for.cond|{<s0>T|<s1>F}}"];
+	Node0xa125400:s0 -> Node0xa125450;
+	Node0xa125400:s1 -> Node0xa125360;
+	Node0xa125450 [shape=record,label="{it_for.body|{<s0>T|<s1>F}}"];
+	Node0xa125450:s0 -> Node0xa1253b0;
+	Node0xa125450:s1 -> Node0xa1254a0;
+	Node0xa1254a0 [shape=record,label="{it_for.inc}"];
+	Node0xa1254a0 -> Node0xa125400;
+}
