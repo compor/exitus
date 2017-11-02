@@ -1,0 +1,816 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.0.128 Build 20170811
+
+Compiler options: -O2 -parallel -ipo -xcorei7 -axcorei7 -par-threshold0 -qopt-report=5 -qopt-report-phase=par -qopt-report-file=report.txt -g -o ft -rdynamic -lm
+
+Begin optimization report for: Swarztrauber(int, int, int, int, int, void *, dcomplex *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(75,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between exponent->real[li+i] (88:14) and at (130:27)
+   remark #17106: parallel dependence: assumed FLOW dependence between at (130:27) and exponent->real[li+i] (88:14)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(81,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between at (94:17) and scr.imag[i22+k][j] (97:27)
+      remark #17106: parallel dependence: assumed FLOW dependence between scr.imag[i22+k][j] (97:27) and at (94:17)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(92,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between at (94:17) and scr.imag[i22+k][j] (97:27)
+         remark #17106: parallel dependence: assumed FLOW dependence between scr.imag[i22+k][j] (97:27) and at (94:17)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(93,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed ANTI dependence between at (94:17) and scr.imag[i22+k][j] (97:27)
+            remark #17106: parallel dependence: assumed FLOW dependence between scr.imag[i22+k][j] (97:27) and at (94:17)
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(103,7)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between ox[k][j] (105:21) and at (105:21)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (105:21) and ox[k][j] (105:21)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(104,9)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between ox[k][j] (105:21) and at (105:21)
+         remark #17106: parallel dependence: assumed FLOW dependence between at (105:21) and ox[k][j] (105:21)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(104,9)
+      <Remainder>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(114,7)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between exponent->real[li+i] (121:16) and at (130:27)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (130:27) and exponent->real[li+i] (121:16)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(125,9)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between scr.real[i11+k][j] (127:19) and at (130:27)
+         remark #17106: parallel dependence: assumed FLOW dependence between at (130:27) and scr.real[i11+k][j] (127:19)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(126,11)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed ANTI dependence between scr.real[i11+k][j] (127:19) and at (130:27)
+            remark #17106: parallel dependence: assumed FLOW dependence between at (130:27) and scr.real[i11+k][j] (127:19)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: fftXYZ..0(int, int, int, int, dcomplex (*)[*][*], dcomplex *, dcomplex *, dcomplex *, dcomplex *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/fft3d.c(154,9)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(156,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between x[k][j][i] (163:33) and at (169:24)
+   remark #17106: parallel dependence: assumed FLOW dependence between at (169:24) and x[k][j][i] (163:33)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(157,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between x[k][j][i] (163:33) and at (169:24)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (169:24) and x[k][j][i] (163:33)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(161,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed OUTPUT dependence between plane.real[j-bls+33*i] (163:33) and plane.real[j-bls+33*i] (163:33)
+         remark #17106: parallel dependence: assumed OUTPUT dependence between plane.real[j-bls+33*i] (163:33) and plane.real[j-bls+33*i] (163:33)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(162,9)
+            remark #17109: LOOP WAS AUTO-PARALLELIZED
+            remark #17101: parallel loop shared={ } private={ } firstprivate={ x i j bls k } lastprivate={ } firstlastprivate={ } reduction={ }
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(167,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between x[k][j][i] (169:24) and at (169:24)
+         remark #17106: parallel dependence: assumed FLOW dependence between at (169:24) and x[k][j][i] (169:24)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(168,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed ANTI dependence between x[k][j][i] (169:24) and at (169:24)
+            remark #17106: parallel dependence: assumed FLOW dependence between at (169:24) and x[k][j][i] (169:24)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/fft3d.c(179,9)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(181,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:Swarztrauber(int, int, int, int, int, void *, dcomplex *) (186:7) and call:Swarztrauber(int, int, int, int, int, void *, dcomplex *) (186:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:Swarztrauber(int, int, int, int, int, void *, dcomplex *) (186:7) and call:Swarztrauber(int, int, int, int, int, void *, dcomplex *) (186:7)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(182,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/fft3d.c(194,9)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(196,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between x[i][k][j] (203:33) and $i4->imag (209:37)
+   remark #17106: parallel dependence: assumed FLOW dependence between $i4->imag (209:37) and x[i][k][j] (203:33)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(197,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between x[i][k][j] (203:33) and $i4->imag (209:37)
+      remark #17106: parallel dependence: assumed FLOW dependence between $i4->imag (209:37) and x[i][k][j] (203:33)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(201,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between plane.real[j-bls+33*i] (203:33) and at (203:33)
+         remark #17106: parallel dependence: assumed ANTI dependence between at (203:33) and plane.real[j-bls+33*i] (203:33)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(202,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed FLOW dependence between plane.real[j-bls+33*i] (203:33) and at (203:33)
+            remark #17106: parallel dependence: assumed ANTI dependence between at (203:33) and plane.real[j-bls+33*i] (203:33)
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(202,9)
+         <Remainder>
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(207,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed OUTPUT dependence between $i4->real (209:37) and $i4->real (209:37)
+         remark #17106: parallel dependence: assumed OUTPUT dependence between $i4->real (209:37) and $i4->real (209:37)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(208,9)
+            remark #17109: LOOP WAS AUTO-PARALLELIZED
+            remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ble xout j i bls k } lastprivate={ } firstlastprivate={ } reduction={ }
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(208,9)
+         <Remainder>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(162,9)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(162,9)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(208,9)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(208,9)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: compute_initial_conditions..0(int, int, int, dcomplex (*)[*][*])
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(101,3) inlined into /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(153,8)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(49,3) inlined into /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(159,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between start (57:3) and start (64:4)
+   remark #17106: parallel dependence: assumed FLOW dependence between start (64:4) and start (57:3)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(163,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between &tmp[i] (137:5) and tmp.imag[i] (168:23)
+   remark #17106: parallel dependence: assumed ANTI dependence between tmp.imag[i] (168:23) and &tmp[i] (137:5)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(165,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between &tmp[i] (137:5) and tmp.imag[i] (168:23)
+      remark #17106: parallel dependence: assumed ANTI dependence between tmp.imag[i] (168:23) and &tmp[i] (137:5)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3) inlined into /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(166,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between x0 (129:5) and x0 (136:6)
+         remark #17106: parallel dependence: assumed FLOW dependence between x0 (136:6) and x0 (129:5)
+         remark #17106: parallel dependence: assumed ANTI dependence between x0 (129:5) and x0 (136:6)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(167,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between u0[k][j][i] (168:23) and at (168:23)
+         remark #17106: parallel dependence: assumed FLOW dependence between at (168:23) and u0[k][j][i] (168:23)
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: verify..0(int, int, int, int, dcomplex *, logical *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/verify.c(184,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *verified (188:10) and *verified (188:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *verified (188:10) and *verified (188:10)
+LOOP END
+===========================================================================
+
+Begin optimization report for: appft..0(int, double *, logical *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(60,8)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(55,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ln ti U3_V.U3_V U3_V.U3_V t ku exponent i j } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(55,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ln ti U3_V.U3_V U3_V.U3_V t ku exponent i j } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(55,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ln ti U3_V.U3_V U3_V.U3_V t ku exponent i j } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(80,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ j k ii2 ik2 i } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(83,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(86,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(101,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:gettimeofday(struct timeval *__restrict__, __timezone_ptr_t (11:3) and call:timer_stop(int) (110:25)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:timer_stop(int) (110:25) and call:gettimeofday(struct timeval *__restrict__, __timezone_ptr_t (11:3)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(180,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(103,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between y[i][k][j] (183:22) and at (183:22)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (183:22) and y[i][k][j] (183:22)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(182,7) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(103,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between y[i][k][j] (183:22) and at (183:22)
+         remark #17106: parallel dependence: assumed FLOW dependence between at (183:22) and y[i][k][j] (183:22)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(122,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(109,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between csum_temp.real (127:17) and csum_temp.real (127:17)
+      remark #17106: parallel dependence: assumed FLOW dependence between csum_temp.real (127:17) and csum_temp.real (127:17)
+      remark #17106: parallel dependence: assumed FLOW dependence between csum_temp.real (127:17) and csum_temp.real (127:17)
+      remark #17106: parallel dependence: assumed ANTI dependence between csum_temp.real (127:17) and csum_temp.real (127:17)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(80,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(83,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(86,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: CompExp(int, dcomplex *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(51,7)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(55,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ln ti U3_V.U3_V U3_V.U3_V t ku exponent i j } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: CalculateChecksum(dcomplex *, int, int, int, int, dcomplex (*)[*][*])
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(122,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between csum_temp.real (127:17) and csum_temp.real (127:17)
+   remark #17106: parallel dependence: assumed FLOW dependence between csum_temp.real (127:17) and csum_temp.real (127:17)
+LOOP END
+===========================================================================
+
+Begin optimization report for: compute_initial_conditions(int, int, int, dcomplex (*)[*][*])
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(101,3) inlined into /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(153,8)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(158,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between start (57:3) and start (64:4)
+   remark #17106: parallel dependence: assumed FLOW dependence between start (64:4) and start (57:3)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(163,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between &tmp[i] (137:5) and tmp.imag[i] (168:23)
+   remark #17106: parallel dependence: assumed ANTI dependence between tmp.imag[i] (168:23) and &tmp[i] (137:5)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(165,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between &tmp[i] (137:5) and tmp.imag[i] (168:23)
+      remark #17106: parallel dependence: assumed ANTI dependence between tmp.imag[i] (168:23) and &tmp[i] (137:5)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3) inlined into /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(166,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between x0 (129:5) and x0 (136:6)
+         remark #17106: parallel dependence: assumed FLOW dependence between x0 (136:6) and x0 (129:5)
+         remark #17106: parallel dependence: assumed ANTI dependence between x0 (129:5) and x0 (136:6)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(167,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between u0[k][j][i] (168:23) and at (168:23)
+         remark #17106: parallel dependence: assumed FLOW dependence between at (168:23) and u0[k][j][i] (168:23)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(167,7)
+      <Remainder>
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: evolve(int, int, int, dcomplex (*)[*][*], dcomplex (*)[*][*], double (*)[*][*])
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(180,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between y[i][k][j] (183:22) and at (184:22)
+   remark #17106: parallel dependence: assumed FLOW dependence between at (184:22) and y[i][k][j] (183:22)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(181,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between y[i][k][j] (183:22) and at (184:22)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (184:22) and y[i][k][j] (183:22)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(182,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between y[i][k][j] (183:22) and at (184:22)
+         remark #17106: parallel dependence: assumed FLOW dependence between at (184:22) and y[i][k][j] (183:22)
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: fftXYZ(int, int, int, int, dcomplex (*)[*][*], dcomplex *, dcomplex *, dcomplex *, dcomplex *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/fft3d.c(154,9)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(156,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between x[k][j][i] (163:33) and at (169:24)
+   remark #17106: parallel dependence: assumed FLOW dependence between at (169:24) and x[k][j][i] (163:33)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(157,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between x[k][j][i] (163:33) and at (169:24)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (169:24) and x[k][j][i] (163:33)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(161,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed OUTPUT dependence between plane.real[j-bls+blkp*i] (163:33) and plane.real[j-bls+blkp*i] (163:33)
+         remark #17106: parallel dependence: assumed OUTPUT dependence between plane.real[j-bls+blkp*i] (163:33) and plane.real[j-bls+blkp*i] (163:33)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(162,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed OUTPUT dependence between plane.real[j-bls+blkp*i] (163:33) and plane.real[j-bls+blkp*i] (163:33)
+            remark #17106: parallel dependence: assumed OUTPUT dependence between plane.real[j-bls+blkp*i] (163:33) and plane.real[j-bls+blkp*i] (163:33)
+            remark #17106: parallel dependence: assumed OUTPUT dependence between plane.imag[j-bls+blkp*i] (163:33) and plane.imag[j-bls+blkp*i] (163:33)
+            remark #17106: parallel dependence: assumed OUTPUT dependence between plane.imag[j-bls+blkp*i] (163:33) and plane.imag[j-bls+blkp*i] (163:33)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(167,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between x[k][j][i] (169:24) and at (169:24)
+         remark #17106: parallel dependence: assumed FLOW dependence between at (169:24) and x[k][j][i] (169:24)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(168,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed ANTI dependence between x[k][j][i] (169:24) and at (169:24)
+            remark #17106: parallel dependence: assumed FLOW dependence between at (169:24) and x[k][j][i] (169:24)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/fft3d.c(179,9)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(181,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:Swarztrauber(int, int, int, int, int, void *, dcomplex *) (186:7) and call:Swarztrauber(int, int, int, int, int, void *, dcomplex *) (186:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:Swarztrauber(int, int, int, int, int, void *, dcomplex *) (186:7) and call:Swarztrauber(int, int, int, int, int, void *, dcomplex *) (186:7)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(182,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/fft3d.c(194,9)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(196,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between x[i][k][j] (203:33) and xout->imag[(n1+1)*k+((n1+1)*n2)*i+j] (209:37)
+   remark #17106: parallel dependence: assumed FLOW dependence between xout->imag[(n1+1)*k+((n1+1)*n2)*i+j] (209:37) and x[i][k][j] (203:33)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(197,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between x[i][k][j] (203:33) and xout->imag[(n1+1)*k+((n1+1)*n2)*i+j] (209:37)
+      remark #17106: parallel dependence: assumed FLOW dependence between xout->imag[(n1+1)*k+((n1+1)*n2)*i+j] (209:37) and x[i][k][j] (203:33)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(201,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between plane.real[j-bls+blkp*i] (203:33) and at (203:33)
+         remark #17106: parallel dependence: assumed ANTI dependence between at (203:33) and plane.real[j-bls+blkp*i] (203:33)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(202,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed FLOW dependence between plane.real[j-bls+blkp*i] (203:33) and at (203:33)
+            remark #17106: parallel dependence: assumed ANTI dependence between at (203:33) and plane.real[j-bls+blkp*i] (203:33)
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(202,9)
+         <Remainder>
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(207,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed OUTPUT dependence between xout->real[(n1+1)*k+((n1+1)*n2)*i+j] (209:37) and xout->real[(n1+1)*k+((n1+1)*n2)*i+j] (209:37)
+         remark #17106: parallel dependence: assumed OUTPUT dependence between xout->real[(n1+1)*k+((n1+1)*n2)*i+j] (209:37) and xout->real[(n1+1)*k+((n1+1)*n2)*i+j] (209:37)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(208,9)
+            remark #17109: LOOP WAS AUTO-PARALLELIZED
+            remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ble fftblock n2 n1 xout blkp j i bls k } lastprivate={ } firstlastprivate={ } reduction={ }
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(208,9)
+         <Remainder>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(208,9)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/fft3d.c(208,9)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: verify(int, int, int, int, dcomplex *, logical *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/verify.c(184,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *verified (188:10) and *verified (188:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *verified (188:10) and *verified (188:10)
+LOOP END
+===========================================================================
+
+Begin optimization report for: verify..1(int, int, int, int, dcomplex *, logical *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/verify.c(184,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *verified (188:10) and *verified (188:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *verified (188:10) and *verified (188:10)
+LOOP END
+===========================================================================
+
+Begin optimization report for: appft(int, double *, logical *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(60,8)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(55,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ln ti U3_V.U3_V U3_V.U3_V t ku exponent i j } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(55,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ln ti U3_V.U3_V U3_V.U3_V t ku exponent i j } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(55,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between $i2->real (59:26) and $i2->real (59:26)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ln ti U3_V.U3_V U3_V.U3_V t ku exponent i j } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(80,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ j k ii2 ik2 i } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(83,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(86,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(101,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:gettimeofday(struct timeval *__restrict__, __timezone_ptr_t (11:3) and call:timer_stop(int) (110:25)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:timer_stop(int) (110:25) and call:gettimeofday(struct timeval *__restrict__, __timezone_ptr_t (11:3)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(180,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(103,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between y[i][k][j] (183:22) and at (183:22)
+      remark #17106: parallel dependence: assumed FLOW dependence between at (183:22) and y[i][k][j] (183:22)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(182,7) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(103,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between y[i][k][j] (183:22) and at (183:22)
+         remark #17106: parallel dependence: assumed FLOW dependence between at (183:22) and y[i][k][j] (183:22)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(122,3) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(109,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between csum_temp.real (127:17) and csum_temp.real (127:17)
+      remark #17106: parallel dependence: assumed FLOW dependence between csum_temp.real (127:17) and csum_temp.real (127:17)
+      remark #17106: parallel dependence: assumed FLOW dependence between csum_temp.real (127:17) and csum_temp.real (127:17)
+      remark #17106: parallel dependence: assumed ANTI dependence between csum_temp.real (127:17) and csum_temp.real (127:17)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(67,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(68,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(57,5) inlined into /bulk/workbench/repos/nauseous/FT/src/appft.c(69,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(80,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(83,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/appft.c(86,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: vranlc(int, double *, double, double *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3)
+<Multiversioned v1>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between *x (136:6) and *x (129:5)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *x (136:6) and *x (136:6)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *x (136:6) and *x (136:6)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3)
+<Multiversioned v2>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between *x (129:5) and y[i] (137:5)
+   remark #17106: parallel dependence: assumed FLOW dependence between y[i] (137:5) and *x (129:5)
+LOOP END
+===========================================================================
+
+Begin optimization report for: ilog2(int)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/FT/src/auxfnct.c(74,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================

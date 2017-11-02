@@ -1,0 +1,2050 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.0.128 Build 20170811
+
+Compiler options: -O2 -parallel -ipo -xcorei7 -axcorei7 -par-threshold0 -qopt-report=5 -qopt-report-phase=par -qopt-report-file=report.txt -g -o dc -rdynamic -lm
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(411,3) inlined into /bulk/workbench/repos/nauseous/DC/src/dc.c(123,26)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(414,5) inlined into /bulk/workbench/repos/nauseous/DC/src/dc.c(123,26)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: GenerateADC(ADC_PAR *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(607,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (524:5) and call:fwrite(const void *__restrict__, size_t, size_t, FILE *__re (624:2)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fwrite(const void *__restrict__, size_t, size_t, FILE *__re (624:2) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (524:5)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(549,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(608,9)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ dcdim tmpgen locexp i i } lastprivate={ } firstlastprivate={ } reduction={ }
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(551,7) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(608,9)
+         remark #25460: No loop optimizations reported
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(558,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(608,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (560:7) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (560:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (560:7) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (560:7)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(565,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(608,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between maxattr (569:5) and maxattr (569:25)
+      remark #17106: parallel dependence: assumed FLOW dependence between maxattr (569:25) and maxattr (569:5)
+      remark #17106: parallel dependence: assumed ANTI dependence between maxattr (569:5) and maxattr (569:25)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(571,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(608,9)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ mesnum maxattr mes i i } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(616,7)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between mv (617:22) and *(&mv+4) (21:40)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between *(&mv+4) (21:40) and mv (617:22)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(621,7)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between av (622:15) and *(&av+2) (13:40)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between *(&av+2) (13:40) and av (622:15)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(571,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(608,9)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(549,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(608,9)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(551,7) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(608,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between tmpgen (553:2) and tmpgen (553:2)
+      remark #17106: parallel dependence: assumed FLOW dependence between tmpgen (553:2) and tmpgen (553:2)
+      remark #17106: parallel dependence: assumed ANTI dependence between tmpgen (553:2) and tmpgen (553:2)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(571,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(608,9)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(571,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(608,9)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: CalculateVeiwSizes(ADC_PAR *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(77,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(310,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between *prlist (79:5) and prlist[prnum] (85:21)
+   remark #17106: parallel dependence: assumed FLOW dependence between prlist[prnum] (85:21) and *prlist (79:5)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(79,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(310,13)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:3) and expons[i] (103:30)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:30) and expons[i] (103:3)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ maxprmfctr expons i } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(105,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(117,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(121,7) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between lexp (124:9) and lexp (124:9)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(139,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:3) and expons[i] (103:30)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:30) and expons[i] (103:3)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ maxprmfctr expons i } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(105,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(117,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(121,7) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between lexp (124:9) and lexp (124:9)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(139,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:3) and expons[i] (103:30)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:30) and expons[i] (103:3)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ maxprmfctr expons i } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(105,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(117,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(121,7) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between lexp (124:9) and lexp (124:9)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(139,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:3) and expons[i] (103:30)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:30) and expons[i] (103:3)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ maxprmfctr expons i } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(105,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(117,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(121,7) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between lexp (124:9) and lexp (124:9)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(139,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:3) and expons[i] (103:30)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:30) and expons[i] (103:3)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ maxprmfctr expons i } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(105,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(117,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(121,7) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between lexp (124:9) and lexp (124:9)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(139,5) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(342,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ UpPrimeLim fctlist i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(375,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (377:5) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (381:5)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (381:5) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (377:5)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(379,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between nViewDims (380:56) and nViewDims (380:56)
+      remark #17106: parallel dependence: assumed FLOW dependence between nViewDims (380:56) and nViewDims (380:56)
+      remark #17106: parallel dependence: assumed ANTI dependence between nViewDims (380:56) and nViewDims (380:56)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (380:29) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (380:29)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (380:29) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (380:29)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(342,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(319,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(138,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(329,13)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(138,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(323,13)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(138,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(326,13)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(138,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(335,13)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(138,3) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(332,13)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+/bulk/workbench/repos/nauseous/DC/src/adc.c(329:9)::CalculateVeiwSizes:  Assume directive not useful: removing
+
+/bulk/workbench/repos/nauseous/DC/src/adc.c(323:9)::CalculateVeiwSizes:  Assume directive not useful: removing
+
+/bulk/workbench/repos/nauseous/DC/src/adc.c(326:9)::CalculateVeiwSizes:  Assume directive not useful: removing
+
+/bulk/workbench/repos/nauseous/DC/src/adc.c(335:9)::CalculateVeiwSizes:  Assume directive not useful: removing
+
+/bulk/workbench/repos/nauseous/DC/src/adc.c(332:9)::CalculateVeiwSizes:  Assume directive not useful: removing
+
+===========================================================================
+
+Begin optimization report for: GetFactorization(long, long *, Factorization **)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(191,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(203,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(214,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(223,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(156,4) inlined into /bulk/workbench/repos/nauseous/DC/src/adc.c(236,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between fct->mlt[multnum] (159:9) and nmbfct (176:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between nmbfct (176:7) and fct->mlt[multnum] (159:9)
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(211,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(228,5)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: NewAdcViewCntl(ADC_VIEW_PARS *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(672,4)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(686,4)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(706,4)
+<Distributed chunk1>
+   remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(706,4)
+<Remainder, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(706,4)
+<Distributed chunk2>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between j (708:7) and j (709:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between j (709:7) and j (708:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between j (709:7) and j (708:7)
+   remark #17106: parallel dependence: assumed ANTI dependence between j (708:7) and j (709:7)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(78,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(707,12)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between combsNbyK (78:33) and combsNbyK (78:33)
+      remark #17106: parallel dependence: assumed FLOW dependence between combsNbyK (78:33) and combsNbyK (78:33)
+      remark #17106: parallel dependence: assumed FLOW dependence between combsNbyK (78:33) and combsNbyK (78:33)
+      remark #17106: parallel dependence: assumed ANTI dependence between combsNbyK (78:33) and combsNbyK (78:33)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(706,4)
+<Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(706,4)
+<Remainder, Distributed chunk1>
+LOOP END
+===========================================================================
+
+Begin optimization report for: PartitionCube(ADC_VIEW_CNTL *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(532,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(534,10)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(542,10)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 sel } private={ } firstprivate={ k i } lastprivate={ } firstlastprivate={ } reduction={ tx }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(542,10)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(396,3) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(550,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between tuplesAndSizes->viewsize[tj-1] (376:7) and tuplesAndSizes->viewsize[j-1] (383:3)
+   remark #17106: parallel dependence: assumed FLOW dependence between tuplesAndSizes->viewsize[j-1] (383:3) and tuplesAndSizes->viewsize[tj-1] (376:7)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(374,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(550,5)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(397,3) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(550,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between tuplesAndSizes->viewsize (399:6) and tuplesAndSizes->viewsize[j-1] (383:3)
+   remark #17106: parallel dependence: assumed FLOW dependence between tuplesAndSizes->viewsize[j-1] (383:3) and tuplesAndSizes->viewsize (399:6)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(374,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(550,5)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(551,5)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ it tuplesAndSizes i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(551,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(542,10)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(542,10)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(551,5)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(551,5)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: MultiFileProcJobs(TUPLE_VIEWSIZE *, uint32, ADC_VIEW_CNTL *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(472,4)
+<Distributed chunk1>
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 nGroupbys vszs } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(472,4)
+<Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(472,4)
+<Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(472,4)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(474,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between gbuf[gbi] (475:32) and tuplesAndSizes->viewsize[ii] (477:6)
+   remark #17106: parallel dependence: assumed ANTI dependence between tuplesAndSizes->viewsize[ii] (477:6) and gbuf[gbi] (475:32)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(489,4)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 nGroupbys } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ maxn }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(489,4)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(495,4)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(497,8)
+   <Distributed chunk1>
+      remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ binRepTuple cnt ob j toptr gbuf i } lastprivate={ } firstlastprivate={ } reduction={ }
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(408,3) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(499,28)
+         remark #25460: No loop optimizations reported
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(497,8)
+   <Peeled loop for vectorization, Distributed chunk2>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(497,8)
+   <Distributed chunk2>
+      remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j toptr gbuf i } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(497,8)
+   <Remainder loop for vectorization, Distributed chunk2>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(442,3) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(502,8)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between toptr->nOnes[tj-1] (423:7) and toptr->nOnes[j-1] (429:7)
+      remark #17106: parallel dependence: assumed FLOW dependence between toptr->nOnes[j-1] (429:7) and toptr->nOnes[tj-1] (423:7)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(421,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(502,8)
+         remark #17102: loop was not parallelized: not a parallelization candidate
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(443,3) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(502,8)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between toptr->nOnes (445:6) and toptr->nOnes[j-1] (429:7)
+      remark #17106: parallel dependence: assumed FLOW dependence between toptr->nOnes[j-1] (429:7) and toptr->nOnes (445:6)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(421,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(502,8)
+         remark #17102: loop was not parallelized: not a parallelization candidate
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(504,8)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(472,4)
+<Peeled loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(472,4)
+<Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(472,4)
+<Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(472,4)
+<Peeled loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(472,4)
+<Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(472,4)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(489,4)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(489,4)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(489,4)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(497,8)
+<Distributed chunk1>
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(408,3) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(499,28)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between ob (409:5) and ob (410:5)
+      remark #17106: parallel dependence: assumed FLOW dependence between ob (410:5) and ob (409:5)
+      remark #17106: parallel dependence: assumed FLOW dependence between ob (410:5) and ob (409:5)
+      remark #17106: parallel dependence: assumed ANTI dependence between ob (409:5) and ob (410:5)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(497,8)
+<Peeled loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(497,8)
+<Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(497,8)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+===========================================================================
+
+Begin optimization report for: ComputeGivenGroupbys(ADC_VIEW_CNTL *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(873,4)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(874,6)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between adccntlp->checksums (874:6) and adccntlp->checksums[i] (874:40)
+      remark #17106: parallel dependence: assumed FLOW dependence between adccntlp->checksums[i] (874:40) and adccntlp->checksums (874:6)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(874,6)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i adccntlp nViews } lastprivate={ } firstlastprivate={ } reduction={ }
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(874,6)
+      <Remainder>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(309,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(878,6)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between selTuple[j] (310:30) and selTuple[j] (310:30)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between selTuple[j] (310:30) and selTuple[j] (310:30)
+      remark #17106: parallel dependence: assumed ANTI dependence between oc (310:6) and oc (311:6)
+      remark #17106: parallel dependence: assumed FLOW dependence between oc (311:6) and oc (310:6)
+      remark #17106: parallel dependence: assumed FLOW dependence between oc (311:6) and oc (310:6)
+      remark #17106: parallel dependence: assumed ANTI dependence between oc (310:6) and oc (311:6)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(309,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(878,6)
+   <Remainder>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(26,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(890,11)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(57,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(906,20)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(906,20)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between viewBuf[nm*2+j] (556:38) and ib[nm*2+*(ix+i*4)-1] (556:38)
+         remark #17106: parallel dependence: assumed ANTI dependence between ib[nm*2+*(ix+i*4)-1] (556:38) and viewBuf[nm*2+j] (556:38)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(906,20)
+      <Remainder>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(175,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(906,20)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between ordern (176:31) and ordern (176:31)
+      remark #17106: parallel dependence: assumed FLOW dependence between ordern (176:31) and ordern (176:31)
+      remark #17106: parallel dependence: assumed FLOW dependence between ordern (176:31) and ordern (176:31)
+      remark #17106: parallel dependence: assumed ANTI dependence between ordern (176:31) and ordern (176:31)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(970,6)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ adccntlp i nViews } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(970,6)
+   <Remainder>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(70,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(977,6)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (71:15) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (71:40)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (71:40) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (71:15)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(980,6)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(874,6)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(874,6)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(970,6)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(970,6)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: computeChecksum(ADC_VIEW_CNTL *, treeNode *, uint64 *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(175,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between *ordern (176:31) and *ordern (176:31)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *ordern (176:31) and *ordern (176:31)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *ordern (176:31) and *ordern (176:31)
+LOOP END
+===========================================================================
+
+Begin optimization report for: TreeInsert(RBTree *, uint32 *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(9,3) inlined into /bulk/workbench/repos/nauseous/DC/src/rbt.c(41,14)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(70,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between xNd->nodeMemPool[ii] (70:43) and attrs[ii] (70:43)
+   remark #17106: parallel dependence: assumed ANTI dependence between attrs[ii] (70:43) and xNd->nodeMemPool[ii] (70:43)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(70,7)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(81,10)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(73,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================
+
+Begin optimization report for: ViewSizesVerification(ADC_VIEW_CNTL *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(805,6)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(810,6)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(814,6)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(816,12)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(825,12)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 sel } private={ } firstprivate={ k i } lastprivate={ } firstlastprivate={ } reduction={ tx }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(825,12)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(825,12)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(825,12)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: ShowFactorization(Factorization *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(44,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================
+
+Begin optimization report for: ListFirstPrimes(long, long *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(77,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between *prlist (79:5) and prlist[prnum] (85:21)
+   remark #17106: parallel dependence: assumed FLOW dependence between prlist[prnum] (85:21) and *prlist (79:5)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(79,5)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: GetLCM(long long, Factorization **, long *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:3) and expons[i] (103:30)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between expons[i] (103:30) and expons[i] (103:3)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ maxprmfctr expons i } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(105,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(117,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between expons[fct] (127:7) and expons[fct] (127:7)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(121,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between lexp (124:9) and lexp (124:9)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(138,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between expons[i] (142:7) and expons (139:5)
+   remark #17106: parallel dependence: assumed ANTI dependence between expons (139:5) and expons[i] (142:7)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(139,5)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(103,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: ExtendFactors(long, long, Factorization *, Factorization **)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(156,4)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================
+
+Begin optimization report for: ParseParFile(char *, ADC_PAR *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(411,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(414,5)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: GetNextTuple(int, int, long long *, long long *, char)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(549,5)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ dcdim tmpgen locexp i } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(551,7)
+      remark #25460: No loop optimizations reported
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(558,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (560:7) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (560:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (560:7) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (560:7)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(565,3)
+<Distributed chunk1>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between attr[i] (566:5) and adcprime[i] (567:5)
+   remark #17106: parallel dependence: assumed ANTI dependence between adcprime[i] (567:5) and attr[i] (566:5)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(565,3)
+<Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(565,3)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(565,3)
+<Distributed chunk3>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(565,3)
+<Remainder, Distributed chunk3>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(571,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ measnum maxattr meas i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(571,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(549,5)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(551,7)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between tmpgen (553:2) and tmpgen (553:2)
+      remark #17106: parallel dependence: assumed FLOW dependence between tmpgen (553:2) and tmpgen (553:2)
+      remark #17106: parallel dependence: assumed ANTI dependence between tmpgen (553:2) and tmpgen (553:2)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(571,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/adc.c(571,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: CreateBinTuple(uint64 *, uint32 *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ numDims selTuple binRepTuple i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(351,4)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: WriteOne32Tuple(char *, uint32, uint32, FILE *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(70,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (71:15) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (71:40)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (71:40) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (71:15)
+LOOP END
+===========================================================================
+
+Begin optimization report for: GetRegTupleFromBin64(uint64, uint32 *, uint32, uint32 *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(309,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between selTuple[j] (310:30) and *numOfUnits (310:53)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *numOfUnits (310:53) and selTuple[j] (310:30)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(309,4)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: GetRegTupleFromParent(uint64, uint32, uint32 *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(341,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between oc (342:6) and oc (344:6)
+   remark #17106: parallel dependence: assumed FLOW dependence between oc (344:6) and oc (342:6)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between selTuple[j] (343:43) and selTuple[j] (343:43)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between selTuple[j] (343:43) and selTuple[j] (343:43)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(341,4)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: NumOfCombsFromNbyK(uint32, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(78,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between combsNbyK (78:33) and combsNbyK (78:33)
+   remark #17106: parallel dependence: assumed FLOW dependence between combsNbyK (78:33) and combsNbyK (78:33)
+LOOP END
+===========================================================================
+
+Begin optimization report for: KeyComp(const uint32 *, const uint32 *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(9,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================
+
+Begin optimization report for: ReadWholeInputData(ADC_VIEW_CNTL *, FILE *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(26,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================
+
+Begin optimization report for: ComputeMemoryFittedView(ADC_VIEW_CNTL *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(57,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(58,7)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between viewBuf[nm*2+j] (556:38) and ib[nm*2+*(ix+i*4)-1] (556:38)
+      remark #17106: parallel dependence: assumed ANTI dependence between ib[nm*2+*(ix+i*4)-1] (556:38) and viewBuf[nm*2+j] (556:38)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(58,7)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(175,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(74,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between ordern (176:31) and ordern (176:31)
+   remark #17106: parallel dependence: assumed FLOW dependence between ordern (176:31) and ordern (176:31)
+   remark #17106: parallel dependence: assumed FLOW dependence between ordern (176:31) and ordern (176:31)
+   remark #17106: parallel dependence: assumed ANTI dependence between ordern (176:31) and ordern (176:31)
+LOOP END
+===========================================================================
+
+Begin optimization report for: SharedSortAggregate(ADC_VIEW_CNTL *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(136,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between avp->inpRecSize (137:7) and currBuf (201:14)
+   remark #17106: parallel dependence: assumed FLOW dependence between currBuf (201:14) and avp->inpRecSize (137:7)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(139,7)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 attrs currBuf } private={ } firstprivate={ nv ix nm i j iRec } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(139,7)
+   <Remainder>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(187,19)
+   <Distributed chunk1>
+      remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i avp t iRec } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(187,19)
+   <Remainder, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(187,19)
+   <Distributed chunk2>
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between ordern (165:31) and ordern (165:31)
+      remark #17106: parallel dependence: assumed FLOW dependence between ordern (165:31) and ordern (165:31)
+      remark #17106: parallel dependence: assumed FLOW dependence between ordern (165:31) and ordern (165:31)
+      remark #17106: parallel dependence: assumed ANTI dependence between ordern (165:31) and ordern (165:31)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(225,19)
+<Distributed chunk1>
+   remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i avp t } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(225,19)
+<Remainder, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(225,19)
+<Distributed chunk2>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between ordern (165:31) and ordern (165:31)
+   remark #17106: parallel dependence: assumed FLOW dependence between ordern (165:31) and ordern (165:31)
+   remark #17106: parallel dependence: assumed FLOW dependence between ordern (165:31) and ordern (165:31)
+   remark #17106: parallel dependence: assumed ANTI dependence between ordern (165:31) and ordern (165:31)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(139,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(139,7)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(187,19)
+<Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(187,19)
+<Remainder, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(225,19)
+<Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(225,19)
+<Remainder, Distributed chunk1>
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(129,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================
+
+Begin optimization report for: WriteViewToDiskCS(ADC_VIEW_CNTL *, treeNode *, uint64 *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(163,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->mSums[i] (164:5) and *ordern (165:31)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *ordern (165:31) and avp->mSums[i] (164:5)
+LOOP END
+===========================================================================
+
+Begin optimization report for: MultiWayMerge(ADC_VIEW_CNTL *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(471,6)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between min_r_buf (475:7) and avp->outRecSize (475:7)
+   remark #17106: parallel dependence: assumed ANTI dependence between avp->outRecSize (475:7) and min_r_buf (475:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:memcpy(void *__restrict__, const void *__restrict__, size_t (475:7) and call:memcpy(void *__restrict__, const void *__restrict__, size_t (475:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:memcpy(void *__restrict__, const void *__restrict__, size_t (475:7) and call:memcpy(void *__restrict__, const void *__restrict__, size_t (475:7)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(480,6)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:memcpy(void *__restrict__, const void *__restrict__, size_t (486:11) and call:memcpy(void *__restrict__, const void *__restrict__, size_t (490:13)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:memcpy(void *__restrict__, const void *__restrict__, size_t (490:13) and call:memcpy(void *__restrict__, const void *__restrict__, size_t (486:11)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(9,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(488,19)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(9,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(506,20)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(509,12)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 min_r_buf outputBuffer } private={ } firstprivate={ a i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(509,12)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(509,12)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(515,12)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 outputBuffer } private={ } firstprivate={ avp i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(523,7)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ numEmptyRuns numEmptyBufs }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(523,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(459,4)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(545,4)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 outputBuffer } private={ } firstprivate={ avp i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(509,12)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(509,12)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(509,12)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(515,12)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(523,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(523,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(545,4)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(531,7)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================
+
+Begin optimization report for: PrefixedAggregate(ADC_VIEW_CNTL *, FILE *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(262,5)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 prevBuf aggrBuf } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(262,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(265,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(267,7)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 attrs currBuf } private={ } firstprivate={ nv ix nm i j iRec } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(267,7)
+   <Remainder>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(9,3) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(270,18)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(277,6)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 aggrBuf } private={ } firstprivate={ avp nOut i iRec } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(284,6)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 currBuf aggrBuf } private={ } firstprivate={ a i iRec } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(284,6)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(284,6)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(310,4)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 aggrBuf } private={ } firstprivate={ nOut avp nOut i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(262,5)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(262,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(267,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(267,7)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(277,6)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(284,6)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(284,6)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(284,6)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(310,4)
+   remark #25460: No loop optimizations reported
+LOOP END
+===========================================================================
+
+Begin optimization report for: RunFormation(ADC_VIEW_CNTL *, FILE *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(328,4)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(330,6)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 attrs viewBuf } private={ } firstprivate={ nv ix nm i j iRec } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(330,6)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(330,6)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4) inlined into /bulk/workbench/repos/nauseous/DC/src/extbuild.c(330,6)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: SelectToView(uint32 *, uint32 *, uint32 *, uint32, uint32, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between viewBuf[nm*2+j] (556:38) and ix[i] (556:38)
+   remark #17106: parallel dependence: assumed ANTI dependence between ix[i] (556:38) and viewBuf[nm*2+j] (556:38)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(556,4)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: Mlo32(uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(28,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between om (29:8) and om (30:8)
+   remark #17106: parallel dependence: assumed FLOW dependence between om (30:8) and om (29:8)
+   remark #17106: parallel dependence: assumed ANTI dependence between om (29:8) and om (30:8)
+LOOP END
+===========================================================================
+
+Begin optimization report for: mro32(uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(40,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between om (41:8) and om (42:8)
+   remark #17106: parallel dependence: assumed FLOW dependence between om (42:8) and om (41:8)
+   remark #17106: parallel dependence: assumed ANTI dependence between om (41:8) and om (42:8)
+LOOP END
+===========================================================================
+
+Begin optimization report for: setLeadingOnes32(uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(52,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between om (53:10) and om (54:10)
+   remark #17106: parallel dependence: assumed FLOW dependence between om (54:10) and om (53:10)
+LOOP END
+===========================================================================
+
+Begin optimization report for: GetParent(ADC_VIEW_CNTL *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(293,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(106,15)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between ob (294:7) and ob (295:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between ob (295:7) and ob (294:7)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(40,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(116,27)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between om (41:8) and om (42:8)
+   remark #17106: parallel dependence: assumed FLOW dependence between om (42:8) and om (41:8)
+   remark #17106: parallel dependence: assumed ANTI dependence between om (41:8) and om (42:8)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(52,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(116,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between om (53:10) and om (54:10)
+   remark #17106: parallel dependence: assumed FLOW dependence between om (54:10) and om (53:10)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(28,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(117,22)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between om (29:8) and om (30:8)
+   remark #17106: parallel dependence: assumed FLOW dependence between om (30:8) and om (29:8)
+   remark #17106: parallel dependence: assumed ANTI dependence between om (29:8) and om (30:8)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(28,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(118,27)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between om (29:8) and om (30:8)
+   remark #17106: parallel dependence: assumed FLOW dependence between om (30:8) and om (29:8)
+   remark #17106: parallel dependence: assumed ANTI dependence between om (29:8) and om (30:8)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(52,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(118,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between om (53:10) and om (54:10)
+   remark #17106: parallel dependence: assumed FLOW dependence between om (54:10) and om (53:10)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(120,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->smallestParentLevel (165:12) and avp->smallestParentLevel (177:12)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->smallestParentLevel (177:12) and avp->smallestParentLevel (165:12)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(125,12)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between ssFt (149:22) and ssFt (150:61)
+      remark #17106: parallel dependence: assumed FLOW dependence between ssFt (150:61) and ssFt (149:22)
+      remark #17106: parallel dependence: assumed ANTI dependence between ssFt (149:22) and ssFt (150:61)
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: GetSmallestParent(ADC_VIEW_CNTL *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(293,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(195,15)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between ob (294:7) and ob (295:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between ob (295:7) and ob (294:7)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(197,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between igOfSmallestParent (198:7) and igOfSmallestParent (206:8)
+   remark #17106: parallel dependence: assumed FLOW dependence between igOfSmallestParent (206:8) and igOfSmallestParent (198:7)
+   remark #17106: parallel dependence: assumed ANTI dependence between igOfSmallestParent (198:7) and igOfSmallestParent (206:8)
+   remark #17106: parallel dependence: assumed ANTI dependence between igOfSmallestParent (198:7) and igOfSmallestParent (210:8)
+   remark #17106: parallel dependence: assumed FLOW dependence between igOfSmallestParent (210:8) and igOfSmallestParent (198:7)
+   remark #17106: parallel dependence: assumed ANTI dependence between igOfSmallestParent (198:7) and igOfSmallestParent (210:8)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->smallestParentLevel (217:10) and avp->smallestParentLevel (217:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->smallestParentLevel (217:10) and avp->smallestParentLevel (217:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->viewOffset (218:10) and avp->viewOffset (218:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->viewOffset (218:10) and avp->viewOffset (218:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->nParentViewRows (219:10) and avp->nParentViewRows (219:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->nParentViewRows (219:10) and avp->nParentViewRows (219:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->parBinRepTuple (220:10) and avp->parBinRepTuple (220:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->parBinRepTuple (220:10) and avp->parBinRepTuple (220:10)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(200,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between ft (204:13) and ft (207:8)
+      remark #17106: parallel dependence: assumed FLOW dependence between ft (207:8) and ft (204:13)
+      remark #17106: parallel dependence: assumed ANTI dependence between ft (204:13) and ft (207:8)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(200,9)
+   <Remainder>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: GetPrefixedParent(ADC_VIEW_CNTL *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(293,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(232,15)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between ob (294:7) and ob (295:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between ob (295:7) and ob (294:7)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(40,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(234,26)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between om (41:8) and om (42:8)
+   remark #17106: parallel dependence: assumed FLOW dependence between om (42:8) and om (41:8)
+   remark #17106: parallel dependence: assumed ANTI dependence between om (41:8) and om (42:8)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(52,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(234,9)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between om (53:10) and om (54:10)
+   remark #17106: parallel dependence: assumed FLOW dependence between om (54:10) and om (53:10)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(236,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between igOfSmallestParent (237:7) and igOfSmallestParent (249:32)
+   remark #17106: parallel dependence: assumed FLOW dependence between igOfSmallestParent (249:32) and igOfSmallestParent (237:7)
+   remark #17106: parallel dependence: assumed ANTI dependence between igOfSmallestParent (237:7) and igOfSmallestParent (249:32)
+   remark #17106: parallel dependence: assumed ANTI dependence between igOfSmallestParent (237:7) and igOfSmallestParent (252:32)
+   remark #17106: parallel dependence: assumed FLOW dependence between igOfSmallestParent (252:32) and igOfSmallestParent (237:7)
+   remark #17106: parallel dependence: assumed ANTI dependence between igOfSmallestParent (237:7) and igOfSmallestParent (252:32)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->smallestParentLevel (259:10) and avp->smallestParentLevel (259:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->smallestParentLevel (259:10) and avp->smallestParentLevel (259:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->viewOffset (260:10) and avp->viewOffset (260:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->viewOffset (260:10) and avp->viewOffset (260:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->nParentViewRows (261:10) and avp->nParentViewRows (261:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->nParentViewRows (261:10) and avp->nParentViewRows (261:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->parBinRepTuple (262:10) and avp->parBinRepTuple (262:10)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between avp->parBinRepTuple (262:10) and avp->parBinRepTuple (262:10)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(241,12)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between ft (248:22) and ft (249:57)
+      remark #17106: parallel dependence: assumed FLOW dependence between ft (249:57) and ft (248:22)
+      remark #17106: parallel dependence: assumed ANTI dependence between ft (248:22) and ft (249:57)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(241,12)
+   <Remainder>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: WriteOne64Tuple(char *, uint64, uint32, FILE *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(283,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (284:17) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (284:42)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (284:42) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (284:17)
+LOOP END
+===========================================================================
+
+Begin optimization report for: NumberOfOnes(uint64)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(293,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between ob (294:7) and ob (295:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between ob (295:7) and ob (294:7)
+LOOP END
+===========================================================================
+
+Begin optimization report for: getRegTupleFromBin32(uint32, uint32 *, uint32, uint32 *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(324,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between selTuple[j] (325:30) and *numOfUnits (325:53)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *numOfUnits (325:53) and selTuple[j] (325:30)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(324,4)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: d32v(char *, uint32 *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(359,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (359:30) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (359:30)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (359:30) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (359:30)
+LOOP END
+===========================================================================
+
+Begin optimization report for: restore(TUPLE_VIEWSIZE *, uint32, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(374,4)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================
+
+Begin optimization report for: vszsort(TUPLE_VIEWSIZE *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(396,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between x->viewsize[tj-1] (376:7) and x->viewsize[j-1] (383:3)
+   remark #17106: parallel dependence: assumed FLOW dependence between x->viewsize[j-1] (383:3) and x->viewsize[tj-1] (376:7)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(374,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(396,33)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(397,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between x->viewsize (399:6) and x->viewsize[j-1] (383:3)
+   remark #17106: parallel dependence: assumed FLOW dependence between x->viewsize[j-1] (383:3) and x->viewsize (399:6)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(374,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(401,6)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: countTupleOnes(uint64, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(408,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between ob (409:5) and ob (410:5)
+   remark #17106: parallel dependence: assumed FLOW dependence between ob (410:5) and ob (409:5)
+LOOP END
+===========================================================================
+
+Begin optimization report for: restoreo(TUPLE_ONES *, uint32, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(421,4)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================
+
+Begin optimization report for: onessort(TUPLE_ONES *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(442,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between x->nOnes[tj-1] (423:7) and x->nOnes[j-1] (429:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between x->nOnes[j-1] (429:7) and x->nOnes[tj-1] (423:7)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(421,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(442,33)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(443,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between x->nOnes (445:6) and x->nOnes[j-1] (429:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between x->nOnes[j-1] (429:7) and x->nOnes (445:6)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(421,4) inlined into /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(451,6)
+      remark #17102: loop was not parallelized: not a parallelization candidate
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: WriteViewToDisk(ADC_VIEW_CNTL *, treeNode *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(152,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ t avp i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(152,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(152,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/rbt.c(152,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: vranlc(int, double *, double, double *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3)
+<Multiversioned v1>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between *x (136:6) and *x (129:5)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *x (136:6) and *x (136:6)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *x (136:6) and *x (136:6)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3)
+<Multiversioned v2>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between *x (129:5) and y[i] (137:5)
+   remark #17106: parallel dependence: assumed FLOW dependence between y[i] (137:5) and *x (129:5)
+LOOP END
+===========================================================================
+
+Begin optimization report for: InitAdcViewCntl..0(ADC_VIEW_CNTL *, uint32, uint32 *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(731,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between adccntl->mSums (731:4) and adccntl->mSums[i] (731:39)
+   remark #17106: parallel dependence: assumed FLOW dependence between adccntl->mSums[i] (731:39) and adccntl->mSums (731:4)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(731,4)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i adccntl } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(731,4)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(732,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between selection[i] (732:4) and adccntl->selection[i] (732:39)
+   remark #17106: parallel dependence: assumed FLOW dependence between adccntl->selection[i] (732:39) and selection[i] (732:4)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(732,4)
+   <Multiversioned v2>
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between adccntl->selection[i] (732:39) and selection[i] (732:39)
+      remark #17106: parallel dependence: assumed ANTI dependence between selection[i] (732:39) and adccntl->selection[i] (732:39)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(732,4)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(731,4)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(731,4)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: InitAdcViewCntl(ADC_VIEW_CNTL *, uint32, uint32 *, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(731,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between adccntl->mSums (731:4) and adccntl->mSums[i] (731:39)
+   remark #17106: parallel dependence: assumed FLOW dependence between adccntl->mSums[i] (731:39) and adccntl->mSums (731:4)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(731,4)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i adccntl } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(731,4)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(732,4)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between selection[i] (732:4) and adccntl->selection[i] (732:39)
+   remark #17106: parallel dependence: assumed FLOW dependence between adccntl->selection[i] (732:39) and selection[i] (732:4)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(732,4)
+   <Multiversioned v2>
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between adccntl->selection[i] (732:39) and selection[i] (732:39)
+      remark #17106: parallel dependence: assumed ANTI dependence between selection[i] (732:39) and adccntl->selection[i] (732:39)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(732,4)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(731,4)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/extbuild.c(731,4)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: JobPoolInit(JOB_POOL *, uint32, uint32)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(271,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ n jpp i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(271,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(271,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/DC/src/jobcntl.c(271,3)
+<Remainder>
+LOOP END
+===========================================================================

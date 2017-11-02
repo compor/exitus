@@ -1,0 +1,496 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.0.128 Build 20170811
+
+Compiler options: -O2 -parallel -ipo -xcorei7 -axcorei7 -par-threshold0 -qopt-report=5 -qopt-report-phase=par -qopt-report-file=report.txt -g -o is -rdynamic -lm
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(673,5)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(673,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(458,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(462,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+   remark #17106: parallel dependence: assumed ANTI dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(468,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between bucket_ptrs[i] (469:9) and bucket_ptrs[i-1] (469:9)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(468,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(473,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between bucket_ptrs[key] (476:9) and bucket_ptrs[key] (476:19)
+   remark #17106: parallel dependence: assumed FLOW dependence between bucket_ptrs[key] (476:19) and bucket_ptrs[key] (476:9)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(488,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(500,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(508,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between key_buff1[i+1] (509:9) and key_buff1[i] (509:9)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(508,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(515,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between passed_verification (531:29) and passed_verification (531:29)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between passed_verification (538:29) and passed_verification (531:29)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between passed_verification (538:29) and passed_verification (538:29)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(531,29) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between key_array[iteration] (446:5) and key_array[i] (475:9)
+   remark #17106: parallel dependence: assumed ANTI dependence between key_array[i] (475:9) and key_array[iteration] (446:5)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ } private={ } firstprivate={ i iteration } lastprivate={ } firstlastprivate={ } reduction={ }
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(458,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+      remark #17108: loop was not parallelized: insufficient computational work
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(462,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+      remark #17106: parallel dependence: assumed ANTI dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(468,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between bucket_ptrs[i] (469:9) and bucket_ptrs[i-1] (469:9)
+      remark #17106: parallel dependence: assumed ANTI dependence between bucket_ptrs[i-1] (469:9) and bucket_ptrs[i] (469:9)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(468,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+   <Remainder>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(473,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between bucket_ptrs[key] (476:9) and bucket_ptrs[key] (476:19)
+      remark #17106: parallel dependence: assumed FLOW dependence between bucket_ptrs[key] (476:19) and bucket_ptrs[key] (476:9)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(488,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+      remark #17108: loop was not parallelized: insufficient computational work
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(500,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(508,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between key_buff1[i+1] (509:9) and key_buff1[i] (509:9)
+      remark #17106: parallel dependence: assumed ANTI dependence between key_buff1[i] (509:9) and key_buff1[i+1] (509:9)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(508,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+   <Remainder>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(515,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between passed_verification (531:29) and passed_verification (538:29)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between passed_verification (538:29) and passed_verification (531:29)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(402,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(747,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between key_buff2[i] (403:58) and key_buff_ptr_global[key_buff2[i]] (403:21)
+   remark #17106: parallel dependence: assumed FLOW dependence between key_buff_ptr_global[key_buff2[i]] (403:21) and key_buff2[i] (403:58)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(747,5)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ j }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(747,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(747,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(673,5)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(673,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(720,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(735,9)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(747,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(747,5)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(747,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(747,5)
+<Remainder loop for vectorization>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+/bulk/workbench/repos/nauseous/IS/src/is.c(525:17)::main:  Assume directive not useful: removing
+
+===========================================================================
+
+Begin optimization report for: create_seq(double, double)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(343,12) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(365,10)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between R23 (304:9) and R23 (311:11)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between R23 (311:11) and R23 (304:9)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(309,9) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(365,10)
+   <Distributed chunk1>
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(309,9) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(365,10)
+   <Distributed chunk2>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(314,9) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(365,10)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(309,9) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(366,11)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(314,9) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(366,11)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(309,9) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(367,15)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(314,9) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(367,15)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(309,9) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(368,11)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(314,9) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(368,11)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+      remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(309,9) inlined into /bulk/workbench/repos/nauseous/IS/src/is.c(365,10)
+   <Remainder loop for vectorization, Distributed chunk2>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: randlc(double *, double *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(309,9)
+<Distributed chunk1>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+   remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+   remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between T23 (312:11) and T23 (312:11)
+   remark #17106: parallel dependence: assumed ANTI dependence between T23 (312:11) and T23 (312:11)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(309,9)
+<Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(309,9)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(314,9)
+<Distributed chunk1>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+   remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+   remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between T46 (317:11) and T46 (317:11)
+   remark #17106: parallel dependence: assumed ANTI dependence between T46 (317:11) and T46 (317:11)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(314,9)
+<Distributed chunk2>
+LOOP END
+===========================================================================
+
+Begin optimization report for: full_verify(void)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(402,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between key_buff2[i] (403:58) and key_buff_ptr_global[key_buff2[i]] (403:21)
+   remark #17106: parallel dependence: assumed FLOW dependence between key_buff_ptr_global[key_buff2[i]] (403:21) and key_buff2[i] (403:58)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ j }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(409,5)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: rank(int)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(458,5)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(462,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+   remark #17106: parallel dependence: assumed ANTI dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between bucket_size[key_array[i]] (463:9) and bucket_size[key_array[i]] (463:9)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(468,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between bucket_ptrs[i] (469:9) and bucket_ptrs[i-1] (469:9)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(468,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(473,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between bucket_ptrs[key] (476:9) and bucket_ptrs[key] (476:19)
+   remark #17106: parallel dependence: assumed FLOW dependence between bucket_ptrs[key] (476:19) and bucket_ptrs[key] (476:9)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between key_buff2[bucket_ptrs[key]] (476:9) and key_buff2[bucket_ptrs[key]] (476:9)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between key_buff2[bucket_ptrs[key]] (476:9) and key_buff2[bucket_ptrs[key]] (476:9)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(488,5)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(500,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(508,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between key_buff1[i+1] (509:9) and key_buff1[i] (509:9)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(508,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(515,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between passed_verification (531:29) and passed_verification (531:29)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between passed_verification (538:29) and passed_verification (531:29)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between passed_verification (538:29) and passed_verification (538:29)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/IS/src/is.c(452,5)
+<Remainder>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+/bulk/workbench/repos/nauseous/IS/src/is.c(525:17)::rank:  Assume directive not useful: removing
+
+===========================================================================

@@ -1,0 +1,2446 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.0.128 Build 20170811
+
+Compiler options: -O2 -parallel -ipo -xcorei7 -axcorei7 -par-threshold0 -qopt-report=5 -qopt-report-phase=par -qopt-report-file=report.txt -g -o bt -rdynamic -lm
+
+Begin optimization report for: compute_rhs()
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(47,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i rho_inv k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(48,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(49,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(49,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(49,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(69,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i m k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(70,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(71,7)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(72,9)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(83,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m m j j i m m m j j i uijk up1 um1 i tx2 dx1tx1 c2 dx2tx1 con43 xxcon2 dx3tx1 dx4tx1 c1 xxcon5 xxcon3 dx5tx1 xxcon4 dssp i k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(84,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(85,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(85,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(85,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(141,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(143,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(150,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(141,5)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(157,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(158,7)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(159,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(159,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(159,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(168,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(170,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(177,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(168,5)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(190,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i m i m j i m i m i m j i vijk vp1 vm1 ty2 dy1ty1 yycon2 dy2ty1 c2 dy3ty1 con43 dy4ty1 c1 yycon5 yycon3 dy5ty1 yycon4 dssp j j k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(191,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(192,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(192,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(192,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(244,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(245,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(245,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(245,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(253,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(254,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(254,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(254,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(261,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(262,7)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(263,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(263,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(263,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(273,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(274,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(274,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(274,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(282,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(283,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(283,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(283,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(296,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i wijk wp1 wm1 tz2 dz1tz1 zzcon2 dz2tz1 dz3tz1 c2 dz4tz1 con43 c1 zzcon5 zzcon3 dz5tz1 zzcon4 k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(297,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(298,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(298,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(298,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(352,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i m dssp j } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(353,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(354,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(354,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(354,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(363,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i m dssp j } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(364,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(365,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(365,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(365,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(373,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i m dssp k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(374,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(375,7)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(376,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(376,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(376,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(387,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i m k dssp j } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(388,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(389,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(389,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(389,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(398,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ i m k dssp j } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(399,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(400,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(400,7)
+         remark #25460: No loop optimizations reported
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(400,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(409,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i m dt k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(410,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(411,7)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(412,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(412,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(412,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(47,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(48,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(49,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(49,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(49,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(69,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(70,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(71,7)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(72,9)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(83,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(84,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(85,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(85,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(85,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(141,5)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(141,5)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(157,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(158,7)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(159,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(159,9)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(159,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(168,5)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(168,5)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(190,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(191,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(192,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(192,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(192,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(244,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(245,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(245,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(245,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(253,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(254,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(254,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(254,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(261,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(262,7)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(263,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(263,9)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(263,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(273,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(274,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(274,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(274,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(282,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(283,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(283,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(283,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(296,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(297,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(298,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(298,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(298,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(352,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(353,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(354,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(354,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(354,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(363,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(364,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(365,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(365,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(365,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(373,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(374,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(375,7)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(376,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(376,9)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(376,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(387,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(388,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(389,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(389,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(389,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(398,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(399,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(400,7)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(400,7)
+         remark #17107: loop was not parallelized: inner loop
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(400,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(409,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(410,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(411,7)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(412,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(412,9)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/rhs.c(412,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: error_norm(double *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(46,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ rms m } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(46,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(50,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between u[k][j][i][m] (59:11) and rms[m] (60:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between rms[m] (60:11) and u[k][j][i][m] (59:11)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(52,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between u[k][j][i][m] (59:11) and rms[m] (60:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between rms[m] (60:11) and u[k][j][i][m] (59:11)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(54,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between u[k][j][i][m] (59:11) and rms[m] (60:11)
+         remark #17106: parallel dependence: assumed FLOW dependence between rms[m] (60:11) and u[k][j][i][m] (59:11)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/error.c(56,9)
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(58,9)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(66,3)
+<Distributed chunk1>
+   remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ d m rms } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(67,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(67,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(67,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(67,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(67,5)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(66,3)
+<Peeled loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(66,3)
+<Distributed chunk2>
+   remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ m rms } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(66,3)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(46,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(46,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(66,3)
+<Distributed chunk1>
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(67,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between rms[m] (68:7) and rms[m] (68:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between rms[m] (68:7) and rms[m] (68:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between rms[m] (68:7) and rms[m] (68:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between rms[m] (68:7) and rms[m] (68:7)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(66,3)
+<Peeled loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(66,3)
+<Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(66,3)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+===========================================================================
+
+Begin optimization report for: verify(int, char *, logical *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(80,3) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ xcr } private={ } firstprivate={ m } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(80,3) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(84,3) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between xcr[m] (89:11) and xcr[m] (89:11)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between xcr[m] (89:11) and xcr[m] (89:11)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(85,5) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between xcr[m] (89:11) and xcr[m] (89:11)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between xcr[m] (89:11) and xcr[m] (89:11)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(86,7) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed OUTPUT dependence between xcr[m] (89:11) and xcr[m] (89:11)
+         remark #17106: parallel dependence: assumed OUTPUT dependence between xcr[m] (89:11) and xcr[m] (89:11)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(87,9) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+            remark #17109: LOOP WAS AUTO-PARALLELIZED
+            remark #17101: parallel loop shared={ xcr } private={ } firstprivate={ add m i j k } lastprivate={ } firstlastprivate={ } reduction={ }
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(87,9) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+<Distributed chunk1>
+   remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ xcr } private={ } firstprivate={ d m } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(96,5) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+      remark #25460: No loop optimizations reported
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(96,5) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+<Distributed chunk2>
+   remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ xcr } private={ } firstprivate={ m } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(60,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ xcr } private={ } firstprivate={ dt m } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(60,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(67,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ xcrref xceref } private={ } firstprivate={ m } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(67,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(277,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ xcrref xcr xcrdif xceref xce xcedif } private={ } firstprivate={ m } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(277,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(303,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(322,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(80,3) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(80,3) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(87,9) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(87,9) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+<Distributed chunk1>
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(96,5) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(96,5) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3) inlined into /bulk/workbench/repos/nauseous/BT/src/verify.c(58,3)
+<Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(60,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(60,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(67,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(67,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/verify.c(277,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+===========================================================================
+
+Begin optimization report for: initialize()
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(51,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i m k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(52,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(53,7)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(54,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(54,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(64,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between Pface[ix][0][0] (44:5) and u[k][j][i][m] (88:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between u[k][j][i][m] (88:11) and Pface[ix][0][0] (44:5)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(66,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between Pface[ix][0][0] (44:5) and u[k][j][i][m] (88:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between u[k][j][i][m] (88:11) and Pface[ix][0][0] (44:5)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(68,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between Pface[ix][0][0] (44:5) and u[k][j][i][m] (88:11)
+         remark #17106: parallel dependence: assumed FLOW dependence between u[k][j][i][m] (88:11) and Pface[ix][0][0] (44:5)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(71,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed OUTPUT dependence between &Pface[ix][0][0][m] (44:5) and &Pface[ix][0][0][m] (44:5)
+            remark #17106: parallel dependence: assumed OUTPUT dependence between &Pface[ix][0][0][m] (44:5) and &Pface[ix][0][0][m] (44:5)
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(72,11)
+               remark #17109: LOOP WAS AUTO-PARALLELIZED
+               remark #17101: parallel loop shared={ Pface } private={ } firstprivate={ zeta eta xi m ix i j k } lastprivate={ } firstlastprivate={ } reduction={ }
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(72,11)
+            <Remainder loop for vectorization>
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(75,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed OUTPUT dependence between &Pface[iy][1][0][m] (44:5) and &Pface[iy][1][0][m] (44:5)
+            remark #17106: parallel dependence: assumed OUTPUT dependence between &Pface[iy][1][0][m] (44:5) and &Pface[iy][1][0][m] (44:5)
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(76,11)
+               remark #17109: LOOP WAS AUTO-PARALLELIZED
+               remark #17101: parallel loop shared={ Pface } private={ } firstprivate={ zeta eta xi m iy i j k } lastprivate={ } firstlastprivate={ } reduction={ }
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(76,11)
+            <Remainder loop for vectorization>
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(79,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed OUTPUT dependence between &Pface[iz][2][0][m] (44:5) and &Pface[iz][2][0][m] (44:5)
+            remark #17106: parallel dependence: assumed OUTPUT dependence between &Pface[iz][2][0][m] (44:5) and &Pface[iz][2][0][m] (44:5)
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(80,11)
+               remark #17109: LOOP WAS AUTO-PARALLELIZED
+               remark #17101: parallel loop shared={ Pface } private={ } firstprivate={ zeta eta xi m iz i j k } lastprivate={ } firstlastprivate={ } reduction={ }
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(80,11)
+            <Remainder loop for vectorization>
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(83,9)
+            remark #17109: LOOP WAS AUTO-PARALLELIZED
+            remark #17101: parallel loop shared={ Pface } private={ } firstprivate={ zeta eta xi m i j k } lastprivate={ } firstlastprivate={ } reduction={ }
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(83,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(105,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m m j zeta eta dnzm1 dnym1 k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(107,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(109,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(110,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(121,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m m j zeta eta dnzm1 dnym1 i k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(123,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(125,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(126,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(137,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m m i zeta xi dnzm1 dnxm1 k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(139,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(141,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(142,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(153,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m m i zeta xi dnzm1 dnxm1 j k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(155,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(157,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(158,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(169,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m m i eta xi dnym1 dnxm1 j } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(171,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(173,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(174,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(185,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m m i eta xi dnym1 dnxm1 k j } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(187,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(189,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(190,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(51,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(52,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(53,7)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(54,9)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(54,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(72,11)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(76,11)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/initialize.c(80,11)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(83,9)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(83,9)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(83,9)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(105,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(107,5)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(121,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(123,5)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(137,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(139,5)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(153,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(155,5)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(169,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(171,5)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(185,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(187,5)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: matmul_sub(double (*)[5], double (*)[5], double (*)[5])
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(76,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between cblock[_2] (76:3) and bblock[0] (76:3)
+   remark #17106: parallel dependence: assumed ANTI dependence between bblock[0] (76:3) and cblock[_2] (76:3)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(101,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between cblock[1][_2] (101:3) and bblock[1][0] (101:3)
+   remark #17106: parallel dependence: assumed ANTI dependence between bblock[1][0] (101:3) and cblock[1][_2] (101:3)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(126,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between cblock[2][_2] (126:3) and bblock[2][0] (126:3)
+   remark #17106: parallel dependence: assumed ANTI dependence between bblock[2][0] (126:3) and cblock[2][_2] (126:3)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(151,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between cblock[3][_2] (151:3) and bblock[3][0] (151:3)
+   remark #17106: parallel dependence: assumed ANTI dependence between bblock[3][0] (151:3) and cblock[3][_2] (151:3)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(176,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between cblock[4][_2] (176:3) and bblock[4][0] (176:3)
+   remark #17106: parallel dependence: assumed ANTI dependence between bblock[4][0] (176:3) and cblock[4][_2] (176:3)
+LOOP END
+===========================================================================
+
+Begin optimization report for: lhsinit(double (*)[3][5][5], int)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(206,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between lhs[0][n][m] (208:7) and lhs[size][2][n][m] (213:7)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between lhs[size][2][n][m] (213:7) and lhs[0][n][m] (208:7)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(207,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed OUTPUT dependence between lhs[0][n][m] (208:7) and lhs[size][2][n][m] (213:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between lhs[size][2][n][m] (213:7) and lhs[0][n][m] (208:7)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(207,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(207,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(207,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(207,5)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/initialize.c(220,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between lhs[1][m][m] (221:5) and lhs[size][1][m][m] (222:5)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between lhs[size][1][m][m] (222:5) and lhs[1][m][m] (221:5)
+LOOP END
+===========================================================================
+
+Begin optimization report for: z_solve()
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(69,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between u[k][j][i][0] (72:9) and lhs (150:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between lhs (150:7) and u[k][j][i][0] (72:9)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(70,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between u[k][j][i][0] (72:9) and lhs (150:7)
+      remark #17106: parallel dependence: assumed FLOW dependence between lhs (150:7) and u[k][j][i][0] (72:9)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(71,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ksize c2 c1 c3c4 con43 c4 c3 c1345 k i j } lastprivate={ } firstlastprivate={ tmp1 tmp2 tmp3 } reduction={ }
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(71,7)
+      <Remainder loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(151,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ ksize tmp1 tmp2 dz1 dz2 dz3 dz4 dz5 k tz2 tz1 dt i j } lastprivate={ } firstlastprivate={ } reduction={ }
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(151,7)
+      <Remainder loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(343,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between lhs[k][0] (349:9) and rhs[k][j][i] (361:9)
+         remark #17106: parallel dependence: assumed FLOW dependence between rhs[k][j][i] (361:9) and lhs[k][0] (349:9)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/z_solve.c(349,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed FLOW dependence between bvec[_2] (43:3) and *avec (43:3)
+            remark #17106: parallel dependence: assumed ANTI dependence between *avec (43:3) and bvec[_2] (43:3)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/z_solve.c(371,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between bvec[_2] (43:3) and *avec (43:3)
+         remark #17106: parallel dependence: assumed ANTI dependence between *avec (43:3) and bvec[_2] (43:3)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(395,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between rhs[k][j][i][m] (398:13) and rhs[k+1][j][i][n] (398:13)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(396,9)
+            remark #17109: LOOP WAS AUTO-PARALLELIZED
+            remark #17101: parallel loop shared={ } private={ } firstprivate={ ksize n m k i j } lastprivate={ } firstlastprivate={ } reduction={ }
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(397,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(397,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(397,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(397,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(397,11)
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(71,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(71,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(151,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(151,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(396,9)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/z_solve.c(397,11)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between rhs[k][j][i][m] (398:13) and rhs[k][j][i][m] (398:13)
+      remark #17106: parallel dependence: assumed ANTI dependence between rhs[k][j][i][m] (398:13) and rhs[k][j][i][m] (398:13)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between rhs[k][j][i][m] (398:13) and rhs[k][j][i][m] (398:13)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between rhs[k][j][i][m] (398:13) and rhs[k][j][i][m] (398:13)
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: y_solve()
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(69,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between rho_i[k][j][i] (72:9) and lhs (149:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between lhs (149:7) and rho_i[k][j][i] (72:9)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(70,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between rho_i[k][j][i] (72:9) and lhs (149:7)
+      remark #17106: parallel dependence: assumed FLOW dependence between lhs (149:7) and rho_i[k][j][i] (72:9)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(71,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ jsize c2 c1 c3c4 con43 c1345 j i k } lastprivate={ } firstlastprivate={ tmp1 tmp2 tmp3 } reduction={ }
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(71,7)
+      <Remainder loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(150,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ jsize tmp1 tmp2 dy1 dy2 dy3 dy4 dy5 j ty2 ty1 dt i k } lastprivate={ } firstlastprivate={ } reduction={ }
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(150,7)
+      <Remainder loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(338,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between lhs[j][0] (344:9) and rhs[k][j][i] (355:9)
+         remark #17106: parallel dependence: assumed FLOW dependence between rhs[k][j][i] (355:9) and lhs[j][0] (344:9)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/y_solve.c(344,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed FLOW dependence between bvec[_2] (43:3) and *avec (43:3)
+            remark #17106: parallel dependence: assumed ANTI dependence between *avec (43:3) and bvec[_2] (43:3)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/y_solve.c(361,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between bvec[_2] (43:3) and *avec (43:3)
+         remark #17106: parallel dependence: assumed ANTI dependence between *avec (43:3) and bvec[_2] (43:3)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(381,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between rhs[k][j][i][m] (384:13) and rhs[k][j+1][i][n] (384:13)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(382,9)
+            remark #17109: LOOP WAS AUTO-PARALLELIZED
+            remark #17101: parallel loop shared={ } private={ } firstprivate={ jsize n m j i k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(383,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(383,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(383,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(383,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(383,11)
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(71,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(71,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(150,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(150,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(382,9)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/y_solve.c(383,11)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between rhs[k][j][i][m] (384:13) and rhs[k][j][i][m] (384:13)
+      remark #17106: parallel dependence: assumed ANTI dependence between rhs[k][j][i][m] (384:13) and rhs[k][j][i][m] (384:13)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between rhs[k][j][i][m] (384:13) and rhs[k][j][i][m] (384:13)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between rhs[k][j][i][m] (384:13) and rhs[k][j][i][m] (384:13)
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: x_solve()
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(70,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between rho_i[k][j][i] (73:9) and lhs (151:7)
+   remark #17106: parallel dependence: assumed FLOW dependence between lhs (151:7) and rho_i[k][j][i] (73:9)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(71,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between rho_i[k][j][i] (73:9) and lhs (151:7)
+      remark #17106: parallel dependence: assumed FLOW dependence between lhs (151:7) and rho_i[k][j][i] (73:9)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(72,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ isize c2 c1 c3c4 con43 c1345 i j k } lastprivate={ } firstlastprivate={ tmp1 tmp2 tmp3 } reduction={ }
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(72,7)
+      <Remainder loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(152,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ isize tmp1 tmp2 dx1 dx2 dx3 dx4 dx5 i tx2 tx1 dt j k } lastprivate={ } firstlastprivate={ } reduction={ }
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(152,7)
+      <Remainder loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(344,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between lhs[i][0] (348:9) and rhs[k][j][i] (360:9)
+         remark #17106: parallel dependence: assumed FLOW dependence between rhs[k][j][i] (360:9) and lhs[i][0] (348:9)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/x_solve.c(348,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed FLOW dependence between bvec[_2] (43:3) and *avec (43:3)
+            remark #17106: parallel dependence: assumed ANTI dependence between *avec (43:3) and bvec[_2] (43:3)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/x_solve.c(366,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between bvec[_2] (43:3) and *avec (43:3)
+         remark #17106: parallel dependence: assumed ANTI dependence between *avec (43:3) and bvec[_2] (43:3)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(384,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed FLOW dependence between rhs[k][j][i][m] (387:13) and rhs[k][j][i+1][n] (387:13)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(385,9)
+            remark #17109: LOOP WAS AUTO-PARALLELIZED
+            remark #17101: parallel loop shared={ } private={ } firstprivate={ isize n m i j k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(386,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(386,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(386,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(386,11)
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(386,11)
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(72,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(72,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(152,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(152,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(385,9)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/x_solve.c(386,11)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between rhs[k][j][i][m] (387:13) and rhs[k][j][i][m] (387:13)
+      remark #17106: parallel dependence: assumed ANTI dependence between rhs[k][j][i][m] (387:13) and rhs[k][j][i][m] (387:13)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between rhs[k][j][i][m] (387:13) and rhs[k][j][i][m] (387:13)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between rhs[k][j][i][m] (387:13) and rhs[k][j][i][m] (387:13)
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: adi()
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(45,3) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i m k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(46,5) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(47,7) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(45,3) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(46,5) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(47,7) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/adi.c(46,3)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: exact_rhs()
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(47,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i m k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(48,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(49,7)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(50,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(50,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(60,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between ue[i][m] (70:11) and ue[i][m] (146:9)
+   remark #17106: parallel dependence: assumed ANTI dependence between ue[i][m] (146:9) and ue[i][m] (70:11)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(62,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between ue[i][m] (70:11) and ue[i][m] (146:9)
+      remark #17106: parallel dependence: assumed ANTI dependence between ue[i][m] (146:9) and ue[i][m] (70:11)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(65,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m m m xi dtpp dnxm1 zeta eta i j k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(68,9)
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(69,9)
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(75,9)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(85,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ dx1tx1 tx2 dx2tx1 xxcon1 c2 dx3tx1 xxcon2 dx4tx1 dx5tx1 xxcon5 xxcon4 xxcon3 c1 i j k } lastprivate={ } firstlastprivate={ } reduction={ }
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(122,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(85,7)
+      <Remainder loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(132,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m dssp i j k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(133,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(133,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(133,9)
+         <Alternate Alignment Vectorized Loop>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(133,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(140,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(155,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between ue[j][m] (165:11) and ue[j][m] (241:9)
+   remark #17106: parallel dependence: assumed ANTI dependence between ue[j][m] (241:9) and ue[j][m] (165:11)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(157,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between ue[j][m] (165:11) and ue[j][m] (241:9)
+      remark #17106: parallel dependence: assumed ANTI dependence between ue[j][m] (241:9) and ue[j][m] (165:11)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(160,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m m m eta dtpp dnym1 zeta xi j i k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(163,9)
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(164,9)
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(170,9)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(180,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ dy1ty1 ty2 dy2ty1 yycon2 dy3ty1 yycon1 c2 dy4ty1 dy5ty1 yycon5 yycon4 yycon3 c1 j i k } lastprivate={ } firstlastprivate={ } reduction={ }
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(217,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(180,7)
+      <Remainder loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(227,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m dssp j i k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(228,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(228,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(228,9)
+         <Alternate Alignment Vectorized Loop>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(228,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(235,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(250,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between ue[k][m] (260:11) and ue[k][m] (336:9)
+   remark #17106: parallel dependence: assumed ANTI dependence between ue[k][m] (336:9) and ue[k][m] (260:11)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(252,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between ue[k][m] (260:11) and ue[k][m] (336:9)
+      remark #17106: parallel dependence: assumed ANTI dependence between ue[k][m] (336:9) and ue[k][m] (260:11)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(255,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m m m zeta dtpp dnzm1 eta xi k i j } lastprivate={ } firstlastprivate={ } reduction={ }
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3) inlined into /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(258,9)
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(259,9)
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(265,9)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(275,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ dz1tz1 tz2 dz2tz1 zzcon2 dz3tz1 dz4tz1 zzcon1 c2 dz5tz1 zzcon5 zzcon4 zzcon3 c1 k i j } lastprivate={ } firstlastprivate={ } reduction={ }
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(312,7)
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(275,7)
+      <Remainder loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(322,7)
+         remark #17109: LOOP WAS AUTO-PARALLELIZED
+         remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ m dssp k i j } lastprivate={ } firstlastprivate={ } reduction={ }
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(323,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(323,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(323,9)
+         <Alternate Alignment Vectorized Loop>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(323,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(330,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(346,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i m k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(347,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(348,7)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(349,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(349,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(349,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(47,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(48,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(49,7)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(50,9)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(50,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(65,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(85,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(85,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(132,7)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(133,9)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(133,9)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(133,9)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(133,9)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(160,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(180,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(180,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(227,7)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(228,9)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(228,9)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(228,9)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(228,9)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(255,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(275,7)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(275,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(322,7)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(323,9)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(323,9)
+      remark #17107: loop was not parallelized: inner loop
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(323,9)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(323,9)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(346,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(347,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(348,7)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(349,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(349,9)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_rhs.c(349,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: set_constants()
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/set_constants.c(38,3)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/set_constants.c(52,3)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/set_constants.c(66,3)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/set_constants.c(80,3)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/set_constants.c(94,3)
+   remark #17108: loop was not parallelized: insufficient computational work
+LOOP END
+===========================================================================
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(131,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(133,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(161,8)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(161,8)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(175,8)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(175,8)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(180,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(45,3) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i m k step } lastprivate={ } firstlastprivate={ } reduction={ }
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(46,5) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(47,7) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+            remark #25460: No loop optimizations reported
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+            <Peeled loop for vectorization>
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+               remark #25460: No loop optimizations reported
+            LOOP END
+
+            LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+            <Remainder loop for vectorization>
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(212,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(212,5)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ trecs } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(218,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(218,5)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(161,8)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(161,8)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(175,8)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(175,8)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(45,3) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(46,5) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(47,7) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9) inlined into /bulk/workbench/repos/nauseous/BT/src/bt.c(185,5)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(212,5)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/bt.c(212,5)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: add()
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(45,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ .2 } private={ } firstprivate={ j i m k } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(46,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(47,7)
+         remark #25460: No loop optimizations reported
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9)
+            remark #25460: No loop optimizations reported
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(45,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(46,5)
+      remark #17107: loop was not parallelized: inner loop
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(47,7)
+         remark #17107: loop was not parallelized: inner loop
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9)
+            remark #17107: loop was not parallelized: inner loop
+         LOOP END
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/add.c(48,9)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: exact_solution(double, double, double, double *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/exact_solution.c(43,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between dtemp[m] (44:5) and ce[m][0] (44:5)
+   remark #17106: parallel dependence: assumed ANTI dependence between ce[m][0] (44:5) and dtemp[m] (44:5)
+LOOP END
+===========================================================================
+
+Begin optimization report for: rhs_norm(double *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(80,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ rms m } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(80,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(84,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between rhs[k][j][i][m] (88:11) and rms[m] (89:11)
+   remark #17106: parallel dependence: assumed FLOW dependence between rms[m] (89:11) and rhs[k][j][i][m] (88:11)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(85,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between rhs[k][j][i][m] (88:11) and rms[m] (89:11)
+      remark #17106: parallel dependence: assumed FLOW dependence between rms[m] (89:11) and rhs[k][j][i][m] (88:11)
+
+      LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(86,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #17106: parallel dependence: assumed ANTI dependence between rhs[k][j][i][m] (88:11) and rms[m] (89:11)
+         remark #17106: parallel dependence: assumed FLOW dependence between rms[m] (89:11) and rhs[k][j][i][m] (88:11)
+
+         LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(87,9)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #17106: parallel dependence: assumed ANTI dependence between rhs[k][j][i][m] (88:11) and rms[m] (89:11)
+            remark #17106: parallel dependence: assumed FLOW dependence between rms[m] (89:11) and rhs[k][j][i][m] (88:11)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3)
+<Distributed chunk1>
+   remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ d m rms } lastprivate={ } firstlastprivate={ } reduction={ }
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(96,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(96,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(96,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(96,5)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(96,5)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3)
+<Peeled loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3)
+<Distributed chunk2>
+   remark #17100: DISTRIBUTED LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ m rms } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(80,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(80,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3)
+<Distributed chunk1>
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(96,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between rms[m] (97:7) and rms[m] (97:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between rms[m] (97:7) and rms[m] (97:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between rms[m] (97:7) and rms[m] (97:7)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between rms[m] (97:7) and rms[m] (97:7)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3)
+<Peeled loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3)
+<Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/error.c(95,3)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+===========================================================================
+
+Begin optimization report for: matvec_sub(double (*)[5], double *, double *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/BT/src/solve_subs.c(43,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between bvec[_2] (43:3) and *avec (43:3)
+   remark #17106: parallel dependence: assumed ANTI dependence between *avec (43:3) and bvec[_2] (43:3)
+LOOP END
+===========================================================================
+
+Begin optimization report for: vranlc(int, double *, double, double *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3)
+<Multiversioned v1>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between *x (136:6) and *x (129:5)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *x (136:6) and *x (136:6)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *x (136:6) and *x (136:6)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3)
+<Multiversioned v2>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between *x (129:5) and y[i] (137:5)
+   remark #17106: parallel dependence: assumed FLOW dependence between y[i] (137:5) and *x (129:5)
+LOOP END
+===========================================================================

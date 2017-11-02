@@ -1,0 +1,137 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.0.128 Build 20170811
+
+Compiler options: -O2 -parallel -ipo -xcorei7 -axcorei7 -par-threshold0 -qopt-report=5 -qopt-report-phase=par -qopt-report-file=report.txt -g -o ep -rdynamic -lm
+
+Begin optimization report for: main()
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(127,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(146,8)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between t1 (48:3) and t1 (64:4)
+   remark #17106: parallel dependence: assumed FLOW dependence between t1 (64:4) and t1 (48:3)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(156,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(168,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:gettimeofday(struct timeval *__restrict__, __timezone_ptr_t (11:3) and call:timer_stop(int) (212:25)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between call:timer_stop(int) (212:25) and call:gettimeofday(struct timeval *__restrict__, __timezone_ptr_t (11:3)
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(175,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between kk (176:7) and kk (180:7)
+      remark #17106: parallel dependence: assumed FLOW dependence between kk (180:7) and kk (176:7)
+      remark #17106: parallel dependence: assumed FLOW dependence between kk (180:7) and kk (176:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between kk (176:7) and kk (180:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between kk (176:7) and kk (180:7)
+      remark #17106: parallel dependence: assumed FLOW dependence between kk (180:7) and kk (176:7)
+      remark #17106: parallel dependence: assumed FLOW dependence between kk (180:7) and kk (176:7)
+      remark #17106: parallel dependence: assumed ANTI dependence between kk (176:7) and kk (180:7)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3) inlined into /bulk/workbench/repos/nauseous/EP/src/ep.c(187,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between t1 (129:5) and t1 (136:6)
+      remark #17106: parallel dependence: assumed FLOW dependence between t1 (136:6) and t1 (129:5)
+      remark #17106: parallel dependence: assumed FLOW dependence between t1 (136:6) and t1 (129:5)
+      remark #17106: parallel dependence: assumed ANTI dependence between t1 (129:5) and t1 (136:6)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(197,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between q[:] (206:9) and q[:] (206:9)
+      remark #17106: parallel dependence: assumed ANTI dependence between q[:] (206:9) and q[:] (206:9)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between q[:] (206:9) and q[:] (206:9)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between q[:] (206:9) and q[:] (206:9)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3) inlined into /bulk/workbench/repos/nauseous/EP/src/ep.c(187,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed ANTI dependence between t1 (129:5) and t1 (136:6)
+      remark #17106: parallel dependence: assumed FLOW dependence between t1 (136:6) and t1 (129:5)
+      remark #17106: parallel dependence: assumed FLOW dependence between t1 (136:6) and t1 (129:5)
+      remark #17106: parallel dependence: assumed ANTI dependence between t1 (129:5) and t1 (136:6)
+   LOOP END
+
+   LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(197,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #17106: parallel dependence: assumed FLOW dependence between q[:] (206:9) and q[:] (206:9)
+      remark #17106: parallel dependence: assumed ANTI dependence between q[:] (206:9) and q[:] (206:9)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between q[:] (206:9) and q[:] (206:9)
+      remark #17106: parallel dependence: assumed OUTPUT dependence between q[:] (206:9) and q[:] (206:9)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(215,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #17101: parallel loop shared={ } private={ } firstprivate={ i } lastprivate={ } firstlastprivate={ } reduction={ gc }
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(263,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(127,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(127,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(127,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(156,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(156,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(215,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/EP/src/ep.c(215,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: vranlc(int, double *, double, double *)
+
+    Report from: Auto-parallelization optimizations [par]
+
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3)
+<Multiversioned v1>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed FLOW dependence between *x (136:6) and *x (129:5)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *x (136:6) and *x (136:6)
+   remark #17106: parallel dependence: assumed OUTPUT dependence between *x (136:6) and *x (136:6)
+LOOP END
+
+LOOP BEGIN at /bulk/workbench/repos/nauseous/common/randdp.c(122,3)
+<Multiversioned v2>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #17106: parallel dependence: assumed ANTI dependence between *x (129:5) and y[i] (137:5)
+   remark #17106: parallel dependence: assumed FLOW dependence between y[i] (137:5) and *x (129:5)
+LOOP END
+===========================================================================
