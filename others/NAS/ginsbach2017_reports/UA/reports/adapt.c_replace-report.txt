@@ -1,0 +1,1920 @@
+BEGIN FUNCTION TRANSFORMATION adaptation
+BEGIN LOOP
+BEGIN histo
+{"begin":"%149 = phi i32 [ %136, %145 ], [ %240, %239 ]",
+ "body":{"begin":"%153 = getelementptr i32, i32* getelementptr inbounds ([6 x i32], [6 x i32]* @jjface, i64 0, i64 0), i64 %150",
+         "end":"br label %148",
+         "precursor":"br i1 %151, label %242, label %152",
+         "successor":"%149 = phi i32 [ %136, %145 ], [ %240, %239 ]"},
+ "comparison":"%151 = icmp eq i64 %150, 6",
+ "end":"br i1 %151, label %242, label %152",
+ "increment":"%241 = add nuw nsw i64 %150, 1",
+ "indexkernel":{"constants":
+                [{"use":"%164 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %163",
+                  "value":"i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0)"},
+                 {"use":"%191 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %190",
+                  "value":"i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0)"},
+                 {"use":"%235 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %234",
+                  "value":"i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0)"},
+                 {"use":"%153 = getelementptr i32, i32* getelementptr inbounds ([6 x i32], [6 x i32]* @jjface, i64 0, i64 0), i64 %150",
+                  "value":"i32* getelementptr inbounds ([6 x i32], [6 x i32]* @jjface, i64 0, i64 0)"},
+                 {"use":"%158 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %157",
+                  "value":"i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+                 {"use":"%188 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %187",
+                  "value":"i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+                 {"use":"%232 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %231",
+                  "value":"i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+                 {"use":"%160 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %155",
+                  "value":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)"},
+                 {"use":"%182 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %181",
+                  "value":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)"},
+                 {"use":"%226 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %225",
+                  "value":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)"},
+                 {"use":"%196 = getelementptr i32, i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e1v1, i64 0, i64 0, i64 0), i64 %195",
+                  "value":"i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e1v1, i64 0, i64 0, i64 0)"},
+                 {"use":"%198 = getelementptr i32, i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e2v1, i64 0, i64 0, i64 0), i64 %195",
+                  "value":"i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e2v1, i64 0, i64 0, i64 0)"},
+                 {"use":"%203 = getelementptr i32, i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e1v2, i64 0, i64 0, i64 0), i64 %195",
+                  "value":"i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e1v2, i64 0, i64 0, i64 0)"},
+                 {"use":"%205 = getelementptr i32, i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e2v2, i64 0, i64 0, i64 0), i64 %195",
+                  "value":"i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e2v2, i64 0, i64 0, i64 0)"},
+                 {"use":"store i32 0, i32* %142, align 4, !tbaa !7",
+                  "value":"%142 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %137"},
+                 {"use":"store i32 0, i32* %142, align 4, !tbaa !7",
+                  "value":"%142 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %137"},
+                 {"use":"%200 = call i32 @ifsame(i32 %146, i32 %197, i32 %189, i32 %199) #4",
+                  "value":"%146 = trunc i64 %137 to i32"},
+                 {"use":"%207 = call i32 @ifsame(i32 %146, i32 %204, i32 %189, i32 %206) #4",
+                  "value":"%146 = trunc i64 %137 to i32"},
+                 {"use":"%155 = add i64 %147, %150",
+                  "value":"%147 = mul i64 %137, 6"}],
+                "origin":
+                ["br i1 %151, label %242, label %152"],
+                "output":"%142 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %137",
+                "restrictions":
+                [{"use":"%169 = phi i32 [ %149, %162 ], [ 1, %167 ]",
+                  "value":"%149 = phi i32 [ %136, %145 ], [ %240, %239 ]"},
+                 {"use":"%217 = phi i32 [ %149, %212 ], [ %237, %236 ]",
+                  "value":"%149 = phi i32 [ %136, %145 ], [ %240, %239 ]"},
+                 {"use":"%240 = phi i32 [ %149, %152 ], [ %169, %173 ], [ %217, %216 ]",
+                  "value":"%149 = phi i32 [ %136, %145 ], [ %240, %239 ]"},
+                 {"use":"%153 = getelementptr i32, i32* getelementptr inbounds ([6 x i32], [6 x i32]* @jjface, i64 0, i64 0), i64 %150",
+                  "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+                 {"use":"%155 = add i64 %147, %150",
+                  "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+                 {"use":"%172 = mul i64 %150, 6",
+                  "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+                 {"use":"%177 = icmp eq i64 %174, %150",
+                  "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+                 {"use":"%221 = icmp eq i64 %218, %150",
+                  "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"}]},
+ "iter_begin":"i64 0",
+ "iter_end":"i64 6",
+ "iter_step":"i64 1",
+ "iterator":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]",
+ "kernel":{"constants":
+           [{"use":"%164 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %163",
+             "value":"i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0)"},
+            {"use":"%191 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %190",
+             "value":"i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0)"},
+            {"use":"%235 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %234",
+             "value":"i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0)"},
+            {"use":"%153 = getelementptr i32, i32* getelementptr inbounds ([6 x i32], [6 x i32]* @jjface, i64 0, i64 0), i64 %150",
+             "value":"i32* getelementptr inbounds ([6 x i32], [6 x i32]* @jjface, i64 0, i64 0)"},
+            {"use":"%158 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %157",
+             "value":"i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%188 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %187",
+             "value":"i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%232 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %231",
+             "value":"i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%160 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %155",
+             "value":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)"},
+            {"use":"%182 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %181",
+             "value":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)"},
+            {"use":"%226 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %225",
+             "value":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)"},
+            {"use":"%196 = getelementptr i32, i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e1v1, i64 0, i64 0, i64 0), i64 %195",
+             "value":"i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e1v1, i64 0, i64 0, i64 0)"},
+            {"use":"%198 = getelementptr i32, i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e2v1, i64 0, i64 0, i64 0), i64 %195",
+             "value":"i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e2v1, i64 0, i64 0, i64 0)"},
+            {"use":"%203 = getelementptr i32, i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e1v2, i64 0, i64 0, i64 0), i64 %195",
+             "value":"i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e1v2, i64 0, i64 0, i64 0)"},
+            {"use":"%205 = getelementptr i32, i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e2v2, i64 0, i64 0, i64 0), i64 %195",
+             "value":"i32* getelementptr inbounds ([6 x [6 x i32]], [6 x [6 x i32]]* @e2v2, i64 0, i64 0, i64 0)"},
+            {"use":"store i32 0, i32* %142, align 4, !tbaa !7",
+             "value":"%142 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %137"},
+            {"use":"store i32 0, i32* %142, align 4, !tbaa !7",
+             "value":"%142 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %137"},
+            {"use":"%200 = call i32 @ifsame(i32 %146, i32 %197, i32 %189, i32 %199) #4",
+             "value":"%146 = trunc i64 %137 to i32"},
+            {"use":"%207 = call i32 @ifsame(i32 %146, i32 %204, i32 %189, i32 %206) #4",
+             "value":"%146 = trunc i64 %137 to i32"},
+            {"use":"%155 = add i64 %147, %150",
+             "value":"%147 = mul i64 %137, 6"}],
+           "input":
+           ["%154 = load i32, i32* %153, align 4, !tbaa !7",
+            "%161 = load i32, i32* %160, align 4, !tbaa !7",
+            "%161 = load i32, i32* %160, align 4, !tbaa !7",
+            "%143 = load i32, i32* %142, align 4, !tbaa !7"],
+           "origin":
+           ["br i1 %151, label %242, label %152"],
+           "output":"i32 0",
+           "restrictions":
+           [{"use":"%169 = phi i32 [ %149, %162 ], [ 1, %167 ]",
+             "value":"%149 = phi i32 [ %136, %145 ], [ %240, %239 ]"},
+            {"use":"%217 = phi i32 [ %149, %212 ], [ %237, %236 ]",
+             "value":"%149 = phi i32 [ %136, %145 ], [ %240, %239 ]"},
+            {"use":"%240 = phi i32 [ %149, %152 ], [ %169, %173 ], [ %217, %216 ]",
+             "value":"%149 = phi i32 [ %136, %145 ], [ %240, %239 ]"},
+            {"use":"%153 = getelementptr i32, i32* getelementptr inbounds ([6 x i32], [6 x i32]* @jjface, i64 0, i64 0), i64 %150",
+             "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+            {"use":"%155 = add i64 %147, %150",
+             "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+            {"use":"%172 = mul i64 %150, 6",
+             "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+            {"use":"%177 = icmp eq i64 %174, %150",
+             "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+            {"use":"%221 = icmp eq i64 %218, %150",
+             "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"}]},
+ "old_value":"%143 = load i32, i32* %142, align 4, !tbaa !7",
+ "precursor":"br label %148",
+ "read":
+ [{"address":"%153 = getelementptr i32, i32* getelementptr inbounds ([6 x i32], [6 x i32]* @jjface, i64 0, i64 0), i64 %150",
+   "base_pointer":"i32* getelementptr inbounds ([6 x i32], [6 x i32]* @jjface, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]",
+     "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"}],
+   "input_index":
+   ["%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"],
+   "offset_add":{"input":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]",
+                 "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+   "output_index":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]",
+   "stride_mul":
+   [{"input":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]",
+     "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"}]},
+  {"address":"%160 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %155",
+   "base_pointer":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]",
+     "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"}],
+   "input_index":
+   ["%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"],
+   "offset_add":{"addend":"%147 = mul i64 %137, 6",
+                 "input":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]",
+                 "value":"%155 = add i64 %147, %150"},
+   "output_index":"%155 = add i64 %147, %150",
+   "stride_mul":
+   [{"input":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]",
+     "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"}]},
+  {"address":"%160 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %155",
+   "base_index":"%147 = mul i64 %137, 6",
+   "base_pointer":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%147 = mul i64 %137, 6",
+     "input":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]",
+     "value":"%155 = add i64 %147, %150"}],
+   "input_index":
+   ["%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"],
+   "offset_add":{"input":"%155 = add i64 %147, %150",
+                 "value":"%155 = add i64 %147, %150"},
+   "output_index":"%155 = add i64 %147, %150",
+   "stride_mul":
+   [{"input":"%155 = add i64 %147, %150",
+     "value":"%155 = add i64 %147, %150"}]}],
+ "read_value":
+ ["%154 = load i32, i32* %153, align 4, !tbaa !7",
+  "%161 = load i32, i32* %160, align 4, !tbaa !7",
+  "%161 = load i32, i32* %160, align 4, !tbaa !7"],
+ "store_instr":"store i32 0, i32* %142, align 4, !tbaa !7",
+ "store_instr_after":"%163 = sext i32 %159 to i64",
+ "successor":"%243 = phi i32 [ %136, %141 ], [ %149, %148 ]"}
+END histo
+BEGIN OPERATOR
+void op(struct { }* in0, int in1, int in2)
+{
+  long t0;
+  int t1;
+  long t2;
+  int t3;
+  int t4 = /* missing closure */[(/* missing closure */+/* missing closure */)*2*2];
+  long t5 = (long)t4;
+  if(!(/* missing closure */)) {
+  }
+  t0 = 0;
+label4:
+  if(/* missing closure */) goto label18;
+  if(/* missing closure */||/* missing closure */) goto label11;
+  long t6 = t5*6+t0;
+  if(!(/* missing closure */)) goto label11;
+  int t7 = /* missing closure */[t6*2*2];
+  if(/* missing closure */) goto label11;
+  long t8 = /* missing closure */*6+t0;
+  if(/* missing closure */){
+  if(/* missing closure */) goto label11;
+  }
+label11:
+  t0 += 1;
+  goto label4;
+  t1 = /* missing closure */;
+  t2 = 0;
+label13:
+  if(/* missing closure */) goto label18;
+  t3 = t1;
+  if(!(/* missing closure */||/* missing closure */)) {
+  t3 = t1;
+  if(!(/* missing closure */)) goto label17;
+  t3 = 1;
+  }
+label17:
+  t1 = t3;
+  t2 += 1;
+  goto label13;
+label18:
+}
+END LOOP
+BEGIN LOOP
+BEGIN histo
+{"begin":"%217 = phi i32 [ %149, %212 ], [ %237, %236 ]",
+ "body":{"begin":"%221 = icmp eq i64 %218, %150",
+         "end":"br label %216",
+         "precursor":"br i1 %219, label %239, label %220",
+         "successor":"%217 = phi i32 [ %149, %212 ], [ %237, %236 ]"},
+ "comparison":"%219 = icmp eq i64 %218, 6",
+ "end":"br i1 %219, label %239, label %220",
+ "increment":"%238 = add nuw nsw i64 %218, 1",
+ "indexkernel":{"constants":
+                [{"use":"%235 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %234",
+                  "value":"i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0)"},
+                 {"use":"%232 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %231",
+                  "value":"i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+                 {"use":"%226 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %225",
+                  "value":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)"},
+                 {"use":"store i32 0, i32* %142, align 4, !tbaa !7",
+                  "value":"%142 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %137"},
+                 {"use":"%221 = icmp eq i64 %218, %150",
+                  "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+                 {"use":"%222 = icmp eq i64 %218, %214",
+                  "value":"%214 = zext i32 %154 to i64"},
+                 {"use":"%225 = add i64 %215, %218",
+                  "value":"%215 = mul i64 %213, 6"}],
+                "origin":
+                ["br i1 %219, label %239, label %220"],
+                "output":"%142 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %137",
+                "restrictions":
+                [{"use":"%237 = phi i32 [ %217, %220 ], [ 1, %229 ], [ %217, %224 ]",
+                  "value":"%217 = phi i32 [ %149, %212 ], [ %237, %236 ]"},
+                 {"use":"%221 = icmp eq i64 %218, %150",
+                  "value":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"},
+                 {"use":"%222 = icmp eq i64 %218, %214",
+                  "value":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"},
+                 {"use":"%225 = add i64 %215, %218",
+                  "value":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"},
+                 {"use":"%238 = add nuw nsw i64 %218, 1",
+                  "value":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"}]},
+ "iter_begin":"i64 0",
+ "iter_end":"i64 6",
+ "iter_step":"i64 1",
+ "iterator":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]",
+ "kernel":{"constants":
+           [{"use":"%235 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %234",
+             "value":"i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0)"},
+            {"use":"%232 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %231",
+             "value":"i32* getelementptr inbounds ([2400 x [6 x [2 x [2 x i32]]]], [2400 x [6 x [2 x [2 x i32]]]]* @sje, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%226 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %225",
+             "value":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)"},
+            {"use":"store i32 0, i32* %142, align 4, !tbaa !7",
+             "value":"%142 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %137"},
+            {"use":"%221 = icmp eq i64 %218, %150",
+             "value":"%150 = phi i64 [ 0, %145 ], [ %241, %239 ]"},
+            {"use":"%222 = icmp eq i64 %218, %214",
+             "value":"%214 = zext i32 %154 to i64"},
+            {"use":"%225 = add i64 %215, %218",
+             "value":"%215 = mul i64 %213, 6"}],
+           "input":
+           ["%227 = load i32, i32* %226, align 4, !tbaa !7",
+            "%227 = load i32, i32* %226, align 4, !tbaa !7",
+            "%143 = load i32, i32* %142, align 4, !tbaa !7"],
+           "origin":
+           ["br i1 %219, label %239, label %220"],
+           "output":"i32 0",
+           "restrictions":
+           [{"use":"%237 = phi i32 [ %217, %220 ], [ 1, %229 ], [ %217, %224 ]",
+             "value":"%217 = phi i32 [ %149, %212 ], [ %237, %236 ]"},
+            {"use":"%221 = icmp eq i64 %218, %150",
+             "value":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"},
+            {"use":"%222 = icmp eq i64 %218, %214",
+             "value":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"},
+            {"use":"%225 = add i64 %215, %218",
+             "value":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"},
+            {"use":"%238 = add nuw nsw i64 %218, 1",
+             "value":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"}]},
+ "old_value":"%143 = load i32, i32* %142, align 4, !tbaa !7",
+ "precursor":"br label %216",
+ "read":
+ [{"address":"%226 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %225",
+   "base_pointer":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]",
+     "value":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"}],
+   "input_index":
+   ["%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"],
+   "offset_add":{"addend":"%215 = mul i64 %213, 6",
+                 "input":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]",
+                 "value":"%225 = add i64 %215, %218"},
+   "output_index":"%225 = add i64 %215, %218",
+   "stride_mul":
+   [{"input":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]",
+     "value":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"}]},
+  {"address":"%226 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %225",
+   "base_index":"%215 = mul i64 %213, 6",
+   "base_pointer":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%215 = mul i64 %213, 6",
+     "input":"%218 = phi i64 [ 0, %212 ], [ %238, %236 ]",
+     "value":"%225 = add i64 %215, %218"}],
+   "input_index":
+   ["%218 = phi i64 [ 0, %212 ], [ %238, %236 ]"],
+   "offset_add":{"input":"%225 = add i64 %215, %218",
+                 "value":"%225 = add i64 %215, %218"},
+   "output_index":"%225 = add i64 %215, %218",
+   "stride_mul":
+   [{"input":"%225 = add i64 %215, %218",
+     "value":"%225 = add i64 %215, %218"}]}],
+ "read_value":
+ ["%227 = load i32, i32* %226, align 4, !tbaa !7",
+  "%227 = load i32, i32* %226, align 4, !tbaa !7"],
+ "store_instr":"store i32 0, i32* %142, align 4, !tbaa !7",
+ "store_instr_after":"br label %236",
+ "successor":"%240 = phi i32 [ %149, %152 ], [ %169, %173 ], [ %217, %216 ]"}
+END histo
+BEGIN OPERATOR
+void op(struct { }* in0, int in1)
+{
+  if(!(/* missing closure */||/* missing closure */)) {
+  if(!(/* missing closure */)) goto label3;
+  }
+label3:
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%65 = phi i32 [ 0, %54 ], [ %127, %126 ]",
+ "body":{"begin":"%69 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %66",
+         "end":"br label %64",
+         "precursor":"br i1 %67, label %68, label %129",
+         "successor":"%65 = phi i32 [ 0, %54 ], [ %127, %126 ]"},
+ "comparison":"%67 = icmp slt i64 %66, %60",
+ "end":"br i1 %67, label %68, label %129",
+ "increment":"%128 = add nuw nsw i64 %66, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"%60 = sext i32 %58 to i64",
+ "iter_step":"i64 1",
+ "iterator":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+ "kernel":{"constants":
+           [{"use":"%69 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %66",
+             "value":"i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0)"},
+            {"use":"%71 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0), i64 %70",
+             "value":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0)"},
+            {"use":"%78 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0), i64 %77",
+             "value":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0)"},
+            {"use":"%121 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0), i64 %120",
+             "value":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0)"},
+            {"use":"%85 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @yc, i64 0, i64 0, i64 0), i64 %70",
+             "value":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @yc, i64 0, i64 0, i64 0)"},
+            {"use":"%92 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @yc, i64 0, i64 0, i64 0), i64 %91",
+             "value":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @yc, i64 0, i64 0, i64 0)"},
+            {"use":"%99 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @zc, i64 0, i64 0, i64 0), i64 %70",
+             "value":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @zc, i64 0, i64 0, i64 0)"},
+            {"use":"%106 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @zc, i64 0, i64 0, i64 0), i64 %105",
+             "value":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @zc, i64 0, i64 0, i64 0)"},
+            {"use":"%101 = fcmp olt double %55, %100",
+             "value":"%55 = phi double [ %27, %23 ], [ %1098, %1091 ]"},
+            {"use":"%103 = fsub double %100, %55",
+             "value":"%55 = phi double [ %27, %23 ], [ %1098, %1091 ]"},
+            {"use":"%108 = fcmp ogt double %55, %107",
+             "value":"%55 = phi double [ %27, %23 ], [ %1098, %1091 ]"},
+            {"use":"%110 = fsub double %55, %107",
+             "value":"%55 = phi double [ %27, %23 ], [ %1098, %1091 ]"},
+            {"use":"%87 = fcmp olt double %56, %86",
+             "value":"%56 = phi double [ %27, %23 ], [ %1097, %1091 ]"},
+            {"use":"%89 = fsub double %86, %56",
+             "value":"%56 = phi double [ %27, %23 ], [ %1097, %1091 ]"},
+            {"use":"%94 = fcmp ogt double %56, %93",
+             "value":"%56 = phi double [ %27, %23 ], [ %1097, %1091 ]"},
+            {"use":"%96 = fsub double %56, %93",
+             "value":"%56 = phi double [ %27, %23 ], [ %1097, %1091 ]"},
+            {"use":"%73 = fcmp olt double %57, %72",
+             "value":"%57 = phi double [ %26, %23 ], [ %1096, %1091 ]"},
+            {"use":"%75 = fsub double %72, %57",
+             "value":"%57 = phi double [ %26, %23 ], [ %1096, %1091 ]"},
+            {"use":"%80 = fcmp ogt double %57, %79",
+             "value":"%57 = phi double [ %26, %23 ], [ %1096, %1091 ]"},
+            {"use":"%82 = fsub double %57, %79",
+             "value":"%57 = phi double [ %26, %23 ], [ %1096, %1091 ]"},
+            {"use":"%118 = fcmp uge double %117, %62",
+             "value":"%62 = fmul double %61, %61"},
+            {"use":"%124 = fcmp ogt double %123, %63",
+             "value":"%63 = load double, double* @dlmin, align 8"}],
+           "input":
+           ["%72 = load double, double* %71, align 16, !tbaa !5",
+            "%79 = load double, double* %78, align 8, !tbaa !5",
+            "%86 = load double, double* %85, align 16, !tbaa !5",
+            "%93 = load double, double* %92, align 16, !tbaa !5",
+            "%100 = load double, double* %99, align 16, !tbaa !5",
+            "%107 = load double, double* %106, align 16, !tbaa !5",
+            "%122 = load double, double* %121, align 8, !tbaa !5",
+            "%65 = phi i32 [ 0, %54 ], [ %127, %126 ]"],
+           "origin":
+           ["br i1 %67, label %68, label %129"],
+           "output":"%127 = phi i32 [ %65, %111 ], [ 1, %125 ], [ %65, %119 ]",
+           "restrictions":
+           [{"use":"%127 = phi i32 [ %65, %111 ], [ 1, %125 ], [ %65, %119 ]",
+             "value":"%65 = phi i32 [ 0, %54 ], [ %127, %126 ]"},
+            {"use":"%69 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @ich, i64 0, i64 0), i64 %66",
+             "value":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"},
+            {"use":"%70 = mul i64 %66, 8",
+             "value":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"},
+            {"use":"%128 = add nuw nsw i64 %66, 1",
+             "value":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"}]},
+ "old_value":"%65 = phi i32 [ 0, %54 ], [ %127, %126 ]",
+ "precursor":"br label %64",
+ "read":
+ [{"address":"%71 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0), i64 %70",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "value":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"}],
+   "input_index":
+   ["%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"],
+   "offset_add":{"input":"%70 = mul i64 %66, 8",
+                 "value":"%70 = mul i64 %66, 8"},
+   "output_index":"%70 = mul i64 %66, 8",
+   "stride_mul":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "multiplier":"i64 8",
+     "value":"%70 = mul i64 %66, 8"}]},
+  {"address":"%78 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0), i64 %77",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "value":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"}],
+   "input_index":
+   ["%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"],
+   "offset_add":{"addend":"i64 1",
+                 "input":"%70 = mul i64 %66, 8",
+                 "value":"%77 = add i64 %70, 1"},
+   "output_index":"%77 = add i64 %70, 1",
+   "stride_mul":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "multiplier":"i64 8",
+     "value":"%70 = mul i64 %66, 8"}]},
+  {"address":"%85 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @yc, i64 0, i64 0, i64 0), i64 %70",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @yc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "value":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"}],
+   "input_index":
+   ["%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"],
+   "offset_add":{"input":"%70 = mul i64 %66, 8",
+                 "value":"%70 = mul i64 %66, 8"},
+   "output_index":"%70 = mul i64 %66, 8",
+   "stride_mul":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "multiplier":"i64 8",
+     "value":"%70 = mul i64 %66, 8"}]},
+  {"address":"%92 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @yc, i64 0, i64 0, i64 0), i64 %91",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @yc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "value":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"}],
+   "input_index":
+   ["%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"],
+   "offset_add":{"addend":"i64 2",
+                 "input":"%70 = mul i64 %66, 8",
+                 "value":"%91 = add i64 %70, 2"},
+   "output_index":"%91 = add i64 %70, 2",
+   "stride_mul":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "multiplier":"i64 8",
+     "value":"%70 = mul i64 %66, 8"}]},
+  {"address":"%99 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @zc, i64 0, i64 0, i64 0), i64 %70",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @zc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "value":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"}],
+   "input_index":
+   ["%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"],
+   "offset_add":{"input":"%70 = mul i64 %66, 8",
+                 "value":"%70 = mul i64 %66, 8"},
+   "output_index":"%70 = mul i64 %66, 8",
+   "stride_mul":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "multiplier":"i64 8",
+     "value":"%70 = mul i64 %66, 8"}]},
+  {"address":"%106 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @zc, i64 0, i64 0, i64 0), i64 %105",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @zc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "value":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"}],
+   "input_index":
+   ["%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"],
+   "offset_add":{"addend":"i64 4",
+                 "input":"%70 = mul i64 %66, 8",
+                 "value":"%105 = add i64 %70, 4"},
+   "output_index":"%105 = add i64 %70, 4",
+   "stride_mul":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "multiplier":"i64 8",
+     "value":"%70 = mul i64 %66, 8"}]},
+  {"address":"%121 = getelementptr double, double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0), i64 %120",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [8 x double]], [2400 x [8 x double]]* @xc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "value":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"}],
+   "input_index":
+   ["%66 = phi i64 [ 0, %54 ], [ %128, %126 ]"],
+   "offset_add":{"addend":"i64 1",
+                 "input":"%70 = mul i64 %66, 8",
+                 "value":"%120 = add i64 %70, 1"},
+   "output_index":"%120 = add i64 %70, 1",
+   "stride_mul":
+   [{"input":"%66 = phi i64 [ 0, %54 ], [ %128, %126 ]",
+     "multiplier":"i64 8",
+     "value":"%70 = mul i64 %66, 8"}]}],
+ "read_value":
+ ["%72 = load double, double* %71, align 16, !tbaa !5",
+  "%79 = load double, double* %78, align 8, !tbaa !5",
+  "%86 = load double, double* %85, align 16, !tbaa !5",
+  "%93 = load double, double* %92, align 16, !tbaa !5",
+  "%100 = load double, double* %99, align 16, !tbaa !5",
+  "%107 = load double, double* %106, align 16, !tbaa !5",
+  "%122 = load double, double* %121, align 8, !tbaa !5"],
+ "successor":"%130 = icmp eq i32 %65, 0"}
+END scalar
+BEGIN OPERATOR
+void op(struct { int _0; }* in0, double in1, double in2, double in3, double in4, double in5, double in6, double in7)
+{
+  double t0;
+  double t1;
+  double t2;
+  int t3;
+  int t4 = in0->_0;
+  if(/* missing closure */<in1){
+  t0 = in1-/* missing closure */;
+  goto label4;
+  }
+  t0 = 0;
+  if(/* missing closure */>in2){
+  t0 = /* missing closure */-in2;
+  }
+label4:
+  if(/* missing closure */<in3){
+  t1 = in3-/* missing closure */;
+  goto label8;
+  }
+  t1 = 0;
+  if(/* missing closure */>in4){
+  t1 = /* missing closure */-in4;
+  }
+label8:
+  if(/* missing closure */<in5){
+  t2 = in5-/* missing closure */;
+  goto label12;
+  }
+  t2 = 0;
+  if(/* missing closure */>in6){
+  t2 = /* missing closure */-in6;
+  }
+label12:
+  t3 = t4;
+  if(!(t0*t0+t1*t1+t2*t2>=/* missing closure */)) {
+  t3 = t4;
+  if(!(in7-in1>/* missing closure */)) goto label15;
+  t3 = 1;
+  }
+label15:
+  in0->_0 = t3;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]",
+ "body":{"begin":"%1194 = add i64 %1188, %1190",
+         "end":"br label %1189",
+         "precursor":"br i1 %1192, label %1200, label %1193",
+         "successor":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]"},
+ "comparison":"%1192 = icmp eq i64 %1190, 6",
+ "end":"br i1 %1192, label %1200, label %1193",
+ "increment":"%1199 = add nuw nsw i64 %1190, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 6",
+ "iter_step":"i64 1",
+ "iterator":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]",
+ "kernel":{"constants":
+           [{"use":"%1195 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %1194",
+             "value":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)"},
+            {"use":"%1194 = add i64 %1188, %1190",
+             "value":"%1188 = mul i64 %1130, 6"}],
+           "input":
+           ["%1196 = load i32, i32* %1195, align 4, !tbaa !7",
+            "%1196 = load i32, i32* %1195, align 4, !tbaa !7",
+            "%1191 = phi i32 [ %1198, %1193 ], [ 0, %1187 ]"],
+           "origin":
+           ["br i1 %1192, label %1200, label %1193"],
+           "output":"%1198 = select i1 %1197, i32 1, i32 %1191",
+           "restrictions":
+           [{"use":"%1194 = add i64 %1188, %1190",
+             "value":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]"},
+            {"use":"%1199 = add nuw nsw i64 %1190, 1",
+             "value":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]"},
+            {"use":"%1198 = select i1 %1197, i32 1, i32 %1191",
+             "value":"%1191 = phi i32 [ %1198, %1193 ], [ 0, %1187 ]"}]},
+ "old_value":"%1191 = phi i32 [ %1198, %1193 ], [ 0, %1187 ]",
+ "precursor":"br label %1189",
+ "read":
+ [{"address":"%1195 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %1194",
+   "base_pointer":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]",
+     "value":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]"}],
+   "input_index":
+   ["%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]"],
+   "offset_add":{"addend":"%1188 = mul i64 %1130, 6",
+                 "input":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]",
+                 "value":"%1194 = add i64 %1188, %1190"},
+   "output_index":"%1194 = add i64 %1188, %1190",
+   "stride_mul":
+   [{"input":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]",
+     "value":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]"}]},
+  {"address":"%1195 = getelementptr i32, i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0), i64 %1194",
+   "base_index":"%1188 = mul i64 %1130, 6",
+   "base_pointer":"i32* getelementptr inbounds ([2400 x [6 x i32]], [2400 x [6 x i32]]* @cbc, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%1188 = mul i64 %1130, 6",
+     "input":"%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]",
+     "value":"%1194 = add i64 %1188, %1190"}],
+   "input_index":
+   ["%1190 = phi i64 [ %1199, %1193 ], [ 0, %1187 ]"],
+   "offset_add":{"input":"%1194 = add i64 %1188, %1190",
+                 "value":"%1194 = add i64 %1188, %1190"},
+   "output_index":"%1194 = add i64 %1188, %1190",
+   "stride_mul":
+   [{"input":"%1194 = add i64 %1188, %1190",
+     "value":"%1194 = add i64 %1188, %1190"}]}],
+ "read_value":
+ ["%1196 = load i32, i32* %1195, align 4, !tbaa !7",
+  "%1196 = load i32, i32* %1195, align 4, !tbaa !7"],
+ "successor":"%1201 = icmp eq i32 %1191, 0"}
+END scalar
+BEGIN OPERATOR
+void op(struct { int _0; }* in0, int in1)
+{
+  in0->_0 = /* missing closure */?1:in0->_0;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]",
+ "body":{"begin":"%1426 = add nuw nsw i64 %1422, 1",
+         "end":"br label %1421",
+         "precursor":"br i1 %1424, label %1431, label %1425",
+         "successor":"%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]"},
+ "comparison":"%1424 = icmp eq i64 %1422, 7",
+ "end":"br i1 %1424, label %1431, label %1425",
+ "increment":"%1426 = add nuw nsw i64 %1422, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 7",
+ "iter_step":"i64 1",
+ "iterator":"%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]",
+ "kernel":{"constants":
+           [{"use":"%1430 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @skip, i64 0, i64 0), i64 %1429",
+             "value":"i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @skip, i64 0, i64 0)"},
+            {"use":"%1427 = getelementptr i32, i32* %1103, i64 %1426",
+             "value":"%1103 = getelementptr [8 x i32], [8 x i32]* %19, i64 0, i64 0"}],
+           "input":
+           ["%1428 = load i32, i32* %1427, align 4, !tbaa !7",
+            "%1428 = load i32, i32* %1427, align 4, !tbaa !7",
+            "%1423 = phi i32* [ %1430, %1425 ], [ %1219, %1412 ]"],
+           "origin":
+           ["br i1 %1424, label %1431, label %1425"],
+           "output":"%1430 = getelementptr i32, i32* getelementptr inbounds ([2400 x i32], [2400 x i32]* @skip, i64 0, i64 0), i64 %1429",
+           "restrictions":
+           [{"use":"%1426 = add nuw nsw i64 %1422, 1",
+             "value":"%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]"}]},
+ "old_value":"%1423 = phi i32* [ %1430, %1425 ], [ %1219, %1412 ]",
+ "precursor":"br i1 %1414, label %1421, label %1415",
+ "read":
+ [{"address":"%1427 = getelementptr i32, i32* %1103, i64 %1426",
+   "base_pointer":"%1103 = getelementptr [8 x i32], [8 x i32]* %19, i64 0, i64 0",
+   "index_add":
+   [{"input":"%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]",
+     "value":"%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]"}],
+   "input_index":
+   ["%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]"],
+   "offset_add":{"addend":"i64 1",
+                 "input":"%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]",
+                 "value":"%1426 = add nuw nsw i64 %1422, 1"},
+   "output_index":"%1426 = add nuw nsw i64 %1422, 1",
+   "stride_mul":
+   [{"input":"%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]",
+     "value":"%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]"}]},
+  {"address":"%1427 = getelementptr i32, i32* %1103, i64 %1426",
+   "base_index":"i64 1",
+   "base_pointer":"%1103 = getelementptr [8 x i32], [8 x i32]* %19, i64 0, i64 0",
+   "index_add":
+   [{"addend":"i64 1",
+     "input":"%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]",
+     "value":"%1426 = add nuw nsw i64 %1422, 1"}],
+   "input_index":
+   ["%1422 = phi i64 [ %1426, %1425 ], [ 0, %1412 ]"],
+   "offset_add":{"input":"%1426 = add nuw nsw i64 %1422, 1",
+                 "value":"%1426 = add nuw nsw i64 %1422, 1"},
+   "output_index":"%1426 = add nuw nsw i64 %1422, 1",
+   "stride_mul":
+   [{"input":"%1426 = add nuw nsw i64 %1422, 1",
+     "value":"%1426 = add nuw nsw i64 %1422, 1"}]}],
+ "read_value":
+ ["%1428 = load i32, i32* %1427, align 4, !tbaa !7",
+  "%1428 = load i32, i32* %1427, align 4, !tbaa !7"],
+ "successor":"%1432 = phi i32 [ %1214, %1284 ], [ %1214, %1299 ], [ %1214, %1409 ], [ %1214, %1226 ], [ %1214, %1217 ], [ 1, %1421 ]"}
+END scalar
+BEGIN OPERATOR
+void op(struct { }* in0, int in1)
+{
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]",
+ "body":{"begin":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+         "end":"br label %1791",
+         "precursor":"br i1 %1794, label %1804, label %1795",
+         "successor":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]"},
+ "comparison":"%1794 = icmp eq i64 %1793, 5",
+ "end":"br i1 %1794, label %1804, label %1795",
+ "increment":"%1803 = add nuw nsw i64 %1793, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+ "kernel":{"constants":
+           [{"use":"%1799 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1798",
+             "value":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+             "value":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)"},
+            {"use":"%1798 = add i64 %1779, %1793",
+             "value":"%1779 = mul i64 %1778, 5"},
+            {"use":"store double %1802, double* %1790, align 8, !tbaa !5",
+             "value":"%1790 = getelementptr double, double* %43, i64 %1789"}],
+           "input":
+           ["%1797 = load double, double* %1796, align 8, !tbaa !5",
+            "%1800 = load double, double* %1799, align 8, !tbaa !5",
+            "%1800 = load double, double* %1799, align 8, !tbaa !5",
+            "%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]"],
+           "origin":
+           ["br i1 %1794, label %1804, label %1795"],
+           "output":"%1802 = fadd double %1792, %1801",
+           "restrictions":
+           [{"use":"%1802 = fadd double %1792, %1801",
+             "value":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]"},
+            {"use":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+             "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"},
+            {"use":"%1798 = add i64 %1779, %1793",
+             "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"},
+            {"use":"%1803 = add nuw nsw i64 %1793, 1",
+             "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}]},
+ "old_value":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]",
+ "precursor":"br label %1791",
+ "read":
+ [{"address":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+   "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+     "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+   "input_index":
+   ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+   "offset_add":{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+                 "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"},
+   "output_index":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+   "stride_mul":
+   [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+     "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}]},
+  {"address":"%1799 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1798",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+     "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+   "input_index":
+   ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+   "offset_add":{"addend":"%1779 = mul i64 %1778, 5",
+                 "input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+                 "value":"%1798 = add i64 %1779, %1793"},
+   "output_index":"%1798 = add i64 %1779, %1793",
+   "stride_mul":
+   [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+     "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}]},
+  {"address":"%1799 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1798",
+   "base_index":"%1779 = mul i64 %1778, 5",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%1779 = mul i64 %1778, 5",
+     "input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+     "value":"%1798 = add i64 %1779, %1793"}],
+   "input_index":
+   ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+   "offset_add":{"input":"%1798 = add i64 %1779, %1793",
+                 "value":"%1798 = add i64 %1779, %1793"},
+   "output_index":"%1798 = add i64 %1779, %1793",
+   "stride_mul":
+   [{"input":"%1798 = add i64 %1779, %1793",
+     "value":"%1798 = add i64 %1779, %1793"}]}],
+ "read_value":
+ ["%1797 = load double, double* %1796, align 8, !tbaa !5",
+  "%1800 = load double, double* %1799, align 8, !tbaa !5",
+  "%1800 = load double, double* %1799, align 8, !tbaa !5"],
+ "successor":"%1805 = add i64 %1779, 4"}
+END scalar
+BEGIN DOT
+{"begin":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]",
+ "body":{"begin":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+         "end":"br label %1791",
+         "precursor":"br i1 %1794, label %1804, label %1795",
+         "successor":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]"},
+ "comparison":"%1794 = icmp eq i64 %1793, 5",
+ "dotvalue":"%1801 = fmul double %1797, %1800",
+ "end":"br i1 %1794, label %1804, label %1795",
+ "increment":"%1803 = add nuw nsw i64 %1793, 1",
+ "initial":"double 0.000000e+00",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+ "new_ind":"%1802 = fadd double %1792, %1801",
+ "old_ind":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]",
+ "precursor":"br label %1791",
+ "src1":{"address":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+         "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "input_index":
+         ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+         "offset_add":{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+                       "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"},
+         "output_index":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+         "stride_mul":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "value":"%1797 = load double, double* %1796, align 8, !tbaa !5"},
+ "src2":{"address":"%1799 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1798",
+         "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "input_index":
+         ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+         "offset_add":{"addend":"%1779 = mul i64 %1778, 5",
+                       "input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+                       "value":"%1798 = add i64 %1779, %1793"},
+         "output_index":"%1798 = add i64 %1779, %1793",
+         "stride_mul":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "value":"%1800 = load double, double* %1799, align 8, !tbaa !5"},
+ "successor":"%1805 = add i64 %1779, 4"}
+END DOT
+BEGIN DOT
+{"begin":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]",
+ "body":{"begin":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+         "end":"br label %1791",
+         "precursor":"br i1 %1794, label %1804, label %1795",
+         "successor":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]"},
+ "comparison":"%1794 = icmp eq i64 %1793, 5",
+ "dotvalue":"%1801 = fmul double %1797, %1800",
+ "end":"br i1 %1794, label %1804, label %1795",
+ "increment":"%1803 = add nuw nsw i64 %1793, 1",
+ "initial":"double 0.000000e+00",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+ "new_ind":"%1802 = fadd double %1792, %1801",
+ "old_ind":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]",
+ "precursor":"br label %1791",
+ "src1":{"address":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+         "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "input_index":
+         ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+         "offset_add":{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+                       "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"},
+         "output_index":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+         "stride_mul":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "value":"%1797 = load double, double* %1796, align 8, !tbaa !5"},
+ "src2":{"address":"%1799 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1798",
+         "base_index":"%1779 = mul i64 %1778, 5",
+         "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+         "index_add":
+         [{"addend":"%1779 = mul i64 %1778, 5",
+           "input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1798 = add i64 %1779, %1793"}],
+         "input_index":
+         ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+         "offset_add":{"input":"%1798 = add i64 %1779, %1793",
+                       "value":"%1798 = add i64 %1779, %1793"},
+         "output_index":"%1798 = add i64 %1779, %1793",
+         "stride_mul":
+         [{"input":"%1798 = add i64 %1779, %1793",
+           "value":"%1798 = add i64 %1779, %1793"}],
+         "value":"%1800 = load double, double* %1799, align 8, !tbaa !5"},
+ "successor":"%1805 = add i64 %1779, 4"}
+END DOT
+BEGIN DOT
+{"begin":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]",
+ "body":{"begin":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+         "end":"br label %1791",
+         "precursor":"br i1 %1794, label %1804, label %1795",
+         "successor":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]"},
+ "comparison":"%1794 = icmp eq i64 %1793, 5",
+ "dotvalue":"%1801 = fmul double %1797, %1800",
+ "end":"br i1 %1794, label %1804, label %1795",
+ "increment":"%1803 = add nuw nsw i64 %1793, 1",
+ "initial":"double 0.000000e+00",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+ "new_ind":"%1802 = fadd double %1792, %1801",
+ "old_ind":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]",
+ "precursor":"br label %1791",
+ "src1":{"address":"%1799 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1798",
+         "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "input_index":
+         ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+         "offset_add":{"addend":"%1779 = mul i64 %1778, 5",
+                       "input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+                       "value":"%1798 = add i64 %1779, %1793"},
+         "output_index":"%1798 = add i64 %1779, %1793",
+         "stride_mul":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "value":"%1800 = load double, double* %1799, align 8, !tbaa !5"},
+ "src2":{"address":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+         "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "input_index":
+         ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+         "offset_add":{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+                       "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"},
+         "output_index":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+         "stride_mul":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "value":"%1797 = load double, double* %1796, align 8, !tbaa !5"},
+ "successor":"%1805 = add i64 %1779, 4"}
+END DOT
+BEGIN DOT
+{"begin":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]",
+ "body":{"begin":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+         "end":"br label %1791",
+         "precursor":"br i1 %1794, label %1804, label %1795",
+         "successor":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]"},
+ "comparison":"%1794 = icmp eq i64 %1793, 5",
+ "dotvalue":"%1801 = fmul double %1797, %1800",
+ "end":"br i1 %1794, label %1804, label %1795",
+ "increment":"%1803 = add nuw nsw i64 %1793, 1",
+ "initial":"double 0.000000e+00",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+ "new_ind":"%1802 = fadd double %1792, %1801",
+ "old_ind":"%1792 = phi double [ %1802, %1795 ], [ 0.000000e+00, %1777 ]",
+ "precursor":"br label %1791",
+ "src1":{"address":"%1799 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1798",
+         "base_index":"%1779 = mul i64 %1778, 5",
+         "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+         "index_add":
+         [{"addend":"%1779 = mul i64 %1778, 5",
+           "input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1798 = add i64 %1779, %1793"}],
+         "input_index":
+         ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+         "offset_add":{"input":"%1798 = add i64 %1779, %1793",
+                       "value":"%1798 = add i64 %1779, %1793"},
+         "output_index":"%1798 = add i64 %1779, %1793",
+         "stride_mul":
+         [{"input":"%1798 = add i64 %1779, %1793",
+           "value":"%1798 = add i64 %1779, %1793"}],
+         "value":"%1800 = load double, double* %1799, align 8, !tbaa !5"},
+ "src2":{"address":"%1796 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1793",
+         "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "input_index":
+         ["%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"],
+         "offset_add":{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+                       "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"},
+         "output_index":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+         "stride_mul":
+         [{"input":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]",
+           "value":"%1793 = phi i64 [ %1803, %1795 ], [ 0, %1777 ]"}],
+         "value":"%1797 = load double, double* %1796, align 8, !tbaa !5"},
+ "successor":"%1805 = add i64 %1779, 4"}
+END DOT
+BEGIN OPERATOR
+void op(struct { double _0; }* in0, double in1, double in2)
+{
+  in0->_0 += in1*in2;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]",
+ "body":{"begin":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+         "end":"br label %1816",
+         "precursor":"br i1 %1819, label %1829, label %1820",
+         "successor":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]"},
+ "comparison":"%1819 = icmp eq i64 %1818, 5",
+ "end":"br i1 %1819, label %1829, label %1820",
+ "increment":"%1828 = add nuw nsw i64 %1818, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+ "kernel":{"constants":
+           [{"use":"%1824 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1823",
+             "value":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+             "value":"double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0)"},
+            {"use":"store double %1827, double* %1813, align 8, !tbaa !5",
+             "value":"%1813 = getelementptr double, double* %43, i64 %1812"},
+            {"use":"%1823 = add i64 %1815, %1818",
+             "value":"%1815 = mul i64 %1814, 5"}],
+           "input":
+           ["%1822 = load double, double* %1821, align 8, !tbaa !5",
+            "%1825 = load double, double* %1824, align 8, !tbaa !5",
+            "%1825 = load double, double* %1824, align 8, !tbaa !5",
+            "%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]"],
+           "origin":
+           ["br i1 %1819, label %1829, label %1820"],
+           "output":"%1827 = fadd double %1817, %1826",
+           "restrictions":
+           [{"use":"%1827 = fadd double %1817, %1826",
+             "value":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]"},
+            {"use":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+             "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"},
+            {"use":"%1823 = add i64 %1815, %1818",
+             "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"},
+            {"use":"%1828 = add nuw nsw i64 %1818, 1",
+             "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}]},
+ "old_value":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]",
+ "precursor":"br label %1816",
+ "read":
+ [{"address":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+   "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+     "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+   "input_index":
+   ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+   "offset_add":{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+                 "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"},
+   "output_index":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+   "stride_mul":
+   [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+     "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}]},
+  {"address":"%1824 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1823",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+     "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+   "input_index":
+   ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+   "offset_add":{"addend":"%1815 = mul i64 %1814, 5",
+                 "input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+                 "value":"%1823 = add i64 %1815, %1818"},
+   "output_index":"%1823 = add i64 %1815, %1818",
+   "stride_mul":
+   [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+     "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}]},
+  {"address":"%1824 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1823",
+   "base_index":"%1815 = mul i64 %1814, 5",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%1815 = mul i64 %1814, 5",
+     "input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+     "value":"%1823 = add i64 %1815, %1818"}],
+   "input_index":
+   ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+   "offset_add":{"input":"%1823 = add i64 %1815, %1818",
+                 "value":"%1823 = add i64 %1815, %1818"},
+   "output_index":"%1823 = add i64 %1815, %1818",
+   "stride_mul":
+   [{"input":"%1823 = add i64 %1815, %1818",
+     "value":"%1823 = add i64 %1815, %1818"}]}],
+ "read_value":
+ ["%1822 = load double, double* %1821, align 8, !tbaa !5",
+  "%1825 = load double, double* %1824, align 8, !tbaa !5",
+  "%1825 = load double, double* %1824, align 8, !tbaa !5"],
+ "successor":"%1830 = add i64 %1815, 4"}
+END scalar
+BEGIN DOT
+{"begin":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]",
+ "body":{"begin":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+         "end":"br label %1816",
+         "precursor":"br i1 %1819, label %1829, label %1820",
+         "successor":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]"},
+ "comparison":"%1819 = icmp eq i64 %1818, 5",
+ "dotvalue":"%1826 = fmul double %1822, %1825",
+ "end":"br i1 %1819, label %1829, label %1820",
+ "increment":"%1828 = add nuw nsw i64 %1818, 1",
+ "initial":"double 0.000000e+00",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+ "new_ind":"%1827 = fadd double %1817, %1826",
+ "old_ind":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]",
+ "precursor":"br label %1816",
+ "src1":{"address":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+         "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "input_index":
+         ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+         "offset_add":{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+                       "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"},
+         "output_index":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+         "stride_mul":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "value":"%1822 = load double, double* %1821, align 8, !tbaa !5"},
+ "src2":{"address":"%1824 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1823",
+         "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "input_index":
+         ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+         "offset_add":{"addend":"%1815 = mul i64 %1814, 5",
+                       "input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+                       "value":"%1823 = add i64 %1815, %1818"},
+         "output_index":"%1823 = add i64 %1815, %1818",
+         "stride_mul":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "value":"%1825 = load double, double* %1824, align 8, !tbaa !5"},
+ "successor":"%1830 = add i64 %1815, 4"}
+END DOT
+BEGIN DOT
+{"begin":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]",
+ "body":{"begin":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+         "end":"br label %1816",
+         "precursor":"br i1 %1819, label %1829, label %1820",
+         "successor":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]"},
+ "comparison":"%1819 = icmp eq i64 %1818, 5",
+ "dotvalue":"%1826 = fmul double %1822, %1825",
+ "end":"br i1 %1819, label %1829, label %1820",
+ "increment":"%1828 = add nuw nsw i64 %1818, 1",
+ "initial":"double 0.000000e+00",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+ "new_ind":"%1827 = fadd double %1817, %1826",
+ "old_ind":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]",
+ "precursor":"br label %1816",
+ "src1":{"address":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+         "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "input_index":
+         ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+         "offset_add":{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+                       "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"},
+         "output_index":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+         "stride_mul":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "value":"%1822 = load double, double* %1821, align 8, !tbaa !5"},
+ "src2":{"address":"%1824 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1823",
+         "base_index":"%1815 = mul i64 %1814, 5",
+         "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+         "index_add":
+         [{"addend":"%1815 = mul i64 %1814, 5",
+           "input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1823 = add i64 %1815, %1818"}],
+         "input_index":
+         ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+         "offset_add":{"input":"%1823 = add i64 %1815, %1818",
+                       "value":"%1823 = add i64 %1815, %1818"},
+         "output_index":"%1823 = add i64 %1815, %1818",
+         "stride_mul":
+         [{"input":"%1823 = add i64 %1815, %1818",
+           "value":"%1823 = add i64 %1815, %1818"}],
+         "value":"%1825 = load double, double* %1824, align 8, !tbaa !5"},
+ "successor":"%1830 = add i64 %1815, 4"}
+END DOT
+BEGIN DOT
+{"begin":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]",
+ "body":{"begin":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+         "end":"br label %1816",
+         "precursor":"br i1 %1819, label %1829, label %1820",
+         "successor":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]"},
+ "comparison":"%1819 = icmp eq i64 %1818, 5",
+ "dotvalue":"%1826 = fmul double %1822, %1825",
+ "end":"br i1 %1819, label %1829, label %1820",
+ "increment":"%1828 = add nuw nsw i64 %1818, 1",
+ "initial":"double 0.000000e+00",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+ "new_ind":"%1827 = fadd double %1817, %1826",
+ "old_ind":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]",
+ "precursor":"br label %1816",
+ "src1":{"address":"%1824 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1823",
+         "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "input_index":
+         ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+         "offset_add":{"addend":"%1815 = mul i64 %1814, 5",
+                       "input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+                       "value":"%1823 = add i64 %1815, %1818"},
+         "output_index":"%1823 = add i64 %1815, %1818",
+         "stride_mul":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "value":"%1825 = load double, double* %1824, align 8, !tbaa !5"},
+ "src2":{"address":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+         "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "input_index":
+         ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+         "offset_add":{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+                       "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"},
+         "output_index":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+         "stride_mul":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "value":"%1822 = load double, double* %1821, align 8, !tbaa !5"},
+ "successor":"%1830 = add i64 %1815, 4"}
+END DOT
+BEGIN DOT
+{"begin":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]",
+ "body":{"begin":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+         "end":"br label %1816",
+         "precursor":"br i1 %1819, label %1829, label %1820",
+         "successor":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]"},
+ "comparison":"%1819 = icmp eq i64 %1818, 5",
+ "dotvalue":"%1826 = fmul double %1822, %1825",
+ "end":"br i1 %1819, label %1829, label %1820",
+ "increment":"%1828 = add nuw nsw i64 %1818, 1",
+ "initial":"double 0.000000e+00",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+ "new_ind":"%1827 = fadd double %1817, %1826",
+ "old_ind":"%1817 = phi double [ %1827, %1820 ], [ 0.000000e+00, %1804 ]",
+ "precursor":"br label %1816",
+ "src1":{"address":"%1824 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1823",
+         "base_index":"%1815 = mul i64 %1814, 5",
+         "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+         "index_add":
+         [{"addend":"%1815 = mul i64 %1814, 5",
+           "input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1823 = add i64 %1815, %1818"}],
+         "input_index":
+         ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+         "offset_add":{"input":"%1823 = add i64 %1815, %1818",
+                       "value":"%1823 = add i64 %1815, %1818"},
+         "output_index":"%1823 = add i64 %1815, %1818",
+         "stride_mul":
+         [{"input":"%1823 = add i64 %1815, %1818",
+           "value":"%1823 = add i64 %1815, %1818"}],
+         "value":"%1825 = load double, double* %1824, align 8, !tbaa !5"},
+ "src2":{"address":"%1821 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1818",
+         "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "input_index":
+         ["%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"],
+         "offset_add":{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+                       "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"},
+         "output_index":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+         "stride_mul":
+         [{"input":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]",
+           "value":"%1818 = phi i64 [ %1828, %1820 ], [ 0, %1804 ]"}],
+         "value":"%1822 = load double, double* %1821, align 8, !tbaa !5"},
+ "successor":"%1830 = add i64 %1815, 4"}
+END DOT
+BEGIN OPERATOR
+void op(struct { double _0; }* in0, double in1, double in2)
+{
+  in0->_0 += in1*in2;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]",
+ "body":{"begin":"%1875 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1872",
+         "end":"br label %1870",
+         "precursor":"br i1 %1873, label %1883, label %1874",
+         "successor":"%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]"},
+ "comparison":"%1873 = icmp eq i64 %1872, 5",
+ "end":"br i1 %1873, label %1883, label %1874",
+ "increment":"%1882 = add nuw nsw i64 %1872, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+ "kernel":{"constants":
+           [{"use":"%1878 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1877",
+             "value":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%1875 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1872",
+             "value":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)"},
+            {"use":"%1877 = add i64 %1858, %1872",
+             "value":"%1858 = mul i64 %1857, 5"},
+            {"use":"store double %1881, double* %1869, align 8, !tbaa !5",
+             "value":"%1869 = getelementptr double, double* %1116, i64 %1868"}],
+           "input":
+           ["%1876 = load double, double* %1875, align 8, !tbaa !5",
+            "%1879 = load double, double* %1878, align 8, !tbaa !5",
+            "%1879 = load double, double* %1878, align 8, !tbaa !5",
+            "%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]"],
+           "origin":
+           ["br i1 %1873, label %1883, label %1874"],
+           "output":"%1881 = fadd double %1871, %1880",
+           "restrictions":
+           [{"use":"%1881 = fadd double %1871, %1880",
+             "value":"%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]"},
+            {"use":"%1875 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1872",
+             "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"},
+            {"use":"%1877 = add i64 %1858, %1872",
+             "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"},
+            {"use":"%1882 = add nuw nsw i64 %1872, 1",
+             "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}]},
+ "old_value":"%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]",
+ "precursor":"br label %1870",
+ "read":
+ [{"address":"%1875 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1872",
+   "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+     "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}],
+   "input_index":
+   ["%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"],
+   "offset_add":{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+                 "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"},
+   "output_index":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+   "stride_mul":
+   [{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+     "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}]},
+  {"address":"%1878 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1877",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+     "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}],
+   "input_index":
+   ["%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"],
+   "offset_add":{"addend":"%1858 = mul i64 %1857, 5",
+                 "input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+                 "value":"%1877 = add i64 %1858, %1872"},
+   "output_index":"%1877 = add i64 %1858, %1872",
+   "stride_mul":
+   [{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+     "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}]},
+  {"address":"%1878 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1877",
+   "base_index":"%1858 = mul i64 %1857, 5",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%1858 = mul i64 %1857, 5",
+     "input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+     "value":"%1877 = add i64 %1858, %1872"}],
+   "input_index":
+   ["%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"],
+   "offset_add":{"input":"%1877 = add i64 %1858, %1872",
+                 "value":"%1877 = add i64 %1858, %1872"},
+   "output_index":"%1877 = add i64 %1858, %1872",
+   "stride_mul":
+   [{"input":"%1877 = add i64 %1858, %1872",
+     "value":"%1877 = add i64 %1858, %1872"}]}],
+ "read_value":
+ ["%1876 = load double, double* %1875, align 8, !tbaa !5",
+  "%1879 = load double, double* %1878, align 8, !tbaa !5",
+  "%1879 = load double, double* %1878, align 8, !tbaa !5"],
+ "successor":"%1884 = add i64 %1858, 4"}
+END scalar
+BEGIN DOT
+{"begin":"%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]",
+ "body":{"begin":"%1875 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1872",
+         "end":"br label %1870",
+         "precursor":"br i1 %1873, label %1883, label %1874",
+         "successor":"%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]"},
+ "comparison":"%1873 = icmp eq i64 %1872, 5",
+ "dotvalue":"%1880 = fmul double %1876, %1879",
+ "end":"br i1 %1873, label %1883, label %1874",
+ "increment":"%1882 = add nuw nsw i64 %1872, 1",
+ "initial":"double 0.000000e+00",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+ "new_ind":"%1881 = fadd double %1871, %1880",
+ "old_ind":"%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]",
+ "precursor":"br label %1870",
+ "src1":{"address":"%1875 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1872",
+         "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+           "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}],
+         "input_index":
+         ["%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"],
+         "offset_add":{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+                       "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"},
+         "output_index":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+         "stride_mul":
+         [{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+           "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}],
+         "value":"%1876 = load double, double* %1875, align 8, !tbaa !5"},
+ "src2":{"address":"%1878 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1877",
+         "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+           "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}],
+         "input_index":
+         ["%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"],
+         "offset_add":{"addend":"%1858 = mul i64 %1857, 5",
+                       "input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+                       "value":"%1877 = add i64 %1858, %1872"},
+         "output_index":"%1877 = add i64 %1858, %1872",
+         "stride_mul":
+         [{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+           "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}],
+         "value":"%1879 = load double, double* %1878, align 8, !tbaa !5"},
+ "successor":"%1884 = add i64 %1858, 4"}
+END DOT
+BEGIN DOT
+{"begin":"%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]",
+ "body":{"begin":"%1875 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1872",
+         "end":"br label %1870",
+         "precursor":"br i1 %1873, label %1883, label %1874",
+         "successor":"%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]"},
+ "comparison":"%1873 = icmp eq i64 %1872, 5",
+ "dotvalue":"%1880 = fmul double %1876, %1879",
+ "end":"br i1 %1873, label %1883, label %1874",
+ "increment":"%1882 = add nuw nsw i64 %1872, 1",
+ "initial":"double 0.000000e+00",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+ "new_ind":"%1881 = fadd double %1871, %1880",
+ "old_ind":"%1871 = phi double [ %1881, %1874 ], [ 0.000000e+00, %1856 ]",
+ "precursor":"br label %1870",
+ "src1":{"address":"%1875 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1872",
+         "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)",
+         "index_add":
+         [{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+           "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}],
+         "input_index":
+         ["%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"],
+         "offset_add":{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+                       "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"},
+         "output_index":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+         "stride_mul":
+         [{"input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+           "value":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"}],
+         "value":"%1876 = load double, double* %1875, align 8, !tbaa !5"},
+ "src2":{"address":"%1878 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1877",
+         "base_index":"%1858 = mul i64 %1857, 5",
+         "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+         "index_add":
+         [{"addend":"%1858 = mul i64 %1857, 5",
+           "input":"%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]",
+           "value":"%1877 = add i64 %1858, %1872"}],
+         "input_index":
+         ["%1872 = phi i64 [ %1882, %1874 ], [ 0, %1856 ]"],
+         "offset_add":{"input":"%1877 = add i64 %1858, %1872",
+                       "value":"%1877 = add i64 %1858, %1872"},
+         "output_index":"%1877 = add i64 %1858, %1872",
+         "stride_mul":
+         [{"input":"%1877 = add i64 %1858, %1872",
+           "value":"%1877 = add i64 %1858, %1872"}],
+         "value":"%1879 = load double, double* %1878, align 8, !tbaa !5"},
+ "successor":"%1884 = add i64 %1858, 4"}
+END DOT
+BEGIN OPERATOR
+void op(struct { double _0; }* in0, double in1, double in2)
+{
+  in0->_0 += in1*in2;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%1896 = phi double [ %1906, %1899 ], [ 0.000000e+00, %1883 ]",
+ "body":{"begin":"%1900 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1897",
+         "end":"br label %1895",
+         "precursor":"br i1 %1898, label %1908, label %1899",
+         "successor":"%1896 = phi double [ %1906, %1899 ], [ 0.000000e+00, %1883 ]"},
+ "comparison":"%1898 = icmp eq i64 %1897, 5",
+ "end":"br i1 %1898, label %1908, label %1899",
+ "increment":"%1907 = add nuw nsw i64 %1897, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]",
+ "kernel":{"constants":
+           [{"use":"%1903 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1902",
+             "value":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%1900 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1897",
+             "value":"double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0)"},
+            {"use":"store double %1906, double* %1892, align 8, !tbaa !5",
+             "value":"%1892 = getelementptr double, double* %1116, i64 %1891"},
+            {"use":"%1902 = add i64 %1894, %1897",
+             "value":"%1894 = mul i64 %1893, 5"}],
+           "input":
+           ["%1901 = load double, double* %1900, align 8, !tbaa !5",
+            "%1904 = load double, double* %1903, align 8, !tbaa !5",
+            "%1904 = load double, double* %1903, align 8, !tbaa !5",
+            "%1896 = phi double [ %1906, %1899 ], [ 0.000000e+00, %1883 ]"],
+           "origin":
+           ["br i1 %1898, label %1908, label %1899"],
+           "output":"%1906 = fadd double %1896, %1905",
+           "restrictions":
+           [{"use":"%1906 = fadd double %1896, %1905",
+             "value":"%1896 = phi double [ %1906, %1899 ], [ 0.000000e+00, %1883 ]"},
+            {"use":"%1900 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1897",
+             "value":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"},
+            {"use":"%1902 = add i64 %1894, %1897",
+             "value":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"},
+            {"use":"%1907 = add nuw nsw i64 %1897, 1",
+             "value":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"}]},
+ "old_value":"%1896 = phi double [ %1906, %1899 ], [ 0.000000e+00, %1883 ]",
+ "precursor":"br label %1895",
+ "read":
+ [{"address":"%1900 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1897",
+   "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]",
+     "value":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"}],
+   "input_index":
+   ["%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"],
+   "offset_add":{"input":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]",
+                 "value":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"},
+   "output_index":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]",
+   "stride_mul":
+   [{"input":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]",
+     "value":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"}]},
+  {"address":"%1903 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1902",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]",
+     "value":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"}],
+   "input_index":
+   ["%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"],
+   "offset_add":{"addend":"%1894 = mul i64 %1893, 5",
+                 "input":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]",
+                 "value":"%1902 = add i64 %1894, %1897"},
+   "output_index":"%1902 = add i64 %1894, %1897",
+   "stride_mul":
+   [{"input":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]",
+     "value":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"}]},
+  {"address":"%1903 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1902",
+   "base_index":"%1894 = mul i64 %1893, 5",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%1894 = mul i64 %1893, 5",
+     "input":"%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]",
+     "value":"%1902 = add i64 %1894, %1897"}],
+   "input_index":
+   ["%1897 = phi i64 [ %1907, %1899 ], [ 0, %1883 ]"],
+   "offset_add":{"input":"%1902 = add i64 %1894, %1897",
+                 "value":"%1902 = add i64 %1894, %1897"},
+   "output_index":"%1902 = add i64 %1894, %1897",
+   "stride_mul":
+   [{"input":"%1902 = add i64 %1894, %1897",
+     "value":"%1902 = add i64 %1894, %1897"}]}],
+ "read_value":
+ ["%1901 = load double, double* %1900, align 8, !tbaa !5",
+  "%1904 = load double, double* %1903, align 8, !tbaa !5",
+  "%1904 = load double, double* %1903, align 8, !tbaa !5"],
+ "successor":"%1909 = add i64 %1894, 4"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; }* in0, double in1, double in2)
+{
+  in0->_0 += in1*in2;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%1950 = phi double [ %1960, %1953 ], [ 0.000000e+00, %1935 ]",
+ "body":{"begin":"%1954 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1951",
+         "end":"br label %1949",
+         "precursor":"br i1 %1952, label %1962, label %1953",
+         "successor":"%1950 = phi double [ %1960, %1953 ], [ 0.000000e+00, %1935 ]"},
+ "comparison":"%1952 = icmp eq i64 %1951, 5",
+ "end":"br i1 %1952, label %1962, label %1953",
+ "increment":"%1961 = add nuw nsw i64 %1951, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]",
+ "kernel":{"constants":
+           [{"use":"%1957 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1956",
+             "value":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%1954 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1951",
+             "value":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)"},
+            {"use":"%1956 = add i64 %1937, %1951",
+             "value":"%1937 = mul i64 %1936, 5"},
+            {"use":"store double %1960, double* %1948, align 8, !tbaa !5",
+             "value":"%1948 = getelementptr double, double* %1117, i64 %1947"}],
+           "input":
+           ["%1955 = load double, double* %1954, align 8, !tbaa !5",
+            "%1958 = load double, double* %1957, align 8, !tbaa !5",
+            "%1958 = load double, double* %1957, align 8, !tbaa !5",
+            "%1950 = phi double [ %1960, %1953 ], [ 0.000000e+00, %1935 ]"],
+           "origin":
+           ["br i1 %1952, label %1962, label %1953"],
+           "output":"%1960 = fadd double %1950, %1959",
+           "restrictions":
+           [{"use":"%1960 = fadd double %1950, %1959",
+             "value":"%1950 = phi double [ %1960, %1953 ], [ 0.000000e+00, %1935 ]"},
+            {"use":"%1954 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1951",
+             "value":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"},
+            {"use":"%1956 = add i64 %1937, %1951",
+             "value":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"},
+            {"use":"%1961 = add nuw nsw i64 %1951, 1",
+             "value":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"}]},
+ "old_value":"%1950 = phi double [ %1960, %1953 ], [ 0.000000e+00, %1935 ]",
+ "precursor":"br label %1949",
+ "read":
+ [{"address":"%1954 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %1951",
+   "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]",
+     "value":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"}],
+   "input_index":
+   ["%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"],
+   "offset_add":{"input":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]",
+                 "value":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"},
+   "output_index":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]",
+   "stride_mul":
+   [{"input":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]",
+     "value":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"}]},
+  {"address":"%1957 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1956",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]",
+     "value":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"}],
+   "input_index":
+   ["%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"],
+   "offset_add":{"addend":"%1937 = mul i64 %1936, 5",
+                 "input":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]",
+                 "value":"%1956 = add i64 %1937, %1951"},
+   "output_index":"%1956 = add i64 %1937, %1951",
+   "stride_mul":
+   [{"input":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]",
+     "value":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"}]},
+  {"address":"%1957 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1956",
+   "base_index":"%1937 = mul i64 %1936, 5",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%1937 = mul i64 %1936, 5",
+     "input":"%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]",
+     "value":"%1956 = add i64 %1937, %1951"}],
+   "input_index":
+   ["%1951 = phi i64 [ %1961, %1953 ], [ 0, %1935 ]"],
+   "offset_add":{"input":"%1956 = add i64 %1937, %1951",
+                 "value":"%1956 = add i64 %1937, %1951"},
+   "output_index":"%1956 = add i64 %1937, %1951",
+   "stride_mul":
+   [{"input":"%1956 = add i64 %1937, %1951",
+     "value":"%1956 = add i64 %1937, %1951"}]}],
+ "read_value":
+ ["%1955 = load double, double* %1954, align 8, !tbaa !5",
+  "%1958 = load double, double* %1957, align 8, !tbaa !5",
+  "%1958 = load double, double* %1957, align 8, !tbaa !5"],
+ "successor":"%1963 = add i64 %1937, 4"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; }* in0, double in1, double in2)
+{
+  in0->_0 += in1*in2;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%1975 = phi double [ %1985, %1978 ], [ 0.000000e+00, %1962 ]",
+ "body":{"begin":"%1979 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1976",
+         "end":"br label %1974",
+         "precursor":"br i1 %1977, label %1987, label %1978",
+         "successor":"%1975 = phi double [ %1985, %1978 ], [ 0.000000e+00, %1962 ]"},
+ "comparison":"%1977 = icmp eq i64 %1976, 5",
+ "end":"br i1 %1977, label %1987, label %1978",
+ "increment":"%1986 = add nuw nsw i64 %1976, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]",
+ "kernel":{"constants":
+           [{"use":"%1982 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1981",
+             "value":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%1979 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1976",
+             "value":"double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0)"},
+            {"use":"store double %1985, double* %1971, align 8, !tbaa !5",
+             "value":"%1971 = getelementptr double, double* %1117, i64 %1970"},
+            {"use":"%1981 = add i64 %1973, %1976",
+             "value":"%1973 = mul i64 %1972, 5"}],
+           "input":
+           ["%1980 = load double, double* %1979, align 8, !tbaa !5",
+            "%1983 = load double, double* %1982, align 8, !tbaa !5",
+            "%1983 = load double, double* %1982, align 8, !tbaa !5",
+            "%1975 = phi double [ %1985, %1978 ], [ 0.000000e+00, %1962 ]"],
+           "origin":
+           ["br i1 %1977, label %1987, label %1978"],
+           "output":"%1985 = fadd double %1975, %1984",
+           "restrictions":
+           [{"use":"%1985 = fadd double %1975, %1984",
+             "value":"%1975 = phi double [ %1985, %1978 ], [ 0.000000e+00, %1962 ]"},
+            {"use":"%1979 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1976",
+             "value":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"},
+            {"use":"%1981 = add i64 %1973, %1976",
+             "value":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"},
+            {"use":"%1986 = add nuw nsw i64 %1976, 1",
+             "value":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"}]},
+ "old_value":"%1975 = phi double [ %1985, %1978 ], [ 0.000000e+00, %1962 ]",
+ "precursor":"br label %1974",
+ "read":
+ [{"address":"%1979 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0), i64 %1976",
+   "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map4, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]",
+     "value":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"}],
+   "input_index":
+   ["%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"],
+   "offset_add":{"input":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]",
+                 "value":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"},
+   "output_index":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]",
+   "stride_mul":
+   [{"input":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]",
+     "value":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"}]},
+  {"address":"%1982 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1981",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]",
+     "value":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"}],
+   "input_index":
+   ["%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"],
+   "offset_add":{"addend":"%1973 = mul i64 %1972, 5",
+                 "input":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]",
+                 "value":"%1981 = add i64 %1973, %1976"},
+   "output_index":"%1981 = add i64 %1973, %1976",
+   "stride_mul":
+   [{"input":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]",
+     "value":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"}]},
+  {"address":"%1982 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1981",
+   "base_index":"%1973 = mul i64 %1972, 5",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%1973 = mul i64 %1972, 5",
+     "input":"%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]",
+     "value":"%1981 = add i64 %1973, %1976"}],
+   "input_index":
+   ["%1976 = phi i64 [ %1986, %1978 ], [ 0, %1962 ]"],
+   "offset_add":{"input":"%1981 = add i64 %1973, %1976",
+                 "value":"%1981 = add i64 %1973, %1976"},
+   "output_index":"%1981 = add i64 %1973, %1976",
+   "stride_mul":
+   [{"input":"%1981 = add i64 %1973, %1976",
+     "value":"%1981 = add i64 %1973, %1976"}]}],
+ "read_value":
+ ["%1980 = load double, double* %1979, align 8, !tbaa !5",
+  "%1983 = load double, double* %1982, align 8, !tbaa !5",
+  "%1983 = load double, double* %1982, align 8, !tbaa !5"],
+ "successor":"%1988 = add i64 %1973, 4"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; }* in0, double in1, double in2)
+{
+  in0->_0 += in1*in2;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%2029 = phi double [ %2039, %2032 ], [ 0.000000e+00, %2014 ]",
+ "body":{"begin":"%2033 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %2030",
+         "end":"br label %2028",
+         "precursor":"br i1 %2031, label %2041, label %2032",
+         "successor":"%2029 = phi double [ %2039, %2032 ], [ 0.000000e+00, %2014 ]"},
+ "comparison":"%2031 = icmp eq i64 %2030, 5",
+ "end":"br i1 %2031, label %2041, label %2032",
+ "increment":"%2040 = add nuw nsw i64 %2030, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]",
+ "kernel":{"constants":
+           [{"use":"%2036 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %2035",
+             "value":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%2033 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %2030",
+             "value":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)"},
+            {"use":"%2035 = add i64 %2016, %2030",
+             "value":"%2016 = mul i64 %2015, 5"},
+            {"use":"store double %2039, double* %2027, align 8, !tbaa !5",
+             "value":"%2027 = getelementptr double, double* %1118, i64 %2026"}],
+           "input":
+           ["%2034 = load double, double* %2033, align 8, !tbaa !5",
+            "%2037 = load double, double* %2036, align 8, !tbaa !5",
+            "%2037 = load double, double* %2036, align 8, !tbaa !5",
+            "%2029 = phi double [ %2039, %2032 ], [ 0.000000e+00, %2014 ]"],
+           "origin":
+           ["br i1 %2031, label %2041, label %2032"],
+           "output":"%2039 = fadd double %2029, %2038",
+           "restrictions":
+           [{"use":"%2039 = fadd double %2029, %2038",
+             "value":"%2029 = phi double [ %2039, %2032 ], [ 0.000000e+00, %2014 ]"},
+            {"use":"%2033 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %2030",
+             "value":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"},
+            {"use":"%2035 = add i64 %2016, %2030",
+             "value":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"},
+            {"use":"%2040 = add nuw nsw i64 %2030, 1",
+             "value":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"}]},
+ "old_value":"%2029 = phi double [ %2039, %2032 ], [ 0.000000e+00, %2014 ]",
+ "precursor":"br label %2028",
+ "read":
+ [{"address":"%2033 = getelementptr double, double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0), i64 %2030",
+   "base_pointer":"double* getelementptr inbounds ([5 x double], [5 x double]* @map2, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]",
+     "value":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"}],
+   "input_index":
+   ["%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"],
+   "offset_add":{"input":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]",
+                 "value":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"},
+   "output_index":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]",
+   "stride_mul":
+   [{"input":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]",
+     "value":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"}]},
+  {"address":"%2036 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %2035",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]",
+     "value":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"}],
+   "input_index":
+   ["%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"],
+   "offset_add":{"addend":"%2016 = mul i64 %2015, 5",
+                 "input":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]",
+                 "value":"%2035 = add i64 %2016, %2030"},
+   "output_index":"%2035 = add i64 %2016, %2030",
+   "stride_mul":
+   [{"input":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]",
+     "value":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"}]},
+  {"address":"%2036 = getelementptr double, double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %2035",
+   "base_index":"%2016 = mul i64 %2015, 5",
+   "base_pointer":"double* getelementptr inbounds ([2400 x [5 x [5 x [5 x double]]]], [2400 x [5 x [5 x [5 x double]]]]* @ta1, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%2016 = mul i64 %2015, 5",
+     "input":"%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]",
+     "value":"%2035 = add i64 %2016, %2030"}],
+   "input_index":
+   ["%2030 = phi i64 [ %2040, %2032 ], [ 0, %2014 ]"],
+   "offset_add":{"input":"%2035 = add i64 %2016, %2030",
+                 "value":"%2035 = add i64 %2016, %2030"},
+   "output_index":"%2035 = add i64 %2016, %2030",
+   "stride_mul":
+   [{"input":"%2035 = add i64 %2016, %2030",
+     "value":"%2035 = add i64 %2016, %2030"}]}],
+ "read_value":
+ ["%2034 = load double, double* %2033, align 8, !tbaa !5",
+  "%2037 = load double, double* %2036, align 8, !tbaa !5",
+  "%2037 = load double, double* %2036, align 8, !tbaa !5"],
+ "successor":"%2042 = add i64 %2016, 4"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; }* in0, double in1, double in2)
+{
+  in0->_0 += in1*in2;
+}
+END LOOP
+END FUNCTION TRANSFORMATION

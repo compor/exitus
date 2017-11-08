@@ -1,0 +1,1113 @@
+BEGIN FUNCTION TRANSFORMATION randlc
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%11 = phi double [ 1.000000e+00, %9 ], [ %17, %15 ]",
+ "body":{"begin":"%16 = fmul double %12, 5.000000e-01",
+         "end":"br label %10",
+         "precursor":"br i1 %14, label %19, label %15",
+         "successor":"%11 = phi double [ 1.000000e+00, %9 ], [ %17, %15 ]"},
+ "comparison":"%14 = icmp eq i32 %13, 24",
+ "end":"br i1 %14, label %19, label %15",
+ "increment":"%18 = add nuw nsw i32 %13, 1",
+ "iter_begin":"i32 1",
+ "iter_end":"i32 24",
+ "iter_step":"i32 1",
+ "iterator":"%13 = phi i32 [ 1, %9 ], [ %18, %15 ]",
+ "kernel":{"constants":
+           [{"use":"store double %16, double* @randlc.R23, align 8, !tbaa !2",
+             "value":"@randlc.R23 = internal unnamed_addr global double 0.000000e+00, align 8"},
+            {"use":"store double %17, double* @randlc.T23, align 8, !tbaa !2",
+             "value":"@randlc.T23 = internal unnamed_addr global double 0.000000e+00, align 8"}],
+           "input":
+           ["%12 = phi double [ 1.000000e+00, %9 ], [ %16, %15 ]"],
+           "origin":
+           ["br i1 %14, label %19, label %15"],
+           "output":"%16 = fmul double %12, 5.000000e-01",
+           "restrictions":
+           [{"use":"%17 = fmul double %11, 2.000000e+00",
+             "value":"%11 = phi double [ 1.000000e+00, %9 ], [ %17, %15 ]"},
+            {"use":"%16 = fmul double %12, 5.000000e-01",
+             "value":"%12 = phi double [ 1.000000e+00, %9 ], [ %16, %15 ]"},
+            {"use":"%18 = add nuw nsw i32 %13, 1",
+             "value":"%13 = phi i32 [ 1, %9 ], [ %18, %15 ]"}]},
+ "old_value":"%12 = phi double [ 1.000000e+00, %9 ], [ %16, %15 ]",
+ "precursor":"br label %10",
+ "successor":"%20 = phi double [ %26, %24 ], [ 1.000000e+00, %10 ]"}
+END scalar
+BEGIN scalar
+{"begin":"%11 = phi double [ 1.000000e+00, %9 ], [ %17, %15 ]",
+ "body":{"begin":"%16 = fmul double %12, 5.000000e-01",
+         "end":"br label %10",
+         "precursor":"br i1 %14, label %19, label %15",
+         "successor":"%11 = phi double [ 1.000000e+00, %9 ], [ %17, %15 ]"},
+ "comparison":"%14 = icmp eq i32 %13, 24",
+ "end":"br i1 %14, label %19, label %15",
+ "increment":"%18 = add nuw nsw i32 %13, 1",
+ "iter_begin":"i32 1",
+ "iter_end":"i32 24",
+ "iter_step":"i32 1",
+ "iterator":"%13 = phi i32 [ 1, %9 ], [ %18, %15 ]",
+ "kernel":{"constants":
+           [{"use":"store double %16, double* @randlc.R23, align 8, !tbaa !2",
+             "value":"@randlc.R23 = internal unnamed_addr global double 0.000000e+00, align 8"},
+            {"use":"store double %17, double* @randlc.T23, align 8, !tbaa !2",
+             "value":"@randlc.T23 = internal unnamed_addr global double 0.000000e+00, align 8"}],
+           "input":
+           ["%11 = phi double [ 1.000000e+00, %9 ], [ %17, %15 ]"],
+           "origin":
+           ["br i1 %14, label %19, label %15"],
+           "output":"%17 = fmul double %11, 2.000000e+00",
+           "restrictions":
+           [{"use":"%17 = fmul double %11, 2.000000e+00",
+             "value":"%11 = phi double [ 1.000000e+00, %9 ], [ %17, %15 ]"},
+            {"use":"%16 = fmul double %12, 5.000000e-01",
+             "value":"%12 = phi double [ 1.000000e+00, %9 ], [ %16, %15 ]"},
+            {"use":"%18 = add nuw nsw i32 %13, 1",
+             "value":"%13 = phi i32 [ 1, %9 ], [ %18, %15 ]"}]},
+ "old_value":"%11 = phi double [ 1.000000e+00, %9 ], [ %17, %15 ]",
+ "precursor":"br label %10",
+ "successor":"%20 = phi double [ %26, %24 ], [ 1.000000e+00, %10 ]"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; double _1; }* in0)
+{
+  in0->_0 *= 0.5;
+  in0->_1 *= 2;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%20 = phi double [ %26, %24 ], [ 1.000000e+00, %10 ]",
+ "body":{"begin":"%25 = fmul double %21, 5.000000e-01",
+         "end":"br label %19",
+         "precursor":"br i1 %23, label %28, label %24",
+         "successor":"%20 = phi double [ %26, %24 ], [ 1.000000e+00, %10 ]"},
+ "comparison":"%23 = icmp eq i32 %22, 47",
+ "end":"br i1 %23, label %28, label %24",
+ "increment":"%27 = add nuw nsw i32 %22, 1",
+ "iter_begin":"i32 1",
+ "iter_end":"i32 47",
+ "iter_step":"i32 1",
+ "iterator":"%22 = phi i32 [ %27, %24 ], [ 1, %10 ]",
+ "kernel":{"constants":
+           [{"use":"store double %25, double* @randlc.R46, align 8, !tbaa !2",
+             "value":"@randlc.R46 = internal unnamed_addr global double 0.000000e+00, align 8"},
+            {"use":"store double %26, double* @randlc.T46, align 8, !tbaa !2",
+             "value":"@randlc.T46 = internal unnamed_addr global double 0.000000e+00, align 8"}],
+           "input":
+           ["%21 = phi double [ %25, %24 ], [ 1.000000e+00, %10 ]"],
+           "origin":
+           ["br i1 %23, label %28, label %24"],
+           "output":"%25 = fmul double %21, 5.000000e-01",
+           "restrictions":
+           [{"use":"%26 = fmul double %20, 2.000000e+00",
+             "value":"%20 = phi double [ %26, %24 ], [ 1.000000e+00, %10 ]"},
+            {"use":"%25 = fmul double %21, 5.000000e-01",
+             "value":"%21 = phi double [ %25, %24 ], [ 1.000000e+00, %10 ]"},
+            {"use":"%27 = add nuw nsw i32 %22, 1",
+             "value":"%22 = phi i32 [ %27, %24 ], [ 1, %10 ]"}]},
+ "old_value":"%21 = phi double [ %25, %24 ], [ 1.000000e+00, %10 ]",
+ "precursor":"br i1 %14, label %19, label %15",
+ "successor":"store i1 true, i1* @randlc.KS, align 4"}
+END scalar
+BEGIN scalar
+{"begin":"%20 = phi double [ %26, %24 ], [ 1.000000e+00, %10 ]",
+ "body":{"begin":"%25 = fmul double %21, 5.000000e-01",
+         "end":"br label %19",
+         "precursor":"br i1 %23, label %28, label %24",
+         "successor":"%20 = phi double [ %26, %24 ], [ 1.000000e+00, %10 ]"},
+ "comparison":"%23 = icmp eq i32 %22, 47",
+ "end":"br i1 %23, label %28, label %24",
+ "increment":"%27 = add nuw nsw i32 %22, 1",
+ "iter_begin":"i32 1",
+ "iter_end":"i32 47",
+ "iter_step":"i32 1",
+ "iterator":"%22 = phi i32 [ %27, %24 ], [ 1, %10 ]",
+ "kernel":{"constants":
+           [{"use":"store double %25, double* @randlc.R46, align 8, !tbaa !2",
+             "value":"@randlc.R46 = internal unnamed_addr global double 0.000000e+00, align 8"},
+            {"use":"store double %26, double* @randlc.T46, align 8, !tbaa !2",
+             "value":"@randlc.T46 = internal unnamed_addr global double 0.000000e+00, align 8"}],
+           "input":
+           ["%20 = phi double [ %26, %24 ], [ 1.000000e+00, %10 ]"],
+           "origin":
+           ["br i1 %23, label %28, label %24"],
+           "output":"%26 = fmul double %20, 2.000000e+00",
+           "restrictions":
+           [{"use":"%26 = fmul double %20, 2.000000e+00",
+             "value":"%20 = phi double [ %26, %24 ], [ 1.000000e+00, %10 ]"},
+            {"use":"%25 = fmul double %21, 5.000000e-01",
+             "value":"%21 = phi double [ %25, %24 ], [ 1.000000e+00, %10 ]"},
+            {"use":"%27 = add nuw nsw i32 %22, 1",
+             "value":"%22 = phi i32 [ %27, %24 ], [ 1, %10 ]"}]},
+ "old_value":"%20 = phi double [ %26, %24 ], [ 1.000000e+00, %10 ]",
+ "precursor":"br i1 %14, label %19, label %15",
+ "successor":"store i1 true, i1* @randlc.KS, align 4"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; double _1; }* in0)
+{
+  in0->_0 *= 0.5;
+  in0->_1 *= 2;
+}
+END LOOP
+END FUNCTION TRANSFORMATION
+BEGIN FUNCTION TRANSFORMATION create_seq
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%16 = phi double [ 1.000000e+00, %14 ], [ %22, %20 ]",
+ "body":{"begin":"%21 = fmul double %17, 5.000000e-01",
+         "end":"br label %15",
+         "precursor":"br i1 %19, label %24, label %20",
+         "successor":"%16 = phi double [ 1.000000e+00, %14 ], [ %22, %20 ]"},
+ "comparison":"%19 = icmp eq i32 %18, 24",
+ "end":"br i1 %19, label %24, label %20",
+ "increment":"%23 = add nuw nsw i32 %18, 1",
+ "iter_begin":"i32 1",
+ "iter_end":"i32 24",
+ "iter_step":"i32 1",
+ "iterator":"%18 = phi i32 [ 1, %14 ], [ %23, %20 ]",
+ "kernel":{"constants":
+           [{"use":"store double %21, double* @randlc.R23, align 8, !tbaa !2",
+             "value":"@randlc.R23 = internal unnamed_addr global double 0.000000e+00, align 8"},
+            {"use":"store double %22, double* @randlc.T23, align 8, !tbaa !2",
+             "value":"@randlc.T23 = internal unnamed_addr global double 0.000000e+00, align 8"}],
+           "input":
+           ["%17 = phi double [ 1.000000e+00, %14 ], [ %21, %20 ]"],
+           "origin":
+           ["br i1 %19, label %24, label %20"],
+           "output":"%21 = fmul double %17, 5.000000e-01",
+           "restrictions":
+           [{"use":"%22 = fmul double %16, 2.000000e+00",
+             "value":"%16 = phi double [ 1.000000e+00, %14 ], [ %22, %20 ]"},
+            {"use":"%21 = fmul double %17, 5.000000e-01",
+             "value":"%17 = phi double [ 1.000000e+00, %14 ], [ %21, %20 ]"},
+            {"use":"%23 = add nuw nsw i32 %18, 1",
+             "value":"%18 = phi i32 [ 1, %14 ], [ %23, %20 ]"}]},
+ "old_value":"%17 = phi double [ 1.000000e+00, %14 ], [ %21, %20 ]",
+ "precursor":"br label %15",
+ "successor":"%25 = phi double [ %31, %29 ], [ 1.000000e+00, %15 ]"}
+END scalar
+BEGIN scalar
+{"begin":"%16 = phi double [ 1.000000e+00, %14 ], [ %22, %20 ]",
+ "body":{"begin":"%21 = fmul double %17, 5.000000e-01",
+         "end":"br label %15",
+         "precursor":"br i1 %19, label %24, label %20",
+         "successor":"%16 = phi double [ 1.000000e+00, %14 ], [ %22, %20 ]"},
+ "comparison":"%19 = icmp eq i32 %18, 24",
+ "end":"br i1 %19, label %24, label %20",
+ "increment":"%23 = add nuw nsw i32 %18, 1",
+ "iter_begin":"i32 1",
+ "iter_end":"i32 24",
+ "iter_step":"i32 1",
+ "iterator":"%18 = phi i32 [ 1, %14 ], [ %23, %20 ]",
+ "kernel":{"constants":
+           [{"use":"store double %21, double* @randlc.R23, align 8, !tbaa !2",
+             "value":"@randlc.R23 = internal unnamed_addr global double 0.000000e+00, align 8"},
+            {"use":"store double %22, double* @randlc.T23, align 8, !tbaa !2",
+             "value":"@randlc.T23 = internal unnamed_addr global double 0.000000e+00, align 8"}],
+           "input":
+           ["%16 = phi double [ 1.000000e+00, %14 ], [ %22, %20 ]"],
+           "origin":
+           ["br i1 %19, label %24, label %20"],
+           "output":"%22 = fmul double %16, 2.000000e+00",
+           "restrictions":
+           [{"use":"%22 = fmul double %16, 2.000000e+00",
+             "value":"%16 = phi double [ 1.000000e+00, %14 ], [ %22, %20 ]"},
+            {"use":"%21 = fmul double %17, 5.000000e-01",
+             "value":"%17 = phi double [ 1.000000e+00, %14 ], [ %21, %20 ]"},
+            {"use":"%23 = add nuw nsw i32 %18, 1",
+             "value":"%18 = phi i32 [ 1, %14 ], [ %23, %20 ]"}]},
+ "old_value":"%16 = phi double [ 1.000000e+00, %14 ], [ %22, %20 ]",
+ "precursor":"br label %15",
+ "successor":"%25 = phi double [ %31, %29 ], [ 1.000000e+00, %15 ]"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; double _1; }* in0)
+{
+  in0->_0 *= 0.5;
+  in0->_1 *= 2;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%25 = phi double [ %31, %29 ], [ 1.000000e+00, %15 ]",
+ "body":{"begin":"%30 = fmul double %26, 5.000000e-01",
+         "end":"br label %24",
+         "precursor":"br i1 %28, label %33, label %29",
+         "successor":"%25 = phi double [ %31, %29 ], [ 1.000000e+00, %15 ]"},
+ "comparison":"%28 = icmp eq i32 %27, 47",
+ "end":"br i1 %28, label %33, label %29",
+ "increment":"%32 = add nuw nsw i32 %27, 1",
+ "iter_begin":"i32 1",
+ "iter_end":"i32 47",
+ "iter_step":"i32 1",
+ "iterator":"%27 = phi i32 [ %32, %29 ], [ 1, %15 ]",
+ "kernel":{"constants":
+           [{"use":"store double %30, double* @randlc.R46, align 8, !tbaa !2",
+             "value":"@randlc.R46 = internal unnamed_addr global double 0.000000e+00, align 8"},
+            {"use":"store double %31, double* @randlc.T46, align 8, !tbaa !2",
+             "value":"@randlc.T46 = internal unnamed_addr global double 0.000000e+00, align 8"}],
+           "input":
+           ["%26 = phi double [ %30, %29 ], [ 1.000000e+00, %15 ]"],
+           "origin":
+           ["br i1 %28, label %33, label %29"],
+           "output":"%30 = fmul double %26, 5.000000e-01",
+           "restrictions":
+           [{"use":"%31 = fmul double %25, 2.000000e+00",
+             "value":"%25 = phi double [ %31, %29 ], [ 1.000000e+00, %15 ]"},
+            {"use":"%30 = fmul double %26, 5.000000e-01",
+             "value":"%26 = phi double [ %30, %29 ], [ 1.000000e+00, %15 ]"},
+            {"use":"%32 = add nuw nsw i32 %27, 1",
+             "value":"%27 = phi i32 [ %32, %29 ], [ 1, %15 ]"}]},
+ "old_value":"%26 = phi double [ %30, %29 ], [ 1.000000e+00, %15 ]",
+ "precursor":"br i1 %19, label %24, label %20",
+ "successor":"store i1 true, i1* @randlc.KS, align 4"}
+END scalar
+BEGIN scalar
+{"begin":"%25 = phi double [ %31, %29 ], [ 1.000000e+00, %15 ]",
+ "body":{"begin":"%30 = fmul double %26, 5.000000e-01",
+         "end":"br label %24",
+         "precursor":"br i1 %28, label %33, label %29",
+         "successor":"%25 = phi double [ %31, %29 ], [ 1.000000e+00, %15 ]"},
+ "comparison":"%28 = icmp eq i32 %27, 47",
+ "end":"br i1 %28, label %33, label %29",
+ "increment":"%32 = add nuw nsw i32 %27, 1",
+ "iter_begin":"i32 1",
+ "iter_end":"i32 47",
+ "iter_step":"i32 1",
+ "iterator":"%27 = phi i32 [ %32, %29 ], [ 1, %15 ]",
+ "kernel":{"constants":
+           [{"use":"store double %30, double* @randlc.R46, align 8, !tbaa !2",
+             "value":"@randlc.R46 = internal unnamed_addr global double 0.000000e+00, align 8"},
+            {"use":"store double %31, double* @randlc.T46, align 8, !tbaa !2",
+             "value":"@randlc.T46 = internal unnamed_addr global double 0.000000e+00, align 8"}],
+           "input":
+           ["%25 = phi double [ %31, %29 ], [ 1.000000e+00, %15 ]"],
+           "origin":
+           ["br i1 %28, label %33, label %29"],
+           "output":"%31 = fmul double %25, 2.000000e+00",
+           "restrictions":
+           [{"use":"%31 = fmul double %25, 2.000000e+00",
+             "value":"%25 = phi double [ %31, %29 ], [ 1.000000e+00, %15 ]"},
+            {"use":"%30 = fmul double %26, 5.000000e-01",
+             "value":"%26 = phi double [ %30, %29 ], [ 1.000000e+00, %15 ]"},
+            {"use":"%32 = add nuw nsw i32 %27, 1",
+             "value":"%27 = phi i32 [ %32, %29 ], [ 1, %15 ]"}]},
+ "old_value":"%25 = phi double [ %31, %29 ], [ 1.000000e+00, %15 ]",
+ "precursor":"br i1 %19, label %24, label %20",
+ "successor":"store i1 true, i1* @randlc.KS, align 4"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; double _1; }* in0)
+{
+  in0->_0 *= 0.5;
+  in0->_1 *= 2;
+}
+END LOOP
+END FUNCTION TRANSFORMATION
+BEGIN FUNCTION TRANSFORMATION full_verify
+BEGIN LOOP
+BEGIN histo
+{"begin":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]",
+ "body":{"begin":"%6 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %3",
+         "end":"br label %2",
+         "precursor":"br i1 %4, label %15, label %5",
+         "successor":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]"},
+ "comparison":"%4 = icmp eq i64 %3, 8388608",
+ "end":"br i1 %4, label %15, label %5",
+ "increment":"%14 = add nuw nsw i64 %3, 1",
+ "indexkernel":{"constants":
+                [{"use":"%6 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %3",
+                  "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)"},
+                 {"use":"%13 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %12",
+                  "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+                 {"use":"%9 = getelementptr inbounds i32, i32* %1, i64 %8",
+                  "value":"%1 = load i32*, i32** @key_buff_ptr_global, align 8"}],
+                "origin":
+                ["br i1 %4, label %15, label %5"],
+                "output":"%9 = getelementptr inbounds i32, i32* %1, i64 %8",
+                "restrictions":
+                [{"use":"%6 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %3",
+                  "value":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]"},
+                 {"use":"%14 = add nuw nsw i64 %3, 1",
+                  "value":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]"}]},
+ "iter_begin":"i64 0",
+ "iter_end":"i64 8388608",
+ "iter_step":"i64 1",
+ "iterator":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]",
+ "kernel":{"constants":
+           [{"use":"%6 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %3",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)"},
+            {"use":"%13 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %12",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+            {"use":"%9 = getelementptr inbounds i32, i32* %1, i64 %8",
+             "value":"%1 = load i32*, i32** @key_buff_ptr_global, align 8"}],
+           "input":
+           ["%7 = load i32, i32* %6, align 4, !tbaa !6",
+            "%10 = load i32, i32* %9, align 4, !tbaa !6"],
+           "origin":
+           ["br i1 %4, label %15, label %5"],
+           "output":"%11 = add nsw i32 %10, -1",
+           "restrictions":
+           [{"use":"%6 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %3",
+             "value":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]"},
+            {"use":"%14 = add nuw nsw i64 %3, 1",
+             "value":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]"}]},
+ "old_value":"%10 = load i32, i32* %9, align 4, !tbaa !6",
+ "precursor":"br label %2",
+ "read":
+ [{"address":"%6 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %3",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]",
+     "value":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]"}],
+   "input_index":
+   ["%3 = phi i64 [ %14, %5 ], [ 0, %0 ]"],
+   "offset_add":{"input":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]",
+                 "value":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]"},
+   "output_index":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]",
+   "stride_mul":
+   [{"input":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]",
+     "value":"%3 = phi i64 [ %14, %5 ], [ 0, %0 ]"}]}],
+ "read_value":
+ ["%7 = load i32, i32* %6, align 4, !tbaa !6"],
+ "store_instr":"store i32 %11, i32* %9, align 4, !tbaa !6",
+ "store_instr_after":"%12 = sext i32 %11 to i64",
+ "successor":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"}
+END histo
+BEGIN OPERATOR
+void op(struct { int* _0; }* in0, int in1)
+{
+  in0->_0[(long)in1] += -1;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]",
+ "body":{"begin":"%20 = add nsw i64 %16, -1",
+         "end":"br label %15",
+         "precursor":"br i1 %18, label %29, label %19",
+         "successor":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"},
+ "comparison":"%18 = icmp eq i64 %16, 8388608",
+ "end":"br i1 %18, label %29, label %19",
+ "increment":"%28 = add nuw nsw i64 %16, 1",
+ "iter_begin":"i64 1",
+ "iter_end":"i64 8388608",
+ "iter_step":"i64 1",
+ "iterator":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]",
+ "kernel":{"constants":
+           [{"use":"%21 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %20",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+            {"use":"%23 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %16",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"}],
+           "input":
+           ["%22 = load i32, i32* %21, align 4, !tbaa !6",
+            "%22 = load i32, i32* %21, align 4, !tbaa !6",
+            "%24 = load i32, i32* %23, align 4, !tbaa !6",
+            "%17 = phi i32 [ %27, %19 ], [ 0, %2 ]"],
+           "origin":
+           ["br i1 %18, label %29, label %19"],
+           "output":"%27 = add nsw i32 %17, %26",
+           "restrictions":
+           [{"use":"%20 = add nsw i64 %16, -1",
+             "value":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"},
+            {"use":"%23 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %16",
+             "value":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"},
+            {"use":"%28 = add nuw nsw i64 %16, 1",
+             "value":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"},
+            {"use":"%27 = add nsw i32 %17, %26",
+             "value":"%17 = phi i32 [ %27, %19 ], [ 0, %2 ]"}]},
+ "old_value":"%17 = phi i32 [ %27, %19 ], [ 0, %2 ]",
+ "precursor":"br i1 %4, label %15, label %5",
+ "read":
+ [{"address":"%21 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %20",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]",
+     "value":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"}],
+   "input_index":
+   ["%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"],
+   "offset_add":{"addend":"i64 -1",
+                 "input":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]",
+                 "value":"%20 = add nsw i64 %16, -1"},
+   "output_index":"%20 = add nsw i64 %16, -1",
+   "stride_mul":
+   [{"input":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]",
+     "value":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"}]},
+  {"address":"%21 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %20",
+   "base_index":"i64 -1",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"i64 -1",
+     "input":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]",
+     "value":"%20 = add nsw i64 %16, -1"}],
+   "input_index":
+   ["%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"],
+   "offset_add":{"input":"%20 = add nsw i64 %16, -1",
+                 "value":"%20 = add nsw i64 %16, -1"},
+   "output_index":"%20 = add nsw i64 %16, -1",
+   "stride_mul":
+   [{"input":"%20 = add nsw i64 %16, -1",
+     "value":"%20 = add nsw i64 %16, -1"}]},
+  {"address":"%23 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %16",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]",
+     "value":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"}],
+   "input_index":
+   ["%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"],
+   "offset_add":{"input":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]",
+                 "value":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"},
+   "output_index":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]",
+   "stride_mul":
+   [{"input":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]",
+     "value":"%16 = phi i64 [ %28, %19 ], [ 1, %2 ]"}]}],
+ "read_value":
+ ["%22 = load i32, i32* %21, align 4, !tbaa !6",
+  "%22 = load i32, i32* %21, align 4, !tbaa !6",
+  "%24 = load i32, i32* %23, align 4, !tbaa !6"],
+ "successor":"%30 = icmp eq i32 %17, 0"}
+END scalar
+BEGIN OPERATOR
+void op(struct { int _0; }* in0, int in1, int in2)
+{
+  in0->_0 += (unsigned int)(unsigned bool)(in1>in2);
+}
+END LOOP
+END FUNCTION TRANSFORMATION
+BEGIN FUNCTION TRANSFORMATION rank
+BEGIN LOOP
+BEGIN histo
+{"begin":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]",
+ "body":{"begin":"%29 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %26",
+         "end":"br label %25",
+         "precursor":"br i1 %27, label %37, label %28",
+         "successor":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]"},
+ "comparison":"%27 = icmp eq i64 %26, 8388608",
+ "end":"br i1 %27, label %37, label %28",
+ "increment":"%36 = add nuw nsw i64 %26, 1",
+ "indexkernel":{"constants":
+                [{"use":"%29 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %26",
+                  "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+                 {"use":"%33 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0), i64 %32",
+                  "value":"i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0)"}],
+                "origin":
+                ["br i1 %27, label %37, label %28"],
+                "output":"%33 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0), i64 %32",
+                "restrictions":
+                [{"use":"%29 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %26",
+                  "value":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]"},
+                 {"use":"%36 = add nuw nsw i64 %26, 1",
+                  "value":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]"}]},
+ "iter_begin":"i64 0",
+ "iter_end":"i64 8388608",
+ "iter_step":"i64 1",
+ "iterator":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]",
+ "kernel":{"constants":
+           [{"use":"%29 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %26",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+            {"use":"%33 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0), i64 %32",
+             "value":"i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0)"}],
+           "input":
+           ["%30 = load i32, i32* %29, align 4, !tbaa !6",
+            "%34 = load i32, i32* %33, align 4, !tbaa !6"],
+           "origin":
+           ["br i1 %27, label %37, label %28"],
+           "output":"%35 = add nsw i32 %34, 1",
+           "restrictions":
+           [{"use":"%29 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %26",
+             "value":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]"},
+            {"use":"%36 = add nuw nsw i64 %26, 1",
+             "value":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]"}]},
+ "old_value":"%34 = load i32, i32* %33, align 4, !tbaa !6",
+ "precursor":"br i1 %21, label %25, label %22",
+ "read":
+ [{"address":"%29 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %26",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]",
+     "value":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]"}],
+   "input_index":
+   ["%26 = phi i64 [ %36, %28 ], [ 0, %19 ]"],
+   "offset_add":{"input":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]",
+                 "value":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]"},
+   "output_index":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]",
+   "stride_mul":
+   [{"input":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]",
+     "value":"%26 = phi i64 [ %36, %28 ], [ 0, %19 ]"}]}],
+ "read_value":
+ ["%30 = load i32, i32* %29, align 4, !tbaa !6"],
+ "store_instr":"store i32 %35, i32* %33, align 4, !tbaa !6",
+ "store_instr_after":"%36 = add nuw nsw i64 %26, 1",
+ "successor":"store i32 0, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_ptrs, i64 0, i64 0), align 16, !tbaa !6"}
+END histo
+BEGIN OPERATOR
+void op(struct { int* _0; }* in0, int in1)
+{
+  in0->_0[(long)/* missing closure */] += 1;
+}
+END LOOP
+BEGIN LOOP
+BEGIN histo
+{"begin":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]",
+ "body":{"begin":"%53 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %50",
+         "end":"br label %49",
+         "precursor":"br i1 %51, label %63, label %52",
+         "successor":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]"},
+ "comparison":"%51 = icmp eq i64 %50, 8388608",
+ "end":"br i1 %51, label %63, label %52",
+ "increment":"%62 = add nuw nsw i64 %50, 1",
+ "indexkernel":{"constants":
+                [{"use":"%53 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %50",
+                  "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+                 {"use":"%57 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_ptrs, i64 0, i64 0), i64 %56",
+                  "value":"i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_ptrs, i64 0, i64 0)"},
+                 {"use":"%61 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %60",
+                  "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)"}],
+                "origin":
+                ["br i1 %51, label %63, label %52"],
+                "output":"%57 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_ptrs, i64 0, i64 0), i64 %56",
+                "restrictions":
+                [{"use":"%53 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %50",
+                  "value":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]"},
+                 {"use":"%62 = add nuw nsw i64 %50, 1",
+                  "value":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]"}]},
+ "iter_begin":"i64 0",
+ "iter_end":"i64 8388608",
+ "iter_step":"i64 1",
+ "iterator":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]",
+ "kernel":{"constants":
+           [{"use":"%53 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %50",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+            {"use":"%57 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_ptrs, i64 0, i64 0), i64 %56",
+             "value":"i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_ptrs, i64 0, i64 0)"},
+            {"use":"%61 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %60",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)"}],
+           "input":
+           ["%54 = load i32, i32* %53, align 4, !tbaa !6",
+            "%58 = load i32, i32* %57, align 4, !tbaa !6"],
+           "origin":
+           ["br i1 %51, label %63, label %52"],
+           "output":"%59 = add nsw i32 %58, 1",
+           "restrictions":
+           [{"use":"%53 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %50",
+             "value":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]"},
+            {"use":"%62 = add nuw nsw i64 %50, 1",
+             "value":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]"}]},
+ "old_value":"%58 = load i32, i32* %57, align 4, !tbaa !6",
+ "precursor":"br i1 %41, label %49, label %42",
+ "read":
+ [{"address":"%53 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %50",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]",
+     "value":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]"}],
+   "input_index":
+   ["%50 = phi i64 [ %62, %52 ], [ 0, %38 ]"],
+   "offset_add":{"input":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]",
+                 "value":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]"},
+   "output_index":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]",
+   "stride_mul":
+   [{"input":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]",
+     "value":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]"}]}],
+ "read_value":
+ ["%54 = load i32, i32* %53, align 4, !tbaa !6"],
+ "store_instr":"store i32 %59, i32* %57, align 4, !tbaa !6",
+ "store_instr_after":"%60 = sext i32 %58 to i64",
+ "successor":"%64 = phi i64 [ %68, %66 ], [ 0, %49 ]"}
+END histo
+BEGIN OPERATOR
+void op(struct { int* _0; }* in0, int in1)
+{
+  in0->_0[(long)/* missing closure */] += 1;
+}
+END LOOP
+BEGIN LOOP
+BEGIN histo
+{"begin":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]",
+ "body":{"begin":"%73 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %70",
+         "end":"br label %69",
+         "precursor":"br i1 %71, label %80, label %72",
+         "successor":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]"},
+ "comparison":"%71 = icmp eq i64 %70, 8388608",
+ "end":"br i1 %71, label %80, label %72",
+ "increment":"%79 = add nuw nsw i64 %70, 1",
+ "indexkernel":{"constants":
+                [{"use":"%73 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %70",
+                  "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)"},
+                 {"use":"%76 = getelementptr i32, i32* getelementptr inbounds ([524288 x i32], [524288 x i32]* @key_buff1, i64 0, i64 0), i64 %75",
+                  "value":"i32* getelementptr inbounds ([524288 x i32], [524288 x i32]* @key_buff1, i64 0, i64 0)"}],
+                "origin":
+                ["br i1 %71, label %80, label %72"],
+                "output":"%76 = getelementptr i32, i32* getelementptr inbounds ([524288 x i32], [524288 x i32]* @key_buff1, i64 0, i64 0), i64 %75",
+                "restrictions":
+                [{"use":"%73 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %70",
+                  "value":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]"},
+                 {"use":"%79 = add nuw nsw i64 %70, 1",
+                  "value":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]"}]},
+ "iter_begin":"i64 0",
+ "iter_end":"i64 8388608",
+ "iter_step":"i64 1",
+ "iterator":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]",
+ "kernel":{"constants":
+           [{"use":"%73 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %70",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)"},
+            {"use":"%76 = getelementptr i32, i32* getelementptr inbounds ([524288 x i32], [524288 x i32]* @key_buff1, i64 0, i64 0), i64 %75",
+             "value":"i32* getelementptr inbounds ([524288 x i32], [524288 x i32]* @key_buff1, i64 0, i64 0)"}],
+           "input":
+           ["%74 = load i32, i32* %73, align 4, !tbaa !6",
+            "%77 = load i32, i32* %76, align 4, !tbaa !6"],
+           "origin":
+           ["br i1 %71, label %80, label %72"],
+           "output":"%78 = add nsw i32 %77, 1",
+           "restrictions":
+           [{"use":"%73 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %70",
+             "value":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]"},
+            {"use":"%79 = add nuw nsw i64 %70, 1",
+             "value":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]"}]},
+ "old_value":"%77 = load i32, i32* %76, align 4, !tbaa !6",
+ "precursor":"br i1 %65, label %69, label %66",
+ "read":
+ [{"address":"%73 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %70",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]",
+     "value":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]"}],
+   "input_index":
+   ["%70 = phi i64 [ %79, %72 ], [ 0, %63 ]"],
+   "offset_add":{"input":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]",
+                 "value":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]"},
+   "output_index":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]",
+   "stride_mul":
+   [{"input":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]",
+     "value":"%70 = phi i64 [ %79, %72 ], [ 0, %63 ]"}]}],
+ "read_value":
+ ["%74 = load i32, i32* %73, align 4, !tbaa !6"],
+ "store_instr":"store i32 %78, i32* %76, align 4, !tbaa !6",
+ "store_instr_after":"%79 = add nuw nsw i64 %70, 1",
+ "successor":"%81 = phi i64 [ %86, %83 ], [ 0, %69 ]"}
+END histo
+BEGIN OPERATOR
+void op(struct { int* _0; }* in0, int in1)
+{
+  in0->_0[(long)in1] += 1;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%39 = phi i32 [ %46, %42 ], [ 0, %37 ]",
+ "body":{"begin":"%43 = add nsw i64 %40, -1",
+         "end":"br label %38",
+         "precursor":"br i1 %41, label %49, label %42",
+         "successor":"%39 = phi i32 [ %46, %42 ], [ 0, %37 ]"},
+ "comparison":"%41 = icmp eq i64 %40, 1024",
+ "end":"br i1 %41, label %49, label %42",
+ "increment":"%48 = add nuw nsw i64 %40, 1",
+ "iter_begin":"i64 1",
+ "iter_end":"i64 1024",
+ "iter_step":"i64 1",
+ "iterator":"%40 = phi i64 [ %48, %42 ], [ 1, %37 ]",
+ "kernel":{"constants":
+           [{"use":"%44 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0), i64 %43",
+             "value":"i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0)"},
+            {"use":"%47 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_ptrs, i64 0, i64 0), i64 %40",
+             "value":"i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_ptrs, i64 0, i64 0)"}],
+           "input":
+           ["%45 = load i32, i32* %44, align 4, !tbaa !6",
+            "%45 = load i32, i32* %44, align 4, !tbaa !6",
+            "%39 = phi i32 [ %46, %42 ], [ 0, %37 ]"],
+           "origin":
+           ["br i1 %41, label %49, label %42"],
+           "output":"%46 = add nsw i32 %45, %39",
+           "restrictions":
+           [{"use":"%46 = add nsw i32 %45, %39",
+             "value":"%39 = phi i32 [ %46, %42 ], [ 0, %37 ]"},
+            {"use":"%43 = add nsw i64 %40, -1",
+             "value":"%40 = phi i64 [ %48, %42 ], [ 1, %37 ]"},
+            {"use":"%47 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_ptrs, i64 0, i64 0), i64 %40",
+             "value":"%40 = phi i64 [ %48, %42 ], [ 1, %37 ]"},
+            {"use":"%48 = add nuw nsw i64 %40, 1",
+             "value":"%40 = phi i64 [ %48, %42 ], [ 1, %37 ]"}]},
+ "old_value":"%39 = phi i32 [ %46, %42 ], [ 0, %37 ]",
+ "precursor":"br label %38",
+ "read":
+ [{"address":"%44 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0), i64 %43",
+   "base_pointer":"i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%40 = phi i64 [ %48, %42 ], [ 1, %37 ]",
+     "value":"%40 = phi i64 [ %48, %42 ], [ 1, %37 ]"}],
+   "input_index":
+   ["%40 = phi i64 [ %48, %42 ], [ 1, %37 ]"],
+   "offset_add":{"addend":"i64 -1",
+                 "input":"%40 = phi i64 [ %48, %42 ], [ 1, %37 ]",
+                 "value":"%43 = add nsw i64 %40, -1"},
+   "output_index":"%43 = add nsw i64 %40, -1",
+   "stride_mul":
+   [{"input":"%40 = phi i64 [ %48, %42 ], [ 1, %37 ]",
+     "value":"%40 = phi i64 [ %48, %42 ], [ 1, %37 ]"}]},
+  {"address":"%44 = getelementptr i32, i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0), i64 %43",
+   "base_index":"i64 -1",
+   "base_pointer":"i32* getelementptr inbounds ([1024 x i32], [1024 x i32]* @bucket_size, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"i64 -1",
+     "input":"%40 = phi i64 [ %48, %42 ], [ 1, %37 ]",
+     "value":"%43 = add nsw i64 %40, -1"}],
+   "input_index":
+   ["%40 = phi i64 [ %48, %42 ], [ 1, %37 ]"],
+   "offset_add":{"input":"%43 = add nsw i64 %40, -1",
+                 "value":"%43 = add nsw i64 %40, -1"},
+   "output_index":"%43 = add nsw i64 %40, -1",
+   "stride_mul":
+   [{"input":"%43 = add nsw i64 %40, -1",
+     "value":"%43 = add nsw i64 %40, -1"}]}],
+ "read_value":
+ ["%45 = load i32, i32* %44, align 4, !tbaa !6",
+  "%45 = load i32, i32* %44, align 4, !tbaa !6"],
+ "successor":"%50 = phi i64 [ %62, %52 ], [ 0, %38 ]"}
+END scalar
+BEGIN OPERATOR
+void op(struct { int _0; }* in0, int in1)
+{
+  in0->_0 += in1;
+}
+END LOOP
+END FUNCTION TRANSFORMATION
+BEGIN FUNCTION TRANSFORMATION main
+BEGIN LOOP
+BEGIN histo
+{"begin":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]",
+ "body":{"begin":"%43 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %40",
+         "end":"br label %39",
+         "precursor":"br i1 %41, label %52, label %42",
+         "successor":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]"},
+ "comparison":"%41 = icmp eq i64 %40, 8388608",
+ "end":"br i1 %41, label %52, label %42",
+ "increment":"%51 = add nuw nsw i64 %40, 1",
+ "indexkernel":{"constants":
+                [{"use":"%43 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %40",
+                  "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)"},
+                 {"use":"%50 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %49",
+                  "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+                 {"use":"%46 = getelementptr inbounds i32, i32* %38, i64 %45",
+                  "value":"%38 = load i32*, i32** @key_buff_ptr_global, align 8"}],
+                "origin":
+                ["br i1 %41, label %52, label %42"],
+                "output":"%46 = getelementptr inbounds i32, i32* %38, i64 %45",
+                "restrictions":
+                [{"use":"%43 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %40",
+                  "value":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]"},
+                 {"use":"%51 = add nuw nsw i64 %40, 1",
+                  "value":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]"}]},
+ "iter_begin":"i64 0",
+ "iter_end":"i64 8388608",
+ "iter_step":"i64 1",
+ "iterator":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]",
+ "kernel":{"constants":
+           [{"use":"%43 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %40",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)"},
+            {"use":"%50 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %49",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+            {"use":"%46 = getelementptr inbounds i32, i32* %38, i64 %45",
+             "value":"%38 = load i32*, i32** @key_buff_ptr_global, align 8"}],
+           "input":
+           ["%44 = load i32, i32* %43, align 4, !tbaa !6",
+            "%47 = load i32, i32* %46, align 4, !tbaa !6"],
+           "origin":
+           ["br i1 %41, label %52, label %42"],
+           "output":"%48 = add nsw i32 %47, -1",
+           "restrictions":
+           [{"use":"%43 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %40",
+             "value":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]"},
+            {"use":"%51 = add nuw nsw i64 %40, 1",
+             "value":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]"}]},
+ "old_value":"%47 = load i32, i32* %46, align 4, !tbaa !6",
+ "precursor":"br label %39",
+ "read":
+ [{"address":"%43 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %40",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]",
+     "value":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]"}],
+   "input_index":
+   ["%40 = phi i64 [ %51, %42 ], [ 0, %37 ]"],
+   "offset_add":{"input":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]",
+                 "value":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]"},
+   "output_index":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]",
+   "stride_mul":
+   [{"input":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]",
+     "value":"%40 = phi i64 [ %51, %42 ], [ 0, %37 ]"}]}],
+ "read_value":
+ ["%44 = load i32, i32* %43, align 4, !tbaa !6"],
+ "store_instr":"store i32 %48, i32* %46, align 4, !tbaa !6",
+ "store_instr_after":"%49 = sext i32 %48 to i64",
+ "successor":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"}
+END histo
+BEGIN OPERATOR
+void op(struct { int* _0; }* in0, int in1)
+{
+  in0->_0[(long)in1] += -1;
+}
+END LOOP
+BEGIN LOOP
+BEGIN histo
+{"begin":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]",
+ "body":{"begin":"%81 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %78",
+         "end":"br label %77",
+         "precursor":"br i1 %79, label %90, label %80",
+         "successor":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]"},
+ "comparison":"%79 = icmp eq i64 %78, 8388608",
+ "end":"br i1 %79, label %90, label %80",
+ "increment":"%89 = add nuw nsw i64 %78, 1",
+ "indexkernel":{"constants":
+                [{"use":"%81 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %78",
+                  "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)"},
+                 {"use":"%88 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %87",
+                  "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+                 {"use":"%84 = getelementptr inbounds i32, i32* %76, i64 %83",
+                  "value":"%76 = load i32*, i32** @key_buff_ptr_global, align 8"}],
+                "origin":
+                ["br i1 %79, label %90, label %80"],
+                "output":"%84 = getelementptr inbounds i32, i32* %76, i64 %83",
+                "restrictions":
+                [{"use":"%81 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %78",
+                  "value":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]"},
+                 {"use":"%89 = add nuw nsw i64 %78, 1",
+                  "value":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]"}]},
+ "iter_begin":"i64 0",
+ "iter_end":"i64 8388608",
+ "iter_step":"i64 1",
+ "iterator":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]",
+ "kernel":{"constants":
+           [{"use":"%81 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %78",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)"},
+            {"use":"%88 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %87",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+            {"use":"%84 = getelementptr inbounds i32, i32* %76, i64 %83",
+             "value":"%76 = load i32*, i32** @key_buff_ptr_global, align 8"}],
+           "input":
+           ["%82 = load i32, i32* %81, align 4, !tbaa !6",
+            "%85 = load i32, i32* %84, align 4, !tbaa !6"],
+           "origin":
+           ["br i1 %79, label %90, label %80"],
+           "output":"%86 = add nsw i32 %85, -1",
+           "restrictions":
+           [{"use":"%81 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %78",
+             "value":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]"},
+            {"use":"%89 = add nuw nsw i64 %78, 1",
+             "value":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]"}]},
+ "old_value":"%85 = load i32, i32* %84, align 4, !tbaa !6",
+ "precursor":"br label %77",
+ "read":
+ [{"address":"%81 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0), i64 %78",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_buff2, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]",
+     "value":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]"}],
+   "input_index":
+   ["%78 = phi i64 [ %89, %80 ], [ 0, %75 ]"],
+   "offset_add":{"input":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]",
+                 "value":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]"},
+   "output_index":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]",
+   "stride_mul":
+   [{"input":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]",
+     "value":"%78 = phi i64 [ %89, %80 ], [ 0, %75 ]"}]}],
+ "read_value":
+ ["%82 = load i32, i32* %81, align 4, !tbaa !6"],
+ "store_instr":"store i32 %86, i32* %84, align 4, !tbaa !6",
+ "store_instr_after":"%87 = sext i32 %86 to i64",
+ "successor":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"}
+END histo
+BEGIN OPERATOR
+void op(struct { int* _0; }* in0, int in1)
+{
+  in0->_0[(long)in1] += -1;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]",
+ "body":{"begin":"%57 = add nsw i64 %53, -1",
+         "end":"br label %52",
+         "precursor":"br i1 %55, label %66, label %56",
+         "successor":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"},
+ "comparison":"%55 = icmp eq i64 %53, 8388608",
+ "end":"br i1 %55, label %66, label %56",
+ "increment":"%65 = add nuw nsw i64 %53, 1",
+ "iter_begin":"i64 1",
+ "iter_end":"i64 8388608",
+ "iter_step":"i64 1",
+ "iterator":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]",
+ "kernel":{"constants":
+           [{"use":"%58 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %57",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+            {"use":"%60 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %53",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"}],
+           "input":
+           ["%59 = load i32, i32* %58, align 4, !tbaa !6",
+            "%59 = load i32, i32* %58, align 4, !tbaa !6",
+            "%61 = load i32, i32* %60, align 4, !tbaa !6",
+            "%54 = phi i32 [ %64, %56 ], [ 0, %39 ]"],
+           "origin":
+           ["br i1 %55, label %66, label %56"],
+           "output":"%64 = add nsw i32 %54, %63",
+           "restrictions":
+           [{"use":"%57 = add nsw i64 %53, -1",
+             "value":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"},
+            {"use":"%60 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %53",
+             "value":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"},
+            {"use":"%65 = add nuw nsw i64 %53, 1",
+             "value":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"},
+            {"use":"%64 = add nsw i32 %54, %63",
+             "value":"%54 = phi i32 [ %64, %56 ], [ 0, %39 ]"}]},
+ "old_value":"%54 = phi i32 [ %64, %56 ], [ 0, %39 ]",
+ "precursor":"br i1 %41, label %52, label %42",
+ "read":
+ [{"address":"%58 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %57",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]",
+     "value":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"}],
+   "input_index":
+   ["%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"],
+   "offset_add":{"addend":"i64 -1",
+                 "input":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]",
+                 "value":"%57 = add nsw i64 %53, -1"},
+   "output_index":"%57 = add nsw i64 %53, -1",
+   "stride_mul":
+   [{"input":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]",
+     "value":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"}]},
+  {"address":"%58 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %57",
+   "base_index":"i64 -1",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"i64 -1",
+     "input":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]",
+     "value":"%57 = add nsw i64 %53, -1"}],
+   "input_index":
+   ["%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"],
+   "offset_add":{"input":"%57 = add nsw i64 %53, -1",
+                 "value":"%57 = add nsw i64 %53, -1"},
+   "output_index":"%57 = add nsw i64 %53, -1",
+   "stride_mul":
+   [{"input":"%57 = add nsw i64 %53, -1",
+     "value":"%57 = add nsw i64 %53, -1"}]},
+  {"address":"%60 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %53",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]",
+     "value":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"}],
+   "input_index":
+   ["%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"],
+   "offset_add":{"input":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]",
+                 "value":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"},
+   "output_index":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]",
+   "stride_mul":
+   [{"input":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]",
+     "value":"%53 = phi i64 [ %65, %56 ], [ 1, %39 ]"}]}],
+ "read_value":
+ ["%59 = load i32, i32* %58, align 4, !tbaa !6",
+  "%59 = load i32, i32* %58, align 4, !tbaa !6",
+  "%61 = load i32, i32* %60, align 4, !tbaa !6"],
+ "successor":"%67 = icmp eq i32 %54, 0"}
+END scalar
+BEGIN OPERATOR
+void op(struct { int _0; }* in0, int in1, int in2)
+{
+  in0->_0 += (unsigned int)(unsigned bool)(in1>in2);
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]",
+ "body":{"begin":"%95 = add nsw i64 %91, -1",
+         "end":"br label %90",
+         "precursor":"br i1 %93, label %104, label %94",
+         "successor":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"},
+ "comparison":"%93 = icmp eq i64 %91, 8388608",
+ "end":"br i1 %93, label %104, label %94",
+ "increment":"%103 = add nuw nsw i64 %91, 1",
+ "iter_begin":"i64 1",
+ "iter_end":"i64 8388608",
+ "iter_step":"i64 1",
+ "iterator":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]",
+ "kernel":{"constants":
+           [{"use":"%96 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %95",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"},
+            {"use":"%98 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %91",
+             "value":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)"}],
+           "input":
+           ["%97 = load i32, i32* %96, align 4, !tbaa !6",
+            "%97 = load i32, i32* %96, align 4, !tbaa !6",
+            "%99 = load i32, i32* %98, align 4, !tbaa !6",
+            "%92 = phi i32 [ %102, %94 ], [ 0, %77 ]"],
+           "origin":
+           ["br i1 %93, label %104, label %94"],
+           "output":"%102 = add nsw i32 %92, %101",
+           "restrictions":
+           [{"use":"%95 = add nsw i64 %91, -1",
+             "value":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"},
+            {"use":"%98 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %91",
+             "value":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"},
+            {"use":"%103 = add nuw nsw i64 %91, 1",
+             "value":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"},
+            {"use":"%102 = add nsw i32 %92, %101",
+             "value":"%92 = phi i32 [ %102, %94 ], [ 0, %77 ]"}]},
+ "old_value":"%92 = phi i32 [ %102, %94 ], [ 0, %77 ]",
+ "precursor":"br i1 %79, label %90, label %80",
+ "read":
+ [{"address":"%96 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %95",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]",
+     "value":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"}],
+   "input_index":
+   ["%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"],
+   "offset_add":{"addend":"i64 -1",
+                 "input":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]",
+                 "value":"%95 = add nsw i64 %91, -1"},
+   "output_index":"%95 = add nsw i64 %91, -1",
+   "stride_mul":
+   [{"input":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]",
+     "value":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"}]},
+  {"address":"%96 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %95",
+   "base_index":"i64 -1",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"i64 -1",
+     "input":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]",
+     "value":"%95 = add nsw i64 %91, -1"}],
+   "input_index":
+   ["%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"],
+   "offset_add":{"input":"%95 = add nsw i64 %91, -1",
+                 "value":"%95 = add nsw i64 %91, -1"},
+   "output_index":"%95 = add nsw i64 %91, -1",
+   "stride_mul":
+   [{"input":"%95 = add nsw i64 %91, -1",
+     "value":"%95 = add nsw i64 %91, -1"}]},
+  {"address":"%98 = getelementptr i32, i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0), i64 %91",
+   "base_pointer":"i32* getelementptr inbounds ([8388608 x i32], [8388608 x i32]* @key_array, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]",
+     "value":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"}],
+   "input_index":
+   ["%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"],
+   "offset_add":{"input":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]",
+                 "value":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"},
+   "output_index":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]",
+   "stride_mul":
+   [{"input":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]",
+     "value":"%91 = phi i64 [ %103, %94 ], [ 1, %77 ]"}]}],
+ "read_value":
+ ["%97 = load i32, i32* %96, align 4, !tbaa !6",
+  "%97 = load i32, i32* %96, align 4, !tbaa !6",
+  "%99 = load i32, i32* %98, align 4, !tbaa !6"],
+ "successor":"%105 = icmp eq i32 %92, 0"}
+END scalar
+BEGIN OPERATOR
+void op(struct { int _0; }* in0, int in1, int in2)
+{
+  in0->_0 += (unsigned int)(unsigned bool)(in1>in2);
+}
+END LOOP
+END FUNCTION TRANSFORMATION

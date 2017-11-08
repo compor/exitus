@@ -1,0 +1,58 @@
+BEGIN FUNCTION TRANSFORMATION main
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]",
+ "body":{"begin":"%133 = getelementptr double, double* getelementptr inbounds ([10 x double], [10 x double]* @q, i64 0, i64 0), i64 %129",
+         "end":"br label %128",
+         "precursor":"br i1 %131, label %137, label %132",
+         "successor":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]"},
+ "comparison":"%131 = icmp eq i64 %129, 10",
+ "end":"br i1 %131, label %137, label %132",
+ "increment":"%136 = add nuw nsw i64 %129, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 10",
+ "iter_step":"i64 1",
+ "iterator":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]",
+ "kernel":{"constants":
+           [{"use":"%133 = getelementptr double, double* getelementptr inbounds ([10 x double], [10 x double]* @q, i64 0, i64 0), i64 %129",
+             "value":"double* getelementptr inbounds ([10 x double], [10 x double]* @q, i64 0, i64 0)"}],
+           "input":
+           ["%134 = load double, double* %133, align 8, !tbaa !5",
+            "%130 = phi double [ %135, %132 ], [ 0.000000e+00, %52 ]"],
+           "origin":
+           ["br i1 %131, label %137, label %132"],
+           "output":"%135 = fadd double %130, %134",
+           "restrictions":
+           [{"use":"%133 = getelementptr double, double* getelementptr inbounds ([10 x double], [10 x double]* @q, i64 0, i64 0), i64 %129",
+             "value":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]"},
+            {"use":"%136 = add nuw nsw i64 %129, 1",
+             "value":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]"},
+            {"use":"%135 = fadd double %130, %134",
+             "value":"%130 = phi double [ %135, %132 ], [ 0.000000e+00, %52 ]"}]},
+ "old_value":"%130 = phi double [ %135, %132 ], [ 0.000000e+00, %52 ]",
+ "precursor":"br i1 %56, label %128, label %57",
+ "read":
+ [{"address":"%133 = getelementptr double, double* getelementptr inbounds ([10 x double], [10 x double]* @q, i64 0, i64 0), i64 %129",
+   "base_pointer":"double* getelementptr inbounds ([10 x double], [10 x double]* @q, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]",
+     "value":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]"}],
+   "input_index":
+   ["%129 = phi i64 [ %136, %132 ], [ 0, %52 ]"],
+   "offset_add":{"input":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]",
+                 "value":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]"},
+   "output_index":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]",
+   "stride_mul":
+   [{"input":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]",
+     "value":"%129 = phi i64 [ %136, %132 ], [ 0, %52 ]"}]}],
+ "read_value":
+ ["%134 = load double, double* %133, align 8, !tbaa !5"],
+ "successor":"call void @timer_stop(i32 0) #5"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; }* in0, double in1)
+{
+  in0->_0 += in1;
+}
+END LOOP
+END FUNCTION TRANSFORMATION

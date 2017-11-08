@@ -1,0 +1,134 @@
+BEGIN FUNCTION TRANSFORMATION z_solve
+BEGIN LOOP
+BEGIN histo
+{"begin":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]",
+ "body":{"begin":"%1075 = load double, double* %1070, align 8, !tbaa !7",
+         "end":"br label %1071",
+         "precursor":"br i1 %1073, label %1087, label %1074",
+         "successor":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"},
+ "comparison":"%1073 = icmp eq i64 %1072, 5",
+ "end":"br i1 %1073, label %1087, label %1074",
+ "increment":"%1086 = add nuw nsw i64 %1072, 1",
+ "indexkernel":{"constants":
+                [{"use":"%1079 = getelementptr double, double* getelementptr inbounds ([65 x [3 x [5 x [5 x double]]]], [65 x [3 x [5 x [5 x double]]]]* @lhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1078",
+                  "value":"double* getelementptr inbounds ([65 x [3 x [5 x [5 x double]]]], [65 x [3 x [5 x [5 x double]]]]* @lhs, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+                 {"use":"%1082 = getelementptr double, double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1081",
+                  "value":"double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+                 {"use":"%1076 = add i64 %1059, %1072",
+                  "value":"%1059 = mul i64 %1058, 5"},
+                 {"use":"%1081 = add i64 %1064, %1072",
+                  "value":"%1064 = mul i64 %1063, 5"},
+                 {"use":"%1078 = add i64 %1077, %1066",
+                  "value":"%1066 = phi i64 [ %1088, %1087 ], [ 0, %1050 ]"},
+                 {"use":"%1075 = load double, double* %1070, align 8, !tbaa !7",
+                  "value":"%1070 = getelementptr double, double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1069"},
+                 {"use":"store double %1085, double* %1070, align 8, !tbaa !7",
+                  "value":"%1070 = getelementptr double, double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1069"}],
+                "origin":
+                ["br i1 %1073, label %1087, label %1074"],
+                "output":"%1070 = getelementptr double, double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1069",
+                "restrictions":
+                [{"use":"%1076 = add i64 %1059, %1072",
+                  "value":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"},
+                 {"use":"%1081 = add i64 %1064, %1072",
+                  "value":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"},
+                 {"use":"%1086 = add nuw nsw i64 %1072, 1",
+                  "value":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"}]},
+ "iter_begin":"i64 0",
+ "iter_end":"i64 5",
+ "iter_step":"i64 1",
+ "iterator":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]",
+ "kernel":{"constants":
+           [{"use":"%1079 = getelementptr double, double* getelementptr inbounds ([65 x [3 x [5 x [5 x double]]]], [65 x [3 x [5 x [5 x double]]]]* @lhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1078",
+             "value":"double* getelementptr inbounds ([65 x [3 x [5 x [5 x double]]]], [65 x [3 x [5 x [5 x double]]]]* @lhs, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%1082 = getelementptr double, double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1081",
+             "value":"double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0)"},
+            {"use":"%1076 = add i64 %1059, %1072",
+             "value":"%1059 = mul i64 %1058, 5"},
+            {"use":"%1081 = add i64 %1064, %1072",
+             "value":"%1064 = mul i64 %1063, 5"},
+            {"use":"%1078 = add i64 %1077, %1066",
+             "value":"%1066 = phi i64 [ %1088, %1087 ], [ 0, %1050 ]"},
+            {"use":"%1075 = load double, double* %1070, align 8, !tbaa !7",
+             "value":"%1070 = getelementptr double, double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1069"},
+            {"use":"store double %1085, double* %1070, align 8, !tbaa !7",
+             "value":"%1070 = getelementptr double, double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1069"}],
+           "input":
+           ["%1080 = load double, double* %1079, align 8, !tbaa !7",
+            "%1083 = load double, double* %1082, align 8, !tbaa !7",
+            "%1083 = load double, double* %1082, align 8, !tbaa !7",
+            "%1075 = load double, double* %1070, align 8, !tbaa !7"],
+           "origin":
+           ["br i1 %1073, label %1087, label %1074"],
+           "output":"%1085 = fsub double %1075, %1084",
+           "restrictions":
+           [{"use":"%1076 = add i64 %1059, %1072",
+             "value":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"},
+            {"use":"%1081 = add i64 %1064, %1072",
+             "value":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"},
+            {"use":"%1086 = add nuw nsw i64 %1072, 1",
+             "value":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"}]},
+ "old_value":"%1075 = load double, double* %1070, align 8, !tbaa !7",
+ "precursor":"br label %1071",
+ "read":
+ [{"address":"%1079 = getelementptr double, double* getelementptr inbounds ([65 x [3 x [5 x [5 x double]]]], [65 x [3 x [5 x [5 x double]]]]* @lhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1078",
+   "base_index":"%1059 = mul i64 %1058, 5",
+   "base_pointer":"double* getelementptr inbounds ([65 x [3 x [5 x [5 x double]]]], [65 x [3 x [5 x [5 x double]]]]* @lhs, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%1059 = mul i64 %1058, 5",
+     "input":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]",
+     "value":"%1076 = add i64 %1059, %1072"}],
+   "input_index":
+   ["%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"],
+   "offset_add":{"addend":"%1066 = phi i64 [ %1088, %1087 ], [ 0, %1050 ]",
+                 "input":"%1077 = mul i64 %1076, 5",
+                 "value":"%1078 = add i64 %1077, %1066"},
+   "output_index":"%1078 = add i64 %1077, %1066",
+   "stride_mul":
+   [{"input":"%1076 = add i64 %1059, %1072",
+     "multiplier":"i64 5",
+     "value":"%1077 = mul i64 %1076, 5"}]},
+  {"address":"%1082 = getelementptr double, double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1081",
+   "base_pointer":"double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]",
+     "value":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"}],
+   "input_index":
+   ["%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"],
+   "offset_add":{"addend":"%1064 = mul i64 %1063, 5",
+                 "input":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]",
+                 "value":"%1081 = add i64 %1064, %1072"},
+   "output_index":"%1081 = add i64 %1064, %1072",
+   "stride_mul":
+   [{"input":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]",
+     "value":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"}]},
+  {"address":"%1082 = getelementptr double, double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0), i64 %1081",
+   "base_index":"%1064 = mul i64 %1063, 5",
+   "base_pointer":"double* getelementptr inbounds ([64 x [65 x [65 x [5 x double]]]], [64 x [65 x [65 x [5 x double]]]]* @rhs, i64 0, i64 0, i64 0, i64 0, i64 0)",
+   "index_add":
+   [{"addend":"%1064 = mul i64 %1063, 5",
+     "input":"%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]",
+     "value":"%1081 = add i64 %1064, %1072"}],
+   "input_index":
+   ["%1072 = phi i64 [ %1086, %1074 ], [ 0, %1068 ]"],
+   "offset_add":{"input":"%1081 = add i64 %1064, %1072",
+                 "value":"%1081 = add i64 %1064, %1072"},
+   "output_index":"%1081 = add i64 %1064, %1072",
+   "stride_mul":
+   [{"input":"%1081 = add i64 %1064, %1072",
+     "value":"%1081 = add i64 %1064, %1072"}]}],
+ "read_value":
+ ["%1080 = load double, double* %1079, align 8, !tbaa !7",
+  "%1083 = load double, double* %1082, align 8, !tbaa !7",
+  "%1083 = load double, double* %1082, align 8, !tbaa !7"],
+ "store_instr":"store double %1085, double* %1070, align 8, !tbaa !7",
+ "store_instr_after":"%1086 = add nuw nsw i64 %1072, 1",
+ "successor":"%1088 = add nuw nsw i64 %1066, 1"}
+END histo
+BEGIN OPERATOR
+void op(struct { double* _0; }* in0, double in1, double in2)
+{
+  */* missing closure */ = */* missing closure */-in1*in2;
+}
+END LOOP
+END FUNCTION TRANSFORMATION

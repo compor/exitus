@@ -1,0 +1,120 @@
+BEGIN FUNCTION TRANSFORMATION error_norm
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%75 = phi double [ %83, %78 ], [ %73, %71 ]",
+ "body":{"begin":"%79 = getelementptr i32, i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0), i64 %76",
+         "end":"br label %74",
+         "precursor":"br i1 %77, label %85, label %78",
+         "successor":"%75 = phi double [ %83, %78 ], [ %73, %71 ]"},
+ "comparison":"%77 = icmp eq i64 %76, 3",
+ "end":"br i1 %77, label %85, label %78",
+ "increment":"%84 = add nuw nsw i64 %76, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 3",
+ "iter_step":"i64 1",
+ "iterator":"%76 = phi i64 [ %84, %78 ], [ 0, %71 ]",
+ "kernel":{"constants":
+           [{"use":"%79 = getelementptr i32, i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0), i64 %76",
+             "value":"i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0)"},
+            {"use":"store double %83, double* %72, align 8, !tbaa !2",
+             "value":"%72 = getelementptr inbounds double, double* %0, i64 %69"}],
+           "input":
+           ["%80 = load i32, i32* %79, align 4, !tbaa !6",
+            "%75 = phi double [ %83, %78 ], [ %73, %71 ]"],
+           "origin":
+           ["br i1 %77, label %85, label %78"],
+           "output":"%83 = fdiv double %75, %82",
+           "restrictions":
+           [{"use":"%83 = fdiv double %75, %82",
+             "value":"%75 = phi double [ %83, %78 ], [ %73, %71 ]"},
+            {"use":"%79 = getelementptr i32, i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0), i64 %76",
+             "value":"%76 = phi i64 [ %84, %78 ], [ 0, %71 ]"},
+            {"use":"%84 = add nuw nsw i64 %76, 1",
+             "value":"%76 = phi i64 [ %84, %78 ], [ 0, %71 ]"}]},
+ "old_value":"%75 = phi double [ %83, %78 ], [ %73, %71 ]",
+ "precursor":"br label %74",
+ "read":
+ [{"address":"%79 = getelementptr i32, i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0), i64 %76",
+   "base_pointer":"i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%76 = phi i64 [ %84, %78 ], [ 0, %71 ]",
+     "value":"%76 = phi i64 [ %84, %78 ], [ 0, %71 ]"}],
+   "input_index":
+   ["%76 = phi i64 [ %84, %78 ], [ 0, %71 ]"],
+   "offset_add":{"input":"%76 = phi i64 [ %84, %78 ], [ 0, %71 ]",
+                 "value":"%76 = phi i64 [ %84, %78 ], [ 0, %71 ]"},
+   "output_index":"%76 = phi i64 [ %84, %78 ], [ 0, %71 ]",
+   "stride_mul":
+   [{"input":"%76 = phi i64 [ %84, %78 ], [ 0, %71 ]",
+     "value":"%76 = phi i64 [ %84, %78 ], [ 0, %71 ]"}]}],
+ "read_value":
+ ["%80 = load i32, i32* %79, align 4, !tbaa !6"],
+ "successor":"%86 = call double @sqrt(double %75) #4"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; }* in0, int in1)
+{
+  in0->_0 /= (double)(in1-2);
+}
+END LOOP
+END FUNCTION TRANSFORMATION
+BEGIN FUNCTION TRANSFORMATION rhs_norm
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%57 = phi double [ %65, %60 ], [ %55, %53 ]",
+ "body":{"begin":"%61 = getelementptr i32, i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0), i64 %58",
+         "end":"br label %56",
+         "precursor":"br i1 %59, label %67, label %60",
+         "successor":"%57 = phi double [ %65, %60 ], [ %55, %53 ]"},
+ "comparison":"%59 = icmp eq i64 %58, 3",
+ "end":"br i1 %59, label %67, label %60",
+ "increment":"%66 = add nuw nsw i64 %58, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"i64 3",
+ "iter_step":"i64 1",
+ "iterator":"%58 = phi i64 [ %66, %60 ], [ 0, %53 ]",
+ "kernel":{"constants":
+           [{"use":"%61 = getelementptr i32, i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0), i64 %58",
+             "value":"i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0)"},
+            {"use":"store double %65, double* %54, align 8, !tbaa !2",
+             "value":"%54 = getelementptr inbounds double, double* %0, i64 %51"}],
+           "input":
+           ["%62 = load i32, i32* %61, align 4, !tbaa !6",
+            "%57 = phi double [ %65, %60 ], [ %55, %53 ]"],
+           "origin":
+           ["br i1 %59, label %67, label %60"],
+           "output":"%65 = fdiv double %57, %64",
+           "restrictions":
+           [{"use":"%65 = fdiv double %57, %64",
+             "value":"%57 = phi double [ %65, %60 ], [ %55, %53 ]"},
+            {"use":"%61 = getelementptr i32, i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0), i64 %58",
+             "value":"%58 = phi i64 [ %66, %60 ], [ 0, %53 ]"},
+            {"use":"%66 = add nuw nsw i64 %58, 1",
+             "value":"%58 = phi i64 [ %66, %60 ], [ 0, %53 ]"}]},
+ "old_value":"%57 = phi double [ %65, %60 ], [ %55, %53 ]",
+ "precursor":"br label %56",
+ "read":
+ [{"address":"%61 = getelementptr i32, i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0), i64 %58",
+   "base_pointer":"i32* getelementptr inbounds ([3 x i32], [3 x i32]* @grid_points, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%58 = phi i64 [ %66, %60 ], [ 0, %53 ]",
+     "value":"%58 = phi i64 [ %66, %60 ], [ 0, %53 ]"}],
+   "input_index":
+   ["%58 = phi i64 [ %66, %60 ], [ 0, %53 ]"],
+   "offset_add":{"input":"%58 = phi i64 [ %66, %60 ], [ 0, %53 ]",
+                 "value":"%58 = phi i64 [ %66, %60 ], [ 0, %53 ]"},
+   "output_index":"%58 = phi i64 [ %66, %60 ], [ 0, %53 ]",
+   "stride_mul":
+   [{"input":"%58 = phi i64 [ %66, %60 ], [ 0, %53 ]",
+     "value":"%58 = phi i64 [ %66, %60 ], [ 0, %53 ]"}]}],
+ "read_value":
+ ["%62 = load i32, i32* %61, align 4, !tbaa !6"],
+ "successor":"%68 = tail call double @sqrt(double %57) #4"}
+END scalar
+BEGIN OPERATOR
+void op(struct { double _0; }* in0, int in1)
+{
+  in0->_0 /= (double)(in1-2);
+}
+END LOOP
+END FUNCTION TRANSFORMATION

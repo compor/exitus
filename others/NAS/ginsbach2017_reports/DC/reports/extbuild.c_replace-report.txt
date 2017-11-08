@@ -1,0 +1,349 @@
+BEGIN FUNCTION TRANSFORMATION MultiWayMerge
+BEGIN LOOP
+BEGIN AXPY
+{"begin":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]",
+ "body":{"begin":"%144 = getelementptr inbounds i64, i64* %14, i64 %141",
+         "end":"br label %140",
+         "precursor":"br i1 %142, label %183, label %143",
+         "successor":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]"},
+ "comparison":"%142 = icmp eq i64 %141, %139",
+ "dst":{"address":"%146 = getelementptr inbounds i64, i64* %15, i64 %141",
+        "base_pointer":"%15 = bitcast [28 x i32]* %2 to i64*",
+        "index_add":
+        [{"input":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]",
+          "value":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]"}],
+        "input_index":
+        ["%141 = phi i64 [ %149, %143 ], [ 0, %137 ]"],
+        "offset_add":{"input":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]",
+                      "value":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]"},
+        "output_index":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]",
+        "store":"store i64 %148, i64* %146, align 8, !tbaa !14",
+        "stride_mul":
+        [{"input":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]",
+          "value":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]"}]},
+ "end":"br i1 %142, label %183, label %143",
+ "increment":"%149 = add nuw nsw i64 %141, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"%139 = zext i32 %138 to i64",
+ "iter_step":"i64 1",
+ "iterator":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]",
+ "precursor":"br label %140",
+ "src":{"address":"%144 = getelementptr inbounds i64, i64* %14, i64 %141",
+        "base_pointer":"%14 = bitcast [28 x i32]* %4 to i64*",
+        "index_add":
+        [{"input":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]",
+          "value":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]"}],
+        "input_index":
+        ["%141 = phi i64 [ %149, %143 ], [ 0, %137 ]"],
+        "offset_add":{"input":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]",
+                      "value":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]"},
+        "output_index":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]",
+        "stride_mul":
+        [{"input":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]",
+          "value":"%141 = phi i64 [ %149, %143 ], [ 0, %137 ]"}],
+        "value":"%145 = load i64, i64* %144, align 8, !tbaa !14"},
+ "successor":"%184 = load i32, i32* %19, align 8, !tbaa !28",
+ "sum":{"addend":"%145 = load i64, i64* %144, align 8, !tbaa !14",
+        "input":"%147 = load i64, i64* %146, align 8, !tbaa !14",
+        "value":"%148 = add nsw i64 %147, %145"}}
+END AXPY
+END LOOP
+BEGIN LOOP
+BEGIN AXPY
+{"begin":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]",
+ "body":{"begin":"%169 = getelementptr inbounds i64, i64* %15, i64 %166",
+         "end":"br label %165",
+         "precursor":"br i1 %167, label %180, label %168",
+         "successor":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]"},
+ "comparison":"%167 = icmp eq i64 %166, %164",
+ "dst":{"address":"%171 = getelementptr i64, i64* %48, i64 %166",
+        "base_pointer":"%48 = getelementptr %struct.ADC_VIEW_CNTL, %struct.ADC_VIEW_CNTL* %0, i64 0, i32 39, i64 0",
+        "index_add":
+        [{"input":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]",
+          "value":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]"}],
+        "input_index":
+        ["%166 = phi i64 [ %179, %168 ], [ 0, %159 ]"],
+        "offset_add":{"input":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]",
+                      "value":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]"},
+        "output_index":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]",
+        "store":"store i64 %173, i64* %171, align 8, !tbaa !14",
+        "stride_mul":
+        [{"input":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]",
+          "value":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]"}]},
+ "end":"br i1 %167, label %180, label %168",
+ "increment":"%179 = add nuw nsw i64 %166, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"%164 = zext i32 %162 to i64",
+ "iter_step":"i64 1",
+ "iterator":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]",
+ "precursor":"br label %165",
+ "src":{"address":"%169 = getelementptr inbounds i64, i64* %15, i64 %166",
+        "base_pointer":"%15 = bitcast [28 x i32]* %2 to i64*",
+        "index_add":
+        [{"input":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]",
+          "value":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]"}],
+        "input_index":
+        ["%166 = phi i64 [ %179, %168 ], [ 0, %159 ]"],
+        "offset_add":{"input":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]",
+                      "value":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]"},
+        "output_index":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]",
+        "stride_mul":
+        [{"input":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]",
+          "value":"%166 = phi i64 [ %179, %168 ], [ 0, %159 ]"}],
+        "value":"%170 = load i64, i64* %169, align 8, !tbaa !14"},
+ "successor":"%181 = load i32, i32* %12, align 4, !tbaa !32",
+ "sum":{"addend":"%170 = load i64, i64* %169, align 8, !tbaa !14",
+        "input":"%172 = load i64, i64* %171, align 8, !tbaa !14",
+        "value":"%173 = add nsw i64 %172, %170"}}
+END AXPY
+END LOOP
+BEGIN LOOP
+BEGIN AXPY
+{"begin":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]",
+ "body":{"begin":"%235 = getelementptr inbounds i64, i64* %15, i64 %232",
+         "end":"br label %231",
+         "precursor":"br i1 %233, label %246, label %234",
+         "successor":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]"},
+ "comparison":"%233 = icmp eq i64 %232, %230",
+ "dst":{"address":"%237 = getelementptr i64, i64* %48, i64 %232",
+        "base_pointer":"%48 = getelementptr %struct.ADC_VIEW_CNTL, %struct.ADC_VIEW_CNTL* %0, i64 0, i32 39, i64 0",
+        "index_add":
+        [{"input":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]",
+          "value":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]"}],
+        "input_index":
+        ["%232 = phi i64 [ %245, %234 ], [ 0, %225 ]"],
+        "offset_add":{"input":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]",
+                      "value":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]"},
+        "output_index":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]",
+        "store":"store i64 %239, i64* %237, align 8, !tbaa !14",
+        "stride_mul":
+        [{"input":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]",
+          "value":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]"}]},
+ "end":"br i1 %233, label %246, label %234",
+ "increment":"%245 = add nuw nsw i64 %232, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"%230 = zext i32 %228 to i64",
+ "iter_step":"i64 1",
+ "iterator":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]",
+ "precursor":"br label %231",
+ "src":{"address":"%235 = getelementptr inbounds i64, i64* %15, i64 %232",
+        "base_pointer":"%15 = bitcast [28 x i32]* %2 to i64*",
+        "index_add":
+        [{"input":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]",
+          "value":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]"}],
+        "input_index":
+        ["%232 = phi i64 [ %245, %234 ], [ 0, %225 ]"],
+        "offset_add":{"input":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]",
+                      "value":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]"},
+        "output_index":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]",
+        "stride_mul":
+        [{"input":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]",
+          "value":"%232 = phi i64 [ %245, %234 ], [ 0, %225 ]"}],
+        "value":"%236 = load i64, i64* %235, align 8, !tbaa !14"},
+ "successor":"%247 = getelementptr inbounds %struct.ADC_VIEW_CNTL, %struct.ADC_VIEW_CNTL* %0, i64 0, i32 13",
+ "sum":{"addend":"%236 = load i64, i64* %235, align 8, !tbaa !14",
+        "input":"%238 = load i64, i64* %237, align 8, !tbaa !14",
+        "value":"%239 = add nsw i64 %238, %236"}}
+END AXPY
+END LOOP
+END FUNCTION TRANSFORMATION
+BEGIN FUNCTION TRANSFORMATION PrefixedAggregate
+BEGIN LOOP
+BEGIN AXPY
+{"begin":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]",
+ "body":{"begin":"%102 = getelementptr inbounds i64, i64* %11, i64 %99",
+         "end":"br label %98",
+         "precursor":"br i1 %100, label %113, label %101",
+         "successor":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]"},
+ "comparison":"%100 = icmp eq i64 %99, %97",
+ "dst":{"address":"%104 = getelementptr i64, i64* %41, i64 %99",
+        "base_pointer":"%41 = getelementptr %struct.ADC_VIEW_CNTL, %struct.ADC_VIEW_CNTL* %0, i64 0, i32 39, i64 0",
+        "index_add":
+        [{"input":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]",
+          "value":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]"}],
+        "input_index":
+        ["%99 = phi i64 [ %112, %101 ], [ 0, %87 ]"],
+        "offset_add":{"input":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]",
+                      "value":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]"},
+        "output_index":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]",
+        "store":"store i64 %106, i64* %104, align 8, !tbaa !14",
+        "stride_mul":
+        [{"input":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]",
+          "value":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]"}]},
+ "end":"br i1 %100, label %113, label %101",
+ "increment":"%112 = add nuw nsw i64 %99, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"%97 = zext i32 %95 to i64",
+ "iter_step":"i64 1",
+ "iterator":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]",
+ "precursor":"br label %98",
+ "src":{"address":"%102 = getelementptr inbounds i64, i64* %11, i64 %99",
+        "base_pointer":"%11 = bitcast [28 x i32]* %4 to i64*",
+        "index_add":
+        [{"input":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]",
+          "value":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]"}],
+        "input_index":
+        ["%99 = phi i64 [ %112, %101 ], [ 0, %87 ]"],
+        "offset_add":{"input":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]",
+                      "value":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]"},
+        "output_index":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]",
+        "stride_mul":
+        [{"input":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]",
+          "value":"%99 = phi i64 [ %112, %101 ], [ 0, %87 ]"}],
+        "value":"%103 = load i64, i64* %102, align 8, !tbaa !14"},
+ "successor":"%114 = add i32 %93, %47",
+ "sum":{"addend":"%103 = load i64, i64* %102, align 8, !tbaa !14",
+        "input":"%105 = load i64, i64* %104, align 8, !tbaa !14",
+        "value":"%106 = add nsw i64 %105, %103"}}
+END AXPY
+END LOOP
+BEGIN LOOP
+BEGIN AXPY
+{"begin":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]",
+ "body":{"begin":"%123 = getelementptr inbounds i64, i64* %29, i64 %120",
+         "end":"br label %119",
+         "precursor":"br i1 %121, label %135, label %122",
+         "successor":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]"},
+ "comparison":"%121 = icmp eq i64 %120, %118",
+ "dst":{"address":"%125 = getelementptr inbounds i64, i64* %11, i64 %120",
+        "base_pointer":"%11 = bitcast [28 x i32]* %4 to i64*",
+        "index_add":
+        [{"input":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]",
+          "value":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]"}],
+        "input_index":
+        ["%120 = phi i64 [ %128, %122 ], [ 0, %116 ]"],
+        "offset_add":{"input":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]",
+                      "value":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]"},
+        "output_index":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]",
+        "store":"store i64 %127, i64* %125, align 8, !tbaa !14",
+        "stride_mul":
+        [{"input":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]",
+          "value":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]"}]},
+ "end":"br i1 %121, label %135, label %122",
+ "increment":"%128 = add nuw nsw i64 %120, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"%118 = zext i32 %117 to i64",
+ "iter_step":"i64 1",
+ "iterator":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]",
+ "precursor":"br label %119",
+ "src":{"address":"%123 = getelementptr inbounds i64, i64* %29, i64 %120",
+        "base_pointer":"%29 = bitcast [28 x i32]* %5 to i64*",
+        "index_add":
+        [{"input":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]",
+          "value":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]"}],
+        "input_index":
+        ["%120 = phi i64 [ %128, %122 ], [ 0, %116 ]"],
+        "offset_add":{"input":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]",
+                      "value":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]"},
+        "output_index":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]",
+        "stride_mul":
+        [{"input":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]",
+          "value":"%120 = phi i64 [ %128, %122 ], [ 0, %116 ]"}],
+        "value":"%124 = load i64, i64* %123, align 8, !tbaa !14"},
+ "successor":"%136 = phi i32 [ %94, %113 ], [ %46, %119 ]",
+ "sum":{"addend":"%124 = load i64, i64* %123, align 8, !tbaa !14",
+        "input":"%126 = load i64, i64* %125, align 8, !tbaa !14",
+        "value":"%127 = add nsw i64 %126, %124"}}
+END AXPY
+END LOOP
+BEGIN LOOP
+BEGIN AXPY
+{"begin":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]",
+ "body":{"begin":"%174 = getelementptr inbounds i64, i64* %11, i64 %171",
+         "end":"br label %170",
+         "precursor":"br i1 %172, label %185, label %173",
+         "successor":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]"},
+ "comparison":"%172 = icmp eq i64 %171, %169",
+ "dst":{"address":"%176 = getelementptr i64, i64* %41, i64 %171",
+        "base_pointer":"%41 = getelementptr %struct.ADC_VIEW_CNTL, %struct.ADC_VIEW_CNTL* %0, i64 0, i32 39, i64 0",
+        "index_add":
+        [{"input":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]",
+          "value":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]"}],
+        "input_index":
+        ["%171 = phi i64 [ %184, %173 ], [ 0, %161 ]"],
+        "offset_add":{"input":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]",
+                      "value":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]"},
+        "output_index":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]",
+        "store":"store i64 %178, i64* %176, align 8, !tbaa !14",
+        "stride_mul":
+        [{"input":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]",
+          "value":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]"}]},
+ "end":"br i1 %172, label %185, label %173",
+ "increment":"%184 = add nuw nsw i64 %171, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"%169 = zext i32 %167 to i64",
+ "iter_step":"i64 1",
+ "iterator":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]",
+ "precursor":"br label %170",
+ "src":{"address":"%174 = getelementptr inbounds i64, i64* %11, i64 %171",
+        "base_pointer":"%11 = bitcast [28 x i32]* %4 to i64*",
+        "index_add":
+        [{"input":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]",
+          "value":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]"}],
+        "input_index":
+        ["%171 = phi i64 [ %184, %173 ], [ 0, %161 ]"],
+        "offset_add":{"input":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]",
+                      "value":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]"},
+        "output_index":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]",
+        "stride_mul":
+        [{"input":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]",
+          "value":"%171 = phi i64 [ %184, %173 ], [ 0, %161 ]"}],
+        "value":"%175 = load i64, i64* %174, align 8, !tbaa !14"},
+ "successor":"%186 = call i32 @fseek(%struct._IO_FILE* %1, i64 0, i32 2)",
+ "sum":{"addend":"%175 = load i64, i64* %174, align 8, !tbaa !14",
+        "input":"%177 = load i64, i64* %176, align 8, !tbaa !14",
+        "value":"%178 = add nsw i64 %177, %175"}}
+END AXPY
+END LOOP
+END FUNCTION TRANSFORMATION
+BEGIN FUNCTION TRANSFORMATION ComputeGivenGroupbys
+BEGIN LOOP
+BEGIN AXPY
+{"begin":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]",
+ "body":{"begin":"%98 = getelementptr i64, i64* %30, i64 %95",
+         "end":"br label %94",
+         "precursor":"br i1 %96, label %104, label %97",
+         "successor":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]"},
+ "comparison":"%96 = icmp eq i64 %95, %93",
+ "dst":{"address":"%100 = getelementptr i64, i64* %32, i64 %95",
+        "base_pointer":"%32 = getelementptr %struct.ADC_VIEW_CNTL, %struct.ADC_VIEW_CNTL* %0, i64 0, i32 42, i64 0",
+        "index_add":
+        [{"input":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]",
+          "value":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]"}],
+        "input_index":
+        ["%95 = phi i64 [ %103, %97 ], [ 0, %91 ]"],
+        "offset_add":{"input":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]",
+                      "value":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]"},
+        "output_index":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]",
+        "store":"store i64 %102, i64* %100, align 8, !tbaa !14",
+        "stride_mul":
+        [{"input":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]",
+          "value":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]"}]},
+ "end":"br i1 %96, label %104, label %97",
+ "increment":"%103 = add nuw nsw i64 %95, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"%93 = zext i32 %92 to i64",
+ "iter_step":"i64 1",
+ "iterator":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]",
+ "precursor":"br label %94",
+ "src":{"address":"%98 = getelementptr i64, i64* %30, i64 %95",
+        "base_pointer":"%30 = getelementptr %struct.ADC_VIEW_CNTL, %struct.ADC_VIEW_CNTL* %0, i64 0, i32 41, i64 0",
+        "index_add":
+        [{"input":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]",
+          "value":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]"}],
+        "input_index":
+        ["%95 = phi i64 [ %103, %97 ], [ 0, %91 ]"],
+        "offset_add":{"input":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]",
+                      "value":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]"},
+        "output_index":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]",
+        "stride_mul":
+        [{"input":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]",
+          "value":"%95 = phi i64 [ %103, %97 ], [ 0, %91 ]"}],
+        "value":"%99 = load i64, i64* %98, align 8, !tbaa !14"},
+ "successor":"%105 = load i32, i32* %21, align 4, !tbaa !24",
+ "sum":{"addend":"%99 = load i64, i64* %98, align 8, !tbaa !14",
+        "input":"%101 = load i64, i64* %100, align 8, !tbaa !14",
+        "value":"%102 = add nsw i64 %101, %99"}}
+END AXPY
+END LOOP
+END FUNCTION TRANSFORMATION

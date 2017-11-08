@@ -1,0 +1,373 @@
+BEGIN FUNCTION TRANSFORMATION CalculateVeiwSizes
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+ "body":{"begin":"%115 = tail call i64 @fwrite(i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.10, i64 0, i64 0), i64 10, i64 1, %struct._IO_FILE* nonnull %97)",
+         "end":"br label %109",
+         "precursor":"br i1 %113, label %114, label %141",
+         "successor":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+ "comparison":"%113 = icmp slt i64 %110, %46",
+ "end":"br i1 %113, label %114, label %141",
+ "increment":"%140 = add nsw i64 %110, %107",
+ "iter_begin":"i64 1",
+ "iter_end":"%46 = sext i32 %45 to i64",
+ "iter_step":"%107 = phi i64 [ 1, %102 ], [ 64, %104 ], [ 16384, %105 ], [ 8, %103 ]",
+ "iterator":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+ "kernel":{"constants":
+           [{"use":"%115 = tail call i64 @fwrite(i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.10, i64 0, i64 0), i64 10, i64 1, %struct._IO_FILE* nonnull %97)",
+             "value":"i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.10, i64 0, i64 0)"},
+            {"use":"%128 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.11, i64 0, i64 0), i64 %126)",
+             "value":"i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.11, i64 0, i64 0)"},
+            {"use":"%133 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.12, i64 0, i64 0), i64 %132)",
+             "value":"i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.12, i64 0, i64 0)"},
+            {"use":"%116 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 1",
+             "value":"%48 = bitcast i8* %47 to %struct.dc_view*"},
+            {"use":"%131 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 0",
+             "value":"%48 = bitcast i8* %47 to %struct.dc_view*"},
+            {"use":"%115 = tail call i64 @fwrite(i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.10, i64 0, i64 0), i64 10, i64 1, %struct._IO_FILE* nonnull %97)",
+             "value":"%97 = tail call %struct._IO_FILE* @fopen(i8* %95, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.8, i64 0, i64 0))"},
+            {"use":"%128 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.11, i64 0, i64 0), i64 %126)",
+             "value":"%97 = tail call %struct._IO_FILE* @fopen(i8* %95, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.8, i64 0, i64 0))"},
+            {"use":"%133 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.12, i64 0, i64 0), i64 %132)",
+             "value":"%97 = tail call %struct._IO_FILE* @fopen(i8* %95, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.8, i64 0, i64 0))"},
+            {"use":"%140 = add nsw i64 %110, %107",
+             "value":"%107 = phi i64 [ 1, %102 ], [ 64, %104 ], [ 16384, %105 ], [ 8, %103 ]"},
+            {"use":"%121 = icmp slt i64 %119, %108",
+             "value":"%108 = sext i32 %9 to i64"}],
+           "input":
+           ["%117 = load i64, i64* %116, align 8, !tbaa !27",
+            "%132 = load i64, i64* %131, align 8, !tbaa !25",
+            "%136 = load i64, i64* %131, align 8, !tbaa !25",
+            "%112 = phi i64 [ 0, %106 ], [ %138, %130 ]"],
+           "origin":
+           ["br i1 %113, label %114, label %141"],
+           "output":"%138 = add i64 %137, %112",
+           "restrictions":
+           [{"use":"%116 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 1",
+             "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+            {"use":"%131 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 0",
+             "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+            {"use":"%140 = add nsw i64 %110, %107",
+             "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+            {"use":"%139 = add i64 %136, %111",
+             "value":"%111 = phi i64 [ 0, %106 ], [ %139, %130 ]"},
+            {"use":"%138 = add i64 %137, %112",
+             "value":"%112 = phi i64 [ 0, %106 ], [ %138, %130 ]"}]},
+ "old_value":"%112 = phi i64 [ 0, %106 ], [ %138, %130 ]",
+ "precursor":"br label %109",
+ "read":
+ [{"address":"%116 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 1",
+   "base_pointer":"%48 = bitcast i8* %47 to %struct.dc_view*",
+   "index_add":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}],
+   "input_index":
+   ["%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"],
+   "offset_add":{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+                 "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+   "output_index":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+   "stride_mul":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}]},
+  {"address":"%131 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 0",
+   "base_pointer":"%48 = bitcast i8* %47 to %struct.dc_view*",
+   "index_add":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}],
+   "input_index":
+   ["%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"],
+   "offset_add":{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+                 "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+   "output_index":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+   "stride_mul":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}]},
+  {"address":"%131 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 0",
+   "base_pointer":"%48 = bitcast i8* %47 to %struct.dc_view*",
+   "index_add":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}],
+   "input_index":
+   ["%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"],
+   "offset_add":{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+                 "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+   "output_index":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+   "stride_mul":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}]}],
+ "read_value":
+ ["%117 = load i64, i64* %116, align 8, !tbaa !27",
+  "%132 = load i64, i64* %131, align 8, !tbaa !25",
+  "%136 = load i64, i64* %131, align 8, !tbaa !25"],
+ "successor":"%142 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.13, i64 0, i64 0), i64 %112, i64 %111)"}
+END scalar
+BEGIN scalar
+{"begin":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+ "body":{"begin":"%115 = tail call i64 @fwrite(i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.10, i64 0, i64 0), i64 10, i64 1, %struct._IO_FILE* nonnull %97)",
+         "end":"br label %109",
+         "precursor":"br i1 %113, label %114, label %141",
+         "successor":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+ "comparison":"%113 = icmp slt i64 %110, %46",
+ "end":"br i1 %113, label %114, label %141",
+ "increment":"%140 = add nsw i64 %110, %107",
+ "iter_begin":"i64 1",
+ "iter_end":"%46 = sext i32 %45 to i64",
+ "iter_step":"%107 = phi i64 [ 1, %102 ], [ 64, %104 ], [ 16384, %105 ], [ 8, %103 ]",
+ "iterator":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+ "kernel":{"constants":
+           [{"use":"%115 = tail call i64 @fwrite(i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.10, i64 0, i64 0), i64 10, i64 1, %struct._IO_FILE* nonnull %97)",
+             "value":"i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.10, i64 0, i64 0)"},
+            {"use":"%128 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.11, i64 0, i64 0), i64 %126)",
+             "value":"i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.11, i64 0, i64 0)"},
+            {"use":"%133 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.12, i64 0, i64 0), i64 %132)",
+             "value":"i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.12, i64 0, i64 0)"},
+            {"use":"%116 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 1",
+             "value":"%48 = bitcast i8* %47 to %struct.dc_view*"},
+            {"use":"%131 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 0",
+             "value":"%48 = bitcast i8* %47 to %struct.dc_view*"},
+            {"use":"%115 = tail call i64 @fwrite(i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.10, i64 0, i64 0), i64 10, i64 1, %struct._IO_FILE* nonnull %97)",
+             "value":"%97 = tail call %struct._IO_FILE* @fopen(i8* %95, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.8, i64 0, i64 0))"},
+            {"use":"%128 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.11, i64 0, i64 0), i64 %126)",
+             "value":"%97 = tail call %struct._IO_FILE* @fopen(i8* %95, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.8, i64 0, i64 0))"},
+            {"use":"%133 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.12, i64 0, i64 0), i64 %132)",
+             "value":"%97 = tail call %struct._IO_FILE* @fopen(i8* %95, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.8, i64 0, i64 0))"},
+            {"use":"%140 = add nsw i64 %110, %107",
+             "value":"%107 = phi i64 [ 1, %102 ], [ 64, %104 ], [ 16384, %105 ], [ 8, %103 ]"},
+            {"use":"%121 = icmp slt i64 %119, %108",
+             "value":"%108 = sext i32 %9 to i64"}],
+           "input":
+           ["%117 = load i64, i64* %116, align 8, !tbaa !27",
+            "%132 = load i64, i64* %131, align 8, !tbaa !25",
+            "%136 = load i64, i64* %131, align 8, !tbaa !25",
+            "%111 = phi i64 [ 0, %106 ], [ %139, %130 ]"],
+           "origin":
+           ["br i1 %113, label %114, label %141"],
+           "output":"%139 = add i64 %136, %111",
+           "restrictions":
+           [{"use":"%116 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 1",
+             "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+            {"use":"%131 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 0",
+             "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+            {"use":"%140 = add nsw i64 %110, %107",
+             "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+            {"use":"%139 = add i64 %136, %111",
+             "value":"%111 = phi i64 [ 0, %106 ], [ %139, %130 ]"},
+            {"use":"%138 = add i64 %137, %112",
+             "value":"%112 = phi i64 [ 0, %106 ], [ %138, %130 ]"}]},
+ "old_value":"%111 = phi i64 [ 0, %106 ], [ %139, %130 ]",
+ "precursor":"br label %109",
+ "read":
+ [{"address":"%116 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 1",
+   "base_pointer":"%48 = bitcast i8* %47 to %struct.dc_view*",
+   "index_add":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}],
+   "input_index":
+   ["%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"],
+   "offset_add":{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+                 "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+   "output_index":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+   "stride_mul":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}]},
+  {"address":"%131 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 0",
+   "base_pointer":"%48 = bitcast i8* %47 to %struct.dc_view*",
+   "index_add":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}],
+   "input_index":
+   ["%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"],
+   "offset_add":{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+                 "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+   "output_index":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+   "stride_mul":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}]},
+  {"address":"%131 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 0",
+   "base_pointer":"%48 = bitcast i8* %47 to %struct.dc_view*",
+   "index_add":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}],
+   "input_index":
+   ["%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"],
+   "offset_add":{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+                 "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"},
+   "output_index":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+   "stride_mul":
+   [{"input":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]",
+     "value":"%110 = phi i64 [ 1, %106 ], [ %140, %130 ]"}]}],
+ "read_value":
+ ["%117 = load i64, i64* %116, align 8, !tbaa !27",
+  "%132 = load i64, i64* %131, align 8, !tbaa !25",
+  "%136 = load i64, i64* %131, align 8, !tbaa !25"],
+ "successor":"%142 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.13, i64 0, i64 0), i64 %112, i64 %111)"}
+END scalar
+BEGIN OPERATOR
+void op(struct { long _0; long _1; }* in0, long in1, long in2, long in3)
+{
+  long t0 = 0;
+  long t1 = 0;
+label1:
+  if(t0</* missing closure */){
+  long t2 = t0+1;
+  t0 = t2;
+  t1 = t1;
+  if(/* missing closure */) goto label1;
+  t0 = t2;
+  t1 += 1;
+  goto label1;
+  }
+  in0->_0 += in3*(/* missing closure */+8);
+  in0->_1 += in3;
+}
+END LOOP
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%119 = phi i64 [ 0, %114 ], [ %126, %122 ], [ %126, %127 ]",
+ "body":{"begin":"%123 = shl i64 1, %119",
+         "end":"br i1 %125, label %118, label %127",
+         "precursor":"br i1 %121, label %122, label %130",
+         "successor":"%119 = phi i64 [ 0, %114 ], [ %126, %122 ], [ %126, %127 ]"},
+ "comparison":"%121 = icmp slt i64 %119, %108",
+ "end":"br i1 %121, label %122, label %130",
+ "increment":"%126 = add nuw nsw i64 %119, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"%108 = sext i32 %9 to i64",
+ "iter_step":"i64 1",
+ "iterator":"%119 = phi i64 [ 0, %114 ], [ %126, %122 ], [ %126, %127 ]",
+ "kernel":{"constants":
+           [{"use":"%128 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.11, i64 0, i64 0), i64 %126)",
+             "value":"i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.11, i64 0, i64 0)"},
+            {"use":"%128 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* nonnull %97, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.11, i64 0, i64 0), i64 %126)",
+             "value":"%97 = tail call %struct._IO_FILE* @fopen(i8* %95, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.8, i64 0, i64 0))"},
+            {"use":"%124 = and i64 %123, %117",
+             "value":"%117 = load i64, i64* %116, align 8, !tbaa !27"}],
+           "input":
+           ["%120 = phi i64 [ 0, %114 ], [ %129, %127 ], [ %120, %122 ]"],
+           "origin":
+           ["br i1 %121, label %122, label %130"],
+           "output":"%120 = phi i64 [ 0, %114 ], [ %129, %127 ], [ %120, %122 ]",
+           "restrictions":
+           [{"use":"%123 = shl i64 1, %119",
+             "value":"%119 = phi i64 [ 0, %114 ], [ %126, %122 ], [ %126, %127 ]"},
+            {"use":"%126 = add nuw nsw i64 %119, 1",
+             "value":"%119 = phi i64 [ 0, %114 ], [ %126, %122 ], [ %126, %127 ]"},
+            {"use":"%129 = add i64 %120, 1",
+             "value":"%120 = phi i64 [ 0, %114 ], [ %129, %127 ], [ %120, %122 ]"}]},
+ "old_value":"%120 = phi i64 [ 0, %114 ], [ %129, %127 ], [ %120, %122 ]",
+ "precursor":"br label %118",
+ "successor":"%131 = getelementptr inbounds %struct.dc_view, %struct.dc_view* %48, i64 %110, i32 0"}
+END scalar
+BEGIN OPERATOR
+void op(struct { long _0; }* in0)
+{
+  if(!(/* missing closure */)) {
+  return ;
+  }
+}
+END LOOP
+END FUNCTION TRANSFORMATION
+BEGIN FUNCTION TRANSFORMATION GetNextTuple
+BEGIN LOOP
+BEGIN scalar
+{"begin":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+ "body":{"begin":"%78 = getelementptr i64, i64* getelementptr inbounds ([20 x i64], [20 x i64]* @GetNextTuple.seed, i64 0, i64 0), i64 %74",
+         "end":"br label %73",
+         "precursor":"br i1 %76, label %77, label %92",
+         "successor":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"},
+ "comparison":"%76 = icmp slt i64 %74, %25",
+ "end":"br i1 %76, label %77, label %92",
+ "increment":"%91 = add nuw nsw i64 %74, 1",
+ "iter_begin":"i64 0",
+ "iter_end":"%25 = sext i32 %0 to i64",
+ "iter_step":"i64 1",
+ "iterator":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+ "kernel":{"constants":
+           [{"use":"%80 = getelementptr i64, i64* getelementptr inbounds ([20 x i64], [20 x i64]* @adcgen, i64 0, i64 0), i64 %74",
+             "value":"i64* getelementptr inbounds ([20 x i64], [20 x i64]* @adcgen, i64 0, i64 0)"},
+            {"use":"%84 = getelementptr i64, i64* getelementptr inbounds ([20 x i64], [20 x i64]* @adcprime, i64 0, i64 0), i64 %74",
+             "value":"i64* getelementptr inbounds ([20 x i64], [20 x i64]* @adcprime, i64 0, i64 0)"},
+            {"use":"%78 = getelementptr i64, i64* getelementptr inbounds ([20 x i64], [20 x i64]* @GetNextTuple.seed, i64 0, i64 0), i64 %74",
+             "value":"i64* getelementptr inbounds ([20 x i64], [20 x i64]* @GetNextTuple.seed, i64 0, i64 0)"},
+            {"use":"%83 = getelementptr inbounds i64, i64* %2, i64 %74",
+             "value":"i64* %2"}],
+           "input":
+           ["%79 = load i64, i64* %78, align 8, !tbaa !20",
+            "%81 = load i64, i64* %80, align 8, !tbaa !20",
+            "%85 = load i64, i64* %84, align 8, !tbaa !20",
+            "%75 = phi i32 [ %90, %77 ], [ 0, %70 ]"],
+           "origin":
+           ["br i1 %76, label %77, label %92"],
+           "output":"%90 = select i1 %88, i32 %89, i32 %75",
+           "restrictions":
+           [{"use":"%78 = getelementptr i64, i64* getelementptr inbounds ([20 x i64], [20 x i64]* @GetNextTuple.seed, i64 0, i64 0), i64 %74",
+             "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"},
+            {"use":"%80 = getelementptr i64, i64* getelementptr inbounds ([20 x i64], [20 x i64]* @adcgen, i64 0, i64 0), i64 %74",
+             "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"},
+            {"use":"%83 = getelementptr inbounds i64, i64* %2, i64 %74",
+             "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"},
+            {"use":"%84 = getelementptr i64, i64* getelementptr inbounds ([20 x i64], [20 x i64]* @adcprime, i64 0, i64 0), i64 %74",
+             "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"},
+            {"use":"%91 = add nuw nsw i64 %74, 1",
+             "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"},
+            {"use":"%87 = sext i32 %75 to i64",
+             "value":"%75 = phi i32 [ %90, %77 ], [ 0, %70 ]"},
+            {"use":"%90 = select i1 %88, i32 %89, i32 %75",
+             "value":"%75 = phi i32 [ %90, %77 ], [ 0, %70 ]"}]},
+ "old_value":"%75 = phi i32 [ %90, %77 ], [ 0, %70 ]",
+ "precursor":"br label %73",
+ "read":
+ [{"address":"%78 = getelementptr i64, i64* getelementptr inbounds ([20 x i64], [20 x i64]* @GetNextTuple.seed, i64 0, i64 0), i64 %74",
+   "base_pointer":"i64* getelementptr inbounds ([20 x i64], [20 x i64]* @GetNextTuple.seed, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+     "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"}],
+   "input_index":
+   ["%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"],
+   "offset_add":{"input":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+                 "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"},
+   "output_index":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+   "stride_mul":
+   [{"input":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+     "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"}]},
+  {"address":"%80 = getelementptr i64, i64* getelementptr inbounds ([20 x i64], [20 x i64]* @adcgen, i64 0, i64 0), i64 %74",
+   "base_pointer":"i64* getelementptr inbounds ([20 x i64], [20 x i64]* @adcgen, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+     "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"}],
+   "input_index":
+   ["%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"],
+   "offset_add":{"input":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+                 "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"},
+   "output_index":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+   "stride_mul":
+   [{"input":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+     "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"}]},
+  {"address":"%84 = getelementptr i64, i64* getelementptr inbounds ([20 x i64], [20 x i64]* @adcprime, i64 0, i64 0), i64 %74",
+   "base_pointer":"i64* getelementptr inbounds ([20 x i64], [20 x i64]* @adcprime, i64 0, i64 0)",
+   "index_add":
+   [{"input":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+     "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"}],
+   "input_index":
+   ["%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"],
+   "offset_add":{"input":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+                 "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"},
+   "output_index":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+   "stride_mul":
+   [{"input":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]",
+     "value":"%74 = phi i64 [ %91, %77 ], [ 0, %70 ]"}]}],
+ "read_value":
+ ["%79 = load i64, i64* %78, align 8, !tbaa !20",
+  "%81 = load i64, i64* %80, align 8, !tbaa !20",
+  "%85 = load i64, i64* %84, align 8, !tbaa !20"],
+ "successor":"%93 = sext i32 %75 to i64"}
+END scalar
+BEGIN OPERATOR
+void op(struct { int _0; }* in0, long in1, long in2, long in3)
+{
+  int t0 = in0->_0;
+  long t1 = ;
+  in0->_0 = t1>(long)t0?(int)t1:t0;
+}
+END LOOP
+END FUNCTION TRANSFORMATION
