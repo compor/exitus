@@ -1,0 +1,12 @@
+host: xxxii
+
+tools:
+Linux perf
+version: 4.4.27
+
+https://github.com/jrfonseca/gprof2dot 
+commit: bc7121e40a9653aa7a3c40ee4d05b570fb74288c
+
+commands:
+taskset -c 0 perf record -o out.data -g -- bmk
+perf script | c++filt | gprof2dot.py -f perf | dot -Tpdf -o data.pdf
